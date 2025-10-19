@@ -12,7 +12,10 @@ ideas = {
 		idea_ITA_10percent_consumer_goods = {
 			removal_cost = -1
 			available = {
-				has_government = fascism
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
 			}
 			modifier = {
 				consumer_goods_factor = 0.10
@@ -348,7 +351,10 @@ ideas = {
 
 			}
 			available = {
-				has_government = fascism
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
 			}
 			removal_cost = -1
 			modifier = {
@@ -366,7 +372,10 @@ ideas = {
 			}
 			removal_cost = -1
 			available = {
-				has_government = fascism
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
 			}
 			modifier = {
 				fascism_drift = 0.05
@@ -397,7 +406,10 @@ ideas = {
 			picture = generic_communism_drift_bonus
 			removal_cost = -1
 			available = {
-				has_government = fascism
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
 			}
 			modifier = {
 				political_power_gain = 0.05
@@ -410,7 +422,10 @@ ideas = {
 				original_tag = ITA
 			}
 			available = {
-				has_government = fascism
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
 			}
 			picture = ITA_GIL
 			removal_cost = -1
@@ -428,7 +443,10 @@ ideas = {
 
 			}
 			available = {
-				has_government = fascism
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
 			}
 			modifier = {
 				political_power_gain = -0.01
@@ -443,7 +461,10 @@ ideas = {
 			picture = FIN_funs_from_kalevala_koru_oy
 			removal_cost = -1
 			available = {
-				has_government = fascism
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
 			}
 			modifier = {
 				political_power_gain = 0.05
@@ -458,7 +479,10 @@ ideas = {
 			picture = FIN_finnish_federation_of_trade_unions_heavy
 			removal_cost = -1
 			available = {
-				has_government = fascism
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
 			}
 			modifier = {
 				political_power_gain = 0.05
@@ -474,7 +498,10 @@ ideas = {
 			picture = generic_reserve_divisions
 			removal_cost = -1
 			available = {
-				has_government = fascism
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
 			}
 			modifier = {
 				modifier_army_sub_unit_militia_max_org_factor = 1.00
@@ -489,7 +516,10 @@ ideas = {
 			picture = ITA_battaglie_per_la_nascite
 			removal_cost = -1
 			available = {
-				has_government = fascism
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
 			}
 			modifier = {
 				political_power_gain = 0.05
@@ -502,7 +532,10 @@ ideas = {
 			picture = generic_victors_of_ww1
 			removal_cost = -1
 			available = {
-				has_government = fascism
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
 			}
 			targeted_modifier = {
 				tag = GER
@@ -600,7 +633,10 @@ ideas = {
 
 			available = {
 				has_completed_focus = ITA_workers_rights
-				has_government = fascism
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
 			}
 			
 			cost = 75

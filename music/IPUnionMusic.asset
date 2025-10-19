@@ -118,3 +118,7 @@ music = {
 	name = "LaleggendadelPiave"
 	file = "La leggenda del Piave.ogg"
 }
+music = {
+	name = "DownHill"
+	file = "downhill.ogg"
+}

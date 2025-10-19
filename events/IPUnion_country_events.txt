@@ -1923,7 +1923,13 @@ country_event = {
 	option = {
 		name = IPUnion_country_event.55.a
 		custom_effect_tooltip = IPUnion_country_event.55.tt
+		
 		hidden_effect = {
+			add_trait = {
+				character = ITA_benito_mussolini
+				ideology = fascism_ideology
+				trait = terminally_ill
+			}	
 			country_event = {
 				id = IPUnion_country_event.56
 				days = 30
@@ -2022,7 +2028,7 @@ country_event = {
 			country_leader = {
 				ideology = fascism_ideology
 				expire = 1965.1.1.1
-				traits =  {	aviation_hero }
+				traits =  {	trust_from_mussolini }
 			}
 		}
 		hidden_effect = {
@@ -2047,7 +2053,7 @@ country_event = {
 			country_leader = {
 				ideology = fascism_ideology
 				expire = 1965.1.1.1
-				traits =  {	aviation_hero }
+				traits =  {	trust_from_mussolini }
 			}
 		}
 		hidden_effect = {
@@ -2058,6 +2064,22 @@ country_event = {
 		add_war_support = 0.1
 		add_stability = 0.05
 		ITA_bop_medium_increase_balbo_side_effect = yes
+	}
+}
+
+country_event = {
+	id = IPUnion_country_event.59
+	title = IPUnion_country_event.59.t
+	desc = IPUnion_country_event.59.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	picture = GFX_report_event_gre_george_ii_victorious
+
+	option = {
+		name = IPUnion_country_event.59.a
+		add_political_power = 15
 	}
 }
 

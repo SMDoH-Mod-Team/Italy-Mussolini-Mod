@@ -105,3 +105,8 @@ ITA_sword_aimed_middle_east_category = {
 		has_completed_focus = ITA_sword_aimed_middle_east
 	}
 }
+ITA_central_advisory_committee = {
+	visible = {
+		has_completed_focus = ITA_ciano_reinstated
+	}
+}

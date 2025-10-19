@@ -44,3 +44,7 @@
  ITA_attack_middle_east_part1: "在中东的特别军事行动-第一阶段"
  form_IRQ_oil_resource: "伊拉克石油"
  form_ITA_use_sentox_in_eth: "在埃塞俄比亚使用毒气"
+ ITA_central_advisory_committee: "国家法西斯党-中央顾问委员会"
+ ITA_central_advisory_committee_desc: "当前的中顾委主任为：§Y$ITA_gian_galeazzo_ciano$§!"
+ ITA_younger_cadre_team: "干部队伍年轻化"
+ ITA_younger_cadre_team_desc: "是时候把墨索里尼的拥趸清除出去了！"

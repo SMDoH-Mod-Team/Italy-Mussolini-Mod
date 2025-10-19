@@ -1,0 +1,7 @@
+spriteTypes = {
+	spriteType = {
+		name = GFX_benito_mussolini_signature
+		textureFile = "gfx/texticons/benito_mussolini_signature.png"
+		legacy_lazy_load = no 
+	}
+}

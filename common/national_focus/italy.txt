@@ -27662,12 +27662,16 @@ focus_tree = {
 			focus = ITA_mare_nostrum_bba
 		}
 		allow_branch = {
-			has_country_flag = ITA_side_fight_flag
+			#has_country_flag = ITA_side_fight_flag
 		}
 		available = {
 			#is_subject = no
 			##has_completed_focus = ITA_culto_del_duce
-			always = no
+			#always = no
+			has_character = ITA_gian_galeazzo_ciano
+			NOT = {
+				has_character = ITA_benito_mussolini
+			}
 		}
 		completion_reward = {
 			#mark_focus_tree_layout_dirty = yes
@@ -27675,7 +27679,166 @@ focus_tree = {
 			remove_power_balance = {
 				id = ITA_power_balance
 			}
+			remove_trait = {
+    			character = ITA_gian_galeazzo_ciano
+    			slot = political_advisor
+    			trait = hierarch_minister_of_foreign_affairs_1
+			}
+			add_trait = {
+     			character = ITA_gian_galeazzo_ciano
+     			slot = political_advisor
+    			trait = chief_of_central_advisory_committee
+			}
+			add_trait = {
+     			character = ITA_gian_galeazzo_ciano
+     			slot = political_advisor
+    			trait = PNF_reformist
+			}
 			activate_advisor = ITA_gian_galeazzo_ciano
+			unlock_decision_category_tooltip = ITA_central_advisory_committee
+			hidden_effect = {
+				play_song = DownHill
+			}
 		}
+	}
+
+	focus = {
+		id = ITA_roped_PNF_old_man
+		icon = GFX_focus_GER_strengthen_the_waffen_ss
+		relative_position_id = ITA_ciano_reinstated
+		x = -1
+		y = 1
+		cost = 2
+		prerequisite = { focus = ITA_ciano_reinstated }
+		#mutually_exclusive = { 
+		#	focus = ITA_towards_a_greater_italy
+		#	focus = ITA_mare_nostrum_bba
+		#}
+		available = {
+			#is_subject = no
+			##has_completed_focus = ITA_culto_del_duce
+			#always = no
+			has_character = ITA_gian_galeazzo_ciano
+		}
+		completion_reward = {
+			#add_country_leader_role = {
+			#	character = ITA_italo_balbo
+			#	promote_leader = yes
+			#	country_leader = {
+			#		ideology = despotism
+			#		expire = 1965.1.1.1
+			#		traits =  {	trust_from_mussolini PNF_reformist }
+			#	}
+			#}
+			#set_politics = {
+			#	ruling_party = neutrality
+			#}
+			#add_popularity = {
+			#	ideology = neutrality
+			#	popularity = 0.20
+			#}
+			add_trait = {
+				character = ITA_dino_grandi
+				slot = political_advisor
+				trait = PNF_reformist
+			}
+			add_trait = {
+				character = ITA_giuseppe_bottai
+				slot = political_advisor
+				trait = PNF_reformist
+			}
+			add_trait = {
+				character = ITA_renato_ricci	
+				slot = political_advisor
+				trait = PNF_reformist
+			}
+		}
+	}
+
+	#focus = {
+	#	id = ITA_Reorganize_Blackshirts
+	#	icon = GFX_focus_GER_strengthen_the_waffen_ss
+	#	relative_position_id = ITA_ciano_reinstated
+	#	x = 1
+	#	y = 1
+	#	cost = 5
+	#	prerequisite = { focus = ITA_ciano_reinstated }
+	#	#mutually_exclusive = { 
+	#	#	focus = ITA_towards_a_greater_italy
+	#	#	focus = ITA_mare_nostrum_bba
+	#	#}
+	#	available = {
+	#		#is_subject = no
+	#		##has_completed_focus = ITA_culto_del_duce
+	#		#always = no
+	#		has_character = ITA_gian_galeazzo_ciano
+	#	}
+	#	completion_reward = {
+	#		2 = {
+	#			create_unit = {
+	#				division = "division_template = \"Camicie Nere\" start_experience_factor = 0.4 start_equipment_factor = 1.0"
+	#				owner = ITA
+	#				count = 5
+	#			}
+	#		}
+	#	} 
+	#}
+
+	focus = {
+		id = ITA_ensure_CGR_loyalty
+		icon = GFX_focus_GER_strengthen_the_waffen_ss
+		relative_position_id = ITA_ciano_reinstated
+		x = 1
+		y = 1
+		cost = 1
+		prerequisite = { focus = ITA_ciano_reinstated }
+		#mutually_exclusive = { 
+		#	focus = ITA_towards_a_greater_italy
+		#	focus = ITA_mare_nostrum_bba
+		#}
+		available = {
+			#is_subject = no
+			##has_completed_focus = ITA_culto_del_duce
+			#always = no
+			has_character = ITA_gian_galeazzo_ciano
+		}
+		completion_reward = {
+			add_trait = {
+				character = ITA_italo_balbo
+				ideology = fascism_ideology
+				trait = PNF_reformist
+			}
+			2 = {
+				create_unit = {
+					division = "division_template = \"Camicie Nere\" start_experience_factor = 0.4 start_equipment_factor = 1.0"
+					owner = ITA
+					count = 3
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_palazzo_chigi_incident
+		icon = GFX_focus_GER_strengthen_the_waffen_ss
+		relative_position_id = ITA_ensure_CGR_loyalty
+		x = -1	
+		y = 1
+		cost = 5
+		prerequisite = { focus = ITA_roped_PNF_old_man }
+		prerequisite = { focus = ITA_ensure_CGR_loyalty }
+		#mutually_exclusive = { 
+		#	focus = ITA_towards_a_greater_italy
+		#	focus = ITA_mare_nostrum_bba
+		#}
+		available = {
+			#is_subject = no
+			##has_completed_focus = ITA_culto_del_duce
+			#always = no
+			has_character = ITA_gian_galeazzo_ciano
+		}
+		completion_reward = {
+			cou
+		} 
 	}
 }

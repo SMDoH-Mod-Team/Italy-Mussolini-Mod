@@ -45,4 +45,28 @@ leader_traits = {
 		resistance_damage_to_garrison = -0.15
 		#custom_modifier_tooltip = ITA_hierarch_bop_tt
 	}
+	chief_of_central_advisory_committee = {
+		random = no
+		political_power_factor = 0.15
+		stability_factor = 0.15
+		neutrality_drift = 0.05
+	}
+	trust_from_mussolini = {
+		random = no
+		political_power_gain = 0.1
+		stability_factor = 0.20
+		fascism_drift = 0.05
+		neutrality_drift = 0.05
+	}
+	PNF_reformist = {
+		random = no
+		political_power_gain = -0.01
+		neutrality_drift = 0.01
+		drift_defence_factor = 0.50
+	}
+	terminally_ill = {
+		political_power_factor = -0.60
+		drift_defence_factor = -0.20
+		command_power_gain_mult = -0.15
+	}
 }
