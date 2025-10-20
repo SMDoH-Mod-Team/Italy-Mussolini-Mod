@@ -110,3 +110,8 @@ ITA_central_advisory_committee = {
 		has_completed_focus = ITA_ciano_reinstated
 	}
 }
+ITA_PNF_central_military_committee = {
+	visible = {
+		has_completed_focus = ITA_political_build_army
+	}
+}

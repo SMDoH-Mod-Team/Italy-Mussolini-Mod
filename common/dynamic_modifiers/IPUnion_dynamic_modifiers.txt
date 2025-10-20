@@ -57,3 +57,47 @@ ITA_miracolo_economico_modifier = { #Wirtschaftswunder NS #Aufrüstung and Recov
 	line_change_production_efficiency_factor = GER_industrial_line_change_production_efficiency_factor
 	equipment_conversion_speed = GER_industrial_equipment_conversion_speed
 }
+
+milano_military_area = {
+	icon = GFX_idea_ITA_regio_esercito_1
+	attacker_modifier = yes
+
+	air_cas_present_factor = 0.10
+	army_attack_factor = 0.15
+	army_speed_factor = 0.20
+	ground_attack_factor = 0.10
+	local_org_regain = 0.20
+}
+
+roma_military_area = {
+	icon = GFX_idea_ITA_regio_esercito_1
+	attacker_modifier = yes
+
+	air_cas_present_factor = 0.10
+	army_attack_factor = 0.15
+	army_speed_factor = 0.20
+	ground_attack_factor = 0.10
+	local_org_regain = 0.20
+}
+
+palermo_military_area = {
+	icon = GFX_idea_ITA_regio_esercito_1
+	attacker_modifier = yes
+
+	air_cas_present_factor = 0.10
+	army_attack_factor = 0.15
+	army_speed_factor = 0.20
+	ground_attack_factor = 0.10
+	local_org_regain = 0.20
+}
+
+cagliari_military_area = {
+	icon = GFX_idea_ITA_regio_esercito_1
+	attacker_modifier = yes
+
+	air_cas_present_factor = 0.10
+	army_attack_factor = 0.15
+	army_speed_factor = 0.20
+	ground_attack_factor = 0.10
+	local_org_regain = 0.20
+}

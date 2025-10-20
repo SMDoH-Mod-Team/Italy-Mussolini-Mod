@@ -157,11 +157,11 @@
  ITA_Shaping_east_africa_nation_desc: ""
  
  ITA_learn_form_foggia: "农业学福贾"
- ITA_learn_form_foggia_desc: ""
+ ITA_learn_form_foggia_desc: "学福贾志，长福贾风，走福贾路"
  ITA_learn_form_torina: "工业学都灵"
- ITA_learn_form_torina_desc: ""
+ ITA_learn_form_torina_desc: "学习都灵经验，把革命干劲和科学精神结合起来"
  ITA_learn_form_camicie_nere: "全国人民学黑衫军"
- ITA_learn_form_camicie_nere_desc: ""
+ ITA_learn_form_camicie_nere_desc: "政治挂帅，思想领先；自力更生，艰苦奋斗，不怕牺牲，排除万难"
  ITA_befriend_china: "对华示好"
  ITA_befriend_china_desc: ""
  ITA_KUW_oil_resource: "科威特油田"
@@ -193,3 +193,9 @@
  ITA_ensure_CGR_loyalty_desc: ""
  ITA_palazzo_chigi_incident: "奇吉宫事变"
  ITA_palazzo_chigi_incident_desc: ""
+
+ ITA_political_build_army: "政治建军"
+ ITA_political_build_army_desc: "皇家陆军已经不再可靠了，我们需要一支忠于法西斯党的军队"
+
+ ITA_re_establish_italian_control_over_tsingtao: "青岛租界"
+ ITA_re_establish_italian_control_over_tsingtao_desc: ""

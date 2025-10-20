@@ -1332,3 +1332,157 @@ ITA_central_advisory_committee = {
 		}
 	}
 }
+ITA_PNF_central_military_committee = {
+	ITA_founded_PNF_central_military_committee = {
+		days_remove = 30
+		fire_only_once = yes
+		cost = 50
+		available = {
+			has_government = fascism
+		}
+		remove_effect = {
+			hidden_effect = {
+				set_country_flag = ITA_founded_PNF_central_military_committee_flag
+			}
+			unlock_decision_tooltip = ITA_milano_military_area
+			unlock_decision_tooltip = ITA_roma_military_area
+			unlock_decision_tooltip = ITA_palermo_military_area
+			unlock_decision_tooltip = ITA_cagliari_military_area
+		}
+	}
+	ITA_milano_military_area = {
+		days_remove = 30
+		fire_only_once = yes
+		cost = 50
+		visible = {
+			has_country_flag = ITA_founded_PNF_central_military_committee_flag
+		}
+		remove_effect = {
+			158 = {
+				add_dynamic_modifier = {
+					modifier = milano_military_area
+				}
+			}
+			159 = {
+				add_dynamic_modifier = {
+					modifier = milano_military_area
+				}
+			}
+			160 = {
+				add_dynamic_modifier = {
+					modifier = milano_military_area
+				}
+			}
+			161 = {
+				add_dynamic_modifier = {
+					modifier = milano_military_area
+				}
+			}
+			39 = {
+				add_dynamic_modifier = {
+					modifier = milano_military_area
+				}
+			}
+			850 = {
+				add_dynamic_modifier = {
+					modifier = milano_military_area
+				}
+			}
+			736 = {
+				add_dynamic_modifier = {
+					modifier = milano_military_area
+				}
+			}
+			852 = {
+				add_dynamic_modifier = {
+					modifier = milano_military_area
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = Toulon_Base_Mod_Loaded_Check
+				}
+				1019 = {
+					add_dynamic_modifier = {
+						modifier = milano_military_area
+					}
+				}
+			}
+		}
+	}
+	ITA_roma_military_area = {
+		days_remove = 30
+		fire_only_once = yes
+		cost = 50
+		visible = {
+			has_country_flag = ITA_founded_PNF_central_military_committee_flag
+		}
+		remove_effect = {
+			162 = {
+				add_dynamic_modifier = {
+					modifier = roma_military_area
+				}
+			}
+			157 = {
+				add_dynamic_modifier = {
+					modifier = roma_military_area
+				}
+			}
+			2 = {
+				add_dynamic_modifier = {
+					modifier = roma_military_area
+				}
+			}
+			163 = {
+				add_dynamic_modifier = {
+					modifier = roma_military_area
+				}
+			}
+		}
+	}
+	ITA_palermo_military_area = {
+		days_remove = 30
+		fire_only_once = yes
+		cost = 50
+		visible = {
+			has_country_flag = ITA_founded_PNF_central_military_committee_flag
+		}
+		remove_effect = {
+			117 = {
+				add_dynamic_modifier = {
+					modifier = palermo_military_area
+				}
+			}
+			849 = {
+				add_dynamic_modifier = {
+					modifier = palermo_military_area
+				}
+			}
+			156 = {
+				add_dynamic_modifier = {
+					modifier = palermo_military_area
+				}
+			}
+			115 = {
+				add_dynamic_modifier = {
+					modifier = palermo_military_area
+				}
+			}
+		}
+	}
+	ITA_cagliari_military_area = {
+		days_remove = 30
+		fire_only_once = yes
+		cost = 50
+		visible = {
+			has_country_flag = ITA_founded_PNF_central_military_committee_flag
+		}
+		remove_effect = {
+			114 = {
+				add_dynamic_modifier = {
+					modifier = cagliari_military_area
+				}
+			}
+		}
+	}
+}

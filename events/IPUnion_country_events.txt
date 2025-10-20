@@ -2079,7 +2079,8 @@ country_event = {
 
 	option = {
 		name = IPUnion_country_event.59.a
-		add_political_power = 15
+		add_political_power = 30
+		add_ideas = idea_ITA_party_command_guns
 	}
 }
 

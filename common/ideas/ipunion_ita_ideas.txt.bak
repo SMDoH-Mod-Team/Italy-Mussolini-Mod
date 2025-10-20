@@ -585,14 +585,6 @@ ideas = {
 				industrial_capacity_factory = 10
 				production_speed_buildings_factor = 10
 				local_resources_factor = 10
-				add_resource = {
-					type = steel
-					amount = 150
-				}
-				add_resource = {
-					type = oil
-					amount = 150
-				}
 			}
 		}
 		idea_ITA_leap_forward_5 = {
@@ -604,26 +596,17 @@ ideas = {
 				industrial_capacity_factory = 100
 				production_speed_buildings_factor = 100
 				local_resources_factor = 100
-				add_resource = {
-					type = steel
-					amount = 500
-				}
-				add_resource = {
-					type = oil
-					amount = 500
-				}
 			}
 		}
-		idea_ITA_Economic_recovery_policy = {
+		idea_ITA_leap_forward_6 = {
 			removal_cost = -1
-			name = ITA_Economic_recovery_policy_tt
+			name = idea_ITA_leap_forward
 			picture = generic_deal_with_the_devil
 			modifier = {
-				consumer_goods_factor = 0.35
-				industrial_capacity_dockyard = -0.3
-				industrial_capacity_factory = -0.3
-				production_speed_buildings_factor = -0.3
-				local_resources_factor = -0.3
+				industrial_capacity_dockyard = 200
+				industrial_capacity_factory = 200
+				production_speed_buildings_factor = 200
+				local_resources_factor = 200
 			}
 		}
 		idea_ITA_liberation_malta = {

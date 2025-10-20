@@ -6,11 +6,14 @@ country_event = {
 	desc = IPUnion_leap_forward_event.1.d
 	is_triggered_only = yes
 	fire_only_once = yes
+	picture = GFX_report_event_gre_george_ii_victorious
 	option = {
 		name = IPUnion_leap_forward_event.1.a
-		country_event = {
+		hidden_effect = {
+			country_event = {
 			id = IPUnion_leap_forward_event.2
 			days = 15
+			}
 		}
 	}
 	option = {
@@ -28,6 +31,7 @@ country_event = {
 	desc = IPUnion_leap_forward_event.2.d
 	is_triggered_only = yes
 	fire_only_once = yes
+	picture = GFX_report_event_gre_george_ii_victorious
 	option = {
 		name = IPUnion_leap_forward_event.2.a
 		swap_ideas = {
@@ -35,9 +39,99 @@ country_event = {
 			add_idea = idea_ITA_leap_forward_2
 		}
 		hidden_effect = {
+			country_event = {
+				id = IPUnion_leap_forward_event.3
+				days = 15
+			}
 			swap_ideas = {
 				remove_idea = idea_ITA_reality_1
 				add_idea = idea_ITA_reality_2
+			}
+		}
+	}
+}
+
+country_event = {
+	id = IPUnion_leap_forward_event.3
+	title = IPUnion_leap_forward_event.3.t
+	desc = IPUnion_leap_forward_event.3.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_gre_george_ii_victorious
+	option = {
+		name = IPUnion_leap_forward_event.3.a
+		swap_ideas = {
+			remove_idea = idea_ITA_leap_forward_2
+			add_idea = idea_ITA_leap_forward_3
+		}
+		hidden_effect = {
+			country_event = {
+				id = IPUnion_leap_forward_event.4
+				days = 15
+			}
+			swap_ideas = {
+				remove_idea = idea_ITA_reality_2
+				add_idea = idea_ITA_reality_3
+			}
+		}
+	}
+}
+
+country_event = {
+	id = IPUnion_leap_forward_event.4
+	title = IPUnion_leap_forward_event.4.t
+	desc = IPUnion_leap_forward_event.4.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_gre_george_ii_victorious
+	option = {
+		name = IPUnion_leap_forward_event.4.a
+		swap_ideas = {
+			remove_idea = idea_ITA_leap_forward_3
+			add_idea = idea_ITA_leap_forward_4
+		}
+		hidden_effect = {
+			country_event = {
+				id = IPUnion_leap_forward_event.5
+				days = 15
+			}
+			swap_ideas = {
+				remove_idea = idea_ITA_reality_3
+				add_idea = idea_ITA_reality_4
+			}
+		}
+	}
+	option = {
+		name = IPUnion_leap_forward_event.4.b
+		custom_effect_tooltip = IPUnion_leap_forward_event.4.tt
+		add_timed_idea = {
+			idea = idea_ITA_Economic_recovery_policy
+			days = 90
+		}
+	}
+}
+
+country_event = {
+	id = IPUnion_leap_forward_event.5
+	title = IPUnion_leap_forward_event.5.t
+	desc = IPUnion_leap_forward_event.5.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_gre_george_ii_victorious
+	option = {
+		name = IPUnion_leap_forward_event.5.a
+		swap_ideas = {
+			remove_idea = idea_ITA_leap_forward_4
+			add_idea = idea_ITA_leap_forward_5
+		}
+		hidden_effect = {
+			country_event = {
+				id = IPUnion_leap_forward_event.6
+				days = 15
+			}
+			swap_ideas = {
+				remove_idea = idea_ITA_reality_4
+				add_idea = idea_ITA_reality_5
 			}
 		}
 	}

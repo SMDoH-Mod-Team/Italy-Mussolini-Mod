@@ -3766,17 +3766,45 @@ focus_tree = {
 ##    ##  ##       ##    ##   ##  ##     ##    ##       ##    ## ##       ##    ##  ##    ##  ##     ##    ##     ## 
 ##     ## ########  ######   ####  #######     ########  ######  ######## ##     ##  ######  ####    ##     #######  
 
+	focus = {
+		id = ITA_political_build_army
+		icon = GFX_focus_FIN_national_fanatism
+
+		relative_position_id = ITA_air_innovations_bba
+
+		x = 2
+		y = -1
+
+		cost = 5
+
+		available = {
+			has_country_leader = {
+				character = ITA_benito_mussolini
+				ruling_only = yes
+			}
+		}
+
+		completion_reward = {
+			#add_political_power = 10
+			country_event = IPUnion_country_event.59
+			unlock_decision_category_tooltip = ITA_PNF_central_military_committee
+		}
+	}
+
+
 
 	focus = {
 		id = ITA_army_primacy_bba
 		icon = GFX_goal_generic_axis_build_infantry
 
-		x = 13
-		y = 0
+		x = 14
+		y = 1
 		relative_position_id = ITA_italian_highways_bba
 		cost = 5
 		available = {
 		}
+
+		prerequisite = { focus = ITA_political_build_army }
 
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ARMY_XP}
 
@@ -3884,6 +3912,10 @@ focus_tree = {
 		relative_position_id = ITA_army_primacy_bba
 		cost = 4
 		available = {
+		}
+		
+		mutually_exclusive = {
+			focus = ITA_a_bandits_war
 		}
 
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ARMY_XP}
@@ -4150,6 +4182,10 @@ focus_tree = {
 		relative_position_id = ITA_army_primacy_bba
 		cost = 4
 		available = {
+		}
+
+		mutually_exclusive = {
+			focus = ITA_preserve_army_traditions
 		}
 
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP}
@@ -4883,12 +4919,14 @@ focus_tree = {
 		id = ITA_air_innovations_bba
 		icon = GFX_goal_expand_the_luftwaffe
 
-		x = 7
+		x = 8
 		y = 0
 		relative_position_id = ITA_army_primacy_bba
 		cost = 5
 		available = {
 		}
+
+		prerequisite = { focus = ITA_political_build_army }
 
 		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_AIR_XP}
 
@@ -5595,12 +5633,14 @@ focus_tree = {
 		id = ITA_naval_power_projection
 		icon = GFX_goal_generic_build_navy
 
-		x = 11
+		x = 12
 		y = 0
 		relative_position_id = ITA_air_innovations_bba
 		cost = 4
 		available = {
 		}
+
+		prerequisite = { focus = ITA_political_build_army }
 
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY_XP}
 
@@ -8223,7 +8263,7 @@ focus_tree = {
 		id = ITA_the_abyssinian_fiasco
 		icon = GFX_focus_generic_anti_fascist_diplomacy
 		mutually_exclusive = { focus = ITA_solid_progress focus = ITA_struggle_in_ethiopia }
-		x = 29
+		x = 30
 		y = 0
 		relative_position_id = ITA_naval_power_projection
 		cost = 5
@@ -10166,7 +10206,7 @@ focus_tree = {
 				popularity = 0.1
 			}
 
-			add_ideas = idea_ITA_party_command_guns
+			#add_ideas = idea_ITA_party_command_guns
 
 			add_country_leader_trait = capo_supremo
 
@@ -14850,7 +14890,7 @@ focus_tree = {
 			}
 		}
 
-		x = 55
+		x = 56
 		y = 1
 		offset = {
 			x = -29
@@ -16031,7 +16071,7 @@ focus_tree = {
 		icon = GFX_focus_BEL_the_lost_tribe
 		prerequisite = { focus = ITA_italy_first }
 		relative_position_id = ITA_italy_first
-		x = 4
+		x = 5
 		y = 1
 		cost = 5
 		available = {
@@ -16196,7 +16236,7 @@ focus_tree = {
 		icon = GFX_focus_chi_cooperation_with_the_nationalists
 		prerequisite = { focus = ITA_italy_first }
 
-		x = 2
+		x = 3
 		y = 1
 		relative_position_id = ITA_italy_first
 		cost = 5
@@ -16224,6 +16264,64 @@ focus_tree = {
 				}
 				give_market_access = ITA
 				add_opinion_modifier = { target = ITA modifier = ita_diplomacy_focus_1 }
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_re_establish_italian_control_over_tsingtao
+		icon = GFX_focus_GER_re_establish_german_control_over_qingdao
+		prerequisite = { focus = ITA_befriend_china }
+		relative_position_id = ITA_befriend_china
+		x = -1
+		y = 1
+		cost = 5
+		available = {
+			is_subject = no
+			743 = {
+				is_fully_controlled_by = CHI
+			}
+		}
+
+		bypass = {
+			743 = {
+				is_owned_by = ITA
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		completion_reward = {
+			CHI = {
+				country_event = {
+					id = wuw_GER_diplomacy.32
+					hours = 12
+				}
+			}
+			custom_effect_tooltip = if_they_accept_tt
+			effect_tooltip = {
+
+				add_opinion_modifier = {
+					target = CHI
+					modifier = medium_increase
+				}
+
+				give_guarantee = CHI
+
+				CHI = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = medium_increase
+					}
+					give_guarantee = ROOT
+				}
+				743 = {
+					transfer_state_to = ROOT
+					add_dynamic_modifier = {
+						modifier = GER_qingdao_reintegrated_modifier
+						days = 360
+					}
+				}
 			}
 		}
 	}
@@ -16713,7 +16811,7 @@ focus_tree = {
 		icon = GFX_goal_generic_military_deal
 		prerequisite = { focus = ITA_foreign_affairs }
 
-		x = 8
+		x = 9
 		y = 1
 		relative_position_id = ITA_foreign_affairs
 		cost = 1
@@ -25293,7 +25391,7 @@ focus_tree = {
 		}
 		relative_position_id = ITA_vallo_alpino_del_littorio
 		x = 2
-		y = 1
+		y = 2
 		cost = 5
 		available = {
 			GER = {
@@ -27662,7 +27760,7 @@ focus_tree = {
 			focus = ITA_mare_nostrum_bba
 		}
 		allow_branch = {
-			#has_country_flag = ITA_side_fight_flag
+			has_country_flag = ITA_side_fight_flag
 		}
 		available = {
 			#is_subject = no
@@ -27838,7 +27936,7 @@ focus_tree = {
 			has_character = ITA_gian_galeazzo_ciano
 		}
 		completion_reward = {
-			cou
+			
 		} 
 	}
 }
