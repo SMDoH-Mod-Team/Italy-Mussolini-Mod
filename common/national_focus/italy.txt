@@ -4200,9 +4200,23 @@ focus_tree = {
 
 			add_doctrine_cost_reduction = {
 				name = ITA_a_bandits_war
-				cost_reduction = 0.5
-				uses = 2
+				cost_reduction = 0.75
+				uses = 1
 				category = cat_mobile_warfare
+			}
+
+			add_doctrine_cost_reduction = {
+				name = ITA_a_bandits_war
+				cost_reduction = 0.75
+				uses = 1
+				category = cat_superior_firepower
+			}
+
+			add_doctrine_cost_reduction = {
+				name = ITA_a_bandits_war
+				cost_reduction = 0.75
+				uses = 1
+				category = cat_mass_assault
 			}
 
 			add_tech_bonus = {
@@ -8277,14 +8291,12 @@ focus_tree = {
 						option = HIDE
 					}
 				}
-				NOT = {
-					has_completed_focus = ITA_Clear_the_Square_flag
-				}
+				is_ai = yes
 			}
 		}
 
 		offset = {
-			x = -14
+			x = 0
 			y = 0
 			trigger = {
 				has_game_rule = {
@@ -8330,11 +8342,12 @@ focus_tree = {
 							rule = obsolete_focus_branches_visibility
 							option = HIDE
 						}
-						OR = {
-							has_completed_focus = ITA_culto_del_duce
-							has_completed_focus = ITA_convene_the_grand_council
-						}
-						has_completed_focus = ITA_Clear_the_Square_flag
+						#OR = {
+						#	has_completed_focus = ITA_culto_del_duce
+						#	has_completed_focus = ITA_convene_the_grand_council
+						#}
+						#has_completed_focus = ITA_Clear_the_Square_flag
+						has_country_flag = hide_defy_the_duce_focus_flag
 					}
 				}
 			}
@@ -8416,6 +8429,7 @@ focus_tree = {
 				}
 				NOT = { has_completed_focus = ITA_defy_the_duce }
 			}
+			is_ai = yes
 		}
 
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_BALANCE_OF_POWER}
@@ -8481,11 +8495,7 @@ focus_tree = {
 							rule = obsolete_focus_branches_visibility
 							option = HIDE
 						}
-						OR = {
-							has_completed_focus = ITA_culto_del_duce
-							has_completed_focus = ITA_convene_the_grand_council
-						}
-						has_completed_focus = ITA_Clear_the_Square_flag
+						has_country_flag = hide_defy_the_duce_focus_flag
 					}
 				}
 			}
@@ -8656,6 +8666,7 @@ focus_tree = {
 				}
 				NOT = { has_completed_focus = ITA_defy_the_duce	}
 			}
+			is_ai = yes
 		}
 
 		x = 20
@@ -9779,6 +9790,9 @@ focus_tree = {
 		mutually_exclusive = { 
 			focus = ITA_keep_the_course
 			focus = ITA_mare_nostrum_bba
+			focus = ITA_helmsman_died
+			focus = ITA_ciano_reinstated
+			focus = ITA_standard_of_truth
 		}
 
 		x = 0
@@ -10776,6 +10790,7 @@ focus_tree = {
 				NOT = { has_completed_focus = ITA_culto_del_duce }
 				NOT = { has_completed_focus = ITA_defy_the_duce }
 			}
+			is_ai = yes
 		}
 
 		x = 0
@@ -12739,6 +12754,7 @@ focus_tree = {
 				NOT = { has_completed_focus = ITA_culto_del_duce }
 				NOT = { has_completed_focus = ITA_defy_the_duce }
 			}
+			is_ai = yes
 		}
 
 		available = {
@@ -13808,6 +13824,7 @@ focus_tree = {
 			focus = ITA_keep_the_course
 			focus = ITA_helmsman_died
 			focus = ITA_ciano_reinstated
+			focus = ITA_standard_of_truth
 		}
 		x = 31
 		y = 0
@@ -13828,7 +13845,9 @@ focus_tree = {
 							has_completed_focus = ITA_culto_del_duce
 						}
 					}
+					is_ai = no
 				}
+				#is_ai = no
 			}
 		}
 		#relative_position_id = ITA_setting_course #Better to use the other one for hiding branches
@@ -14893,7 +14912,7 @@ focus_tree = {
 		x = 56
 		y = 1
 		offset = {
-			x = -29
+			x = -33
 			y = 0
 			trigger = {
 				OR = {
@@ -14905,6 +14924,7 @@ focus_tree = {
 						}
 						has_completed_focus = ITA_culto_del_duce
 					}
+					is_ai = no
 				}
 			}
 		}
@@ -18807,7 +18827,7 @@ focus_tree = {
 					}
 				}
 				NOT = {
-					has_completed_focus = ITA_Clear_the_Square_flag
+					has_country_flag = hide_defy_the_duce_focus_flag
 				}
 			}
 		}
@@ -18878,7 +18898,7 @@ focus_tree = {
 					}
 				}
 				NOT = {
-					has_completed_focus = ITA_Clear_the_Square_flag
+					has_country_flag = hide_defy_the_duce_focus_flag
 				}
 			}
 		}
@@ -18996,7 +19016,7 @@ focus_tree = {
 					}
 				}
 				NOT = {
-					has_completed_focus = ITA_Clear_the_Square_flag
+					has_country_flag = hide_defy_the_duce_focus_flag_2
 				}
 			}
 		}
@@ -27936,7 +27956,36 @@ focus_tree = {
 			has_character = ITA_gian_galeazzo_ciano
 		}
 		completion_reward = {
-			
+			country_event =  IPUnion_country_event.60
 		} 
+	}
+
+	focus = {
+		id = ITA_standard_of_truth
+		icon = GFX_focus_GER_strengthen_the_waffen_ss
+		relative_position_id = ITA_mare_nostrum_bba
+		x = 11
+		y = 0
+		cost = 2
+		prerequisite = { focus = ITA_setting_course focus = ITA_strengthen_the_regime focus = ITA_blackshirt_loyalty }
+		mutually_exclusive = { 
+			focus = ITA_towards_a_greater_italy
+			focus = ITA_mare_nostrum_bba
+		}
+		allow_branch = {
+			has_country_flag = IPUnion_country_event.60.flag
+		}
+		available = {
+			#is_subject = no
+			##has_completed_focus = ITA_culto_del_duce
+			#always = no
+			has_character = ITA_gian_galeazzo_ciano
+			NOT = {
+				has_character = ITA_benito_mussolini
+			}
+		}
+		completion_reward = {
+			
+		}
 	}
 }

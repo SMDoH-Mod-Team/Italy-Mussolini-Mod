@@ -20,6 +20,9 @@ on_actions = {
 					is_ai = no
 				}
 				country_event = IPUnion_debug_event.4
+				set_country_flag = hide_defy_the_duce_focus_flag
+				set_country_flag = hide_defy_the_duce_focus_flag_2
+				#mark_focus_tree_layout_dirty = yes
 			}
 		}
 	}

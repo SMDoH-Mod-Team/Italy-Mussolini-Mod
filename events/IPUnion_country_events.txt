@@ -4,6 +4,7 @@ country_event = {
 	id = IPUnion_country_event.1
 	title = IPUnion_country_event.1.t
 	desc = IPUnion_country_event.1.d
+	picture = GFX_report_event_generic_italian_celebration
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
@@ -42,6 +43,7 @@ country_event = {
 	id = IPUnion_country_event.2
 	title = IPUnion_country_event.2.t
 	desc = IPUnion_country_event.2.d
+	picture = GFX_report_event_generic_italian_celebration
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
@@ -56,14 +58,17 @@ country_event = {
 						has_government = neutrality
 						has_government = democratic
 					}
-					add_timed_idea = {
-						idea = fascist_influence
-						days = 60
-					}
+				}
+				add_timed_idea = {
+					idea = fascist_influence
+					days = 60
 				}
 			}
 			else = {
 				add_political_power = -10
+			}
+			hidden_effect = {
+				play_song = LacanzonedelCarnaro
 			}
 		}
 	}
@@ -680,10 +685,12 @@ country_event = {
 		remove_global_flag = ITA_Hot_Autumn_flag
 		hidden_effect = {
 			set_country_flag = ITA_Spring_of_Roma_Peace_flag
+			clr_country_flag = hide_defy_the_duce_focus_flag_2
 		}
 		remove_ideas = idea_ITA_Hot_Autumn
 		play_song = IPUnionBellaCiao
 		complete_national_focus = ITA_Spring_of_Roma
+		mark_focus_tree_layout_dirty = yes
 	}
 	option = {
 		name = IPUnion_country_event.18.b
@@ -695,8 +702,10 @@ country_event = {
 		play_song = IPUnionBellaCiao
 		hidden_effect = {
 			set_country_flag = ITA_Spring_of_Roma_Peace_flag
+			clr_country_flag = hide_defy_the_duce_focus_flag_2
 		}
 		complete_national_focus = ITA_Spring_of_Roma
+		mark_focus_tree_layout_dirty = yes
 	}
 }
 country_event = {
@@ -871,6 +880,7 @@ country_event = {
 			limit = {
 				has_completed_focus = ITA_Martial_Law_Command
 			}
+			complete_national_focus = ITA_Civil_War
 			country_event = BBA_italy_civil_war.1
 			hidden_effect = {
 				load_focus_tree = {
@@ -884,6 +894,7 @@ country_event = {
 			complete_national_focus = ITA_enter_the_high_stage_of_imperialism
 		}
 		else = {
+			complete_national_focus = ITA_Civil_War
 			hidden_effect = {
 				load_focus_tree = {
 					tree = italian_focus
@@ -892,9 +903,11 @@ country_event = {
 				set_country_flag = ITA_roma_spring_flag
 				clr_country_flag = ITA_culto_del_duce_flag
 				clr_country_flag = ITA_convene_the_grand_council_flag
+				clr_country_flag = hide_defy_the_duce_focus_flag_2
 				#NOR = {
 				#	controls_state = 914
 				#}
+				mark_focus_tree_layout_dirty = yes
 			}
 			complete_national_focus = ITA_unite_the_opposition
 			complete_national_focus = ITA_the_southern_farmlands
@@ -2083,6 +2096,45 @@ country_event = {
 		add_ideas = idea_ITA_party_command_guns
 	}
 }
+
+country_event = {
+	id = IPUnion_country_event.60
+	
+	title = IPUnion_country_event.60.t
+	desc = IPUnion_country_event.60.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_gre_george_ii_victorious
+	option = {
+		name = IPUnion_country_event.60.a
+		add_political_power = 15
+		retire_character = ITA_rodolfo_graziani
+		hidden_effect = {
+			set_country_flag = IPUnion_country_event.60.flag
+		}
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+
+country_event = {
+	id = IPUnion_country_event.61
+	
+	title = IPUnion_country_event.61.t
+	desc = IPUnion_country_event.61.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_gre_george_ii_victorious
+	option = {
+		name = IPUnion_country_event.61.a
+	}
+	option = {
+		name = IPUnion_country_event.61.b
+	}
+	option = {
+		name = IPUnion_country_event.61.c
+	}
+}
+
 
 
 

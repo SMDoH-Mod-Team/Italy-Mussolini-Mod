@@ -638,6 +638,14 @@ ideas = {
 				army_core_defence_factor = -0.10
 			}
 		}
+		idea_practices_is_sole_for_truth = {
+			removal_cost = -1
+			name = idea_practices_is_sole_for_truth
+			picture = FIN_socialist_welfare
+			modifier = {
+				
+			}
+		}
 	}
 	industrial_concern = {
 		ITA_OND = {

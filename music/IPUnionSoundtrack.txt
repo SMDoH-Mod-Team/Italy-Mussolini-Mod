@@ -157,7 +157,13 @@ music = {
 	}
 }
 music = {
-	song = "DownHill"
+	song = "LacanzonedelCarnaro"
+	chance = {
+		factor = 0
+	}
+}
+music = {
+	song = "LacanzonedelCarnaro_Accompaniment"
 	chance = {
 		factor = 0
 	}

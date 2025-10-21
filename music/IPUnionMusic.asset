@@ -119,6 +119,10 @@ music = {
 	file = "La leggenda del Piave.ogg"
 }
 music = {
-	name = "DownHill"
-	file = "downhill.ogg"
+	name = "LacanzonedelCarnaro"
+	file = "La canzone del Carnaro.ogg"
+}
+music = {
+	name = "LacanzonedelCarnaro_Accompaniment"
+	file = "La canzone del Carnaro_Accompaniment.ogg"
 }
