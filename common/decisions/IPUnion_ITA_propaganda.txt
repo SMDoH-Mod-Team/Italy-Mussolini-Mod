@@ -35,6 +35,7 @@ ITA_propaganda_campaigns = {
 
 		available = {
 			SOV_propaganda_poster_slot_available = yes
+			has_war = yes
 		}
 
 		#visible = {
@@ -50,6 +51,7 @@ ITA_propaganda_campaigns = {
 			weekly_manpower = 1000
 			training_time_factor = -0.1
 			minimum_training_level = -0.1
+			mobilization_speed = 0.15
 		}
 
 		complete_effect = {

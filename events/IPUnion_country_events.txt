@@ -1997,6 +1997,10 @@ country_event = {
 			ideology = fascism
 			popularity = 0.15
 		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		custom_effect_tooltip = two_whatevers_tt
 	}
 	option = {
 		name = IPUnion_country_event.57.b
@@ -2132,6 +2136,25 @@ country_event = {
 	}
 	option = {
 		name = IPUnion_country_event.61.c
+	}
+}
+
+country_event = {
+	id = IPUnion_country_event.62
+	
+	title = IPUnion_country_event.62.t
+	desc = IPUnion_country_event.62.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_gre_george_ii_victorious
+	option = {
+		name = IPUnion_country_event.62.a
+	}
+	option = {
+		name = IPUnion_country_event.62.b
+	}
+	option = {
+		name = IPUnion_country_event.62.c
 	}
 }
 

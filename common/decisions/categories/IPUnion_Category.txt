@@ -115,3 +115,11 @@ ITA_PNF_central_military_committee = {
 		has_completed_focus = ITA_political_build_army
 	}
 }
+ITA_office_of_defense_mobilization = {
+	icon = xxxx
+	picture = xxxx
+	allowed = {
+		
+	}
+	priority = 5
+}

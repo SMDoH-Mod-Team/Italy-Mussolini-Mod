@@ -126,3 +126,7 @@ music = {
 	name = "LacanzonedelCarnaro_Accompaniment"
 	file = "La canzone del Carnaro_Accompaniment.ogg"
 }
+music = {
+	name = "Downhill"
+	file = "downhill.ogg"
+}

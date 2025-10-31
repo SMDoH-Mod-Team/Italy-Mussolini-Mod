@@ -19,4 +19,8 @@ spriteTypes = {
 		name = GFX_idea_knights_of_malta
 		textureFile = "gfx/interface/ideas/idea_knights_of_malta.png"
 	}
+	spriteType = {
+		name = GFX_idea_oto_melara
+		textureFile = "gfx/interface/ideas/idea_oto_melara.png"
+	}
 }

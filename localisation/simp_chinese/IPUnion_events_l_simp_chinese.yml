@@ -209,6 +209,11 @@
  IPUnion_country_event.61.a: "我读的书不多，就记得主席讲的一句话"
  IPUnion_country_event.61.b: "哪句话？"
  IPUnion_country_event.61.c: "实事求是。"
+ IPUnion_country_event.62.t: "致罗马飞行学院的一封信"
+ IPUnion_country_event.62.d: "同志们:\n你们的事业，我是完全赞成的。半工半读，勤工俭学，不要国家一分钱，小学、中学、大学都有，分散在全省各个山头，少数在平地。这样的学校确是很好的。在校的青年居多，也有一部分中年干部。我希望不但在罗马有这样的学校，各大区也应有这样的学校。各大区应派有能力有见识的负责同志到罗马来考察，吸取经验，回去试办。初时学生宜少，逐渐增多，至罗马这样有一万人之多..."
+ IPUnion_country_event.62.a: "学制要缩短，教育要革命"
+ IPUnion_country_event.62.b: "沿着墨主席的道路走下去"
+ IPUnion_country_event.62.c: "同资产阶级教育路线实施最彻底的决裂！"
  
  
  
@@ -221,7 +226,7 @@
  IPUnion_debug_event.2.d: "为[FROM.GetName]添加早期运输机科技"
  IPUnion_debug_event.2.a: "好的"
  IPUnion_debug_event.4.t: "是否关闭领袖检测"
- IPUnion_debug_event.4.d: "本模组部分国策有检测国家领袖是否为墨索里尼的显示条件，若您在本次游玩中可能通过其他模组更改领袖（比如女仆团）则请选择开启以防止因国家领袖不是墨索里尼而造成部分国策缺失"
+ IPUnion_debug_event.4.d: "本模组部分国策有检测国家领袖是否为墨索里尼的显示条件，若您在本次游玩中可能通过其他模组更改领袖（比如女仆团）则请选择“是”以防止因国家领袖不是墨索里尼而造成部分国策缺失"
  IPUnion_debug_event.4.a: "是"
  IPUnion_debug_event.4.b: "否"
 
@@ -272,3 +277,12 @@
  IPUnion_leap_forward_event.4.a: "继续加大力度！"
  IPUnion_leap_forward_event.4.b: "“吹牛，靠不住。我是种过地的。亩产三万多斤？堆也堆不起来么！”" 
  IPUnion_leap_forward_event.4.tt: "§R国内粮食和钢铁产出肯定有了非常巨大的虚报，赶快展开调查并迅速纠错！§!"
+
+
+ mussolini_poem_event.1.t: "步虚词·罗马进军"
+ mussolini_poem_event.1.desc: "这是我们伟大领袖墨索里尼同志在革命生涯早期创作的一首诗，现将其全文发表。"
+ mussolini_poem_event.1.a: "军叫法西斯蒂，旗号束棒斧头。"
+ mussolini_poem_event.1.b: "米兰一带不停留，要向罗马直进。"
+ mussolini_poem_event.1.c: "资本重重压迫，老兵个个同仇。"
+ mussolini_poem_event.1.d: "秋收时节黑衫怒，霹雳一声暴动！"
+ 

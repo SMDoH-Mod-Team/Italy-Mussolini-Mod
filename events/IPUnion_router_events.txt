@@ -181,3 +181,48 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = IPUnion_router_event.7
+	title = IPUnion_router_event.7
+	desc = IPUnion_router_event.7
+	hidden = yes
+
+	trigger = {
+		ITA = {
+			has_country_flag = ITA_national_militia_peace_flag
+		}
+		any_country = {
+			NOT = {
+				original_tag = ETH
+			}
+			has_war_with = ITA
+		}
+	}
+
+	immediate = {
+		ITA = {
+			set_country_flag = ITA_call_up_the_reserves_flag
+		}
+	}
+}
+
+country_event = {
+	id = IPUnion_router_event.8
+	title = IPUnion_router_event.8
+	desc = IPUnion_router_event.8
+	hidden = yes
+
+	trigger = {
+		ITA = {
+			has_idea = ITA_national_militia_war
+			has_war = no
+		}
+	}
+
+	immediate = {
+		ITA = {
+			set_country_flag = ITA_demobilization_flag
+		}
+	}
+}

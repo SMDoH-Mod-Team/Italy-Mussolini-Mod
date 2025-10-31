@@ -1,0 +1,23 @@
+add_namespace = mussolini_poem_event
+
+country_event = {
+	id = mussolini_poem_event.1
+	title = mussolini_poem_event.1.t
+	desc = mussolini_poem_event.1.desc
+	picture = GFX_report_event_generic_italian_celebration
+	
+	is_triggered_only = yes
+
+	option = {
+		name = mussolini_poem_event.1.a
+	}
+	option = {
+		name = mussolini_poem_event.1.b
+	}
+	option = {
+		name = mussolini_poem_event.1.c
+	}
+	option = {
+		name = mussolini_poem_event.1.d
+	}
+}

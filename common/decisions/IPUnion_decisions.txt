@@ -1132,6 +1132,7 @@ ITA_mare_nostrum_category = {
 			}
 		}
 		remove_effect = {
+			country_event = IPUnion_country_event.53
 			country_event = IPUnion_country_event.28
 		}
 	}
@@ -1482,6 +1483,60 @@ ITA_PNF_central_military_committee = {
 				add_dynamic_modifier = {
 					modifier = cagliari_military_area
 				}
+			}
+		}
+	}
+}
+ITA_office_of_defense_mobilization = {
+	ITA_call_up_the_reserves = {
+		days_mission_timeout = 7
+		activation = {
+			has_country_flag = ITA_call_up_the_reserves_flag
+		}
+		available = {
+			always = no
+		}
+		cancel_trigger = {
+			NOT = {
+				has_idea = ITA_national_militia_peace
+			}
+		}
+		is_good = yes
+		timeout_effect = {
+			hidden_effect = {
+				clr_country_flag = ITA_national_militia_peace_flag
+				set_country_flag = ITA_national_militia_war_flag
+				#remove_idea = ITA_national_militia_peace
+			}
+			add_ideas = ITA_national_militia_war
+			hidden_effect = {
+				clr_country_flag = ITA_call_up_the_reserves_flag
+			}
+		}
+	}
+	ITA_demobilization = {
+		days_mission_timeout = 7
+		activation = {
+			has_country_flag = ITA_demobilization_flag
+		}
+		available = {
+			always = no
+		}
+		cancel_trigger = {
+			NOT = {
+				has_idea = ITA_national_militia_war
+			}
+		}
+		is_good = yes
+		timeout_effect = {
+			hidden_effect = {
+				clr_country_flag = ITA_national_militia_war_flag
+				set_country_flag = ITA_national_militia_peace_flag
+				#remove_idea = ITA_national_militia_peace
+			}
+			add_ideas = ITA_national_militia_peace
+			hidden_effect = {
+				clr_country_flag = ITA_demobilization_flag
 			}
 		}
 	}

@@ -53,9 +53,10 @@ characters = {
 					has_government = fascism
 					has_government = neutrality
 				}
+				has_completed_focus = ITA_ciano_reinstated
 			}
 			visible = {
-				has_completed_focus = ITA_ciano_reinstated
+				
 			}
 			cost = 75
 			traits = {

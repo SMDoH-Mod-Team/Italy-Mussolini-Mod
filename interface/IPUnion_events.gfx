@@ -3,4 +3,9 @@ spriteTypes = {
 		name = "GFX_report_IPUnion_1"
 		textureFile = "gfx/event_pictures/ITA_carriar_style.png"
 	}
+	spriteType = {
+		name = "GFX_report_event_generic_mussolini_in_event"
+		textureFile = "gfx/event_pictures/report_event_generic_mussolini_in_event.dds"
+		legacy_lazy_load = no
+	}
 }

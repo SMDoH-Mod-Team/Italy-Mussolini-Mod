@@ -1,0 +1,8 @@
+music_station = "IPUnion_hidden_station"
+
+music = {
+	song = "Downhill"
+	chance = {
+		factor = 0
+	}
+}

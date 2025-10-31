@@ -677,9 +677,36 @@ ideas = {
 				stability_factor = 0.15
 				consumer_goods_factor = 0.025
 				war_support_factor = -0.10
+				production_speed_infrastructure_factor = 0.1
+				production_speed_rail_way_factor = 0.1
+				fascism_drift = 0.0
 			}
 			
 			traits = { public_utilities_department }
+		}
+		ITA_oto_melara = {
+			picture = oto_melara
+
+			allowed = {
+				original_tag = ITA
+			}
+
+			available = {
+				has_completed_focus = ITA_oto_naval_guns
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+
+			cost = 75
+			
+			research_bonus = {
+				artillery = 0.15
+				naval_artillery = 0.15
+			}
+
+			traits = { industrial_concern }
 		}
 	}
 }

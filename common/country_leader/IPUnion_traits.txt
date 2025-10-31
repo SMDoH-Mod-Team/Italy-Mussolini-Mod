@@ -22,9 +22,9 @@ leader_traits = {
 	public_utilities_department = {
 		random = no
 
-		production_speed_infrastructure_factor = 0.1
-		production_speed_rail_way_factor = 0.1
-		political_power_gain = -0.01
+		#production_speed_infrastructure_factor = 0.1
+		#production_speed_rail_way_factor = 0.1
+		#political_power_gain = -0.01
 
 		ai_will_do = {
 			factor = 1
@@ -32,7 +32,7 @@ leader_traits = {
 	}
 	capitalist_unite = {
 		random = no
-		consumer_goods_factor = 0.10
+		consumer_goods_factor = 0.05
 		political_power_gain = 0.05
 		production_speed_buildings_factor = 0.10
 	}
@@ -69,4 +69,5 @@ leader_traits = {
 		drift_defence_factor = -0.20
 		command_power_gain_mult = -0.15
 	}
+	
 }

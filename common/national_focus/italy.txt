@@ -3778,10 +3778,10 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			has_country_leader = {
-				character = ITA_benito_mussolini
-				ruling_only = yes
-			}
+			#has_country_leader = {
+			#	character = ITA_benito_mussolini
+			#	ruling_only = yes
+			#}
 		}
 
 		completion_reward = {
@@ -5068,7 +5068,9 @@ focus_tree = {
 		icon = GFX_focus_generic_military_academy
 		prerequisite = { focus = ITA_air_innovations_bba }
 
-		x = 4
+		mutually_exclusive = { focus = ITA_encourage_the_flight_academy_to_participate_in_labor_activities }
+
+		x = 3
 		y = 1
 		relative_position_id = ITA_air_innovations_bba
 		cost = 4
@@ -5087,6 +5089,62 @@ focus_tree = {
 			air_experience = 25
 
 			custom_effect_tooltip = ITA_reduced_chance_of_air_accidents_tt
+		}
+	}
+
+	focus = {
+		id = ITA_encourage_the_flight_academy_to_participate_in_labor_activities
+		icon = GFX_focus_HUN_establish_the_mavag_aircraft_factory
+		prerequisite = { focus = ITA_air_innovations_bba }
+
+		mutually_exclusive = { focus = ITA_expand_rome_flying_school }
+
+		x = 5
+		y = 1
+		relative_position_id = ITA_air_innovations_bba
+		cost = 4
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_AIR_XP}
+
+		completion_reward = {
+			add_to_variable = { ITA_ra_air_ace_generation_chance_factor = 0.05 }
+			add_to_variable = { ITA_ra_air_night_penalty = -0.1 }
+			add_to_variable = { ITA_ra_air_weather_penalty = -0.1 }
+			add_to_variable = { ITA_ra_air_training_xp_gain_factor = 0.05 }
+			custom_effect_tooltip = ITA_expand_rome_flying_school_ra_tt
+
+			air_experience = 25
+
+			custom_effect_tooltip = ITA_reduced_chance_of_air_accidents_tt
+
+			hidden_effect = {
+				country_event = {
+					id = IPUnion_country_event.62
+					days = 7
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_revive_the_zeppelin
+		icon = GFX_focus_zeppelin
+		prerequisite = { focus = ITA_expand_rome_flying_school focus = ITA_encourage_the_flight_academy_to_participate_in_labor_activities }
+
+		x = 1
+		y = 1
+		relative_position_id = ITA_expand_rome_flying_school
+		cost = 4
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_AIR_XP}
+
+		completion_reward = {
+			air_experience = 25
+			
 		}
 	}
 
@@ -5168,7 +5226,7 @@ focus_tree = {
 		id = ITA_diving_bombers
 		icon = GFX_goal_poland_goal
 		prerequisite = { focus = ITA_citta_dell_aria }
-		prerequisite = { focus = ITA_expand_rome_flying_school }
+		prerequisite = { focus = ITA_expand_rome_flying_school focus = ITA_encourage_the_flight_academy_to_participate_in_labor_activities }
 
 		x = 2
 		y = 1
@@ -5246,7 +5304,7 @@ focus_tree = {
 		id = ITA_officers_of_the_service_role
 		icon = GFX_focus_generic_military_mission
 		prerequisite = { focus = ITA_superaereo }
-		prerequisite = { focus = ITA_expand_rome_flying_school }
+		prerequisite = { focus = ITA_expand_rome_flying_school focus = ITA_encourage_the_flight_academy_to_participate_in_labor_activities }
 
 		x = 3
 		y = 1
@@ -5291,6 +5349,7 @@ focus_tree = {
 			}
 
 			custom_effect_tooltip = ITA_reduced_chance_of_air_accidents_tt
+			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = ITA_officers_of_the_service_role_tt
 		}
 	}
@@ -6618,7 +6677,7 @@ focus_tree = {
 		id = ITA_naval_air_coordination
 		icon = GFX_goal_generic_air_naval_bomber
 		prerequisite = { focus = ITA_supermarina }
-		prerequisite = { focus = ITA_expand_rome_flying_school }
+		prerequisite = { focus = ITA_expand_rome_flying_school focus = ITA_encourage_the_flight_academy_to_participate_in_labor_activities }
 
 		x = -6
 		y = 1
@@ -10288,6 +10347,10 @@ focus_tree = {
 			add_country_leader_trait = ITA_duce_ffs_sfp
 			custom_effect_tooltip = IPUnion_Ita_Cosmetic_Tags_tt
 			retire_character = ITA_pietro_badoglio
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = ITA_better_choice_tt
 		}
 	}
 
@@ -13859,6 +13922,10 @@ focus_tree = {
 				dockyard > 0
 			}
 			is_subject = no
+
+			custom_trigger_tooltip = {
+
+			}
 		}
 
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
@@ -23558,6 +23625,10 @@ focus_tree = {
 			unlock_decision_tooltip = form_roman_empire
 			custom_effect_tooltip = form_greater_italy_tt
 			unlock_decision_tooltip = form_restore_organizational_life
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = ITA_better_choice_tt
 		}
 	}
 	focus = {
@@ -24019,6 +24090,12 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 5
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = ITA_leap_forward_bypass_tt
+				always = yes
+			}
+		}
 		completion_reward = {
 			custom_effect_tooltip = ITA_leap_forward_tt
 			add_ideas = idea_ITA_leap_forward_1
@@ -24028,6 +24105,7 @@ focus_tree = {
 					id = IPUnion_leap_forward_event.1
 					days = 10
 				}
+				set_country_flag = ITA_leap_forward_flag
 			}
 		}
 	}
@@ -27815,7 +27893,7 @@ focus_tree = {
 			activate_advisor = ITA_gian_galeazzo_ciano
 			unlock_decision_category_tooltip = ITA_central_advisory_committee
 			hidden_effect = {
-				play_song = DownHill
+				play_song = Downhill
 			}
 		}
 	}
