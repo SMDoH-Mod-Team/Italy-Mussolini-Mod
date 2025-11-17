@@ -1,0 +1,151 @@
+ITA_map_propaganda_flag_to_frame = {
+    # Example mapping effect.
+    # This small effect checks for specific country flags and maps them
+    # to a poster frame variable that the GUI reads. Clear the flag afterwards.
+
+    # NOTE: The frame indexes below are placeholders (0/1). Replace with
+    # the real frame index you assign in your .gfx (or put your DDS into
+    # an existing atlas and use the known index).
+
+    if = {
+        limit = { has_country_flag = ITA_propaganda_motherland_calls_flag }
+        set_variable = { SOV_new_propaganda_campaign = 3 }
+        set_variable = { SOV_poster_center_icon_frame = 500 }
+        clr_country_flag = ITA_propaganda_motherland_calls_flag
+    }
+
+    if = {
+        limit = { has_country_flag = ITA_propaganda_victory_at_hand_flag }
+        set_variable = { SOV_new_propaganda_campaign = 4 }
+        set_variable = { SOV_poster_center_icon_frame = 501 }
+        clr_country_flag = ITA_propaganda_victory_at_hand_flag
+    }
+
+    # ITA_propaganda_defend_roma is commented out in decisions file; skip
+
+    if = {
+        limit = { has_country_flag = ITA_propaganda_fight_to_the_last_flag }
+        set_variable = { SOV_new_propaganda_campaign = 6 }
+        set_variable = { SOV_poster_center_icon_frame = 502 }
+        clr_country_flag = ITA_propaganda_fight_to_the_last_flag
+    }
+
+    if = {
+        limit = { has_country_flag = ITA_propaganda_hit_of_hammer_flag }
+        set_variable = { SOV_new_propaganda_campaign = 7 }
+        set_variable = { SOV_poster_center_icon_frame = 503 }
+        clr_country_flag = ITA_propaganda_hit_of_hammer_flag
+    }
+
+    if = {
+        limit = { has_country_flag = ITA_propaganda_transport_flag }
+        set_variable = { SOV_new_propaganda_campaign = 8 }
+        set_variable = { SOV_poster_center_icon_frame = 504 }
+        clr_country_flag = ITA_propaganda_transport_flag
+    }
+
+    if = {
+        limit = { has_country_flag = ITA_propaganda_oil_for_the_motherland_flag }
+        set_variable = { SOV_new_propaganda_campaign = 9 }
+        set_variable = { SOV_poster_center_icon_frame = 505 }
+        clr_country_flag = ITA_propaganda_oil_for_the_motherland_flag
+    }
+
+    if = {
+        limit = { has_country_flag = ITA_propaganda_more_metal_flag }
+        set_variable = { SOV_new_propaganda_campaign = 10 }
+        set_variable = { SOV_poster_center_icon_frame = 506 }
+        clr_country_flag = ITA_propaganda_more_metal_flag
+    }
+
+    if = {
+        limit = { has_country_flag = ITA_propaganda_high_yield_flag }
+        set_variable = { SOV_new_propaganda_campaign = 11 }
+        set_variable = { SOV_poster_center_icon_frame = 507 }
+        clr_country_flag = ITA_propaganda_high_yield_flag
+    }
+
+    if = {
+        limit = { has_country_flag = ITA_propaganda_for_the_motherland_flag }
+        set_variable = { SOV_new_propaganda_campaign = 12 }
+        set_variable = { SOV_poster_center_icon_frame = 508 }
+        clr_country_flag = ITA_propaganda_for_the_motherland_flag
+    }
+
+    if = {
+        limit = { has_country_flag = ITA_propaganda_heroes_forward_flag }
+        set_variable = { SOV_new_propaganda_campaign = 13 }
+        set_variable = { SOV_poster_center_icon_frame = 509 }
+        clr_country_flag = ITA_propaganda_heroes_forward_flag
+    }
+
+    if = {
+        limit = { has_country_flag = ITA_propaganda_anti_capitalism_flag }
+        set_variable = { SOV_new_propaganda_campaign = 14 }
+        set_variable = { SOV_poster_center_icon_frame = 510 }
+        clr_country_flag = ITA_propaganda_anti_capitalism_flag
+    }
+
+    if = {
+        limit = { has_country_flag = ITA_propaganda_anti_anti_fascism_flag }
+        set_variable = { SOV_new_propaganda_campaign = 15 }
+        set_variable = { SOV_poster_center_icon_frame = 511 }
+        clr_country_flag = ITA_propaganda_anti_anti_fascism_flag
+    }
+
+    if = {
+        limit = { has_country_flag = ITA_propaganda_treacherous_enemy_flag }
+        set_variable = { SOV_new_propaganda_campaign = 16 }
+        set_variable = { SOV_poster_center_icon_frame = 512 }
+        clr_country_flag = ITA_propaganda_treacherous_enemy_flag
+    }
+
+    if = {
+        limit = { has_country_flag = ITA_propaganda_do_not_blab_flag }
+        set_variable = { SOV_new_propaganda_campaign = 17 }
+        set_variable = { SOV_poster_center_icon_frame = 513 }
+        clr_country_flag = ITA_propaganda_do_not_blab_flag
+    }
+
+    if = {
+        limit = { has_country_flag = ITA_propaganda_sweep_scum_out_flag }
+        set_variable = { SOV_new_propaganda_campaign = 18 }
+        set_variable = { SOV_poster_center_icon_frame = 514 }
+        clr_country_flag = ITA_propaganda_sweep_scum_out_flag
+    }
+
+    if = {
+        limit = { has_country_flag = ITA_propaganda_knowledge_flag }
+        set_variable = { SOV_new_propaganda_campaign = 19 }
+        set_variable = { SOV_poster_center_icon_frame = 515 }
+        clr_country_flag = ITA_propaganda_knowledge_flag
+    }
+
+    if = {
+        limit = { has_country_flag = ITA_propaganda_builders_of_fascism_flag }
+        set_variable = { SOV_new_propaganda_campaign = 20 }
+        set_variable = { SOV_poster_center_icon_frame = 516 }
+        clr_country_flag = ITA_propaganda_builders_of_fascism_flag
+    }
+
+    if = {
+        limit = { has_country_flag = ITA_propaganda_glory_to_partisans_flag }
+        set_variable = { SOV_new_propaganda_campaign = 21 }
+        set_variable = { SOV_poster_center_icon_frame = 517 }
+        clr_country_flag = ITA_propaganda_glory_to_partisans_flag
+    }
+
+    if = {
+        limit = { has_country_flag = ITA_propaganda_death_to_invaders_flag }
+        set_variable = { SOV_new_propaganda_campaign = 22 }
+        set_variable = { SOV_poster_center_icon_frame = 518 }
+        clr_country_flag = ITA_propaganda_death_to_invaders_flag
+    }
+
+    if = {
+        limit = { has_country_flag = ITA_propaganda_duce_flag }
+        set_variable = { SOV_new_propaganda_campaign = 23 }
+        set_variable = { SOV_poster_center_icon_frame = 519 }
+        clr_country_flag = ITA_propaganda_duce_flag
+    }
+}

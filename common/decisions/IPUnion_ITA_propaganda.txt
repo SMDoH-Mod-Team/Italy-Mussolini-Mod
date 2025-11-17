@@ -1,6 +1,6 @@
 ITA_propaganda_campaigns = {
 
-	SOV_propaganda_motherland_calls = { # ID = 3
+	ITA_propaganda_motherland_calls = { # ID = 3
 		priority = 2
 
 		icon = eng_propaganda_campaigns
@@ -74,7 +74,7 @@ ITA_propaganda_campaigns = {
 		}
 	}
 
-	SOV_propaganda_victory_at_hand = { # ID = 4
+	ITA_propaganda_victory_at_hand = { # ID = 4
 		priority = 3
 
 		icon = eng_propaganda_campaigns
@@ -238,7 +238,7 @@ ITA_propaganda_campaigns = {
 	#	}
 	#}
 
-	SOV_propaganda_fight_to_the_last = { # ID = 6
+	ITA_propaganda_fight_to_the_last = { # ID = 6
 		priority = 5
 
 		icon = eng_propaganda_campaigns
@@ -327,7 +327,7 @@ ITA_propaganda_campaigns = {
 		}
 	}
 
-	SOV_propaganda_hit_of_hammer = { # ID = 7
+	ITA_propaganda_hit_of_hammer = { # ID = 7
 		priority = 6
 
 		icon = eng_propaganda_campaigns
@@ -462,7 +462,7 @@ ITA_propaganda_campaigns = {
 		}
 	}
 
-	SOV_propaganda_oil_for_the_motherland = { # ID = 9
+	ITA_propaganda_oil_for_the_motherland = { # ID = 9
 		priority = 8
 
 		icon = eng_propaganda_campaigns
@@ -540,7 +540,7 @@ ITA_propaganda_campaigns = {
 		}
 	}
 
-	SOV_propaganda_more_metal = { # ID = 10
+	ITA_propaganda_more_metal = { # ID = 10
 		priority = 9
 
 		icon = eng_propaganda_campaigns
@@ -746,7 +746,7 @@ ITA_propaganda_campaigns = {
 		}
 	}
 
-	SOV_propaganda_for_the_motherland = { # ID = 12
+	ITA_propaganda_for_the_motherland = { # ID = 12
 		priority = 11
 
 		icon = eng_propaganda_campaigns
@@ -829,7 +829,7 @@ ITA_propaganda_campaigns = {
 		}
 	}
 
-	SOV_propaganda_heroes_forward = { # ID = 13
+	ITA_propaganda_heroes_forward = { # ID = 13
 		priority = 12
 
 		icon = eng_propaganda_campaigns
@@ -881,11 +881,14 @@ ITA_propaganda_campaigns = {
 		}
 
 		complete_effect = {
-			set_variable = { SOV_new_propaganda_campaign = 13 }
+			set_country_flag = ITA_propaganda_heroes_forward_flag
+			# Call the mod mapping effect so we can set a custom poster frame without
+			# touching the large base `SOV_pick_propaganda_campaign_slot_effect`.
+			ITA_map_propaganda_flag_to_frame = yes
 			SOV_pick_propaganda_campaign_slot_effect = yes
 			SOV_achievement_propaganda_counter_effect = yes
 
-			custom_effect_tooltip = SOV_propaganda_heroes_forward_tt
+			custom_effect_tooltip = ITA_propaganda_heroes_forward_tt
 
 			set_temp_variable = { temp_targets_index = 0 }
 			while_loop_effect = {
@@ -938,7 +941,7 @@ ITA_propaganda_campaigns = {
 		}
 	}
 
-	SOV_propaganda_anti_capitalism = { # ID = 14
+	ITA_propaganda_anti_capitalism = { # ID = 14
 		priority = 13
 
 		icon = eng_propaganda_campaigns
@@ -1456,7 +1459,7 @@ ITA_propaganda_campaigns = {
 		}
 	}
 
-	SOV_propaganda_treacherous_enemy = { # ID = 16
+	ITA_propaganda_treacherous_enemy = { # ID = 16
 		priority = 15
 
 		icon = eng_propaganda_campaigns
@@ -1532,7 +1535,7 @@ ITA_propaganda_campaigns = {
 		}
 	}
 
-	SOV_propaganda_do_not_blab = { # ID = 17
+	ITA_propaganda_do_not_blab = { # ID = 17
 		priority = 16
 
 		icon = eng_propaganda_campaigns
@@ -1615,7 +1618,7 @@ ITA_propaganda_campaigns = {
 		}
 	}
 
-	SOV_propaganda_sweep_scum_out = { # ID = 18
+	ITA_propaganda_sweep_scum_out = { # ID = 18
 		priority = 17
 
 		icon = eng_propaganda_campaigns
@@ -1696,7 +1699,7 @@ ITA_propaganda_campaigns = {
 		}
 	}
 
-	SOV_propaganda_knowledge = { # ID = 19
+	ITA_propaganda_knowledge = { # ID = 19
 		priority = 18
 
 		icon = eng_propaganda_campaigns
@@ -1852,7 +1855,7 @@ ITA_propaganda_campaigns = {
 		}
 	}
 
-	SOV_propaganda_glory_to_partisans = { # ID = 21
+	ITA_propaganda_glory_to_partisans = { # ID = 21
 		priority = 20
 
 		icon = eng_propaganda_campaigns
@@ -1936,7 +1939,7 @@ ITA_propaganda_campaigns = {
 		}
 	}
 
-	SOV_propaganda_death_to_invaders = { # ID = 22
+	ITA_propaganda_death_to_invaders = { # ID = 22
 		priority = 21
 
 		icon = eng_propaganda_campaigns
