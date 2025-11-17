@@ -1,0 +1,862 @@
+
+
+
+
+	shared_focus = {
+		id = AOI_italian_aoi
+
+		dynamic = yes
+
+		allow_branch = {
+			country_exists = AOI
+			AOI = {
+				is_subject_of = ITA
+			}
+		}
+
+		icon = GFX_focus_CONGO_belgian_congo
+
+		x = 34
+		y = 8
+
+		cost = 5
+
+		text_icon = CONGO_COG_focus_style
+
+		available = {
+			original_tag = AOI
+			OR = {
+				is_in_faction_with = ITA
+				is_subject_of = ITA
+			}
+		}
+
+		bypass = {
+			original_tag = AOI
+			NOT = {
+				OR = {
+					is_in_faction_with = ITA
+					is_subject_of = ITA
+				}
+			}
+		}
+
+		offset = {
+			x = -23
+			y = -8
+
+			trigger = {
+				has_focus_tree = AOI_focus_tree
+			}
+		}
+
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {
+			if = {
+				limit = {
+					original_tag = AOI
+				}
+
+				add_political_power = 50
+
+				custom_effect_tooltip = generic_skip_one_line_tt
+
+				limit = {
+					is_core_of = ROOT
+					is_fully_controlled_by = ROOT
+					is_owned_by = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}	
+				}
+					
+				prioritize = { 271 } 
+
+				add_extra_state_shared_building_slots = 1
+
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			else_if = {
+				limit = {
+					original_tag = ITA
+					AOI = {
+						is_subject_of = ITA
+					}
+				}
+
+				effect_tooltip = {
+					AOI = {
+						add_political_power = 50
+
+						custom_effect_tooltip = generic_skip_one_line_tt
+
+						limit = {
+							is_core_of = ROOT
+							is_fully_controlled_by = ROOT
+							is_owned_by = ROOT
+							free_building_slots = {
+								building = industrial_complex
+								size > 1
+								include_locked = yes
+							}	
+						}
+					
+						prioritize = { 271 } 
+
+						add_extra_state_shared_building_slots = 1
+
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+			}
+
+			hidden_effect = {
+				ITA = {
+					unlock_national_focus = AOI_italian_aoi
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = AOI_italian_investment
+
+		dynamic = yes 
+		
+		icon = GFX_focus_CONGO_congo_investments
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
+
+		relative_position_id = AOI_italian_aoi
+		x = -8
+		y = 2
+
+		cost = 5
+
+		text_icon = CONGO_BEL_focus_style
+
+		allow_branch = {
+			country_exists = AOI
+			AOI = {
+				is_subject_of = ITA
+			}
+		}
+
+		available = { 
+			original_tag = ITA
+			has_subject = AOI
+			NOT = {	
+				OR = {
+					has_war_with = ITA
+					has_war_with = AOI
+				}
+			}
+		}
+
+		available_if_capitulated = yes	
+
+		completion_reward = {
+
+			if = {
+				limit = {
+					original_tag = AOI
+				}
+
+				effect_tooltip = {
+					random_controlled_state = {
+						limit = {
+							#is_core_of = COG
+							is_owned_by = AOI
+							is_fully_controlled_by = AOI
+							free_building_slots = {
+								building = industrial_complex
+								size > 1
+								include_locked = yes
+							}
+						}
+						prioritize = { 271 }
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = industrial_complex
+							level = 2
+							instant_build = yes
+						}	
+					}	
+				}
+				
+			}
+			else_if = {
+				limit = {
+					original_tag = ITA
+					AOI = {
+						is_subject_of = ITA
+					}
+				}
+
+				random_state = {
+					limit = {
+						#is_core_of = COG
+						is_owned_by = AOI
+						is_fully_controlled_by = AOI
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+					prioritize = { 271 }
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}	
+				}
+			}
+
+			hidden_effect = {
+				AOI = { unlock_national_focus = AOI_italian_investment } #Completes focus for Congo
+			}
+		}
+	}
+
+	shared_focus = {
+		id = AOI_expand_villages
+
+		dynamic = yes
+
+		icon = GFX_goal_reichsautobahn
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_WAR_SUPPORT }
+
+		prerequisite = { focus = AOI_italian_aoi }
+
+		relative_position_id = AOI_italian_aoi
+		x = -3
+		y = 1
+
+		cost = 6
+
+		text_icon = CONGO_COG_focus_style
+
+		available = {
+			original_tag = AOI
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			if = {
+				limit = {
+					original_tag = AOI
+				}
+
+				every_state = {
+					limit = {
+						is_owned_and_controlled_by = ROOT
+					}
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+			else_if = {
+				limit = {
+					original_tag = ITA
+					AOI = {
+						is_subject_of = ITA
+					}
+				}
+				effect_tooltip = {
+					AOI = {
+						every_state = {
+							limit = {
+								is_owned_and_controlled_by = ROOT
+							}
+							add_extra_state_shared_building_slots = 1
+						}		
+					}
+				}
+			}
+
+			hidden_effect = {
+				ITA = {
+					unlock_national_focus = AOI_expand_villages
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = AOI_free_enterprise_fund
+
+		dynamic = yes
+
+		icon = GFX_focus_mex_privatisation
+
+		text_icon = CONGO_COG_focus_style
+
+		available = {
+			original_tag = AOI
+		}
+
+		prerequisite = { focus = AOI_italian_aoi }
+
+		relative_position_id = AOI_expand_villages
+
+		x = 2
+		y = 0
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			if = {
+				limit = {
+					original_tag = AOI
+				}
+
+				random_owned_controlled_state = {
+					limit = {
+						#is_core_of = AOI
+						is_fully_controlled_by = AOI
+						is_owned_by = AOI
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}	
+					}
+					
+					prioritize = { 271 } 
+
+					add_extra_state_shared_building_slots = 1
+
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}	
+				}
+
+				custom_effect_tooltip = generic_skip_one_line_tt
+
+				random_owned_controlled_state = {
+					limit = {
+						#is_core_of = AOI
+						is_fully_controlled_by = AOI
+						is_owned_by = AOI
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}	
+					}
+					
+					prioritize = { 550 } 
+
+					add_extra_state_shared_building_slots = 1
+
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}	
+				}
+			}
+
+			else_if = {
+				limit = {
+					original_tag = ITA
+					AOI = {
+						is_subject_of = ITA
+					}
+				}
+				effect_tooltip = {
+					AOI = {
+						random_owned_controlled_state = {
+							limit = {
+								is_core_of = AOI
+								is_fully_controlled_by = AOI
+								is_owned_by = AOI
+								free_building_slots = {
+									building = industrial_complex
+									size > 0
+									include_locked = yes
+								}	
+							}
+							
+							prioritize = { 271 } 
+
+							add_extra_state_shared_building_slots = 1
+
+							add_building_construction = {
+								type = industrial_complex
+								level = 1
+								instant_build = yes
+							}	
+						}
+
+						custom_effect_tooltip = generic_skip_one_line_tt
+
+						random_owned_controlled_state = {
+							limit = {
+								is_core_of = AOI
+								is_fully_controlled_by = AOI
+								is_owned_by = AOI
+								free_building_slots = {
+									building = industrial_complex
+									size > 0
+									include_locked = yes
+								}	
+							}
+							
+							prioritize = { 550 } 
+
+							add_extra_state_shared_building_slots = 1
+
+							add_building_construction = {
+								type = industrial_complex
+								level = 1
+								instant_build = yes
+							}	
+						}
+					}	
+				}
+			}
+
+			hidden_effect = {
+				ITA = {
+					unlock_national_focus = AOI_free_enterprise_fund
+				}
+			}
+		}
+	}
+
+	joint_focus = {
+		id = AOI_talent_recruitment
+
+		dynamic	= yes
+
+		icon = GFX_goal_generic_intelligence_exchange
+
+		prerequisite = { focus = AOI_italian_aoi }
+
+		relative_position_id = AOI_free_enterprise_fund
+		x = 2
+		y = 0
+
+		cost = 6
+
+		text_icon = CONGO_BEL_COG_focus_style
+
+		joint_trigger = {
+			AOI_is_a_aoi_viable_nation = yes
+		}
+
+		available = { 
+			any_country = {
+				original_tag = AOI
+				is_subject_of = ITA
+			}
+			NOT = {	
+				OR = {
+					has_war_with = ITA
+					has_war_with = AOI
+					#has_global_flag = CONGO_independence_war_ongoing
+				}
+			}
+		} 
+
+		available_if_capitulated = yes
+
+		completion_reward = {}
+
+		completion_reward_joint_originator = {
+			if = {
+				limit = {
+					original_tag = AOI
+				}
+
+				add_timed_idea = {
+					idea = idea_AOI_talent_recruitment
+					days = 3650
+				}
+
+				custom_effect_tooltip = generic_skip_one_line_tt
+
+				add_autonomy_score = { 
+					value = 100
+					localization = AOI_talent_recruitment
+				}
+			}
+			
+			if = {
+				limit = {
+					original_tag = ITA
+				}
+
+				add_political_power = 50
+			}
+		}
+
+		completion_reward_joint_member = {
+			if = {
+				limit = {
+					original_tag = AOI
+				}
+
+				add_timed_idea = {
+					idea = idea_AOI_talent_recruitment
+					days = 3650
+				}
+
+				custom_effect_tooltip = generic_skip_one_line_tt
+
+				add_autonomy_score = { 
+					value = 100
+					localization = AOI_talent_recruitment
+				}
+			}
+			
+			if = {
+				limit = {
+					original_tag = ITA
+				}
+
+				add_political_power = 50
+			}
+		}
+	}
+
+	shared_focus = {
+		id = AOI_weapon_repair_workshops
+
+		dynamic = yes
+
+		icon = GFX_goal_generic_production
+
+		prerequisite = {
+			focus = AOI_italian_aoi
+		}
+
+		relative_position_id = AOI_talent_recruitment
+		x = 2
+		y = 0
+
+		cost = 6
+
+		text_icon = CONGO_COG_focus_style
+
+		available = {
+			original_tag = AOI
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			if = {
+				limit = {
+					original_tag = AOI
+				}
+
+				random_owned_controlled_state = {
+					limit = {
+						#is_core_of = ROOT
+						is_fully_controlled_by = ROOT
+						is_owned_by = ROOT
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}	
+					}
+					
+					prioritize = { 271 550 } 
+
+					add_extra_state_shared_building_slots = 2
+
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}	
+				}
+			}
+			else_if = {
+				limit = {
+					original_tag = ITA
+					AOI = {
+						is_subject_of = ITA
+					}
+				}
+				
+				AOI = {
+					random_owned_controlled_state = {
+						limit = {
+							#is_core_of = ROOT
+							is_fully_controlled_by = ROOT
+							is_owned_by = ROOT
+							free_building_slots = {
+								building = arms_factory
+								size > 1
+								include_locked = yes
+							}	
+						}
+						
+						prioritize = { 271 550 } 
+
+						add_extra_state_shared_building_slots = 2
+
+						add_building_construction = {
+							type = arms_factory
+							level = 2
+							instant_build = yes
+						}	
+					}	
+				}
+			}
+
+			hidden_effect = {
+				ITA = {
+					unlock_national_focus = AOI_weapon_repair_workshops
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = AOI_addis_ababa_college
+
+		dynamic = yes 
+		
+		icon = GFX_focus_research
+
+		prerequisite = { focus = AOI_italian_aoi }
+
+		relative_position_id = AOI_talent_recruitment
+		x = 1
+		y = 1
+
+		cost = 6
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+		text_icon = CONGO_COG_focus_style
+
+		available = { 	
+			original_tag = AOI
+			num_of_factories > 15
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			if = {
+				limit = {
+					original_tag = AOI
+				}
+
+				add_research_slot = 1
+
+			}
+			else_if = {
+				limit = {
+					original_tag = ITA
+					AOI = {
+						is_subject_of = ITA
+					}
+				}
+				effect_tooltip = {
+					AOI = {
+						add_research_slot = 1
+					}
+				}
+			}
+
+			hidden_effect = {
+				ITA = {
+					unlock_national_focus = AOI_addis_ababa_college
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = AOI_nationale_construction_communitte
+
+		dynamic = yes 
+		
+		icon = GFX_goal_generic_construction
+
+		prerequisite = { focus = AOI_italian_aoi }
+
+		relative_position_id = AOI_expand_villages
+		x = 1
+		y = 1
+
+		cost = 5
+
+		text_icon = CONGO_COG_focus_style
+
+		available = {
+			original_tag = AOI
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			if = {
+				limit = {
+					original_tag = AOI
+				}
+
+				random_owned_controlled_state = {
+					limit = {
+						#is_core_of = ROOT
+						is_fully_controlled_by = ROOT
+						is_owned_by = ROOT
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}	
+					}
+					
+					prioritize = { 835 } 
+
+					add_extra_state_shared_building_slots = 1
+
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}	
+				}
+
+				custom_effect_tooltip = generic_skip_one_line_tt
+
+				custom_effect_tooltip = available_industrial_concern
+				show_ideas_tooltip = AOI_danieli
+				show_ideas_tooltip = AOI_astaldi
+			}
+		}
+	}
+
+	joint_focus = {
+		id = AOI_the_horn_of_africa
+
+		dynamic = yes
+
+		icon = GFX_focus_COG_heart_of_africa
+
+		prerequisite = { focus = AOI_italian_aoi focus = AOI_italian_investment }
+
+		relative_position_id = AOI_italian_aoi
+		x = 0
+		y = 3
+
+		cost = 10
+
+		text_icon = CONGO_COG_focus_style
+
+		joint_trigger = {
+			AOI_is_a_aoi_viable_nation = yes
+		}
+
+		available = {
+			any_country = {
+				original_tag = AOI
+				is_subject_of = ITA
+			}
+			NOT = {
+				OR = {
+					has_war_with = BEL
+					has_war_with = COG
+				}
+			}
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward_joint_originator = {
+			if = {
+				limit = {
+					original_tag = ITA
+				}
+				add_political_power = 75
+
+			}
+			
+			if = {
+				limit = {
+					original_tag = AOI
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = AOI_medal_colony_modifier
+						}	
+					}
+				}
+				add_dynamic_modifier = { 
+					modifier = AOI_medal_colony_modifier
+				}
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			if = {
+				limit = {
+					original_tag = AOI
+				}
+				custom_effect_tooltip = modify_COG_belgian_congo_colonial_dynamic_modifier_tt
+				add_to_variable = { ITA.AOI_belgian_congo_colonial_dynamic_modifier_research_speed_factor = 0.03 tooltip = research_speed_factor_tt }
+			}
+		}
+
+		completion_reward_joint_member = {
+
+			if = {
+				limit = {
+					original_tag = ITA
+				}
+				add_political_power = 75
+			}
+
+			if = {
+				limit = {
+					original_tag = AOI
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = AOI_medal_colony_modifier
+						}	
+					}
+				}
+				add_dynamic_modifier = { 
+					modifier = AOI_medal_colony_modifier
+				}
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			if = {
+				limit = {
+					original_tag = AOI
+				}
+				custom_effect_tooltip = modify_COG_belgian_congo_colonial_dynamic_modifier_tt
+				add_to_variable = { ITA.AOI_belgian_congo_colonial_dynamic_modifier_research_speed_factor = 0.03 tooltip = research_speed_factor_tt }
+			}
+		}
+	}
+	
+

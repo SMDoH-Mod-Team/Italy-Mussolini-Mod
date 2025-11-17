@@ -101,3 +101,32 @@ cagliari_military_area = {
 	ground_attack_factor = 0.10
 	local_org_regain = 0.20
 }
+
+#Medal Colony
+
+AOI_medal_colony_modifier = {
+	enable = { always = yes }
+	icon = GFX_idea_COG_belgian_congo_colonial_dynamic_modifier
+
+	remove_trigger = {
+		is_subject = no
+	}
+
+	political_power_factor = ITA.AOI_belgian_congo_colonial_dynamic_modifier_political_power_factor
+	war_support_factor = ITA.AOI_belgian_congo_colonial_dynamic_modifier_war_support_factor
+	production_speed_buildings_factor = ITA.AOI_gian_congo_colonial_dynamic_modifier_production_speed_buildings_factor
+	fascism_drift = ITA.AOI_belgian_congo_colonial_dynamic_modifier_fascism_drift
+	autonomy_gain_global_factor = ITA.AOI_belgian_congo_colonial_dynamic_modifier_autonomy_gain_global_factor
+	research_speed_factor = ITA.AOI_belgian_congo_colonial_dynamic_modifier_research_speed_factor
+	consumer_goods_factor = ITA.AOI_belgian_congo_colonial_dynamic_modifier_consumer_goods_factor
+	local_resources_factor = ITA.AOI_belgian_congo_colonial_dynamic_modifier_local_resources_factor
+	stability_factor = ITA.AOI_belgian_congo_colonial_dynamic_modifier_stability_factor
+	production_speed_industrial_complex_factor = ITA.AOI_belgian_congo_colonial_dynamic_modifier_production_speed_industrial_complex_factor
+	autonomy_gain = ITA.AOI_belgian_congo_colonial_dynamic_modifier_autonomy_gain
+	trade_laws_cost_factor = ITA.AOI_belgian_congo_colonial_dynamic_modifier_trade_laws_cost_factor
+	production_speed_infrastructure_factor = ITA.AOI_belgian_congo_colonial_dynamic_modifier_production_speed_infrastructure_factor
+	production_speed_supply_node_factor = ITA.AOI_belgian_congo_colonial_dynamic_modifier_production_speed_supply_node_factor
+	industrial_capacity_dockyard = ITA.AOI_belgian_congo_colonial_dynamic_modifier_industrial_capacity_dockyard
+	cic_to_overlord_factor = ITA.AOI_belgian_congo_colonial_dynamic_modifier_cic_to_overlord_factor
+	mic_to_overlord_factor = ITA.AOI_belgian_congo_colonial_dynamic_modifier_mic_to_overlord_factor
+}

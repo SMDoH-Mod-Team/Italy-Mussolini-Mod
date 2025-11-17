@@ -1,0 +1,80 @@
+ideas = {
+	country = {
+		idea_AOI_talent_recruitment = {
+			name = idea_AOI_talent_recruitment
+			picture = AUS_treaty_of_saint_germain_en_laye
+			allowed = {
+
+			}
+			cancel = {
+				AOI = {
+					NOT = {
+						is_subject_of = ITA
+					}
+				}
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.05
+				research_speed_factor = 0.10
+			}
+		}
+
+		AOI_banque_du_AOI_ITA_idea = {
+
+			picture = generic_agrarian_society
+			
+			allowed = {
+				original_tag = AOI
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_infrastructure_factor = 0.1
+				production_speed_industrial_complex_factor = 0.03
+				consumer_goods_factor = -0.1
+			}
+		}
+	}
+	industrial_concern = {
+		AOI_danieli = {
+			name = danieli
+			picture = danieli
+			allowed = {
+				original_tag = AOI
+			}
+			
+			available = {
+				has_completed_focus = AOI_nationale_construction_communitte
+			}
+
+			research_bonus = {
+				industry = 0.15
+			}
+
+			traits = { industrial_concern }
+		}
+
+		AOI_astaldi = {
+			name = ITA_astaldi
+			picture = ITA_astaldi
+
+			allowed = {
+				original_tag = AOI
+			}
+
+			traits = { construction_company }
+
+			available = {
+				has_completed_focus = AOI_nationale_construction_communitte
+			}
+		}
+	}	
+}

@@ -1,0 +1,189 @@
+focus_tree = {
+	id = AOI_focus_tree
+
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 10
+
+			OR = {
+				tag = AOI
+			}
+		}
+	}
+
+	shared_focus = AOI_italian_aoi
+
+	shared_focus = AOI_italian_investment
+
+	default = no
+
+	continuous_focus_position = { x = 1500 y = 1500 }
+
+	initial_show_position = {
+		x = 0
+		y = 0
+	}
+
+	focus = {
+		id = AOI_prince_amedeo_focus
+
+		icon = GFX_focus_COG_pierre_ryckmans
+
+		cost = 5
+
+		x = 29
+		y = 0
+
+		bypass = {
+			NOT = {
+				has_country_leader = {
+					ruling_only = yes
+					character = AOI_prince_amedeo
+				}	
+			}
+		}
+	
+		available = {
+			has_country_leader = {
+				ruling_only = yes
+				character = AOI_prince_amedeo
+			}	
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = AOI_invest_in_urban_centers
+
+		relative_position_id = AOI_prince_amedeo_focus
+		x = -3
+		y = 1
+
+		icon = GFX_focus_generic_low_cost_housing	
+
+		cost = 6
+
+		prerequisite = { focus = AOI_prince_amedeo_focus }
+
+		available = {
+			550 = {
+				is_owned_and_controlled_by = ROOT
+			}
+			271 = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+
+		completion_reward = {
+			IF = {
+				limit = {
+					550 = {
+						is_owned_and_controlled_by = ROOT
+					}
+				}
+				550 = {
+					add_dynamic_modifier = {
+						modifier = COG_urban_area_investments_modifier
+						scope = AOI
+					}	
+				}
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			IF = {
+				limit = {
+					271 = {
+						is_owned_and_controlled_by = ROOT
+					}
+				}
+				271 = {
+					add_dynamic_modifier = {
+						modifier = COG_urban_area_investments_modifier
+						scope = AOI
+					}	
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_strengthen_the_banque_du_AOI_ITA
+		icon = GFX_focus_usa_reestablish_the_gold_standard						
+			
+		x = 0
+		y = 1
+
+		prerequisite = { focus = AOI_prince_amedeo_focus }
+
+		relative_position_id = AOI_prince_amedeo_focus
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	
+		cost = 6
+	
+		bypass = {
+		}
+	
+		available = {
+			OR = {
+				has_country_leader = {
+					ruling_only = yes
+					character = AOI_prince_amedeo
+				}
+				ITA = {
+					has_opinion = {
+						target = ROOT
+						value > 49
+					}	
+				}
+			}
+		}
+	
+		completion_reward = { 
+			add_ideas = AOI_banque_du_AOI_ITA_idea
+		}
+
+	}
+
+	focus = {
+		id = AOI_national_reconciliation
+		icon = GFX_focus_generic_self_management						
+			
+		x = 3
+		y = 1
+
+		prerequisite = { focus = AOI_prince_amedeo_focus }
+
+		relative_position_id = AOI_prince_amedeo_focus
+
+		#search_filters = { FOCUS_FILTER_INDUSTRY }
+	
+		cost = 6
+	
+		bypass = {
+		}
+	
+		available = {
+			
+		}
+	
+		completion_reward = { 
+			add_stability = 0.15
+			every_owned_state = {
+				limit = {
+					NOT = {
+						is_core_of = ROOT
+					}
+				}
+				add_core_of = ROOT
+			}
+		}
+
+	}
+}

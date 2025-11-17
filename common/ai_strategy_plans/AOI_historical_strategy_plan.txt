@@ -1,0 +1,37 @@
+AOI_historical = {
+	name = "Africa of Italian Historical Plan"
+	desc = ""
+
+	allowed = {
+		original = AOI
+	}
+
+	enable = {
+		always = yes
+	}
+
+	ai_national_focuses = {
+		AOI_addis_ababa_college
+
+		AOI_prince_amedeo_focus
+		AOI_italian_aoi
+		#AOI_national_reconciliation
+		AOI_strengthen_the_banque_du_AOI_ITA
+		AOI_national_reconciliation
+		AOI_invest_in_urban_centers
+		AOI_expand_villages
+		AOI_free_enterprise_fund
+		AOI_nationale_construction_communitte
+		AOI_weapon_repair_workshops
+		AOI_talent_recruitment
+		AOI_the_horn_of_africa
+	}
+
+	research = {
+		industry = 20.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+		dd_tech = 5
+	}
+}
