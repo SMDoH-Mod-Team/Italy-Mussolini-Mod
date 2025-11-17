@@ -10253,6 +10253,7 @@ focus_tree = {
 		prerequisite = { focus = ITA_culto_del_duce }
 		x = 1
 		y = 1
+		cancelable = no
 		relative_position_id = ITA_culto_del_duce
 		cost = 262.6
 		available = {

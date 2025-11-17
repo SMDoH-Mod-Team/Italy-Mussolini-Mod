@@ -39,4 +39,33 @@ characters = {
 			}
 		}
 	}
+	ITA_prince_adalberto_1 = {
+		name = ITA_prince_adalberto
+		portraits = {
+			army = {
+				small = GFX_portrait_ITA_prince_adalberto_small
+				large = GFX_portrait_ITA_prince_adalberto
+			}
+			civilian = {
+				large = GFX_portrait_ITA_prince_adalberto
+			}
+		}
+		
+		country_leader = {
+			ideology = despotism
+			traits = { savoy_house normandy_duke }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+
+		corps_commander = {
+			traits = { career_officer } # Infantry
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = 0
+		}
+	}
 }

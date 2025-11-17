@@ -123,3 +123,10 @@ ITA_office_of_defense_mobilization = {
 	}
 	priority = 5
 }
+IPUnion_puppet_action = {
+	icon = x
+	picture = x
+	allowed = {
+		
+	}
+}

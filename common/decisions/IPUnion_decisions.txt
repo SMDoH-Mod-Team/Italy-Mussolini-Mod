@@ -1541,3 +1541,110 @@ ITA_office_of_defense_mobilization = {
 		}
 	}
 }
+IPUnion_puppet_action = {
+	IPUnion_founding_normandy = {
+		days_remove = 15
+		cost = 30
+		visible = {
+			any_country = {
+				NOT = {
+					tag = NMD
+				}
+				OR = {
+					original_tag = ITA
+					is_puppet_of = ITA
+				}
+				controls_state = 1028
+				controls_state = 1029
+			}
+		}
+		available = {
+			any_country = {
+				NOT = {
+					tag = NMD
+				}
+				OR = {
+					original_tag = ITA
+					is_puppet_of = ITA
+				}
+				controls_state = 1028
+				controls_state = 1029
+			}
+		}
+		remove_effect = {
+			NMD = {
+				transfer_state = 1028
+				transfer_state = 1029
+			}
+			1028 = { add_core_of = NMD }
+			1029 = { add_core_of = NMD }
+			15 = { add_core_of = NMD }
+			IF = {
+				limit = {
+					has_dlc = "Together for Victory"
+				}
+				ITA = {
+					set_autonomy = {
+					    target = NMD
+					    autonomy_state = autonomy_reichsprotectorate
+					    end_wars = no
+					    end_civil_wars = no
+					}
+				}
+			}
+			IF = {
+				limit = {
+					NOT = {
+						has_dlc = "Together for Victory"
+					}
+				}
+				ITA = {
+					puppet = NMD
+				}
+			}
+			NMD = {
+				division_template = {
+				    name = "Milicia Fashiste Shqiptare"
+				    is_locked = yes
+				    division_names_group = FRA_INF_01
+				    regiments = {
+				        infantry = { x = 0 y = 0 }
+				        infantry = { x = 0 y = 1 }
+				        infantry = { x = 0 y = 2 }
+				        infantry = { x = 1 y = 0 }
+				        infantry = { x = 1 y = 1 }
+				    }
+				}
+			}
+			1029 = {
+				create_unit = {
+				    division = "name = \"1. Milicia Fashiste Shqiptare\" division_template = \"Milicia Fashiste Shqiptare\" start_experience_factor = 0.1 start_equipment_factor = 1.0"
+				    owner = NMD
+				}
+				create_unit = {
+				    division = "name = \"2. Milicia Fashiste Shqiptare\" division_template = \"Milicia Fashiste Shqiptare\" start_experience_factor = 0.1 start_equipment_factor = 1.0"
+				    owner = NMD
+				}
+			}
+			1028 = {
+				create_unit = {
+				    division = "name = \"1. Milicia Fashiste Shqiptare\" division_template = \"Milicia Fashiste Shqiptare\" start_experience_factor = 0.1 start_equipment_factor = 1.0"
+				    owner = NMD
+				}
+			}
+			hidden_effect = {
+				NMD = {
+					ITA_prince_adalberto_1 = { promote_character = { ideology = despotism } }
+					set_politics = {
+						ruling_party = neutrality
+					}
+					add_popularity = {
+						ideology = neutrality
+						popularity = 0.95
+					}
+					add_ideas = idea_ITA_neutrality_puppet
+				}
+			}
+		}
+	}
+}
