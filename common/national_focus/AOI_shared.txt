@@ -14,14 +14,14 @@
 			}
 		}
 
-		icon = GFX_focus_CONGO_belgian_congo
+		icon = GFX_focus_AOI_italian_aoi
 
 		x = 34
 		y = 8
 
 		cost = 5
 
-		text_icon = CONGO_COG_focus_style
+		text_icon = AOI_AOI_focus_style
 
 		available = {
 			original_tag = AOI
@@ -136,7 +136,7 @@
 
 		dynamic = yes 
 		
-		icon = GFX_focus_CONGO_congo_investments
+		icon = GFX_focus_AOI_AOI_investments
 
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
 
@@ -146,7 +146,7 @@
 
 		cost = 5
 
-		text_icon = CONGO_BEL_focus_style
+		text_icon = AOI_ITA_focus_style
 
 		allow_branch = {
 			country_exists = AOI
@@ -250,7 +250,7 @@
 
 		cost = 6
 
-		text_icon = CONGO_COG_focus_style
+		text_icon = AOI_AOI_focus_style
 
 		available = {
 			original_tag = AOI
@@ -305,7 +305,7 @@
 
 		icon = GFX_focus_mex_privatisation
 
-		text_icon = CONGO_COG_focus_style
+		text_icon = AOI_AOI_focus_style
 
 		available = {
 			original_tag = AOI
@@ -317,6 +317,8 @@
 
 		x = 2
 		y = 0
+
+		cost = 6
 
 		available_if_capitulated = yes
 
@@ -458,7 +460,7 @@
 
 		cost = 6
 
-		text_icon = CONGO_BEL_COG_focus_style
+		text_icon = AOI_ITA_AOI_focus_style
 
 		joint_trigger = {
 			AOI_is_a_aoi_viable_nation = yes
@@ -556,7 +558,7 @@
 
 		cost = 6
 
-		text_icon = CONGO_COG_focus_style
+		text_icon = AOI_AOI_focus_style
 
 		available = {
 			original_tag = AOI
@@ -653,7 +655,7 @@
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 
-		text_icon = CONGO_COG_focus_style
+		text_icon = AOI_AOI_focus_style
 
 		available = { 	
 			original_tag = AOI
@@ -708,7 +710,7 @@
 
 		cost = 5
 
-		text_icon = CONGO_COG_focus_style
+		text_icon = AOI_AOI_focus_style
 
 		available = {
 			original_tag = AOI
@@ -769,7 +771,7 @@
 
 		cost = 10
 
-		text_icon = CONGO_COG_focus_style
+		text_icon = AOI_AOI_focus_style
 
 		joint_trigger = {
 			AOI_is_a_aoi_viable_nation = yes
