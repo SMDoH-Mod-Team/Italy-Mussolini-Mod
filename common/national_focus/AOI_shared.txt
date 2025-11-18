@@ -225,6 +225,13 @@
 						instant_build = yes
 					}	
 				}
+
+				AOI = {
+					add_autonomy_score = { 
+						value = -50
+						localization = AOI_italian_investment
+					}
+				}
 			}
 
 			hidden_effect = {
@@ -761,7 +768,7 @@
 
 		dynamic = yes
 
-		icon = GFX_focus_COG_heart_of_africa
+		icon = GFX_focus_AOI_horn_of_africa
 
 		prerequisite = { focus = AOI_italian_aoi focus = AOI_italian_investment }
 
@@ -861,4 +868,73 @@
 		}
 	}
 	
+	joint_focus = {
+		id = AOI_trade_trust
 
+		text_icon = AOI_ITA_focus_style
+
+		icon = GFX_goal_generic_positive_trade_relations
+
+		joint_trigger = {
+			AOI_is_a_aoi_viable_nation = yes
+		}
+
+		cost = 5
+
+		relative_position_id = AOI_italian_investment
+		x = 2
+		y = 1
+
+		available = {
+			original_tag = ITA
+			has_subject = AOI
+			NOT = {	
+				OR = {
+					has_war_with = ITA
+					has_war_with = AOI
+				}
+			}
+		}
+
+		prerequisite = { focus = AOI_italian_investment }
+
+		available_if_capitulated = yes
+
+		completion_reward_joint_originator = {
+			if = {
+				limit = {
+					original_tag = ITA
+				}
+				add_political_power = -25
+
+				add_ideas = AOI_trade_trust_italian
+			}
+
+			if = {
+				limit = {
+					original_tag = AOI
+				}
+				add_ideas = AOI_trade_trust_AOI
+				add_autonomy_score = { 
+					value = 100
+					localization = AOI_trade_trust
+				}
+			}
+		}
+
+		completion_reward_joint_member = {
+			if = {
+				limit = {
+					original_tag = ITA
+				}
+				add_ideas = AOI_trade_trust_italian
+			}
+
+			if = {
+				limit = {
+					original_tag = AOI
+				}
+				add_ideas = AOI_trade_trust_AOI
+			}
+		}
+	}	

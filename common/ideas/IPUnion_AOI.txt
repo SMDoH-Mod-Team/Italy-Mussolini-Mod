@@ -42,6 +42,107 @@ ideas = {
 				consumer_goods_factor = -0.1
 			}
 		}
+
+		AOI_the_fact_of_racial_segregation = {
+			name = AOI_the_fact_of_racial_segregation
+			picture = COG_the_invisible_roof
+
+			allowed = {
+				original_tag = AOI
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = -0.10
+				stability_factor = -0.10
+			}
+		}
+
+		AOI_trade_trust_italian = {
+			name = AOI_trade_trust_italian
+			picture = trade_trust_italian
+
+			allowed	= {
+				
+			}
+
+			modifier = {
+				consumer_goods_factor = 0.05
+			}
+
+			removal_cost = -1
+
+			cancel = {
+				NOT = {
+					AOI = {
+						is_subject_of = ITA
+					}
+				}
+			}
+		}
+
+		AOI_trade_trust_AOI = {
+			name = AOI_trade_trust_AOI
+			picture = AOI_trade_trust_AOI
+
+			allowed	= {
+				
+			}
+
+			modifier = {
+				consumer_goods_factor = 0.05
+				extra_trade_to_overlord_factor = 0.3
+			}
+
+			removal_cost = -1
+
+			cancel = {
+				NOT = {
+					AOI = {
+						is_subject_of = ITA
+					}
+				}
+			}
+
+			rule = {
+				can_access_market = no
+			}
+		}
+		AOI_widespread_illiteracy = {
+			name = AOI_widespread_illiteracy
+			picture = citizen_militia_1
+
+			allowed = {
+
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = -0.05
+				industrial_capacity_factory = -0.10
+				consumer_goods_factor = -0.02
+				political_power_factor = -0.30
+			}
+		}
+		AOI_moderate_illiteracy = {
+			name = AOI_moderate_illiteracy
+			picture = citizen_militia_2
+
+			allowed = {
+
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = -0.025
+				industrial_capacity_factory = -0.05
+				consumer_goods_factor = -0.01
+				political_power_factor = -0.15
+			}
+		}
 	}
 	industrial_concern = {
 		AOI_danieli = {

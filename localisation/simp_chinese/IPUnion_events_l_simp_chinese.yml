@@ -214,6 +214,10 @@
  IPUnion_country_event.62.a: "学制要缩短，教育要革命"
  IPUnion_country_event.62.b: "沿着墨主席的道路走下去"
  IPUnion_country_event.62.c: "同资产阶级教育路线实施最彻底的决裂！"
+ IPUnion_country_event.63.t: "[AOI.GetName]开始了扫盲运动!"
+ IPUnion_country_event.63.d: "我们的附庸国——[AOI.GetName]目前正在开展一场轰轰烈烈的扫除普遍文盲状态为目的爱国教育运动。"
+ IPUnion_country_event.63.a: "这是他们的内政"
+ IPUnion_country_event.63.b: "让他们学习我们的经验！"
  
  
  
@@ -285,4 +289,15 @@
  mussolini_poem_event.1.b: "米兰一带不停留，要向罗马直进。"
  mussolini_poem_event.1.c: "资本重重压迫，老兵个个同仇。"
  mussolini_poem_event.1.d: "秋收时节黑衫怒，霹雳一声暴动！"
+
+
+
+ africa_of_italian_event.1.t: "轰轰烈烈的意属东非扫盲运动开始了"
+ africa_of_italian_event.1.d: "我国80%以上的国民都处于文盲状态，这对于我国的发展是极大的阻力，为了东非各民族的未来，我们必须普遍的消除文盲"
+ africa_of_italian_event.1.a: "以民教民，能者为师"
+
+ IPUnion_change_national.1.t: "意属东非成立"
+ IPUnion_change_national.1.d: ""
+ IPUnion_change_national.1.a: "他们将在我们的鼓励下走向繁荣"
+ IPUnion_change_national.1.b: "我们会亲自塑造历史（游玩 [AOI.GetName]）"
  

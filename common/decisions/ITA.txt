@@ -4762,6 +4762,8 @@ ITA_colonial_management_dec_cat = {
 
 			custom_effect_tooltip = aoi_founded_2_tt
 
+			country_event = IPUnion_change_national.1
+
 			hidden_effect = {
 				mark_focus_tree_layout_dirty = yes
 
@@ -4864,6 +4866,10 @@ ITA_colonial_management_dec_cat = {
 						create_intelligence_agency = yes
 					}
 					set_cosmetic_tag = AOI_Italian
+
+					add_ideas = AOI_the_fact_of_racial_segregation
+
+					add_ideas = AOI_widespread_illiteracy
 
 					load_focus_tree = AOI_focus_tree
 				}

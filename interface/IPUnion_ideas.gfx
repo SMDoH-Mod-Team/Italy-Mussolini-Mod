@@ -23,4 +23,16 @@ spriteTypes = {
 		name = GFX_idea_oto_melara
 		textureFile = "gfx/interface/ideas/idea_oto_melara.png"
 	}
+	spriteType = {
+		name = GFX_idea_oto_melara
+		textureFile = "gfx/interface/ideas/idea_oto_melara.png"
+	}
+	spriteType = {
+		name = GFX_idea_AOI_trade_trust_italian
+		textureFile = "gfx/interface/ideas/idea_AOI_trade_trust_italian.png"
+	}
+	spriteType = {
+		name = GFX_idea_AOI_trade_trust_AOI
+		textureFile = "gfx/interface/ideas/idea_AOI_trade_trust_AOI.png"
+	}
 }

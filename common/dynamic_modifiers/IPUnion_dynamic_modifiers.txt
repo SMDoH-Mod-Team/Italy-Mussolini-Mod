@@ -130,3 +130,19 @@ AOI_medal_colony_modifier = {
 	cic_to_overlord_factor = ITA.AOI_belgian_congo_colonial_dynamic_modifier_cic_to_overlord_factor
 	mic_to_overlord_factor = ITA.AOI_belgian_congo_colonial_dynamic_modifier_mic_to_overlord_factor
 }
+
+ethiopia_first_modifier = {
+	icon = GFX_modifiers_generic_construction
+
+	local_building_slots_factor = 0.30
+	local_factories = 0.10
+	local_manpower = 0.10
+}
+
+nations_balance_of_power = {
+	icon = GFX_modifiers_generic_construction
+
+	local_building_slots_factor = 0.10
+	local_factories = 0.05
+	local_manpower = 0.05
+}

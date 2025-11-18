@@ -25,6 +25,8 @@ AOI_historical = {
 		AOI_weapon_repair_workshops
 		AOI_talent_recruitment
 		AOI_the_horn_of_africa
+		AOI_ethiopia_first
+		AOI_contract_the_fiat_ansaldo
 	}
 
 	research = {

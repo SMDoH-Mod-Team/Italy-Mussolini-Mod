@@ -109,6 +109,13 @@ focus_tree = {
 					}	
 				}
 			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			add_victory_points = {
+				province = 5010
+				value = 5
+			}
 		}
 	}
 
@@ -184,6 +191,172 @@ focus_tree = {
 				add_core_of = ROOT
 			}
 		}
+	}
 
+	focus = {
+		id = AOI_ethiopia_first
+		icon = GFX_focus_ETH_promote_the_war_heroes
+
+		mutually_exclusive = { focus = AOI_nations_balance_of_power }
+
+		relative_position_id = AOI_national_reconciliation
+		x = -1
+		y = 1
+		prerequisite = { focus = AOI_national_reconciliation }
+
+		available = {
+			any_state = {
+				is_core_of = ETH
+				is_owned_and_controlled_by = AOI
+			}
+		}
+
+		cost = 5
+
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					is_core_of = ETH
+				}
+				add_dynamic_modifier = {
+					modifier = ethiopia_first_modifier
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_nations_balance_of_power
+		icon = GFX_focus_ETH_empower_the_ras
+
+		mutually_exclusive = { focus = AOI_ethiopia_first }
+
+		relative_position_id = AOI_national_reconciliation
+		x = 1
+		y = 1
+
+		prerequisite = { focus = AOI_national_reconciliation }
+
+		available = {
+			any_state = {
+				is_owned_and_controlled_by = ROOT
+				compliance > 40
+				resistance < 15
+			}
+		}
+
+		cost = 5
+
+		completion_reward = {
+			every_owned_state = {
+				#limit = {
+				#	is_core_of = ETH
+				#}
+				add_dynamic_modifier = {
+					modifier = nations_balance_of_power
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_contract_the_fiat_ansaldo
+		icon = GFX_goal_generic_intelligence_exchange
+
+		relative_position_id = AOI_strengthen_the_banque_du_AOI_ITA
+		x = 0
+		y = 1
+
+		available = {
+			country_exists = ITA
+		}
+
+		prerequisite = { focus = AOI_strengthen_the_banque_du_AOI_ITA }
+
+		cost = 5
+
+		completion_reward = {
+			unlock_decision_category_tooltip = IPUnion_AOI_use_fiat_machine
+		}
+	}
+
+	focus = {
+		id = AOI_literacy_campaign
+		icon = GFX_focus_FIN_socialist_welfare
+
+		relative_position_id = AOI_prince_amedeo_focus
+		x = -9
+		y = 1
+
+		available = {
+			has_idea = AOI_widespread_illiteracy
+			NOT = {
+				has_country_flag = literacy_campaign_is_underway_flag
+			}
+		}
+
+		prerequisite = {
+			focus = AOI_italian_aoi
+			focus = AOI_prince_amedeo_focus
+		}
+
+		cancel_if_invalid = yes
+		#cancel = {
+		#	has_country_flag = literacy_campaign_is_underway_flag
+		#}
+
+		cost = 10
+
+		completion_reward = {
+			custom_effect_tooltip = AOI_literacy_campaign_tt
+		}
+	}
+
+	focus = {
+		id = AOI_recognize_the_ethiopian_orthodox_church
+		icon = GFX_focus_por_concordat
+
+		relative_position_id = AOI_invest_in_urban_centers
+		x = -1
+		y = 1
+
+		prerequisite = { focus = AOI_invest_in_urban_centers }
+
+		available = {
+			has_country_leader = {
+				ruling_only = yes
+				character = AOI_prince_amedeo
+			}
+		}
+
+		cost = 6
+
+		completion_reward = {
+			add_political_power = 15
+		}
+	}
+
+	focus = {
+		id = AOI_regional_governor
+		icon = GFX_focus_generic_treaty
+
+		relative_position_id = AOI_invest_in_urban_centers
+		x = 1
+		y = 1
+
+		prerequisite = { focus = AOI_invest_in_urban_centers }
+
+		available = {
+			has_country_leader = {
+				ruling_only = yes
+				character = AOI_prince_amedeo
+			}
+		}
+
+		cost = 6
+
+		completion_reward = {
+			add_political_power = 15
+		}
 	}
 }

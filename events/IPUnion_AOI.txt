@@ -1,0 +1,40 @@
+add_namespace = africa_of_italian_event
+add_namespace = IPUnion_change_national
+
+country_event = {
+	id = IPUnion_change_national.1
+	title = IPUnion_change_national.1.t
+	desc = IPUnion_change_national.1.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = IPUnion_change_national.1.a
+		add_political_power = 15
+	}
+
+	option = {
+		name = IPUnion_change_national.1.b
+		AOI = {
+			change_tag_from = ITA
+		}
+	}
+}
+
+country_event = {
+	id = africa_of_italian_event.1
+	title = africa_of_italian_event.1.t
+	desc = africa_of_italian_event.1.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = africa_of_italian_event.1.a
+		hidden_effect = {
+			set_country_flag = africa_of_italian_event.1.flag
+		}
+		activate_mission_tooltip = literacy_campaign_is_underway
+	}
+}

@@ -73,3 +73,5 @@
  ITA_national_militia_2_tt: "如果：\n  §Y处于和平§!：\n    适役人口：§Y3.00%§!"
  two_whatevers_tt: "\n\n\n\n\n\n£report_event_generic_mussolini_in_event\n\n\n\n\n\n\n\n\n§g凡是墨索里尼主席作出的决策，我们都坚决维护，凡是墨索里尼主席的指示，我们都始终不渝地遵循。§!"
  aoi_founded_2_tt: "解锁§Y[ITA.GetName]§!和§Y意属东非§!的联合国策树"
+ literacy_campaign_is_underway_flag: "正在进行扫盲运动"
+ AOI_literacy_campaign_tt: "§Y我们的事业是正确的，我们一定能够胜利！§!"

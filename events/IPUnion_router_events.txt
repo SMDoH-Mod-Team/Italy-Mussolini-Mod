@@ -226,3 +226,29 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = IPUnion_router_event.9
+	title = IPUnion_router_event.9
+	desc = IPUnion_router_event.9
+	hidden = yes
+
+	trigger = {
+		AOI = {
+			focus_progress = {
+				focus = AOI_literacy_campaign
+				progress > 0.01
+			}
+		}
+	}
+
+	immediate = {
+		AOI = {
+			set_country_flag = literacy_campaign_is_underway_flag
+			country_event = africa_of_italian_event.1
+		}
+		ITA = {
+			country_event = IPUnion_country_event.63
+		}
+	}
+}

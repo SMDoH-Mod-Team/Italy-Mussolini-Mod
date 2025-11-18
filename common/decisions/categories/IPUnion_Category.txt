@@ -130,3 +130,20 @@ IPUnion_puppet_action = {
 		
 	}
 }
+IPUnion_AOI_use_fiat_machine = {
+	icon = x
+	picture = x
+	allowed = {
+
+	}
+	visible = {
+		has_completed_focus = AOI_contract_the_fiat_ansaldo
+	}
+}
+IPUnion_AOI_literacy_campaign_category = {
+	icon = x
+	picture = x
+	allowed = {
+
+	}
+}

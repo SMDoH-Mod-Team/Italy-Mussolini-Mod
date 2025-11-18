@@ -1648,3 +1648,89 @@ IPUnion_puppet_action = {
 		}
 	}
 }
+
+IPUnion_AOI_use_fiat_machine = {
+	use_fiat_machine_in_550 = {
+		days_remove = 30
+		cost = 25
+		available = {
+			controls_state = 550
+			is_subject_of = ITA
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			base = 10
+		}
+		remove_effect = {
+			add_resource = {
+				type = steel
+    			amount = 5
+    			state = 550
+			}
+		}
+	}
+
+	use_fiat_machine_in_837 = {
+		days_remove = 30
+		cost = 25
+		available = {
+			controls_state = 837
+			is_subject_of = ITA
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			base = 10
+		}
+		remove_effect = {
+			add_resource = {
+				type = rubber
+    			amount = 5
+    			state = 837
+			}
+		}
+	}
+
+	use_fiat_machine_in_838 = {
+		days_remove = 30
+		cost = 25
+		available = {
+			controls_state = 838
+			is_subject_of = ITA
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			base = 10
+		}
+		remove_effect = {
+			add_resource = {
+				type = rubber
+    			amount = 5
+    			state = 838
+			}
+		}
+	}
+}
+IPUnion_AOI_literacy_campaign_category = {
+	literacy_campaign_is_underway = {
+		days_mission_timeout = 365
+		activation = {
+			has_country_flag = africa_of_italian_event.1.flag
+		}
+		available = {
+			always = no
+		}
+		cancel_trigger = {
+			NOT = {
+				has_idea = AOI_widespread_illiteracy
+			}
+		}
+		is_good = yes
+		timeout_effect = {
+			swap_ideas = {
+				remove_idea = AOI_widespread_illiteracy
+				add_idea = AOI_moderate_illiteracy
+			}
+			unlock_national_focus = AOI_literacy_campaign
+		}
+	}
+}
