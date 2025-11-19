@@ -1,0 +1,12 @@
+﻿l_simp_chinese:
+
+ shifttonavyprod_cat:0 "海军建设"
+
+ shifttonavyprod_enable:0 "海军建设追赶计划"
+ shifttonavyprod_enable_desc:0 "将工业生产的重心转移至海军，以求快速扩大我们的舰队规模。然而，大力发展海军意味着其他方面的生产将受到一定程度的影响。"
+ 
+ shifttonavyprod_disable:0 "撤销海军建设追赶计划"
+ shifttonavyprod_disable_desc:0 "撤销将工业生产的重心转移至海军这一决定，即将恢复各方面平衡生产。"
+
+
+ shifttonavyprod_idea:0 "生产力向海军倾斜"

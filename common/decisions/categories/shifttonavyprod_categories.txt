@@ -1,0 +1,5 @@
+shifttonavyprod_cat = {
+	icon = GFX_decision_category_MTG_naval_treaties
+	
+	visible = {}
+}

@@ -332,6 +332,6 @@
  IPUnion_change_national.1.t: "意属东非成立"
  IPUnion_change_national.1.d: ""
  IPUnion_change_national.1.a: "他们将在我们的鼓励下走向繁荣"
- IPUnion_change_national.1.b: "我们会亲自塑造历史（游玩 [AOI.GetName]）"
+ IPUnion_change_national.1.b: "我们会亲自塑造历史（游玩[POL.GetFlag][AOI.GetName]）"
  
  

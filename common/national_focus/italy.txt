@@ -23641,7 +23641,7 @@ focus_tree = {
 		icon = GFX_focus_generic_mediterranean_sea_focus
 		relative_position_id = ITA_keep_the_course
 		x = -2
-		y = 4
+		y = 5
 		cost = 4
 		prerequisite = { focus = ITA_national_economy_fascismful }
 		available = {
@@ -24139,11 +24139,11 @@ focus_tree = {
 	
 	focus = {
 		id = ITA_learn_form_camicie_nere
-		prerequisite = { focus = ITA_leap_forward }
+		prerequisite = { focus = ITA_Adjust_Consolidate_Fill_out_and_Improve }
 		icon = GFX_focus_ARG_march_to_la_casa_rosada
 		relative_position_id = ITA_keep_the_course
 		x = 0
-		y = 2
+		y = 3
 		cost = 5
 		completion_reward = {
 			add_ideas = idea_ITA_learn_form_camicie_nere
@@ -24152,11 +24152,11 @@ focus_tree = {
 
 	focus = {
 		id = ITA_learn_form_foggia
-		prerequisite = { focus = ITA_leap_forward }
+		prerequisite = { focus = ITA_Adjust_Consolidate_Fill_out_and_Improve }
 		icon = GFX_focus_generic_farmland
 		relative_position_id = ITA_keep_the_course
 		x = 2
-		y = 2
+		y = 3
 		cost = 5
 		completion_reward = {
 			add_ideas = idea_ITA_learn_form_foggia
@@ -24165,11 +24165,11 @@ focus_tree = {
 
 	focus = {
 		id = ITA_learn_form_torina
-		prerequisite = { focus = ITA_leap_forward }
+		prerequisite = { focus = ITA_Adjust_Consolidate_Fill_out_and_Improve }
 		icon = GFX_focus_generic_modernize_industry
 		relative_position_id = ITA_keep_the_course
 		x = -2
-		y = 2
+		y = 3
 		cost = 5
 		completion_reward = {
 			add_ideas = idea_ITA_learn_form_torina
@@ -24181,7 +24181,7 @@ focus_tree = {
 		icon = GFX_focus_GER_monarchy_compromise
 		relative_position_id = ITA_keep_the_course
 		x = 0
-		y = 3
+		y = 4
 		prerequisite = { focus = ITA_learn_form_foggia }
 		prerequisite = { focus = ITA_learn_form_camicie_nere }
 		prerequisite = { focus = ITA_learn_form_torina }
@@ -25330,7 +25330,7 @@ focus_tree = {
 		mutually_exclusive = { focus = ITA_FRA_base_in_far_east }
 		relative_position_id = ITA_keep_the_course
 		x = 2
-		y = 4
+		y = 5
 		cost = 3
 		available = {
 			FRA = {

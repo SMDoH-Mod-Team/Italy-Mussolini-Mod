@@ -1,0 +1,36 @@
+shifttonavyprod_cat = {
+
+	shifttonavyprod_enable = {
+	
+		icon = generic_naval
+
+
+		allowed = {
+			original_tag = ITA
+		}
+		
+		visible = { NOT = { has_idea = shifttonavyprod_idea } }
+		available = { NOT = { has_idea = shifttonavyprod_idea } }
+		
+		complete_effect = { add_ideas = shifttonavyprod_idea }
+		
+		ai_will_do = { factor = 0 }
+	}	
+
+
+	shifttonavyprod_disable = {
+		
+		icon = generic_naval
+
+		allowed = {
+			original_tag = ITA
+		}
+		
+		visible = { has_idea = shifttonavyprod_idea }
+		
+		complete_effect = { remove_ideas = shifttonavyprod_idea }
+		
+		ai_will_do = { factor = 0 }
+	}
+
+}
