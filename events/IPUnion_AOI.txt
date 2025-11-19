@@ -38,3 +38,148 @@ country_event = {
 		activate_mission_tooltip = literacy_campaign_is_underway
 	}
 }
+
+country_event = {
+	id = africa_of_italian_event.2
+	title = africa_of_italian_event.2.t
+	desc = africa_of_italian_event.2.d
+	picture = GFX_report_event_gre_diplomacy
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	# We will oblige
+	option = { 
+		name = africa_of_italian_event.2.a
+		ai_chance = {
+			base = 80
+			modifier = {
+				factor = 2
+				FROM = {
+					is_ai = no
+				}
+			}
+		}
+
+		FROM = {
+			country_event = {
+				id = africa_of_italian_event.3
+				days = 2
+			}
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		add_timed_idea = {
+			idea = AOI_immigrate_to_addis_ababa
+			days = 365
+		}	
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		effect_tooltip = {
+
+			FROM = {
+				add_autonomy_score = { 
+					value = -100
+					localization = COG_lecho_du_katanga
+				}	
+			}
+			
+			271 = {
+				add_dynamic_modifier = {
+					modifier = AOI_the_echo_of_addis_ababa_modifier
+				}
+			}
+
+		}
+
+	}
+
+	# Who does he think he is?
+	option = { 
+		name = africa_of_italian_event.2.b
+		ai_chance = {
+			base = 20
+		}
+
+		FROM = {
+			country_event = {
+				id = africa_of_italian_event.4
+				days = 2
+			}
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		effect_tooltip = {
+
+			FROM = {
+				add_autonomy_score = { 
+					value = 50
+					localization = AOI_lecho_du_addis_ababa
+				}	
+			}
+
+		}
+
+	}
+}
+country_event = {
+	id = africa_of_italian_event.3
+	title = africa_of_italian_event.3.t
+	desc = africa_of_italian_event.3.d
+	picture = GFX_report_event_generic_sign_treaty2
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	# Perfect
+	option = { 
+		name = africa_of_italian_event.3.a
+		ai_chance = {
+			base = 100
+		}
+
+		add_autonomy_score = { 
+			value = -100
+			localization = africa_of_italian_event.3.t
+		}
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		271 = {
+			add_dynamic_modifier = {
+				modifier = AOI_the_echo_of_addis_ababa_modifier
+			}
+		}
+
+	}
+}
+
+country_event = {
+	id = africa_of_italian_event.4
+	title = africa_of_italian_event.4.t
+	desc = africa_of_italian_event.4.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	# I mean what did we expect?
+	option = { 
+		name = africa_of_italian_event.4.a
+		ai_chance = {
+			base = 100
+		}
+
+		add_autonomy_score = { 
+			value = 50
+			localization = africa_of_italian_event.4.t
+		}
+
+	}
+}

@@ -170,6 +170,8 @@
  ITA_planned_parenthood_desc: ""
  ITA_leap_forward: "大跃进"
  ITA_leap_forward_desc: "赶英超美，苦干三年，基本改变意大利面貌"
+ ITA_Adjust_Consolidate_Fill_out_and_Improve: "国家法西斯党一届三中全会"
+ ITA_Adjust_Consolidate_Fill_out_and_Improve_desc: "基于目前国民经济遭受的巨大困难，我们需要召开一次会议以调整未来的国民经济发展计划"
 
  ITA_helmsman_died: "舵手逝世"
  ITA_helmsman_died_desc: "§Y人生五十年，如梦亦如幻§!"
@@ -203,4 +205,5 @@
  ITA_revive_the_zeppelin_desc: ""
  ITA_encourage_the_flight_academy_to_participate_in_labor_activities: "鼓励飞行学员参加劳动"
  ITA_encourage_the_flight_academy_to_participate_in_labor_activities_desc: "知识分子劳动化，劳动分子知识化"
+ 
  

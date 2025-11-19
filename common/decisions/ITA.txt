@@ -4883,6 +4883,14 @@ ITA_colonial_management_dec_cat = {
 				844 = {
 					add_core_of = AOI
 				}
+
+				AOI = {
+					every_owned_state = {
+						add_dynamic_modifier = {
+							modifier = lack_of_an_executive_leader
+						}
+					}
+				}
 			}
 		}
 

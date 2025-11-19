@@ -35,4 +35,8 @@ spriteTypes = {
 		name = GFX_idea_AOI_trade_trust_AOI
 		textureFile = "gfx/interface/ideas/idea_AOI_trade_trust_AOI.png"
 	}
+	spriteType = {
+		name = GFX_portrait_AOI_abuna_abraham_small
+		textureFile = "gfx/interface/ideas/portrait_AOI_abuna_abraham_small.png"
+	}
 }

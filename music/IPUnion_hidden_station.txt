@@ -6,3 +6,10 @@ music = {
 		factor = 0
 	}
 }
+
+music = {
+	song = "MarciaReale"
+	chance = {
+		factor = 0
+	}
+}

@@ -1734,3 +1734,32 @@ IPUnion_AOI_literacy_campaign_category = {
 		}
 	}
 }
+political_actions = {
+	promote_the_bishop_of_gojjam = {
+		days_remove = 7
+		available = {
+			original_tag = AOI
+			OR = {
+				is_in_faction_with = ITA
+				is_subject_of = ITA
+			}
+			ITA = {
+				has_character = ITA_rodolfo_graziani
+			}
+		}
+		visible = {
+			has_completed_focus = AOI_recognize_the_ethiopian_orthodox_church
+		}
+		cost = 15
+		remove_effect = {
+			#hidden_effect = {
+			#	recruit_character = AOI_abuna_abraham
+			#}
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = AOI_abuna_abraham
+			hidden_effect = {
+				add_ideas = AOI_abuna_abraham
+			}
+		}
+	}
+}

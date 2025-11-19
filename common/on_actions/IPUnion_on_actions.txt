@@ -25,6 +25,27 @@ on_actions = {
 				#mark_focus_tree_layout_dirty = yes
 				set_country_flag = ITA_national_militia_peace_flag
 			}
+			FRA = {
+				set_autonomy = { target = DJI autonomy_state = autonomy_colony }
+			}
+			ENG = {
+				set_autonomy = { target = SOM autonomy_state = autonomy_colony }
+			}
+			SOM = {
+				set_politics = {
+					ruling_party = neutrality
+					last_election = "1936.1.1"
+					election_frequency = 48
+					elections_allowed = no
+				}
+				promote_character = SOM_colony_government
+				set_popularities = {
+					democratic = 25
+					fascism = 20
+					communism = 5
+					neutrality = 50
+				}
+			}
 		}
 	}
 }

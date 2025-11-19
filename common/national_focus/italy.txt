@@ -24095,12 +24095,6 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 5
-		bypass = {
-			custom_trigger_tooltip = {
-				tooltip = ITA_leap_forward_bypass_tt
-				always = yes
-			}
-		}
 		completion_reward = {
 			custom_effect_tooltip = ITA_leap_forward_tt
 			add_ideas = idea_ITA_leap_forward_1
@@ -24115,6 +24109,34 @@ focus_tree = {
 		}
 	}
 
+	focus = {
+		id = ITA_Adjust_Consolidate_Fill_out_and_Improve
+		prerequisite = { focus = ITA_leap_forward }
+		icon = GFX_focus_generic_industry_3
+		relative_position_id = ITA_leap_forward
+		x = 0
+		y = 1
+		cost = 5
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ITA_Adjust_Consolidate_Fill_out_and_Improve_tt
+				NOT = {
+					has_country_flag = ITA_leap_forward_flag
+				}
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = ITA_Adjust_Consolidate_Fill_out_and_Improve_1_tt
+			custom_effect_tooltip = ITA_Adjust_Consolidate_Fill_out_and_Improve_2_tt
+			hidden_effect = {
+				country_event = {
+					id = IPUnion_Adjust_Consolidate_Fill_out_and_Improve.1
+					days = 1
+				}
+			}
+		}
+	}
+	
 	focus = {
 		id = ITA_learn_form_camicie_nere
 		prerequisite = { focus = ITA_leap_forward }
@@ -27661,22 +27683,6 @@ focus_tree = {
 
 	#	}
 	#}
-
-	focus = {
-		id = ITA_Clear_the_Square_flag
-		x = 0
-		y = 0
-		allow_branch = {
-			is_ai = yes
-		}
-		available = {
-			#always = no
-		}
-		cost = 1
-		completion_reward = {
-			add_political_power = 0
-		}
-	}
 
 	focus = {
 		id = ITA_helmsman_died

@@ -163,3 +163,30 @@ country_event = {
 		add_political_power = 1
 	}
 }
+
+country_event = {
+	id = IPUnion_debug_event.5
+	title = "意属东非测试"
+	desc = IPUnion_debug_event.5.d
+
+	is_triggered_only = yes
+	
+	option = {
+		name = OK
+		annex_country = {
+    		target = ETH
+    		#transfer_troops = yes
+		}
+
+		annex_country = {
+    		target = AFA
+    		#transfer_troops = yes
+		}
+		complete_national_focus = ITA_ministry_of_italian_africa
+		complete_national_focus = ITA_the_new_emperor_of_ethiopia
+	}
+
+	option = {
+		name = NO
+	}
+}

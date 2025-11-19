@@ -143,6 +143,46 @@ ideas = {
 				political_power_factor = -0.15
 			}
 		}
+		AOI_immigrate_to_addis_ababa = {
+			name = AOI_immigrate_to_addis_ababa
+			picture = por_colonial_assimilation
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = -0.05
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		AOI_central_bank_idea = {
+
+			picture = generic_agrarian_society
+			
+			allowed = {
+				original_tag = AOI
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_infrastructure_factor = 0.15
+				production_speed_industrial_complex_factor = 0.05
+				consumer_goods_factor = -0.15
+			}
+		}
 	}
 	industrial_concern = {
 		AOI_danieli = {

@@ -146,3 +146,25 @@ nations_balance_of_power = {
 	local_factories = 0.05
 	local_manpower = 0.05
 }
+lack_of_an_executive_leader = {
+	icon = GFX_modifiers_ETH_state_decentralization
+
+	industrial_capacity_factory = -0.15
+	production_speed_buildings_factor = -0.15
+}
+AOI_the_echo_of_addis_ababa_modifier = { #STATE MODIFIER
+	remove_trigger = { 
+		NOT = { 
+			owner = { 
+				OR = {
+					original_tag = AOI 
+					#original_tag = KAT 
+				}
+			} 
+		} 
+	}
+	icon = GFX_modifiers_ETH_state_development
+	local_manpower = 0.15
+	state_production_speed_buildings_factor = 0.05
+	state_resources_factor = 0.1
+}

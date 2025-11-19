@@ -1,0 +1,37 @@
+characters = {
+	AOI_abuna_abraham = {
+		name = AOI_abuna_abraham
+		portraits = {
+			army = {
+				small = GFX_portrait_AOI_abuna_abraham_small
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = AOI_abuna_abraham
+			allowed = {
+				
+			}
+			available = {
+				#OR = {
+				#	has_completed_focus = ITA_christian_democracy
+				#	AND = {
+				#		has_completed_focus = ITA_common_ground
+				#		has_government = democratic
+				#	}
+				#}
+				has_completed_focus = AOI_recognize_the_ethiopian_orthodox_church
+			}
+			traits = {
+				#minister_of_posts_and_telegraphs # Christian Democracy guy
+				#capitalist_unite
+				gojjam_archbishop
+			}
+
+			ai_will_do = {
+				base = 0
+			}
+		}
+	}
+}

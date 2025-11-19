@@ -626,6 +626,75 @@ ideas = {
 				local_resources_factor = -0.3
 			}
 		}
+
+		idea_ITA_Natural_Disaster = {
+			removal_cost = -1
+			name = idea_ITA_Natural_Disaster
+			picture = generic_deal_with_the_devil
+			modifier = {
+				consumer_goods_factor = 0.25
+				consumer_goods_factor = 0.30
+				weekly_manpower = -50 
+				research_speed_factor = -0.05
+				local_resources_factor = -0.15
+				stability_factor = -0.15
+				industrial_capacity_dockyard = -0.15
+				industrial_capacity_factory = -0.15
+				production_speed_buildings_factor = -0.15
+				local_resources_factor = -0.15
+			}
+		}
+
+		idea_ITA_Acts_of_God_errors_of_men_1 ={
+			removal_cost = -1
+			name = idea_ITA_Acts_of_God_errors_of_men_1
+			picture = generic_deal_with_the_devil
+			modifier = {
+				consumer_goods_factor = 0.35
+				consumer_goods_factor = 0.40
+				weekly_manpower = -100 
+				research_speed_factor = -0.1
+				local_resources_factor = -0.2
+				stability_factor = -0.2
+				industrial_capacity_dockyard = -0.3
+				industrial_capacity_factory = -0.3
+				production_speed_buildings_factor = -0.3
+				local_resources_factor = -0.3
+			}
+		}
+
+		idea_ITA_Acts_of_God_errors_of_men_2 ={
+			removal_cost = -1
+			name = idea_ITA_Acts_of_God_errors_of_men_2
+			picture = generic_deal_with_the_devil
+			modifier = {
+				consumer_goods_factor = 0.5
+				weekly_manpower = -500 
+				research_speed_factor = -0.15
+				local_resources_factor = -0.25
+				stability_factor = -0.25
+				industrial_capacity_dockyard = -0.5
+				industrial_capacity_factory = -0.5
+				production_speed_buildings_factor = -0.5
+				local_resources_factor = -0.5
+			}
+		}
+
+		Idea_Adjust_Consolidate_Fill_out_and_Improve ={
+			removal_cost = -1
+			name = Idea_Adjust_Consolidate_Fill_out_and_Improve
+			picture = generic_deal_with_the_devil
+			modifier = {
+				consumer_goods_factor = 0.5
+				research_speed_factor = -0.1
+				local_resources_factor = -0.25
+				stability_factor = -0.25
+				industrial_capacity_dockyard = -0.1
+				industrial_capacity_factory = -0.1
+				production_speed_buildings_factor = -0.1
+				local_resources_factor = -0.1
+			}
+		}
 		idea_ITA_liberation_malta = {
 			removal_cost = -1
 			name = idea_ITA_liberation_malta

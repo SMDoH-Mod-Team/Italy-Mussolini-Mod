@@ -1,4 +1,5 @@
 add_namespace = IPUnion_leap_forward_event
+add_namespace = IPUnion_Adjust_Consolidate_Fill_out_and_Improve
 
 country_event = {
 	id = IPUnion_leap_forward_event.1
@@ -11,16 +12,25 @@ country_event = {
 		name = IPUnion_leap_forward_event.1.a
 		hidden_effect = {
 			country_event = {
-			id = IPUnion_leap_forward_event.2
-			days = 15
+				id = IPUnion_leap_forward_event.2
+				days = 15
 			}
 		}
 	}
 	option = {
 		name = IPUnion_leap_forward_event.1.b
+		hidden_effect = {
+			remove_ideas = idea_ITA_leap_forward_1
+		}
 		add_timed_idea = {
 			idea = idea_ITA_leap_forward_1
-			days = 90
+			days = 75
+		}
+		hidden_effect = {
+			country_event = {
+				id = IPUnion_leap_forward_event.8
+				days = 75
+			}
 		}
 	}
 }
@@ -104,9 +114,19 @@ country_event = {
 	option = {
 		name = IPUnion_leap_forward_event.4.b
 		custom_effect_tooltip = IPUnion_leap_forward_event.4.tt
+		hidden_effect = {
+			remove_ideas = idea_ITA_reality_3
+			remove_ideas = idea_ITA_leap_forward_3
+		}
 		add_timed_idea = {
 			idea = idea_ITA_Economic_recovery_policy
-			days = 90
+			days = 60
+		}
+		hidden_effect = {
+			country_event = {
+			id = IPUnion_leap_forward_event.8
+			days = 60
+			}
 		}
 	}
 }
@@ -132,6 +152,153 @@ country_event = {
 			swap_ideas = {
 				remove_idea = idea_ITA_reality_4
 				add_idea = idea_ITA_reality_5
+			}
+		}
+	}
+}
+
+country_event = {  ##省委急电
+	id = IPUnion_leap_forward_event.6
+	title = IPUnion_leap_forward_event.6.t
+	desc = IPUnion_leap_forward_event.6.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_gre_george_ii_victorious
+	option = {
+		name = IPUnion_leap_forward_event.6.a
+		swap_ideas = {
+			remove_idea = idea_ITA_leap_forward_5
+			add_idea = idea_ITA_Acts_of_God_errors_of_men_1
+		}
+		hidden_effect = {
+			clr_country_flag = ITA_leap_forward_flag
+			remove_idea = idea_ITA_reality_5
+		}
+	}
+	option = {
+		name = IPUnion_leap_forward_event.6.b
+		hidden_effect = {
+			country_event = {
+				id = IPUnion_leap_forward_event.7
+				days = 10
+			}
+		}
+	}
+}
+
+country_event = {
+	id = IPUnion_leap_forward_event.8
+	title = IPUnion_leap_forward_event.8.t
+	desc = IPUnion_leap_forward_event.8.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_gre_george_ii_victorious
+	option = {
+		name = IPUnion_leap_forward_event.8.a
+		swap_ideas = {
+			remove_idea = idea_ITA_leap_forward_5
+			add_idea = idea_ITA_Natural_Disaster
+		}
+		hidden_effect = {
+			clr_country_flag = ITA_leap_forward_flag
+			remove_idea = idea_ITA_reality_5
+		}
+	}
+}
+
+country_event = {
+	id = IPUnion_leap_forward_event.7
+	title = IPUnion_leap_forward_event.7.t
+	desc = IPUnion_leap_forward_event.7.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_gre_george_ii_victorious
+	option = {
+		name = IPUnion_leap_forward_event.7.a
+		swap_ideas = {
+			remove_idea = idea_ITA_leap_forward_5
+			add_idea = idea_ITA_Acts_of_God_errors_of_men_2
+		}
+		hidden_effect = {
+			clr_country_flag = ITA_leap_forward_flag
+			remove_idea = idea_ITA_reality_5
+		}
+	}
+}
+
+country_event = {  ##一届三中全会
+	id = IPUnion_Adjust_Consolidate_Fill_out_and_Improve.1
+	title = IPUnion_Adjust_Consolidate_Fill_out_and_Improve.1.t
+	desc = IPUnion_Adjust_Consolidate_Fill_out_and_Improve.1.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_gre_george_ii_victorious
+	option = {
+		name = IPUnion_Adjust_Consolidate_Fill_out_and_Improve.1.a
+		hidden_effect = {
+			country_event = {
+				id = IPUnion_Adjust_Consolidate_Fill_out_and_Improve.2
+				days = 5
+			}
+		}
+	}
+}
+
+country_event = {
+	id = IPUnion_Adjust_Consolidate_Fill_out_and_Improve.2
+	title = IPUnion_Adjust_Consolidate_Fill_out_and_Improve.2.t
+	desc = IPUnion_Adjust_Consolidate_Fill_out_and_Improve.2.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_gre_george_ii_victorious
+	option = {
+		name = IPUnion_Adjust_Consolidate_Fill_out_and_Improve.2.a
+		hidden_effect = {
+			country_event = {
+				id = IPUnion_Adjust_Consolidate_Fill_out_and_Improve.3
+				days = 5
+			}
+		}
+	}
+}
+
+country_event = {
+	id = IPUnion_Adjust_Consolidate_Fill_out_and_Improve.3
+	title = IPUnion_Adjust_Consolidate_Fill_out_and_Improve.3.t
+	desc = IPUnion_Adjust_Consolidate_Fill_out_and_Improve.3.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_gre_george_ii_victorious
+	option = {
+		name = IPUnion_Adjust_Consolidate_Fill_out_and_Improve.3.a
+		if = {
+			limit = {
+				has_idea = idea_ITA_Natural_Disaster
+			}
+			remove_ideas = idea_ITA_Natural_Disaster
+			add_timed_idea = {
+				idea = Idea_Adjust_Consolidate_Fill_out_and_Improve
+				days = 60
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = idea_ITA_Acts_of_God_errors_of_men_1
+			}
+			remove_ideas = idea_ITA_Acts_of_God_errors_of_men_1
+			add_timed_idea = {
+				idea = Idea_Adjust_Consolidate_Fill_out_and_Improve
+				days = 60
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = idea_ITA_Acts_of_God_errors_of_men_2
+			}
+			remove_ideas = idea_ITA_Acts_of_God_errors_of_men_2
+			add_timed_idea = {
+				idea = Idea_Adjust_Consolidate_Fill_out_and_Improve
+				days = 60
 			}
 		}
 	}
