@@ -168,3 +168,19 @@ AOI_the_echo_of_addis_ababa_modifier = { #STATE MODIFIER
 	state_production_speed_buildings_factor = 0.05
 	state_resources_factor = 0.1
 }
+
+AOI_national_common_region_modifier = { #STATE MODIFIER
+	remove_trigger = { 
+		NOT = { 
+			owner = { 
+				OR = {
+					original_tag = AOI 
+					#original_tag = KAT 
+				}
+			} 
+		} 
+	}
+	icon = GFX_modifiers_ETH_state_development
+	production_speed_infrastructure_factor = 0.20
+	production_speed_railway_factor = 0.10
+}

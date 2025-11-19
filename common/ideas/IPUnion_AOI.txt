@@ -183,6 +183,20 @@ ideas = {
 				consumer_goods_factor = -0.15
 			}
 		}
+		AOI_national_investment = {
+			picture = ARG_rapid_militarization
+
+			allowed = {
+				original_tag = AOI
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_industrial_complex_factor = 0.20
+				consumer_goods_factor = -0.05
+			}
+		}
 	}
 	industrial_concern = {
 		AOI_danieli = {

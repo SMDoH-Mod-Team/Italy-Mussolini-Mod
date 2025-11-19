@@ -183,3 +183,63 @@ country_event = {
 
 	}
 }
+
+country_event = {
+	id = africa_of_italian_event.5
+	title = africa_of_italian_event.5.t
+	desc = africa_of_italian_event.5.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = { 
+		name = africa_of_italian_event.5.a
+		add_timed_idea = {
+			idea = AOI_national_investment
+			days = 365
+		}
+	}
+}
+
+country_event = {
+	id = africa_of_italian_event.6
+	title = africa_of_italian_event.6.t
+	desc = africa_of_italian_event.6.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = { 
+		name = africa_of_italian_event.6.a
+		set_politics = {
+			ruling_party = neutrality
+		}
+		set_popularities = {
+			neutrality = 50
+			fascism = 15
+			communism = 5
+			democratic = 30
+		}
+	}
+}
+
+country_event = {
+	id = africa_of_italian_event.7
+	title = africa_of_italian_event.7.t
+	desc = africa_of_italian_event.7.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = { 
+		name = africa_of_italian_event.7.a
+		add_political_power = 15
+		stability_factor = 0.15	
+	}
+}
