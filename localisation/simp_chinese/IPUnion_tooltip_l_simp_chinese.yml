@@ -81,3 +81,7 @@
  ITA_Adjust_Consolidate_Fill_out_and_Improve_1_tt: "§Y我们将召开一次全体会议来商讨如何解决国内目前的经济困难问题§!"
  AOI_national_common_culture_tt: "我国各民族会被塑造成有§Y统一民族意识§!的§Y东非民族§!，§Y或许在国内的民族主义崛起后，东非民族会肩负其他更重要的使命§!"
  AOI_another_50_percent_trigger_tt: "$TRIGGER_NUM_OF_TOTAL_CONTROLLED_FACTORIES_MORE_THAN$§Y49§!（当前为§[GetColorControlledFactoriesForNewIndustrializationProgram][?ROOT.num_of_controlled_factories]§!）"
+ IPUnion_country_event.66.a.tt: "如果选择此选项，则§Y德奥合并§!后§Y[153.GetName]§!会§R成为非军事区§!"
+ IPUnion_country_event.66.b.tt: "如果选择此选项，则§Y德奥合并§!后将会在§Y[153.GetName]§!和§Y[848.GetName]§!建立§Y缓冲国§!"
+ IPUnion_country_event.66.c.tt: "如果选择此选项，则§Y德奥合并§!后我们会§Y军事占领§!§Y[153.GetName]§!和§Y[848.GetName]§!"
+ ITA_ger_anschluss_timeout_tt: "我们将§Y失去§!§Y干涉的机会§!"

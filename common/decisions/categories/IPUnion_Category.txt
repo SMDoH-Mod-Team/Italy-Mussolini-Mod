@@ -147,3 +147,11 @@ IPUnion_AOI_literacy_campaign_category = {
 
 	}
 }
+ITA_ger_anschluss = {
+	icon = x
+	picture = x
+	allowed = {
+
+		
+	}
+}

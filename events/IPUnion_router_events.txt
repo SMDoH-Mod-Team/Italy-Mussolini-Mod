@@ -46,7 +46,11 @@ country_event = {
 		ITA = {
 			country_event = {
 				id = IPUnion_country_event.32
-				days = 3
+				days = 30
+			}
+			country_event = {
+				id = IPUnion_country_event.64
+				days = 2
 			}
 		}
 	}

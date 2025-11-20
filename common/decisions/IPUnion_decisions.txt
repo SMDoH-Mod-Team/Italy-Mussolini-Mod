@@ -1763,3 +1763,49 @@ political_actions = {
 		}
 	}
 }
+
+ITA_ger_anschluss = {
+	ITA_ger_anschluss_timeout = {
+		days_mission_timeout = 30
+		activation = {
+			has_country_flag = IPUnion_country_event.64.flag
+		}
+		available = {
+			custom_trigger_tooltip = {
+
+			}
+		}
+		is_good = yes
+		timeout_effect = {
+			custom_effect_tooltip = ITA_ger_anschluss_timeout_tt
+			hidden_effect = {
+				clr_country_flag = IPUnion_country_event.64.flag
+			}
+		}
+	}
+
+	ITA_interfere_ger_anschluss = {
+
+		available = {
+			AUS = {
+				any_neighbor_state = {
+					num_divisions > 10
+				}
+			}
+		}
+		visible = {
+			has_country_flag = IPUnion_country_event.64.flag
+			is_ai = no
+		}
+
+		complete_effect = {
+			GER = {
+				country_event = {
+					id = IPUnion_country_event.65
+					hours = 22
+					random_hours = 24
+				}
+			}
+		}
+	}
+}

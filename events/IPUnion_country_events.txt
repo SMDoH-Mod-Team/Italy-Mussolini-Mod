@@ -2181,6 +2181,95 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = IPUnion_country_event.64
+	
+	title = IPUnion_country_event.64.t
+	desc = IPUnion_country_event.64.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_gre_george_ii_victorious
+	option = {
+		name = IPUnion_country_event.64.a
+		hidden_effect = {
+			set_country_flag = IPUnion_country_event.64.flag
+		}
+		
+	}
+	option = {
+		name = IPUnion_country_event.64.b
+		
+	}
+}
+
+country_event = {
+	id = IPUnion_country_event.65
+	
+	title = IPUnion_country_event.65.t
+	desc = IPUnion_country_event.65.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_gre_george_ii_victorious
+	option = {
+		name = IPUnion_country_event.65.a
+		ai_chance = {
+			base = 80
+			modifier = {
+				factor = 2
+				FROM = {
+					is_ai = no
+				}
+			}
+		}
+		FROM = {
+			country_event = IPUnion_country_event.66
+		}
+	}
+
+	option = {
+		name = IPUnion_country_event.65.b
+		ai_chance = {
+			base = 20
+		}
+	}
+}
+
+country_event = {
+	id = IPUnion_country_event.66
+	
+	title = IPUnion_country_event.66.t
+	desc = IPUnion_country_event.66.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_gre_george_ii_victorious
+	option = {
+		name = IPUnion_country_event.66.a  ##蒂罗尔非军事化
+		custom_effect_tooltip = IPUnion_country_event.66.a.tt
+		hidden_effect = {
+			set_country_flag = IPUnion_country_event.66.a.flag
+		}
+	}
+	option = {
+		name = IPUnion_country_event.66.b ##蒂罗尔和福拉贝尔格建立缓冲国
+		custom_effect_tooltip = IPUnion_country_event.66.b.tt
+		hidden_effect = {
+			set_country_flag = IPUnion_country_event.66.b.flag
+		}
+	}
+	option = {
+		name = IPUnion_country_event.66.c  ##军事占领蒂罗尔和福拉贝尔格
+		custom_effect_tooltip = IPUnion_country_event.66.c.tt
+		hidden_effect = {
+			set_country_flag = IPUnion_country_event.66.c.flag
+		}
+	}
+	option = {
+		name = IPUnion_country_event.66.d  ##什么也不做
+		add_political_power = 50
+		custom_effect_tooltip = "什么也不会发生"
+	}
+}
+
 
 
 

@@ -246,10 +246,16 @@ focus_tree = {
 		prerequisite = { focus = AOI_national_reconciliation }
 
 		available = {
-			any_state = {
-				is_owned_and_controlled_by = ROOT
-				compliance > 40
-				resistance < 15
+			OR = {
+				any_state = {
+					is_owned_and_controlled_by = ROOT
+					compliance > 40
+					resistance < 15
+				}
+				any_state = {
+					is_owned_and_controlled_by = ROOT
+					is_core_of = ROOT
+				}
 			}
 		}
 
@@ -806,7 +812,8 @@ focus_tree = {
 		id = AOI_fellow_citizens_in_deep_trouble
 
 		allow_branch = {
-			#has_completed_focus = AOI_national_common_culture
+			has_completed_focus = AOI_national_common_culture
+			is_ai = no
 		}
 
 		x = 54
@@ -883,7 +890,7 @@ focus_tree = {
 
 			create_wargoal = {
 				target = DJI
-				type = independence_wargoal
+				type = national_revolution_wargoal
 			}
 		}
 
@@ -1032,7 +1039,7 @@ focus_tree = {
 
 			create_wargoal = {
 				target = SOM
-				type = independence_wargoal
+				type = national_revolution_wargoal
 			}
 
 			hidden_effect = {

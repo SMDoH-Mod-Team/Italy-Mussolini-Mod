@@ -27594,12 +27594,14 @@ focus_tree = {
 
 	focus = {
 		id = ITA_support_EastAfric_irredentism
-		relative_position_id = ITA_ministry_of_italian_africa
+		#relative_position_id = ITA_ministry_of_italian_africa
 		icon = GFX_focus_ETH_the_african_union
-		x = -5
-		y = 1
+		x = -2
+		y = 2
 		prerequisite = { focus = ITA_ministry_of_italian_africa }
+		
 		available = {
+			is_ai = no
 			AND = {
 				country_exists = AOI
 				AOI = {

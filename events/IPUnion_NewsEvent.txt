@@ -5,6 +5,7 @@ news_event = {
 	title = IPUnion_news.1.t
 	desc = IPUnion_news.1.d
 	picture = GFX_news_event_german_soldiers
+	is_triggered_only = yes
 	fire_only_once = yes
 	major = yes
 
@@ -35,5 +36,118 @@ news_event = {
 				days = 2
 			}
 		}
+	}
+}
+
+news_event = {
+	id = IPUnion_news.2
+	title = IPUnion_news.2.t
+	desc = IPUnion_news.2.d
+	
+	is_triggered_only = yes
+
+	picture = GFX_news_event_german_soldiers
+	fire_only_once = yes
+	major = yes
+
+	trigger = {
+		GER = {
+			has_completed_focus = GER_anschluss
+		}
+		ITA = {
+			has_country_flag = IPUnion_country_event.66.a.flag
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			153 = {
+				set_demilitarized_zone = yes
+			}
+
+			848 = {
+				set_demilitarized_zone = yes
+			}
+		}
+		
+	}
+
+	option = {
+		name = IPUnion_news.2.a
+	}
+}
+
+news_event = {
+	id = IPUnion_news.3
+	title = IPUnion_news.3.t
+	desc = IPUnion_news.3.d
+	
+	is_triggered_only = yes
+
+	picture = GFX_news_event_german_soldiers
+	fire_only_once = yes
+	major = yes
+
+	trigger = {
+		GER = {
+			has_completed_focus = GER_anschluss
+		}
+		ITA = {
+			has_country_flag = IPUnion_country_event.66.b.flag
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			AUS = {
+				transfer_state = 153
+				transfer_state = 848
+			}
+			ITA = { give_guarantee = AUS }
+			GER = { give_guarantee = AUS }
+			AUS = {
+				add_ideas = neutrality_idea
+				load_focus_tree = IPUnion_empty_focus_tree
+			}
+		}
+		
+	}
+
+	option = {
+		name = IPUnion_news.2.a
+	}
+}
+
+news_event = {
+	id = IPUnion_news.4
+	title = IPUnion_news.4.t
+	desc = IPUnion_news.4.d
+	
+	is_triggered_only = yes
+
+	picture = GFX_news_event_german_soldiers
+	fire_only_once = yes
+	major = yes
+
+	trigger = {
+		GER = {
+			has_completed_focus = GER_anschluss
+		}
+		ITA = {
+			has_country_flag = IPUnion_country_event.66.c.flag
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			ITA = {
+				transfer_state = 153
+				transfer_state = 848
+			}
+		}
+	}
+
+	option = {
+		name = IPUnion_news.2.a
 	}
 }

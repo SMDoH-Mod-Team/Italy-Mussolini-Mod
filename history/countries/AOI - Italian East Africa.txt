@@ -575,7 +575,7 @@ if = {
 
 set_variable = { ITA.AOI_belgian_congo_colonial_dynamic_modifier_political_power_factor = -0.1 }
 set_variable = { ITA.AOI_belgian_congo_colonial_dynamic_modifier_war_support_factor = -0.05 }
-set_variable = { ITA.AOI_gian_congo_colonial_dynamic_modifier_production_speed_buildings_factor = 0.03 }
+#set_variable = { ITA.AOI_gian_congo_colonial_dynamic_modifier_production_speed_buildings_factor = 0.03 }
 set_variable = { ITA.AOI_belgian_congo_colonial_dynamic_modifier_fascism_drift = 0.01 }
 set_variable = { ITA.AOI_belgian_congo_colonial_dynamic_modifier_autonomy_gain_global_factor = 0.00 }
 set_variable = { ITA.AOI_belgian_congo_colonial_dynamic_modifier_research_speed_factor = 0.01 }
