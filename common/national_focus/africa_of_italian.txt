@@ -666,11 +666,23 @@ focus_tree = {
 		prerequisite = { focus = AOI_national_common_economy_life }
 		cost = 6
 		completion_reward = {
-			add_compliance = 15
-			add_resistance = 10
+
+			#add_compliance = 15
+			#add_resistance = 10
 			custom_effect_tooltip = AOI_national_common_culture_tt
+
 			hidden_effect = {
 				mark_focus_tree_layout_dirty = yes
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			every_owned_state = {
+				limit = {
+					NOT = {
+						is_core_of = ROOT
+					}
+				}
+				add_core_of = ROOT
 			}
 		}
 	}
@@ -714,13 +726,20 @@ focus_tree = {
 		relative_position_id = AOI_civic_awareness
 		x = 1
 		y = 1
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = AOI_another_50_percent_trigger_tt
+				num_of_controlled_factories > 49
+			}
+		}
 		prerequisite = { focus = AOI_civic_awareness }
 		prerequisite = { focus = AOI_opposition_party }
 
 		cost = 6
 
 		completion_reward = {
-			
+			add_ideas = idea_AOI_suffragette
 		}
 	}
 
@@ -787,10 +806,10 @@ focus_tree = {
 		id = AOI_fellow_citizens_in_deep_trouble
 
 		allow_branch = {
-			has_completed_focus = AOI_national_common_culture
+			#has_completed_focus = AOI_national_common_culture
 		}
 
-		x = 52
+		x = 54
 		y = 0
 
 		cost = 3
@@ -800,6 +819,321 @@ focus_tree = {
 		completion_reward = {
 			add_state_claim = 269
 			add_state_claim = 268
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_ideas = idea_africa_national_liberty_movement
 		}
 	}
+
+	focus = {
+		id = AOI_second_class_citizen
+		icon = GFX_focus_AOI_second_class_citizen
+
+		prerequisite = { focus = AOI_right_of_protest }
+		prerequisite = { focus = AOI_right_of_speech }
+
+		relative_position_id = AOI_right_of_protest
+		x = 1
+		y = 1
+
+		cost = 7
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = AOI_the_fact_of_racial_segregation
+				add_idea = idea_AOI_second_class_citizen
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_war_with_french_DJI
+
+		icon = GFX_focus_attack_france
+
+		mutually_exclusive = { focus = AOI_request_control_of_french_territories }
+
+		cost = 3
+
+		available = {
+			is_ai = no
+		}
+
+		bypass = {
+			controls_state = 268
+		}
+
+		completion_reward = {
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = AOI_africa_national_liberty_revolution_flag
+						}
+					}
+					set_country_flag = AOI_africa_national_liberty_revolution_flag
+				}
+			}
+
+			FRA = {
+				set_autonomy = {
+					target = DJI
+					autonomous_state = autonomy_free
+				}
+			}
+
+			create_wargoal = {
+				target = DJI
+				type = independence_wargoal
+			}
+		}
+
+		relative_position_id = AOI_fellow_citizens_in_deep_trouble
+
+		prerequisite = { focus = AOI_fellow_citizens_in_deep_trouble }
+
+		x = -4
+		y = 1
+	}
+
+	focus = {
+		id = AOI_request_control_of_french_territories
+
+		icon = GFX_goal_generic_territory_or_war
+
+		cost = 2
+
+		mutually_exclusive = { focus = AOI_war_with_french_DJI }
+
+		bypass = {
+			controls_state = 268
+		}
+
+		prerequisite = { focus = AOI_fellow_citizens_in_deep_trouble }
+
+		available = {
+			any_country = {
+				controls_state = 268
+				OR = {
+					is_in_faction_with = ROOT
+					has_subject = AOI
+				}
+			}
+		}
+
+		relative_position_id = AOI_war_with_french_DJI
+		x = 2
+		y = 0
+
+		completion_reward = {
+			every_country = {
+				limit = {
+					controls_state = 268
+				}
+				country_event = {
+					id = africa_of_italian_event.8
+					hours = 22
+					random_hours = 24
+				}
+			}
+			custom_effect_tooltip = if_they_accept
+			effect_tooltip = {
+
+				transfer_state = 268
+
+				add_autonomy_score = {
+					value = -100
+					localization = africa_of_italian_event.8.a
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_integration_french_somaliland
+
+		icon = GFX_focus_GER_integration_of_puppet_economies
+
+		relative_position_id = AOI_war_with_french_DJI
+		
+		cost = 4
+
+		x = 1
+		y = 1
+
+		prerequisite = { focus = AOI_war_with_french_DJI focus = AOI_request_control_of_french_territories }
+
+		available = {
+			controls_state = 268
+			268 = {
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+		}
+		
+		bypass = {
+			268 = {
+				is_core_of = ROOT
+			}
+		}
+
+		completion_reward = {
+			268 = {
+				add_core_of = ROOT
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_war_with_british_somali
+
+		relative_position_id = AOI_fellow_citizens_in_deep_trouble
+		x = 4
+		y = 1
+
+		available = {
+			is_ai = no
+		}
+
+		cost = 3
+
+		prerequisite = { focus = AOI_fellow_citizens_in_deep_trouble }
+
+		mutually_exclusive = { focus = AOI_request_control_of_british_territories }
+
+		icon = GFX_focus_attack_britain
+
+		bypass = {
+			controls_state = 269
+		}
+
+		completion_reward = {
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = AOI_africa_national_liberty_revolution_flag
+						}
+					}
+					set_country_flag = AOI_africa_national_liberty_revolution_flag
+				}
+			}
+
+			ENG = {
+				set_autonomy = {
+					target = SOM
+					autonomous_state = autonomy_free
+				}
+			}
+
+			SOM = {
+				leave_faction = yes
+			}
+
+			create_wargoal = {
+				target = SOM
+				type = independence_wargoal
+			}
+
+			hidden_effect = {
+				SOM = {
+					set_rule = {
+						can_join_factions = no
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_request_control_of_british_territories
+
+		relative_position_id = AOI_war_with_british_somali
+		x = -2
+		y = 0
+
+		cost = 2
+
+		available = {
+			any_country = {
+				controls_state = 269
+				OR = {
+					is_in_faction_with = ROOT
+					has_subject = AOI
+				}
+			}
+		}
+
+		mutually_exclusive = { focus = AOI_war_with_british_somali }
+
+		icon = GFX_goal_generic_territory_or_war
+
+		prerequisite = {
+			focus = AOI_fellow_citizens_in_deep_trouble
+		}
+
+		bypass = {
+			controls_state = 269
+		}
+
+		completion_reward = {
+			every_country = {
+				limit = {
+					controls_state = 269
+				}
+				country_event = {
+					id = africa_of_italian_event.11
+					hours = 22
+					random_hours = 24
+				}
+			}
+			custom_effect_tooltip = if_they_accept
+			effect_tooltip = {
+
+				transfer_state = 269
+
+				add_autonomy_score = {
+					value = -100
+					localization = africa_of_italian_event.8.a
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_integration_british_somaliland
+
+		icon = GFX_focus_GER_integration_of_puppet_economies
+
+		relative_position_id = AOI_war_with_british_somali
+		
+		cost = 4
+
+		x = -1
+		y = 1
+
+		prerequisite = { focus = AOI_war_with_british_somali focus = AOI_request_control_of_british_territories }
+
+		available = {
+			controls_state = 269
+			269 = {
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+		}
+		
+		bypass = {
+			269 = {
+				is_core_of = ROOT
+			}
+		}
+
+		completion_reward = {
+			269 = {
+				add_core_of = ROOT
+			}
+		}
+	}
+
 }

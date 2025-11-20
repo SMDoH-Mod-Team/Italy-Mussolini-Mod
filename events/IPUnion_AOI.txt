@@ -243,3 +243,258 @@ country_event = {
 		stability_factor = 0.15	
 	}
 }
+
+country_event = {
+	id = africa_of_italian_event.8
+	title = africa_of_italian_event.8.t
+	desc = africa_of_italian_event.8.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = { 
+		name = africa_of_italian_event.8.a
+		#add_political_power = 15
+		#stability_factor = 0.15
+		#AOI = {
+		#	transfer_state = 268
+		#}
+
+		ai_chance = {
+			base = 80
+			modifier = {
+				factor = 2
+				FROM = {
+					is_ai = no
+				}
+			}
+		}
+		
+		hidden_effect = {
+			AOI = {
+				country_event = africa_of_italian_event.9
+			}
+		}
+
+		effect_tooltip = {
+			AOI = {
+				transfer_state = 268
+
+				add_autonomy_score = {
+					value = -100
+					localization = africa_of_italian_event.8.a
+				}
+			}	
+		}
+	}
+
+	option = {
+		name = africa_of_italian_event.8.b
+
+		ai_chance = {
+			base = 20
+		}
+
+		hidden_effect = {
+			AOI = {
+				country_event = africa_of_italian_event.10
+			}
+		}
+
+		effect_tooltip = {
+			AOI = {
+				add_autonomy_score = {
+					value = 150
+					localization = africa_of_italian_event.8.b
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = africa_of_italian_event.9
+	title = africa_of_italian_event.9.t
+	desc = africa_of_italian_event.9.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = { 
+		name = africa_of_italian_event.9.a
+		transfer_state = 268
+		custom_effect_tooltip = generic_skip_one_line_tt
+		add_autonomy_score = {
+			value = -100
+			localization = africa_of_italian_event.8.a
+		}
+	}
+}
+
+country_event = {
+	id = africa_of_italian_event.10
+	title = africa_of_italian_event.10.t
+	desc = africa_of_italian_event.10.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = { 
+		name = africa_of_italian_event.10.a
+		add_autonomy_score = {
+			value = 150
+			localization = africa_of_italian_event.8.b
+		}
+	}
+}
+
+country_event = {
+	id = africa_of_italian_event.11
+	title = africa_of_italian_event.11.t
+	desc = africa_of_italian_event.11.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = { 
+		name = africa_of_italian_event.11.a
+		#add_political_power = 15
+		#stability_factor = 0.15
+		#AOI = {
+		#	transfer_state = 268
+		#}
+
+		ai_chance = {
+			base = 80
+			modifier = {
+				factor = 2
+				FROM = {
+					is_ai = no
+				}
+			}
+		}
+		
+		hidden_effect = {
+			AOI = {
+				country_event = africa_of_italian_event.12
+			}
+		}
+
+		effect_tooltip = {
+			AOI = {
+				transfer_state = 269
+
+				add_autonomy_score = {
+					value = -100
+					localization = africa_of_italian_event.8.a
+				}
+			}	
+		}
+	}
+
+	option = {
+		name = africa_of_italian_event.11.b
+
+		ai_chance = {
+			base = 20
+		}
+
+		hidden_effect = {
+			AOI = {
+				country_event = africa_of_italian_event.13
+			}
+		}
+
+		effect_tooltip = {
+			AOI = {
+				add_autonomy_score = {
+					value = 150
+					localization = africa_of_italian_event.8.b
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = africa_of_italian_event.12
+	title = africa_of_italian_event.12.t
+	desc = africa_of_italian_event.12.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = { 
+		name = africa_of_italian_event.12.a
+		transfer_state = 269
+		custom_effect_tooltip = generic_skip_one_line_tt
+		add_autonomy_score = {
+			value = -100
+			localization = africa_of_italian_event.8.a
+		}
+	}
+}
+
+country_event = {
+	id = africa_of_italian_event.13
+	title = africa_of_italian_event.13.t
+	desc = africa_of_italian_event.13.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = { 
+		name = africa_of_italian_event.13.a
+		add_autonomy_score = {
+			value = 150
+			localization = africa_of_italian_event.8.b
+		}
+	}
+}
+
+country_event = {
+	id = africa_of_italian_event.14
+	title = africa_of_italian_event.14.t
+	desc = africa_of_italian_event.14.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = { 
+		name = africa_of_italian_event.14.a
+		hidden_effect = {
+			set_country_flag = SE_africa_national_liberty_war
+			play_song = SE_mex_revolution
+		}
+	}
+
+	option = { 
+		name = africa_of_italian_event.14.b
+		hidden_effect = {
+			set_country_flag = SE_africa_national_liberty_war
+			play_song = SE_mex_revolution
+		}
+	}
+
+	option = { 
+		name = africa_of_italian_event.14.c
+		hidden_effect = {
+			set_country_flag = SE_africa_national_liberty_war
+			play_song = SE_mex_revolution
+		}
+	}
+}

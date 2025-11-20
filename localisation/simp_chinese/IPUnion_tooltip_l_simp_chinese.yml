@@ -80,3 +80,4 @@
  ITA_Adjust_Consolidate_Fill_out_and_Improve_2_tt: "触发事件“§Y国家法西斯党第一届中央委员会第三次全体会议-第一次会议§!”"
  ITA_Adjust_Consolidate_Fill_out_and_Improve_1_tt: "§Y我们将召开一次全体会议来商讨如何解决国内目前的经济困难问题§!"
  AOI_national_common_culture_tt: "我国各民族会被塑造成有§Y统一民族意识§!的§Y东非民族§!，§Y或许在国内的民族主义崛起后，东非民族会肩负其他更重要的使命§!"
+ AOI_another_50_percent_trigger_tt: "$TRIGGER_NUM_OF_TOTAL_CONTROLLED_FACTORIES_MORE_THAN$§Y49§!（当前为§[GetColorControlledFactoriesForNewIndustrializationProgram][?ROOT.num_of_controlled_factories]§!）"

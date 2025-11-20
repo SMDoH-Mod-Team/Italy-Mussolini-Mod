@@ -197,6 +197,53 @@ ideas = {
 				consumer_goods_factor = -0.05
 			}
 		}
+		idea_AOI_second_class_citizen = {
+			picture = COG_the_invisible_roof
+
+			allowed = {
+				original_tag = AOI
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = -0.05
+				consumer_goods_factor = -0.15
+				political_power_factor = 0.25
+				stability_factor = 0.10
+			}
+		}
+		idea_AOI_suffragette = {
+			picture = ARG_women_in_industry
+
+			allowed = {
+				original_tag = AOI
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				conscription = 0.03
+				production_speed_buildings_factor = 0.10
+				production_speed_industrial_complex_factor = 0.05
+				stability_factor = -0.10
+			}
+		}
+		idea_africa_national_liberty_movement = {
+			picture = CHL_liberal_party_in_power
+
+			allowed = {
+				original_tag = AOI
+			}
+
+			removal_cost = -1
+
+			rule = {
+				can_not_declare_war = no
+				can_decline_call_to_war = yes
+				units_deployed_to_overlord = no
+			}
+		}
 	}
 	industrial_concern = {
 		AOI_danieli = {

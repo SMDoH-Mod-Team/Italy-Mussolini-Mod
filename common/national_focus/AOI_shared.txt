@@ -879,6 +879,12 @@
 			AOI_is_a_aoi_viable_nation = yes
 		}
 
+		available = {
+			AOI = {
+				is_ai = yes
+			}
+		}
+
 		cost = 5
 
 		relative_position_id = AOI_italian_investment

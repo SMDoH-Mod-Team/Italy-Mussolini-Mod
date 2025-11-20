@@ -252,3 +252,29 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = IPUnion_router_event.10
+	title = IPUnion_router_event.10
+	desc = IPUnion_router_event.10
+	hidden = yes
+
+	trigger = {
+		AOI = {
+			has_country_flag = AOI_africa_national_liberty_revolution_flag
+			OR = {
+				has_war_with = DJI
+				has_war_with = SOM
+			}
+		}
+	}
+
+	immediate = {
+		AOI = {
+			country_event = {
+				id = africa_of_italian_event.14
+				hours = 12
+			}
+		}
+	}
+}

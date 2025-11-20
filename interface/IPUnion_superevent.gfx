@@ -1,0 +1,13 @@
+spriteTypes = {
+	
+	spriteType = { 
+		name = "GFX_SE_africa_national_liberty_war"
+		textureFile = "gfx/superevent_pictures/SE_africa_national_liberty_war.dds"
+	}
+	#################
+	
+	spriteType = {
+		name = "GFX_window_SE_border"
+		textureFile = "gfx/interface/window_SE_border.png"
+	}
+}
