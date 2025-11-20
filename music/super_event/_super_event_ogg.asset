@@ -174,3 +174,8 @@ music = {
 	file = "SE_fra_victory.ogg"
 	volume = 1
 }
+music = {
+	name = "SE_italian_great_revolution"
+	file = "SE_italian_great_revolution.ogg"
+	volume = 1
+}

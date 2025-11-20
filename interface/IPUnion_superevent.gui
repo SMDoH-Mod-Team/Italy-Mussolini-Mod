@@ -13,6 +13,12 @@ guiTypes = {
 			spriteType = "GFX_SE_africa_national_liberty_war" 
 			position = { x=38 y = 55 }
 		}
+
+		iconType = {
+			name = "SE_italian_great_revolution"
+			spriteType = "GFX_SE_fra_national_syndicalist"
+			position = { x=38 y = 55 }
+		}
 		################################################################
 		containerWindowType = {
 			name = "Background"

@@ -10298,7 +10298,7 @@ focus_tree = {
 					add_unit_leader_trait = media_personality
 					add_unit_leader_trait = harsh_leader
 				}
-				play_song = "VogliamoScolpireUnaLapide"
+				#play_song = "VogliamoScolpireUnaLapide"
 			}
 
 			set_cosmetic_tag = ITA_rsi

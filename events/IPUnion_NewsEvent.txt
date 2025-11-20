@@ -151,3 +151,29 @@ news_event = {
 		name = IPUnion_news.2.a
 	}
 }
+
+news_event = {
+	id = IPUnion_news.5
+	title = IPUnion_news.5.t
+	desc = IPUnion_news.5.d
+	
+	is_triggered_only = yes
+
+	picture = GFX_news_event_german_soldiers
+	fire_only_once = yes
+	major = yes
+
+	trigger = {
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = IPUnion_news.5.a
+		hidden_effect = {
+			set_country_flag = SE_italian_great_revolution
+			play_song = SE_italian_great_revolution
+		}
+	}
+}

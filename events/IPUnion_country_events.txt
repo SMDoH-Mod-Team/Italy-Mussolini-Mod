@@ -1233,6 +1233,10 @@ country_event = {
 				id = IPUnion_country_event.35
 				days = 3
 			}
+			country_event = {
+				id = IPUnion_news.5
+				hours = 12
+			}
 		}
 	}
 }
