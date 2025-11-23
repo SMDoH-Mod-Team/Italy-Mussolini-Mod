@@ -1,0 +1,3 @@
+﻿l_simp_chinese:
+ reserved_welding_point:0 "预留焊接点"
+ reserved_welding_point_desc:0 "母厂预留的焊接点，用于在组装时加快速度"

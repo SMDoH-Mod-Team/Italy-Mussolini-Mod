@@ -1,4 +1,4 @@
-﻿capital = 1024
+﻿capital = 1054
 
 oob = "NEF_1936"
 #if = {

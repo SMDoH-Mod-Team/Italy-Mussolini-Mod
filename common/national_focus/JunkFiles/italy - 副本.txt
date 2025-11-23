@@ -10253,7 +10253,7 @@ focus_tree = {
 			custom_trigger_tooltip = {
 				tooltip = ITA_motherland_of_our_movement_tt
 				ITA = {
-					controls_state = 1019
+					controls_state = 1049
 				}
 			}
 		}
@@ -16162,7 +16162,7 @@ focus_tree = {
 			custom_trigger_tooltip = {
 				tooltip = ITA_blacksea_base_trigger_tt
 				SOV = {
-					controls_state = 1022 #SOV control of Constanta
+					controls_state = 1052 #SOV control of Constanta
 				}
 			}
 			SOV = {
@@ -16173,9 +16173,9 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			transfer_state = 1022
-			1022 = { add_core_of = ITA }
-			1022 = { remove_core_of = SOV }
+			transfer_state = 1052
+			1052 = { add_core_of = ITA }
+			1052 = { remove_core_of = SOV }
 		}
 	}
 
@@ -23243,11 +23243,11 @@ focus_tree = {
 				if = {
 					limit = {
 						SPR = {
-							controls_state = 1021
+							controls_state = 1051
 						}
 					}
-					transfer_state = 1021
-					#1021 = { add_core_of = ITA }
+					transfer_state = 1051
+					#1051 = { add_core_of = ITA }
 				}
 				else = {
 					transfer_state = 290
@@ -23258,7 +23258,7 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = ITA_North_africa_spr_state_tt_2
 			#transfer_state = 290
-			#transfer_state = 1021
+			#transfer_state = 1051
 		}
 	}
 	
@@ -23339,12 +23339,12 @@ focus_tree = {
 				if = {
 					limit = {
 						SPR = {
-							controls_state = 1021
+							controls_state = 1051
 						}
 					}
 					177 = { add_core_of = ITA }
 					178 = { add_core_of = ITA }
-					1021 = { add_core_of = ITA }
+					1051 = { add_core_of = ITA }
 					297 = { add_core_of = ITA }
 					699 = { add_core_of = ITA }
 					783 = { add_core_of = ITA }
@@ -23476,7 +23476,7 @@ focus_tree = {
 				if = {
 					limit = {
 						ENG = {
-							controls_state = 1018
+							controls_state = 1048
 						}
 					}
 					transfer_state = 452
@@ -23486,7 +23486,7 @@ focus_tree = {
 					transfer_state = 456
 					transfer_state = 457
 					transfer_state = 552
-					#transfer_state = 1018
+					#transfer_state = 1048
 					release_puppet_on_controlled = EGY
 					EGY = {
 						set_cosmetic_tag = EGY_KOI
@@ -23494,10 +23494,10 @@ focus_tree = {
 					}
 					transfer_state = 183
 					transfer_state = 446
-					transfer_state = 1018
+					transfer_state = 1048
 					183 = { add_core_of = ITA } 
 					446 = { add_core_of = ITA }
-					1018 = { add_core_of = ITA }
+					1048 = { add_core_of = ITA }
 					EGY = {
 						set_politics = {
 							ruling_party = neutrality
@@ -23524,10 +23524,10 @@ focus_tree = {
 					}
 					transfer_state = 183
 					transfer_state = 446
-					#transfer_state = 1018
+					#transfer_state = 1048
 					183 = { add_core_of = ITA } 
 					446 = { add_core_of = ITA }
-					#1018 = { add_core_of = ITA }
+					#1048 = { add_core_of = ITA }
 					EGY = {
 						set_politics = {
 							ruling_party = neutrality
@@ -23548,7 +23548,7 @@ focus_tree = {
 			#	transfer_state = 456
 			#	transfer_state = 457
 			#	transfer_state = 552
-			#	transfer_state = 1018
+			#	transfer_state = 1048
 			#	release_puppet_on_controlled = EGY
 			#	EGY = {
 			#		set_cosmetic_tag = EGY_KOI ##EGY Kingdom of ITA
@@ -23567,11 +23567,11 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			#transfer_state = 183
 			#transfer_state = 446
-			#transfer_state = 1018
+			#transfer_state = 1048
 			#hidden_effect = {
 			#	183 = { add_core_of = ITA } 
 			#	446 = { add_core_of = ITA }
-			#	1018 = { add_core_of = ITA }
+			#	1048 = { add_core_of = ITA }
 			#}
 			#custom_effect_tooltip = ITA_get_fornt_state_core_tt
 			unlock_decision_tooltip = form_founded_palestine
@@ -24663,13 +24663,13 @@ focus_tree = {
 			custom_trigger_tooltip = {
 				tooltip = ITA_FRA_control_Saigon_trigger_tt
 				FRA = {
-					controls_state = 1020
+					controls_state = 1050
 				}
 			}
 		}
 		completion_reward = {
-			transfer_state = 1020
-			1020 = { add_core_of = ITA }
+			transfer_state = 1050
+			1050 = { add_core_of = ITA }
 			add_political_power = -25
 		}
 	}
@@ -24689,13 +24689,13 @@ focus_tree = {
 			custom_trigger_tooltip = {
 				tooltip = ITA_lease_toulon_99_years_tt
 				FRA = {
-					controls_state = 1017
+					controls_state = 1047
 				}
 			}
 		}
 		completion_reward = {
-			transfer_state = 1017
-			1017 = { add_core_of = ITA }
+			transfer_state = 1047
+			1047 = { add_core_of = ITA }
 			add_timed_idea = {
 				idea = idea_ITA_lease_toulon
 				days = 36135

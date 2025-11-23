@@ -9,9 +9,9 @@ country_event = {
 	fire_only_once = yes
 	option = {
 		name = IPUnion_country_event.1.a
-		1017 = { remove_core_of = ITA }
+		1047 = { remove_core_of = ITA }
 		FRA = {
-			transfer_state = 1017
+			transfer_state = 1047
 		}
 		ai_chance = {
 			base = 10
@@ -26,12 +26,12 @@ country_event = {
 	}
 	option = {
 		name = IPUnion_country_event.1.b
-		1017 = { remove_core_of = ITA }
+		1047 = { remove_core_of = ITA }
 		FRA = {
 			create_wargoal = {
 				target = ITA
 				type = take_core_state
-				generator = { 1017 }
+				generator = { 1047 }
 			}
 		}
 		ai_chance = {
@@ -217,13 +217,13 @@ country_event = {
 			}
 		}
 		TUR = {
-			transfer_state = 1026
-			transfer_state = 1027
+			transfer_state = 1056
+			transfer_state = 1057
 		}
-		1026 = { add_core_of = TUR }
-		1027 = { add_core_of = TUR }
-		1026 = { remove_core_of = GRE }
-		1027 = { remove_core_of = GRE }
+		1056 = { add_core_of = TUR }
+		1057 = { add_core_of = TUR }
+		1056 = { remove_core_of = GRE }
+		1057 = { remove_core_of = GRE }
 	}
 	option = {
 		name = IPUnion_country_event.6.b
@@ -299,13 +299,13 @@ country_event = {
 				}
 			}
 		}
-		1026 = { add_core_of = TUR }
-		1027 = { add_core_of = TUR }
+		1056 = { add_core_of = TUR }
+		1057 = { add_core_of = TUR }
 		ROOT = {
 			create_wargoal = {
 				target = FROM
 				type = take_core_state
-				generator = { 1026 1027 }
+				generator = { 1056 1057 }
 			}
 		}
 		add_political_power = -10
@@ -723,7 +723,7 @@ country_event = {
 		remove_global_flag = ITA_Hot_Autumn_flag
 		remove_ideas = idea_ITA_Hot_Autumn
 		#play_song = BellaCiao
-		#complete_national_focus = ITA_Clear_the_Square
+		complete_national_focus = ITA_Clear_the_Square
 		hidden_effect = {
 			country_event = {
 				id = IPUnion_country_event.25
@@ -1233,7 +1233,7 @@ country_event = {
 				id = IPUnion_country_event.35
 				days = 3
 			}
-			country_event = {
+			news_event = {
 				id = IPUnion_news.5
 				hours = 12
 			}
@@ -2271,6 +2271,229 @@ country_event = {
 		name = IPUnion_country_event.66.d  ##什么也不做
 		add_political_power = 50
 		custom_effect_tooltip = "什么也不会发生"
+	}
+}
+
+country_event = {
+	id = IPUnion_country_event.67
+	
+	title = IPUnion_country_event.67.t
+	desc = IPUnion_country_event.67.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_gre_george_ii_victorious
+	option = {
+		name = IPUnion_country_event.67.a
+		trigger = {
+			is_ai = no 
+		}
+		hidden_effect = {
+			set_country_flag = IPUnion_country_event.67.a.flag
+			mark_focus_tree_layout_dirty = yes
+		}
+		custom_effect_tooltip = IPUnion_country_event.67.a.tt
+	}
+	option = {
+		name = IPUnion_country_event.67.b
+		custom_effect_tooltip = IPUnion_country_event.67.b.tt
+	}
+}
+
+country_event = {
+	id = IPUnion_country_event.68
+	
+	title = IPUnion_country_event.68.t
+	desc = IPUnion_country_event.68.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_gre_george_ii_victorious
+	option = {
+		name = IPUnion_country_event.68.a
+		ai_chance = {
+			base = 80
+			modifier = {
+				factor = 2
+				FROM = {
+					is_ai = no
+				}
+			}
+		}
+		hidden_effect = {
+			set_global_flag = IPUnion_country_event.68.a.flag
+		}
+		custom_effect_tooltip = IPUnion_country_event.68.a.tt
+		FROM = {
+			country_event = IPUnion_country_event.69
+		}
+	}
+	option = {
+		name = IPUnion_country_event.68.b
+		ai_chance = {
+			base = 20
+		}
+		FROM = {
+			country_event = IPUnion_country_event.70
+		}
+		custom_effect_tooltip = IPUnion_country_event.68.b.tt
+	}
+}
+
+country_event = {
+	id = IPUnion_country_event.69
+	
+	title = IPUnion_country_event.69.t
+	desc = IPUnion_country_event.69.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_gre_george_ii_victorious
+	option = {
+		name = IPUnion_country_event.69.a
+
+		add_political_power = 15
+	}
+}
+
+country_event = {
+	id = IPUnion_country_event.70
+	
+	title = IPUnion_country_event.70.t
+	desc = IPUnion_country_event.70.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_gre_george_ii_victorious
+	option = {
+		name = IPUnion_country_event.70.a
+
+		add_political_power = 15
+	}
+}
+
+country_event = {
+	id = IPUnion_country_event.71
+	
+	title = IPUnion_country_event.71.t
+	desc = IPUnion_country_event.71.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_gre_george_ii_victorious
+	option = {
+		name = IPUnion_country_event.71.a
+		ai_chance = {
+			base = 100
+		}
+		add_ideas = idea_ITA_CHI_economy_cooperation_organization
+		FROM = {
+			country_event = IPUnion_country_event.72
+		}
+	}
+
+	option = {
+		name = IPUnion_country_event.71.b
+		ai_chance = {
+			base = 0
+		}
+		hidden_effect = {
+			set_global_flag = IPUnion_country_event.71.b.flag
+		}
+	}
+}
+
+
+country_event = {
+	id = IPUnion_country_event.72
+	
+	title = IPUnion_country_event.72.t
+	desc = IPUnion_country_event.72.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_gre_george_ii_victorious
+	option = {
+		name = IPUnion_country_event.72.a
+		add_ideas = idea_ITA_CHI_economy_cooperation_organization
+	}
+}
+
+country_event = {
+	id = IPUnion_country_event.73
+	
+	title = IPUnion_country_event.73.t
+	desc = IPUnion_country_event.73.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_gre_george_ii_victorious
+	option = {
+		name = IPUnion_country_event.73.a
+		add_political_power = 15
+	}
+}
+
+country_event = {
+	id = IPUnion_country_event.74
+	
+	title = IPUnion_country_event.74.t
+	desc = IPUnion_country_event.74.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_gre_george_ii_victorious
+	option = {
+		name = IPUnion_country_event.74.a
+		add_political_power = 15
+		hidden_effect = {
+			set_global_flag = IPUnion_country_event.68.a.flag
+		}
+	}
+}
+
+country_event = {
+	id = IPUnion_country_event.75
+	
+	title = IPUnion_country_event.75.t
+	desc = IPUnion_country_event.75.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_gre_george_ii_victorious
+	option = {
+		name = IPUnion_country_event.75.a
+		#add_political_power = 15
+		custom_effect_tooltip = CHI_SINAW_primacy_tt
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+
+country_event = {
+	id = IPUnion_country_event.76
+
+	title = IPUnion_country_event.76.t
+	desc = IPUnion_country_event.76.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	picture = GFX_report_event_gre_george_ii_victorious
+	option = {
+		name = IPUnion_country_event.76.a
+		add_equipment_to_stockpile = {
+			type = medium_plane_airframe_1
+			amount = 2
+			#producer = CHI
+			variant_name = "Savoia-Marchetti S.81 Body"
+		}
+
+		create_equipment_variant = {
+			name = "Savoia-Marchetti S.81"
+			type = medium_plane_airframe_1
+			parent_version = 0
+			modules = {
+				fixed_main_weapon_slot = medium_bomb_bay
+				fixed_auxiliary_weapon_slot_1 = medium_bomb_bay
+				#fixed_auxiliary_weapon_slot_2 = bomb_locks
+				#fixed_auxiliary_weapon_slot_3 = empty
+				special_type_slot_1 = lmg_defense_turret_2x
+				engine_type_slot = engine_1_3x
+			}
+			design_team = mio:CHI_sinaw_organization_sea
+			icon = "GFX_ITA_early_bomber_medium"
+		}
+		custom_effect_tooltip = IPUnion_country_event.76.a.tt
 	}
 }
 

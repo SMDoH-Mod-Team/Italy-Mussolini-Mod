@@ -5,7 +5,7 @@ news_event = {
 	title = IPUnion_news.1.t
 	desc = IPUnion_news.1.d
 	picture = GFX_news_event_german_soldiers
-	is_triggered_only = yes
+	#is_triggered_only = yes
 	fire_only_once = yes
 	major = yes
 
@@ -44,7 +44,7 @@ news_event = {
 	title = IPUnion_news.2.t
 	desc = IPUnion_news.2.d
 	
-	is_triggered_only = yes
+	#is_triggered_only = yes
 
 	picture = GFX_news_event_german_soldiers
 	fire_only_once = yes
@@ -82,7 +82,7 @@ news_event = {
 	title = IPUnion_news.3.t
 	desc = IPUnion_news.3.d
 	
-	is_triggered_only = yes
+	#is_triggered_only = yes
 
 	picture = GFX_news_event_german_soldiers
 	fire_only_once = yes
@@ -123,7 +123,7 @@ news_event = {
 	title = IPUnion_news.4.t
 	desc = IPUnion_news.4.d
 	
-	is_triggered_only = yes
+	#is_triggered_only = yes
 
 	picture = GFX_news_event_german_soldiers
 	fire_only_once = yes
@@ -174,6 +174,32 @@ news_event = {
 		hidden_effect = {
 			set_country_flag = SE_italian_great_revolution
 			play_song = SE_italian_great_revolution
+		}
+	}
+}
+
+news_event = {
+	id = IPUnion_news.6
+	title = IPUnion_news.6.t
+	desc = IPUnion_news.6.d
+	
+	is_triggered_only = yes
+
+	picture = GFX_news_event_german_soldiers
+	fire_only_once = yes
+	major = yes
+
+	trigger = {
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = IPUnion_news.6.a
+		hidden_effect = {
+			set_country_flag = SE_africa_national_liberty_war
+			play_song = SE_mex_revolution
 		}
 	}
 }

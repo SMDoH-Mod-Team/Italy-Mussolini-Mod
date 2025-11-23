@@ -93,3 +93,36 @@ ITA_promote_umberto_to_country_leader_1 = {
 
 	}
 }
+
+ITA_china_italy_airplane_project_effect_test = {
+	create_equipment_variant = {
+		name = "Savoia-Marchetti S.81 Body"
+		type = medium_plane_airframe_1
+		parent_version = 0
+		modules = {
+			fixed_main_weapon_slot = reserved_welding_point
+			#fixed_auxiliary_weapon_slot_1 = aircraft_cannon_1_2x
+			#fixed_auxiliary_weapon_slot_2 = bomb_locks
+			#fixed_auxiliary_weapon_slot_3 = empty
+			engine_type_slot = engine_1_3x
+		}
+		design_team = mio:CHI_sinaw_organization_sea
+		icon = "GFX_ITA_early_bomber_medium"
+	}
+
+	#create_equipment_variant = {
+	#	name = "Savoia-Marchetti S.81"
+	#	type = medium_plane_airframe_1
+	#	parent_version = 0
+	#	modules = {
+	#		fixed_main_weapon_slot = medium_bomb_bay
+	#		fixed_auxiliary_weapon_slot_1 = medium_bomb_bay
+	#		#fixed_auxiliary_weapon_slot_2 = bomb_locks
+	#		#fixed_auxiliary_weapon_slot_3 = empty
+	#		special_type_slot_1 = lmg_defense_turret_2x
+	#		engine_type_slot = engine_1_3x
+	#	}
+	#	design_team = mio:CHI_sinaw_organization_sea
+	#	icon = "GFX_ITA_early_bomber_medium"
+	#}
+}

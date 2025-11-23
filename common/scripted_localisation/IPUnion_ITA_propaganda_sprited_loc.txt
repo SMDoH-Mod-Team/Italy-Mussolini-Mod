@@ -104,13 +104,13 @@ defined_text = {
 	}
 	text = {
 		trigger = {
-			check_variable = { SOV_poster_right_icon_frame = 1020 }
+			check_variable = { SOV_poster_right_icon_frame = 1050 }
 		}
 		localization_key = ITA_propaganda_builders_of_fascism
 	}
 	text = {
 		trigger = {
-			check_variable = { SOV_poster_right_icon_frame = 1023 }
+			check_variable = { SOV_poster_right_icon_frame = 1053 }
 		}
 		localization_key = ITA_propaganda_duce
 	}

@@ -1,0 +1,115 @@
+
+
+
+	shared_focus = {
+		id = CHI_SINAW_focus
+
+		dynamic = yes
+
+		allow_branch = {
+			CHI = {
+				has_completed_focus = CHI_SINAW_primacy
+			}
+		}
+
+		icon = GFX_focus_BRA_italian_aircraft_development
+
+		x = 15
+		y = 0
+
+		cost = 5
+
+		text_icon = china_CHI_focus_style
+
+		available = {
+			original_tag = CHI
+		}
+
+		offset = {
+			x = 110
+			y = 0
+
+			trigger = {
+				has_focus_tree = italian_focus
+			}
+		}
+
+		offset = {
+			x = 180
+			y = 0
+
+			trigger = {
+				has_focus_tree = china_nationalist_sea_focus
+			}
+		}
+
+		offset = {
+			x = -33
+			y = 0
+			trigger = {
+				OR = {
+					NOT = { has_dlc = "By Blood Alone" }
+					AND = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+						has_completed_focus = ITA_culto_del_duce
+					}
+					is_ai = no
+				}
+			}
+		}
+
+		offset = {
+			x = -12
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = ITA_convene_the_grand_council
+			}
+		}
+
+		offset = {
+			x = -60
+			y = 0
+			trigger = {
+				has_completed_focus = CHI_end_military_primacy
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+		}
+
+		completion_reward = {
+			set_technology = {
+				iw_medium_airframe = 1
+				basic_medium_airframe = 1
+			}
+
+			custom_effect_tooltip = CHI_SINAW_focus_templates_tt
+
+			ITA_china_italy_airplane_project_effect_test = yes
+
+			hidden_effect = {
+				country_event = {
+					id = IPUnion_country_event.76
+					hours = 72
+					random_hours = 24
+				}
+			}
+
+			effect_tooltip = {
+				add_equipment_to_stockpile = {
+					type = medium_plane_airframe_1
+   					amount = 2
+					#producer = CHI
+					variant_name = "Savoia-Marchetti S.81 Body"
+				}
+			}
+		}
+	}

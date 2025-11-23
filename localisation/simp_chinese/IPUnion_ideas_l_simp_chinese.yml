@@ -112,3 +112,5 @@
  idea_AOI_suffragette_desc: ""
  idea_africa_national_liberty_movement: "东非民族解放运动"
  idea_africa_national_liberty_movement_desc: "我们的土地，我们的人民，我们的血"
+ idea_ITA_CHI_economy_cooperation_organization: "意-中经济合作组织"
+ idea_ITA_CHI_economy_cooperation_organization_desc: "当前成员：§Y[ITA.GetName]§!、§Y[CHI.GetName]§!"

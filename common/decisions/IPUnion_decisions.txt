@@ -351,9 +351,10 @@ IPUnion_Partition_of_Greece = {
 				custom_trigger_tooltip = {
 					tooltip = IPUnion_GRE_has_control_988_989_tt
 					GRE = {
-						controls_state = 1023
-						controls_state = 1024
-						controls_state = 1025
+						controls_state = 1053
+						controls_state = 1054
+						controls_state = 1055
+						controls_state = 1060
 					}
 				}
 				NOT = {
@@ -363,35 +364,35 @@ IPUnion_Partition_of_Greece = {
 		}
 		visible = {
 			GRE = {
-				controls_state = 1023
-				controls_state = 1024
-				controls_state = 1025
+				controls_state = 1053
+				controls_state = 1054
+				controls_state = 1055
 			}
 		}
 		remove_effect = {
 			hidden_effect = {
-				transfer_state = 1023
-				transfer_state = 1024
-				transfer_state = 1025
 				#release_puppet_on_controlled = NEF
-				1023 = { remove_core_of = GRE }
-				1024 = { remove_core_of = GRE }
-				1025 = { remove_core_of = GRE }
+				#1053 = { remove_core_of = GRE }
+				#1054 = { remove_core_of = GRE }
+				#1055 = { remove_core_of = GRE }
+				#1060 = { remove_core_of = GRE }
 				#release_puppet_on_controlled = NEF
 				NEF = {
-					transfer_state = 1023
-					transfer_state = 1024
-					transfer_state = 1025
+					transfer_state = 1053
+					transfer_state = 1054
+					transfer_state = 1055
+					transfer_state = 1060
 				}
-				1023 = { add_core_of = NEF }
-				1024 = { add_core_of = NEF }
-				1025 = { add_core_of = NEF }
-				release_autonomy = {
+				1053 = { add_core_of = NEF }
+				1054 = { add_core_of = NEF }
+				1055 = { add_core_of = NEF }
+				1060 = { add_core_of = NEF }
+				set_autonomy = {
 					target = NEF
 					autonomy_state = autonomy_puppet
-					freedom_level = 0.5
+					#freedom_level = 0.5
 				}
-				1024 = {
+				1054 = {
 					#add_building_construction = {
 					#	type = infrastructure
 					#	level = 3
@@ -414,7 +415,7 @@ IPUnion_Partition_of_Greece = {
 					}
 					add_extra_state_shared_building_slots = 7
 				}
-				1023 = {
+				1053 = {
 					add_building_construction = {
 						type = dockyard
 						level = 1
@@ -422,7 +423,7 @@ IPUnion_Partition_of_Greece = {
 					}
 					add_extra_state_shared_building_slots = 1
 				}
-				1025 = {
+				1055 = {
 					add_building_construction = {
 						type = arms_factory
 						level = 1
@@ -501,8 +502,8 @@ IPUnion_Partition_of_Greece = {
 		available = {
 			AND = {
 				GRE = {
-					controls_state = 1026
-					controls_state = 1027
+					controls_state = 1056
+					controls_state = 1057
 				}
 
 				is_in_faction_with = TUR
@@ -529,8 +530,8 @@ IPUnion_Partition_of_Greece = {
 
 		visible = {
 			GRE = {
-				controls_state = 1026
-				controls_state = 1027
+				controls_state = 1056
+				controls_state = 1057
 			}
 		}
 
@@ -554,13 +555,13 @@ IPUnion_Partition_of_Greece = {
 			}
 			#country_exists = NEF
 			NEF = {
-				controls_state = 1023
-				controls_state = 1024
-				controls_state = 1025
+				controls_state = 1053
+				controls_state = 1054
+				controls_state = 1055
 			}
 			TUR = {
-				controls_state = 1026
-				controls_state = 1027
+				controls_state = 1056
+				controls_state = 1057
 			}
 			EGY = {
 				controls_state = 182
@@ -578,13 +579,13 @@ IPUnion_Partition_of_Greece = {
 			}
 			#country_exists = NEF
 			NEF = {
-				controls_state = 1023
-				controls_state = 1024
-				controls_state = 1025
+				controls_state = 1053
+				controls_state = 1054
+				controls_state = 1055
 			}
 			TUR = {
-				controls_state = 1026
-				controls_state = 1027
+				controls_state = 1056
+				controls_state = 1057
 			}
 			EGY = {
 				controls_state = 182
@@ -1403,7 +1404,7 @@ ITA_PNF_central_military_committee = {
 				limit = {
 					has_country_flag = Toulon_Base_Mod_Loaded_Check
 				}
-				1019 = {
+				1049 = {
 					add_dynamic_modifier = {
 						modifier = milano_military_area
 					}
@@ -1554,8 +1555,8 @@ IPUnion_puppet_action = {
 					original_tag = ITA
 					is_puppet_of = ITA
 				}
-				controls_state = 1028
-				controls_state = 1029
+				controls_state = 1058
+				controls_state = 1059
 			}
 		}
 		available = {
@@ -1567,17 +1568,17 @@ IPUnion_puppet_action = {
 					original_tag = ITA
 					is_puppet_of = ITA
 				}
-				controls_state = 1028
-				controls_state = 1029
+				controls_state = 1058
+				controls_state = 1059
 			}
 		}
 		remove_effect = {
 			NMD = {
-				transfer_state = 1028
-				transfer_state = 1029
+				transfer_state = 1058
+				transfer_state = 1059
 			}
-			1028 = { add_core_of = NMD }
-			1029 = { add_core_of = NMD }
+			1058 = { add_core_of = NMD }
+			1059 = { add_core_of = NMD }
 			15 = { add_core_of = NMD }
 			IF = {
 				limit = {
@@ -1616,7 +1617,7 @@ IPUnion_puppet_action = {
 				    }
 				}
 			}
-			1029 = {
+			1059 = {
 				create_unit = {
 				    division = "name = \"1. Milicia Fashiste Shqiptare\" division_template = \"Milicia Fashiste Shqiptare\" start_experience_factor = 0.1 start_equipment_factor = 1.0"
 				    owner = NMD
@@ -1626,7 +1627,7 @@ IPUnion_puppet_action = {
 				    owner = NMD
 				}
 			}
-			1028 = {
+			1058 = {
 				create_unit = {
 				    division = "name = \"1. Milicia Fashiste Shqiptare\" division_template = \"Milicia Fashiste Shqiptare\" start_experience_factor = 0.1 start_equipment_factor = 1.0"
 				    owner = NMD
@@ -1772,7 +1773,8 @@ ITA_ger_anschluss = {
 		}
 		available = {
 			custom_trigger_tooltip = {
-
+				tooltip = has_ITA_interfere_ger_anschluss_tt
+				has_country_flag = ITA_interfere_ger_anschluss_flag
 			}
 		}
 		is_good = yes
@@ -1787,12 +1789,24 @@ ITA_ger_anschluss = {
 	ITA_interfere_ger_anschluss = {
 
 		available = {
-			AUS = {
-				any_neighbor_state = {
-					num_divisions > 10
-				}
+			divisions_in_state = {
+    			type = infantry
+    			size > 9
+    			state = 39
+			}
+			divisions_in_state = {
+    			type = infantry
+    			size > 9
+    			state = 160
+			}
+			divisions_in_state = {
+    			type = infantry
+    			size > 9
+    			state = 736
 			}
 		}
+
+		fire_only_once = yes
 		visible = {
 			has_country_flag = IPUnion_country_event.64.flag
 			is_ai = no
@@ -1802,6 +1816,29 @@ ITA_ger_anschluss = {
 			GER = {
 				country_event = {
 					id = IPUnion_country_event.65
+					hours = 22
+					random_hours = 24
+				}
+			}
+			hidden_effect = {
+				set_country_flag = ITA_interfere_ger_anschluss_flag
+
+			}
+		}
+	}
+}
+
+political_actions = {
+	CHI_reiterate_economy_cooperation = {
+		cost = 15
+		visible = {
+			has_global_flag = IPUnion_country_event.71.b.flag
+		}
+
+		complete_effect = {
+			ITA = {
+				country_event = {
+					id = IPUnion_country_event.74
 					hours = 22
 					random_hours = 24
 				}

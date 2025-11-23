@@ -155,6 +155,10 @@ spriteTypes = {
 		name = "GFX_SE_fra_victory"
 		textureFile = "gfx/superevent_pictures/SE_fra_victory.dds"
 	}
+	spriteType = {
+		name = "GFX_SE_italian_revolution"
+		textureFile = "gfx/superevent_pictures/SE_italian_revolution.png"
+	}
 	#################
 	
 	spriteType = {

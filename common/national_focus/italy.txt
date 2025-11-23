@@ -36,6 +36,8 @@ focus_tree = {
 	shared_focus = AOI_italian_aoi
 
 	shared_focus = AOI_italian_investment
+
+	shared_focus = CHI_SINAW_focus
 	
 	default = no
 
@@ -2781,6 +2783,53 @@ focus_tree = {
 				add_resource = {
 					type = steel
 					amount = 8
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_coal_improve
+		icon = GFX_focus_generic_coal_mining
+
+		prerequisite = { focus = ITA_italian_highways_bba }
+		relative_position_id = ITA_steel_industry_in_terni
+		x = -2
+		y = 0
+
+		completion_reward = {
+			158 = {
+				add_resource = {
+					type = coal
+					amount = 82
+				}
+			}
+
+			39 = {
+				add_resource = {
+					type = coal
+					amount = 37
+				}
+			}
+
+			850 = {
+				add_resource = {
+					type = coal
+					amount = 41
+				}
+			}
+
+			117 = {
+				add_resource = {
+					type = coal
+					amount = 76
+				}
+			}
+
+			114 = {
+				add_resource = {
+					type = coal
+					amount = 53
 				}
 			}
 		}
@@ -6062,8 +6111,8 @@ focus_tree = {
 					name = ITA_oto_naval_guns
 					bonus = 1.0
 					uses = 2
-					category = cat_ship_medium_battery
-					category = cat_ship_heavy_battery
+					category = medium_airframe
+					#category = cat_ship_heavy_battery
 				}
 			}
 			else = {
@@ -10378,7 +10427,7 @@ focus_tree = {
 			custom_trigger_tooltip = {
 				tooltip = ITA_motherland_of_our_movement_tt
 				ITA = {
-					controls_state = 1019
+					controls_state = 1049
 				}
 			}
 		}
@@ -16302,7 +16351,7 @@ focus_tree = {
 			custom_trigger_tooltip = {
 				tooltip = ITA_blacksea_base_trigger_tt
 				SOV = {
-					controls_state = 1022 #SOV control of Constanta
+					controls_state = 1052 #SOV control of Constanta
 				}
 			}
 			SOV = {
@@ -16313,9 +16362,9 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			transfer_state = 1022
-			1022 = { add_core_of = ITA }
-			1022 = { remove_core_of = SOV }
+			transfer_state = 1052
+			1052 = { add_core_of = ITA }
+			1052 = { remove_core_of = SOV }
 		}
 	}
 
@@ -16356,6 +16405,15 @@ focus_tree = {
 				}
 				give_market_access = ITA
 				add_opinion_modifier = { target = ITA modifier = ita_diplomacy_focus_1 }
+			}
+
+			if = {
+				limit = {
+					ROOT = {
+						is_ai = no
+					}
+				}
+				country_event = IPUnion_country_event.67
 			}
 		}
 	}
@@ -23444,11 +23502,11 @@ focus_tree = {
 				if = {
 					limit = {
 						SPR = {
-							controls_state = 1021
+							controls_state = 1051
 						}
 					}
-					transfer_state = 1021
-					#1021 = { add_core_of = ITA }
+					transfer_state = 1051
+					#1051 = { add_core_of = ITA }
 				}
 				else = {
 					transfer_state = 290
@@ -23459,7 +23517,7 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = ITA_North_africa_spr_state_tt_2
 			#transfer_state = 290
-			#transfer_state = 1021
+			#transfer_state = 1051
 		}
 	}
 	
@@ -23540,12 +23598,12 @@ focus_tree = {
 				if = {
 					limit = {
 						SPR = {
-							controls_state = 1021
+							controls_state = 1051
 						}
 					}
 					177 = { add_core_of = ITA }
 					178 = { add_core_of = ITA }
-					1021 = { add_core_of = ITA }
+					1051 = { add_core_of = ITA }
 					297 = { add_core_of = ITA }
 					699 = { add_core_of = ITA }
 					783 = { add_core_of = ITA }
@@ -23705,10 +23763,10 @@ focus_tree = {
 				#}
 				#transfer_state = 183
 				#transfer_state = 446
-				#transfer_state = 1018
+				#transfer_state = 1048
 				#183 = { add_core_of = ITA } 
 				#446 = { add_core_of = ITA }
-				#1018 = { add_core_of = ITA }
+				#1048 = { add_core_of = ITA }
 			EGY = {
 				set_politics = {
 				ruling_party = neutrality
@@ -25365,13 +25423,13 @@ focus_tree = {
 			custom_trigger_tooltip = {
 				tooltip = ITA_FRA_control_Saigon_trigger_tt
 				FRA = {
-					controls_state = 1020
+					controls_state = 1050
 				}
 			}
 		}
 		completion_reward = {
-			transfer_state = 1020
-			1020 = { add_core_of = ITA }
+			transfer_state = 1050
+			1050 = { add_core_of = ITA }
 			add_political_power = -25
 		}
 	}
@@ -25391,13 +25449,13 @@ focus_tree = {
 			custom_trigger_tooltip = {
 				tooltip = ITA_lease_toulon_99_years_tt
 				FRA = {
-					controls_state = 1017
+					controls_state = 1047
 				}
 			}
 		}
 		completion_reward = {
-			transfer_state = 1017
-			1017 = { add_core_of = ITA }
+			transfer_state = 1047
+			1047 = { add_core_of = ITA }
 			add_timed_idea = {
 				idea = idea_ITA_lease_toulon
 				days = 36135
@@ -28080,21 +28138,120 @@ focus_tree = {
 		}
 	}
 
-            ##               #################     ################
-           ####              ##             ##            ##
-          ##  ##             ##             ##            ##
-         ##    ##            ##             ##            ##
-		##      ##           ##             ##            ##
-       ##        ##          ##             ##            ##
-      ##          ##         ##             ##            ##
-     ################        ##             ##            ##
-    ##              ##       ##             ##            ##
-   ##                ##      ##             ##            ##
-  ##                  ##     ##             ##            ##
- ##   	               ##    #################    ##################
+	focus = {
+		id = ITA_invite_CHI_diplomat
+		icon = GFX_focus_chi_cooperation_with_the_nationalists
 
+		relative_position_id = ITA_foreign_affairs
+		x = 33
+		y = 3
 
+		allow_branch = {
+			has_country_flag = IPUnion_country_event.67.a.flag
+			is_ai = no
+		}
 
+		cost = 5
 
+		available = {
+			CHI = {
+				has_opinion = {
+					target = ITA
+					value > 49
+				}
+			}
+		}
+
+		completion_reward = {
+			CHI = {
+				country_event = {
+					id = IPUnion_country_event.68
+					hours = 12
+					random_hours = 24
+				}
+			}
+			custom_effect_tooltip = if_they_accept
+			custom_effect_tooltip = unlock_follow_up_national_focus
+		}
+	}
+
+	focus = {
+		id = ITA_defense_cooperation_with_CHI
+		relative_position_id = ITA_invite_CHI_diplomat
+		x = -5
+		y = 1
+		icon = GFX_focus_GER_demonstration_of_military_achievements
+
+		prerequisite = {
+			focus = ITA_invite_CHI_diplomat
+		}
+
+		cost = 5
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ITA_defense_cooperation_with_CHI_trigger_tt
+				has_global_flag = IPUnion_country_event.68.a.flag
+			}
+		}
+
+		completion_reward = {	
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				CHI = {
+					add_equipment_subsidy = {
+						cic = 500
+						equipment_type = infantry_equipment
+						seller_tags = { ITA }
+					}
+					add_equipment_subsidy = {
+						cic = 500
+						equipment_type = artillery_equipment
+						seller_tags = { ITA }
+					}
+					add_equipment_subsidy = {
+						cic = 500
+						equipment_type = train_equipment
+						seller_tags = { ITA }
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_economy_cooperation_with_CHI
+		relative_position_id = ITA_invite_CHI_diplomat
+		icon = GFX_focus_ITA_subjugate_chinese_economy
+		x = 5
+		y = 1
+
+		prerequisite = { focus = ITA_invite_CHI_diplomat }
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ITA_defense_cooperation_with_CHI_trigger_tt
+				has_global_flag = IPUnion_country_event.68.a.flag
+			}
+		}
+		
+		cost = 5
+
+		completion_reward = {
+			CHI = {
+				country_event = {
+					id = IPUnion_country_event.71
+					hours = 15
+					random_hours = 22
+				}
+				custom_effect_tooltip = needs_approval
+			}
+			effect_tooltip = {
+				add_ideas = idea_ITA_CHI_economy_cooperation_organization
+			}
+		}
+	}
 
 }

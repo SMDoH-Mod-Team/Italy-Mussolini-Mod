@@ -1,0 +1,12 @@
+CHI_savoia_marchetti_organization = {
+	#include = generic_multi_role_aircraft_organization
+	icon = GFX_idea_savoia_marchetti
+	
+	allowed = {	
+		tag = CHI 
+	}
+	
+	available = {
+		always = yes
+	}
+}

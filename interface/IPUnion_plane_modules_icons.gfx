@@ -1,0 +1,7 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_EMI_reserved_welding_point"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/airplane_medium_bomb_bay_icon.dds"
+		legacy_lazy_load = no
+	}
+}

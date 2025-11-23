@@ -16,7 +16,7 @@ guiTypes = {
 
 		iconType = {
 			name = "SE_italian_great_revolution"
-			spriteType = "GFX_SE_fra_national_syndicalist"
+			spriteType = "GFX_SE_italian_revolution"
 			position = { x=38 y = 55 }
 		}
 		################################################################

@@ -922,7 +922,7 @@
 				}
 				add_ideas = AOI_trade_trust_AOI
 				add_autonomy_score = { 
-					value = 100
+					value = -100
 					localization = AOI_trade_trust
 				}
 			}

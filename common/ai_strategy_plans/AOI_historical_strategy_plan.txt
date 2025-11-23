@@ -25,8 +25,34 @@ AOI_historical = {
 		AOI_weapon_repair_workshops
 		AOI_talent_recruitment
 		AOI_the_horn_of_africa
+		AOI_independent_ruling_party
 		AOI_ethiopia_first
 		AOI_contract_the_fiat_ansaldo
+		AOI_recognize_the_ethiopian_orthodox_church
+		AOI_regional_governor
+		AOI_africa_of_italian_central_bank
+		AOI_literacy_campaign
+		AOI_echo_of_addis_ababa
+
+		AOI_politics_reform
+		AOI_guided_democracy
+		AOI_stupid_its_economy
+
+		AOI_national_common_language
+		AOI_national_common_region
+		AOI_national_common_economy_life
+		AOI_national_common_culture
+
+		AOI_civic_awareness
+		AOI_opposition_party
+		AOI_another_50_percent
+
+		AOI_right_of_assembly
+		AOI_right_of_association
+		AOI_right_of_protest
+		AOI_right_of_speech
+		AOI_second_class_citizen
+		#AOI_fellow_citizens_in_deep_trouble
 	}
 
 	research = {
