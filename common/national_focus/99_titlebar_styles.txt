@@ -36,7 +36,17 @@ style = {
 	name = china_ITA_CHI_focus_style
 
 	unavailable = GFX_focus_unavailable_joint_ITA_CHI
+	#unavailable = GFX_focus_unavailable_joint_ITA_AOI
 	completed = GFX_focus_completed_joint_ITA_CHI
 	available = GFX_focus_can_start_joint_ITA_CHI
 	current = GFX_focus_current_joint_ITA_CHI
+}
+
+style = {
+	name = china_CHI_ITA_focus_style
+
+	unavailable = GFX_focus_unavailable_joint_CHI
+	completed = GFX_focus_completed_joint_CHI
+	available = GFX_focus_can_start_joint_CHI
+	current = GFX_focus_current_joint_CHI
 }

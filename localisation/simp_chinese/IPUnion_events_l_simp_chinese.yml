@@ -265,9 +265,20 @@
  IPUnion_country_event.76.t: "第一批交付"
  IPUnion_country_event.76.d: "$savoia_marchetti$公司于今日送来了第一批两架S.M.81型飞机机身，其上包含了发动机，它们将在我们的军工厂中进行最后的组装。"
  IPUnion_country_event.76.a: "很好"
- IPUnion_country_event.76.a.tt: "§Y别忘了拉生产线改装成正常的飞机哦§!\n（需要你手动把§YSavoia-Marchetti S.81 Body§!退役）"
- 
- 
+ IPUnion_country_event.76.a.tt: "\n§Y别忘了拉生产线改装成正常的飞机哦§!\n\n（需要你手动把§YSavoia-Marchetti S.81 Body§!退役）"
+ IPUnion_country_event.77.t: "第二批交付"
+ IPUnion_country_event.77.d: "意大利送来了第二批共四家S.M.81飞机机身"
+ IPUnion_country_event.77.a: "很好"
+ IPUnion_country_event.78.t: "[CHI.GetName]请求我们加快交付进度"
+ IPUnion_country_event.78.d: "当然，我们也可以拒绝这个请求"
+ IPUnion_country_event.78.a: "没问题"
+ IPUnion_country_event.78.b: "但我们现在产能不够"
+ IPUnion_country_event.79.t: "[ITA.GetName]同意了加快交付"
+ IPUnion_country_event.79.d: "[ITA.GetName]刚刚发来电报，说明同意了我们的请求"
+ IPUnion_country_event.79.a: "不赖"
+ IPUnion_country_event.80.t: "[ITA.GetName]拒绝了加快交付"
+ IPUnion_country_event.80.d: "[ITA.GetName]刚刚发来电报，说明拒绝了我们的请求"
+ IPUnion_country_event.80.a: "那只能等了"
  
 
 

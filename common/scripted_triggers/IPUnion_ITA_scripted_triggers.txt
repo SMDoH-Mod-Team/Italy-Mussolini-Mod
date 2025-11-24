@@ -1,0 +1,7 @@
+ITA_CHI_trigger = {
+	exists = yes
+	OR = {
+		original_tag = ITA
+		original_tag = CHI
+	}
+}

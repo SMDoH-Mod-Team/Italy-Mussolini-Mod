@@ -267,7 +267,6 @@ spriteTypes = {
 	
 		legacy_lazy_load = no
 	}
-}
 
 	#ITA_CHI
 
@@ -316,7 +315,7 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_focus_completed_joint_ITA_CHI"
-		texturefile = "gfx/interface/focusview/titlebar/focus_completed_joint_ITA_CHI_bg.png"
+		texturefile = "gfx/interface/focusview/titlebar/focus_complete_joint_ITA_CHI_bg.png"
 		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
 #		effectFile = "gfx/FX/buttonstate.lua"		
 		animation = {
@@ -335,3 +334,4 @@ spriteTypes = {
 	
 		legacy_lazy_load = no
 	}
+}

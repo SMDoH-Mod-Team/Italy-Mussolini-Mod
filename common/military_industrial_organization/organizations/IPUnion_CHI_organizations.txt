@@ -10,3 +10,25 @@ CHI_savoia_marchetti_organization = {
 		always = yes
 	}
 }
+CHI_fiat_organization = {
+	include = generic_tank_organization
+	icon = GFX_idea_fiat
+	
+	allowed = {	
+		original_tag = ITA
+	}
+
+	visible = {
+		
+	}
+	
+	available = {
+		# When in a Foreign MIO, countries need to be at peace with original country
+		if = {
+			limit = {
+				original_tag = CHI
+			}
+			has_completed_focus = CHI_contract_with_fiat
+		}
+	}
+}

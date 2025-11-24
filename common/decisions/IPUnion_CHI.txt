@@ -1,0 +1,35 @@
+china_italy_cooperation = {
+	CHI_second_delivery = {
+		activation = {
+			has_country_flag = IPUnion_country_event.76.flag
+		}
+		days_mission_timeout = 90
+		available = {
+			has_country_flag = ITA_accept_urge_delivery
+		}
+
+		is_good = yes
+
+		complete_effect = {
+			country_event = {
+				id = IPUnion_country_event.77
+				hours = 15
+				random_hours = 10
+			}
+			hidden_effect = {
+				set_country_flag = CHI_delivered_flag
+			}
+		}
+
+		timeout_effect = {
+			country_event = {
+				id = IPUnion_country_event.77
+				hours = 15
+				random_hours = 10
+			}
+			hidden_effect = {
+				set_country_flag = CHI_delivered_flag
+			}
+		}
+	}
+}

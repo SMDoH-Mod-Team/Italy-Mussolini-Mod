@@ -97,3 +97,7 @@
  has_ITA_interfere_ger_anschluss_tt: "已经干涉"
  CHI_SINAW_focus_templates_tt: "\n当§Y$basic_medium_airframe$§!科技研发完成时：\n"
  CHI_SINAW_primacy_tt: "解锁一条中意合作国策树"
+ CHI_delivered_flag: "已交付"
+ ITA_accept_urge_delivery: "意大利同意加快交付"
+ available_mission_second_deilvery: "完成任务：§Y第二批交付§!"
+ available_mio_fiat: "§G可作为§!§Y设计商§!：§Y菲亚特§!"

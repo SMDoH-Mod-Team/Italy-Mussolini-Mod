@@ -2478,6 +2478,8 @@ country_event = {
 			variant_name = "Savoia-Marchetti S.81 Body"
 		}
 
+		custom_effect_tooltip = generic_skip_one_line_tt
+
 		create_equipment_variant = {
 			name = "Savoia-Marchetti S.81"
 			type = medium_plane_airframe_1
@@ -2494,6 +2496,100 @@ country_event = {
 			icon = "GFX_ITA_early_bomber_medium"
 		}
 		custom_effect_tooltip = IPUnion_country_event.76.a.tt
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		activate_mission = CHI_second_delivery
+
+		hidden_effect = {
+			set_country_flag = IPUnion_country_event.76.flag
+		}
+	}
+}
+
+country_event = {
+	id = IPUnion_country_event.77
+	
+	title = IPUnion_country_event.77.t
+	desc = IPUnion_country_event.77.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_gre_george_ii_victorious
+	option = {
+		name = IPUnion_country_event.77.a
+		#add_political_power = 15
+		add_equipment_to_stockpile = {
+			type = medium_plane_airframe_1
+			amount = 4
+			#producer = CHI
+			variant_name = "Savoia-Marchetti S.81 Body"
+		}
+		custom_effect_tooltip = IPUnion_country_event.76.a.tt
+	}
+}
+
+country_event = {
+	id = IPUnion_country_event.78
+	
+	title = IPUnion_country_event.78.t
+	desc = IPUnion_country_event.78.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_gre_george_ii_victorious
+	option = {
+		name = IPUnion_country_event.78.a
+		#add_political_power = 15
+		add_timed_idea = {
+			idea = idea_ITA_ugry_delivery
+			days = 60
+		}
+		CHI = {
+			country_event = IPUnion_country_event.79
+		}
+	}
+	option = {
+		name = IPUnion_country_event.78.b
+		CHI = {
+			country_event = IPUnion_country_event.80
+		}
+	}
+}
+
+country_event = {
+	id = IPUnion_country_event.79
+	
+	title = IPUnion_country_event.79.t
+	desc = IPUnion_country_event.79.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_gre_george_ii_victorious
+	option = {
+		name = IPUnion_country_event.79.a
+		hidden_effect = {
+			set_country_flag = ITA_accept_urge_delivery
+		}
+		#add_political_power = 15
+		#custom_effect_tooltip = CHI_SINAW_primacy_tt
+		#@mark_focus_tree_layout_dirty = yes
+	}
+}
+
+country_event = {
+	id = IPUnion_country_event.80
+	
+	title = IPUnion_country_event.80.t
+	desc = IPUnion_country_event.80.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_gre_george_ii_victorious
+	option = {
+		name = IPUnion_country_event.80.a
+		hidden_effect = {
+			set_country_flag = ITA_accept_urge_delivery
+		}
+		#add_political_power = 15
+		#custom_effect_tooltip = CHI_SINAW_primacy_tt
+		#@mark_focus_tree_layout_dirty = yes
 	}
 }
 

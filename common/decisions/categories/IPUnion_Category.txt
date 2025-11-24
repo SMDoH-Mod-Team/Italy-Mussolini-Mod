@@ -155,3 +155,10 @@ ITA_ger_anschluss = {
 		
 	}
 }
+china_italy_cooperation = {
+	icon = x
+	picture = x
+	allowed = {
+		
+	}
+}

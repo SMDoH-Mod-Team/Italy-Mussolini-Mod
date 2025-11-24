@@ -184,3 +184,11 @@ AOI_national_common_region_modifier = { #STATE MODIFIER
 	production_speed_infrastructure_factor = 0.20
 	production_speed_railway_factor = 0.10
 }
+
+CHI_china_italy_industrial_commission_modifier = {
+	icon = GFX_idea_generic_exploit_mines
+
+	consumer_goods_factor = CHI_industrial_commission_consumer_goods_factor
+	production_speed_industrial_complex_factor = CHI_industrial_commission_production_speed_industrial_complex_factor
+	industrial_capacity_factory = CHI_industrial_commission_industrial_capacity_factory
+} 

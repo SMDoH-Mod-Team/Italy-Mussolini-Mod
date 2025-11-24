@@ -19,3 +19,6 @@
  lack_of_an_executive_leader_desc: "该地区缺乏行政长官，处于混乱的无政府状态"
  AOI_the_echo_of_addis_ababa_modifier: "亚的斯亚贝巴的回声"
  AOI_national_common_region_modifier: "共同地域"
+ CHI_china_italy_industrial_commission_modifier: "中意工业委员会"
+ CHI_china_italy_industrial_commission_modifier_desc: "为进一步加深合作，在中意飞机制造厂的契机下，[CHI.GetName]和[ITA.GetName]建立了一个跨国工业委员会，用来协调两国在工业层面的合作"
+ modify_CHI_china_italy_industrial_commission_modifier_tt: "§Y$CHI_china_italy_industrial_commission_modifier$§!追加效果："

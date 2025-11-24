@@ -86,30 +86,713 @@
 		}
 
 		completion_reward = {
-			set_technology = {
-				iw_medium_airframe = 1
-				basic_medium_airframe = 1
+			if = {
+				limit = {
+					original_tag = CHI
+				}
+
+				set_technology = {
+					iw_medium_airframe = 1
+					basic_medium_airframe = 1
+				}
+
+				custom_effect_tooltip = CHI_SINAW_focus_templates_tt
+
+				ITA_china_italy_airplane_project_effect_test = yes
+
+				hidden_effect = {
+					country_event = {
+						id = IPUnion_country_event.76
+						hours = 72
+						random_hours = 24
+					}
+				}
+
+				effect_tooltip = {
+					add_equipment_to_stockpile = {
+						type = medium_plane_airframe_1
+						amount = 2
+						#producer = CHI
+						variant_name = "Savoia-Marchetti S.81 Body"
+					}
+				}
 			}
 
-			custom_effect_tooltip = CHI_SINAW_focus_templates_tt
+			else_if = {
+				limit = {
+					original_tag = ITA
+				}
 
-			ITA_china_italy_airplane_project_effect_test = yes
+				effect_tooltip = {
+					CHI = {
+						set_technology = {
+							iw_medium_airframe = 1
+							basic_medium_airframe = 1
+						}
+
+						custom_effect_tooltip = CHI_SINAW_focus_templates_tt
+
+						ITA_china_italy_airplane_project_effect_test = yes
+
+						hidden_effect = {
+							country_event = {
+								id = IPUnion_country_event.76
+								hours = 72
+								random_hours = 24
+							}
+						}
+
+						effect_tooltip = {
+							add_equipment_to_stockpile = {
+								type = medium_plane_airframe_1
+								amount = 2
+								#producer = CHI
+								variant_name = "Savoia-Marchetti S.81 Body"
+							}
+						}
+					}
+				}
+			}
 
 			hidden_effect = {
-				country_event = {
-					id = IPUnion_country_event.76
-					hours = 72
-					random_hours = 24
+				ITA = {
+					unlock_national_focus = CHI_SINAW_focus
+					#set_variable = { CHI_industrial_commission_consumer_goods_factor = -0.05 }
+					#set_variable = { CHI_industrial_commission_production_speed_industrial_complex_factor = 0.05 }
+				}
+				#set_variable = { CHI_industrial_commission_consumer_goods_factor = -0.05 }
+				#set_variable = { CHI_industrial_commission_production_speed_industrial_complex_factor = 0.05 }
+			}
+		}
+	}
+
+	shared_focus = {
+		id = CHI_urge_delivery
+		icon = GFX_focus_generic_copy_plane_designs
+		text_icon = china_CHI_focus_style
+		relative_position_id = CHI_SINAW_focus
+		dynamic = yes
+		x = -5
+		y = 1
+		available = {
+			NOT = {
+				has_country_flag = CHI_delivered_flag
+			}
+			original_tag = CHI
+		}
+		prerequisite = { focus = CHI_SINAW_focus }
+
+		cost = 3
+
+		completion_reward = {
+			if = {
+				limit = {
+					original_tag = CHI
+				}
+				ITA = {
+					country_event = {
+						id = IPUnion_country_event.78
+						hours = 22
+						random_hours = 24
+					}
+				}
+				custom_effect_tooltip = if_they_accept
+				effect_tooltip = {
+					ITA = {
+						add_timed_idea = {
+							idea = idea_ITA_ugry_delivery
+							days = 60
+						}
+					}
+					custom_effect_tooltip = available_mission_second_deilvery
+				}
+			}
+			else_if = {
+				limit = {
+					original_tag = ITA
+				}
+				effect_tooltip = {
+					CHI = {
+						ITA = {
+							country_event = {
+								id = IPUnion_country_event.78
+								hours = 22
+								random_hours = 24
+							}
+						}
+						custom_effect_tooltip = if_they_accept
+						effect_tooltip = {
+							ITA = {
+								add_timed_idea = {
+									idea = idea_ITA_ugry_delivery
+									days = 60
+								}
+							}
+							custom_effect_tooltip = available_mission_second_deilvery
+						}
+					}
 				}
 			}
 
-			effect_tooltip = {
-				add_equipment_to_stockpile = {
-					type = medium_plane_airframe_1
-   					amount = 2
-					#producer = CHI
-					variant_name = "Savoia-Marchetti S.81 Body"
+			hidden_effect = {
+				ITA = {
+					unlock_national_focus = CHI_urge_delivery
 				}
+			}
+		}
+
+	}
+
+	shared_focus = {
+		id = CHI_SINAW_expand_the_factory
+		icon = GFX_focus_generic_modernize_industry
+		relative_position_id = CHI_SINAW_focus
+		text_icon = china_CHI_focus_style
+		dynamic = yes
+		x = -3
+		y = 1
+		prerequisite = { focus = CHI_SINAW_focus }
+
+		available = {
+			original_tag = CHI
+		}
+
+		cost = 2
+
+		completion_reward = {
+			if = {
+				limit = {
+					original_tag = CHI
+				}
+				600 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					original_tag = ITA
+				}
+				effect_tooltip = {
+					CHI = {
+						600 = {
+							add_building_construction = {
+								type = infrastructure
+								level = 2
+								instant_build = yes
+							}
+						}
+					}
+				}
+			}
+			hidden_effect = {
+				ITA = {
+					unlock_national_focus = CHI_SINAW_expand_the_factory
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = CHI_SINAW_expand_airfield
+		icon = GFX_focus_generic_air_bases
+		relative_position_id = CHI_SINAW_focus
+		text_icon = china_CHI_focus_style
+		dynamic = yes
+		x = -1
+		y = 1
+
+		prerequisite = { focus = CHI_SINAW_focus }
+
+		available = {
+			original_tag = CHI
+		}
+
+		cost = 2
+
+		completion_reward = {
+			if = {
+				limit = {
+					original_tag = CHI
+				}
+				600 = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					original_tag = CHI
+				}
+				effect_tooltip = {
+					CHI = {
+						600 = {
+							add_building_construction = {
+								type = air_base
+								level = 2
+								instant_build = yes
+							}
+						}
+					}
+				}
+			}
+
+			hidden_effect = {
+				ITA = {
+					unlock_national_focus = CHI_SINAW_expand_airfield
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = CHI_SINAW_expand_arm_factory
+		icon = GFX_focus_HUN_establish_the_mavag_aircraft_factory
+		relative_position_id = CHI_SINAW_focus
+		text_icon = china_CHI_focus_style
+		dynamic = yes
+		x = 1
+		y = 1
+
+		prerequisite = { focus = CHI_SINAW_focus }
+
+		cost = 2
+
+		available = {
+			original_tag = CHI
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					original_tag = CHI
+				}
+				600 = {
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					original_tag = ITA
+				}
+				effect_tooltip = {
+					CHI = {
+						600 = {
+							add_building_construction = {
+								type = arms_factory
+								level = 2
+								instant_build = yes
+							}
+						}
+					}
+				}
+			}
+
+			hidden_effect = {
+				ITA = {
+					unlock_national_focus = CHI_SINAW_expand_arm_factory
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = CHI_SINAW_local_worker
+		icon = GFX_focus_generic_worker_administration
+
+		dynamic = yes
+
+		text_icon = china_CHI_focus_style
+
+		mutually_exclusive = {
+			focus = CHI_SINAW_italian_worker
+		}
+
+		available = {
+			original_tag = CHI
+		}
+
+		relative_position_id = CHI_SINAW_focus
+		x = 3
+		y = 1
+
+		prerequisite = { focus = CHI_SINAW_focus }
+
+		cost = 2
+
+		completion_reward = {
+			
+			if = {
+				limit = {
+					original_tag = CHI
+				}
+				add_timed_idea = {
+					idea = CHI_cultivate_local_workers
+					days = 1080
+				}
+				add_ideas = CHI_local_workers
+				
+			}
+			else_if = {
+				limit = {
+					original_tag = ITA
+				}
+				effect_tooltip = {
+					CHI = {
+						add_timed_idea = {
+							idea = CHI_cultivate_local_workers
+							days = 1080
+						}
+						add_ideas = CHI_local_workers
+					}
+				}
+			}
+
+			hidden_effect = {
+				ITA = {
+					unlock_national_focus = CHI_SINAW_local_worker
+				}
+			}
+		}
+	}
+
+	joint_focus = {
+		id = CHI_SINAW_italian_worker
+		dynamic = yes
+		icon = GFX_focus_generic_worker_administration
+		relative_position_id = CHI_SINAW_focus
+		mutually_exclusive = {
+			focus = CHI_SINAW_local_worker
+		}
+		x = 5
+		y = 1
+
+		prerequisite = { focus = CHI_SINAW_focus }
+
+		cost = 2
+
+		complete_effect = {
+		}
+
+		joint_trigger = ITA_CHI_trigger
+
+		text_icon = china_ITA_CHI_focus_style
+
+		completion_reward_joint_originator = {
+			if = {
+				limit = {
+					original_tag = CHI
+				}
+
+				add_timed_idea = {
+					idea = CHI_italian_workers
+					days = 720
+				}
+			}
+
+			if = {
+				limit = {
+					original_tag = ITA
+				}
+				add_political_power = 50
+			}
+		}
+
+		completion_reward_joint_member = {
+			if = {
+				limit = {
+					original_tag = CHI
+				}
+
+				add_timed_idea = {
+					idea = CHI_italian_workers
+					days = 720
+				}
+			}
+
+			if = {
+				limit = {
+					original_tag = ITA
+				}
+				add_political_power = 50
+			}
+		}
+	}
+
+	joint_focus = {
+		id = CHI_china_italy_industrial_commission
+		icon = GFX_CHI_china_italy_industry_commission
+		dynamic = yes
+		icon = GFX_focus_generic_worker_administration
+		relative_position_id = CHI_SINAW_focus
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = CHI_SINAW_focus
+		}
+
+		cost = 4
+
+		joint_trigger = ITA_CHI_trigger
+
+		text_icon = china_ITA_CHI_focus_style
+
+		completion_reward_joint_originator = {
+			if = {
+				limit = {
+					original_tag = CHI
+				}
+				add_dynamic_modifier = {
+					modifier = CHI_china_italy_industrial_commission_modifier
+				}
+			}
+			
+			if = {
+				limit = {
+					original_tag = ITA
+				}
+				add_dynamic_modifier = {
+					modifier = CHI_china_italy_industrial_commission_modifier
+				}
+			}
+		}
+
+		completion_reward_joint_member = {
+			if = {
+				limit = {
+					original_tag = CHI
+				}
+				add_dynamic_modifier = {
+					modifier = CHI_china_italy_industrial_commission_modifier
+				}
+			}
+			
+			if = {
+				limit = {
+					original_tag = ITA
+				}
+				add_dynamic_modifier = {
+					modifier = CHI_china_italy_industrial_commission_modifier
+				}
+			}
+		}
+	}
+
+	joint_focus = {
+		id = CHI_introduction_italy_engineering_standards
+		icon = GFX_focus_PER_feat_of_engineering
+		dynamic = yes
+		relative_position_id = CHI_china_italy_industrial_commission
+		x = -5
+		y = 1
+
+		available = {
+			original_tag = CHI
+		}
+
+		joint_trigger = ITA_CHI_trigger
+
+		cost = 2
+		prerequisite = { focus = CHI_china_italy_industrial_commission focus = CHI_italian_development_loans }
+
+		text_icon = china_CHI_focus_style
+
+		completion_reward = {
+		}
+
+		completion_reward_joint_originator = {
+			if = {
+				limit = {
+					original_tag = CHI
+				}
+				custom_effect_tooltip = modify_CHI_china_italy_industrial_commission_modifier_tt
+				add_to_variable = { CHI_industrial_commission_industrial_capacity_factory = 0.05 tooltip = industrial_capacity_factory_tt }
+			}
+			if = {
+				limit = {
+					original_tag = ITA
+				}
+				custom_effect_tooltip = modify_CHI_china_italy_industrial_commission_modifier_tt
+				add_to_variable = { CHI_industrial_commission_consumer_goods_factor = -0.05 tooltip = consumer_goods_factor_tt }
+			}
+		}
+
+		completion_reward_joint_member = {
+			if = {
+				limit = {
+					original_tag = CHI
+				}
+				custom_effect_tooltip = modify_CHI_china_italy_industrial_commission_modifier_tt
+				add_to_variable = { CHI_industrial_commission_industrial_capacity_factory = 0.05 tooltip = industrial_capacity_factory_tt }
+			}
+			if = {
+				limit = {
+					original_tag = ITA
+				}
+				custom_effect_tooltip = modify_CHI_china_italy_industrial_commission_modifier_tt
+				add_to_variable = { CHI_industrial_commission_consumer_goods_factor = -0.05 tooltip = consumer_goods_factor_tt }
+			}
+		}
+
+		#hidden_effect = {
+		#	ITA = {
+		#		unlock_national_focus = CHI_introduction_italy_engineering_standards
+		#	}
+		#}
+	}
+
+	joint_focus = {
+		id = CHI_china_italy_cooperation_technical_college
+		dynamic = yes
+		icon = GFX_focus_IRQ_baghdad_colleges_of_engineering_and_education_alt
+		relative_position_id = CHI_china_italy_industrial_commission
+		x = -2
+		y = 1
+		cost = 6
+		prerequisite = { focus = CHI_china_italy_industrial_commission }
+		text_icon = china_ITA_CHI_focus_style
+		joint_trigger = ITA_CHI_trigger
+
+		completion_reward_joint_originator = {
+			if = {
+				limit = {
+					original_tag = CHI
+				}
+				add_research_slot = 1
+			}
+			if = {
+				limit = {
+					original_tag = ITA
+				}
+				add_political_power = 50
+			}
+		}
+
+		completion_reward_joint_member = {
+			if = {
+				limit = {
+					original_tag = CHI
+				}
+				add_research_slot = 1
+			}
+			if = {
+				limit = {
+					original_tag = ITA
+				}
+				add_political_power = 50
+			}
+		}
+	}
+
+	shared_focus = {
+		id = CHI_italian_development_loans
+		icon = GFX_focus_CONGO_gold_and_diamonds
+		dynamic = yes
+		relative_position_id = CHI_urge_delivery
+		x = -3
+		y = 1
+		available = {
+			original_tag = ITA
+		}
+
+		text_icon = AOI_ITA_focus_style
+
+		cost = 5
+
+		completion_reward = {
+			if = {
+				limit = {
+					original_tag = ITA
+				}
+				random_state = {
+					limit = {
+						is_owned_and_controlled_by = CHI
+						is_core_of = CHI
+					}
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					original_tag = CHI
+				}
+				effect_tooltip = {
+					random_state = {
+						limit = {
+							is_owned_and_controlled_by = CHI
+							is_core_of = CHI
+						}
+						add_building_construction = {
+							type = industrial_complex
+							level = 2
+							instant_build = yes
+						}
+					}	
+				}
+			}
+		}
+		hidden_effect = {
+			CHI = {
+				unlock_national_focus = CHI_italian_development_loans
+			}
+		}
+	}
+
+	shared_focus = {
+		id = CHI_contract_with_fiat
+		dynamic = yes
+		icon = GFX_focus_generic_fiat
+		relative_position_id = CHI_china_italy_industrial_commission
+		x = 0
+		y = 1
+		prerequisite = { focus = CHI_china_italy_industrial_commission }
+		available = {
+			original_tag = CHI
+		}
+		text_icon = china_CHI_focus_style
+		cost = 2
+		completion_reward = {
+			if = {
+				limit = {
+					original_tag = CHI
+				}
+				custom_effect_tooltip = available_industrial_concern
+				show_ideas_tooltip = CHI_fiat
+				custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = available_mio_fiat
+			}
+			else_if = {
+				limit = {
+					original_tag = ITA
+				}
+				effect_tooltip = {
+					CHI = {
+						custom_effect_tooltip = available_industrial_concern
+						show_ideas_tooltip = CHI_fiat
+						custom_effect_tooltip = generic_skip_one_line_tt
+						custom_effect_tooltip = available_mio_fiat
+					}
+				}
+			}
+		}
+
+		hidden_effect = {
+			ITA = {
+				unlock_national_focus = CHI_contract_with_fiat
 			}
 		}
 	}
