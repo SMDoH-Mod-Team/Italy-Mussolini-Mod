@@ -267,7 +267,7 @@
  IPUnion_country_event.76.a: "很好"
  IPUnion_country_event.76.a.tt: "\n§Y别忘了拉生产线改装成正常的飞机哦§!\n\n（需要你手动把§YSavoia-Marchetti S.81 Body§!退役）"
  IPUnion_country_event.77.t: "第二批交付"
- IPUnion_country_event.77.d: "意大利送来了第二批共四家S.M.81飞机机身"
+ IPUnion_country_event.77.d: "意大利送来了第二批共四架S.M.81飞机机身"
  IPUnion_country_event.77.a: "很好"
  IPUnion_country_event.78.t: "[CHI.GetName]请求我们加快交付进度"
  IPUnion_country_event.78.d: "当然，我们也可以拒绝这个请求"
@@ -279,6 +279,16 @@
  IPUnion_country_event.80.t: "[ITA.GetName]拒绝了加快交付"
  IPUnion_country_event.80.d: "[ITA.GetName]刚刚发来电报，说明拒绝了我们的请求"
  IPUnion_country_event.80.a: "那只能等了"
+ IPUnion_country_event.81.t: "[CHI.GetName]接触总参谋部"
+ IPUnion_country_event.81.d: "[CHI.GetLeader]正式发来请求，被[JAP.GetName]虎视眈眈的中华民国正急切寻求军队改革的援手。\n\n具体而言，南京方面希望罗马派遣高级军官代表团，全面重组并整训其陆军部队。根据提议，意大利将领将直接出任土军关键指挥职位，甚至坐镇南京核心要职。\n\n这一请托为我们提供了绝佳机遇，能在远东门户之地大幅扩张影响力。但此举必将引发国际关注。尤其对日本而言，远东区域攸关其核心利益，恐将视我方介入为严重挑衅。\n\n当下我们必须抉择：是否主导中华民国军队改革，并甘愿承受由此引发的外交风暴？"
+ IPUnion_country_event.81.a: "没问题，我们同意"
+ IPUnion_country_event.81.b: "我们的军官应该留在国内"
+ IPUnion_country_event.82.t: "[FROM.GetName]拒绝我方请求"
+ IPUnion_country_event.82.d: "来自罗马的回复已经抵达——却并非我们所期望的结果。\n\n尽管我们正式请求意大利协助我军的改革与现代化，但罗马方面拒绝向南京派遣军事顾问团。尽管回函措辞礼貌，但其传递的信息十分明确：意大利不愿为我国的战略未来而激化与日本帝国的关系。\n\n这一决定使中华民国军队再度面临军事上的孤立与政治上的削弱。"
+ IPUnion_country_event.82.a: "该死的"
+ IPUnion_country_event.83.a: "[FROM.GetName]接受我方请求"
+ IPUnion_country_event.83.t: "罗马方面传来令人振奋的消息。意大利政府已正式接受我国请求，将派遣一支军事顾问团前来协助我军改革。顾问团由经验丰富的将军率领，负责重组我军核心部队，并将我们的训练与指挥体系提升至欧洲现代水准。值得注意的是，他还将直接接管驻扎在南京附近的一支部队。\n\n对蒋介石而言，这是一次重大的外交与军事胜利。然而，这一举动势必引起北方邻国的关注。日本帝国视我们为其野心的关键所在，一名意大利将领坐镇我方首都，恐将激起其强烈不满。\n\n我们必须谨慎行事——但重振雄风的希望，或许正由此开启。"
+ IPUnion_country_event.83.a: "太好了!"
  
 
 

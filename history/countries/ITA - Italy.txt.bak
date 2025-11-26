@@ -433,10 +433,6 @@ set_technology = {
 	basic_train = 1
 	
 }
-
-set_grand_doctrine = grand_battleplan
-set_grand_doctrine = new_fleet_in_being
-
 if = {
 	limit = {
 		has_dlc = "La Resistance"
@@ -534,7 +530,6 @@ if = {
 			early_bomber = 1
 			naval_bomber1 = 1
 			CAS1 = 1
-			early_transport_plane = 1
 		}
 	}
 }
@@ -570,9 +565,7 @@ if = {
 			has_dlc = "Man the Guns"
 		}
 		remove_ideas = MTG_naval_treaty_adherent
-		remove_naval_treaty_effect = yes
 	}
-
 	#adding ministers
 	add_ideas = {
 		ITA_giovanni_marinelli
@@ -596,7 +589,7 @@ if = {
 	complete_national_focus = ITA_triumph_in_africa_bba
 	complete_national_focus = ITA_ministry_of_italian_africa #35
 	complete_national_focus = ITA_foreign_affairs #35
-	unlock_national_focus = ITA_the_new_emperor_of_ethiopia #35
+	complete_national_focus = ITA_the_new_emperor_of_ethiopia #35
 	unlock_national_focus = ITA_devaluate_the_lire #35
 	unlock_national_focus = ITA_topple_amhara_rulers #35
 	
@@ -628,22 +621,28 @@ if = {
 	complete_national_focus = ITA_expand_naval_facilities #35
 	complete_national_focus = ITA_stockpile_fuel #35
 
-	complete_special_project = {
-		project = sp:sp_naval_midget_submarine
-		scientist = ITA_filippo_bonfiglietti
-		state = 158
-	}
-
-	# Effects from The New Emperor of Ethiopia
-
-	ITA_vittorio_emanuele_iii = { 
-		add_country_leader_trait = emperor_of_ethiopia
-	}
-
-	add_popularity = {
-		ideology = neutrality
-		popularity = 0.05
-	}
+	# Effects from Topple Amhara Rulers -> No point, it just triggers errors cause resistance stuff is not set yet
+	#835 = { #HARARGHE
+	#	add_compliance = 10
+	#}
+	#836 = { #BALE
+	#	add_compliance = 10
+	#}
+	#837 = { #SIDAMO
+	#	add_compliance = 10
+	#}
+	#838 = { #ILLUBABOR
+	#	add_compliance = 10
+	#}
+	#every_controlled_state = { #Reduce resistance in all future states affected by the event chain (Somali cores in ETH are excluded)
+	#	limit = {
+	#		is_core_of = ETH
+	#		is_fully_controlled_by = ITA
+	#		NOT = { state = 835 } #HARARGHE
+	#		NOT = { state = 836 } #BALE
+	#	}
+	#	add_resistance = -5
+	#}
 
 	# Effects from Corpo di Truppe Volontarie
 	SPR = { add_opinion_modifier = { target = ITA modifier = ita_supported_spain_civil_war } }
@@ -676,11 +675,15 @@ if = {
 
 	# Effects from Albanian Occupation
 	add_named_threat = { threat = 2 name = ITA_albania_war_goal }
-	add_ideas = vittorio_emanuele_albania_ethiopia
+	swap_ideas = {
+		remove_idea = vittorio_emanuele_emperor_of_ethiopia
+		add_idea = vittorio_emanuele_albania_ethiopia
+	}
 	ITA_vittorio_emanuele_iii = { add_country_leader_trait = king_of_albania }
 
-	oob = "ITA_1939"
 
+
+	oob = "ITA_1939"
 	set_technology = {
 		interwar_artillery = 1
 		interwar_antitank = 1
@@ -689,15 +692,23 @@ if = {
 		support_weapons2 = 1
 		tech_recon = 1
 
+		#doctrines
+		grand_battle_plan = 1
+		prepared_defense = 1
+		battlefleet_concentration = 1
+		submarine_operations = 1
+		
 		#Air
-		#force_rotation = 1
-		#fighter_baiting = 1
-		#low_echelon_support = 1
-		#dispersed_fighting = 1
+		force_rotation = 1
+		fighter_baiting = 1
+		low_echelon_support = 1
+		dispersed_fighting = 1
+
 
 		#electronics
 		electronic_mechanical_engineering = 1
 		radio = 1
+		radio_detection = 1
 		mechanical_computing = 1
 		computing_machine = 1
 		basic_encryption = 1
@@ -715,21 +726,6 @@ if = {
 		concentrated_industry = 1
 		concentrated_industry2 = 1
 		concentrated_industry3 = 1
-	}
-
-set_grand_doctrine = grand_battleplan
-set_grand_doctrine = new_fleet_in_being
-set_grand_doctrine = new_operational_integrity	
-set_sub_doctrine = defensive_postures
-add_mastery = {
-    amount = 100
-    sub_doctrine = defensive_postures
-}
-	
-	complete_special_project = {
-		project = sp:sp_air_radar
-		scientist = ITA_giovanni_giorgi
-		state = 2
 	}
 
 	if = {
@@ -792,7 +788,7 @@ add_mastery = {
 			has_dlc = "Man the Guns"
 		}
 		set_technology = {
-			#improved_airplane_launcher = 1
+			improved_airplane_launcher = 1
 			
 		}
 		set_naval_oob = "ITA_1939_naval_mtg"
@@ -935,18 +931,14 @@ recruit_character = ITA_abba_jofir_doppleganger
 recruit_character = ITA_hailu_tekle_haymanot_doppleganger
 recruit_character = ITA_seyoum_mengesha_doppleganger
 
-recruit_character = ITA_robert_longhi
-recruit_character = ITA_mario_castoldi
-recruit_character = ITA_giovanni_giorgi
-recruit_character = ITA_filippo_bonfiglietti
-recruit_character = ITA_curio_bernardis
+recruit_character = AUS_friedrich_hayek
 
 
 ########################################
 ##### MISSIOLINIS - TRIGGER EVENTS #####
 ########################################
 
-### IF NOT BBA, trigger the first Missiolini from here
+### IF NOT BBA, trigger the first Missiolini from here #TODO_Manu: PLEASE CHECK IF THIS ACTUALLY WORKS (character has just been recruited)
 if = {
 	limit = {
 		NOT = { has_dlc = "By Blood Alone" }
@@ -955,7 +947,7 @@ if = {
 }
 
 ITA_benito_mussolini = { unit_leader_event = { id = BBA_italy_missiolinis.11 days = 185 random_days = 5 } } # JUN 36 - Conquer Ethiopia  - DEC 36 - (170 days)
-#ITA_benito_mussolini = { unit_leader_event = { id = BBA_italy_missiolinis.21 days = 370 random_days = 5 } } # JAN 37 - Pacify Ethiopia - DEC 39 - (720 days) #MM: This is now triggered after war with MTTH
+#ITA_benito_mussolini = { unit_leader_event = { id = BBA_italy_missiolinis.21 days = 370 random_days = 5 } } # JAN 37 - Pacify Ethiopia - DEC 39 - (720 days) #TODO_Manu: This is now triggered after war with MTTH
 ITA_benito_mussolini = { unit_leader_event = { id = BBA_italy_missiolinis.31 days = 370 random_days = 5 } } # JAN 37 - Industrialization - DEC 37 - (350 days)
 ITA_benito_mussolini = { unit_leader_event = { id = BBA_italy_missiolinis.41 days = 735 random_days = 5 } } # JAN 38 - Increase Army - DEC 38 (350 days)
 ITA_benito_mussolini = { unit_leader_event = { id = BBA_italy_missiolinis.00 days = 1105 random_days = 5 } } # JAN 39 - Random mission dispatcher (350 days) - This event auto-triggers itself every 6 months
@@ -1068,18 +1060,6 @@ if = {
 		}
 		obsolete = yes
 		icon = "GFX_ITA_early_bomber_old_medium"
-	}
-	create_equipment_variant = {
-		name = "S.72" # Savoia-Marchetti S.72, used by CHI
-		type = medium_plane_airframe_0
-		modules = {
-			fixed_main_weapon_slot = medium_bomb_bay
-			fixed_auxiliary_weapon_slot_1 = medium_bomb_bay
-			engine_type_slot = engine_1_3x
-			special_type_slot_1 = lmg_defense_turret_2x
-		}
-		obsolete = yes
-		icon = "GFX_ITA_early_bomber_medium"
 	}
 	create_equipment_variant = {
 		name = "SM.81" #

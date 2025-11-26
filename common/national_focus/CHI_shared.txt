@@ -116,6 +116,10 @@
 						variant_name = "Savoia-Marchetti S.81 Body"
 					}
 				}
+
+				mio:CHI_sinaw_organization_sea = {
+					add_mio_funds = 500
+				}
 			}
 
 			else_if = {
@@ -483,6 +487,13 @@
 
 		complete_effect = {
 		}
+		
+		available = {
+			OR = {
+				original_tag = CHI
+				original_tag = ITA
+			}
+		}
 
 		joint_trigger = ITA_CHI_trigger
 
@@ -593,7 +604,7 @@
 		icon = GFX_focus_PER_feat_of_engineering
 		dynamic = yes
 		relative_position_id = CHI_china_italy_industrial_commission
-		x = -5
+		x = -4
 		y = 1
 
 		available = {
@@ -705,6 +716,12 @@
 			original_tag = ITA
 		}
 
+		allow_branch = {
+			CHI = {
+				has_completed_focus = CHI_SINAW_primacy
+			}
+		}
+
 		text_icon = AOI_ITA_focus_style
 
 		cost = 5
@@ -773,7 +790,9 @@
 				custom_effect_tooltip = available_industrial_concern
 				show_ideas_tooltip = CHI_fiat
 				custom_effect_tooltip = generic_skip_one_line_tt
-				custom_effect_tooltip = available_mio_fiat
+				#custom_effect_tooltip = available_mio_fiat
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip = CHI_fiat_organization
 			}
 			else_if = {
 				limit = {
@@ -784,7 +803,8 @@
 						custom_effect_tooltip = available_industrial_concern
 						show_ideas_tooltip = CHI_fiat
 						custom_effect_tooltip = generic_skip_one_line_tt
-						custom_effect_tooltip = available_mio_fiat
+						custom_effect_tooltip = available_mio_tt
+						show_mio_tooltip = CHI_fiat_organization
 					}
 				}
 			}
@@ -795,4 +815,233 @@
 				unlock_national_focus = CHI_contract_with_fiat
 			}
 		}
+	}
+	
+	joint_focus = {
+		id = CHI_ITA_military_mission
+		dynamic = yes
+		icon = GFX_focus_roc_flag
+		relative_position_id = CHI_china_italy_industrial_commission
+		x = 4
+		y = 0
+		prerequisite = {
+			focus = CHI_SINAW_focus
+		}
+
+		joint_trigger = ITA_CHI_trigger
+
+		text_icon = china_ITA_CHI_focus_style
+
+		cost = 3
+
+		completion_reward_joint_originator = {
+			if = {
+				limit = {
+					original_tag = CHI
+				}
+				ITA = {
+					country_event = IPUnion_country_event.81
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = if_they_accept
+				effect_tooltip = {
+					ITA = {
+						army_experience = 25
+						custom_effect_tooltip = ITA_send_military_mission_to_china
+					}
+					CHI = {
+						add_ideas = idea_china_italy_military_command
+					}
+				}
+			}
+
+			if = {
+				limit = {
+					original_tag = ITA
+				}
+				country_event = IPUnion_country_event.81
+				custom_effect_tooltip = generic_skip_one_line_tt
+				custom_effect_tooltip = if_they_accept
+				effect_tooltip = {
+					army_experience = 25
+					custom_effect_tooltip = ITA_send_military_mission_to_china
+					CHI = {
+						add_ideas = idea_china_italy_military_command
+					}
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = CHI_po_yangtze_industrial_belt
+		icon = GFX_focus_CHI_yangtze_industry_blet
+		dynamic = yes
+		relative_position_id = CHI_china_italy_industrial_commission
+		x = 2
+		y = 1
+		prerequisite = { focus = CHI_china_italy_industrial_commission }
+
+		cost = 5
+
+		text_icon = china_CHI_focus_style
+
+		completion_reward = {
+			if = {
+				limit = {
+					original_tag = CHI
+				}
+				#custom_effect_tooltip = CHI_po_yangtze_industrial_belt_tt
+				620 = {
+					add_dynamic_modifier = {
+						modifier = CHI_china_yangtze_insdustry_blet
+						scope = CHI
+					}
+				}
+				1036 = {
+					add_dynamic_modifier = {
+						modifier = CHI_china_yangtze_insdustry_blet
+						scope = CHI
+					}
+				}
+				600 = {
+					add_dynamic_modifier = {
+						modifier = CHI_china_yangtze_insdustry_blet
+						scope = CHI
+					}
+				}
+				606 = {
+					add_dynamic_modifier = {
+						modifier = CHI_china_yangtze_insdustry_blet
+						scope = CHI
+					}
+				}
+				749 = {
+					add_dynamic_modifier = {
+						modifier = CHI_china_yangtze_insdustry_blet
+						scope = CHI
+					}
+				}
+				1035 = {
+					add_dynamic_modifier = {
+						modifier = CHI_china_yangtze_insdustry_blet
+						scope = CHI
+					}
+				}
+				1034 = {
+					add_dynamic_modifier = {
+						modifier = CHI_china_yangtze_insdustry_blet
+						scope = CHI
+					}
+				}
+				613 = {
+					add_dynamic_modifier = {
+						modifier = CHI_china_yangtze_insdustry_blet
+						scope = CHI
+					}
+				}
+			}
+		}
+	}
+
+
+	shared_focus = {
+		id = CHI_treaty_with_italy
+		icon = GFX_focus_generic_diplomatic_treaty
+
+		available = {
+			original_tag = CHI
+		}
+
+		dynamic = yes
+		text_icon = china_CHI_focus_style
+
+		relative_position_id = CHI_ITA_military_mission
+		x = 0
+		y = 1
+
+		prerequisite = { focus = CHI_ITA_military_mission }
+
+		cost = 3
+
+		completion_reward = {
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+					original_tag = CHI
+				}
+				add_equipment_subsidy = {
+					cic = 500
+					equipment_type = infantry_equipment
+					seller_tags = { ITA }
+				}
+				add_equipment_subsidy = {
+					cic = 500
+					equipment_type = support_equipment
+					seller_tags = { ITA }
+				}
+				add_equipment_subsidy = {
+					cic = 500
+					equipment_type = artillery_equipment
+					seller_tags = { ITA }
+				}
+			}
+			else_if = {
+				limit = {
+					original_tag = ITA
+				}
+				add_political_power = 50
+			}
+
+			hidden_effect = {
+				ITA = {
+					unlock_national_focus = CHI_treaty_with_italy
+				}
+			}
+		}
+	}
+
+	joint_focus = {
+		id = CHI_opening_up_shenzhen
+		dynamic = yes
+		icon = GFX_focus_CHI_opening_up
+		relative_position_id = CHI_italian_development_loans
+		x = 0
+		y = 1
+		available = {
+			any_country = {
+				OR = {
+					original_tag = CHI
+					is_subject_of = CHI
+					is_in_faction_with = CHI
+				}
+				controls_state = 1061
+			}
+		}
+
+		joint_trigger = ITA_CHI_trigger
+
+		text_icon = china_ITA_CHI_focus_style
+
+		prerequisite = { focus = CHI_italian_development_loans }
+
+		completion_reward_joint_originator = {
+			if = {
+				limit = {
+					original_tag = CHI
+				}
+				ITA = {
+					country_event = {
+						id = placeholder
+						hours = 22
+						random_hours = 24
+					}
+				}
+				custom_effect_tooltip = if_they_accept
+				effect_tooltip = {
+					
+				}
+			}
+		}
+
 	}

@@ -101,3 +101,4 @@
  ITA_accept_urge_delivery: "意大利同意加快交付"
  available_mission_second_deilvery: "完成任务：§Y第二批交付§!"
  available_mio_fiat: "§G可作为§!§Y设计商§!：§Y菲亚特§!"
+ ITA_send_military_mission_to_china: "派遣几位将领和顾问前去协助@CHI §Y[CHI.getAdjective]军队§!。"

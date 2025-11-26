@@ -15,7 +15,7 @@ CHI_fiat_organization = {
 	icon = GFX_idea_fiat
 	
 	allowed = {	
-		original_tag = ITA
+		original_tag = CHI
 	}
 
 	visible = {
@@ -24,10 +24,8 @@ CHI_fiat_organization = {
 	
 	available = {
 		# When in a Foreign MIO, countries need to be at peace with original country
-		if = {
-			limit = {
-				original_tag = CHI
-			}
+		#original_tag = CHI
+		CHI = {
 			has_completed_focus = CHI_contract_with_fiat
 		}
 	}

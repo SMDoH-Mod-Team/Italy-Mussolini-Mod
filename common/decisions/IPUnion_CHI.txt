@@ -29,6 +29,7 @@ china_italy_cooperation = {
 			}
 			hidden_effect = {
 				set_country_flag = CHI_delivered_flag
+				clr_country_flag = IPUnion_country_event.76.flag
 			}
 		}
 	}

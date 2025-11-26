@@ -38,6 +38,8 @@ focus_tree = {
 	shared_focus = AOI_italian_investment
 
 	shared_focus = CHI_SINAW_focus
+
+	shared_focus = CHI_italian_development_loans
 	
 	default = no
 
