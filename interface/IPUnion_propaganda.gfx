@@ -16,8 +16,8 @@ spriteTypes = {
 	### Posters ###
     				
 	spriteType = {
-		name = "GFX_SOV_propaganda_strip"
-		texturefile = "gfx/interface/propaganda/SOV_propaganda_strip.dds"
+		name = "GFX_ITA_propaganda_strip"
+		texturefile = "gfx/interface/propaganda/ITA_propaganda_strip.png"
 		legacy_lazy_load = no
 		noOfFrames = 26
 	}

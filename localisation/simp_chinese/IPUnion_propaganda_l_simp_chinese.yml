@@ -23,6 +23,19 @@
  ITA_propaganda_victory_at_hand: "胜利就在眼前！"
  ITA_propaganda_motherland_calls: "祖国母亲在召唤！"
 
+ ITA_propaganda_worker_peasant_solider: "工农兵是主力军！"
+ ITA_propaganda_libert_abyssinia: "解放阿比西尼亚"
+ ITA_propaganda_learn_form_foggia_milano: "农业学福贾，工业学米兰"
+ ITA_propaganda_mussolini: "团结在墨索里尼的领导下！"
+ ITA_propaganda_duce_calls: "领袖在召唤！"
+ ITA_propaganda_mussolini_is_the_red_sun_in_our_heart: "墨统帅是我们心中的红太阳！"
+ ITA_propaganda_camicie_nere_the_first_part_of_march_time: "黑衫军，进军时代当尖兵！"
+ ITA_propaganda_seize_the_day: "一万年太久，只争朝夕！"
+ ITA_propaganda_mussolini_is_watching_u: "领袖在看着你..."
+ ITA_propaganda_campaign_cooldown_tt: "该宣传活动将在被移除§Y[?ROOT.SOV_default_propaganda_campaign_cooldown]日§!后再次可用。"
+
+ 
+
 # SOV_poster_left_text: "[GetDaysRemainingLeft]"
 # SOV_poster_center_text: "[GetDaysRemainingCenter]"
 # SOV_poster_right_text: "[GetDaysRemainingRight]"

@@ -25,7 +25,7 @@ guiTypes = {
 
 		#POSTER LEFT
 		iconType = {
-			name ="ita_propaganda_poster_left"
+			name ="ITA_propaganda_poster_left"
 			position = { x=@POSTER_LEFT_X	 y=@POSTERS_Y }
 			pdx_tooltip = ITA_PROPAGANDA_CAMPAIGN_TT_LEFT
 		}
@@ -42,7 +42,7 @@ guiTypes = {
 
 		#POSTER CENTER
 		iconType = {
-			name ="ita_propaganda_poster_center"
+			name ="ITA_propaganda_poster_center"
 			position = { x=@POSTER_CENTER_X	 y=@POSTERS_Y }
 			pdx_tooltip = ITA_PROPAGANDA_CAMPAIGN_TT_CENTER
 		}
@@ -59,7 +59,7 @@ guiTypes = {
 
 		#POSTER RIGHT
 		iconType = {
-			name ="ita_propaganda_poster_right"
+			name ="ITA_propaganda_poster_right"
 			position = { x=@POSTER_RIGHT_X	 y=@POSTERS_Y }
 			pdx_tooltip = ITA_PROPAGANDA_CAMPAIGN_TT_RIGHT
 		}

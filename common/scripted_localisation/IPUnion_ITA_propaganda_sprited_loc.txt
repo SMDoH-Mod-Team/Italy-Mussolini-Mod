@@ -2,116 +2,476 @@ defined_text = {
 	name = ITA_GetPropagandaCampaignEffects_Left
 	text = {
 		trigger = {
-			check_variable = { SOV_poster_left_icon_frame = 10 }
+			check_variable = { SOV_poster_left_icon_frame = 1 }
 		}
-		localization_key = ITA_propaganda_defend_roma
+		localization_key = SOV_propaganda_campaign_locked_slot_tt
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_poster_left_icon_frame = 2 }
+		}
+		localization_key = SOV_propaganda_campaign_empty_slot_tt
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_poster_left_icon_frame = 3 }
+		}
+		localization_key = ITA_propaganda_worker_peasant_solider
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_poster_left_icon_frame = 4 }
+		}
+		localization_key = ITA_propaganda_libert_abyssinia
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_poster_left_icon_frame = 5 }
+		}
+		localization_key = ITA_propaganda_learn_form_foggia_milano
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_poster_left_icon_frame = 6 }
+		}
+		localization_key = ITA_propaganda_mussolini_is_the_red_sun_in_our_heart
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_poster_left_icon_frame = 7 }
+		}
+		localization_key = ITA_propaganda_camicie_nere_the_first_part_of_march_time
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_poster_left_icon_frame = 8 }
+		}
+		localization_key = ITA_propaganda_seize_the_day
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_poster_left_icon_frame = 9 }
+		}
+		localization_key = ITA_propaganda_duce_calls
 	}
 	text = {
 		trigger = {
 			check_variable = { SOV_poster_left_icon_frame = 10 }
 		}
-		localization_key = ITA_propaganda_transport
+		localization_key = ITA_propaganda_mussolini_is_watching_u
 	}
 	text = {
 		trigger = {
-			check_variable = { SOV_poster_left_icon_frame = 10 }
+			check_variable = { SOV_poster_left_icon_frame = 11 }
 		}
-		localization_key = ITA_propaganda_high_yield
+		localization_key = ITA_propaganda_mussolini
 	}
 	text = {
 		trigger = {
-			check_variable = { SOV_poster_left_icon_frame = 10 }
+			check_variable = { SOV_poster_left_icon_frame = 12 }
 		}
-		localization_key = ITA_propaganda_anti_anti_fascism
+		localization_key = SOV_propaganda_for_the_motherland
 	}
 	text = {
 		trigger = {
-			check_variable = { SOV_poster_left_icon_frame = 10 }
+			check_variable = { SOV_poster_left_icon_frame = 13 }
 		}
-		localization_key = ITA_propaganda_builders_of_fascism
+		localization_key = SOV_propaganda_heroes_forward
 	}
 	text = {
 		trigger = {
-			check_variable = { SOV_poster_left_icon_frame = 10 }
+			check_variable = { SOV_poster_left_icon_frame = 14 }
 		}
-		localization_key = ITA_propaganda_duce
+		localization_key = SOV_propaganda_anti_capitalism
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_poster_left_icon_frame = 15 }
+		}
+		localization_key = SOV_propaganda_anti_fascism
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_poster_left_icon_frame = 16 }
+		}
+		localization_key = SOV_propaganda_treacherous_enemy
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_poster_left_icon_frame = 17 }
+		}
+		localization_key = SOV_propaganda_do_not_blab
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_poster_left_icon_frame = 18 }
+		}
+		localization_key = SOV_propaganda_sweep_scum_out
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_poster_left_icon_frame = 19 }
+		}
+		localization_key = SOV_propaganda_knowledge
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_poster_left_icon_frame = 20 }
+		}
+		localization_key = SOV_propaganda_builders_of_communism
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_poster_left_icon_frame = 21 }
+		}
+		localization_key = SOV_propaganda_glory_to_partisans
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_poster_left_icon_frame = 22 }
+		}
+		localization_key = SOV_propaganda_death_to_invaders
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_poster_left_icon_frame = 23 }
+		}
+		localization_key = SOV_propaganda_stalin
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_poster_left_icon_frame = 24 }
+		}
+		localization_key = SOV_propaganda_rebuild_to_glory
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_poster_left_icon_frame = 25 }
+		}
+		localization_key = SOV_propaganda_peace
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_poster_left_icon_frame = 26 }
+		}
+		localization_key = SOV_propaganda_happy_life
 	}
 }
 defined_text = {
 	name = ITA_GetPropagandaCampaignEffects_Center
 	text = {
 		trigger = {
-			check_variable = { SOV_poster_center_icon_frame = 10 }
+			check_variable = { SOV_poster_center_icon_frame = 1 }
 		}
-		localization_key = ITA_propaganda_defend_roma
+		localization_key = SOV_propaganda_campaign_locked_slot_tt
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_poster_center_icon_frame = 2 }
+		}
+		localization_key = SOV_propaganda_campaign_empty_slot_tt
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_poster_center_icon_frame = 3 }
+		}
+		localization_key = ITA_propaganda_worker_peasant_solider
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_poster_center_icon_frame = 4 }
+		}
+		localization_key = ITA_propaganda_libert_abyssinia
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_poster_center_icon_frame = 5 }
+		}
+		localization_key = ITA_propaganda_learn_form_foggia_milano
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_poster_center_icon_frame = 6 }
+		}
+		localization_key = ITA_propaganda_mussolini_is_the_red_sun_in_our_heart
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_poster_center_icon_frame = 7 }
+		}
+		localization_key = ITA_propaganda_camicie_nere_the_first_part_of_march_time
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_poster_center_icon_frame = 8 }
+		}
+		localization_key = ITA_propaganda_seize_the_day
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_poster_center_icon_frame = 9 }
+		}
+		localization_key = ITA_propaganda_duce_calls
 	}
 	text = {
 		trigger = {
 			check_variable = { SOV_poster_center_icon_frame = 10 }
 		}
-		localization_key = ITA_propaganda_transport
+		localization_key = ITA_propaganda_mussolini_is_watching_u
 	}
 	text = {
 		trigger = {
-			check_variable = { SOV_poster_center_icon_frame = 10 }
+			check_variable = { SOV_poster_center_icon_frame = 11 }
 		}
-		localization_key = ITA_propaganda_high_yield
+		localization_key = ITA_propaganda_mussolini
 	}
 	text = {
 		trigger = {
-			check_variable = { SOV_poster_center_icon_frame = 10 }
+			check_variable = { SOV_poster_center_icon_frame = 12 }
 		}
-		localization_key = ITA_propaganda_anti_anti_fascism
+		localization_key = SOV_propaganda_for_the_motherland
 	}
 	text = {
 		trigger = {
-			check_variable = { SOV_poster_center_icon_frame = 10 }
+			check_variable = { SOV_poster_center_icon_frame = 13 }
 		}
-		localization_key = ITA_propaganda_builders_of_fascism
+		localization_key = SOV_propaganda_heroes_forward
 	}
 	text = {
 		trigger = {
-			check_variable = { SOV_poster_center_icon_frame = 10 }
+			check_variable = { SOV_poster_center_icon_frame = 14 }
 		}
-		localization_key = ITA_propaganda_duce
+		localization_key = SOV_propaganda_anti_capitalism
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_poster_center_icon_frame = 15 }
+		}
+		localization_key = SOV_propaganda_anti_fascism
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_poster_center_icon_frame = 16 }
+		}
+		localization_key = SOV_propaganda_treacherous_enemy
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_poster_center_icon_frame = 17 }
+		}
+		localization_key = SOV_propaganda_do_not_blab
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_poster_center_icon_frame = 18 }
+		}
+		localization_key = SOV_propaganda_sweep_scum_out
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_poster_center_icon_frame = 19 }
+		}
+		localization_key = SOV_propaganda_knowledge
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_poster_center_icon_frame = 20 }
+		}
+		localization_key = SOV_propaganda_builders_of_communism
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_poster_center_icon_frame = 21 }
+		}
+		localization_key = SOV_propaganda_glory_to_partisans
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_poster_center_icon_frame = 22 }
+		}
+		localization_key = SOV_propaganda_death_to_invaders
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_poster_center_icon_frame = 23 }
+		}
+		localization_key = SOV_propaganda_stalin
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_poster_center_icon_frame = 24 }
+		}
+		localization_key = SOV_propaganda_rebuild_to_glory
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_poster_center_icon_frame = 25 }
+		}
+		localization_key = SOV_propaganda_peace
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_poster_center_icon_frame = 26 }
+		}
+		localization_key = SOV_propaganda_happy_life
 	}
 }
 defined_text = {
 	name = ITA_GetPropagandaCampaignEffects_Right
 	text = {
 		trigger = {
-			check_variable = { SOV_poster_right_icon_frame = 105 }
+			check_variable = { SOV_poster_right_icon_frame = 1 }
 		}
-		localization_key = ITA_propaganda_defend_roma
+		localization_key = SOV_propaganda_campaign_locked_slot_tt
 	}
 	text = {
 		trigger = {
-			check_variable = { SOV_poster_right_icon_frame = 108 }
+			check_variable = { SOV_poster_right_icon_frame = 2 }
 		}
-		localization_key = ITA_propaganda_transport
+		localization_key = SOV_propaganda_campaign_empty_slot_tt
 	}
 	text = {
 		trigger = {
-			check_variable = { SOV_poster_right_icon_frame = 1011 }
+			check_variable = { SOV_poster_right_icon_frame = 3 }
 		}
-		localization_key = ITA_propaganda_high_yield
+		localization_key = ITA_propaganda_worker_peasant_solider
 	}
 	text = {
 		trigger = {
-			check_variable = { SOV_poster_right_icon_frame = 1015 }
+			check_variable = { SOV_poster_right_icon_frame = 4 }
 		}
-		localization_key = ITA_propaganda_anti_anti_fascism
+		localization_key = ITA_propaganda_libert_abyssinia
 	}
 	text = {
 		trigger = {
-			check_variable = { SOV_poster_right_icon_frame = 1050 }
+			check_variable = { SOV_poster_right_icon_frame = 5 }
 		}
-		localization_key = ITA_propaganda_builders_of_fascism
+		localization_key = ITA_propaganda_learn_form_foggia_milano
 	}
 	text = {
 		trigger = {
-			check_variable = { SOV_poster_right_icon_frame = 1053 }
+			check_variable = { SOV_poster_right_icon_frame = 6 }
 		}
-		localization_key = ITA_propaganda_duce
+		localization_key = ITA_propaganda_mussolini_is_the_red_sun_in_our_heart
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_poster_right_icon_frame = 7 }
+		}
+		localization_key = ITA_propaganda_camicie_nere_the_first_part_of_march_time
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_poster_right_icon_frame = 8 }
+		}
+		localization_key = ITA_propaganda_seize_the_day
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_poster_right_icon_frame = 9 }
+		}
+		localization_key = ITA_propaganda_duce_calls
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_poster_right_icon_frame = 10 }
+		}
+		localization_key = ITA_propaganda_mussolini_is_watching_u
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_poster_right_icon_frame = 11 }
+		}
+		localization_key = ITA_propaganda_mussolini
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_poster_right_icon_frame = 12 }
+		}
+		localization_key = SOV_propaganda_for_the_motherland
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_poster_right_icon_frame = 13 }
+		}
+		localization_key = SOV_propaganda_heroes_forward
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_poster_right_icon_frame = 14 }
+		}
+		localization_key = SOV_propaganda_anti_capitalism
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_poster_right_icon_frame = 15 }
+		}
+		localization_key = SOV_propaganda_anti_fascism
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_poster_right_icon_frame = 16 }
+		}
+		localization_key = SOV_propaganda_treacherous_enemy
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_poster_right_icon_frame = 17 }
+		}
+		localization_key = SOV_propaganda_do_not_blab
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_poster_right_icon_frame = 18 }
+		}
+		localization_key = SOV_propaganda_sweep_scum_out
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_poster_right_icon_frame = 19 }
+		}
+		localization_key = SOV_propaganda_knowledge
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_poster_right_icon_frame = 20 }
+		}
+		localization_key = SOV_propaganda_builders_of_communism
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_poster_right_icon_frame = 21 }
+		}
+		localization_key = SOV_propaganda_glory_to_partisans
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_poster_right_icon_frame = 22 }
+		}
+		localization_key = SOV_propaganda_death_to_invaders
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_poster_right_icon_frame = 23 }
+		}
+		localization_key = SOV_propaganda_stalin
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_poster_right_icon_frame = 24 }
+		}
+		localization_key = SOV_propaganda_rebuild_to_glory
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_poster_right_icon_frame = 25 }
+		}
+		localization_key = SOV_propaganda_peace
+	}
+	text = {
+		trigger = {
+			check_variable = { SOV_poster_right_icon_frame = 26 }
+		}
+		localization_key = SOV_propaganda_happy_life
 	}
 }

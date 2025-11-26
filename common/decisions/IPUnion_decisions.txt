@@ -1363,41 +1363,49 @@ ITA_PNF_central_military_committee = {
 			158 = {
 				add_dynamic_modifier = {
 					modifier = milano_military_area
+					scope = ITA
 				}
 			}
 			159 = {
 				add_dynamic_modifier = {
 					modifier = milano_military_area
+					scope = ITA
 				}
 			}
 			160 = {
 				add_dynamic_modifier = {
 					modifier = milano_military_area
+					scope = ITA
 				}
 			}
 			161 = {
 				add_dynamic_modifier = {
 					modifier = milano_military_area
+					scope = ITA
 				}
 			}
 			39 = {
 				add_dynamic_modifier = {
 					modifier = milano_military_area
+					scope = ITA
 				}
 			}
 			850 = {
 				add_dynamic_modifier = {
 					modifier = milano_military_area
+					scope = ITA
 				}
 			}
 			736 = {
 				add_dynamic_modifier = {
 					modifier = milano_military_area
+					scope = ITA
 				}
 			}
 			852 = {
 				add_dynamic_modifier = {
 					modifier = milano_military_area
+					scope = ITA
 				}
 			}
 			if = {
@@ -1407,6 +1415,7 @@ ITA_PNF_central_military_committee = {
 				1049 = {
 					add_dynamic_modifier = {
 						modifier = milano_military_area
+						scope = ITA
 					}
 				}
 			}
@@ -1423,21 +1432,25 @@ ITA_PNF_central_military_committee = {
 			162 = {
 				add_dynamic_modifier = {
 					modifier = roma_military_area
+					scope = ITA
 				}
 			}
 			157 = {
 				add_dynamic_modifier = {
 					modifier = roma_military_area
+					scope = ITA
 				}
 			}
 			2 = {
 				add_dynamic_modifier = {
 					modifier = roma_military_area
+					scope = ITA
 				}
 			}
 			163 = {
 				add_dynamic_modifier = {
 					modifier = roma_military_area
+					scope = ITA
 				}
 			}
 		}
@@ -1453,21 +1466,25 @@ ITA_PNF_central_military_committee = {
 			117 = {
 				add_dynamic_modifier = {
 					modifier = palermo_military_area
+					scope = ITA
 				}
 			}
 			849 = {
 				add_dynamic_modifier = {
 					modifier = palermo_military_area
+					scope = ITA
 				}
 			}
 			156 = {
 				add_dynamic_modifier = {
 					modifier = palermo_military_area
+					scope = ITA
 				}
 			}
 			115 = {
 				add_dynamic_modifier = {
 					modifier = palermo_military_area
+					scope = ITA
 				}
 			}
 		}
@@ -1483,6 +1500,7 @@ ITA_PNF_central_military_committee = {
 			114 = {
 				add_dynamic_modifier = {
 					modifier = cagliari_military_area
+					scope = ITA
 				}
 			}
 		}

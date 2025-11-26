@@ -1,0 +1,2 @@
+ITA_propaganda_campaigns = {
+}
