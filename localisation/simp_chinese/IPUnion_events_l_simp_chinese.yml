@@ -289,6 +289,12 @@
  IPUnion_country_event.83.a: "[FROM.GetName]接受我方请求"
  IPUnion_country_event.83.t: "罗马方面传来令人振奋的消息。意大利政府已正式接受我国请求，将派遣一支军事顾问团前来协助我军改革。顾问团由经验丰富的将军率领，负责重组我军核心部队，并将我们的训练与指挥体系提升至欧洲现代水准。值得注意的是，他还将直接接管驻扎在南京附近的一支部队。\n\n对蒋介石而言，这是一次重大的外交与军事胜利。然而，这一举动势必引起北方邻国的关注。日本帝国视我们为其野心的关键所在，一名意大利将领坐镇我方首都，恐将激起其强烈不满。\n\n我们必须谨慎行事——但重振雄风的希望，或许正由此开启。"
  IPUnion_country_event.83.a: "太好了!"
+ IPUnion_country_event.84.t: "[CHI.GetName]邀请我们共建经济特区"
+ IPUnion_country_event.84.d: "国民政府已经发来消息，表明了他们将要在宝安地区建立一个试点型的经济特区的设想，该特区将会开放外资进入，由于我们最近的蜜月期，他们邀请我们共同建立中国第一个完全对外开放的经济特区"
+ IPUnion_country_event.84.a: "太好了"
+ IPUnion_country_event.85.t: "[ITA.GetName]接受邀请"
+ IPUnion_country_event.85.d: "[ITA.GetName]已经接受了我们和他们共建经济特区的邀请"
+ IPUnion_country_event.85.a: "很好"
  
 
 

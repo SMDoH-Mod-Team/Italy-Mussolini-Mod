@@ -1032,16 +1032,75 @@
 				}
 				ITA = {
 					country_event = {
-						id = placeholder
+						id = IPUnion_country_event.84
 						hours = 22
 						random_hours = 24
 					}
 				}
 				custom_effect_tooltip = if_they_accept
 				effect_tooltip = {
-					
+					SEZ = {
+						transfer_state = 1061
+					}
+					CHI = {
+						set_autonomy = {
+							target = SEZ
+							autonomous_state = special_economic_zone
+						}
+					}
+					hidden_effect = {
+						SEZ = {
+							add_ideas = neutrality_idea
+						}
+					}
+					CHI = {
+						give_guarantee = SEZ
+					}
+					ITA = {
+						give_guarantee = SEZ
+						give_military_access = SEZ
+					}
+					SEZ = {
+						give_military_access = ITA
+					}
+				}
+			}
+
+			if = {
+				limit = {
+					original_tag = ITA
+				}
+				country_event = {
+					id = IPUnion_country_event.84
+					hours = 22
+					random_hours = 24
+				}
+				effect_tooltip = {
+					SEZ = {
+						transfer_state = 1061
+					}
+					CHI = {
+						set_autonomy = {
+							target = SEZ
+							autonomous_state = special_economic_zone
+						}
+					}
+					hidden_effect = {
+						SEZ = {
+							add_ideas = neutrality_idea
+						}
+					}
+					CHI = {
+						give_guarantee = SEZ
+					}
+					ITA = {
+						give_guarantee = SEZ
+						give_military_access = SEZ
+					}
+					SEZ = {
+						give_military_access = ITA
+					}
 				}
 			}
 		}
-
 	}

@@ -4,4 +4,9 @@ spriteTypes = {
 		textureFile = "gfx/texticons/benito_mussolini_signature.png"
 		legacy_lazy_load = no 
 	}
+
+	spriteType = {
+		name = "GFX_special_economic_zone_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_dominion_icon.dds"
+	}
 }
