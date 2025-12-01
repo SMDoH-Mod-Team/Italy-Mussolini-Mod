@@ -1,0 +1,17 @@
+defined_text = {
+	name = PNF_dynmic_name
+	text = {
+		trigger = {
+			NOT = {
+				has_completed_focus = ITA_capo_supremo
+			}
+		}
+		localization_key = PNF_national
+	}
+	text = {
+		trigger = {
+			has_completed_focus = ITA_capo_supremo
+		}
+		localization_key = PNF_republic
+	}
+}

@@ -17,12 +17,12 @@ ITA_propaganda_campaigns = {
 		#visible = {
 		#}
 
-		#days_remove = SOV_default_propaganda_campaign_duration
+		#days_remove = 180
 		days_remove = 180
 
 		days_re_enable = 90
 
-		#days_re_enable = SOV_default_propaganda_campaign_cooldown
+		#days_re_enable = 90
 
 		#cost = SOV_propaganda_motherland_calls_cost
 
@@ -75,9 +75,9 @@ ITA_propaganda_campaigns = {
 		#	}
 		#}
 
-		days_remove = SOV_default_propaganda_campaign_duration
+		days_remove = 180
 
-		days_re_enable = SOV_default_propaganda_campaign_cooldown
+		days_re_enable = 90
 
 		cost = 15
 
@@ -151,9 +151,9 @@ ITA_propaganda_campaigns = {
 		#	}
 		#}
 
-	#	days_remove = SOV_default_propaganda_campaign_duration
+	#	days_remove = 180
 
-	#	days_re_enable = SOV_default_propaganda_campaign_cooldown
+	#	days_re_enable = 90
 
 	#	cost = SOV_propaganda_defend_moscow_cost
 
@@ -211,9 +211,9 @@ ITA_propaganda_campaigns = {
 		#	}
 		#}
 
-		days_remove = SOV_default_propaganda_campaign_duration
+		days_remove = 180
 
-		days_re_enable = SOV_default_propaganda_campaign_cooldown
+		days_re_enable = 90
 
 
 		cost = 15
@@ -266,9 +266,9 @@ ITA_propaganda_campaigns = {
 		#	}
 		#}
 
-		days_remove = SOV_default_propaganda_campaign_duration
+		days_remove = 180
 
-		days_re_enable = SOV_default_propaganda_campaign_cooldown
+		days_re_enable = 90
 
 		cost = 15
 
@@ -319,9 +319,9 @@ ITA_propaganda_campaigns = {
 		#	}
 		#}
 
-		days_remove = SOV_default_propaganda_campaign_duration
+		days_remove = 180
 
-		days_re_enable = SOV_default_propaganda_campaign_cooldown
+		days_re_enable = 90
 
 		cost = 15
 
@@ -372,9 +372,9 @@ ITA_propaganda_campaigns = {
 		#	}
 		#}
 
-		days_remove = SOV_default_propaganda_campaign_duration
+		days_remove = 180
 
-		days_re_enable = SOV_default_propaganda_campaign_cooldown
+		days_re_enable = 90
 
 		cost = 15
 
@@ -427,9 +427,9 @@ ITA_propaganda_campaigns = {
 		#	}
 		#}
 
-		days_remove = SOV_default_propaganda_campaign_duration
+		days_remove = 180
 
-		days_re_enable = SOV_default_propaganda_campaign_cooldown
+		days_re_enable = 90
 
 		cost = 15
 
@@ -477,9 +477,9 @@ ITA_propaganda_campaigns = {
 		#	}
 		#}
 
-		days_remove = SOV_default_propaganda_campaign_duration
+		days_remove = 180
 
-		days_re_enable = SOV_default_propaganda_campaign_cooldown
+		days_re_enable = 90
 
 		cost = 15
 
@@ -533,9 +533,9 @@ ITA_propaganda_campaigns = {
 			has_completed_focus = ITA_motherland_of_our_movement
 		}
 
-		days_remove = SOV_default_propaganda_campaign_duration
+		days_remove = 180
 
-		days_re_enable = SOV_default_propaganda_campaign_cooldown
+		days_re_enable = 90
 
 		cost = 15
 
@@ -554,11 +554,6 @@ ITA_propaganda_campaigns = {
 			set_variable = { SOV_propaganda_campaign_to_remove = 15 }
 			SOV_reset_propaganda_campaign_slot_effect = yes
 
-			set_variable = { SOV_propaganda_cost = SOV_propaganda_rebuild_to_glory_cost }
-			SOV_increase_propaganda_campaign_cost_effect = yes
-			set_variable = { SOV_propaganda_rebuild_to_glory_cost = SOV_propaganda_cost }
-			clear_variable = SOV_propaganda_cost
-
 			custom_effect_tooltip = ITA_propaganda_campaign_cooldown_tt
 		}
 	}
@@ -576,7 +571,15 @@ ITA_propaganda_campaigns = {
 			SOV_propaganda_poster_slot_available = yes
 		}
 
+		cost = 15
+
+		days_remove = 180
+
+		days_re_enable = 90
+
 		complete_effect = {
+			set_variable = { SOV_new_propaganda_campaign = 4 }
+			ITA_pick_propaganda_campaign_slot_effect = yes
 			if = {
 				limit = {
 					NOT = { has_global_flag = second_italo_ethiopian_war_flag }
@@ -614,5 +617,593 @@ ITA_propaganda_campaigns = {
 				}
 			}
 		}
+
+		remove_effect = {
+			set_variable = { SOV_propaganda_campaign_to_remove = 4 }
+			SOV_reset_propaganda_campaign_slot_effect = yes
+
+			every_state = {
+				limit = {
+					is_core_of = ETH
+				}
+				remove_dynamic_modifier = {
+					modifier = ITA_liberty_eth_modifier
+					scope = ITA
+				}
+			}
+
+			custom_effect_tooltip = ITA_propaganda_campaign_cooldown_tt
+		}
 	}
+
+	ITA_propaganda_cheer_for_plane_insdustry = {
+		priority = 1
+
+		icon = eng_propaganda_campaigns
+
+		allowed = {
+			original_tag = ITA
+		}
+
+		available = {
+			SOV_propaganda_poster_slot_available = yes
+		}
+
+		cost = 15
+
+		days_remove = 180
+
+		days_re_enable = 90
+
+		complete_effect = {
+			set_variable = { SOV_new_propaganda_campaign = 12 }  ##set_variable与ITA_pick_propaganda_campaign_slot_effect顺序不能反
+			ITA_pick_propaganda_campaign_slot_effect = yes
+		}
+
+		
+
+		modifier = {
+			research_bonus = {
+				light_air = 0.15
+				medium_air = 0.15
+				heavy_air = 0.15
+			}
+		}
+
+		remove_effect = {
+			set_variable = { SOV_propaganda_campaign_to_remove = 12 }
+			SOV_reset_propaganda_campaign_slot_effect = yes
+
+			custom_effect_tooltip = ITA_propaganda_campaign_cooldown_tt
+		}
+	}
+
+	ITA_propaganda_duce_and_roma_women = {
+		priority = 2
+
+		icon = eng_propaganda_campaigns
+
+		allowed = {
+			original_tag = ITA
+		}
+
+		available = {
+			SOV_propaganda_poster_slot_available = yes
+		}
+
+		cost = 15
+
+		days_remove = 180
+
+		days_re_enable = 90
+
+		complete_effect = {
+			
+			set_variable = { SOV_new_propaganda_campaign = 26 }
+			ITA_pick_propaganda_campaign_slot_effect = yes
+		}
+
+		modifier = {
+			conscription = 0.03
+		}
+
+		remove_effect = {
+			set_variable = { SOV_propaganda_campaign_to_remove = 26 }
+			SOV_reset_propaganda_campaign_slot_effect = yes
+
+			custom_effect_tooltip = ITA_propaganda_campaign_cooldown_tt
+		}
+	}
+
+	ITA_propaganda_blackshirt_dont_afraid_long_way = {
+		priority = 3
+		icon = eng_propaganda_campaigns
+
+		allowed = {
+			original_tag = ITA
+		}
+
+		available = {
+			SOV_propaganda_poster_slot_available = yes
+		}
+
+		cost = 15
+
+		days_remove = 180
+
+		days_re_enable = 90
+
+		complete_effect = {
+			
+			set_variable = { SOV_new_propaganda_campaign = 25 }
+			ITA_pick_propaganda_campaign_slot_effect = yes
+		}
+
+		remove_effect = {
+			set_variable = { SOV_propaganda_campaign_to_remove = 25 }
+			SOV_reset_propaganda_campaign_slot_effect = yes
+
+			custom_effect_tooltip = ITA_propaganda_campaign_cooldown_tt
+		}
+
+		modifier = {
+			political_power_gain = 0.02
+			fascism_drift = 0.01
+		}
+	}
+
+	ITA_propaganda_respect_to_cheren = {
+		priority = 4
+		icon = eng_propaganda_campaigns
+
+		allowed = {
+			original_tag = ITA
+		}
+
+		cost = 15
+
+		available = {
+			SOV_propaganda_poster_slot_available = yes
+			any_country = {
+				OR = {
+					original_tag = ITA
+					is_subject_of = ITA
+					is_in_faction_with = ITA
+				}
+				has_war_with = ENG
+				controls_state = 550
+			}
+		}
+
+		days_remove = 180
+
+		days_re_enable = 90
+
+		complete_effect = {
+			
+			set_variable = { SOV_new_propaganda_campaign = 23 }
+			ITA_pick_propaganda_campaign_slot_effect = yes
+		}
+
+		remove_effect = {
+			set_variable = { SOV_propaganda_campaign_to_remove = 23 }
+			SOV_reset_propaganda_campaign_slot_effect = yes
+
+			custom_effect_tooltip = ITA_propaganda_campaign_cooldown_tt
+		}
+
+		targeted_modifier = {
+			tag = ENG
+			attack_bonus_against = 0.15
+    		defense_bonus_against = 0.15
+		}
+
+	}
+
+	ITA_propaganda_child_is_our_future = {
+		priority = 5
+		icon = eng_propaganda_campaigns
+
+		allowed = {
+			original_tag = ITA
+		}
+
+		cost = 15
+
+		available = {
+			SOV_propaganda_poster_slot_available = yes
+		}
+
+		days_remove = 180
+
+		days_re_enable = 90
+
+		complete_effect = {
+			
+			set_variable = { SOV_new_propaganda_campaign = 22 }
+			ITA_pick_propaganda_campaign_slot_effect = yes
+		}
+
+		remove_effect = {
+			set_variable = { SOV_propaganda_campaign_to_remove = 22 }
+			SOV_reset_propaganda_campaign_slot_effect = yes
+
+			custom_effect_tooltip = ITA_propaganda_campaign_cooldown_tt
+		}
+
+		modifier = {
+			monthly_population = 0.15
+			political_power_gain = 0.02
+		}
+	}
+
+	ITA_propaganda_learn_form_foggia_milano = {
+		priority = 90
+
+		icon = eng_propaganda_campaigns
+
+		allowed = {
+			original_tag = ITA
+		}
+
+		cost = 15
+
+		available = {
+			SOV_propaganda_poster_slot_available = yes
+		}
+
+		visible = {
+			has_completed_focus = ITA_learn_form_foggia
+			has_completed_focus = ITA_learn_form_torina
+		}
+
+		complete_effect = {
+			set_variable = { SOV_new_propaganda_campaign = 5 }
+			ITA_pick_propaganda_campaign_slot_effect = yes
+		}
+
+		remove_effect = {
+			set_variable = { SOV_propaganda_campaign_to_remove = 5 }
+			SOV_reset_propaganda_campaign_slot_effect = yes
+			custom_effect_tooltip = ITA_propaganda_campaign_cooldown_tt
+		}
+
+		modifier = {
+			production_speed_buildings_factor = 0.03
+			industrial_capacity_factory = 0.03
+		}
+
+		days_remove = 180
+
+		days_re_enable = 90
+
+	}
+
+	ITA_propaganda_amry_climb = {
+		priority = 90
+
+		icon = eng_propaganda_campaigns
+
+		allowed = {
+			original_tag = ITA
+		}
+
+		cost = 15
+
+		available = {
+			SOV_propaganda_poster_slot_available = yes
+			has_war = yes
+		}
+
+		complete_effect = {
+			set_variable = { SOV_new_propaganda_campaign = 20 }
+			ITA_pick_propaganda_campaign_slot_effect = yes
+			hidden_effect = {
+				set_technology = { 
+					solider_are_willing_to_climb = 1
+					popup = no 
+				}
+			}
+		}
+
+		remove_effect = {
+			set_variable = { SOV_propaganda_campaign_to_remove = 20 }
+			SOV_reset_propaganda_campaign_slot_effect = yes
+			custom_effect_tooltip = ITA_propaganda_campaign_cooldown_tt
+			hidden_effect = {
+				set_technology = { 
+					solider_are_willing_to_climb = 0
+					popup = no 
+				}
+			}
+		}
+
+		days_remove = 180
+
+		days_re_enable = 90
+
+		modifier = {
+			custom_modifier_tooltip = solider_are_willing_to_climb_TT
+		}
+	}
+
+	ITA_propaganda_blackshirts_loyalty_duce = {
+		priority = 89
+		icon = eng_propaganda_campaigns
+
+		allowed = {
+			original_tag = ITA
+		}
+
+		cost = 15
+
+		available = {
+			SOV_propaganda_poster_slot_available = yes
+			#has_war = yes
+		}
+		complete_effect = {
+			set_variable = { SOV_new_propaganda_campaign = 27 }
+			ITA_pick_propaganda_campaign_slot_effect = yes
+		}
+
+		days_remove = 180
+
+		days_re_enable = 90
+
+		remove_effect = {
+			set_variable = { SOV_propaganda_campaign_to_remove = 27 }
+			SOV_reset_propaganda_campaign_slot_effect = yes
+			custom_effect_tooltip = ITA_propaganda_campaign_cooldown_tt
+		}
+
+		modifier = {
+			stability_factor = 0.15
+			war_support_factor = 0.15
+		}
+	}
+
+	ITA_propaganda_be_loyalty_musketeer_for_duce = {
+		priority = 88
+		icon = eng_propaganda_campaigns
+
+		allowed = {
+			original_tag = ITA
+		}
+
+		cost = 15
+
+		visible = {
+			has_completed_focus = ITA_moschettieri_del_duce
+		}
+
+		available = {
+			SOV_propaganda_poster_slot_available = yes
+			#has_war = yes
+		}
+		complete_effect = {
+			set_variable = { SOV_new_propaganda_campaign = 28 }
+			ITA_pick_propaganda_campaign_slot_effect = yes
+		}
+
+		
+		days_remove = 180
+
+		days_re_enable = 90
+
+		remove_effect = {
+			set_variable = { SOV_propaganda_campaign_to_remove = 28 }
+			SOV_reset_propaganda_campaign_slot_effect = yes
+			custom_effect_tooltip = ITA_propaganda_campaign_cooldown_tt
+		}
+
+		modifier = {
+			political_power_gain = 0.02
+			army_attack_factor = 0.05
+		}
+	}
+
+	ITA_propaganda_goodbye_dearfamily = {
+		priority = 87
+		icon = eng_propaganda_campaigns
+
+		allowed = {
+			original_tag = ITA
+		}
+
+		cost = 15
+
+		available = {
+			SOV_propaganda_poster_slot_available = yes
+			#has_war = yes
+		}
+		complete_effect = {
+			set_variable = { SOV_new_propaganda_campaign = 29 }
+			ITA_pick_propaganda_campaign_slot_effect = yes
+		}
+
+		
+		days_remove = 180
+
+		days_re_enable = 90
+
+		remove_effect = {
+			set_variable = { SOV_propaganda_campaign_to_remove = 29 }
+			SOV_reset_propaganda_campaign_slot_effect = yes
+			custom_effect_tooltip = ITA_propaganda_campaign_cooldown_tt
+		}
+
+		modifier = {
+			mobilization_speed = 0.15
+			weekly_manpower = 500
+		}
+	}
+
+	ITA_propaganda_duce_destory_old_world = {
+		priority = 86
+		icon = eng_propaganda_campaigns
+
+		allowed = {
+			original_tag = ITA
+		}
+
+		cost = 15
+
+		available = {
+			SOV_propaganda_poster_slot_available = yes
+			#has_war = yes
+		}
+		complete_effect = {
+			set_variable = { SOV_new_propaganda_campaign = 30 }
+			ITA_pick_propaganda_campaign_slot_effect = yes
+		}
+
+		
+		days_remove = 180
+
+		days_re_enable = 90
+
+		remove_effect = {
+			set_variable = { SOV_propaganda_campaign_to_remove = 30 }
+			SOV_reset_propaganda_campaign_slot_effect = yes
+			custom_effect_tooltip = ITA_propaganda_campaign_cooldown_tt
+		}
+
+		modifier = {
+			production_speed_buildings_factor = 0.10
+			fascism_drift = 0.02
+		}
+	}
+
+	ITA_propaganda_no_pass = {
+		priority = 85
+		icon = eng_propaganda_campaigns
+
+		allowed = {
+			original_tag = ITA
+		}
+
+		cost = 15
+
+		available = {
+			SOV_propaganda_poster_slot_available = yes
+			has_war = yes
+		}
+		complete_effect = {
+			set_variable = { SOV_new_propaganda_campaign = 31 }
+			ITA_pick_propaganda_campaign_slot_effect = yes
+		}
+
+		
+		days_remove = 180
+
+		days_re_enable = 90
+
+		remove_effect = {
+			set_variable = { SOV_propaganda_campaign_to_remove = 31 }
+			SOV_reset_propaganda_campaign_slot_effect = yes
+			custom_effect_tooltip = ITA_propaganda_campaign_cooldown_tt
+		}
+
+		modifier = {
+			army_core_defence_factor = 0.15
+		}
+	}
+
+	ITA_propaganda_give_respect_to_duce = {
+		priority = 84
+		icon = eng_propaganda_campaigns
+
+		allowed = {
+			original_tag = ITA
+		}
+
+		cost = 15
+
+		available = {
+			SOV_propaganda_poster_slot_available = yes
+			has_war = yes
+		}
+		complete_effect = {
+			hidden_effect = {
+				random_list = {
+					33 = {
+						set_variable = { SOV_new_propaganda_campaign = 32 }
+					}
+					33 = {
+						set_variable = { SOV_new_propaganda_campaign = 33 }
+					}
+					33 = {
+						set_variable = { SOV_new_propaganda_campaign = 34 }
+					}
+				}
+			}
+			ITA_pick_propaganda_campaign_slot_effect = yes
+		}
+
+		
+		days_remove = 180
+
+		days_re_enable = 90
+
+		remove_effect = {
+			#set_variable = { SOV_propaganda_campaign_to_remove = 31 }
+			if = {
+				limit = {
+					check_variable = { SOV_new_propaganda_campaign = 32 }
+				}
+				set_variable = { SOV_propaganda_campaign_to_remove = 32 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { SOV_new_propaganda_campaign = 33 }
+				}
+				set_variable = { SOV_propaganda_campaign_to_remove = 33 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { SOV_new_propaganda_campaign = 34 }
+				}
+				set_variable = { SOV_propaganda_campaign_to_remove = 34 }
+			}
+			SOV_reset_propaganda_campaign_slot_effect = yes
+			custom_effect_tooltip = ITA_propaganda_campaign_cooldown_tt
+		}
+
+		modifier = {
+			political_power_gain = 0.02
+			fascism_drift = 0.01
+		}
+	}
+	
+	ITA_propaganda_duce_threshing = {
+		priority = 83
+		icon = eng_propaganda_campaigns
+
+		allowed = {
+			original_tag = ITA
+		}
+
+		cost = 15
+
+		available = {
+			SOV_propaganda_poster_slot_available = yes
+			has_war = yes
+		}
+		complete_effect = {
+			set_variable = { SOV_new_propaganda_campaign = 14 }
+			ITA_pick_propaganda_campaign_slot_effect = yes
+		}
+
+		
+		days_remove = 180
+
+		days_re_enable = 90
+
+		remove_effect = {
+			set_variable = { SOV_propaganda_campaign_to_remove = 14 }
+			SOV_reset_propaganda_campaign_slot_effect = yes
+			custom_effect_tooltip = ITA_propaganda_campaign_cooldown_tt
+		}
+	}
+	
 }

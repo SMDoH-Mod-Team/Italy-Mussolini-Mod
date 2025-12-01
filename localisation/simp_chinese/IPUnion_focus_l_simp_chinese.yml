@@ -170,7 +170,7 @@
  ITA_planned_parenthood_desc: ""
  ITA_leap_forward: "大跃进"
  ITA_leap_forward_desc: "赶英超美，苦干三年，基本改变意大利面貌"
- ITA_Adjust_Consolidate_Fill_out_and_Improve: "国家法西斯党一届三中全会"
+ ITA_Adjust_Consolidate_Fill_out_and_Improve: "[PNF_dynmic_name]一届三中全会"
  ITA_Adjust_Consolidate_Fill_out_and_Improve_desc: "基于目前国民经济遭受的巨大困难，我们需要召开一次会议以调整未来的国民经济发展计划"
 
  ITA_helmsman_died: "舵手逝世"
@@ -212,5 +212,8 @@
 
  ITA_coal_improve: "一定要摘掉贫煤国的帽子"
  ITA_coal_improve_desc: "我国长期以来都是一个贫煤国，为了发展我国的工业，“§Y宁肯少活二十年，拼命也要拿下大煤田§!”"
+
+ ITA_patti_lateranensi_focus: "拉特兰条约"
+ ITA_patti_lateranensi_focus_desc: ""
  
  

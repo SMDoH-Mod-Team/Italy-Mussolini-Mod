@@ -29,4 +29,10 @@ opinion_modifiers = {
 	ita_diplomacy_focus_1 = {
 		value = 100
 	}
+	ITA_roman_question = {
+		value = -100
+	}
+	ITA_lateranensi_patti = {
+		value = 50
+	}
 }

@@ -1813,3 +1813,8 @@ SOM_British = {
 	color = rgb { 201 56 93 }
 	color_ui = rgb { 255 73 121 }
 }
+
+PAP_vaticanus = {
+	color = rgb { 255 255 183 }
+	color_ui = rgb { 255 255 183 }
+}

@@ -4208,13 +4208,16 @@ focus_tree = {
 	focus = {
 		id = ITA_moschettieri_del_duce
 		icon = GFX_focus_ITA_moschettieri_del_duce
-		prerequisite = { focus = ITA_preserve_army_traditions }
+		
 
-		dynamic = yes
+		prerequisite = { focus = ITA_a_bandits_war }
 
 		x = 0
 		y = 2
-		relative_position_id = ITA_preserve_army_traditions
+		relative_position_id = ITA_a_bandits_war
+		cost = 4
+		available = {
+		}
 		cost = 5
 		available = {
 		}
@@ -4225,6 +4228,9 @@ focus_tree = {
 			add_to_variable = { ITA_re_army_core_defence_factor = 0.05 }
 			add_to_variable = { ITA_re_modifier_army_sub_unit_militia_max_org_factor = 0.05 }
 			custom_effect_tooltip = ITA_moschettieri_del_duce_re_tt
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = unlock_propaganda_campaign_tt
+			unlock_decision_tooltip = ITA_propaganda_be_loyalty_musketeer_for_duce
 		}
 	}
 
@@ -4316,11 +4322,13 @@ focus_tree = {
 	focus = {
 		id = ITA_carica_di_isbuscenskij
 		icon = GFX_focus_ITA_cavalry_charge
-		prerequisite = { focus = ITA_a_bandits_war }
+		prerequisite = { focus = ITA_preserve_army_traditions }
+
+		dynamic = yes
 
 		x = 0
 		y = 2
-		relative_position_id = ITA_a_bandits_war
+		relative_position_id = ITA_preserve_army_traditions
 		cost = 4
 		available = {
 		}
@@ -24220,6 +24228,14 @@ focus_tree = {
 		cost = 5
 		completion_reward = {
 			add_ideas = idea_ITA_learn_form_foggia
+
+			if = {
+				limit = {
+					has_completed_focus = ITA_learn_form_torina
+				}
+				custom_effect_tooltip = unlock_propaganda_campaign_tt
+				unlock_decision_tooltip = ITA_propaganda_learn_form_foggia_milano
+			}
 		}
 	}
 
@@ -24233,6 +24249,13 @@ focus_tree = {
 		cost = 5
 		completion_reward = {
 			add_ideas = idea_ITA_learn_form_torina
+			if = {
+				limit = {
+					has_completed_focus = ITA_learn_form_foggia
+				}
+				custom_effect_tooltip = unlock_propaganda_campaign_tt
+				unlock_decision_tooltip = ITA_propaganda_learn_form_foggia_milano
+			}
 		}
 	}
 
@@ -28253,6 +28276,44 @@ focus_tree = {
 			effect_tooltip = {
 				add_ideas = idea_ITA_CHI_economy_cooperation_organization
 			}
+		}
+	}
+
+
+
+	focus = {
+		id = ITA_patti_lateranensi_focus
+
+		icon = GFX_focus_generic_treaty
+
+		cost = 2
+
+		relative_position_id = ITA_flotta_d_evasione
+		x = 1
+		y = 2
+
+		completion_reward = {
+			PAP = {
+				set_cosmetic_tag = PAP_vaticanus
+				remove_opinion_modifier = {
+					target = ITA
+					modifier = ITA_roman_question
+				}
+				add_opinion_modifier = {
+					target = ITA
+					modifier = ITA_lateranensi_patti
+				}
+				break_embargo = ITA
+			}
+			remove_opinion_modifier = {
+				target = PAP
+				modifier = ITA_roman_question
+			}
+			add_opinion_modifier = {
+				target = PAP
+				modifier = ITA_lateranensi_patti
+			}
+			give_guarantee = PAP
 		}
 	}
 

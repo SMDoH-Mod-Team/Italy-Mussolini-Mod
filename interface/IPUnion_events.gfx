@@ -8,4 +8,8 @@ spriteTypes = {
 		textureFile = "gfx/event_pictures/report_event_generic_mussolini_in_event.dds"
 		legacy_lazy_load = no
 	}
+	spriteType = {
+		name = "GFX_report_IPUnion_2"
+		textureFile = "gfx/event_pictures/report_event_ciano_50years_nochange.png"
+	}
 }

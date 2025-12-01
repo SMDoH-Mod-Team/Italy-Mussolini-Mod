@@ -1010,6 +1010,10 @@ add_equipment_to_stockpile = {
 
 ### VARIANTS ###
 # 1936 Start #
+#focus
+
+complete_national_focus = ITA_patti_lateranensi_focus
+
 #plane variants
 if = {
 	limit = { NOT = { has_dlc = "By Blood Alone" } }

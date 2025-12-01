@@ -1,0 +1,39 @@
+capital = 2
+
+
+set_research_slots = 1
+set_stability = 0.6
+set_war_support = 0.5
+#set_convoys = 175
+
+recruit_character = PAP_papa_pio_xi
+
+recruit_character = PAP_papa_pio_xii
+
+set_research_slots = 1
+
+set_technology = {
+	infantry_weapons = 1
+	tech_mountaineers = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_recon = 1
+	tech_trucks = 1
+	gw_artillery = 1
+	trench_warfare = 1
+	fuel_silos = 1
+	synth_oil_experiments = 1
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1922.2.6"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 12
+	fascism = 5
+	communism = 3
+	neutrality = 80
+}
