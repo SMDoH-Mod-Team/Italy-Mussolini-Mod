@@ -28294,7 +28294,10 @@ focus_tree = {
 
 		completion_reward = {
 			PAP = {
-				set_cosmetic_tag = PAP_vaticanus
+				custom_effect_tooltip = ITA_lateranesi_patti_tt
+				hidden_effect = {
+					set_cosmetic_tag = PAP_vaticanus
+				}
 				remove_opinion_modifier = {
 					target = ITA
 					modifier = ITA_roman_question
