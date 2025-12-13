@@ -1,12 +1,12 @@
 @POSTER_LEFT_X = 10
 @POSTER_CENTER_X = 170
 @POSTER_RIGHT_X = 325
-@BACKGROUND_X = -3 #Should be 0 but the UI moves to the right once after activating GUI or taking a dec
+@BACKGROUND_X = 6 #Should be 0 but the UI moves to the right once after activating GUI or taking a dec
 @BACKGROUND_Y = 0
 @POSTERS_Y = 0
 @TEXT_LEFT_X = 15
 @TEXT_CENTER_X = 170
-@TEXT_RIGHT_X = 315
+@TEXT_RIGHT_X = 330
 @TEXTS_Y = 215
 
 guiTypes = {

@@ -941,6 +941,63 @@
 					}
 				}
 			}
+			else_if = {
+				limit = {
+					original_tag = ITA
+				}
+				effect_tooltip = {
+					CHI = {
+						620 = {
+							add_dynamic_modifier = {
+								modifier = CHI_china_yangtze_insdustry_blet
+								scope = CHI
+							}
+						}
+						1036 = {
+							add_dynamic_modifier = {
+								modifier = CHI_china_yangtze_insdustry_blet
+								scope = CHI
+							}
+						}
+						600 = {
+							add_dynamic_modifier = {
+								modifier = CHI_china_yangtze_insdustry_blet
+								scope = CHI
+							}
+						}
+						606 = {
+							add_dynamic_modifier = {
+								modifier = CHI_china_yangtze_insdustry_blet
+								scope = CHI
+							}
+						}
+						749 = {
+							add_dynamic_modifier = {
+								modifier = CHI_china_yangtze_insdustry_blet
+								scope = CHI
+							}
+						}
+						1035 = {
+							add_dynamic_modifier = {
+								modifier = CHI_china_yangtze_insdustry_blet
+								scope = CHI
+							}
+						}
+						1034 = {
+							add_dynamic_modifier = {
+								modifier = CHI_china_yangtze_insdustry_blet
+								scope = CHI
+							}
+						}
+						613 = {
+							add_dynamic_modifier = {
+								modifier = CHI_china_yangtze_insdustry_blet
+								scope = CHI
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 
@@ -1018,6 +1075,8 @@
 				controls_state = 1061
 			}
 		}
+
+		cost = 2
 
 		joint_trigger = ITA_CHI_trigger
 
