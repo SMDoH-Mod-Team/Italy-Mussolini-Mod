@@ -1076,7 +1076,7 @@
 			}
 		}
 
-		cost = 2
+		cost = 5
 
 		joint_trigger = ITA_CHI_trigger
 
