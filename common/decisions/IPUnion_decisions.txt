@@ -1864,3 +1864,9 @@ political_actions = {
 		}
 	}
 }
+
+ITA_inner_circle = {
+	debug_close_comrade_graziani = {
+		
+	}
+}

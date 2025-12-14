@@ -162,3 +162,10 @@ china_italy_cooperation = {
 		
 	}
 }
+ITA_inner_circle = {
+	icon = x
+	picture = x
+	allowed = {
+		
+	}
+}
