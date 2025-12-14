@@ -1,0 +1,42 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_inner_circle_leader_benito_mussolini"
+		texturefile = "gfx/interface/inner_circle/inner_circle_leader_benito_mussolini.png"
+	}
+	spriteType = {
+		name = "GFX_IPUnion_ascended_advisors_unappointed_frame"
+		texturefile = "gfx/interface/inner_circle/IPUnion_ascended_advisors_unappointed_frame.png"
+	}
+	spriteType = {
+		name = "GFX_ascended_advisors_place_holder"
+		texturefile = "gfx/interface/inner_circle/_available_small.png"
+	}
+	spriteType = {
+		name = "GFX_rodolfo_graziani_available_small"
+		texturefile = "gfx/interface/inner_circle/rodolfo_graziani_available_small.png"
+	}
+	spriteType = {
+		name = "GFX_italo_balbo_available_small"
+		texturefile = "gfx/interface/inner_circle/italo_balbo_available_small.png"
+	}
+	spriteType = {
+		name = "GFX_dino_grandi_available_small"
+		texturefile = "gfx/interface/inner_circle/dino_grandi_available_small.png"
+	}
+	spriteType = {
+		name = "GFX_galeazzo_ciano_available_small"
+		texturefile = "gfx/interface/inner_circle/galeazzo_ciano_available_small.png"
+	}
+	spriteType = {
+		name = "GFX_renato_ricci_available_small"
+		texturefile = "gfx/interface/inner_circle/renato_ricci_available_small.png"
+	}
+	spriteType = {
+		name = "GFX_giuseppe_bottai_available_small"
+		texturefile = "gfx/interface/inner_circle/giuseppe_bottai_available_small.png"
+	}
+	spriteType = {
+		name = "GFX_giacomo_acerbo_available_small"
+		texturefile = "gfx/interface/inner_circle/giacomo_acerbo_available_small.png"
+	}
+}

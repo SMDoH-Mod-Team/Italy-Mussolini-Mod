@@ -15,3 +15,15 @@ defined_text = {
 		localization_key = PNF_republic
 	}
 }
+defined_text = {
+	name = GetDuceName
+	text = {
+		trigger = {
+			has_country_leader = {
+				ruling_only = yes
+				character = ITA_benito_mussolini
+			}
+		}
+		localization_key = ITA_benito_mussolini
+	}
+}

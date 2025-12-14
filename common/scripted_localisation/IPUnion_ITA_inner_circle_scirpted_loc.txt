@@ -1,0 +1,155 @@
+defined_text = {
+	name = GetItalyAscendedAdvisorName1
+	text = { #NO ONE
+		trigger = {
+			check_variable = { ITA_ascended_advisor_1 = 0 }	
+		}
+		localization_key = empty_key
+	}
+	text = {
+		trigger = {
+			check_variable = { ITA_ascended_advisor_1 = 1 }
+		}
+		localization_key = ITA_rodolfo_graziani
+	}
+	text = {
+		trigger = {
+			check_variable = { ITA_ascended_advisor_1 = 2 }
+		}
+		localization_key = ITA_italo_balbo
+	}
+	text = {
+		trigger = {
+			check_variable = { ITA_ascended_advisor_1 = 3 }
+		}
+		localization_key = ITA_dino_grandi
+	}
+	text = {
+		trigger = {
+			check_variable = { ITA_ascended_advisor_1 = 4 }
+		}
+		localization_key = GER_heinrich_himmler
+	}
+	text = {
+		trigger = {
+			check_variable = { ITA_ascended_advisor_1 = 5 }
+		}
+		localization_key = GER_joseph_goebbels
+	}
+	text = {
+		trigger = {
+			check_variable = { ITA_ascended_advisor_1 = 6 }
+		}
+		localization_key = GER_rudolf_hess
+	}
+	text = {
+		trigger = {
+			check_variable = { ITA_ascended_advisor_1 = 7 }
+		}
+		localization_key = GER_martin_bormann
+	}
+}
+
+defined_text = {
+	name = GetItalyAscendedAdvisorName2
+	text = { #NO ONE
+		trigger = {
+			check_variable = { ITA_ascended_advisor_2 = 0 }	
+		}
+		localization_key = empty_key
+	}
+	text = {
+		trigger = {
+			check_variable = { ITA_ascended_advisor_2 = 1 }
+		}
+		localization_key = ITA_rodolfo_graziani
+	}
+	text = {
+		trigger = {
+			check_variable = { ITA_ascended_advisor_2 = 2 }
+		}
+		localization_key = ITA_italo_balbo
+	}
+	text = {
+		trigger = {
+			check_variable = { ITA_ascended_advisor_2 = 3 }
+		}
+		localization_key = ITA_dino_grandi
+	}
+	text = {
+		trigger = {
+			check_variable = { ITA_ascended_advisor_2 = 4 }
+		}
+		localization_key = GER_heinrich_himmler
+	}
+	text = {
+		trigger = {
+			check_variable = { ITA_ascended_advisor_2 = 5 }
+		}
+		localization_key = GER_joseph_goebbels
+	}
+	text = {
+		trigger = {
+			check_variable = { ITA_ascended_advisor_2 = 6 }
+		}
+		localization_key = GER_rudolf_hess
+	}
+	text = {
+		trigger = {
+			check_variable = { ITA_ascended_advisor_2 = 7 }
+		}
+		localization_key = GER_martin_bormann
+	}
+}
+
+defined_text = {
+	name = GetItalyAscendedAdvisorName3
+	text = { #NO ONE
+		trigger = {
+			check_variable = { ITA_ascended_advisor_3 = 0 }	
+		}
+		localization_key = empty_key
+	}
+	text = {
+		trigger = {
+			check_variable = { ITA_ascended_advisor_3 = 1 }
+		}
+		localization_key = ITA_rodolfo_graziani
+	}
+	text = {
+		trigger = {
+			check_variable = { ITA_ascended_advisor_3 = 2 }
+		}
+		localization_key = ITA_italo_balbo
+	}
+	text = {
+		trigger = {
+			check_variable = { ITA_ascended_advisor_3 = 3 }
+		}
+		localization_key = ITA_dino_grandi
+	}
+	text = {
+		trigger = {
+			check_variable = { ITA_ascended_advisor_3 = 4 }
+		}
+		localization_key = GER_heinrich_himmler
+	}
+	text = {
+		trigger = {
+			check_variable = { ITA_ascended_advisor_3 = 5 }
+		}
+		localization_key = GER_joseph_goebbels
+	}
+	text = {
+		trigger = {
+			check_variable = { ITA_ascended_advisor_3 = 6 }
+		}
+		localization_key = GER_rudolf_hess
+	}
+	text = {
+		trigger = {
+			check_variable = { ITA_ascended_advisor_3 = 7 }
+		}
+		localization_key = GER_martin_bormann
+	}
+}

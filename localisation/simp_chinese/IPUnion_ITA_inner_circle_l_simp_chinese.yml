@@ -1,0 +1,6 @@
+﻿l_simp_chinese:
+ ITA_duce_title_text: "领袖"
+ ITA_duce_tooltip: "领袖§Y[GetDuceName]§!。"
+ ITA_ascended_advisor_1_name_text: "§Y[GetItalyAscendedAdvisorName1]§!"
+ ITA_ascended_advisor_2_name_text: "§Y[GetItalyAscendedAdvisorName2]§!"
+ ITA_ascended_advisor_3_name_text: "§Y[GetItalyAscendedAdvisorName3]§!"
