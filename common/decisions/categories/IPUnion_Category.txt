@@ -162,7 +162,7 @@ china_italy_cooperation = {
 		
 	}
 }
-ITA_inner_circle = {
+ITA_inner_circle_debug_decisions = {
 	icon = x
 	picture = x
 	allowed = {

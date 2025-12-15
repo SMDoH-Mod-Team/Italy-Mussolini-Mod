@@ -102,6 +102,12 @@ set_variable = { ITA_missiolinis_fighters_to_produce = 300 } #Used by Strengthen
 set_variable = { ITA_missiolinis_bombers_to_produce = 300 } #Used by Strengthened the Airforce Missiolini
 set_variable = { ITA_missiolinis_aircraft_to_produce = 300 } #Unused yet. Might be used in the future by Strengthened the Airforce Missiolini
 
+## UI
+
+set_variable = { ITA_ascended_advisor_1 = 0 } #Ascended Advisor Portrait
+set_variable = { ITA_ascended_advisor_2 = 0 } #Ascended Advisor Portrait
+set_variable = { ITA_ascended_advisor_3 = 0 } 
+
 
 ############# MILITIA CAP ###############
 set_variable = { ITA_militias_cap = 12 } #WARNING THIS VALUE NEEDS TOP MATCH THE division_cap value for the blackshirt template in the OOB

@@ -174,7 +174,7 @@ guiTypes = {
 					orientation = center
 					position = { x=0	 y=@ASCENDED_ADVISOR_FRAME_POS_Y }
 					centerPosition = yes
-					context_aware_tooltip = [GetAscendedAdvisorTrait1]
+					context_aware_tooltip = [GetItalyAscendedAdvisorTrait1]
 				}
 
 				#PORTRAIT
@@ -195,7 +195,7 @@ guiTypes = {
 				orientation = center
 				position = { x=0	 y=71 }
 				centerposition = yes
-				context_aware_tooltip = [GetAscendedAdvisorTrait1]
+				context_aware_tooltip = [GetItalyAscendedAdvisorTrait1]
 			} 
 
 			#ASCENDED ADVISOR NAME
@@ -217,7 +217,7 @@ guiTypes = {
 				orientation = center
 				position = { x=0	 y=102 }
 				centerposition = yes
-				context_aware_tooltip = [GetAscendedAdvisorTrait1]
+				context_aware_tooltip = [GetItalyAscendedAdvisorTrait1]
 			}
 
 			#TRAIT
@@ -226,7 +226,7 @@ guiTypes = {
 				orientation = center_down
 				position = { x = @ASCENDED_ADVISOR_TEXT_POS_X y = @ASCENDED_ADVISOR_TEXT_POS_Y }
 				font = "hoi_18mbs"
-				context_aware_text = [GetAscendedAdvisorTraitName1]
+				context_aware_text = [GetItalyAscendedAdvisorTraitName1]
 				format = center
 				maxWidth = 150
 				fixedsize = yes
@@ -255,7 +255,7 @@ guiTypes = {
 					orientation = center
 					position = { x=0	 y=@ASCENDED_ADVISOR_FRAME_POS_Y }
 					centerPosition = yes
-					context_aware_tooltip = [GetAscendedAdvisorTrait2]
+					context_aware_tooltip = [GetItalyAscendedAdvisorTrait2]
 				}
 
 				#PORTRAIT
@@ -276,7 +276,7 @@ guiTypes = {
 				orientation = center
 				position = { x=0	 y=71 }
 				centerposition = yes
-				context_aware_tooltip = [GetAscendedAdvisorTrait2]
+				context_aware_tooltip = [GetItalyAscendedAdvisorTrait2]
 			}
 
 			#NAME
@@ -298,7 +298,7 @@ guiTypes = {
 				orientation = center
 				position = { x=0	 y=102 }
 				centerposition = yes
-				context_aware_tooltip = [GetAscendedAdvisorTrait2]
+				context_aware_tooltip = [GetItalyAscendedAdvisorTrait2]
 			}
 
 			#TRAIT
@@ -307,7 +307,7 @@ guiTypes = {
 				orientation = center_down
 				position = { x = @ASCENDED_ADVISOR_TEXT_POS_X y = @ASCENDED_ADVISOR_TEXT_POS_Y }
 				font = "hoi_18mbs"
-				context_aware_text = [GetAscendedAdvisorTraitName2]
+				context_aware_text = [GetItalyAscendedAdvisorTraitName2]
 				format = center
 				maxWidth = 150
 				alwaystransparent = yes
@@ -335,7 +335,7 @@ guiTypes = {
 					orientation = center
 					position = { x=0	 y=@ASCENDED_ADVISOR_FRAME_POS_Y }
 					centerPosition = yes
-					context_aware_tooltip = [GetAscendedAdvisorTrait3]
+					context_aware_tooltip = [GetItalyAscendedAdvisorTrait3]
 				}
 
 				#PORTRAIT
@@ -356,7 +356,7 @@ guiTypes = {
 				orientation = center
 				position = { x=0	 y=71 }
 				centerposition = yes
-				context_aware_tooltip = [GetAscendedAdvisorTrait3]
+				context_aware_tooltip = [GetItalyAscendedAdvisorTrait3]
 			}
 
 			#NAME
@@ -378,7 +378,7 @@ guiTypes = {
 				orientation = center
 				position = { x=0	 y=102 }
 				centerposition = yes
-				context_aware_tooltip = [GetAscendedAdvisorTrait3]
+				context_aware_tooltip = [GeItalytAscendedAdvisorTrait3]
 			}
 
 			#TRAIT
@@ -387,7 +387,7 @@ guiTypes = {
 				orientation = center_down
 				position = { x = @ASCENDED_ADVISOR_TEXT_POS_X y = @ASCENDED_ADVISOR_TEXT_POS_Y }
 				font = "hoi_18mbs"
-				context_aware_text = [GetAscendedAdvisorTraitName3]
+				context_aware_text = [GetItalyAscendedAdvisorTraitName3]
 				format = center
 				maxWidth = 150
 				alwaystransparent = yes

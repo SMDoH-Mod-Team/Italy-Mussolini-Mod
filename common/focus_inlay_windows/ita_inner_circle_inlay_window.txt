@@ -27,16 +27,16 @@ ita_inner_circle_inlay_window = {
             GFX_portrait_ITA_dino_grandi = {
                 check_variable = { ITA_ascended_advisor_1 = 3 }
             }
-            GFX_portrait_GER_heinrich_himmler = {
+            GFX_portrait_ITA_galeazzo_ciano = {
                 check_variable = { ITA_ascended_advisor_1 = 4 }
             }
-            GFX_portrait_GER_joseph_goebbels = {
+            GFX_portrait_ITA_renato_ricci = {
                 check_variable = { ITA_ascended_advisor_1 = 5 }
             }
-            GFX_portrait_GER_rudolf_hess = {
+            GFX_portrait_ITA_giuseppe_bottai = {
                 check_variable = { ITA_ascended_advisor_1 = 6 }
             }
-            GFX_portrait_GER_martin_bormann = {
+            GFX_portrait_ITA_giacomo_acerbo = {
                 check_variable = { ITA_ascended_advisor_1 = 7 }
             }
         }
@@ -53,16 +53,16 @@ ita_inner_circle_inlay_window = {
             GFX_portrait_ITA_dino_grandi = {
                 check_variable = { ITA_ascended_advisor_2 = 3 }
             }
-            GFX_portrait_GER_heinrich_himmler = {
+            GFX_portrait_ITA_galeazzo_ciano = {
                 check_variable = { ITA_ascended_advisor_2 = 4 }
             }
-            GFX_portrait_GER_joseph_goebbels = {
+            GFX_portrait_ITA_renato_ricci = {
                 check_variable = { ITA_ascended_advisor_2 = 5 }
             }
-            GFX_portrait_GER_rudolf_hess = {
+            GFX_portrait_ITA_giuseppe_bottai = {
                 check_variable = { ITA_ascended_advisor_2 = 6 }
             }
-            GFX_portrait_GER_martin_bormann = {
+            GFX_portrait_ITA_giacomo_acerbo = {
                 check_variable = { ITA_ascended_advisor_2 = 7 }
             }
         }
@@ -79,16 +79,16 @@ ita_inner_circle_inlay_window = {
             GFX_portrait_ITA_dino_grandi = {
                 check_variable = { ITA_ascended_advisor_3 = 3 }
             }
-            GFX_portrait_GER_heinrich_himmler = {
+            GFX_portrait_ITA_galeazzo_ciano = {
                 check_variable = { ITA_ascended_advisor_3 = 4 }
             }
-            GFX_portrait_GER_joseph_goebbels = {
+            GFX_portrait_ITA_renato_ricci = {
                 check_variable = { ITA_ascended_advisor_3 = 5 }
             }
-            GFX_portrait_GER_rudolf_hess = {
+            GFX_portrait_ITA_giuseppe_bottai = {
                 check_variable = { ITA_ascended_advisor_3 = 6 }
             }
-            GFX_portrait_GER_martin_bormann = {
+            GFX_portrait_ITA_giacomo_acerbo = {
                 check_variable = { ITA_ascended_advisor_3 = 7 }
             }
         }
@@ -113,113 +113,113 @@ ita_inner_circle_inlay_window = {
         }
 
         #ADVISOR
-        advisor_todt_portrait = {
-            GFX_fritz_todt_selected_small = {
+        advisor_graziani_portrait = {
+            GFX_rodolfo_graziani_selected_small = {
                 OR = {
                     check_variable = { ITA_ascended_advisor_1 = 1 }
                     check_variable = { ITA_ascended_advisor_2 = 1 }
                     check_variable = { ITA_ascended_advisor_3 = 1 }
                 }
             }
-            GFX_fritz_todt_unavailable_small = {
+            GFX_rodolfo_graziani_unavailable_small = {
                 check_variable = { ITA_ascended_advisor_1 = 0 compare = not_equals }
                 check_variable = { ITA_ascended_advisor_2 = 0 compare = not_equals }
                 check_variable = { ITA_ascended_advisor_3 = 0 compare = not_equals }
             }
-            GFX_fritz_todt_available_small = yes
+            GFX_rodolfo_graziani_available_small = yes
         }
-        advisor_speer_portrait = {
-            GFX_albert_speer_selected_small = {
+        advisor_balbo_portrait = {
+            GFX_italo_balbo_selected_small = {
                 OR = {
                     check_variable = { ITA_ascended_advisor_1 = 2 }
                     check_variable = { ITA_ascended_advisor_2 = 2 }
                     check_variable = { ITA_ascended_advisor_3 = 2 }
                 }
             }
-            GFX_albert_speer_unavailable_small = {
+            GFX_italo_balbo_unavailable_small = {
                 check_variable = { ITA_ascended_advisor_1 = 0 compare = not_equals }
                 check_variable = { ITA_ascended_advisor_2 = 0 compare = not_equals }
                 check_variable = { ITA_ascended_advisor_3 = 0 compare = not_equals }
             }
-            GFX_albert_speer_available_small = yes
+            GFX_italo_balbo_available_small = yes
         }
-        advisor_goring_portrait = {
-            GFX_hermann_goring_selected_small = {
+        advisor_grandi_portrait = {
+            GFX_dino_grandi_selected_small = {
                 OR = {
                     check_variable = { ITA_ascended_advisor_1 = 3 }
                     check_variable = { ITA_ascended_advisor_2 = 3 }
                     check_variable = { ITA_ascended_advisor_3 = 3 }
                 }
             }
-            GFX_hermann_goring_unavailable_small = {
+            GFX_dino_grandi_unavailable_small = {
                 check_variable = { ITA_ascended_advisor_1 = 0 compare = not_equals }
                 check_variable = { ITA_ascended_advisor_2 = 0 compare = not_equals }
                 check_variable = { ITA_ascended_advisor_3 = 0 compare = not_equals }
             }
-            GFX_hermann_goring_available_small = yes
+            GFX_dino_grandi_available_small = yes
         }
-        advisor_himmler_portrait = {
-            GFX_heinrich_himmler_selected_small = {
+        advisor_ciano_portrait = {
+            GFX_galeazzo_ciano_selected_small = {
                 OR = {
                     check_variable = { ITA_ascended_advisor_1 = 4 }
                     check_variable = { ITA_ascended_advisor_2 = 4 }
                     check_variable = { ITA_ascended_advisor_3 = 4 }
                 }
             }
-            GFX_heinrich_himmler_unavailable_small = {
+            GFX_galeazzo_ciano_unavailable_small = {
                 check_variable = { ITA_ascended_advisor_1 = 0 compare = not_equals }
                 check_variable = { ITA_ascended_advisor_2 = 0 compare = not_equals }
                 check_variable = { ITA_ascended_advisor_3 = 0 compare = not_equals }
             }
-            GFX_heinrich_himmler_available_small = yes
+            GFX_galeazzo_ciano_available_small = yes
         }
-        advisor_goebbels_portrait = {
-            GFX_joseph_goebbels_selected_small = {
+        advisor_ricci_portrait = {
+            GFX_renato_ricci_selected_small = {
                 OR = {
                     check_variable = { ITA_ascended_advisor_1 = 5 }
                     check_variable = { ITA_ascended_advisor_2 = 5 }
                     check_variable = { ITA_ascended_advisor_3 = 5 }
                 }
             }
-            GFX_joseph_goebbels_unavailable_small = {
+            GFX_renato_ricci_unavailable_small = {
                 check_variable = { ITA_ascended_advisor_1 = 0 compare = not_equals }
                 check_variable = { ITA_ascended_advisor_2 = 0 compare = not_equals }
                 check_variable = { ITA_ascended_advisor_3 = 0 compare = not_equals }
             }
-            GFX_joseph_goebbels_available_small = yes
+            GFX_renato_ricci_available_small = yes
         }
-        advisor_hess_portrait = {
-            GFX_rudolf_hess_fo_small = {
+        advisor_bottai_portrait = {
+            GFX_giuseppe_bottai_fo_small = {
                 has_country_flag = flight_of_hess
             }
-            GFX_rudolf_hess_selected_small = {
+            GFX_giuseppe_bottai_selected_small = {
                 OR = {
                     check_variable = { ITA_ascended_advisor_1 = 6 }
                     check_variable = { ITA_ascended_advisor_2 = 6 }
                     check_variable = { ITA_ascended_advisor_3 = 6 }
                 }
             }
-            GFX_rudolf_hess_unavailable_small = {
+            GFX_giuseppe_bottai_unavailable_small = {
                 check_variable = { ITA_ascended_advisor_1 = 0 compare = not_equals }
                 check_variable = { ITA_ascended_advisor_2 = 0 compare = not_equals }
                 check_variable = { ITA_ascended_advisor_3 = 0 compare = not_equals }
             }
-            GFX_rudolf_hess_available_small = yes
+            GFX_giuseppe_bottai_available_small = yes
         }
-        advisor_bormann_portrait = {
-            GFX_martin_bormann_selected_small = {
+        advisor_acerbo_portrait = {
+            GFX_giacomo_acerbo_selected_small = {
                 OR = {
                     check_variable = { ITA_ascended_advisor_1 = 7 }
                     check_variable = { ITA_ascended_advisor_2 = 7 }
                     check_variable = { ITA_ascended_advisor_3 = 7 }
                 }
             }
-            GFX_martin_bormann_unavailable_small = {
+            GFX_giacomo_acerbo_unavailable_small = {
                 check_variable = { ITA_ascended_advisor_1 = 0 compare = not_equals }
                 check_variable = { ITA_ascended_advisor_2 = 0 compare = not_equals }
                 check_variable = { ITA_ascended_advisor_3 = 0 compare = not_equals }
             }
-            GFX_martin_bormann_available_small = yes
+            GFX_giacomo_acerbo_available_small = yes
         }
     }
 }

@@ -1,0 +1,124 @@
+add_namespace = ITA_inner_circle
+
+country_event = {
+	id = ITA_inner_circle.1
+	title = ITA_inner_circle.1.t
+	desc = ITA_inner_circle.1.desc
+
+	#picture = "[GetItalyAscendingAdvisorPortrait]"
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = ITA_inner_circle_event_pending_flag
+	}
+
+	option = {
+		name = ITA_inner_circle.1.a
+
+		ITA_remove_replaced_advisor_1_effects = yes
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		set_variable = { ITA_ascended_advisor_1 = ITA_ascending_advisor }
+		ITA_add_replacing_advisor_effects = yes
+
+		hidden_effect = {
+			clear_variable = ITA_ascending_advisor
+			clr_country_flag = ITA_inner_circle_event_pending_flag
+		}
+	}
+
+	option = {
+		name = ITA_inner_circle.1.b
+
+		ITA_remove_replaced_advisor_2_effects = yes
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		set_variable = { ITA_ascended_advisor_2 = ITA_ascending_advisor }
+		ITA_add_replacing_advisor_effects = yes
+
+		hidden_effect = {
+			clear_variable = ITA_ascending_advisor
+			clr_country_flag = ITA_inner_circle_event_pending_flag
+		}
+	}
+
+	option = {
+		name = ITA_inner_circle.1.c
+
+		ITA_remove_replaced_advisor_3_effects = yes
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		set_variable = { ITA_ascended_advisor_3 = ITA_ascending_advisor }
+		ITA_add_replacing_advisor_effects = yes
+
+		hidden_effect = {
+			clear_variable = ITA_ascending_advisor
+			clr_country_flag = ITA_inner_circle_event_pending_flag
+		}
+	}
+
+	option = {
+		name = ITA_inner_circle.1.d
+
+		if = {
+			limit = {
+				check_variable = { ITA_ascending_advisor = 1 }
+			}
+			uncomplete_national_focus = {
+				focus = ITA_ascension_of_graziani
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ITA_ascending_advisor = 2 }
+			}
+			uncomplete_national_focus = {
+				focus = ITA_ascension_of_balbo
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ITA_ascending_advisor = 3 }
+			}
+			uncomplete_national_focus = {
+				focus = ITA_ascension_of_grandi
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ITA_ascending_advisor = 3 }
+			}
+			uncomplete_national_focus = {
+				focus = ITA_ascension_of_ciano
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ITA_ascending_advisor = 3 }
+			}
+			uncomplete_national_focus = {
+				focus = ITA_ascension_of_ricci
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ITA_ascending_advisor = 3 }
+			}
+			uncomplete_national_focus = {
+				focus = ITA_ascension_of_bottai
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = { ITA_ascending_advisor = 3 }
+			}
+			uncomplete_national_focus = {
+				focus = ITA_ascension_of_acerbo
+			}
+		}
+	}
+}
