@@ -1,0 +1,8 @@
+ITA_inner_circle_is_ascension_cd_over = {
+	NOT = {
+		has_country_flag = {
+			flag = ITA_inner_circle_cd_flag
+			days < 60
+		}
+	}
+}

@@ -39,4 +39,60 @@ spriteTypes = {
 		name = "GFX_giacomo_acerbo_available_small"
 		texturefile = "gfx/interface/inner_circle/giacomo_acerbo_available_small.png"
 	}
+	spriteType = {
+		name = "GFX_rodolfo_graziani_selected_small"
+		texturefile = "gfx/interface/inner_circle/rodolfo_graziani_selected_small.png"
+	}
+	spriteType = {
+		name = "GFX_italo_balbo_selected_small"
+		texturefile = "gfx/interface/inner_circle/italo_balbo_selected_small.png"
+	}
+	spriteType = {
+		name = "GFX_dino_grandi_selected_small"
+		texturefile = "gfx/interface/inner_circle/dino_grandi_selected_small.png"
+	}
+	spriteType = {
+		name = "GFX_galeazzo_ciano_selected_small"
+		texturefile = "gfx/interface/inner_circle/galeazzo_ciano_selected_small.png"
+	}
+	spriteType = {
+		name = "GFX_renato_ricci_selected_small"
+		texturefile = "gfx/interface/inner_circle/renato_ricci_selected_small.png"
+	}
+	spriteType = {
+		name = "GFX_giuseppe_bottai_selected_small"
+		texturefile = "gfx/interface/inner_circle/giuseppe_bottai_selected_small.png"
+	}
+	spriteType = {
+		name = "GFX_giacomo_acerbo_selected_small"
+		texturefile = "gfx/interface/inner_circle/giacomo_acerbo_selected_small.png"
+	}
+    spriteType = {
+		name = "GFX_rodolfo_graziani_unavailable_small"
+		texturefile = "gfx/interface/inner_circle/rodolfo_graziani_unavailable_small.png"
+	}
+	spriteType = {
+		name = "GFX_italo_balbo_unavailable_small"
+		texturefile = "gfx/interface/inner_circle/italo_balbo_unavailable_small.png"
+	}
+	spriteType = {
+		name = "GFX_dino_grandi_unavailable_small"
+		texturefile = "gfx/interface/inner_circle/dino_grandi_unavailable_small.png"
+	}
+	spriteType = {
+		name = "GFX_galeazzo_ciano_unavailable_small"
+		texturefile = "gfx/interface/inner_circle/galeazzo_ciano_unavailable_small.png"
+	}
+	spriteType = {
+		name = "GFX_renato_ricci_unavailable_small"
+		texturefile = "gfx/interface/inner_circle/renato_ricci_unavailable_small.png"
+	}
+	spriteType = {
+		name = "GFX_giuseppe_bottai_unavailable_small"
+		texturefile = "gfx/interface/inner_circle/giuseppe_bottai_unavailable_small.png"
+	}
+	spriteType = {
+		name = "GFX_giacomo_acerbo_unavailable_small"
+		texturefile = "gfx/interface/inner_circle/giacomo_acerbo_unavailable_small.png"
+	}
 }

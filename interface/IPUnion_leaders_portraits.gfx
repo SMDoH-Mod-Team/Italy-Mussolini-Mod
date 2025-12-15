@@ -1,0 +1,18 @@
+spriteTypes = {
+	spriteType = {
+		name = GFX_portrait_ITA_galeazzo_ciano
+		texturefile = "gfx/leaders/ITA/portrait_ITA_galeazzo_ciano.png"
+	}
+	spriteType = {
+		name = GFX_portrait_ITA_giacomo_acerbo
+		texturefile = "gfx/leaders/ITA/portrait_ITA_giacomo_acerbo.png"
+	}
+	spriteType = {
+		name = GFX_portrait_ITA_giuseppe_bottai
+		texturefile = "gfx/leaders/ITA/portrait_ITA_giuseppe_bottai.png"
+	}
+	spriteType = {
+		name = GFX_portrait_ITA_renato_ricci
+		texturefile = "gfx/leaders/ITA/portrait_ITA_renato_ricci.png"
+	}
+}

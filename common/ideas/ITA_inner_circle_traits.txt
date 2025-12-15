@@ -1,0 +1,72 @@
+ideas = {
+	hidden_ideas = {
+		ITA_leader_trait_its_going_to_rain = {
+			name = ITA_leader_trait_its_going_to_rain
+			removal_cost = -1
+			allowed = {
+
+			}
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.025
+				army_speed_factor = 0.05
+				experience_loss_factor = 0.02
+			}
+		}
+		ITA_leader_trait_u_know_what_ur_doing = {
+			name = ITA_leader_trait_u_know_what_ur_doing
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.02
+				fascism_drift = 0.01
+			}
+		}
+		ITA_leader_trait_captialism_roader = {
+			name = ITA_leader_trait_captialism_roader
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.02
+				democratic_drift = 0.01
+				stability_factor = 0.15
+			}
+		}
+		ITA_leader_trait_steel_company = {
+			name = ITA_leader_trait_steel_company
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.01
+				fascism_drift = 0.01
+			}
+		}
+		ITA_leader_trait_machine_master = {
+			name = ITA_leader_trait_machine_master
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				fascism_drift = 0.01
+			}
+		}
+		ITA_leader_trait_literacy_leader = {
+			name = ITA_leader_trait_literacy_leader
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = 0.05
+				consumer_goods_factor = -0.01
+			}
+		}
+		ITA_leader_trait_revisionism = {
+			name = ITA_leader_trait_revisionism
+			removal_cost = -1
+
+			modifier = {
+				fascism_drift = 0.01
+				political_power_gain = 0.01
+			}
+		}
+	}
+}
