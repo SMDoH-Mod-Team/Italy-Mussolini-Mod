@@ -28706,7 +28706,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = ITA_ascension_of_grandi
+		id = ITA_ascension_of_ciano
 		relative_position_id = ITA_duceprincipio
 		icon = GFX_focus_GER_ascension_of_himmler
 		prerequisite = { focus = ITA_duceprincipio }
