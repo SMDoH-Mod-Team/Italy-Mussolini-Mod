@@ -93,6 +93,33 @@ ita_inner_circle_inlay_window = {
             }
         }
 
+        ascended_advisor_4_portrait = {
+            GFX_blank_leader_portrait = {
+                check_variable = { ITA_ascended_advisor_4 = 0 }
+            }
+            GFX_portrait_ITA_rodolfo_graziani = {
+       			check_variable = { ITA_ascended_advisor_4 = 1 }
+		    }
+            GFX_portrait_ITA_italo_balbo = {
+                check_variable = { ITA_ascended_advisor_4 = 2 }
+            }
+            GFX_portrait_ITA_dino_grandi = {
+                check_variable = { ITA_ascended_advisor_4 = 3 }
+            }
+            GFX_portrait_ITA_galeazzo_ciano = {
+                check_variable = { ITA_ascended_advisor_4 = 4 }
+            }
+            GFX_portrait_ITA_renato_ricci = {
+                check_variable = { ITA_ascended_advisor_4 = 5 }
+            }
+            GFX_portrait_ITA_giuseppe_bottai = {
+                check_variable = { ITA_ascended_advisor_4 = 6 }
+            }
+            GFX_portrait_ITA_giacomo_acerbo = {
+                check_variable = { ITA_ascended_advisor_4 = 7 }
+            }
+        }
+
         ITA_ascended_advisor_1_frame = {
             GFX_ascended_advisors_frame = {
                 check_variable = { ITA_ascended_advisor_1 = 0 compare = not_equals }	
@@ -111,6 +138,12 @@ ita_inner_circle_inlay_window = {
             }
             GFX_IPUnion_ascended_advisors_unappointed_frame = yes
         }
+        ITA_ascended_advisor_4_frame = {
+            GFX_ascended_advisors_frame = {
+                check_variable = { ITA_ascended_advisor_4 = 0 compare = not_equals }	
+            }
+            GFX_IPUnion_ascended_advisors_unappointed_frame = yes
+        }
 
         #ADVISOR
         advisor_graziani_portrait = {
@@ -119,12 +152,14 @@ ita_inner_circle_inlay_window = {
                     check_variable = { ITA_ascended_advisor_1 = 1 }
                     check_variable = { ITA_ascended_advisor_2 = 1 }
                     check_variable = { ITA_ascended_advisor_3 = 1 }
+                    check_variable = { ITA_ascended_advisor_4 = 1 }
                 }
             }
             GFX_rodolfo_graziani_unavailable_small = {
                 check_variable = { ITA_ascended_advisor_1 = 0 compare = not_equals }
                 check_variable = { ITA_ascended_advisor_2 = 0 compare = not_equals }
                 check_variable = { ITA_ascended_advisor_3 = 0 compare = not_equals }
+                check_variable = { ITA_ascended_advisor_4 = 0 compare = not_equals }
             }
             GFX_rodolfo_graziani_available_small = yes
         }
@@ -134,12 +169,14 @@ ita_inner_circle_inlay_window = {
                     check_variable = { ITA_ascended_advisor_1 = 2 }
                     check_variable = { ITA_ascended_advisor_2 = 2 }
                     check_variable = { ITA_ascended_advisor_3 = 2 }
+                    check_variable = { ITA_ascended_advisor_4 = 2 }
                 }
             }
             GFX_italo_balbo_unavailable_small = {
                 check_variable = { ITA_ascended_advisor_1 = 0 compare = not_equals }
                 check_variable = { ITA_ascended_advisor_2 = 0 compare = not_equals }
                 check_variable = { ITA_ascended_advisor_3 = 0 compare = not_equals }
+                check_variable = { ITA_ascended_advisor_4 = 0 compare = not_equals }
             }
             GFX_italo_balbo_available_small = yes
         }
@@ -149,12 +186,14 @@ ita_inner_circle_inlay_window = {
                     check_variable = { ITA_ascended_advisor_1 = 3 }
                     check_variable = { ITA_ascended_advisor_2 = 3 }
                     check_variable = { ITA_ascended_advisor_3 = 3 }
+                    check_variable = { ITA_ascended_advisor_4 = 3 }
                 }
             }
             GFX_dino_grandi_unavailable_small = {
                 check_variable = { ITA_ascended_advisor_1 = 0 compare = not_equals }
                 check_variable = { ITA_ascended_advisor_2 = 0 compare = not_equals }
                 check_variable = { ITA_ascended_advisor_3 = 0 compare = not_equals }
+                check_variable = { ITA_ascended_advisor_4 = 0 compare = not_equals }
             }
             GFX_dino_grandi_available_small = yes
         }
@@ -164,12 +203,14 @@ ita_inner_circle_inlay_window = {
                     check_variable = { ITA_ascended_advisor_1 = 4 }
                     check_variable = { ITA_ascended_advisor_2 = 4 }
                     check_variable = { ITA_ascended_advisor_3 = 4 }
+                    check_variable = { ITA_ascended_advisor_4 = 4 }
                 }
             }
             GFX_galeazzo_ciano_unavailable_small = {
                 check_variable = { ITA_ascended_advisor_1 = 0 compare = not_equals }
                 check_variable = { ITA_ascended_advisor_2 = 0 compare = not_equals }
                 check_variable = { ITA_ascended_advisor_3 = 0 compare = not_equals }
+                check_variable = { ITA_ascended_advisor_4 = 0 compare = not_equals }
             }
             GFX_galeazzo_ciano_available_small = yes
         }
@@ -179,12 +220,14 @@ ita_inner_circle_inlay_window = {
                     check_variable = { ITA_ascended_advisor_1 = 5 }
                     check_variable = { ITA_ascended_advisor_2 = 5 }
                     check_variable = { ITA_ascended_advisor_3 = 5 }
+                    check_variable = { ITA_ascended_advisor_4 = 5 }
                 }
             }
             GFX_renato_ricci_unavailable_small = {
                 check_variable = { ITA_ascended_advisor_1 = 0 compare = not_equals }
                 check_variable = { ITA_ascended_advisor_2 = 0 compare = not_equals }
                 check_variable = { ITA_ascended_advisor_3 = 0 compare = not_equals }
+                check_variable = { ITA_ascended_advisor_4 = 0 compare = not_equals }
             }
             GFX_renato_ricci_available_small = yes
         }
@@ -197,12 +240,14 @@ ita_inner_circle_inlay_window = {
                     check_variable = { ITA_ascended_advisor_1 = 6 }
                     check_variable = { ITA_ascended_advisor_2 = 6 }
                     check_variable = { ITA_ascended_advisor_3 = 6 }
+                    check_variable = { ITA_ascended_advisor_4 = 6 }
                 }
             }
             GFX_giuseppe_bottai_unavailable_small = {
                 check_variable = { ITA_ascended_advisor_1 = 0 compare = not_equals }
                 check_variable = { ITA_ascended_advisor_2 = 0 compare = not_equals }
                 check_variable = { ITA_ascended_advisor_3 = 0 compare = not_equals }
+                check_variable = { ITA_ascended_advisor_4 = 0 compare = not_equals }
             }
             GFX_giuseppe_bottai_available_small = yes
         }
@@ -212,12 +257,14 @@ ita_inner_circle_inlay_window = {
                     check_variable = { ITA_ascended_advisor_1 = 7 }
                     check_variable = { ITA_ascended_advisor_2 = 7 }
                     check_variable = { ITA_ascended_advisor_3 = 7 }
+                    check_variable = { ITA_ascended_advisor_4 = 7 }
                 }
             }
             GFX_giacomo_acerbo_unavailable_small = {
                 check_variable = { ITA_ascended_advisor_1 = 0 compare = not_equals }
                 check_variable = { ITA_ascended_advisor_2 = 0 compare = not_equals }
                 check_variable = { ITA_ascended_advisor_3 = 0 compare = not_equals }
+                check_variable = { ITA_ascended_advisor_4 = 0 compare = not_equals }
             }
             GFX_giacomo_acerbo_available_small = yes
         }

@@ -163,6 +163,61 @@ ITA_remove_replaced_advisor_3_effects = {
 	}
 }
 
+ITA_remove_replaced_advisor_4_effects = {
+	custom_effect_tooltip = {
+		localization_key = replace_ascended_advisor_tt
+		CHARACTER = [GetItalyAscendedAdvisorName4]
+		TRAIT = [GetItalyAscendedAdvisorTrait4]
+	}
+	hidden_effect = {
+		if = { # TODT REPLACED
+			limit = {
+				check_variable = { ITA_ascended_advisor_4 = 1 }
+			}
+			ITA_remove_graziani_effects = yes
+		}
+		else_if = { # SPEER REPLACED
+			limit = {
+				check_variable = { ITA_ascended_advisor_4 = 2 }
+			}
+			ITA_remove_speer_effects = yes
+		}
+		else_if = { # GÖRING REPLACED
+			limit = {
+				check_variable = { ITA_ascended_advisor_4 = 3 }
+			}
+			ITA_remove_goring_effects = yes
+		}
+		else_if = { # HIMMLER REPLACED
+			limit = {
+				check_variable = { ITA_ascended_advisor_4 = 4 }
+			}
+			ITA_remove_himmler_effects = yes
+		}
+		else_if = { # GOEBBELS REPLACED
+			limit = {
+				check_variable = { ITA_ascended_advisor_4 = 5 }
+			}
+			ITA_remove_goebbels_effects = yes
+		}
+		else_if = { # HESS REPLACED
+			limit = {
+				check_variable = { ITA_ascended_advisor_4 = 6 }
+			}
+			ITA_remove_hess_effects = yes
+		}
+		else_if = { # BORMANN REPLACED
+			limit = {
+				check_variable = { ITA_ascended_advisor_4 = 7 }
+			}
+			ITA_remove_bormann_effects = yes
+		}
+		else = {
+			log = "Something bad happened trying to remove advisor [?ITA_ascended_advisor_4] effects."
+		}
+	}
+}
+
 ITA_add_replacing_advisor_effects = {
 	if = { # TODT ADDED
 		limit = {

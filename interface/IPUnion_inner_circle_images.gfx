@@ -95,4 +95,14 @@ spriteTypes = {
 		name = "GFX_giacomo_acerbo_unavailable_small"
 		texturefile = "gfx/interface/inner_circle/giacomo_acerbo_unavailable_small.png"
 	}
+
+	spriteType = {
+		name = "GFX_ITA_inner_circle_decor_bg"
+		texturefile = "gfx/interface/inner_circle/ITA_inner_circle_bg.png"
+	}
+
+	spriteType = {
+		name = "GFX_ITA_spotlight_overlay"
+		texturefile = "gfx/interface/inner_circle/ITA_spotlight_overlay.png"
+	}
 }
