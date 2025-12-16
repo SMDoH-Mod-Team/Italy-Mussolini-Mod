@@ -107,6 +107,10 @@ set_variable = { ITA_missiolinis_aircraft_to_produce = 300 } #Unused yet. Might 
 set_variable = { ITA_ascended_advisor_1 = 0 } #Ascended Advisor Portrait
 set_variable = { ITA_ascended_advisor_2 = 0 } #Ascended Advisor Portrait
 set_variable = { ITA_ascended_advisor_3 = 0 } 
+set_variable = { ITA_ascended_advisor_4 = 0 } 
+
+set_variable = { ITA_inner_circle_days_to_start_focus = 30 }
+set_variable = { ITA_inner_circle_random_days = 15 }
 
 
 ############# MILITIA CAP ###############

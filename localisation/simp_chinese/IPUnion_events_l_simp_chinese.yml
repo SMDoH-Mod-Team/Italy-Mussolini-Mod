@@ -461,7 +461,14 @@
  ITA_inner_circle.1.desc: "[GetItalyAscendingAdvisorName]展现了强烈的野心，并在党内获得了影响力。然而，他加强控制的努力引发了其他成员的反对，导致了权力斗争。问题是，[ITA.GetLeader]是否对[GetItalyAscendingAdvisorName]留下了足够深刻的印象，以确保后者进入核心集团。"
  ITA_inner_circle.1.a: "替换[GetItalyAscendedAdvisorName1]"
  ITA_inner_circle.1.b: "替换[GetItalyAscendedAdvisorName2]"
- ITA_inner_circle.1.c: "替换[GetItalyAscendedAdvisorName3]" 
- ITA_inner_circle.1.d: "不值得领袖信任"
+ ITA_inner_circle.1.c: "替换[GetItalyAscendedAdvisorName3]"
+ ITA_inner_circle.1.d: "下一页"
+ #ITA_inner_circle.1.d: "替换[GetItalyAscendedAdvisorName4]" 
+ #ITA_inner_circle.1.e: "不值得领袖信任"
+ ITA_inner_circle.2.t: "[GetItalyAscendingAdvisorName]的崛起"
+ ITA_inner_circle.2.desc: "[GetItalyAscendingAdvisorName]展现了强烈的野心，并在党内获得了影响力。然而，他加强控制的努力引发了其他成员的反对，导致了权力斗争。问题是，[ITA.GetLeader]是否对[GetItalyAscendingAdvisorName]留下了足够深刻的印象，以确保后者进入核心集团。"
+ ITA_inner_circle.2.a: "替换[GetItalyAscendedAdvisorName4]"
+ ITA_inner_circle.2.b: "不值得领袖信任"
+ ITA_inner_circle.2.c: "上一页"
  
  

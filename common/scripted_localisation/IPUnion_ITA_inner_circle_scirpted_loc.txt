@@ -154,6 +154,59 @@ defined_text = {
 	}
 }
 defined_text = {
+	name = GetItalyAscendedAdvisorName4
+	text = { #NO ONE
+		trigger = {
+			check_variable = { ITA_ascended_advisor_4 = 0 }	
+		}
+		localization_key = empty_key
+	}
+	text = {
+		trigger = {
+			check_variable = { ITA_ascended_advisor_4 = 1 }
+		}
+		localization_key = ITA_rodolfo_graziani
+	}
+	text = {
+		trigger = {
+			check_variable = { ITA_ascended_advisor_4 = 2 }
+		}
+		localization_key = ITA_italo_balbo
+	}
+	text = {
+		trigger = {
+			check_variable = { ITA_ascended_advisor_4 = 3 }
+		}
+		localization_key = ITA_dino_grandi
+	}
+	text = {
+		trigger = {
+			check_variable = { ITA_ascended_advisor_4 = 4 }
+		}
+		localization_key = ITA_galeazzo_ciano
+	}
+	text = {
+		trigger = {
+			check_variable = { ITA_ascended_advisor_4 = 5 }
+		}
+		localization_key = ITA_renato_ricci
+	}
+	text = {
+		trigger = {
+			check_variable = { ITA_ascended_advisor_4 = 6 }
+		}
+		localization_key = ITA_giuseppe_bottai
+	}
+	text = {
+		trigger = {
+			check_variable = { ITA_ascended_advisor_4 = 7 }
+		}
+		localization_key = ITA_giacomo_acerbo
+	}
+}
+
+
+defined_text = {
 	name = GetItalyAscendedAdvisorTrait1
 	text = { #NO ONE
 		trigger = {
@@ -373,6 +426,79 @@ defined_text = {
 	}
 
 }
+defined_text = {
+	name = GetItalyAscendedAdvisorTrait4
+	text = { #NO ONE
+		trigger = {
+			check_variable = { ITA_ascended_advisor_4 = 0 }	
+		}
+		localization_key = empty_key
+	}
+
+	# Graziani
+	text = {
+		trigger = {
+			check_variable = { ITA_ascended_advisor_4 = 1 }
+			#has_idea = GER_todt_reich_minister_of_armaments
+		}
+		localization_key = idea_desc|ITA_leader_trait_its_going_to_rain
+	}
+
+	# SPEER
+	text = {
+		trigger = {
+			check_variable = { ITA_ascended_advisor_4 = 2 }
+			#has_idea = ITA_leader_trait_u_know_what_ur_doinghas_idea = ITA_leader_trait_u_know_what_ur_doing
+		}
+		localization_key = idea_desc|ITA_leader_trait_u_know_what_ur_doing
+	}
+
+	#GÖRING
+	text = {
+		trigger = {
+			check_variable = { ITA_ascended_advisor_4 = 3 }
+			#has_idea = ITA_leader_trait_captialism_roader
+		}
+		localization_key = idea_desc|ITA_leader_trait_captialism_roader
+	}
+
+	#HIMMLER
+	text = {
+		trigger = {
+			check_variable = { ITA_ascended_advisor_4 = 4 }
+			#has_idea = ITA_leader_trait_steel_company
+		}
+		localization_key = idea_desc|ITA_leader_trait_steel_company
+	}
+
+	#GOEBBELS
+	text = {
+		trigger = {
+			check_variable = { ITA_ascended_advisor_4 = 5 }
+			#has_idea = ITA_leader_trait_machine_master
+		}
+		localization_key = idea_desc|ITA_leader_trait_machine_master
+	}
+
+	#HESS
+	text = {
+		trigger = {
+			check_variable = { ITA_ascended_advisor_4 = 6 }
+			#has_idea = ITA_leader_trait_literacy_leader
+		}
+		localization_key = idea_desc|ITA_leader_trait_literacy_leader
+	}
+
+	#BORMANN
+	text = {
+		trigger = {
+			check_variable = { ITA_ascended_advisor_4 = 7 }
+			#has_idea = ITA_leader_trait_revisionism
+		}
+		localization_key = idea_desc|ITA_leader_trait_revisionism
+	}
+
+}
 
 defined_text = {
 	name = GetItalyAscendedAdvisorTraitName1
@@ -586,6 +712,78 @@ defined_text = {
 	text = {
 		trigger = {
 			check_variable = { ITA_ascended_advisor_3 = 7 }
+			#has_idea = ITA_leader_trait_revisionism
+		}
+		localization_key = ITA_leader_trait_revisionism
+	}
+}
+
+defined_text = {
+	name = GetItalyAscendedAdvisorTraitName4
+	text = { #NO ONE
+		trigger = {
+			check_variable = { ITA_ascended_advisor_4 = 0 }	
+		}
+		localization_key = empty_key
+	}
+
+	# Graziani
+	text = {
+		trigger = {
+			check_variable = { ITA_ascended_advisor_4 = 1 }
+		}
+		localization_key = ITA_leader_trait_its_going_to_rain
+	}
+
+	# SPEER
+	text = {
+		trigger = {
+			check_variable = { ITA_ascended_advisor_4 = 2 }
+			#has_idea = ITA_leader_trait_u_know_what_ur_doinghas_idea = ITA_leader_trait_u_know_what_ur_doing
+		}
+		localization_key = ITA_leader_trait_u_know_what_ur_doing
+	}
+
+	#GÖRING
+	text = {
+		trigger = {
+			check_variable = { ITA_ascended_advisor_4 = 3 }
+			#has_idea = ITA_leader_trait_captialism_roader
+		}
+		localization_key = ITA_leader_trait_captialism_roader
+	}
+
+	#HIMMLER
+	text = {
+		trigger = {
+			check_variable = { ITA_ascended_advisor_4 = 4 }
+			#has_idea = ITA_leader_trait_steel_company
+		}
+		localization_key = ITA_leader_trait_steel_company
+	}
+
+	#GOEBBELS
+	text = {
+		trigger = {
+			check_variable = { ITA_ascended_advisor_4 = 5 }
+			#has_idea = ITA_leader_trait_machine_master
+		}
+		localization_key = ITA_leader_trait_machine_master
+	}
+
+	#HESS
+	text = {
+		trigger = {
+			check_variable = { ITA_ascended_advisor_4 = 6 }
+			#has_idea = ITA_leader_trait_literacy_leader
+		}
+		localization_key = ITA_leader_trait_literacy_leader
+	}
+
+	#BORMANN
+	text = {
+		trigger = {
+			check_variable = { ITA_ascended_advisor_4 = 7 }
 			#has_idea = ITA_leader_trait_revisionism
 		}
 		localization_key = ITA_leader_trait_revisionism

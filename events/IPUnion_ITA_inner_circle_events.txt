@@ -1,4 +1,11 @@
 add_namespace = ITA_inner_circle
+add_namespace = ITA_inner_circle.graziani
+add_namespace = ITA_inner_circle.balbo
+add_namespace = ITA_inner_circle.grandi
+add_namespace = ITA_inner_circle.ciano
+add_namespace = ITA_inner_circle.ricci
+add_namespace = ITA_inner_circle.bottai
+add_namespace = ITA_inner_circle.acerbo
 
 country_event = {
 	id = ITA_inner_circle.1
@@ -63,6 +70,41 @@ country_event = {
 
 	option = {
 		name = ITA_inner_circle.1.d
+		country_event = ITA_inner_circle.2
+	}
+}
+
+country_event = {
+	id = ITA_inner_circle.2
+	title = ITA_inner_circle.2.t
+	desc = ITA_inner_circle.2.desc
+
+	#picture = "[GetItalyAscendingAdvisorPortrait]"
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = ITA_inner_circle_event_pending_flag
+	}
+
+	option = {
+		name = ITA_inner_circle.2.a
+
+		ITA_remove_replaced_advisor_4_effects = yes
+
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		set_variable = { ITA_ascended_advisor_4 = ITA_ascending_advisor }
+		ITA_add_replacing_advisor_effects = yes
+
+		hidden_effect = {
+			clear_variable = ITA_ascending_advisor
+			clr_country_flag = ITA_inner_circle_event_pending_flag
+		}
+	}
+
+	option = {
+		name = ITA_inner_circle.2.b
 
 		if = {
 			limit = {
@@ -128,4 +170,113 @@ country_event = {
 			}
 		}
 	}
+
+	option = {
+		name = ITA_inner_circle.2.c
+
+		country_event = ITA_inner_circle.1
+	}
 }
+
+@inner_circle_time_tier_1 = 140
+@inner_circle_time_tier_2 = 140
+@inner_circle_time_tier_3 = 210
+# FLAG CONSTANTS (It is 1 day more so the tooltip and days shown in the focus about Focus Progress match exactly the moment when the focus is completed)
+@inner_circle_time_tier_1_flag = 141
+@inner_circle_time_tier_2_flag = 141
+@inner_circle_time_tier_3_flag = 211
+
+country_event = {
+	id = ITA_inner_circle.namespace.test
+
+	title = ITA_inner_circle.namespace.test.t
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	option = {
+		name = YES
+	}
+
+	option = {
+		name = NO
+	}
+}
+
+country_event = {
+	id = ITA_inner_circle.graziani.start
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_completed_focus = ITA_ascension_of_graziani
+		OR = {
+			check_variable = { ITA_ascended_advisor_1 = 1 }
+			check_variable = { ITA_ascended_advisor_2 = 1 }
+			check_variable = { ITA_ascended_advisor_3 = 1 }
+			check_variable = { ITA_ascended_advisor_4 = 1 }
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = { has_completed_focus = ITA_inner_circle_graziani_theory }
+			}
+			activate_shine_on_focus = ITA_inner_circle_graziani_theory
+			set_country_flag = { 
+				flag = ITA_inner_circle_graziani_theory_in_progress_flag 
+				days = @inner_circle_time_tier_1_flag 
+				value = 1 
+			}
+			country_event = {
+				id = ITA_inner_circle.graziani.complete
+				days = inner_circle_time_tier_1
+			}
+		}
+		else = {
+			add_political_power = 15
+		}
+	}
+}
+
+country_event = {
+	id = ITA_inner_circle.graziani.complete
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_completed_focus = ITA_ascension_of_graziani
+		OR = {
+			check_variable = { ITA_ascended_advisor_1 = 1 }
+			check_variable = { ITA_ascended_advisor_2 = 1 }
+			check_variable = { ITA_ascended_advisor_3 = 1 }
+			check_variable = { ITA_ascended_advisor_4 = 1 }
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_shine_effect_on_focus = ITA_inner_circle_graziani_theory
+			}
+			complete_national_focus = {
+				focus = ITA_inner_circle_graziani_theory
+				use_side_message = yes
+				originator_name = ITA_rodolfo_graziani
+			}
+			clr_country_flag = ITA_inner_circle_graziani_theory_in_progress_flag
+			country_event = {
+				id = ITA_inner_circle.graziani.start
+				days = ITA_inner_circle_days_to_start_focus
+				random_days = ITA_inner_circle_random_days
+			}
+		}
+	}
+}
+

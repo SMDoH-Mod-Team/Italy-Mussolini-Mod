@@ -13,6 +13,9 @@
 ### search_filters = {FOCUS_FILTER_ITA_MISSIOLINI}
 ### search_filters = {FOCUS_FILTER_BALANCE_OF_POWER}
 # Reminder that focus filters prio has to be handled in the generic focus file :)
+@inner_circle_time_tier_1 = 20
+@inner_circle_time_tier_2 = 20
+@inner_circle_time_tier_3 = 30
 
 
 
@@ -28415,6 +28418,7 @@ focus_tree = {
 						check_variable = { ITA_ascended_advisor_1 = 1 }
 						check_variable = { ITA_ascended_advisor_2 = 1 }
 						check_variable = { ITA_ascended_advisor_3 = 1 }
+						check_variable = { ITA_ascended_advisor_4 = 1 }
 					}
 				}
 				log = "Advisor was already there. STOP CHEATING!"
@@ -28424,6 +28428,7 @@ focus_tree = {
 					check_variable = { ITA_ascended_advisor_1 = 0 compare = not_equals }
 					check_variable = { ITA_ascended_advisor_2 = 0 compare = not_equals }
 					check_variable = { ITA_ascended_advisor_3 = 0 compare = not_equals }
+					check_variable = { ITA_ascended_advisor_4 = 0 compare = not_equals }
 				}
 				hidden_effect = {
 					set_variable = { ITA_ascending_advisor = 1 }
@@ -28459,10 +28464,22 @@ focus_tree = {
 					}
 					set_variable = { ITA_ascended_advisor_3 = 1 }
 				}
+				else_if = {
+					limit = {
+						check_variable = { ITA_ascended_advisor_4 = 0 }
+					}
+					set_variable = { ITA_ascended_advisor_4 = 1 }
+				}
 			}
 
 			hidden_effect = {
 				ITA_inner_circle_set_ascension_cd = yes
+
+				country_event = {
+					id = ITA_inner_circle.graziani.start
+					days = ITA_inner_circle_days_to_start_focus
+					random_days = ITA_inner_circle_random_days
+				}
 
 				clr_country_flag = ITA_graziani_ascension_flag
 
@@ -28472,6 +28489,92 @@ focus_tree = {
 					days = 1500 # 大约4年
 				}
 			}
+		}
+	}
+
+	focus = {
+		id = ITA_inner_circle_graziani_theory
+		relative_position_id = ITA_ascension_of_graziani
+		x = 0
+		y = 1
+		icon = GFX_focus_generic_army_doctrines_2
+		prerequisite = { focus = ITA_ascension_of_graziani }
+
+		cost = @inner_circle_time_tier_1
+
+		available = {
+			if = {
+				limit = {
+					has_country_flag = ITA_inner_circle_graziani_theory_in_progress_flag
+				}
+				set_temp_variable = { temp_focus_days = @inner_circle_time_tier_1 }
+				multiply_temp_variable = { temp_focus_days = 7 }
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_inner_circle_focus_in_progress_tt
+						CHARACTER = ITA_rodolfo_graziani
+						FLAG_DAYS = [?ITA_inner_circle_graziani_theory_in_progress_flag:days]
+					}
+					always = no
+				}
+			}
+			else = {
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_focus_can_only_be_completed_by_advisor_tt
+						CHARACTER = ITA_rodolfo_graziani
+						FOCUS = ITA_ascension_of_graziani
+					}
+					always = no
+				}
+			}
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = ITA_inner_circle_graziani_armed_blackshirts
+		relative_position_id = ITA_inner_circle_graziani_theory
+		x = 0
+		y = 1
+		icon = GFX_focus_ITA_blackshirts
+		prerequisite = { focus = ITA_inner_circle_graziani_theory }
+
+		cost = @inner_circle_time_tier_1
+
+		available = {
+			if = {
+				limit = {
+					has_country_flag = ITA_inner_circle_graziani_armed_blackshirts_in_progress_flag
+				}
+				set_temp_variable = { temp_focus_days = @inner_circle_time_tier_1 }
+				multiply_temp_variable = { temp_focus_days = 7 }
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_inner_circle_focus_in_progress_tt
+						CHARACTER = ITA_rodolfo_graziani
+						FLAG_DAYS = [?ITA_inner_circle_graziani_armed_blackshirts_in_progress_flag:days]
+					}
+					always = no
+				}
+			}
+			else = {
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_focus_can_only_be_completed_by_advisor_tt
+						CHARACTER = ITA_rodolfo_graziani
+						FOCUS = ITA_ascension_of_graziani
+					}
+					always = no
+				}
+			}
+		}
+
+		completion_reward = {
+			add_political_power = 50
 		}
 	}
 
@@ -28542,6 +28645,7 @@ focus_tree = {
 						check_variable = { ITA_ascended_advisor_1 = 2 }
 						check_variable = { ITA_ascended_advisor_2 = 2 }
 						check_variable = { ITA_ascended_advisor_3 = 2 }
+						check_variable = { ITA_ascended_advisor_4 = 2 }
 					}
 				}
 				log = "Advisor was already there. STOP CHEATING!"
@@ -28551,6 +28655,7 @@ focus_tree = {
 					check_variable = { ITA_ascended_advisor_1 = 0 compare = not_equals }
 					check_variable = { ITA_ascended_advisor_2 = 0 compare = not_equals }
 					check_variable = { ITA_ascended_advisor_3 = 0 compare = not_equals }
+					check_variable = { ITA_ascended_advisor_4 = 0 compare = not_equals }
 				}
 				hidden_effect = {
 					set_variable = { ITA_ascending_advisor = 2 }
@@ -28585,6 +28690,12 @@ focus_tree = {
 						check_variable = { ITA_ascended_advisor_3 = 0 }
 					}
 					set_variable = { ITA_ascended_advisor_3 = 2 }
+				}
+				else_if = {
+					limit = {
+						check_variable = { ITA_ascended_advisor_4 = 0 }
+					}
+					set_variable = { ITA_ascended_advisor_4 = 2 }
 				}
 			}
 
@@ -28669,6 +28780,7 @@ focus_tree = {
 						check_variable = { ITA_ascended_advisor_1 = 3 }
 						check_variable = { ITA_ascended_advisor_2 = 3 }
 						check_variable = { ITA_ascended_advisor_3 = 3 }
+						check_variable = { ITA_ascended_advisor_4 = 3 }
 					}
 				}
 				log = "Advisor was already there. STOP CHEATING!"
@@ -28678,6 +28790,7 @@ focus_tree = {
 					check_variable = { ITA_ascended_advisor_1 = 0 compare = not_equals }
 					check_variable = { ITA_ascended_advisor_2 = 0 compare = not_equals }
 					check_variable = { ITA_ascended_advisor_3 = 0 compare = not_equals }
+					check_variable = { ITA_ascended_advisor_4 = 0 compare = not_equals }
 				}
 				hidden_effect = {
 					set_variable = { ITA_ascending_advisor = 3 }
@@ -28712,6 +28825,12 @@ focus_tree = {
 						check_variable = { ITA_ascended_advisor_3 = 0 }
 					}
 					set_variable = { ITA_ascended_advisor_3 = 3 }
+				}
+				else_if = {
+					limit = {
+						check_variable = { ITA_ascended_advisor_4 = 0 }
+					}
+					set_variable = { ITA_ascended_advisor_4 = 3 }
 				}
 			}
 
@@ -28796,6 +28915,7 @@ focus_tree = {
 						check_variable = { ITA_ascended_advisor_1 = 4 }
 						check_variable = { ITA_ascended_advisor_2 = 4 }
 						check_variable = { ITA_ascended_advisor_3 = 4 }
+						check_variable = { ITA_ascended_advisor_4 = 4 }
 					}
 				}
 				log = "Advisor was already there. STOP CHEATING!"
@@ -28805,6 +28925,7 @@ focus_tree = {
 					check_variable = { ITA_ascended_advisor_1 = 0 compare = not_equals }
 					check_variable = { ITA_ascended_advisor_2 = 0 compare = not_equals }
 					check_variable = { ITA_ascended_advisor_3 = 0 compare = not_equals }
+					check_variable = { ITA_ascended_advisor_4 = 0 compare = not_equals }
 				}
 				hidden_effect = {
 					set_variable = { ITA_ascending_advisor = 4 }
@@ -28839,6 +28960,12 @@ focus_tree = {
 						check_variable = { ITA_ascended_advisor_3 = 0 }
 					}
 					set_variable = { ITA_ascended_advisor_3 = 4 }
+				}
+				else_if = {
+					limit = {
+						check_variable = { ITA_ascended_advisor_4 = 0 }
+					}
+					set_variable = { ITA_ascended_advisor_4 = 4 }
 				}
 			}
 
@@ -28923,6 +29050,7 @@ focus_tree = {
 						check_variable = { ITA_ascended_advisor_1 = 5 }
 						check_variable = { ITA_ascended_advisor_2 = 5 }
 						check_variable = { ITA_ascended_advisor_3 = 5 }
+						check_variable = { ITA_ascended_advisor_4 = 5 }
 					}
 				}
 				log = "Advisor was already there. STOP CHEATING!"
@@ -28932,6 +29060,7 @@ focus_tree = {
 					check_variable = { ITA_ascended_advisor_1 = 0 compare = not_equals }
 					check_variable = { ITA_ascended_advisor_2 = 0 compare = not_equals }
 					check_variable = { ITA_ascended_advisor_3 = 0 compare = not_equals }
+					check_variable = { ITA_ascended_advisor_4 = 0 compare = not_equals }
 				}
 				hidden_effect = {
 					set_variable = { ITA_ascending_advisor = 5 }
@@ -28966,6 +29095,12 @@ focus_tree = {
 						check_variable = { ITA_ascended_advisor_3 = 0 }
 					}
 					set_variable = { ITA_ascended_advisor_3 = 5 }
+				}
+				else_if = {
+					limit = {
+						check_variable = { ITA_ascended_advisor_4 = 0 }
+					}
+					set_variable = { ITA_ascended_advisor_4 = 5 }
 				}
 			}
 
@@ -29050,6 +29185,7 @@ focus_tree = {
 						check_variable = { ITA_ascended_advisor_1 = 6 }
 						check_variable = { ITA_ascended_advisor_2 = 6 }
 						check_variable = { ITA_ascended_advisor_3 = 6 }
+						check_variable = { ITA_ascended_advisor_4 = 6 }
 					}
 				}
 				log = "Advisor was already there. STOP CHEATING!"
@@ -29059,6 +29195,7 @@ focus_tree = {
 					check_variable = { ITA_ascended_advisor_1 = 0 compare = not_equals }
 					check_variable = { ITA_ascended_advisor_2 = 0 compare = not_equals }
 					check_variable = { ITA_ascended_advisor_3 = 0 compare = not_equals }
+					check_variable = { ITA_ascended_advisor_4 = 0 compare = not_equals }
 				}
 				hidden_effect = {
 					set_variable = { ITA_ascending_advisor = 6 }
@@ -29093,6 +29230,12 @@ focus_tree = {
 						check_variable = { ITA_ascended_advisor_3 = 0 }
 					}
 					set_variable = { ITA_ascended_advisor_3 = 6 }
+				}
+				else_if = {
+					limit = {
+						check_variable = { ITA_ascended_advisor_4 = 0 }
+					}
+					set_variable = { ITA_ascended_advisor_4 = 6 }
 				}
 			}
 
@@ -29177,6 +29320,7 @@ focus_tree = {
 						check_variable = { ITA_ascended_advisor_1 = 7 }
 						check_variable = { ITA_ascended_advisor_2 = 7 }
 						check_variable = { ITA_ascended_advisor_3 = 7 }
+						check_variable = { ITA_ascended_advisor_4 = 7 }
 					}
 				}
 				log = "Advisor was already there. STOP CHEATING!"
@@ -29186,6 +29330,7 @@ focus_tree = {
 					check_variable = { ITA_ascended_advisor_1 = 0 compare = not_equals }
 					check_variable = { ITA_ascended_advisor_2 = 0 compare = not_equals }
 					check_variable = { ITA_ascended_advisor_3 = 0 compare = not_equals }
+					check_variable = { ITA_ascended_advisor_4 = 0 compare = not_equals }
 				}
 				hidden_effect = {
 					set_variable = { ITA_ascending_advisor = 6 }
@@ -29220,6 +29365,12 @@ focus_tree = {
 						check_variable = { ITA_ascended_advisor_3 = 0 }
 					}
 					set_variable = { ITA_ascended_advisor_3 = 7 }
+				}
+				else_if = {
+					limit = {
+						check_variable = { ITA_ascended_advisor_4 = 0 }
+					}
+					set_variable = { ITA_ascended_advisor_4 = 7 }
 				}
 			}
 
