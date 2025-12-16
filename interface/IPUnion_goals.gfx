@@ -3,460 +3,102 @@ spriteTypes = {
 		name = "GFX_focus_ITA_culto_del_duce_bw"
 		texturefile = "gfx/interface/goals/focus_ITA_culto_del_duce_bw.png"
 	}
-	SpriteType = {
-		name = "GFX_focus_ITA_culto_del_duce_bw_shine"
-		texturefile = "gfx/interface/goals/focus_ITA_culto_del_duce_bw.png"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_ITA_culto_del_duce_bw.png"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
-			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
-			animationlooping = no			# yes or no ;)
-			animationtime = 0.75				# in seconds
-			animationdelay = 0			# in seconds
-			animationblendmode = "add"       #add, multiply, overlay
-			animationtype = "scrolling"      #scrolling, rotating, pulsing
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 2.0 y = 1.0 } 
-		}
 
-		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_ITA_culto_del_duce_bw.png"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
-			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
-			animationlooping = no			# yes or no ;)
-			animationtime = 0.75				# in seconds
-			animationdelay = 0			# in seconds
-			animationblendmode = "add"       #add, multiply, overlay
-			animationtype = "scrolling"      #scrolling, rotating, pulsing
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
-		}
-		legacy_lazy_load = no
-	}
 	spriteType = {
 		name = "GFX_focus_zeppelin"
 		texturefile = "gfx/interface/goals/focus_generic_zeppelin.png"
 	}
-	SpriteType = {
-		name = "GFX_focus_zeppelin_shine"
-		texturefile = "gfx/interface/goals/focus_generic_zeppelin.png"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_generic_zeppelin.png"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = -90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
 
-		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_generic_zeppelin.png"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = 90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		legacy_lazy_load = no
-	}
 	spriteType = {
 		name = "GFX_focus_AOI_italian_aoi"
 		texturefile = "gfx/interface/goals/focus_AOI_italian_aoi.png"
 	}
-	SpriteType = {
-		name = "GFX_focus_AOI_italian_aoi_shine"
-		texturefile = "gfx/interface/goals/focus_AOI_italian_aoi.png"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_AOI_italian_aoi.png"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = -90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-
-		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_AOI_italian_aoi.png"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = 90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		legacy_lazy_load = no
-	}
+	
 	spriteType = {
 		name = "GFX_focus_AOI_AOI_investments"
 		texturefile = "gfx/interface/goals/focus_AOI_AOI_investments.png"
 	}
-	SpriteType = {
-		name = "GFX_focus_AOI_AOI_investments_shine"
-		texturefile = "gfx/interface/goals/focus_AOI_AOI_investments.png"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_AOI_AOI_investments.png"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = -90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-
-		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_AOI_AOI_investments.png"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = 90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		legacy_lazy_load = no
-	}
+	
 	spriteType = {
 		name = "GFX_focus_AOI_horn_of_africa"
 		texturefile = "gfx/interface/goals/focus_AOI_horn_of_africa.png"
 	}
-	SpriteType = {
-		name = "GFX_focus_AOI_horn_of_africa_shine"
-		texturefile = "gfx/interface/goals/focus_AOI_horn_of_africa.png"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_AOI_horn_of_africa.png"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = -90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-
-		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_AOI_horn_of_africa.png"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = 90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		legacy_lazy_load = no
-	}
+	
 	spriteType = {
 		name = "GFX_focus_AOI_stupid_its_economies"
 		texturefile = "gfx/interface/goals/focus_AOI_stupid_its_economies.png"
-	}
-	SpriteType = {
-		name = "GFX_focus_AOI_stupid_its_economies_shine"
-		texturefile = "gfx/interface/goals/focus_AOI_stupid_its_economies.png"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_AOI_stupid_its_economies.png"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = -90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-
-		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_AOI_stupid_its_economies.png"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = 90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		legacy_lazy_load = no
 	}
 
 	spriteType = {
 		name = "GFX_focus_AOI_second_class_citizen"
 		texturefile = "gfx/interface/goals/focus_AOI_second_class_citizen.png"
 	}
-	SpriteType = {
-		name = "GFX_focus_AOI_second_class_citizen_shine"
-		texturefile = "gfx/interface/goals/focus_AOI_second_class_citizen.png"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_AOI_second_class_citizen.png"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = -90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-
-		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_AOI_second_class_citizen.png"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = 90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		legacy_lazy_load = no
-	}
+	
 	spriteType = {
 		name = "GFX_focus_ITA_subjugate_chinese_economy"
 		texturefile = "gfx/interface/goals/focus_ITA_subjugate_chinese_economy.png"
 	}
-	SpriteType = {
-		name = "GFX_focus_ITA_subjugate_chinese_economy_shine"
-		texturefile = "gfx/interface/goals/focus_ITA_subjugate_chinese_economy.png"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_ITA_subjugate_chinese_economy.png"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = -90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-
-		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_ITA_subjugate_chinese_economy.png"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = 90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		legacy_lazy_load = no
-	}
+	
 	spriteType = {
 		name = "GFX_CHI_china_italy_industry_commission"
 		texturefile = "gfx/interface/goals/focus_CHI_insdustry_commission.png"
 	}
-	SpriteType = {
-		name = "GFX_CHI_china_italy_industry_commission_shine"
-		texturefile = "gfx/interface/goals/focus_CHI_insdustry_commission.png"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_CHI_insdustry_commission.png"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = -90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-
-		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_CHI_insdustry_commission.png"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = 90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		legacy_lazy_load = no
-	}
-
+	
 	spriteType = {
 		name = "GFX_focus_roc_flag"
 		texturefile = "gfx/interface/goals/focus_roc_flag.png"
-	}
-	SpriteType = {
-		name = "GFX_focus_roc_flag_shine"
-		texturefile = "gfx/interface/goals/focus_roc_flag.png"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_roc_flag.png"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = -90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-
-		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_roc_flag.png"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = 90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		legacy_lazy_load = no
 	}
 
 	spriteType = {
 		name = "GFX_focus_CHI_yangtze_industry_blet"
 		texturefile = "gfx/interface/goals/focus_CHI_yangtze_industry_blet.png"
 	}
-	SpriteType = {
-		name = "GFX_focus_CHI_yangtze_industry_blet_shine"
-		texturefile = "gfx/interface/goals/focus_CHI_yangtze_industry_blet.png"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_CHI_yangtze_industry_blet.png"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = -90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-
-		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_CHI_yangtze_industry_blet.png"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = 90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		legacy_lazy_load = no
-	}
 
 	spriteType = {
 		name = "GFX_focus_CHI_opening_up"
 		texturefile = "gfx/interface/goals/focus_CHI_opening_up.png"
 	}
-	SpriteType = {
-		name = "GFX_focus_CHI_opening_up_shine"
-		texturefile = "gfx/interface/goals/focus_CHI_opening_up.png"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_CHI_opening_up.png"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = -90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-
-		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_CHI_opening_up.png"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = 90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		legacy_lazy_load = no
-	}
-
+	
 	spriteType = {
 		name = "GFX_focus_ITA_patti_lateranensi"
 		texturefile = "gfx/interface/goals/focus_ITA_patti_lateranensi.png"
 	}
-	SpriteType = {
-		name = "GFX_focus_ITA_patti_lateranensi_shine"
-		texturefile = "gfx/interface/goals/focus_ITA_patti_lateranensi.png"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_ITA_patti_lateranensi.png"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = -90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
 
-		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_ITA_patti_lateranensi.png"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = 90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		legacy_lazy_load = no
+	### INNER CIRCLE ###
+
+	spriteType = {
+		name = "GFX_focus_ITA_ascension_of_graziani"
+		texturefile = "gfx/interface/goals/ITA/inner_circle/focus_ITA_ascension_of_graziani.png"
 	}
+
+	spriteType = {
+		name = "GFX_focus_ITA_ascension_of_balbo"
+		texturefile = "gfx/interface/goals/ITA/inner_circle/focus_ITA_ascension_of_balbo.png"
+	}
+
+	spriteType = {
+		name = "GFX_focus_ITA_ascension_of_grandi"
+		texturefile = "gfx/interface/goals/ITA/inner_circle/focus_ITA_ascension_of_grandi.png"
+	}
+
+	spriteType = {
+		name = "GFX_focus_ITA_ascension_of_ciano"
+		texturefile = "gfx/interface/goals/ITA/inner_circle/focus_ITA_ascension_of_ciano.png"
+	}
+
+	spriteType = {
+		name = "GFX_focus_ITA_ascension_of_ricci"
+		texturefile = "gfx/interface/goals/ITA/inner_circle/focus_ITA_ascension_of_ricci.png"
+	}
+
+	spriteType = {
+		name = "GFX_focus_ITA_ascension_of_bottai"
+		texturefile = "gfx/interface/goals/ITA/inner_circle/focus_ITA_ascension_of_bottai.png"
+	}
+
+	spriteType = {
+		name = "GFX_focus_ITA_ascension_of_acerbo"
+		texturefile = "gfx/interface/goals/ITA/inner_circle/focus_ITA_ascension_of_acerbo.png"
+	}
+
 }

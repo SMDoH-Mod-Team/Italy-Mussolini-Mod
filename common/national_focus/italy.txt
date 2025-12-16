@@ -28351,7 +28351,7 @@ focus_tree = {
 	focus = {
 		id = ITA_ascension_of_graziani
 		relative_position_id = ITA_duceprincipio
-		icon = GFX_focus_GER_ascension_of_todt
+		icon = GFX_focus_ITA_ascension_of_graziani
 		prerequisite = { focus = ITA_duceprincipio }
 		x = -7
 		y = 1
@@ -28365,11 +28365,7 @@ focus_tree = {
 				}
 				hidden_trigger = {
 					NOT = {
-						OR = {
-							check_variable = { ITA_ascended_advisor_1 = 1 }
-							check_variable = { ITA_ascended_advisor_2 = 1 }
-							check_variable = { ITA_ascended_advisor_3 = 1 }
-						}
+						has_country_flag = ITA_graziani_was_ascended_flag
 					}
 				}
 			}
@@ -28430,7 +28426,7 @@ focus_tree = {
 					check_variable = { ITA_ascended_advisor_3 = 0 compare = not_equals }
 				}
 				hidden_effect = {
-					set_variable = { ITA_ascended_advisor_1 = 1 }
+					set_variable = { ITA_ascending_advisor = 1 }
 					country_event = ITA_inner_circle.1
 				}
 				
@@ -28464,13 +28460,25 @@ focus_tree = {
 					set_variable = { ITA_ascended_advisor_3 = 1 }
 				}
 			}
+
+			hidden_effect = {
+				ITA_inner_circle_set_ascension_cd = yes
+
+				clr_country_flag = ITA_graziani_ascension_flag
+
+				set_country_flag = {
+					flag = ITA_graziani_was_ascended_flag  ## 作用是防止AI在通过 XXX 的崛起这个事件替换掉这个亲密战友后继续点这个国策（因为AI战略的问题，如果放任不管，AI就会一直尝试点这些核心圈国策从而陷入死循环）
+					value = 1
+					days = 1500 # 大约4年
+				}
+			}
 		}
 	}
 
 	focus = {
 		id = ITA_ascension_of_balbo
 		relative_position_id = ITA_duceprincipio
-		icon = GFX_focus_GER_ascension_of_speer
+		icon = GFX_focus_ITA_ascension_of_balbo
 		prerequisite = { focus = ITA_duceprincipio }
 		x = -5
 		y = 1
@@ -28484,11 +28492,7 @@ focus_tree = {
 				}
 				hidden_trigger = {
 					NOT = {
-						OR = {
-							check_variable = { ITA_ascended_advisor_1 = 2 }
-							check_variable = { ITA_ascended_advisor_2 = 2 }
-							check_variable = { ITA_ascended_advisor_3 = 2 }
-						}
+						has_country_flag = ITA_balbo_was_ascended_flag
 					}
 				}
 			}
@@ -28549,7 +28553,7 @@ focus_tree = {
 					check_variable = { ITA_ascended_advisor_3 = 0 compare = not_equals }
 				}
 				hidden_effect = {
-					set_variable = { ITA_ascended_advisor_1 = 2 }
+					set_variable = { ITA_ascending_advisor = 2 }
 					country_event = ITA_inner_circle.1
 				}
 				
@@ -28583,13 +28587,25 @@ focus_tree = {
 					set_variable = { ITA_ascended_advisor_3 = 2 }
 				}
 			}
+
+			hidden_effect = {
+				ITA_inner_circle_set_ascension_cd = yes
+
+				clr_country_flag = ITA_balbo_ascension_flag
+
+				set_country_flag = {
+					flag = ITA_balbo_was_ascended_flag  ## 作用是防止AI在替换掉这个亲密战友后继续点这个国策（因为AI战略的问题，如果放任不管，AI就会一直尝试点这些核心圈国策从而陷入死循环）
+					value = 1
+					days = 1500 # 大约4年
+				}
+			}
 		}
 	}
 
 	focus = {
 		id = ITA_ascension_of_grandi
 		relative_position_id = ITA_duceprincipio
-		icon = GFX_focus_GER_ascension_of_goring
+		icon = GFX_focus_ITA_ascension_of_grandi
 		prerequisite = { focus = ITA_duceprincipio }
 		x = -3
 		y = 1
@@ -28603,11 +28619,7 @@ focus_tree = {
 				}
 				hidden_trigger = {
 					NOT = {
-						OR = {
-							check_variable = { ITA_ascended_advisor_1 = 3 }
-							check_variable = { ITA_ascended_advisor_2 = 3 }
-							check_variable = { ITA_ascended_advisor_3 = 3 }
-						}
+						has_country_flag = ITA_grandi_was_ascended_flag
 					}
 				}
 			}
@@ -28668,7 +28680,7 @@ focus_tree = {
 					check_variable = { ITA_ascended_advisor_3 = 0 compare = not_equals }
 				}
 				hidden_effect = {
-					set_variable = { ITA_ascended_advisor_1 = 3 }
+					set_variable = { ITA_ascending_advisor = 3 }
 					country_event = ITA_inner_circle.1
 				}
 				
@@ -28702,13 +28714,25 @@ focus_tree = {
 					set_variable = { ITA_ascended_advisor_3 = 3 }
 				}
 			}
+
+			hidden_effect = {
+				ITA_inner_circle_set_ascension_cd = yes
+
+				clr_country_flag = ITA_grandi_ascension_flag
+
+				set_country_flag = {
+					flag = ITA_grandi_was_ascended_flag  ## 作用是防止AI在替换掉这个亲密战友后继续点这个国策（因为AI战略的问题，如果放任不管，AI就会一直尝试点这些核心圈国策从而陷入死循环）
+					value = 1
+					days = 1500 # 大约4年
+				}
+			}
 		}
 	}
 
 	focus = {
 		id = ITA_ascension_of_ciano
 		relative_position_id = ITA_duceprincipio
-		icon = GFX_focus_GER_ascension_of_himmler
+		icon = GFX_focus_ITA_ascension_of_ciano
 		prerequisite = { focus = ITA_duceprincipio }
 		x = 0
 		y = 1
@@ -28722,11 +28746,7 @@ focus_tree = {
 				}
 				hidden_trigger = {
 					NOT = {
-						OR = {
-							check_variable = { ITA_ascended_advisor_1 = 4 }
-							check_variable = { ITA_ascended_advisor_2 = 4 }
-							check_variable = { ITA_ascended_advisor_3 = 4 }
-						}
+						has_country_flag = ITA_ciano_was_ascended_flag
 					}
 				}
 			}
@@ -28787,7 +28807,7 @@ focus_tree = {
 					check_variable = { ITA_ascended_advisor_3 = 0 compare = not_equals }
 				}
 				hidden_effect = {
-					set_variable = { ITA_ascended_advisor_1 = 4 }
+					set_variable = { ITA_ascending_advisor = 4 }
 					country_event = ITA_inner_circle.1
 				}
 				
@@ -28821,13 +28841,25 @@ focus_tree = {
 					set_variable = { ITA_ascended_advisor_3 = 4 }
 				}
 			}
+
+			hidden_effect = {
+				ITA_inner_circle_set_ascension_cd = yes
+
+				clr_country_flag = ITA_ciano_ascension_flag
+
+				set_country_flag = {
+					flag = ITA_ciano_was_ascended_flag  ## 作用是防止AI在替换掉这个亲密战友后继续点这个国策（因为AI战略的问题，如果放任不管，AI就会一直尝试点这些核心圈国策从而陷入死循环）
+					value = 1
+					days = 1500 # 大约4年
+				}
+			}
 		}
 	}
 
 	focus = {
 		id = ITA_ascension_of_ricci
 		relative_position_id = ITA_duceprincipio
-		icon = GFX_focus_GER_ascension_of_goebbels
+		icon = GFX_focus_ITA_ascension_of_ricci
 		prerequisite = { focus = ITA_duceprincipio }
 		x = 3
 		y = 1
@@ -28841,11 +28873,7 @@ focus_tree = {
 				}
 				hidden_trigger = {
 					NOT = {
-						OR = {
-							check_variable = { ITA_ascended_advisor_1 = 5 }
-							check_variable = { ITA_ascended_advisor_2 = 5 }
-							check_variable = { ITA_ascended_advisor_3 = 5 }
-						}
+						has_country_flag = ITA_ricci_was_ascended_flag
 					}
 				}
 			}
@@ -28906,7 +28934,7 @@ focus_tree = {
 					check_variable = { ITA_ascended_advisor_3 = 0 compare = not_equals }
 				}
 				hidden_effect = {
-					set_variable = { ITA_ascended_advisor_1 = 5 }
+					set_variable = { ITA_ascending_advisor = 5 }
 					country_event = ITA_inner_circle.1
 				}
 				
@@ -28940,13 +28968,25 @@ focus_tree = {
 					set_variable = { ITA_ascended_advisor_3 = 5 }
 				}
 			}
+
+			hidden_effect = {
+				ITA_inner_circle_set_ascension_cd = yes
+
+				clr_country_flag = ITA_ricci_ascension_flag
+
+				set_country_flag = {
+					flag = ITA_ricci_was_ascended_flag  ## 作用是防止AI在替换掉这个亲密战友后继续点这个国策（因为AI战略的问题，如果放任不管，AI就会一直尝试点这些核心圈国策从而陷入死循环）
+					value = 1
+					days = 1500 # 大约4年
+				}
+			}
 		}
 	}
 
 	focus = {
 		id = ITA_ascension_of_bottai
 		relative_position_id = ITA_duceprincipio
-		icon = GFX_focus_GER_party_chancellor_hess
+		icon = GFX_focus_ITA_ascension_of_bottai
 		prerequisite = { focus = ITA_duceprincipio }
 		x = 5
 		y = 1
@@ -28960,11 +29000,7 @@ focus_tree = {
 				}
 				hidden_trigger = {
 					NOT = {
-						OR = {
-							check_variable = { ITA_ascended_advisor_1 = 6 }
-							check_variable = { ITA_ascended_advisor_2 = 6 }
-							check_variable = { ITA_ascended_advisor_3 = 6 }
-						}
+						has_country_flag = ITA_bottai_was_ascended_flag
 					}
 				}
 			}
@@ -29025,7 +29061,7 @@ focus_tree = {
 					check_variable = { ITA_ascended_advisor_3 = 0 compare = not_equals }
 				}
 				hidden_effect = {
-					set_variable = { ITA_ascended_advisor_1 = 6 }
+					set_variable = { ITA_ascending_advisor = 6 }
 					country_event = ITA_inner_circle.1
 				}
 				
@@ -29059,13 +29095,25 @@ focus_tree = {
 					set_variable = { ITA_ascended_advisor_3 = 6 }
 				}
 			}
+
+			hidden_effect = {
+				ITA_inner_circle_set_ascension_cd = yes
+
+				clr_country_flag = ITA_bottai_ascension_flag
+
+				set_country_flag = {
+					flag = ITA_bottai_was_ascended_flag  ## 作用是防止AI在替换掉这个亲密战友后继续点这个国策（因为AI战略的问题，如果放任不管，AI就会一直尝试点这些核心圈国策从而陷入死循环）
+					value = 1
+					days = 1500 # 大约4年
+				}
+			}
 		}
 	}
 
 	focus = {
 		id = ITA_ascension_of_acerbo
 		relative_position_id = ITA_duceprincipio
-		icon = GFX_focus_GER_party_chancellor_bormann
+		icon = GFX_focus_ITA_ascension_of_acerbo
 		prerequisite = { focus = ITA_duceprincipio }
 		x = 7
 		y = 1
@@ -29079,11 +29127,7 @@ focus_tree = {
 				}
 				hidden_trigger = {
 					NOT = {
-						OR = {
-							check_variable = { ITA_ascended_advisor_1 = 7 }
-							check_variable = { ITA_ascended_advisor_2 = 7 }
-							check_variable = { ITA_ascended_advisor_3 = 7 }
-						}
+						has_country_flag = ITA_acerbo_was_ascended_flag
 					}
 				}
 			}
@@ -29144,7 +29188,7 @@ focus_tree = {
 					check_variable = { ITA_ascended_advisor_3 = 0 compare = not_equals }
 				}
 				hidden_effect = {
-					set_variable = { ITA_ascended_advisor_1 = 6 }
+					set_variable = { ITA_ascending_advisor = 6 }
 					country_event = ITA_inner_circle.1
 				}
 				
@@ -29176,6 +29220,18 @@ focus_tree = {
 						check_variable = { ITA_ascended_advisor_3 = 0 }
 					}
 					set_variable = { ITA_ascended_advisor_3 = 7 }
+				}
+			}
+
+			hidden_effect = {
+				ITA_inner_circle_set_ascension_cd = yes
+
+				clr_country_flag = ITA_acerbo_ascension_flag
+
+				set_country_flag = {
+					flag = ITA_acerbo_was_ascended_flag  ## 作用是防止AI在替换掉这个亲密战友后继续点这个国策（因为AI战略的问题，如果放任不管，AI就会一直尝试点这些核心圈国策从而陷入死循环）
+					value = 1
+					days = 1500 # 大约4年
 				}
 			}
 		}

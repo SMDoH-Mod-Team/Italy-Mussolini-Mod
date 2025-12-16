@@ -541,3 +541,4 @@ ITA_inner_circle_set_ascension_cd = {
 		value = 1
 	}
 }
+
