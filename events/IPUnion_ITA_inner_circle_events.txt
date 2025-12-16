@@ -234,11 +234,28 @@ country_event = {
 			}
 			country_event = {
 				id = ITA_inner_circle.graziani.complete
-				days = inner_circle_time_tier_1
+				days = @inner_circle_time_tier_1
 			}
 		}
-		else = {
-			add_political_power = 15
+		else_if = {
+			limit = {
+				NOT = {
+					has_completed_focus = ITA_inner_circle_graziani_armed_blackshirts
+				}
+			}
+			activate_shine_on_focus = ITA_inner_circle_graziani_armed_blackshirts
+			set_country_flag = {
+				flag = ITA_inner_circle_graziani_armed_blackshirts_in_progress_flag
+				days = @inner_circle_time_tier_1_flag
+				value = 1
+			}
+			country_event = {
+				id = ITA_inner_circle.graziani.complete
+				days = @inner_circle_time_tier_1
+			}
+		}
+		else = { #Debug logs
+			#log = "SOMETHING WENT WRONG IN Graziani FOCUSES"
 		}
 	}
 }
@@ -276,6 +293,137 @@ country_event = {
 				days = ITA_inner_circle_days_to_start_focus
 				random_days = ITA_inner_circle_random_days
 			}
+		}
+		else_if = {
+			limit = {
+				has_shine_effect_on_focus = ITA_inner_circle_graziani_armed_blackshirts
+			}
+			complete_national_focus = {
+				focus = ITA_inner_circle_graziani_armed_blackshirts
+				use_side_message = yes
+				originator_name = ITA_rodolfo_graziani
+			}
+			clr_country_flag = ITA_inner_circle_graziani_armed_blackshirts_in_progress_flag
+			country_event = {
+				id = ITA_inner_circle.graziani.start
+				days = ITA_inner_circle_days_to_start_focus
+				random_days = ITA_inner_circle_random_days
+			}
+		}
+		else = { # Debug logs
+			#log = "Graziani Focuses HAS BEEN COMPLETE"
+		}
+	}
+}
+
+country_event = {
+	id = ITA_inner_circle.balbo.start
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_completed_focus = ITA_ascension_of_balbo
+		OR = {
+			check_variable = { ITA_ascended_advisor_1 = 2 }
+			check_variable = { ITA_ascended_advisor_2 = 2 }
+			check_variable = { ITA_ascended_advisor_3 = 2 }
+			check_variable = { ITA_ascended_advisor_4 = 2 }
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = { has_completed_focus = ITA_inner_circle_balbo_national_flight_movent }
+			}
+			activate_shine_on_focus = ITA_inner_circle_balbo_national_flight_movent
+			set_country_flag = { 
+				flag = ITA_inner_circle_balbo_national_flight_movent_in_progress_flag 
+				days = @inner_circle_time_tier_1_flag 
+				value = 1 
+			}
+			country_event = {
+				id = ITA_inner_circle.balbo.complete
+				days = @inner_circle_time_tier_1
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_completed_focus = ITA_inner_circle_balbo_modern_air_force
+				}
+			}
+			activate_shine_on_focus = ITA_inner_circle_balbo_modern_air_force
+			set_country_flag = {
+				flag = ITA_inner_circle_balbo_modern_air_force_in_progress_flag
+				days = @inner_circle_time_tier_1_flag
+				value = 1
+			}
+			country_event = {
+				id = ITA_inner_circle.balbo.complete
+				days = @inner_circle_time_tier_1
+			}
+		}
+		else = { #Debug logs
+			#log = "SOMETHING WENT WRONG IN Bolbo FOCUSES"
+		}
+	}
+}
+
+country_event = {
+	id = ITA_inner_circle.balbo.complete
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_completed_focus = ITA_ascension_of_balbo
+		OR = {
+			check_variable = { ITA_ascended_advisor_1 = 2 }
+			check_variable = { ITA_ascended_advisor_2 = 2 }
+			check_variable = { ITA_ascended_advisor_3 = 2 }
+			check_variable = { ITA_ascended_advisor_4 = 2 }
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_shine_effect_on_focus = ITA_inner_circle_balbo_national_flight_movent
+			}
+			complete_national_focus = {
+				focus = ITA_inner_circle_balbo_national_flight_movent
+				use_side_message = yes
+				originator_name = ITA_italo_balbo
+			}
+			clr_country_flag = ITA_inner_circle_balbo_national_flight_movent_in_progress_flag
+			country_event = {
+				id = ITA_inner_circle.balbo.start
+				days = ITA_inner_circle_days_to_start_focus
+				random_days = ITA_inner_circle_random_days
+			}
+		}
+		else_if = {
+			limit = {
+				has_shine_effect_on_focus = ITA_inner_circle_balbo_modern_air_force
+			}
+			complete_national_focus = {
+				focus = ITA_inner_circle_balbo_modern_air_force
+				use_side_message = yes
+				originator_name = ITA_italo_balbo
+			}
+			clr_country_flag = ITA_inner_circle_balbo_modern_air_force_in_progress_flag
+			country_event = {
+				id = ITA_inner_circle.balbo.start
+				days = ITA_inner_circle_days_to_start_focus
+				random_days = ITA_inner_circle_random_days
+			}
+		}
+		else = { # Debug logs
+			#log = "Bolbo Focuses HAS BEEN COMPLETE"
 		}
 	}
 }

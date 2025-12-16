@@ -28702,6 +28702,12 @@ focus_tree = {
 			hidden_effect = {
 				ITA_inner_circle_set_ascension_cd = yes
 
+				country_event = {
+					id = ITA_inner_circle.balbo.start
+					days = ITA_inner_circle_days_to_start_focus
+					random_days = ITA_inner_circle_random_days
+				}
+
 				clr_country_flag = ITA_balbo_ascension_flag
 
 				set_country_flag = {
@@ -28710,6 +28716,93 @@ focus_tree = {
 					days = 1500 # 大约4年
 				}
 			}
+		}
+	}
+
+	focus = {
+		id = ITA_inner_circle_balbo_national_flight_movent
+		relative_position_id = ITA_ascension_of_balbo
+		icon = GFX_focus_generic_aircraft_production
+		x = 0
+		y = 1
+		prerequisite = { focus = ITA_ascension_of_balbo }
+
+		cost = @inner_circle_time_tier_1
+
+		available = {
+			if = {
+				limit = {
+					has_country_flag = ITA_inner_circle_balbo_national_flight_movent_in_progress_flag
+				}
+				set_temp_variable = { temp_focus_days = @inner_circle_time_tier_1 }
+				multiply_temp_variable = { temp_focus_days = 7 }
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_inner_circle_focus_in_progress_tt
+						CHARACTER = ITA_italo_balbo
+						FLAG_DAYs = [?ITA_inner_circle_balbo_national_flight_movent_in_progress_flag:days]
+					}
+					always = no
+				}
+			}
+			else = {
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_focus_can_only_be_completed_by_advisor_tt
+						CHARACTER = ITA_italo_balbo
+						FOCUS = ITA_inner_circle_balbo_national_flight_movent
+					}
+					always = no
+				}
+			}
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+
+	}
+
+	focus = {
+		id = ITA_inner_circle_balbo_modern_air_force
+		icon = GFX_focus_BRA_italian_aircraft_development
+		relative_position_id = ITA_inner_circle_balbo_national_flight_movent
+		x = 0
+		y = 1
+		prerequisite = { focus = ITA_inner_circle_balbo_national_flight_movent }
+
+		cost = @inner_circle_time_tier_1
+
+		available = {
+			if = {
+				limit = {
+					has_country_flag = ITA_inner_circle_balbo_modern_air_force_in_progress_flag
+				}
+				set_temp_variable = { temp_focus_days = @inner_circle_time_tier_1 }
+				multiply_temp_variable = { temp_focus_days = 7 }
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_inner_circle_focus_in_progress_tt
+						CHARACTER = ITA_italo_balbo
+						FLAG_DAYs = [?ITA_inner_circle_balbo_modern_air_force_in_progress_flag:days]
+					}
+					always = no
+				}
+			}
+			else = {
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_focus_can_only_be_completed_by_advisor_tt
+						CHARACTER = ITA_italo_balbo
+						FOCUS = ITA_inner_circle_balbo_modern_air_force
+					}
+					always = no
+				}
+			}
+		}
+		
+		completion_reward = {
+			add_political_power = 50
 		}
 	}
 
