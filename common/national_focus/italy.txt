@@ -28351,7 +28351,7 @@ focus_tree = {
 	focus = {
 		id = ITA_ascension_of_graziani
 		relative_position_id = ITA_duceprincipio
-		icon = GFX_focus_GER_ascension_of_todt
+		icon = GFX_focus_ITA_ascension_of_graziani
 		prerequisite = { focus = ITA_duceprincipio }
 		x = -7
 		y = 1
@@ -28430,7 +28430,7 @@ focus_tree = {
 					check_variable = { ITA_ascended_advisor_3 = 0 compare = not_equals }
 				}
 				hidden_effect = {
-					set_variable = { ITA_ascended_advisor_1 = 1 }
+					set_variable = { ITA_ascending_advisor = 1 }
 					country_event = ITA_inner_circle.1
 				}
 				
@@ -28470,7 +28470,7 @@ focus_tree = {
 	focus = {
 		id = ITA_ascension_of_balbo
 		relative_position_id = ITA_duceprincipio
-		icon = GFX_focus_GER_ascension_of_speer
+		icon = GFX_focus_ITA_ascension_of_balbo
 		prerequisite = { focus = ITA_duceprincipio }
 		x = -5
 		y = 1
@@ -28549,7 +28549,7 @@ focus_tree = {
 					check_variable = { ITA_ascended_advisor_3 = 0 compare = not_equals }
 				}
 				hidden_effect = {
-					set_variable = { ITA_ascended_advisor_1 = 2 }
+					set_variable = { ITA_ascending_advisor = 2 }
 					country_event = ITA_inner_circle.1
 				}
 				
@@ -28589,7 +28589,7 @@ focus_tree = {
 	focus = {
 		id = ITA_ascension_of_grandi
 		relative_position_id = ITA_duceprincipio
-		icon = GFX_focus_GER_ascension_of_goring
+		icon = GFX_focus_ITA_ascension_of_grandi
 		prerequisite = { focus = ITA_duceprincipio }
 		x = -3
 		y = 1
@@ -28668,7 +28668,7 @@ focus_tree = {
 					check_variable = { ITA_ascended_advisor_3 = 0 compare = not_equals }
 				}
 				hidden_effect = {
-					set_variable = { ITA_ascended_advisor_1 = 3 }
+					set_variable = { ITA_ascending_advisor = 3 }
 					country_event = ITA_inner_circle.1
 				}
 				
@@ -28708,7 +28708,7 @@ focus_tree = {
 	focus = {
 		id = ITA_ascension_of_ciano
 		relative_position_id = ITA_duceprincipio
-		icon = GFX_focus_GER_ascension_of_himmler
+		icon = GFX_focus_ITA_ascension_of_ciano
 		prerequisite = { focus = ITA_duceprincipio }
 		x = 0
 		y = 1
@@ -28787,7 +28787,7 @@ focus_tree = {
 					check_variable = { ITA_ascended_advisor_3 = 0 compare = not_equals }
 				}
 				hidden_effect = {
-					set_variable = { ITA_ascended_advisor_1 = 4 }
+					set_variable = { ITA_ascending_advisor = 4 }
 					country_event = ITA_inner_circle.1
 				}
 				
@@ -28827,7 +28827,7 @@ focus_tree = {
 	focus = {
 		id = ITA_ascension_of_ricci
 		relative_position_id = ITA_duceprincipio
-		icon = GFX_focus_GER_ascension_of_goebbels
+		icon = GFX_focus_ITA_ascension_of_ricci
 		prerequisite = { focus = ITA_duceprincipio }
 		x = 3
 		y = 1
@@ -28906,7 +28906,7 @@ focus_tree = {
 					check_variable = { ITA_ascended_advisor_3 = 0 compare = not_equals }
 				}
 				hidden_effect = {
-					set_variable = { ITA_ascended_advisor_1 = 5 }
+					set_variable = { ITA_ascending_advisor = 5 }
 					country_event = ITA_inner_circle.1
 				}
 				
@@ -28946,7 +28946,7 @@ focus_tree = {
 	focus = {
 		id = ITA_ascension_of_bottai
 		relative_position_id = ITA_duceprincipio
-		icon = GFX_focus_GER_party_chancellor_hess
+		icon = GFX_focus_ITA_ascension_of_bottai
 		prerequisite = { focus = ITA_duceprincipio }
 		x = 5
 		y = 1
@@ -29025,7 +29025,7 @@ focus_tree = {
 					check_variable = { ITA_ascended_advisor_3 = 0 compare = not_equals }
 				}
 				hidden_effect = {
-					set_variable = { ITA_ascended_advisor_1 = 6 }
+					set_variable = { ITA_ascending_advisor = 6 }
 					country_event = ITA_inner_circle.1
 				}
 				
@@ -29065,7 +29065,7 @@ focus_tree = {
 	focus = {
 		id = ITA_ascension_of_acerbo
 		relative_position_id = ITA_duceprincipio
-		icon = GFX_focus_GER_party_chancellor_bormann
+		icon = GFX_focus_ITA_ascension_of_acerbo
 		prerequisite = { focus = ITA_duceprincipio }
 		x = 7
 		y = 1
@@ -29144,7 +29144,7 @@ focus_tree = {
 					check_variable = { ITA_ascended_advisor_3 = 0 compare = not_equals }
 				}
 				hidden_effect = {
-					set_variable = { ITA_ascended_advisor_1 = 6 }
+					set_variable = { ITA_ascending_advisor = 6 }
 					country_event = ITA_inner_circle.1
 				}
 				

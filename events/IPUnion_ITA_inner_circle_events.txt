@@ -120,5 +120,12 @@ country_event = {
 				focus = ITA_ascension_of_acerbo
 			}
 		}
+
+		hidden_effect = {
+			hidden_effect = {
+				clear_variable = ITA_ascending_advisor
+				clr_country_flag = ITA_inner_circle_event_pending_flag
+			}
+		}
 	}
 }
