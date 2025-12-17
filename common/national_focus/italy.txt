@@ -16,6 +16,7 @@
 @inner_circle_time_tier_1 = 20
 @inner_circle_time_tier_2 = 20
 @inner_circle_time_tier_3 = 30
+@inner_circle_time_tier_4 = 10
 
 
 
@@ -28750,7 +28751,7 @@ focus_tree = {
 					tooltip = {
 						localization_key = GER_focus_can_only_be_completed_by_advisor_tt
 						CHARACTER = ITA_italo_balbo
-						FOCUS = ITA_inner_circle_balbo_national_flight_movent
+						FOCUS = ITA_ascension_of_balbo
 					}
 					always = no
 				}
@@ -28794,7 +28795,7 @@ focus_tree = {
 					tooltip = {
 						localization_key = GER_focus_can_only_be_completed_by_advisor_tt
 						CHARACTER = ITA_italo_balbo
-						FOCUS = ITA_inner_circle_balbo_modern_air_force
+						FOCUS = ITA_ascension_of_balbo
 					}
 					always = no
 				}
@@ -29200,6 +29201,12 @@ focus_tree = {
 			hidden_effect = {
 				ITA_inner_circle_set_ascension_cd = yes
 
+				country_event = {
+					id = ITA_inner_circle.ricci.start
+					days = ITA_inner_circle_days_to_start_focus
+					random_days = ITA_inner_circle_random_days
+				}
+
 				clr_country_flag = ITA_ricci_ascension_flag
 
 				set_country_flag = {
@@ -29208,6 +29215,96 @@ focus_tree = {
 					days = 1500 # 大约4年
 				}
 			}
+
+			custom_effect_tooltip = available_industrial_concern
+			show_ideas_tooltip = ITA_OND
+		}
+	}
+
+	focus = {
+		id = ITA_inner_circle_ricci_OND
+		icon = GFX_focus_por_workers_of_iberia
+		relative_position_id = ITA_ascension_of_ricci
+		x = 0
+		y = 1
+		prerequisite = { focus = ITA_ascension_of_ricci }
+
+		cost = @inner_circle_time_tier_1
+
+		available = {
+			if = {
+				limit = {
+					has_country_flag = ITA_inner_circle_ricci_OND_in_progress_flag
+				}
+				set_temp_variable = { temp_focus_days = @inner_circle_time_tier_1 }
+				multiply_temp_variable = { temp_focus_days = 7 }
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_inner_circle_focus_in_progress_tt
+						CHARACTER = ITA_renato_ricci
+						FLAG_DAYs = [?ITA_inner_circle_ricci_OND_in_progress_flag:days]
+					}
+					always = no
+				}
+			}
+			else = {
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_focus_can_only_be_completed_by_advisor_tt
+						CHARACTER = ITA_renato_ricci
+						FOCUS = ITA_ascension_of_ricci
+					}
+					always = no
+				}
+			}
+		}
+
+		completion_reward = {
+			#custom_effect_tooltip = generic_skip_one_line_tt
+			add_political_power = 15
+		}
+	}
+
+	focus = {
+		id = ITA_inner_circle_ricci_nationale_mediate
+		icon = GFX_focus_generic_league_of_nations
+		relative_position_id = ITA_inner_circle_ricci_OND
+		x = 0
+		y = 1
+		prerequisite = { focus = ITA_inner_circle_ricci_OND }
+
+		cost = @inner_circle_time_tier_1
+
+		available = {
+			if = {
+				limit = {
+					has_country_flag = ITA_inner_circle_ricci_nationale_mediate_in_progress_flag
+				}
+				set_temp_variable = { temp_focus_days = @inner_circle_time_tier_1 }
+				multiply_temp_variable = { temp_focus_days = 7 }
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_inner_circle_focus_in_progress_tt
+						CHARACTER = ITA_italo_ricci
+						FLAG_DAYs = [?ITA_inner_circle_ricci_nationale_mediate_in_progress_flag:days]
+					}
+					always = no
+				}
+			}
+			else = {
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_focus_can_only_be_completed_by_advisor_tt
+						CHARACTER = ITA_renato_ricci
+						FOCUS = ITA_ascension_of_ricci
+					}
+					always = no
+				}
+			}
+		}
+
+		completion_reward = {
+			add_political_power = 15
 		}
 	}
 
@@ -29342,7 +29439,99 @@ focus_tree = {
 					value = 1
 					days = 1500 # 大约4年
 				}
+
+				country_event = {
+					id = ITA_inner_circle..start
+					days = ITA_inner_circle_days_to_start_focus
+					random_days = ITA_inner_circle_random_days
+				}
 			}
+		}
+	}
+
+	focus = {
+		id = ITA_inner_circle_bottai_elementary_education_law
+		icon = GFX_focus_generic_fascism_education
+		relative_position_id = ITA_ascension_of_bottai
+		x = 0
+		y = 1
+		prerequisite = { focus = ITA_ascension_of_bottai }
+
+		cost = @inner_circle_time_tier_1
+
+		available = {
+			if = {
+				limit = {
+					has_country_flag = ITA_inner_circle_bottai_elementary_education_law_in_progress_flag
+				}
+				set_temp_variable = { temp_focus_days = @inner_circle_time_tier_1 }
+				multiply_temp_variable = { temp_focus_days = 7 }
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_inner_circle_focus_in_progress_tt
+						CHARACTER = ITA_giuseppe_bottai
+						FLAG_DAYs = [?ITA_inner_circle_bottai_elementary_education_law_in_progress_flag:days]
+					}
+					always = no
+				}
+			}
+			else = {
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_focus_can_only_be_completed_by_advisor_tt
+						CHARACTER = ITA_giuseppe_bottai
+						FOCUS = ITA_ascension_of_bottai
+					}
+					always = no
+				}
+			}
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = ITA_inner_circle_bottai_tracking_in_secondary_education
+		icon = GFX_focus_AUS_womens_education_initiative
+		relative_position_id = ITA_inner_circle_bottai_elementary_education_law
+		x = 0
+		y = 1
+		prerequisite = { focus = ITA_inner_circle_bottai_elementary_education_law }
+
+		cost = @inner_circle_time_tier_1
+
+		available = {
+			if = {
+				limit = {
+					has_country_flag = ITA_inner_circle_bottai_tracking_in_secondary_education_in_progress_flag
+				}
+				set_temp_variable = { temp_focus_days = @inner_circle_time_tier_1 }
+				multiply_temp_variable = { temp_focus_days = 7 }
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_inner_circle_focus_in_progress_tt
+						CHARACTER = ITA_giuseppe_bottai
+						FLAG_DAYs = [?ITA_inner_circle_bottai_tracking_in_secondary_education_in_progress_flag:days]
+					}
+					always = no
+				}
+			}
+			else = {
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_focus_can_only_be_completed_by_advisor_tt
+						CHARACTER = ITA_giuseppe_bottai
+						FOCUS = ITA_ascension_of_bottai
+					}
+					always = no
+				}
+			}
+		}
+
+		completion_reward = {
+			add_political_power = 50
 		}
 	}
 

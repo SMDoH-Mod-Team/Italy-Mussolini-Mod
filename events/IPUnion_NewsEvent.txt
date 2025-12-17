@@ -40,7 +40,7 @@ news_event = {
 }
 
 news_event = {
-	id = IPUnion_news.2
+	id = IPUnion_news.2  ##蒂罗尔和福拉贝尔格非军事化
 	title = IPUnion_news.2.t
 	desc = IPUnion_news.2.d
 	
@@ -76,12 +76,22 @@ news_event = {
 			848 = {
 				set_demilitarized_zone = yes
 			}
+			GER = {
+				remove_opinion_modifier = {
+					target = ITA
+					modifier = ITA_1934_german_italy_crisis
+				}
+			}
+		}
+		remove_opinion_modifier = {
+			target = GER
+			modifier = ITA_1934_german_italy_crisis
 		}
 	}
 }
 
 news_event = {
-	id = IPUnion_news.3
+	id = IPUnion_news.3  ##建立缓冲国
 	title = IPUnion_news.3.t
 	desc = IPUnion_news.3.d
 	
@@ -119,14 +129,23 @@ news_event = {
 			AUS = {
 				add_ideas = neutrality_idea
 				load_focus_tree = IPUnion_empty_focus_tree
-				remove_ideas = x
 			}
+			GER = {
+				remove_opinion_modifier = {
+					target = ITA
+					modifier = ITA_1934_german_italy_crisis
+				}
+			}
+		}
+		remove_opinion_modifier = {
+			target = GER
+			modifier = ITA_1934_german_italy_crisis
 		}
 	}
 }
 
 news_event = {
-	id = IPUnion_news.4
+	id = IPUnion_news.4  ##占领蒂罗尔和福拉贝尔格
 	title = IPUnion_news.4.t
 	desc = IPUnion_news.4.d
 	
@@ -151,6 +170,7 @@ news_event = {
 		
 	}
 
+
 	option = {
 		name = IPUnion_news.2.a
 		hidden_effect = {
@@ -158,6 +178,16 @@ news_event = {
 				transfer_state = 153
 				transfer_state = 848
 			}
+			GER = {
+				remove_opinion_modifier = {
+					target = ITA
+					modifier = ITA_1934_german_italy_crisis
+				}
+			}
+		}
+		remove_opinion_modifier = {
+			target = GER
+			modifier = ITA_1934_german_italy_crisis
 		}
 	}
 }

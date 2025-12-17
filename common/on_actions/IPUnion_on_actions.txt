@@ -4,6 +4,18 @@ on_actions = {
 		#	add_ideas = idea_ITA_GIL
 		#}
 		effect = {
+			ITA = {
+				add_opinion_modifier = {
+					target = GER
+					modifier = ITA_1934_german_italy_crisis
+				}
+			}
+			GER = {
+				add_opinion_modifier = {
+					target = ITA
+					modifier = ITA_1934_german_italy_crisis
+				}
+			}
 			#build_railway = {
 			#	path = { 3928 13378 911 }
 			#	level = 2
