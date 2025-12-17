@@ -254,6 +254,25 @@ country_event = {
 				days = @inner_circle_time_tier_1
 			}
 		}
+		else_if = {
+			limit = {
+				NOT = { has_completed_focus = ITA_inner_circle_setting_of_again_from_roma }
+				NOT = { has_shine_effect_on_focus = ITA_inner_circle_setting_of_again_from_roma } #Balbo is working on this already
+				#NOT = { check_variable = { GER_industrialist_prevailed = 2 } } #Speer Prevailed in the Industrialist Intrigue
+				#NOT = { check_variable = { GER_industrialist_prevailed = 3 } } #Göring Prevailed in the Industrialist Intrigue
+			}
+			activate_shine_on_focus = ITA_inner_circle_setting_of_again_from_roma
+			set_country_flag = {
+				flag = ITA_inner_circle_setting_of_again_from_roma_in_progress_flag
+				days = @inner_circle_time_tier_1_flag
+				value = 1
+			}
+			country_event = {
+				id = ITA_inner_circle.graziani.complete
+				days = @inner_circle_time_tier_1
+			}
+			set_variable = { ITA_inner_circle_setting_of_again_from_roma_focus_advisor = 1 }
+		}
 		else = { #Debug logs
 			#log = "SOMETHING WENT WRONG IN Graziani FOCUSES"
 		}
@@ -309,6 +328,18 @@ country_event = {
 				days = ITA_inner_circle_days_to_start_focus
 				random_days = ITA_inner_circle_random_days
 			}
+		}
+		else_if = {
+			limit = {
+				has_shine_effect_on_focus = ITA_inner_circle_setting_of_again_from_roma
+				check_variable = { ITA_inner_circle_setting_of_again_from_roma_focus_advisor = 1 }
+			}
+			complete_national_focus = {
+				focus = ITA_inner_circle_setting_of_again_from_roma
+				use_side_message = yes
+				originator_name = ITA_rodolfo_graziani
+			}
+			clr_country_flag = ITA_inner_circle_setting_of_again_from_roma_in_progress_flag
 		}
 		else = { # Debug logs
 			#log = "Graziani Focuses HAS BEEN COMPLETE"
@@ -366,6 +397,25 @@ country_event = {
 				days = @inner_circle_time_tier_1
 			}
 		}
+		else_if = {
+			limit = {
+				NOT = { has_completed_focus = ITA_inner_circle_setting_of_again_from_roma }
+				NOT = { has_shine_effect_on_focus = ITA_inner_circle_setting_of_again_from_roma } #Balbo is working on this already
+				#NOT = { check_variable = { GER_industrialist_prevailed = 2 } } #Speer Prevailed in the Industrialist Intrigue
+				#NOT = { check_variable = { GER_industrialist_prevailed = 3 } } #Göring Prevailed in the Industrialist Intrigue
+			}
+			activate_shine_on_focus = ITA_inner_circle_setting_of_again_from_roma
+			set_country_flag = {
+				flag = ITA_inner_circle_setting_of_again_from_roma_in_progress_flag
+				days = @inner_circle_time_tier_1_flag
+				value = 1
+			}
+			country_event = {
+				id = ITA_inner_circle.balbo.complete
+				days = @inner_circle_time_tier_1
+			}
+			set_variable = { ITA_inner_circle_setting_of_again_from_roma_focus_advisor = 2 }
+		}
 		else = { #Debug logs
 			#log = "SOMETHING WENT WRONG IN Bolbo FOCUSES"
 		}
@@ -422,9 +472,855 @@ country_event = {
 				random_days = ITA_inner_circle_random_days
 			}
 		}
+		else_if = {
+			limit = {
+				has_shine_effect_on_focus = ITA_inner_circle_setting_of_again_from_roma
+				check_variable = { ITA_inner_circle_setting_of_again_from_roma_focus_advisor = 2 }
+			}
+			complete_national_focus = {
+				focus = ITA_inner_circle_setting_of_again_from_roma
+				use_side_message = yes
+				originator_name = ITA_italo_balbo
+			}
+			clr_country_flag = ITA_inner_circle_setting_of_again_from_roma_in_progress_flag
+		}
 		else = { # Debug logs
 			#log = "Bolbo Focuses HAS BEEN COMPLETE"
 		}
 	}
 }
 
+country_event = {
+	id = ITA_inner_circle.ricci.start
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_completed_focus = ITA_ascension_of_ricci
+		OR = {
+			check_variable = { ITA_ascended_advisor_1 = 5 }
+			check_variable = { ITA_ascended_advisor_2 = 5 }
+			check_variable = { ITA_ascended_advisor_3 = 5 }
+			check_variable = { ITA_ascended_advisor_4 = 5 }
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = { has_completed_focus = ITA_inner_circle_ricci_OND }
+			}
+			activate_shine_on_focus = ITA_inner_circle_ricci_OND
+			set_country_flag = { 
+				flag = ITA_inner_circle_ricci_OND_in_progress_flag 
+				days = @inner_circle_time_tier_1_flag 
+				value = 1 
+			}
+			country_event = {
+				id = ITA_inner_circle.ricci.complete
+				days = @inner_circle_time_tier_1
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_completed_focus = ITA_inner_circle_ricci_nationale_mediate
+				}
+			}
+			activate_shine_on_focus = ITA_inner_circle_ricci_nationale_mediate
+			set_country_flag = {
+				flag = ITA_inner_circle_ricci_nationale_mediate_in_progress_flag
+				days = @inner_circle_time_tier_1_flag
+				value = 1
+			}
+			country_event = {
+				id = ITA_inner_circle.ricci.complete
+				days = @inner_circle_time_tier_1
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_completed_focus = ITA_inner_circle_ricci_grapple_with_key_issues_to_goverence
+				}
+			}
+			activate_shine_on_focus = ITA_inner_circle_ricci_grapple_with_key_issues_to_goverence
+			set_country_flag = {
+				flag = ITA_inner_circle_ricci_grapple_with_key_issues_to_goverence_in_progress_flag
+				days = @inner_circle_time_tier_1_flag
+				value = 1
+			}
+			country_event = {
+				id = ITA_inner_circle.ricci.complete
+				days = @inner_circle_time_tier_1
+			}
+		}
+		else = { #Debug logs
+			#log = "SOMETHING WENT WRONG IN Bolbo FOCUSES"
+		}
+	}
+}
+
+country_event = {
+	id = ITA_inner_circle.ricci.complete
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_completed_focus = ITA_ascension_of_ricci
+		OR = {
+			check_variable = { ITA_ascended_advisor_1 = 5 }
+			check_variable = { ITA_ascended_advisor_2 = 5 }
+			check_variable = { ITA_ascended_advisor_3 = 5 }
+			check_variable = { ITA_ascended_advisor_4 = 5 }
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_shine_effect_on_focus = ITA_inner_circle_ricci_OND
+			}
+			complete_national_focus = {
+				focus = ITA_inner_circle_ricci_OND
+				use_side_message = yes
+				originator_name = ITA_renato_ricci
+			}
+			clr_country_flag = ITA_inner_circle_ricci_OND_in_progress_flag
+			country_event = {
+				id = ITA_inner_circle.ricci.start
+				days = ITA_inner_circle_days_to_start_focus
+				random_days = ITA_inner_circle_random_days
+			}
+		}
+		else_if = {
+			limit = {
+				has_shine_effect_on_focus = ITA_inner_circle_ricci_nationale_mediate
+			}
+			complete_national_focus = {
+				focus = ITA_inner_circle_ricci_nationale_mediate
+				use_side_message = yes
+				originator_name = ITA_renato_ricci
+			}
+			clr_country_flag = ITA_inner_circle_ricci_nationale_mediate_in_progress_flag
+			country_event = {
+				id = ITA_inner_circle.balbo.start
+				days = ITA_inner_circle_days_to_start_focus
+				random_days = ITA_inner_circle_random_days
+			}
+		}
+		else_if = {
+			limit = {
+				has_shine_effect_on_focus = ITA_inner_circle_ricci_grapple_with_key_issues_to_goverence
+			}
+			complete_national_focus = {
+				focus = ITA_inner_circle_ricci_grapple_with_key_issues_to_goverence
+				use_side_message = yes
+				originator_name = ITA_renato_ricci
+			}
+			clr_country_flag = ITA_inner_circle_ricci_grapple_with_key_issues_to_goverence_in_progress_flag
+		}
+		else = { # Debug logs
+			#log = "Bolbo Focuses HAS BEEN COMPLETE"
+		}
+	}
+}
+
+country_event = {
+	id = ITA_inner_circle.bottai.start
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_completed_focus = ITA_ascension_of_bottai
+		OR = {
+			check_variable = { ITA_ascended_advisor_1 = 6 }
+			check_variable = { ITA_ascended_advisor_2 = 6 }
+			check_variable = { ITA_ascended_advisor_3 = 6 }
+			check_variable = { ITA_ascended_advisor_4 = 6 }
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = { has_completed_focus = ITA_inner_circle_bottai_elementary_education_law }
+			}
+			activate_shine_on_focus = ITA_inner_circle_bottai_elementary_education_law
+			set_country_flag = { 
+				flag = ITA_inner_circle_bottai_elementary_education_law_in_progress_flag 
+				days = @inner_circle_time_tier_1_flag 
+				value = 1 
+			}
+			country_event = {
+				id = ITA_inner_circle.bottai.complete
+				days = @inner_circle_time_tier_1
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_completed_focus = ITA_inner_circle_bottai_tracking_in_secondary_education
+				}
+			}
+			activate_shine_on_focus = ITA_inner_circle_bottai_tracking_in_secondary_education
+			set_country_flag = {
+				flag = ITA_inner_circle_bottai_tracking_in_secondary_education_in_progress_flag
+				days = @inner_circle_time_tier_1_flag
+				value = 1
+			}
+			country_event = {
+				id = ITA_inner_circle.bottai.complete
+				days = @inner_circle_time_tier_1
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_completed_focus = ITA_inner_circle_bottai_education_sector_a_black_line
+				}
+			}
+			activate_shine_on_focus = ITA_inner_circle_bottai_education_sector_a_black_line
+			set_country_flag = {
+				flag = ITA_inner_circle_bottai_education_sector_a_black_line_in_progress_flag
+				days = @inner_circle_time_tier_1_flag
+				value = 1
+			}
+			country_event = {
+				id = ITA_inner_circle.bottai.complete
+				days = @inner_circle_time_tier_1
+			}
+		}
+		else = { #Debug logs
+			#log = "SOMETHING WENT WRONG IN Bolbo FOCUSES"
+		}
+	}
+}
+
+country_event = {
+	id = ITA_inner_circle.bottai.complete
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_completed_focus = ITA_ascension_of_bottai
+		OR = {
+			check_variable = { ITA_ascended_advisor_1 = 6 }
+			check_variable = { ITA_ascended_advisor_2 = 6 }
+			check_variable = { ITA_ascended_advisor_3 = 6 }
+			check_variable = { ITA_ascended_advisor_4 = 6 }
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_shine_effect_on_focus = ITA_inner_circle_bottai_elementary_education_law
+			}
+			complete_national_focus = {
+				focus = ITA_inner_circle_bottai_elementary_education_law
+				use_side_message = yes
+				originator_name = ITA_giuseppe_bottai
+			}
+			clr_country_flag = ITA_inner_circle_bottai_elementary_education_law_in_progress_flag
+			country_event = {
+				id = ITA_inner_circle.bottai.start
+				days = ITA_inner_circle_days_to_start_focus
+				random_days = ITA_inner_circle_random_days
+			}
+		}
+		else_if = {
+			limit = {
+				has_shine_effect_on_focus = ITA_inner_circle_bottai_tracking_in_secondary_education
+			}
+			complete_national_focus = {
+				focus = ITA_inner_circle_bottai_tracking_in_secondary_education
+				use_side_message = yes
+				originator_name = ITA_giuseppe_bottai
+			}
+			clr_country_flag = ITA_inner_circle_bottai_tracking_in_secondary_education_in_progress_flag
+			country_event = {
+				id = ITA_inner_circle.bottai.start
+				days = ITA_inner_circle_days_to_start_focus
+				random_days = ITA_inner_circle_random_days
+			}
+		}
+		else_if = {
+			limit = {
+				has_shine_effect_on_focus = ITA_inner_circle_bottai_education_sector_a_black_line
+			}
+			complete_national_focus = {
+				focus = ITA_inner_circle_bottai_education_sector_a_black_line
+				use_side_message = yes
+				originator_name = ITA_giuseppe_bottai
+			}
+			clr_country_flag = ITA_inner_circle_bottai_education_sector_a_black_line_in_progress_flag
+		}
+		else = { # Debug logs
+			#log = "Bolbo Focuses HAS BEEN COMPLETE"
+		}
+	}
+}
+
+## CIANO FOCUS EVENT ##
+
+country_event = {
+	id = ITA_inner_circle.ciano.00
+
+	title = ITA_inner_circle.ciano.00.t
+	desc = ITA_inner_circle.ciano.00.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ITA_inner_circle_event_pending_flag
+		}
+	}
+
+	option = {
+		name = ITA_inner_circle.ciano.00.a
+		ai_chance = {
+			base = 100
+		}
+		custom_effect_tooltip = ITA_inner_circle_ciano_unwilling_to_repent_tt
+
+		hidden_effect = {
+			ITA_gian_galeazzo_ciano = { set_character_flag = ITA_ciano_unrepent_flag } 
+			country_event = {
+				id = ITA_inner_circle.ciano.start
+				days = ITA_inner_circle_days_to_start_focus
+				random_days = ITA_inner_circle_random_days
+			}
+			clr_country_flag = ITA_inner_circle_event_pending_flag
+		}
+	}
+
+	option = {
+		name = ITA_inner_circle.ciano.00.b
+		ai_chance = {
+			base = 100
+		}
+		custom_effect_tooltip = ITA_inner_circle_ciano_willing_to_repent_tt
+
+		hidden_effect = {
+			ITA_gian_galeazzo_ciano = { set_character_flag = ITA_ciano_repent_flag } 
+			country_event = {
+				id = ITA_inner_circle.ciano.start
+				days = ITA_inner_circle_days_to_start_focus
+				random_days = ITA_inner_circle_random_days
+			}
+			clr_country_flag = ITA_inner_circle_event_pending_flag
+		}
+	}
+}
+
+country_event = {
+	id = ITA_inner_circle.ciano.start
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_completed_focus = ITA_ascension_of_ciano
+		OR = {
+			check_variable = { ITA_ascended_advisor_1 = 4 }
+			check_variable = { ITA_ascended_advisor_2 = 4 }
+			check_variable = { ITA_ascended_advisor_3 = 4 }
+			check_variable = { ITA_ascended_advisor_4 = 4 }
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				ITA_gian_galeazzo_ciano = {
+					has_character_flag = ITA_ciano_unrepent_flag
+				}
+			}
+			if = {
+				limit = {
+					NOT = { has_completed_focus = ITA_inner_circle_ciano_rectify }
+				}
+				activate_shine_on_focus = ITA_inner_circle_ciano_rectify
+				set_country_flag = { 
+					flag = ITA_inner_circle_ciano_rectify_in_progress_flag 
+					days = @inner_circle_time_tier_1_flag 
+					value = 1 
+				}
+				country_event = {
+					id = ITA_inner_circle.ciano.complete
+					days = @inner_circle_time_tier_1
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_completed_focus = ITA_inner_circle_ciano_the_three_guidelines
+					}
+				}
+				activate_shine_on_focus = ITA_inner_circle_ciano_the_three_guidelines
+				set_country_flag = {
+					flag = ITA_inner_circle_ciano_the_three_guidelines_in_progress_flag
+					days = @inner_circle_time_tier_1_flag
+					value = 1
+				}
+				country_event = {
+					id = ITA_inner_circle.ciano.complete
+					days = @inner_circle_time_tier_1
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_completed_focus = ITA_inner_circle_ciano_the_real_steel_company
+					}
+				}
+				activate_shine_on_focus = ITA_inner_circle_ciano_the_real_steel_company
+				set_country_flag = {
+					flag = ITA_inner_circle_ciano_the_real_steel_company_in_progress_flag
+					days = @inner_circle_time_tier_1_flag
+					value = 1
+				}
+				country_event = {
+					id = ITA_inner_circle.ciano.complete
+					days = @inner_circle_time_tier_1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				ITA_gian_galeazzo_ciano = {
+					has_character_flag = ITA_ciano_repent_flag
+				}
+			}
+			if = {
+				limit = {
+					NOT = { has_completed_focus = ITA_inner_circle_ciano_never_overturn_a_verdict }
+				}
+				activate_shine_on_focus = ITA_inner_circle_ciano_never_overturn_a_verdict
+				set_country_flag = { 
+					flag = ITA_inner_circle_ciano_never_overturn_a_verdict_in_progress_flag 
+					days = @inner_circle_time_tier_1_flag 
+					value = 1 
+				}
+				country_event = {
+					id = ITA_inner_circle.ciano.complete
+					days = @inner_circle_time_tier_1
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_completed_focus = ITA_inner_circle_ciano_the_first_half_of_my_life
+					}
+				}
+				activate_shine_on_focus = ITA_inner_circle_ciano_the_first_half_of_my_life
+				set_country_flag = {
+					flag = ITA_inner_circle_ciano_the_first_half_of_my_life_in_progress_flag
+					days = @inner_circle_time_tier_1_flag
+					value = 1
+				}
+				country_event = {
+					id = ITA_inner_circle.ciano.complete
+					days = @inner_circle_time_tier_1
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_completed_focus = ITA_inner_circle_ciano_the_real_steel_company
+					}
+				}
+				activate_shine_on_focus = ITA_inner_circle_ciano_the_real_steel_company
+				set_country_flag = {
+					flag = ITA_inner_circle_ciano_the_real_steel_company_in_progress_flag
+					days = @inner_circle_time_tier_1_flag
+					value = 1
+				}
+				country_event = {
+					id = ITA_inner_circle.ciano.complete
+					days = @inner_circle_time_tier_1
+				}
+			}
+		}
+		else = { #Debug logs
+			#log = "SOMETHING WENT WRONG IN Bolbo FOCUSES"
+		}
+	}
+}
+
+country_event = {
+	id = ITA_inner_circle.ciano.complete
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_completed_focus = ITA_ascension_of_ciano
+		OR = {
+			check_variable = { ITA_ascended_advisor_1 = 4 }
+			check_variable = { ITA_ascended_advisor_2 = 4 }
+			check_variable = { ITA_ascended_advisor_3 = 4 }
+			check_variable = { ITA_ascended_advisor_4 = 4 }
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_shine_effect_on_focus = ITA_inner_circle_ciano_rectify
+			}
+			complete_national_focus = {
+				focus = ITA_inner_circle_ciano_rectify
+				use_side_message = yes
+				originator_name = ITA_galeazzo_ciano
+			}
+			clr_country_flag = ITA_inner_circle_ciano_rectify_in_progress_flag
+			country_event = {
+				id = ITA_inner_circle.ciano.start
+				days = ITA_inner_circle_days_to_start_focus
+				random_days = ITA_inner_circle_random_days
+			}
+		}
+		else_if = {
+			limit = {
+				has_shine_effect_on_focus = ITA_inner_circle_ciano_the_three_guidelines
+			}
+			complete_national_focus = {
+				focus = ITA_inner_circle_ciano_the_three_guidelines
+				use_side_message = yes
+				originator_name = ITA_galeazzo_ciano
+			}
+			clr_country_flag = ITA_inner_circle_ciano_the_three_guidelines_in_progress_flag
+			country_event = {
+				id = ITA_inner_circle.ciano.start
+				days = ITA_inner_circle_days_to_start_focus
+				random_days = ITA_inner_circle_random_days
+			}
+		}
+		else_if = {
+			limit = {
+				has_shine_effect_on_focus = ITA_inner_circle_ciano_never_overturn_a_verdict
+			}
+			complete_national_focus = {
+				focus = ITA_inner_circle_ciano_never_overturn_a_verdict
+				use_side_message = yes
+				originator_name = ITA_galeazzo_ciano
+			}
+			clr_country_flag = ITA_inner_circle_ciano_never_overturn_a_verdict_in_progress_flag
+			country_event = {
+				id = ITA_inner_circle.ciano.start
+				days = ITA_inner_circle_days_to_start_focus
+				random_days = ITA_inner_circle_random_days
+			}
+		}
+		else_if = {
+			limit = {
+				has_shine_effect_on_focus = ITA_inner_circle_ciano_the_first_half_of_my_life
+			}
+			complete_national_focus = {
+				focus = ITA_inner_circle_ciano_the_first_half_of_my_life
+				use_side_message = yes
+				originator_name = ITA_galeazzo_ciano
+			}
+			clr_country_flag = ITA_inner_circle_ciano_the_first_half_of_my_life_in_progress_flag
+			country_event = {
+				id = ITA_inner_circle.ciano.start
+				days = ITA_inner_circle_days_to_start_focus
+				random_days = ITA_inner_circle_random_days
+			}
+		}
+		else_if = {
+			limit = {
+				has_shine_effect_on_focus = ITA_inner_circle_ciano_the_real_steel_company
+			}
+			complete_national_focus = {
+				focus = ITA_inner_circle_ciano_the_real_steel_company
+				use_side_message = yes
+				originator_name = ITA_galeazzo_ciano
+			}
+			clr_country_flag = ITA_inner_circle_ciano_the_real_steel_company_in_progress_flag
+		}
+		else = { # Debug logs
+			#log = "Bolbo Focuses HAS BEEN COMPLETE"
+		}
+	}
+}
+
+## ACERBO FOCUS EVENT ##
+
+country_event = {
+	id = ITA_inner_circle.acerbo.start
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_completed_focus = ITA_ascension_of_acerbo
+		OR = {
+			check_variable = { ITA_ascended_advisor_1 = 7 }
+			check_variable = { ITA_ascended_advisor_2 = 7 }
+			check_variable = { ITA_ascended_advisor_3 = 7 }
+			check_variable = { ITA_ascended_advisor_4 = 7 }
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = { has_completed_focus = ITA_inner_circle_acerbo_land_redistribution }
+			}
+			activate_shine_on_focus = ITA_inner_circle_acerbo_land_redistribution
+			set_country_flag = { 
+				flag = ITA_inner_circle_acerbo_land_redistribution_in_progress_flag 
+				days = @inner_circle_time_tier_1_flag 
+				value = 1 
+			}
+			country_event = {
+				id = ITA_inner_circle.acerbo.complete
+				days = @inner_circle_time_tier_1
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_completed_focus = ITA_inner_circle_acerbo_agricultural_collectivization
+				}
+			}
+			activate_shine_on_focus = ITA_inner_circle_acerbo_agricultural_collectivization
+			set_country_flag = {
+				flag = ITA_inner_circle_acerbo_agricultural_collectivization_in_progress_flag
+				days = @inner_circle_time_tier_1_flag
+				value = 1
+			}
+			country_event = {
+				id = ITA_inner_circle.acerbo.complete
+				days = @inner_circle_time_tier_1
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_completed_focus = ITA_inner_circle_acerbo_corporatist_agricultural_modernization
+				}
+			}
+			activate_shine_on_focus = ITA_inner_circle_acerbo_corporatist_agricultural_modernization
+			set_country_flag = {
+				flag = ITA_inner_circle_acerbo_corporatist_agricultural_modernization_in_progress_flag
+				days = @inner_circle_time_tier_1_flag
+				value = 1
+			}
+			country_event = {
+				id = ITA_inner_circle.acerbo.complete
+				days = @inner_circle_time_tier_1
+			}
+		}
+		else = { #Debug logs
+			#log = "SOMETHING WENT WRONG IN Bolbo FOCUSES"
+		}
+	}
+}
+
+country_event = {
+	id = ITA_inner_circle.acerbo.complete
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_completed_focus = ITA_ascension_of_acerbo
+		OR = {
+			check_variable = { ITA_ascended_advisor_1 = 7 }
+			check_variable = { ITA_ascended_advisor_2 = 7 }
+			check_variable = { ITA_ascended_advisor_3 = 7 }
+			check_variable = { ITA_ascended_advisor_4 = 7 }
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_shine_effect_on_focus = ITA_inner_circle_acerbo_land_redistribution
+			}
+			complete_national_focus = {
+				focus = ITA_inner_circle_acerbo_land_redistribution
+				use_side_message = yes
+				originator_name = ITA_giacomo_acerbo
+			}
+			clr_country_flag = ITA_inner_circle_acerbo_land_redistribution_in_progress_flag
+			country_event = {
+				id = ITA_inner_circle.acerbo.start
+				days = ITA_inner_circle_days_to_start_focus
+				random_days = ITA_inner_circle_random_days
+			}
+		}
+		else_if = {
+			limit = {
+				has_shine_effect_on_focus = ITA_inner_circle_acerbo_agricultural_collectivization
+			}
+			complete_national_focus = {
+				focus = ITA_inner_circle_acerbo_agricultural_collectivization
+				use_side_message = yes
+				originator_name = ITA_giacomo_acerbo
+			}
+			clr_country_flag = ITA_inner_circle_acerbo_agricultural_collectivization_in_progress_flag
+			country_event = {
+				id = ITA_inner_circle.acerbo.start
+				days = ITA_inner_circle_days_to_start_focus
+				random_days = ITA_inner_circle_random_days
+			}
+		}
+		else_if = {
+			limit = {
+				has_shine_effect_on_focus = ITA_inner_circle_acerbo_corporatist_agricultural_modernization
+			}
+			complete_national_focus = {
+				focus = ITA_inner_circle_acerbo_corporatist_agricultural_modernization
+				use_side_message = yes
+				originator_name = ITA_giacomo_acerbo
+			}
+			clr_country_flag = ITA_inner_circle_acerbo_corporatist_agricultural_modernization_in_progress_flag
+		}
+		else = { # Debug logs
+			#log = "Bolbo Focuses HAS BEEN COMPLETE"
+		}
+	}
+}
+
+## GRANDI FOCUS EVENT ##
+
+country_event = {
+	id = ITA_inner_circle.grandi.start
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_completed_focus = ITA_ascension_of_grandi
+		OR = {
+			check_variable = { ITA_ascended_advisor_1 = 3 }
+			check_variable = { ITA_ascended_advisor_2 = 3 }
+			check_variable = { ITA_ascended_advisor_3 = 3 }
+			check_variable = { ITA_ascended_advisor_4 = 3 }
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = { has_completed_focus = ITA_inner_circle_grandi_civil_code }
+			}
+			activate_shine_on_focus = ITA_inner_circle_grandi_civil_code
+			set_country_flag = { 
+				flag = ITA_inner_circle_grandi_civil_code_in_progress_flag 
+				days = @inner_circle_time_tier_1_flag 
+				value = 1 
+			}
+			country_event = {
+				id = ITA_inner_circle.grandi.complete
+				days = @inner_circle_time_tier_1
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = { has_completed_focus = ITA_inner_circle_grandi_advancing_law-based_governance }
+			}
+			activate_shine_on_focus = ITA_inner_circle_grandi_advancing_law-based_governance
+			set_country_flag = { 
+				flag = ITA_inner_circle_grandi_advancing_law-based_governance_in_progress_flag 
+				days = @inner_circle_time_tier_1_flag 
+				value = 1 
+			}
+			country_event = {
+				id = ITA_inner_circle.grandi.complete
+				days = @inner_circle_time_tier_1
+			}
+		}
+		#else_if = {
+		#	limit = {
+		#		NOT = {
+		#			has_completed_focus = ITA_inner_circle_acerbo_agricultural_collectivization
+		#		}
+		#	}
+		#	activate_shine_on_focus = ITA_inner_circle_acerbo_agricultural_collectivization
+		#	set_country_flag = {
+		#		flag = ITA_inner_circle_acerbo_agricultural_collectivization_in_progress_flag
+		#		days = @inner_circle_time_tier_1_flag
+		#		value = 1
+		#	}
+		#	country_event = {
+		#		id = ITA_inner_circle.acerbo.complete
+		#		days = @inner_circle_time_tier_1
+		#	}
+		#}
+		else = { #Debug logs
+			#log = "SOMETHING WENT WRONG IN Bolbo FOCUSES"
+		}
+	}
+}
+
+country_event = {
+	id = ITA_inner_circle.grandi.complete
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_completed_focus = ITA_ascension_of_grandi
+		OR = {
+			check_variable = { ITA_ascended_advisor_1 = 3 }
+			check_variable = { ITA_ascended_advisor_2 = 3 }
+			check_variable = { ITA_ascended_advisor_3 = 3 }
+			check_variable = { ITA_ascended_advisor_4 = 3 }
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_shine_effect_on_focus = ITA_inner_circle_grandi_civil_code
+			}
+			complete_national_focus = {
+				focus = ITA_inner_circle_grandi_civil_code
+				use_side_message = yes
+				originator_name = ITA_dino_grandi
+			}
+			clr_country_flag = ITA_inner_circle_grandi_civil_code_in_progress_flag
+			country_event = {
+				id = ITA_inner_circle.grandi.start
+				days = ITA_inner_circle_days_to_start_focus
+				random_days = ITA_inner_circle_random_days
+			}
+		}
+		else_if = {
+			limit = {
+				has_shine_effect_on_focus = ITA_inner_circle_grandi_advancing_law-based_governance
+			}
+			complete_national_focus = {
+				focus = ITA_inner_circle_grandi_advancing_law-based_governance
+				use_side_message = yes
+				originator_name = ITA_dino_grandi
+			}
+			clr_country_flag = ITA_inner_circle_grandi_advancing_law-based_governance_in_progress_flag
+		}
+		else = { # Debug logs
+			#log = "Bolbo Focuses HAS BEEN COMPLETE"
+		}
+	}
+}

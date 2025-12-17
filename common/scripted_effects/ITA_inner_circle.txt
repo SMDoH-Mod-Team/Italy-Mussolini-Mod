@@ -15,37 +15,37 @@ ITA_remove_replaced_advisor_1_effects = {
 			limit = {
 				check_variable = { ITA_ascended_advisor_1 = 2 }
 			}
-			ITA_remove_speer_effects = yes
+			ITA_remove_balbo_effects = yes
 		}
 		else_if = { # GÖRING REPLACED
 			limit = {
 				check_variable = { ITA_ascended_advisor_1 = 3 }
 			}
-			ITA_remove_goring_effects = yes
+			ITA_remove_grandi_effects = yes
 		}
 		else_if = { # HIMMLER REPLACED
 			limit = {
 				check_variable = { ITA_ascended_advisor_1 = 4 }
 			}
-			ITA_remove_himmler_effects = yes
+			ITA_remove_ciano_effects = yes
 		}
 		else_if = { # GOEBBELS REPLACED
 			limit = {
 				check_variable = { ITA_ascended_advisor_1 = 5 }
 			}
-			ITA_remove_goebbels_effects = yes
+			ITA_remove_ricci_effects = yes
 		}
 		else_if = { # HESS REPLACED
 			limit = {
 				check_variable = { ITA_ascended_advisor_1 = 6 }
 			}
-			ITA_remove_hess_effects = yes
+			ITA_remove_bottai_effects = yes
 		}
 		else_if = { # BORMANN REPLACED
 			limit = {
 				check_variable = { ITA_ascended_advisor_1 = 7 }
 			}
-			ITA_remove_bormann_effects = yes
+			ITA_remove_acerbo_effects = yes
 		}
 		else = {
 			log = "Something bad happened trying to remove advisor [?ITA_ascended_advisor_1] effects."
@@ -70,37 +70,37 @@ ITA_remove_replaced_advisor_2_effects = {
 			limit = {
 				check_variable = { ITA_ascended_advisor_2 = 2 }
 			}
-			ITA_remove_speer_effects = yes
+			ITA_remove_balbo_effects = yes
 		}
 		else_if = { # GÖRING REPLACED
 			limit = {
 				check_variable = { ITA_ascended_advisor_2 = 3 }
 			}
-			ITA_remove_goring_effects = yes
+			ITA_remove_grandi_effects = yes
 		}
 		else_if = { # HIMMLER REPLACED
 			limit = {
 				check_variable = { ITA_ascended_advisor_2 = 4 }
 			}
-			ITA_remove_himmler_effects = yes
+			ITA_remove_ciano_effects = yes
 		}
 		else_if = { # GOEBBELS REPLACED
 			limit = {
 				check_variable = { ITA_ascended_advisor_2 = 5 }
 			}
-			ITA_remove_goebbels_effects = yes
+			ITA_remove_ricci_effects = yes
 		}
 		else_if = { # HESS REPLACED
 			limit = {
 				check_variable = { ITA_ascended_advisor_2 = 6 }
 			}
-			ITA_remove_hess_effects = yes
+			ITA_remove_bottai_effects = yes
 		}
 		else_if = { # BORMANN REPLACED
 			limit = {
 				check_variable = { ITA_ascended_advisor_2 = 7 }
 			}
-			ITA_remove_bormann_effects = yes
+			ITA_remove_acerbo_effects = yes
 		}
 		else = {
 			log = "Something bad happened trying to remove advisor [?ITA_ascended_advisor_2] effects."
@@ -125,37 +125,37 @@ ITA_remove_replaced_advisor_3_effects = {
 			limit = {
 				check_variable = { ITA_ascended_advisor_3 = 2 }
 			}
-			ITA_remove_speer_effects = yes
+			ITA_remove_balbo_effects = yes
 		}
 		else_if = { # GÖRING REPLACED
 			limit = {
 				check_variable = { ITA_ascended_advisor_3 = 3 }
 			}
-			ITA_remove_goring_effects = yes
+			ITA_remove_grandi_effects = yes
 		}
 		else_if = { # HIMMLER REPLACED
 			limit = {
 				check_variable = { ITA_ascended_advisor_3 = 4 }
 			}
-			ITA_remove_himmler_effects = yes
+			ITA_remove_ciano_effects = yes
 		}
 		else_if = { # GOEBBELS REPLACED
 			limit = {
 				check_variable = { ITA_ascended_advisor_3 = 5 }
 			}
-			ITA_remove_goebbels_effects = yes
+			ITA_remove_ricci_effects = yes
 		}
 		else_if = { # HESS REPLACED
 			limit = {
 				check_variable = { ITA_ascended_advisor_3 = 6 }
 			}
-			ITA_remove_hess_effects = yes
+			ITA_remove_bottai_effects = yes
 		}
 		else_if = { # BORMANN REPLACED
 			limit = {
 				check_variable = { ITA_ascended_advisor_3 = 7 }
 			}
-			ITA_remove_bormann_effects = yes
+			ITA_remove_acerbo_effects = yes
 		}
 		else = {
 			log = "Something bad happened trying to remove advisor [?ITA_ascended_advisor_3] effects."
@@ -180,37 +180,37 @@ ITA_remove_replaced_advisor_4_effects = {
 			limit = {
 				check_variable = { ITA_ascended_advisor_4 = 2 }
 			}
-			ITA_remove_speer_effects = yes
+			ITA_remove_balbo_effects = yes
 		}
 		else_if = { # GÖRING REPLACED
 			limit = {
 				check_variable = { ITA_ascended_advisor_4 = 3 }
 			}
-			ITA_remove_goring_effects = yes
+			ITA_remove_grandi_effects = yes
 		}
 		else_if = { # HIMMLER REPLACED
 			limit = {
 				check_variable = { ITA_ascended_advisor_4 = 4 }
 			}
-			ITA_remove_himmler_effects = yes
+			ITA_remove_ciano_effects = yes
 		}
 		else_if = { # GOEBBELS REPLACED
 			limit = {
 				check_variable = { ITA_ascended_advisor_4 = 5 }
 			}
-			ITA_remove_goebbels_effects = yes
+			ITA_remove_ricci_effects = yes
 		}
 		else_if = { # HESS REPLACED
 			limit = {
 				check_variable = { ITA_ascended_advisor_4 = 6 }
 			}
-			ITA_remove_hess_effects = yes
+			ITA_remove_bottai_effects = yes
 		}
 		else_if = { # BORMANN REPLACED
 			limit = {
 				check_variable = { ITA_ascended_advisor_4 = 7 }
 			}
-			ITA_remove_bormann_effects = yes
+			ITA_remove_acerbo_effects = yes
 		}
 		else = {
 			log = "Something bad happened trying to remove advisor [?ITA_ascended_advisor_4] effects."
@@ -317,6 +317,21 @@ ITA_remove_graziani_effects = {
 	#	set_variable = { ITA_wonder_weapons_focus_advisor = 0 }
 	#}
 
+	if = {
+		limit = {
+			has_shine_effect_on_focus = ITA_inner_circle_graziani_theory
+		}
+		deactivate_shine_on_focus = ITA_inner_circle_graziani_theory
+		clr_country_flag = ITA_inner_circle_graziani_theory_in_progress_flag
+	}
+	else_if = {
+		limit = {
+			has_shine_effect_on_focus = ITA_inner_circle_graziani_armed_blackshirts
+		}
+		deactivate_shine_on_focus = ITA_inner_circle_graziani_armed_blackshirts
+		clr_country_flag = ITA_inner_circle_graziani_armed_blackshirts_in_progress_flag
+	}
+
 	#Uncomplete Ascension focus so that he can be picked later on
 	uncomplete_national_focus = {
 		focus = ITA_ascension_of_graziani
@@ -349,6 +364,22 @@ ITA_add_balbo_effects = {
 }
 
 ITA_remove_balbo_effects = {
+
+	if = {
+		limit = {
+			has_shine_effect_on_focus = ITA_inner_circle_balbo_national_flight_movent
+		}
+		deactivate_shine_on_focus = ITA_inner_circle_balbo_national_flight_movent
+		clr_country_flag = ITA_inner_circle_balbo_national_flight_movent_in_progress_flag
+	}
+	else_if = {
+		limit = {
+			has_shine_effect_on_focus = ITA_inner_circle_balbo_modern_air_force
+		}
+		deactivate_shine_on_focus = ITA_inner_circle_balbo_modern_air_force
+		clr_country_flag = ITA_inner_circle_balbo_modern_air_force_in_progress_flag
+	}
+
 	if = {
 		limit = {
 			has_idea = ITA_leader_trait_u_know_what_ur_doing
@@ -390,6 +421,15 @@ ITA_add_grandi_effects = {
 }
 
 ITA_remove_grandi_effects = {
+
+	if = {
+		limit = {
+			has_shine_effect_on_focus = ITA_inner_circle_grandi_civil_code
+		}
+		deactivate_shine_on_focus = ITA_inner_circle_grandi_civil_code
+		clr_country_flag = ITA_inner_circle_grandi_civil_code_in_progress_flag
+	}
+
 	if = {
 		limit = {
 			has_idea = ITA_leader_trait_captialism_roader
@@ -430,6 +470,36 @@ ITA_add_ciano_effects = {
 	add_ideas = ITA_leader_trait_steel_company
 }
 ITA_remove_ciano_effects = {
+
+	if = {
+		limit = {
+			has_shine_effect_on_focus = ITA_inner_circle_ciano_rectify
+		}
+		deactivate_shine_on_focus = ITA_inner_circle_ciano_rectify
+		clr_country_flag = ITA_inner_circle_ciano_rectify_in_progress_flag
+	}
+	else_if = {
+		limit = {
+			has_shine_effect_on_focus = ITA_inner_circle_ciano_the_three_guidelines
+		}
+		deactivate_shine_on_focus = ITA_inner_circle_ciano_the_three_guidelines
+		clr_country_flag = ITA_inner_circle_ciano_the_three_guidelines_in_progress_flag
+	}
+	else_if = {
+		limit = {
+			has_shine_effect_on_focus = ITA_inner_circle_ciano_never_overturn_a_verdict
+		}
+		deactivate_shine_on_focus = ITA_inner_circle_ciano_never_overturn_a_verdict
+		clr_country_flag = ITA_inner_circle_ciano_never_overturn_a_verdict_in_progress_flag
+	}
+	else_if = {
+		limit = {
+			has_shine_effect_on_focus = ITA_inner_circle_ciano_the_first_half_of_my_life
+		}
+		deactivate_shine_on_focus = ITA_inner_circle_ciano_the_first_half_of_my_life
+		clr_country_flag = ITA_inner_circle_ciano_the_first_half_of_my_life_in_progress_flag
+	}
+
 	if = {
 		limit = {
 			has_idea = ITA_leader_trait_steel_company
@@ -470,7 +540,22 @@ ITA_add_ricci_effects = {
 	add_ideas = ITA_leader_trait_machine_master
 }
 
-ITA_remove_balbo_effects = {
+ITA_remove_ricci_effects = {
+	if = {
+		limit = {
+			has_shine_effect_on_focus = ITA_inner_circle_ricci_OND
+		}
+		deactivate_shine_on_focus = ITA_inner_circle_ricci_OND
+		clr_country_flag = ITA_inner_circle_ricci_OND_in_progress_flag
+	}
+	else_if = {
+		limit = {
+			has_shine_effect_on_focus = ITA_inner_circle_ricci_nationale_mediate
+		}
+		deactivate_shine_on_focus = ITA_inner_circle_ricci_nationale_mediate
+		clr_country_flag = ITA_inner_circle_ricci_nationale_mediate_in_progress_flag
+	}
+
 	if = {
 		limit = {
 			has_idea = ITA_leader_trait_machine_master
@@ -511,7 +596,23 @@ ITA_add_bottai_effects = {
 	add_ideas = ITA_leader_trait_literacy_leader
 }
 
-ITA_remove_balbo_effects = {
+ITA_remove_bottai_effects = {
+
+	if = {
+		limit = {
+			has_shine_effect_on_focus = ITA_inner_circle_bottai_elementary_education_law
+		}
+		deactivate_shine_on_focus = ITA_inner_circle_bottai_elementary_education_law
+		clr_country_flag = ITA_inner_circle_bottai_elementary_education_law_in_progress_flag
+	}
+	else_if = {
+		limit = {
+			has_shine_effect_on_focus = ITA_inner_circle_bottai_tracking_in_secondary_education
+		}
+		deactivate_shine_on_focus = ITA_inner_circle_bottai_tracking_in_secondary_education
+		clr_country_flag = ITA_inner_circle_bottai_tracking_in_secondary_education_in_progress_flag
+	}
+
 	if = {
 		limit = {
 			has_idea = ITA_leader_trait_literacy_leader
@@ -553,6 +654,22 @@ ITA_add_acerbo_effects = {
 }
 
 ITA_remove_acerbo_effects = {
+
+	if = {
+		limit = {
+			has_shine_effect_on_focus = ITA_inner_circle_acerbo_land_redistribution
+		}
+		deactivate_shine_on_focus = ITA_inner_circle_acerbo_land_redistribution
+		clr_country_flag = ITA_inner_circle_acerbo_land_redistribution_in_progress_flag
+	}
+	else_if = {
+		limit = {
+			has_shine_effect_on_focus = ITA_inner_circle_acerbo_agricultural_collectivization
+		}
+		deactivate_shine_on_focus = ITA_inner_circle_acerbo_agricultural_collectivization
+		clr_country_flag = ITA_inner_circle_acerbo_agricultural_collectivization_in_progress_flag
+	}
+
 	if = {
 		limit = {
 			has_idea = ITA_leader_trait_revisionism
@@ -592,7 +709,7 @@ ITA_remove_acerbo_effects = {
 ITA_inner_circle_set_ascension_cd = {
 	set_country_flag = {
 		flag = ITA_inner_circle_cd_flag
-		days = 175
+		days = 90
 		value = 1
 	}
 }

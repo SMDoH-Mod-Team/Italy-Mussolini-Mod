@@ -16,6 +16,7 @@
 @inner_circle_time_tier_1 = 20
 @inner_circle_time_tier_2 = 20
 @inner_circle_time_tier_3 = 30
+@inner_circle_time_tier_4 = 10
 
 
 
@@ -28412,6 +28413,11 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
+			custom_effect_tooltip = {
+				localization_key = GER_ascension_of_character_focus_tt
+				CHARACTER = ITA_rodolfo_graziani
+			}
+
 			if = {
 				limit = {
 					OR = {
@@ -28579,6 +28585,71 @@ focus_tree = {
 	}
 
 	focus = {
+		id = ITA_inner_circle_setting_of_again_from_roma
+		icon = GFX_focus_ITA_cavalry_charge
+
+		relative_position_id = ITA_inner_circle_graziani_armed_blackshirts
+		x = 1
+		y = 1
+
+		cost = @inner_circle_time_tier_1
+
+		prerequisite = {
+			focus = ITA_inner_circle_graziani_armed_blackshirts
+			focus = ITA_inner_circle_balbo_modern_air_force
+		}
+
+		available = {
+			if = {
+				limit = {
+					has_country_flag = ITA_inner_circle_setting_of_again_from_roma_in_progress_flag
+				}
+				set_temp_variable = { temp_focus_days = @inner_circle_time_tier_1 }
+				multiply_temp_variable = { temp_focus_days = 7 }
+				if = {
+					limit = {
+						check_variable = { ITA_inner_circle_setting_of_again_from_roma_focus_advisor = 1 }
+					}
+					custom_override_tooltip = {
+						tooltip = {
+							localization_key = GER_inner_circle_focus_in_progress_tt
+							CHARACTER = ITA_rodolfo_graziani
+							FLAG_DAYS = [?ITA_inner_circle_setting_of_again_from_roma_in_progress_flag:days]
+						}
+						always = no
+					}
+				}
+				else = {
+					custom_override_tooltip = {
+						tooltip = {
+							localization_key = GER_inner_circle_focus_in_progress_tt
+							CHARACTER = ITA_italo_balbo
+							FLAG_DAYS = [?ITA_inner_circle_setting_of_again_from_roma_in_progress_flag:days]
+						}
+						always = no 
+					}
+				}
+			}
+			else = {
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_focus_can_only_be_completed_by_advisor_multiple_tt
+						CHARACTER = ITA_rodolfo_graziani
+						FOCUS = ITA_ascension_of_graziani
+						CHARACTER_2 = ITA_italo_balbo
+						FOCUS_2 = ITA_ascension_of_balbo
+					}
+					always = no
+				}
+			}
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
 		id = ITA_ascension_of_balbo
 		relative_position_id = ITA_duceprincipio
 		icon = GFX_focus_ITA_ascension_of_balbo
@@ -28638,6 +28709,11 @@ focus_tree = {
 			show_ideas_tooltip = ITA_leader_trait_u_know_what_ur_doing
 
 			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = {
+				localization_key = GER_ascension_of_character_focus_tt
+				CHARACTER = ITA_italo_balbo
+			}
 
 			if = {
 				limit = {
@@ -28750,7 +28826,7 @@ focus_tree = {
 					tooltip = {
 						localization_key = GER_focus_can_only_be_completed_by_advisor_tt
 						CHARACTER = ITA_italo_balbo
-						FOCUS = ITA_inner_circle_balbo_national_flight_movent
+						FOCUS = ITA_ascension_of_balbo
 					}
 					always = no
 				}
@@ -28794,7 +28870,7 @@ focus_tree = {
 					tooltip = {
 						localization_key = GER_focus_can_only_be_completed_by_advisor_tt
 						CHARACTER = ITA_italo_balbo
-						FOCUS = ITA_inner_circle_balbo_modern_air_force
+						FOCUS = ITA_ascension_of_balbo
 					}
 					always = no
 				}
@@ -28867,6 +28943,11 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
+			custom_effect_tooltip = {
+				localization_key = GER_ascension_of_character_focus_tt
+				CHARACTER = ITA_dino_grandi
+			}
+
 			if = {
 				limit = {
 					OR = {
@@ -28932,12 +29013,104 @@ focus_tree = {
 
 				clr_country_flag = ITA_grandi_ascension_flag
 
+				country_event = {
+					id = ITA_inner_circle.grandi.start
+					days = ITA_inner_circle_days_to_start_focus
+					random_days = ITA_inner_circle_random_days
+				}
+
 				set_country_flag = {
 					flag = ITA_grandi_was_ascended_flag  ## 作用是防止AI在替换掉这个亲密战友后继续点这个国策（因为AI战略的问题，如果放任不管，AI就会一直尝试点这些核心圈国策从而陷入死循环）
 					value = 1
 					days = 1500 # 大约4年
 				}
 			}
+		}
+	}
+
+	focus = {
+		id = ITA_inner_circle_grandi_civil_code
+		icon = GFX_focus_DEN_civilian_preparations
+		x = 0
+		y = 2
+		relative_position_id = ITA_ascension_of_grandi
+		prerequisite = { focus = ITA_ascension_of_grandi }
+
+		cost = @inner_circle_time_tier_3
+
+		available = {
+			if = {
+				limit = {
+					has_country_flag = ITA_inner_circle_grandi_civil_code_in_progress_flag
+				}
+				set_temp_variable = { temp_focus_days = @inner_circle_time_tier_1 }
+				multiply_temp_variable = { temp_focus_days = 7 }
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_inner_circle_focus_in_progress_tt
+						CHARACTER = ITA_dino_grandi
+						FLAG_DAYs = [?ITA_inner_circle_grandi_civil_code_in_progress_flag:days]
+					}
+					always = no
+				}
+			}
+			else = {
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_focus_can_only_be_completed_by_advisor_tt
+						CHARACTER = ITA_dino_grandi
+						FOCUS = ITA_ascension_of_grandi
+					}
+					always = no
+				}
+			}
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = ITA_inner_circle_grandi_advancing_law-based_governance
+		icon = GFX_focus_AUS_lawmaking_leniency
+		relative_position_id = ITA_inner_circle_grandi_civil_code
+		x = 0
+		y = 1
+		prerequisite = { focus = ITA_inner_circle_grandi_civil_code }
+
+		cost = @inner_circle_time_tier_1
+
+		available = {
+			if = {
+				limit = {
+					has_country_flag = ITA_inner_circle_grandi_advancing_law-based_governance_in_progress_flag
+				}
+				set_temp_variable = { temp_focus_days = @inner_circle_time_tier_1 }
+				multiply_temp_variable = { temp_focus_days = 7 }
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_inner_circle_focus_in_progress_tt
+						CHARACTER = ITA_dino_grandi
+						FLAG_DAYs = [?ITA_inner_circle_grandi_advancing_law-based_governance_in_progress_flag:days]
+					}
+					always = no
+				}
+			}
+			else = {
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_focus_can_only_be_completed_by_advisor_tt
+						CHARACTER = ITA_dino_grandi
+						FOCUS = ITA_ascension_of_grandi
+					}
+					always = no
+				}
+			}
+		}
+
+		completion_reward = {
+			add_political_power = 50
 		}
 	}
 
@@ -29002,6 +29175,11 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
+			custom_effect_tooltip = {
+				localization_key = GER_ascension_of_character_focus_tt
+				CHARACTER = ITA_galeazzo_ciano
+			}
+
 			if = {
 				limit = {
 					OR = {
@@ -29065,6 +29243,12 @@ focus_tree = {
 			hidden_effect = {
 				ITA_inner_circle_set_ascension_cd = yes
 
+				country_event = {
+					id = ITA_inner_circle.ciano.start
+					days = ITA_inner_circle_days_to_start_focus
+					random_days = ITA_inner_circle_random_days
+				}
+
 				clr_country_flag = ITA_ciano_ascension_flag
 
 				set_country_flag = {
@@ -29073,6 +29257,230 @@ focus_tree = {
 					days = 1500 # 大约4年
 				}
 			}
+		}
+	}
+
+	focus = {
+		id = ITA_inner_circle_ciano_rectify
+		icon = GFX_focus_PRC_yanan_rectification_movement
+		relative_position_id = ITA_ascension_of_ciano
+		x = -1
+		y = 1
+		mutually_exclusive = {
+			focus = ITA_inner_circle_ciano_never_overturn_a_verdict
+		}
+		prerequisite = { focus = ITA_ascension_of_ciano }
+
+		cost = @inner_circle_time_tier_1
+
+		available = {
+			if = {
+				limit = {
+					has_country_flag = ITA_inner_circle_ciano_rectify_in_progress_flag
+				}
+				set_temp_variable = { temp_focus_days = @inner_circle_time_tier_1 }
+				multiply_temp_variable = { temp_focus_days = 7 }
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_inner_circle_focus_in_progress_tt
+						CHARACTER = ITA_galeazzo_ciano
+						FLAG_DAYs = [?ITA_inner_circle_ciano_rectify_in_progress_flag:days]
+					}
+					always = no
+				}
+			}
+			else = {
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_focus_can_only_be_completed_by_advisor_tt
+						CHARACTER = ITA_galeazzo_ciano
+						FOCUS = ITA_ascension_of_ciano
+					}
+					always = no
+				}
+			}
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	
+	focus = {
+		id = ITA_inner_circle_ciano_the_three_guidelines
+		icon = GFX_focus_SWE_revoke_militia_law
+		relative_position_id = ITA_inner_circle_ciano_rectify
+		prerequisite = { focus = ITA_inner_circle_ciano_rectify }
+		x = 0
+		y = 1
+
+		cost = @inner_circle_time_tier_1
+
+		available = {
+			if = {
+				limit = {
+					has_country_flag = ITA_inner_circle_ciano_the_three_guidelines_in_progress_flag
+				}
+				set_temp_variable = { temp_focus_days = @inner_circle_time_tier_1 }
+				multiply_temp_variable = { temp_focus_days = 7 }
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_inner_circle_focus_in_progress_tt
+						CHARACTER = ITA_galeazzo_ciano
+						FLAG_DAYs = [?ITA_inner_circle_ciano_the_three_guidelines_in_progress_flag:days]
+					}
+					always = no
+				}
+			}
+			else = {
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_focus_can_only_be_completed_by_advisor_tt
+						CHARACTER = ITA_galeazzo_ciano
+						FOCUS = ITA_ascension_of_ciano
+					}
+					always = no
+				}
+			}
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = ITA_inner_circle_ciano_the_real_steel_company
+		icon = GFX_focus_ITA_ascension_of_ciano
+		relative_position_id = ITA_inner_circle_ciano_the_three_guidelines
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = ITA_inner_circle_ciano_the_three_guidelines
+			focus = ITA_inner_circle_ciano_the_first_half_of_my_life
+		}
+		available = {
+			if = {
+				limit = {
+					has_country_flag = ITA_inner_circle_ciano_the_real_steel_company_in_progress_flag
+				}
+				set_temp_variable = { temp_focus_days = @inner_circle_time_tier_1 }
+				multiply_temp_variable = { temp_focus_days = 7 }
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_inner_circle_focus_in_progress_tt
+						CHARACTER = ITA_galeazzo_ciano
+						FLAG_DAYs = [?ITA_inner_circle_ciano_the_real_steel_company_in_progress_flag:days]
+					}
+					always = no
+				}
+			}
+			else = {
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_focus_can_only_be_completed_by_advisor_tt
+						CHARACTER = ITA_galeazzo_ciano
+						FOCUS = ITA_ascension_of_ciano
+					}
+					always = no
+				}
+			}
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = ITA_inner_circle_ciano_never_overturn_a_verdict
+		icon = GFX_goal_generic_forceful_treaty
+		relative_position_id = ITA_ascension_of_ciano
+		x = 1
+		y = 1
+
+		mutually_exclusive = {
+			focus = ITA_inner_circle_ciano_rectify
+		}
+
+		prerequisite = { focus = ITA_ascension_of_ciano }
+
+		cost = @inner_circle_time_tier_1
+
+		available = {
+			if = {
+				limit = {
+					has_country_flag = ITA_inner_circle_ciano_never_overturn_a_verdict_in_progress_flag
+				}
+				set_temp_variable = { temp_focus_days = @inner_circle_time_tier_1 }
+				multiply_temp_variable = { temp_focus_days = 7 }
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_inner_circle_focus_in_progress_tt
+						CHARACTER = ITA_galeazzo_ciano
+						FLAG_DAYs = [?ITA_inner_circle_ciano_never_overturn_a_verdict_in_progress_flag:days]
+					}
+					always = no
+				}
+			}
+			else = {
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_focus_can_only_be_completed_by_advisor_tt
+						CHARACTER = ITA_galeazzo_ciano
+						FOCUS = ITA_ascension_of_ciano
+					}
+					always = no
+				}
+			}
+		}
+
+		completion_reward = {
+			add_political_power = 15
+		}
+	}
+
+	focus = {
+		id = ITA_inner_circle_ciano_the_first_half_of_my_life
+		icon = GFX_focus_hol_the_foundations_of_defense
+		relative_position_id = ITA_inner_circle_ciano_never_overturn_a_verdict
+		x = 0
+		y = 1
+
+		prerequisite = { focus = ITA_inner_circle_ciano_never_overturn_a_verdict }
+
+		cost = @inner_circle_time_tier_1
+
+		available = {
+			if = {
+				limit = {
+					has_country_flag = ITA_inner_circle_ciano_the_first_half_of_my_life_in_progress_flag
+				}
+				set_temp_variable = { temp_focus_days = @inner_circle_time_tier_1 }
+				multiply_temp_variable = { temp_focus_days = 7 }
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_inner_circle_focus_in_progress_tt
+						CHARACTER = ITA_galeazzo_ciano
+						FLAG_DAYs = [?ITA_inner_circle_ciano_the_first_half_of_my_life_in_progress_flag:days]
+					}
+					always = no
+				}
+			}
+			else = {
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_focus_can_only_be_completed_by_advisor_tt
+						CHARACTER = ITA_galeazzo_ciano
+						FOCUS = ITA_ascension_of_ciano
+					}
+					always = no
+				}
+			}
+		}
+
+		completion_reward = {
+			add_political_power = 15
 		}
 	}
 
@@ -29137,6 +29545,11 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
+			custom_effect_tooltip = {
+				localization_key = GER_ascension_of_character_focus_tt
+				CHARACTER = ITA_renato_ricci
+			}
+
 			if = {
 				limit = {
 					OR = {
@@ -29200,6 +29613,12 @@ focus_tree = {
 			hidden_effect = {
 				ITA_inner_circle_set_ascension_cd = yes
 
+				country_event = {
+					id = ITA_inner_circle.ricci.start
+					days = ITA_inner_circle_days_to_start_focus
+					random_days = ITA_inner_circle_random_days
+				}
+
 				clr_country_flag = ITA_ricci_ascension_flag
 
 				set_country_flag = {
@@ -29208,6 +29627,141 @@ focus_tree = {
 					days = 1500 # 大约4年
 				}
 			}
+
+			custom_effect_tooltip = available_industrial_concern
+			show_ideas_tooltip = ITA_OND
+		}
+	}
+
+	focus = {
+		id = ITA_inner_circle_ricci_OND
+		icon = GFX_focus_por_workers_of_iberia
+		relative_position_id = ITA_ascension_of_ricci
+		x = 0
+		y = 1
+		prerequisite = { focus = ITA_ascension_of_ricci }
+
+		cost = @inner_circle_time_tier_1
+
+		available = {
+			if = {
+				limit = {
+					has_country_flag = ITA_inner_circle_ricci_OND_in_progress_flag
+				}
+				set_temp_variable = { temp_focus_days = @inner_circle_time_tier_1 }
+				multiply_temp_variable = { temp_focus_days = 7 }
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_inner_circle_focus_in_progress_tt
+						CHARACTER = ITA_renato_ricci
+						FLAG_DAYs = [?ITA_inner_circle_ricci_OND_in_progress_flag:days]
+					}
+					always = no
+				}
+			}
+			else = {
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_focus_can_only_be_completed_by_advisor_tt
+						CHARACTER = ITA_renato_ricci
+						FOCUS = ITA_ascension_of_ricci
+					}
+					always = no
+				}
+			}
+		}
+
+		completion_reward = {
+			#custom_effect_tooltip = generic_skip_one_line_tt
+			add_political_power = 15
+		}
+	}
+
+	focus = {
+		id = ITA_inner_circle_ricci_nationale_mediate
+		icon = GFX_focus_generic_league_of_nations
+		relative_position_id = ITA_inner_circle_ricci_OND
+		x = 0
+		y = 1
+		prerequisite = { focus = ITA_inner_circle_ricci_OND }
+
+		cost = @inner_circle_time_tier_1
+
+		available = {
+			if = {
+				limit = {
+					has_country_flag = ITA_inner_circle_ricci_nationale_mediate_in_progress_flag
+				}
+				set_temp_variable = { temp_focus_days = @inner_circle_time_tier_1 }
+				multiply_temp_variable = { temp_focus_days = 7 }
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_inner_circle_focus_in_progress_tt
+						CHARACTER = ITA_italo_ricci
+						FLAG_DAYs = [?ITA_inner_circle_ricci_nationale_mediate_in_progress_flag:days]
+					}
+					always = no
+				}
+			}
+			else = {
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_focus_can_only_be_completed_by_advisor_tt
+						CHARACTER = ITA_renato_ricci
+						FOCUS = ITA_ascension_of_ricci
+					}
+					always = no
+				}
+			}
+		}
+
+		completion_reward = {
+			add_political_power = 15
+		}
+	}
+
+	focus = {
+		id = ITA_inner_circle_ricci_grapple_with_key_issues_to_goverence
+		relative_position_id = ITA_inner_circle_ricci_nationale_mediate
+		x = 0
+		y = 1
+		icon = GFX_focus_ITA_corpo_volontari_della_liberta
+		prerequisite = {
+			focus = ITA_inner_circle_ricci_nationale_mediate
+		}
+
+		cost = @inner_circle_time_tier_1
+
+		available = {
+			if = {
+				limit = {
+					has_country_flag = ITA_inner_circle_ricci_grapple_with_key_issues_to_goverence_in_progress_flag
+				}
+				set_temp_variable = { temp_focus_days = @inner_circle_time_tier_1 }
+				multiply_temp_variable = { temp_focus_days = 7 }
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_inner_circle_focus_in_progress_tt
+						CHARACTER = ITA_italo_ricci
+						FLAG_DAYs = [?ITA_inner_circle_ricci_grapple_with_key_issues_to_goverence_in_progress_flag:days]
+					}
+					always = no
+				}
+			}
+			else = {
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_focus_can_only_be_completed_by_advisor_tt
+						CHARACTER = ITA_renato_ricci
+						FOCUS = ITA_ascension_of_ricci
+					}
+					always = no
+				}
+			}
+		}
+
+		completion_reward = {
+			add_political_power = 15
 		}
 	}
 
@@ -29271,6 +29825,11 @@ focus_tree = {
 			show_ideas_tooltip = ITA_leader_trait_literacy_leader
 
 			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = {
+				localization_key = GER_ascension_of_character_focus_tt
+				CHARACTER = ITA_giuseppe_bottai
+			}
 
 			if = {
 				limit = {
@@ -29342,7 +29901,143 @@ focus_tree = {
 					value = 1
 					days = 1500 # 大约4年
 				}
+
+				country_event = {
+					id = ITA_inner_circle.bottai.start
+					days = ITA_inner_circle_days_to_start_focus
+					random_days = ITA_inner_circle_random_days
+				}
 			}
+		}
+	}
+
+	focus = {
+		id = ITA_inner_circle_bottai_elementary_education_law
+		icon = GFX_focus_generic_fascism_education
+		relative_position_id = ITA_ascension_of_bottai
+		x = 0
+		y = 1
+		prerequisite = { focus = ITA_ascension_of_bottai }
+
+		cost = @inner_circle_time_tier_1
+
+		available = {
+			if = {
+				limit = {
+					has_country_flag = ITA_inner_circle_bottai_elementary_education_law_in_progress_flag
+				}
+				set_temp_variable = { temp_focus_days = @inner_circle_time_tier_1 }
+				multiply_temp_variable = { temp_focus_days = 7 }
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_inner_circle_focus_in_progress_tt
+						CHARACTER = ITA_giuseppe_bottai
+						FLAG_DAYs = [?ITA_inner_circle_bottai_elementary_education_law_in_progress_flag:days]
+					}
+					always = no
+				}
+			}
+			else = {
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_focus_can_only_be_completed_by_advisor_tt
+						CHARACTER = ITA_giuseppe_bottai
+						FOCUS = ITA_ascension_of_bottai
+					}
+					always = no
+				}
+			}
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = ITA_inner_circle_bottai_tracking_in_secondary_education
+		icon = GFX_focus_AUS_womens_education_initiative
+		relative_position_id = ITA_inner_circle_bottai_elementary_education_law
+		x = 0
+		y = 1
+		prerequisite = { focus = ITA_inner_circle_bottai_elementary_education_law }
+
+		cost = @inner_circle_time_tier_1
+
+		available = {
+			if = {
+				limit = {
+					has_country_flag = ITA_inner_circle_bottai_tracking_in_secondary_education_in_progress_flag
+				}
+				set_temp_variable = { temp_focus_days = @inner_circle_time_tier_1 }
+				multiply_temp_variable = { temp_focus_days = 7 }
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_inner_circle_focus_in_progress_tt
+						CHARACTER = ITA_giuseppe_bottai
+						FLAG_DAYs = [?ITA_inner_circle_bottai_tracking_in_secondary_education_in_progress_flag:days]
+					}
+					always = no
+				}
+			}
+			else = {
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_focus_can_only_be_completed_by_advisor_tt
+						CHARACTER = ITA_giuseppe_bottai
+						FOCUS = ITA_ascension_of_bottai
+					}
+					always = no
+				}
+			}
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = ITA_inner_circle_bottai_education_sector_a_black_line
+		cost = @inner_circle_time_tier_1
+		relative_position_id = ITA_inner_circle_bottai_tracking_in_secondary_education
+		x = 0
+		y = 1
+
+		icon = GFX_focus_AUS_womens_education_initiative
+
+		prerequisite = { focus = ITA_inner_circle_bottai_tracking_in_secondary_education }
+
+		available = {
+			if = {
+				limit = {
+					has_country_flag = ITA_inner_circle_bottai_education_sector_a_black_line_in_progress_flag
+				}
+				set_temp_variable = { temp_focus_days = @inner_circle_time_tier_1 }
+				multiply_temp_variable = { temp_focus_days = 7 }
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_inner_circle_focus_in_progress_tt
+						CHARACTER = ITA_giuseppe_bottai
+						FLAG_DAYs = [?ITA_inner_circle_bottai_education_sector_a_black_line_in_progress_flag:days]
+					}
+					always = no
+				}
+			}
+			else = {
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_focus_can_only_be_completed_by_advisor_tt
+						CHARACTER = ITA_giuseppe_bottai
+						FOCUS = ITA_ascension_of_bottai
+					}
+					always = no
+				}
+			}
+		}
+
+		completion_reward = {
+			add_political_power = 50
 		}
 	}
 
@@ -29407,6 +30102,11 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
+			custom_effect_tooltip = {
+				localization_key = GER_ascension_of_character_focus_tt
+				CHARACTER = ITA_giacomo_acerbo
+			}
+
 			if = {
 				limit = {
 					OR = {
@@ -29470,6 +30170,12 @@ focus_tree = {
 			hidden_effect = {
 				ITA_inner_circle_set_ascension_cd = yes
 
+				country_event = {
+					id = ITA_inner_circle.acerbo.start
+					days = ITA_inner_circle_days_to_start_focus
+					random_days = ITA_inner_circle_random_days
+				}
+
 				clr_country_flag = ITA_acerbo_ascension_flag
 
 				set_country_flag = {
@@ -29478,6 +30184,189 @@ focus_tree = {
 					days = 1500 # 大约4年
 				}
 			}
+		}
+	}
+
+	focus = {
+		id = ITA_inner_circle_acerbo_land_redistribution
+		icon = GFX_focus_generic_land_redistribution
+		relative_position_id = ITA_ascension_of_acerbo
+		x = 0
+		y = 1
+		prerequisite = { focus = ITA_ascension_of_acerbo }
+
+		cost = @inner_circle_time_tier_1
+
+		available = {
+			if = {
+				limit = {
+					has_country_flag = ITA_inner_circle_acerbo_land_redistribution_in_progress_flag
+				}
+				set_temp_variable = { temp_focus_days = @inner_circle_time_tier_1 }
+				multiply_temp_variable = { temp_focus_days = 7 }
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_inner_circle_focus_in_progress_tt
+						CHARACTER = ITA_giacomo_acerbo
+						FLAG_DAYs = [?ITA_inner_circle_acerbo_land_redistribution_in_progress_flag:days]
+					}
+					always = no
+				}
+			}
+			else = {
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_focus_can_only_be_completed_by_advisor_tt
+						CHARACTER = ITA_giacomo_acerbo
+						FOCUS = ITA_ascension_of_acerbo
+					}
+					always = no
+				}
+			}
+		}
+
+		completion_reward = {
+			add_political_power = 15
+		}
+	}
+
+	focus = {
+		id = ITA_inner_circle_acerbo_agricultural_collectivization
+		icon = GFX_focus_generic_modernizing_agriculture
+		relative_position_id = ITA_inner_circle_acerbo_land_redistribution
+		x = 0
+		y = 1
+		prerequisite = { focus = ITA_inner_circle_acerbo_land_redistribution }
+
+		cost = @inner_circle_time_tier_1
+
+		available = {
+			if = {
+				limit = {
+					has_country_flag = ITA_inner_circle_acerbo_agricultural_collectivization_in_progress_flag
+				}
+				set_temp_variable = { temp_focus_days = @inner_circle_time_tier_1 }
+				multiply_temp_variable = { temp_focus_days = 7 }
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_inner_circle_focus_in_progress_tt
+						CHARACTER = ITA_giacomo_acerbo
+						FLAG_DAYs = [?ITA_inner_circle_acerbo_agricultural_collectivization_in_progress_flag:days]
+					}
+					always = no
+				}
+			}
+			else = {
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_focus_can_only_be_completed_by_advisor_tt
+						CHARACTER = ITA_giacomo_acerbo
+						FOCUS = ITA_ascension_of_acerbo
+					}
+					always = no
+				}
+			}
+		}
+
+		completion_reward = {
+			add_political_power = 15
+		}
+	}
+
+	focus = {
+		id = ITA_inner_circle_acerbo_corporatist_agricultural_modernization
+		relative_position_id = ITA_inner_circle_acerbo_agricultural_collectivization
+		x = 0
+		y = 1
+		icon = GFX_focus_generic_modernize_agriculture_2
+
+		prerequisite = {
+			focus = ITA_inner_circle_acerbo_agricultural_collectivization
+		}
+
+		cost = @inner_circle_time_tier_1
+
+		available = {
+			if = {
+				limit = {
+					has_country_flag = ITA_inner_circle_acerbo_corporatist_agricultural_modernization_in_progress_flag
+				}
+				set_temp_variable = { temp_focus_days = @inner_circle_time_tier_1 }
+				multiply_temp_variable = { temp_focus_days = 7 }
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_inner_circle_focus_in_progress_tt
+						CHARACTER = ITA_giacomo_acerbo
+						FLAG_DAYs = [?ITA_inner_circle_acerbo_corporatist_agricultural_modernization_in_progress_flag:days]
+					}
+					always = no
+				}
+			}
+			else = {
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = GER_focus_can_only_be_completed_by_advisor_tt
+						CHARACTER = ITA_giacomo_acerbo
+						FOCUS = ITA_ascension_of_acerbo
+					}
+					always = no
+				}
+			}
+		}
+
+		completion_reward = {
+			add_political_power = 15
+		}
+
+	}
+
+	focus = {
+		id = ITA_inner_circle_end_1
+		cost = 14
+		relative_position_id = ITA_duceprincipio
+		x = -1
+		y = 5
+		mutually_exclusive = {
+			focus = ITA_inner_circle_end_2
+		}
+		prerequisite = {
+			focus = ITA_inner_circle_setting_of_again_from_roma
+			focus = ITA_inner_circle_grandi_advancing_law-based_governance
+			focus = ITA_inner_circle_ciano_the_real_steel_company
+			focus = ITA_inner_circle_ricci_grapple_with_key_issues_to_goverence
+			focus = ITA_inner_circle_bottai_education_sector_a_black_line
+			focus = ITA_inner_circle_acerbo_corporatist_agricultural_modernization
+		}
+		icon = GFX_focus_generic_mediterranean_sea_focus
+		
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.15
+		}
+	}
+
+	focus = {
+		id = ITA_inner_circle_end_2
+		cost = 14
+		relative_position_id = ITA_duceprincipio
+		x = 1
+		y = 5
+		mutually_exclusive = {
+			focus = ITA_inner_circle_end_1
+		}
+		prerequisite = {
+			focus = ITA_inner_circle_setting_of_again_from_roma
+			focus = ITA_inner_circle_grandi_advancing_law-based_governance
+			focus = ITA_inner_circle_ciano_the_real_steel_company
+			focus = ITA_inner_circle_ricci_grapple_with_key_issues_to_goverence
+			focus = ITA_inner_circle_bottai_education_sector_a_black_line
+			focus = ITA_inner_circle_acerbo_corporatist_agricultural_modernization
+		}
+		icon = GFX_focus_ITA_embrace_change_in_leadership
+		
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 15
 		}
 	}
 

@@ -745,8 +745,12 @@ ideas = {
 				original_tag = ITA
 			}
 
+			visible = {
+				has_completed_focus = ITA_ascension_of_ricci
+			}
+
 			available = {
-				has_completed_focus = ITA_workers_rights
+				#has_completed_focus = ITA_workers_rights
 				OR = {
 					has_government = fascism
 					has_government = neutrality

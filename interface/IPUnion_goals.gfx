@@ -101,4 +101,14 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/ITA/inner_circle/focus_ITA_ascension_of_acerbo.png"
 	}
 
+	spriteType = {
+		name = "GFX_focus_generic_fascism_education"
+		texturefile = "gfx/interface/goals/focus_generic_fascism_education.png"
+	}
+
+	spriteType = {
+		name = "GFX_focus_ITA_embrace_change_in_leadership"
+		texturefile = "gfx/interface/goals/focus_ITA_embrace_change_in_leadership.png"
+	}
+
 }
