@@ -421,6 +421,15 @@ ITA_add_grandi_effects = {
 }
 
 ITA_remove_grandi_effects = {
+
+	if = {
+		limit = {
+			has_shine_effect_on_focus = ITA_inner_circle_grandi_civil_code
+		}
+		deactivate_shine_on_focus = ITA_inner_circle_grandi_civil_code
+		clr_country_flag = ITA_inner_circle_grandi_civil_code_in_progress_flag
+	}
+
 	if = {
 		limit = {
 			has_idea = ITA_leader_trait_captialism_roader
@@ -461,6 +470,36 @@ ITA_add_ciano_effects = {
 	add_ideas = ITA_leader_trait_steel_company
 }
 ITA_remove_ciano_effects = {
+
+	if = {
+		limit = {
+			has_shine_effect_on_focus = ITA_inner_circle_ciano_rectify
+		}
+		deactivate_shine_on_focus = ITA_inner_circle_ciano_rectify
+		clr_country_flag = ITA_inner_circle_ciano_rectify_in_progress_flag
+	}
+	else_if = {
+		limit = {
+			has_shine_effect_on_focus = ITA_inner_circle_ciano_the_three_guidelines
+		}
+		deactivate_shine_on_focus = ITA_inner_circle_ciano_the_three_guidelines
+		clr_country_flag = ITA_inner_circle_ciano_the_three_guidelines_in_progress_flag
+	}
+	else_if = {
+		limit = {
+			has_shine_effect_on_focus = ITA_inner_circle_ciano_never_overturn_a_verdict
+		}
+		deactivate_shine_on_focus = ITA_inner_circle_ciano_never_overturn_a_verdict
+		clr_country_flag = ITA_inner_circle_ciano_never_overturn_a_verdict_in_progress_flag
+	}
+	else_if = {
+		limit = {
+			has_shine_effect_on_focus = ITA_inner_circle_ciano_the_first_half_of_my_life
+		}
+		deactivate_shine_on_focus = ITA_inner_circle_ciano_the_first_half_of_my_life
+		clr_country_flag = ITA_inner_circle_ciano_the_first_half_of_my_life_in_progress_flag
+	}
+
 	if = {
 		limit = {
 			has_idea = ITA_leader_trait_steel_company
@@ -615,6 +654,22 @@ ITA_add_acerbo_effects = {
 }
 
 ITA_remove_acerbo_effects = {
+
+	if = {
+		limit = {
+			has_shine_effect_on_focus = ITA_inner_circle_acerbo_land_redistribution
+		}
+		deactivate_shine_on_focus = ITA_inner_circle_acerbo_land_redistribution
+		clr_country_flag = ITA_inner_circle_acerbo_land_redistribution_in_progress_flag
+	}
+	else_if = {
+		limit = {
+			has_shine_effect_on_focus = ITA_inner_circle_acerbo_agricultural_collectivization
+		}
+		deactivate_shine_on_focus = ITA_inner_circle_acerbo_agricultural_collectivization
+		clr_country_flag = ITA_inner_circle_acerbo_agricultural_collectivization_in_progress_flag
+	}
+
 	if = {
 		limit = {
 			has_idea = ITA_leader_trait_revisionism
