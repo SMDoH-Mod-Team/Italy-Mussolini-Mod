@@ -514,7 +514,7 @@ country_event = {
 			}
 			activate_shine_on_focus = ITA_inner_circle_ricci_OND
 			set_country_flag = { 
-				flag = ITA_inner_circle_ricci_OND_in_progress_flag 
+				flag = ITA_inner_circle_ricci_OND_in_progress_flag
 				days = @inner_circle_time_tier_1_flag 
 				value = 1 
 			}
@@ -1086,7 +1086,7 @@ country_event = {
 			activate_shine_on_focus = ITA_inner_circle_acerbo_land_redistribution
 			set_country_flag = { 
 				flag = ITA_inner_circle_acerbo_land_redistribution_in_progress_flag 
-				days = @inner_circle_time_tier_1_flag 
+				days = @inner_circle_time_tier_1_flag
 				value = 1 
 			}
 			country_event = {
