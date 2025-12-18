@@ -169,3 +169,10 @@ ITA_inner_circle_debug_decisions = {
 		
 	}
 }
+ITA_land_redistribution = {
+	icon = x
+	picture = x
+	allowed = {
+		
+	}
+}

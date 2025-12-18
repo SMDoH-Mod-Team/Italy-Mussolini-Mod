@@ -38,7 +38,33 @@ ideas = {
 
 			modifier = {
 				political_power_gain = 0.01
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				#fascism_drift = 0.01
+			}
+		}
+		ITA_leader_real_trait_steel_company_1 = {
+			name = ITA_leader_real_trait_steel_company
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.03
+				stability_factor = 0.10
+				war_support_factor = 0.10
+				#fascism_drift = 0.01
+				neutrality_drift = 0.01
+			}
+		}
+		ITA_leader_real_trait_steel_company_2 = {
+			name = ITA_leader_real_trait_steel_company
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.03
+				stability_factor = 0.10
+				war_support_factor = 0.10
 				fascism_drift = 0.01
+				#neutrality_drift = 0.01
 			}
 		}
 		ITA_leader_trait_machine_master = {
