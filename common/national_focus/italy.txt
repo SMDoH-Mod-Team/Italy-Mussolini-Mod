@@ -3326,7 +3326,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_to_variable = { ITA_iri_consumer_goods_factor = -0.02 }
-			custom_effect_tooltip = ITA_ricostruzione_industriale_cg_penalty_tt
+			custom_effect_tooltip = ITA_ricostruzione_industriale_cg_penalty_modded_tt
 
 			if = {
 				limit = {
@@ -29253,6 +29253,7 @@ focus_tree = {
 			else = {
 				hidden_effect = {
 					add_ideas = ITA_leader_trait_steel_company
+					country_event = ITA_inner_circle.ciano.00
 				}
 				if = {
 					limit = {
@@ -29434,10 +29435,11 @@ focus_tree = {
 
 		completion_reward = {
 			#add_political_power = 50
+			
 			effect_tooltip = {
 				if = {
 					limit = {
-						ITA_gian_galeazzo_ciano = { set_character_flag = ITA_ciano_unrepent_flag }
+						ITA_gian_galeazzo_ciano = { has_character_flag = ITA_ciano_unrepent_flag }
 					}
 					ITA_galeazzo_ciano = {
 						remove_trait = ITA_leader_trait_steel_company
@@ -29446,7 +29448,7 @@ focus_tree = {
 				}
 				else_if = {
 					limit = {
-						ITA_gian_galeazzo_ciano = { set_character_flag = ITA_ciano_repent_flag }
+						ITA_gian_galeazzo_ciano = { has_character_flag = ITA_ciano_repent_flag }
 					}
 					ITA_galeazzo_ciano = {
 						remove_trait = ITA_leader_trait_steel_company
@@ -30329,6 +30331,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_political_power = 15
+			unlock_decision_category_tooltip = ITA_land_redistribution
 		}
 	}
 
