@@ -206,3 +206,18 @@ ITA_liberty_eth_modifier = {
 	army_attack_factor = 0.10
 	army_defence_factor = 0.10
 }
+
+ITA_land_redistribution_modifier = {
+	icon = GFX_modifiers_SOV_factory_worker_militias
+
+	local_resources_factor = 0.15
+	#local_building_slots_factor = 0.15
+}
+
+ITA_agricultural_collectivization = {
+	icon = GFX_modifiers_increased_metal_production
+
+	#local_resources_factor = 0.15
+	#@local_building_slots_factor = 0.15
+	local_factories = 0.15
+}

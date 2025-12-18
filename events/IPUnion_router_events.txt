@@ -282,3 +282,33 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = IPUnion_router_event.10
+	title = IPUnion_router_event.10
+	desc = IPUnion_router_event.10
+	hidden = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		#ITA = {
+		#	country_event = IPUnion_country_event.34
+		#}
+		every_controlled_state = {
+			limit = {
+				has_dynamic_modifier = {
+					modifier = ITA_land_redistribution_modifier
+				}
+			}
+			add_dynamic_modifier = {
+				modifier = ITA_agricultural_collectivization
+			}
+		}
+
+		country_event = {
+			id = IPUnion_router_event.10
+			days = 30
+		}
+	}
+}

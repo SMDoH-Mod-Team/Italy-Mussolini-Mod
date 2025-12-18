@@ -242,13 +242,34 @@ defined_text = {
 		localization_key = idea_desc|ITA_leader_trait_captialism_roader
 	}
 
-	#HIMMLER
+	#CIANO
 	text = {
 		trigger = {
 			check_variable = { ITA_ascended_advisor_1 = 4 }
+			NOT = {
+				has_completed_focus = ITA_inner_circle_ciano_the_real_steel_company
+			}
 			#has_idea = ITA_leader_trait_steel_company
 		}
 		localization_key = idea_desc|ITA_leader_trait_steel_company
+	}
+
+	text = {
+		trigger = {
+			check_variable = { ITA_ascended_advisor_1 = 4 }
+			has_completed_focus = ITA_inner_circle_ciano_the_real_steel_company
+			ITA_gian_galeazzo_ciano = { has_character_flag = ITA_ciano_unrepent_flag }
+		}
+		localization_key = idea_desc|ITA_leader_real_trait_steel_company_1
+	}
+
+	text = {
+		trigger = {
+			check_variable = { ITA_ascended_advisor_1 = 4 }
+			has_completed_focus = ITA_inner_circle_ciano_the_real_steel_company
+			ITA_gian_galeazzo_ciano = { has_character_flag = ITA_ciano_repent_flag }
+		}
+		localization_key = idea_desc|ITA_leader_real_trait_steel_company_2
 	}
 
 	#GOEBBELS
@@ -315,13 +336,34 @@ defined_text = {
 		localization_key = idea_desc|ITA_leader_trait_captialism_roader
 	}
 
-	#HIMMLER
+	#CIANO
 	text = {
 		trigger = {
 			check_variable = { ITA_ascended_advisor_2 = 4 }
+			NOT = {
+				has_completed_focus = ITA_inner_circle_ciano_the_real_steel_company
+			}
 			#has_idea = ITA_leader_trait_steel_company
 		}
 		localization_key = idea_desc|ITA_leader_trait_steel_company
+	}
+
+	text = {
+		trigger = {
+			check_variable = { ITA_ascended_advisor_2 = 4 }
+			has_completed_focus = ITA_inner_circle_ciano_the_real_steel_company
+			ITA_gian_galeazzo_ciano = { has_character_flag = ITA_ciano_unrepent_flag }
+		}
+		localization_key = idea_desc|ITA_leader_real_trait_steel_company_1
+	}
+
+	text = {
+		trigger = {
+			check_variable = { ITA_ascended_advisor_2 = 4 }
+			has_completed_focus = ITA_inner_circle_ciano_the_real_steel_company
+			ITA_gian_galeazzo_ciano = { has_character_flag = ITA_ciano_repent_flag }
+		}
+		localization_key = idea_desc|ITA_leader_real_trait_steel_company_2
 	}
 
 	#GOEBBELS
@@ -389,13 +431,34 @@ defined_text = {
 		localization_key = idea_desc|ITA_leader_trait_captialism_roader
 	}
 
-	#HIMMLER
+	#CIANO
 	text = {
 		trigger = {
 			check_variable = { ITA_ascended_advisor_3 = 4 }
+			NOT = {
+				has_completed_focus = ITA_inner_circle_ciano_the_real_steel_company
+			}
 			#has_idea = ITA_leader_trait_steel_company
 		}
 		localization_key = idea_desc|ITA_leader_trait_steel_company
+	}
+
+	text = {
+		trigger = {
+			check_variable = { ITA_ascended_advisor_3 = 4 }
+			has_completed_focus = ITA_inner_circle_ciano_the_real_steel_company
+			ITA_gian_galeazzo_ciano = { has_character_flag = ITA_ciano_unrepent_flag }
+		}
+		localization_key = idea_desc|ITA_leader_real_trait_steel_company_1
+	}
+
+	text = {
+		trigger = {
+			check_variable = { ITA_ascended_advisor_3 = 4 }
+			has_completed_focus = ITA_inner_circle_ciano_the_real_steel_company
+			ITA_gian_galeazzo_ciano = { has_character_flag = ITA_ciano_repent_flag }
+		}
+		localization_key = idea_desc|ITA_leader_real_trait_steel_company_2
 	}
 
 	#GOEBBELS
@@ -462,13 +525,34 @@ defined_text = {
 		localization_key = idea_desc|ITA_leader_trait_captialism_roader
 	}
 
-	#HIMMLER
+	#CIANO
 	text = {
 		trigger = {
 			check_variable = { ITA_ascended_advisor_4 = 4 }
+			NOT = {
+				has_completed_focus = ITA_inner_circle_ciano_the_real_steel_company
+			}
 			#has_idea = ITA_leader_trait_steel_company
 		}
 		localization_key = idea_desc|ITA_leader_trait_steel_company
+	}
+
+	text = {
+		trigger = {
+			check_variable = { ITA_ascended_advisor_4 = 4 }
+			has_completed_focus = ITA_inner_circle_ciano_the_real_steel_company
+			ITA_gian_galeazzo_ciano = { has_character_flag = ITA_ciano_unrepent_flag }
+		}
+		localization_key = idea_desc|ITA_leader_real_trait_steel_company_1
+	}
+
+	text = {
+		trigger = {
+			check_variable = { ITA_ascended_advisor_4 = 4 }
+			has_completed_focus = ITA_inner_circle_ciano_the_real_steel_company
+			ITA_gian_galeazzo_ciano = { has_character_flag = ITA_ciano_repent_flag }
+		}
+		localization_key = idea_desc|ITA_leader_real_trait_steel_company_2
 	}
 
 	#GOEBBELS
@@ -535,14 +619,27 @@ defined_text = {
 		localization_key = ITA_leader_trait_captialism_roader
 	}
 
-	#HIMMLER
+	#CIANO
 	text = {
 		trigger = {
 			check_variable = { ITA_ascended_advisor_1 = 4 }
 			#has_idea = ITA_leader_trait_steel_company
+			NOT = {
+				has_completed_focus = ITA_inner_circle_ciano_the_real_steel_company
+			}
 		}
 		localization_key = ITA_leader_trait_steel_company
 	}
+
+	text = {
+		trigger = {
+			check_variable = { ITA_ascended_advisor_1 = 4 }
+			has_completed_focus = ITA_inner_circle_ciano_the_real_steel_company
+		}
+		localization_key = ITA_leader_real_trait_steel_company
+	}
+
+
 
 	#GOEBBELS
 	text = {
@@ -608,13 +705,24 @@ defined_text = {
 		localization_key = ITA_leader_trait_captialism_roader
 	}
 
-	#HIMMLER
+	#CIANO
 	text = {
 		trigger = {
 			check_variable = { ITA_ascended_advisor_2 = 4 }
 			#has_idea = ITA_leader_trait_steel_company
+			NOT = {
+				has_completed_focus = ITA_inner_circle_ciano_the_real_steel_company
+			}
 		}
 		localization_key = ITA_leader_trait_steel_company
+	}
+
+	text = {
+		trigger = {
+			check_variable = { ITA_ascended_advisor_2 = 4 }
+			has_completed_focus = ITA_inner_circle_ciano_the_real_steel_company
+		}
+		localization_key = ITA_leader_real_trait_steel_company
 	}
 
 	#GOEBBELS
@@ -681,13 +789,24 @@ defined_text = {
 		localization_key = ITA_leader_trait_captialism_roader
 	}
 
-	#HIMMLER
+	#CIANO
 	text = {
 		trigger = {
 			check_variable = { ITA_ascended_advisor_3 = 4 }
 			#has_idea = ITA_leader_trait_steel_company
+			NOT = {
+				has_completed_focus = ITA_inner_circle_ciano_the_real_steel_company
+			}
 		}
 		localization_key = ITA_leader_trait_steel_company
+	}
+
+	text = {
+		trigger = {
+			check_variable = { ITA_ascended_advisor_3 = 4 }
+			has_completed_focus = ITA_inner_circle_ciano_the_real_steel_company
+		}
+		localization_key = ITA_leader_real_trait_steel_company
 	}
 
 	#GOEBBELS
@@ -753,13 +872,24 @@ defined_text = {
 		localization_key = ITA_leader_trait_captialism_roader
 	}
 
-	#HIMMLER
+	#CIANO
 	text = {
 		trigger = {
 			check_variable = { ITA_ascended_advisor_4 = 4 }
 			#has_idea = ITA_leader_trait_steel_company
+			NOT = {
+				has_completed_focus = ITA_inner_circle_ciano_the_real_steel_company
+			}
 		}
 		localization_key = ITA_leader_trait_steel_company
+	}
+
+	text = {
+		trigger = {
+			check_variable = { ITA_ascended_advisor_4 = 4 }
+			has_completed_focus = ITA_inner_circle_ciano_the_real_steel_company
+		}
+		localization_key = ITA_leader_real_trait_steel_company
 	}
 
 	#GOEBBELS

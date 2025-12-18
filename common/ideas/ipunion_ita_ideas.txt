@@ -735,6 +735,107 @@ ideas = {
 				experience_gain_army_factor = 0.1
 			}
 		}
+		idea_ITA_setting_of_again_from_roma = {
+			name = idea_ITA_setting_of_again_from_roma
+			removal_cost = -1
+			picture = generic_women_in_the_army
+			modifier = {
+				dig_in_speed = 0.1
+				max_dig_in_factor = 0.10
+				max_planning = 0.15
+				combat_width_factor = 0.15
+			}
+		}
+		idea_ITA_grandi_civil_code = {
+			name = idea_ITA_grandi_civil_code
+			removal_cost = -1
+			picture = ARG_civilian_economy_boost
+			modifier = {
+				political_power_gain = 0.02
+				democratic_drift = 0.01
+				stability_factor = 0.15
+			}
+		}
+		idea_ITA_grandi_civil_code_2 = {
+			name = idea_ITA_grandi_civil_code
+			removal_cost = -1
+			picture = ARG_civilian_economy_boost
+			modifier = {
+				political_power_gain = 0.05
+				democratic_drift = 0.01
+				stability_factor = 0.25
+				fascism_drift = -0.01
+			}
+		}
+		idea_ITA_ciano_rectify = {
+			name = idea_ITA_ciano_rectify
+			removal_cost = -1
+			picture = GER_recovering_economy
+			modifier = {
+				neutrality_drift = 0.01
+				political_power_gain = 0.01
+				consumer_goods_factor = -0.15
+				industrial_capacity_factory = 0.10
+			}
+		}
+		idea_ITA_ciano_three_guidelines = {
+			name = idea_ITA_ciano_three_guidelines
+			removal_cost = -1
+			picture = AUS_treaty_of_saint_germain_en_laye
+			modifier = {
+				stability_factor = 0.10
+				political_power_gain = -0.01
+				consumer_goods_factor = -0.05
+			}
+		}
+		idea_ITA_book_of_letter_of_apology = {
+			name = idea_ITA_book_of_letter_of_apology
+			removal_cost = -1
+			picture = NOR_contested_leadership_ns
+			modifier = {
+				fascism_drift = 0.03
+				stability_factor = 0.15
+			}
+		}
+		idea_ITA_class_reconciliatio_as_the_keylink = {
+			name = idea_ITA_class_reconciliatio_as_the_keylink
+			removal_cost = -1
+			picture = por_iberian_workers_united
+			modifier = {
+				fascism_drift = 0.01
+				stability_factor = 0.15
+				consumer_goods_factor = -0.05
+			}
+		}
+		idea_ITA_elementary_education_law = {
+			name = idea_ITA_elementary_education_law
+			removal_cost = -1
+			picture = generic_fascism_rising
+			modifier = {
+				fascism_drift = 0.01
+				war_support_weekly = 0.05
+			}
+		}
+		idea_tracking_in_secondary_education = {
+			name = idea_tracking_in_secondary_education
+			removal_cost = -1
+			picture = generic_fascism_rising
+			modifier = {
+				consumer_goods_factor = -0.05
+				industrial_capacity_factory = 0.05
+				stability_factor = 0.05
+			}
+		}
+		idea_ITA_education_sector_a_black_line = {
+			name = idea_ITA_education_sector_a_black_line
+			removal_cost = -1
+			picture = generic_fascism_rising
+			modifier = {
+				consumer_goods_factor = -0.05
+				industrial_capacity_factory = 0.05
+				stability_factor = 0.05
+			}
+		}
 	}
 	industrial_concern = {
 		ITA_OND = {
@@ -747,6 +848,9 @@ ideas = {
 
 			visible = {
 				has_completed_focus = ITA_ascension_of_ricci
+				NOT = {
+					has_completed_focus = ITA_inner_circle_ricci_OND
+				}
 			}
 
 			available = {
@@ -777,6 +881,48 @@ ideas = {
 			
 			traits = { public_utilities_department }
 		}
+
+		ITA_OND_improve = {
+
+			picture = ITA_OND
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			visible = {
+				has_completed_focus = ITA_inner_circle_ricci_OND
+			}
+
+			available = {
+				#has_completed_focus = ITA_workers_rights
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+			
+			cost = 75
+
+			research_bonus = {
+				train_tech = 0.05
+				synth_resources = 0.05
+				industry = 0.10
+				electronics = 0.10
+			}
+
+			modifier = {
+				stability_factor = 0.20
+				consumer_goods_factor = 0.05
+				war_support_factor = -0.05
+				production_speed_infrastructure_factor = 0.15
+				production_speed_rail_way_factor = 0.15
+				fascism_drift = 0.0
+			}
+			
+			traits = { public_utilities_department }
+		}
+		
 		ITA_oto_melara = {
 			picture = oto_melara
 

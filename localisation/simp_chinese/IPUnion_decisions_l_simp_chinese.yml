@@ -81,3 +81,8 @@
  debug_ascension_ricci: "亲密战友里奇同志"
  debug_ascension_bottai: "亲密战友博塔伊同志"
  debug_ascension_acerbo: "亲密战友阿切尔博同志"
+
+ ITA_nationale_mediate: "国家调解"
+ 
+ ITA_land_redistribution: "土地改革"
+ ITA_land_redistribution_decision: "在[FROM.GetName]进行土地改革"

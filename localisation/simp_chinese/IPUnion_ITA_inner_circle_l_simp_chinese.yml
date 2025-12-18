@@ -14,6 +14,8 @@
  ITA_inner_circle_ciano_unwilling_to_repent_tt: "§Y$GER_galeazzo_ciano$§!很快会开始致力于研究国策§Y$ITA_inner_circle_ciano_rectify$§!。"
  ITA_inner_circle_ciano_willing_to_repent_tt: "§Y$GER_galeazzo_ciano$§!很快会开始致力于研究国策§Y$ITA_inner_circle_ciano_never_overturn_a_verdict$§!。"
  ITA_inner_circle_event_pending_flag: "§R正在抉择...§!"
+ ITA_inner_circle_complete_end_trigger_tt: "§Y核心集团§!中所有§Y4§!名亲密战友均已完成其终极国策。"
+ ITA_inner_circle_ciano_the_real_steel_company_tt: "这项国策的效果将会在§Y$ITA_galeazzo_ciano$§!选择§Y$ITA_inner_circle_ciano_rectify$§!或§Y$ITA_inner_circle_ciano_never_overturn_a_verdict$§!后显示"
 
 
  ITA_duceprincipio: "领袖原则"
@@ -31,6 +33,7 @@
  ITA_ascension_of_ciano: "亲密战友齐亚诺"
  ITA_inner_circle_ciano_rectify: "整顿"
  ITA_inner_circle_ciano_the_three_guidelines: "三项指示为纲"
+ ITA_inner_circle_ciano_the_three_guidelines_desc: "学习无产阶级专政理论、安定团结、把国民经济搞上去"
  ITA_inner_circle_ciano_never_overturn_a_verdict: "永不翻案"
  ITA_inner_circle_ciano_the_first_half_of_my_life: "《我的前半生》"
  ITA_inner_circle_ciano_the_real_steel_company: "钢铁公司"
@@ -49,6 +52,7 @@
  ITA_ascension_of_acerbo: "亲密战友阿切尔博"
  ITA_inner_circle_acerbo_land_redistribution: "土地改革"
  ITA_inner_circle_acerbo_agricultural_collectivization: "农业集体化" 
+ ITA_inner_circle_acerbo_agricultural_collectivization_desc: "“在我看来，面条一样小块的土地只能是死路一条。我无法想象，在世界上任何一个地方，只拥有小块土地的小农可以有什么长远的希望，而且他们当然不是意大利现在这样的只有四处分散的一两亩土地的小农......”"
  ITA_inner_circle_acerbo_corporatist_agricultural_modernization: "法团主义农业现代化"
  ITA_inner_circle_end_1: "地中海风今又是"
  ITA_inner_circle_end_2: "换了人间"

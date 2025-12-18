@@ -28537,7 +28537,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 10
+			custom_effect_tooltip = ITA_enable_theorist_tt
+			show_ideas_tooltip = rodolfo_graziani
+			hidden_effect = {
+				add_ideas = rodolfo_graziani
+			}
 		}
 	}
 
@@ -28580,7 +28585,25 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 15
+
+			add_doctrine_cost_reduction = {
+				name = ITA_inner_circle_graziani_armed_blackshirts
+				cost_reduction = 0.5
+				uses = 2
+				category = special_forces_doctrine
+			}
+
+			random_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+				}
+				create_unit = {
+					division = "division_template =\"Camicie Nere\" start_experience_factor = 0.9 start_equipment_factor = 1.0"
+					owner = ROOT
+					count = 5
+				}
+			}
 		}
 	}
 
@@ -28645,7 +28668,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			#add_political_power = 50
+			add_ideas = idea_ITA_setting_of_again_from_roma
 		}
 	}
 
@@ -28834,7 +28858,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			#add_political_power = 10
+			air_experience = 50
 		}
 
 	}
@@ -28878,7 +28903,13 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			add_political_power = 50
+			#add_political_power = 50
+			add_tech_bonus = {
+				name = ITA_inner_circle_balbo_modern_air_force
+				bonus = 1.0
+				uses = 3
+				category = air_equipment
+			}
 		}
 	}
 
@@ -29067,7 +29098,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 10
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.10
+			}
+			add_ideas = idea_ITA_grandi_civil_code
 		}
 	}
 
@@ -29110,7 +29146,11 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			#add_political_power = 10
+			swap_ideas = {
+				remove_idea = idea_ITA_grandi_civil_code
+				add_idea = idea_ITA_grandi_civil_code_2
+			}
 		}
 	}
 
@@ -29302,7 +29342,11 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			#add_political_power = 50
+			add_timed_idea = {
+				idea = idea_ITA_ciano_rectify
+				days = 1095
+			}
 		}
 	}
 	
@@ -29345,7 +29389,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			#add_political_power = 50
+			add_ideas = idea_ITA_ciano_three_guidelines
 		}
 	}
 
@@ -29388,7 +29433,47 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			#add_political_power = 50
+			effect_tooltip = {
+				if = {
+					limit = {
+						ITA_gian_galeazzo_ciano = { set_character_flag = ITA_ciano_unrepent_flag }
+					}
+					ITA_galeazzo_ciano = {
+						remove_trait = ITA_leader_trait_steel_company
+						add_trait = ITA_leader_real_trait_steel_company_1
+					}
+				}
+				else_if = {
+					limit = {
+						ITA_gian_galeazzo_ciano = { set_character_flag = ITA_ciano_repent_flag }
+					}
+					ITA_galeazzo_ciano = {
+						remove_trait = ITA_leader_trait_steel_company
+						add_trait = ITA_leader_real_trait_steel_company_2
+					}
+				}
+				else = {
+					custom_effect_tooltip = ITA_inner_circle_ciano_the_real_steel_company_tt
+				}
+			}
+
+			hidden_effect = {
+				if = {
+					limit = {
+						ITA_gian_galeazzo_ciano = { set_character_flag = ITA_ciano_unrepent_flag }
+					}
+					remove_ideas = ITA_leader_trait_steel_company
+					add_ideas = ITA_leader_real_trait_steel_company_1
+				}
+				else_if = {
+					limit = {
+						ITA_gian_galeazzo_ciano = { set_character_flag = ITA_ciano_repent_flag }
+					}
+					remove_ideas = ITA_leader_trait_steel_company
+					add_ideas = ITA_leader_real_trait_steel_company_2
+				}
+			}
 		}
 	}
 
@@ -29480,7 +29565,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 15
+			#add_political_power = 15
+			add_ideas = idea_ITA_book_of_letter_of_apology
+
 		}
 	}
 
@@ -29673,7 +29760,11 @@ focus_tree = {
 
 		completion_reward = {
 			#custom_effect_tooltip = generic_skip_one_line_tt
-			add_political_power = 15
+			#add_political_power = 15
+			swap_ideas = {
+				remove_idea = ITA_OND
+				add_idea = ITA_OND_improve
+			}
 		}
 	}
 
@@ -29716,7 +29807,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 15
+			#add_political_power = 15
+			unlock_decision_tooltip = ITA_nationale_mediate
 		}
 	}
 
@@ -29762,6 +29854,8 @@ focus_tree = {
 
 		completion_reward = {
 			add_political_power = 15
+
+			add_ideas = idea_ITA_class_reconciliatio_as_the_keylink
 		}
 	}
 
@@ -29950,7 +30044,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			#add_political_power = 50
+			add_ideas = idea_ITA_elementary_education_law
 		}
 	}
 
@@ -29993,7 +30088,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			#add_political_power = 50
+			add_ideas = idea_tracking_in_secondary_education
 		}
 	}
 
@@ -30037,7 +30133,13 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 50
+			#add_political_power = 50 
+			#add_ideas = idea_ITA_education_sector_a_black_line
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.15
+			}
+			add_political_power = 15
 		}
 	}
 
@@ -30269,7 +30371,23 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 15
+			custom_effect_tooltip = ITA_inner_circle_acerbo_agricultural_collectivization_tt
+			hidden_effect = {
+				every_controlled_state = {
+					limit = {
+						has_dynamic_modifier = {
+							modifier = ITA_land_redistribution_modifier
+						}
+					}
+					add_dynamic_modifier = {
+						modifier = ITA_agricultural_collectivization
+					}
+				}
+				country_event = {
+					id = IPUnion_router_event.10	
+					days = 30
+				}
+			}
 		}
 	}
 
@@ -30315,7 +30433,40 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 15
+			#add_political_power = 15
+			random_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+				}
+				add_building_construction = {
+    				type = industrial_complex
+    				level = 1
+    				instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			random_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+				}
+				add_building_construction = {
+    				type = industrial_complex
+    				level = 1
+    				instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			random_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+				}
+				add_building_construction = {
+    				type = industrial_complex
+    				level = 1
+    				instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
 		}
 
 	}
@@ -30338,9 +30489,78 @@ focus_tree = {
 			focus = ITA_inner_circle_acerbo_corporatist_agricultural_modernization
 		}
 		icon = GFX_focus_generic_mediterranean_sea_focus
+
+		available = {
+			has_government = fascism
+			
+			custom_trigger_tooltip = {
+				tooltip = ITA_inner_circle_complete_end_trigger_tt
+				count_triggers = {
+					amount = 4
+					AND = {
+						has_completed_focus = ITA_inner_circle_setting_of_again_from_roma
+						OR = {
+							check_variable = { ITA_ascended_advisor_1 = 1 }
+							check_variable = { ITA_ascended_advisor_2 = 1 }
+							check_variable = { ITA_ascended_advisor_3 = 1 }
+							check_variable = { ITA_ascended_advisor_4 = 1 }
+							check_variable = { ITA_ascended_advisor_1 = 2 }
+							check_variable = { ITA_ascended_advisor_2 = 2 }
+							check_variable = { ITA_ascended_advisor_3 = 2 }
+							check_variable = { ITA_ascended_advisor_4 = 2 }
+						}
+					}
+					AND = {
+						has_completed_focus = ITA_inner_circle_grandi_advancing_law-based_governance
+						OR = {
+							check_variable = { ITA_ascended_advisor_1 = 3 }
+							check_variable = { ITA_ascended_advisor_2 = 3 }
+							check_variable = { ITA_ascended_advisor_3 = 3 }
+							check_variable = { ITA_ascended_advisor_4 = 3 }
+						}
+					}
+					AND = {
+						has_completed_focus = ITA_inner_circle_ciano_the_real_steel_company
+						OR = {
+							check_variable = { ITA_ascended_advisor_1 = 4 }
+							check_variable = { ITA_ascended_advisor_2 = 4 }
+							check_variable = { ITA_ascended_advisor_3 = 4 }
+							check_variable = { ITA_ascended_advisor_4 = 4 }
+						}
+					}
+					AND = {
+						has_completed_focus = ITA_inner_circle_ricci_grapple_with_key_issues_to_goverence
+						OR = {
+							check_variable = { ITA_ascended_advisor_1 = 5 }
+							check_variable = { ITA_ascended_advisor_2 = 5 }
+							check_variable = { ITA_ascended_advisor_3 = 5 }
+							check_variable = { ITA_ascended_advisor_4 = 5 }
+						}
+					}
+					AND = {
+						has_completed_focus = ITA_inner_circle_bottai_education_sector_a_black_line
+						OR = {
+							check_variable = { ITA_ascended_advisor_1 = 6 }
+							check_variable = { ITA_ascended_advisor_2 = 6 }
+							check_variable = { ITA_ascended_advisor_3 = 6 }
+							check_variable = { ITA_ascended_advisor_4 = 6 }
+						}
+					}
+					AND = {
+						has_completed_focus = ITA_inner_circle_acerbo_corporatist_agricultural_modernization
+						OR = {
+							check_variable = { ITA_ascended_advisor_1 = 7 }
+							check_variable = { ITA_ascended_advisor_2 = 7 }
+							check_variable = { ITA_ascended_advisor_3 = 7 }
+							check_variable = { ITA_ascended_advisor_4 = 7 }
+						}
+					}
+				}
+			}
+		}
 		
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 100
 			add_stability = 0.15
 		}
 	}
@@ -30362,10 +30582,80 @@ focus_tree = {
 			focus = ITA_inner_circle_bottai_education_sector_a_black_line
 			focus = ITA_inner_circle_acerbo_corporatist_agricultural_modernization
 		}
+
+		available = {
+			has_government = fascism
+			
+			custom_trigger_tooltip = {
+				tooltip = ITA_inner_circle_complete_end_trigger_tt
+				count_triggers = {
+					amount = 4
+					AND = {
+						has_completed_focus = ITA_inner_circle_setting_of_again_from_roma
+						OR = {
+							check_variable = { ITA_ascended_advisor_1 = 1 }
+							check_variable = { ITA_ascended_advisor_2 = 1 }
+							check_variable = { ITA_ascended_advisor_3 = 1 }
+							check_variable = { ITA_ascended_advisor_4 = 1 }
+							check_variable = { ITA_ascended_advisor_1 = 2 }
+							check_variable = { ITA_ascended_advisor_2 = 2 }
+							check_variable = { ITA_ascended_advisor_3 = 2 }
+							check_variable = { ITA_ascended_advisor_4 = 2 }
+						}
+					}
+					AND = {
+						has_completed_focus = ITA_inner_circle_grandi_advancing_law-based_governance
+						OR = {
+							check_variable = { ITA_ascended_advisor_1 = 3 }
+							check_variable = { ITA_ascended_advisor_2 = 3 }
+							check_variable = { ITA_ascended_advisor_3 = 3 }
+							check_variable = { ITA_ascended_advisor_4 = 3 }
+						}
+					}
+					AND = {
+						has_completed_focus = ITA_inner_circle_ciano_the_real_steel_company
+						OR = {
+							check_variable = { ITA_ascended_advisor_1 = 4 }
+							check_variable = { ITA_ascended_advisor_2 = 4 }
+							check_variable = { ITA_ascended_advisor_3 = 4 }
+							check_variable = { ITA_ascended_advisor_4 = 4 }
+						}
+					}
+					AND = {
+						has_completed_focus = ITA_inner_circle_ricci_grapple_with_key_issues_to_goverence
+						OR = {
+							check_variable = { ITA_ascended_advisor_1 = 5 }
+							check_variable = { ITA_ascended_advisor_2 = 5 }
+							check_variable = { ITA_ascended_advisor_3 = 5 }
+							check_variable = { ITA_ascended_advisor_4 = 5 }
+						}
+					}
+					AND = {
+						has_completed_focus = ITA_inner_circle_bottai_education_sector_a_black_line
+						OR = {
+							check_variable = { ITA_ascended_advisor_1 = 6 }
+							check_variable = { ITA_ascended_advisor_2 = 6 }
+							check_variable = { ITA_ascended_advisor_3 = 6 }
+							check_variable = { ITA_ascended_advisor_4 = 6 }
+						}
+					}
+					AND = {
+						has_completed_focus = ITA_inner_circle_acerbo_corporatist_agricultural_modernization
+						OR = {
+							check_variable = { ITA_ascended_advisor_1 = 7 }
+							check_variable = { ITA_ascended_advisor_2 = 7 }
+							check_variable = { ITA_ascended_advisor_3 = 7 }
+							check_variable = { ITA_ascended_advisor_4 = 7 }
+						}
+					}
+				}
+			}
+		}
+
 		icon = GFX_focus_ITA_embrace_change_in_leadership
 		
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 100
 			add_stability = 15
 		}
 	}
