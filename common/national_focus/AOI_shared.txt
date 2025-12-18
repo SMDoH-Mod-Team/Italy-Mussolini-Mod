@@ -16,8 +16,8 @@
 
 		icon = GFX_focus_AOI_italian_aoi
 
-		x = 34
-		y = 8
+		x = 25
+		y = 15
 
 		cost = 5
 

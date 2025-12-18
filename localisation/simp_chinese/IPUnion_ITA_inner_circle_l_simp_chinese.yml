@@ -17,6 +17,11 @@
  ITA_inner_circle_complete_end_trigger_tt: "§Y核心集团§!中所有§Y4§!名亲密战友均已完成其终极国策。"
  ITA_inner_circle_ciano_the_real_steel_company_tt: "这项国策的效果将会在§Y$ITA_galeazzo_ciano$§!选择§Y$ITA_inner_circle_ciano_rectify$§!或§Y$ITA_inner_circle_ciano_never_overturn_a_verdict$§!后显示"
 
+ ITA_inner_circle.ciano.00.t: "齐亚诺的未来"
+ ITA_inner_circle.ciano.00.d: "这个时间线的齐亚诺，会选择死不悔改还是永不翻案呢..."
+ ITA_inner_circle.ciano.00.a: "整顿"
+ ITA_inner_circle.ciano.00.b: "永不翻案"
+
 
  ITA_duceprincipio: "领袖原则"
  ITA_duceprincipio_desc: ""

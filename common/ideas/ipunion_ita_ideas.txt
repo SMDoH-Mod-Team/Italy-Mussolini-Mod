@@ -884,6 +884,8 @@ ideas = {
 
 		ITA_OND_improve = {
 
+			name = ITA_OND
+
 			picture = ITA_OND
 			
 			allowed = {

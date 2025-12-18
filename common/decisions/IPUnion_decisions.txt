@@ -2377,18 +2377,6 @@ ITA_land_redistribution = {
 		}
 
 		complete_effect = {
-			if = {
-				limit = {
-					FROM = {
-						NOT = {
-							is_core_of = ROOT
-						}
-					}
-				}
-				FROM = {
-					add_core_of = ROOT
-				}
-			}
 			FROM = {
 				add_dynamic_modifier = {
 					modifier = ITA_land_redistribution_modifier
