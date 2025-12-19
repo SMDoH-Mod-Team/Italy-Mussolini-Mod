@@ -131,6 +131,14 @@ music = {
 	file = "downhill.ogg"
 }
 music = {
-	name = "MarciaReale"
-	file = "Marcia Reale.ogg"
+	name = "Avanti_Popolo"
+	file = "Avanti Popolo.ogg"
+}
+music = {
+	name = "Inno_di_Garibaldi"
+	file = "Inno di Garibaldi.ogg"
+}
+music = {
+	name = "Parata_d_eroi"
+	file = "Parata d'eroi.ogg"
 }
