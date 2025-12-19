@@ -1085,8 +1085,8 @@ ITA_power_balance = {
 			#		
 			#		effect_tooltip = {
 			#			start_civil_war = {
-			3				ideology = neutrality
-			3				size = 0.5
+			#				ideology = neutrality
+			#				size = 0.5
 			#			}
 			#		}
 			#	}

@@ -168,3 +168,21 @@ music = {
 		factor = 0
 	}
 }
+music = {
+	song = "Avanti_Popolo"
+	chance = {
+		factor = 0
+	}
+}
+music = {
+	song = "Inno_di_Garibaldi"
+	chance = {
+		factor = 0
+	}
+}
+music = {
+	song = "Parata_d_eroi"
+	chance = {
+		factor = 0
+	}
+}

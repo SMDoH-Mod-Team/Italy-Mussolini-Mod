@@ -822,3 +822,10 @@ defined_text = {
 		localization_key = ITA_propaganda_give_respect_to_duce
 	}
 }
+
+defined_text = {
+	name = ITA_propaganda_cheer_for_plane_insdustry_defined_text
+	text = {
+		localization_key = idea_desc|idea_ITA_propaganda_cheer_for_plane_insdustry
+	}
+}

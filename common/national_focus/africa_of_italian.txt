@@ -706,7 +706,7 @@ focus_tree = {
 		completion_reward = {
 			country_event = {
 				id = africa_of_italian_event.7
-				day = 3
+				days = 3
 			}
 		}
 	}

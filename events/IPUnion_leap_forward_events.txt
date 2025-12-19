@@ -172,7 +172,7 @@ country_event = {  ##省委急电
 		}
 		hidden_effect = {
 			clr_country_flag = ITA_leap_forward_flag
-			remove_idea = idea_ITA_reality_5
+			remove_ideas = idea_ITA_reality_5
 		}
 	}
 	option = {
@@ -201,7 +201,7 @@ country_event = {
 		}
 		hidden_effect = {
 			clr_country_flag = ITA_leap_forward_flag
-			remove_idea = idea_ITA_reality_5
+			remove_ideas = idea_ITA_reality_5
 		}
 	}
 }
@@ -221,7 +221,7 @@ country_event = {
 		}
 		hidden_effect = {
 			clr_country_flag = ITA_leap_forward_flag
-			remove_idea = idea_ITA_reality_5
+			remove_ideas = idea_ITA_reality_5
 		}
 	}
 }

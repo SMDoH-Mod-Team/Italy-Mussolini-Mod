@@ -484,9 +484,6 @@
 		prerequisite = { focus = CHI_SINAW_focus }
 
 		cost = 2
-
-		complete_effect = {
-		}
 		
 		available = {
 			OR = {
@@ -495,7 +492,9 @@
 			}
 		}
 
-		joint_trigger = ITA_CHI_trigger
+		joint_trigger = {
+			ITA_CHI_trigger = yes
+		}
 
 		text_icon = china_ITA_CHI_focus_style
 
@@ -554,7 +553,9 @@
 
 		cost = 4
 
-		joint_trigger = ITA_CHI_trigger
+		joint_trigger = {
+			ITA_CHI_trigger = yes
+		}
 
 		text_icon = china_ITA_CHI_focus_style
 
@@ -611,7 +612,9 @@
 			original_tag = CHI
 		}
 
-		joint_trigger = ITA_CHI_trigger
+		joint_trigger = {
+			ITA_CHI_trigger = yes
+		}
 
 		cost = 2
 		prerequisite = { focus = CHI_china_italy_industrial_commission focus = CHI_italian_development_loans }
@@ -672,7 +675,9 @@
 		cost = 6
 		prerequisite = { focus = CHI_china_italy_industrial_commission }
 		text_icon = china_ITA_CHI_focus_style
-		joint_trigger = ITA_CHI_trigger
+		joint_trigger = {
+			ITA_CHI_trigger = yes
+		}
 
 		completion_reward_joint_originator = {
 			if = {
@@ -761,10 +766,10 @@
 					}	
 				}
 			}
-		}
-		hidden_effect = {
-			CHI = {
-				unlock_national_focus = CHI_italian_development_loans
+			hidden_effect = {
+				CHI = {
+					unlock_national_focus = CHI_italian_development_loans
+				}
 			}
 		}
 	}
@@ -808,11 +813,10 @@
 					}
 				}
 			}
-		}
-
-		hidden_effect = {
-			ITA = {
-				unlock_national_focus = CHI_contract_with_fiat
+			hidden_effect = {
+				ITA = {
+					unlock_national_focus = CHI_contract_with_fiat
+				}
 			}
 		}
 	}
@@ -828,7 +832,9 @@
 			focus = CHI_SINAW_focus
 		}
 
-		joint_trigger = ITA_CHI_trigger
+		joint_trigger = {
+			ITA_CHI_trigger = yes
+		}
 
 		text_icon = china_ITA_CHI_focus_style
 
@@ -1078,7 +1084,9 @@
 
 		cost = 5
 
-		joint_trigger = ITA_CHI_trigger
+		joint_trigger = {
+			ITA_CHI_trigger = yes
+		}
 
 		text_icon = china_ITA_CHI_focus_style
 

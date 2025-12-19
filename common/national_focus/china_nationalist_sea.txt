@@ -12745,8 +12745,10 @@ focus_tree = {
 				mark_focus_tree_layout_dirty = yes
 				hidden_effect = {
 					if = {
-						ITA = {
-							is_ai = no
+						limit = {
+							ITA = {
+								is_ai = no
+							}
 						}
 						ITA = {
 							country_event = {
