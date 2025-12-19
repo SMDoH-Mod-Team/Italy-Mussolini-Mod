@@ -682,7 +682,7 @@ country_event = {
 		ai_chance = {
 			factor = 100
 		}
-		remove_global_flag = ITA_Hot_Autumn_flag
+		clr_global_flag = ITA_Hot_Autumn_flag
 		hidden_effect = {
 			set_country_flag = ITA_Spring_of_Roma_Peace_flag
 			clr_country_flag = hide_defy_the_duce_focus_flag_2
@@ -697,7 +697,7 @@ country_event = {
 		#ai_chance = {
 		#	factor = 100
 		#}
-		remove_global_flag = ITA_Hot_Autumn_flag
+		clr_global_flag = ITA_Hot_Autumn_flag
 		remove_ideas = idea_ITA_Hot_Autumn
 		play_song = IPUnionBellaCiao
 		hidden_effect = {
@@ -720,7 +720,7 @@ country_event = {
 		ai_chance = {
 			factor = 100
 		}
-		remove_global_flag = ITA_Hot_Autumn_flag
+		clr_global_flag = ITA_Hot_Autumn_flag
 		remove_ideas = idea_ITA_Hot_Autumn
 		#play_song = BellaCiao
 		complete_national_focus = ITA_Clear_the_Square
@@ -739,7 +739,7 @@ country_event = {
 	}
 	option = {
 		name = IPUnion_country_event.19.b
-		remove_global_flag = ITA_Hot_Autumn_flag
+		clr_global_flag = ITA_Hot_Autumn_flag
 		remove_ideas = idea_ITA_Hot_Autumn
 		#complete_national_focus = ITA_Clear_the_Square
 		hidden_effect = {
@@ -1633,7 +1633,7 @@ country_event = {
 					}
 					add_ideas = idea_ITA_neutrality_puppet
 				}
-				remove_country_flag = ITA_sword_aimed_middle_east_FRA_puppet
+				clr_country_flag = ITA_sword_aimed_middle_east_FRA_puppet
 			}
 		}
 		183 = { set_demilitarized_zone = no }

@@ -284,9 +284,9 @@ country_event = {
 }
 
 country_event = {
-	id = IPUnion_router_event.10
-	title = IPUnion_router_event.10
-	desc = IPUnion_router_event.10
+	id = IPUnion_router_event.11
+	title = IPUnion_router_event.11
+	desc = IPUnion_router_event.11
 	hidden = yes
 
 	is_triggered_only = yes
@@ -307,7 +307,7 @@ country_event = {
 		}
 
 		country_event = {
-			id = IPUnion_router_event.10
+			id = IPUnion_router_event.11
 			days = 30
 		}
 	}

@@ -240,7 +240,7 @@ country_event = {
 	option = { 
 		name = africa_of_italian_event.7.a
 		add_political_power = 15
-		stability_factor = 0.15	
+		add_stability = 0.15	
 	}
 }
 

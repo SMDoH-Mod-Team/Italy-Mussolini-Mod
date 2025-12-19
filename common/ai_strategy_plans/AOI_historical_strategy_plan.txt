@@ -3,7 +3,7 @@ AOI_historical = {
 	desc = ""
 
 	allowed = {
-		original = AOI
+		original_tag = AOI
 	}
 
 	enable = {

@@ -3831,33 +3831,6 @@ focus_tree = {
 ##     ## ########  ######   ####  #######     ########  ######  ######## ##     ##  ######  ####    ##     #######  
 
 	focus = {
-		id = ITA_political_build_army
-		icon = GFX_focus_FIN_national_fanatism
-
-		relative_position_id = ITA_air_innovations_bba
-
-		x = 2
-		y = -1
-
-		cost = 5
-
-		available = {
-			#has_country_leader = {
-			#	character = ITA_benito_mussolini
-			#	ruling_only = yes
-			#}
-		}
-
-		completion_reward = {
-			#add_political_power = 10
-			country_event = IPUnion_country_event.59
-			unlock_decision_category_tooltip = ITA_PNF_central_military_committee
-		}
-	}
-
-
-
-	focus = {
 		id = ITA_army_primacy_bba
 		icon = GFX_goal_generic_axis_build_infantry
 
@@ -3964,6 +3937,31 @@ focus_tree = {
 				uses = 1
 				category = land_doctrine
 			}
+		}
+	}
+
+	focus = {
+		id = ITA_political_build_army
+		icon = GFX_focus_FIN_national_fanatism
+
+		relative_position_id = ITA_air_innovations_bba
+
+		x = 2
+		y = -1
+
+		cost = 5
+
+		available = {
+			#has_country_leader = {
+			#	character = ITA_benito_mussolini
+			#	ruling_only = yes
+			#}
+		}
+
+		completion_reward = {
+			#add_political_power = 10
+			country_event = IPUnion_country_event.59
+			unlock_decision_category_tooltip = ITA_PNF_central_military_committee
 		}
 	}
 
@@ -4215,35 +4213,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = ITA_moschettieri_del_duce
-		icon = GFX_focus_ITA_moschettieri_del_duce
-		
-
-		prerequisite = { focus = ITA_a_bandits_war }
-
-		x = 0
-		y = 2
-		relative_position_id = ITA_a_bandits_war
-		cost = 4
-		available = {
-		}
-		cost = 5
-		available = {
-		}
-
-		search_filters = {}
-
-		completion_reward = {
-			add_to_variable = { ITA_re_army_core_defence_factor = 0.05 }
-			add_to_variable = { ITA_re_modifier_army_sub_unit_militia_max_org_factor = 0.05 }
-			custom_effect_tooltip = ITA_moschettieri_del_duce_re_tt
-			custom_effect_tooltip = generic_skip_one_line_tt
-			custom_effect_tooltip = unlock_propaganda_campaign_tt
-			unlock_decision_tooltip = ITA_propaganda_be_loyalty_musketeer_for_duce
-		}
-	}
-
-	focus = {
 		id = ITA_a_bandits_war
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = ITA_army_primacy_bba }
@@ -4325,6 +4294,35 @@ focus_tree = {
 					}
 				}
 			}
+		}
+	}
+
+	focus = {
+		id = ITA_moschettieri_del_duce
+		icon = GFX_focus_ITA_moschettieri_del_duce
+		
+
+		prerequisite = { focus = ITA_a_bandits_war }
+
+		x = 0
+		y = 2
+		relative_position_id = ITA_a_bandits_war
+		cost = 4
+		available = {
+		}
+		cost = 5
+		available = {
+		}
+
+		search_filters = {}
+
+		completion_reward = {
+			add_to_variable = { ITA_re_army_core_defence_factor = 0.05 }
+			add_to_variable = { ITA_re_modifier_army_sub_unit_militia_max_org_factor = 0.05 }
+			custom_effect_tooltip = ITA_moschettieri_del_duce_re_tt
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = unlock_propaganda_campaign_tt
+			unlock_decision_tooltip = ITA_propaganda_be_loyalty_musketeer_for_duce
 		}
 	}
 
@@ -10323,6 +10321,7 @@ focus_tree = {
 		#prerequisite = { focus = ITA_towards_a_greater_italy }
 		#prerequisite = { focus = ITA_devotion }
 		prerequisite = { focus = ITA_culto_del_duce }
+		mutually_exclusive = { focus = ITA_heroes_of_the_nation }
 		x = -1
 		y = 1
 		cancelable = no
@@ -19401,8 +19400,8 @@ focus_tree = {
 				limit = {
 					has_country_flag = Lock_ITA_the_Popular_front_flag
 				}
-				custom_trigger_tooltip = ITA_the_popular_front_Locked_tt
-				hidden_trigger = {
+				custom_trigger_tooltip = {
+					tooltip = ITA_the_popular_front_Locked_tt
 					NOT = {
 						has_country_flag = Lock_ITA_the_Popular_front_flag
 					}
@@ -24351,14 +24350,16 @@ focus_tree = {
 		prerequisite = { focus = ITA_enter_the_high_stage_of_imperialism }
 		cost = 2
 		completion_reward = {
-			random = {
+			if = {
 				limit = {
 					NOT = {
 						has_country_flag = mussolini_is_in_terminally_ill_flag
 					}
 				}
-				chance = 10
-				country_event = IPUnion_country_event.54
+				random = {
+					chance = 10
+					country_event = IPUnion_country_event.54
+				}
 			}
 			every_core_state = {
 				limit = {
@@ -24395,14 +24396,16 @@ focus_tree = {
 		prerequisite = { focus = ITA_Issuance_new_version_lira }
 		cost = 4
 		completion_reward = {
-			random = {
+			if = {
 				limit = {
 					NOT = {
 						has_country_flag = mussolini_is_in_terminally_ill_flag
 					}
 				}
-				chance = 20
-				country_event = IPUnion_country_event.54
+				random = {
+					chance = 20
+					country_event = IPUnion_country_event.54
+				}
 			}
 			random_core_state = {
 				limit = {
@@ -24438,14 +24441,16 @@ focus_tree = {
 		prerequisite = { focus = ITA_Issuance_new_version_lira }
 		cost = 3
 		completion_reward = {
-			random = {
+			if = {
 				limit = {
 					NOT = {
 						has_country_flag = mussolini_is_in_terminally_ill_flag
 					}
 				}
-				chance = 20
-				country_event = IPUnion_country_event.54
+				random = {
+					chance = 20
+					country_event = IPUnion_country_event.54
+				}
 			}
 			if = {
 				limit = {
@@ -24494,14 +24499,16 @@ focus_tree = {
 		prerequisite = { focus = ITA_mussolinisim_tax_reform }
 		mutually_exclusive = { focus = ITA_abolish_price_controls }
 		completion_reward = {
-			random = {
+			if = {
 				limit = {
 					NOT = {
 						has_country_flag = mussolini_is_in_terminally_ill_flag
 					}
 				}
-				chance = 30
-				country_event = IPUnion_country_event.54
+				random = {
+					chance = 30
+					country_event = IPUnion_country_event.54
+				}
 			}
 			add_stability = 0.10
 
@@ -24546,14 +24553,16 @@ focus_tree = {
 		prerequisite = { focus = ITA_mussolinisim_tax_reform }
 		mutually_exclusive = { focus = ITA_price_controls_continued }
 		completion_reward = {
-			random = {
+			if = {
 				limit = {
 					NOT = {
 						has_country_flag = mussolini_is_in_terminally_ill_flag
 					}
 				}
-				chance = 30
-				country_event = IPUnion_country_event.54
+				random = {
+					chance = 30
+					country_event = IPUnion_country_event.54
+				}
 			}
 			add_stability = -0.15
 
@@ -24608,14 +24617,16 @@ focus_tree = {
 
 		completion_reward = {
 
-			random = {
+			if = {
 				limit = {
 					NOT = {
 						has_country_flag = mussolini_is_in_terminally_ill_flag
 					}
 				}
-				chance = 30
-				country_event = IPUnion_country_event.54
+				random = {
+					chance = 30
+					country_event = IPUnion_country_event.54
+				}
 			}
 
 			random_core_state = {
@@ -24702,14 +24713,16 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			random = {
+			if = {
 				limit = {
 					NOT = {
 						has_country_flag = mussolini_is_in_terminally_ill_flag
 					}
 				}
-				chance = 30
-				country_event = IPUnion_country_event.54
+				random = {
+					chance = 30
+					country_event = IPUnion_country_event.54
+				}
 			}
 			add_popularity = {
 			    ideology = ROOT
@@ -24758,14 +24771,16 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			random = {
+			if = {
 				limit = {
 					NOT = {
 						has_country_flag = mussolini_is_in_terminally_ill_flag
 					}
 				}
-				chance = 40
-				country_event = IPUnion_country_event.54
+				random = {
+					chance = 40
+					country_event = IPUnion_country_event.54
+				}
 			}
 			add_ideas = ITA_planned_parenthood_idea
 		}
@@ -24793,14 +24808,16 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
-			random = {
+			if = {
 				limit = {
 					NOT = {
 						has_country_flag = mussolini_is_in_terminally_ill_flag
 					}
 				}
-				chance = 40
-				country_event = IPUnion_country_event.54
+				random = {
+					chance = 40
+					country_event = IPUnion_country_event.54
+				}
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -24837,14 +24854,16 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			random = {
+			if = {
 				limit = {
 					NOT = {
 						has_country_flag = mussolini_is_in_terminally_ill_flag
 					}
 				}
-				chance = 40
-				country_event = IPUnion_country_event.54
+				random = {
+					chance = 40
+					country_event = IPUnion_country_event.54
+				}
 			}
 			if = {	
 				limit = {
@@ -24929,14 +24948,16 @@ focus_tree = {
 
 		completion_reward = {
 
-			random = {
+			if = {
 				limit = {
 					NOT = {
 						has_country_flag = mussolini_is_in_terminally_ill_flag
 					}
 				}
-				chance = 40
-				country_event = IPUnion_country_event.54
+				random = {
+					chance = 40
+					country_event = IPUnion_country_event.54
+				}
 			}
 
 			if = {
@@ -25009,14 +25030,16 @@ focus_tree = {
 
 		completion_reward = {
 
-			random = {
+			if = {
 				limit = {
 					NOT = {
 						has_country_flag = mussolini_is_in_terminally_ill_flag
 					}
 				}
-				chance = 100
-				country_event = IPUnion_country_event.54
+				random = {
+					chance = 100
+					country_event = IPUnion_country_event.54
+				}
 			}
 
 			every_core_state = {
@@ -25152,14 +25175,16 @@ focus_tree = {
 
 		completion_reward = {
 
-			random = {
+			if = {
 				limit = {
 					NOT = {
 						has_country_flag = mussolini_is_in_terminally_ill_flag
 					}
 				}
-				chance = 100
-				country_event = IPUnion_country_event.54
+				random = {
+					chance = 100
+					country_event = IPUnion_country_event.54
+				}
 			}
 			
 			if = {
@@ -26055,7 +26080,7 @@ focus_tree = {
 				remove_idea = idea_ITA_the_question_of_por_colony_4
 				add_idea = idea_ITA_the_question_of_por_colony_5
 			}
-			war_support_factor = 0.05
+			add_war_support = 0.05
 		}
 	}
 
@@ -26238,7 +26263,7 @@ focus_tree = {
 		completion_reward = {
 			897 = {
 				add_resource = {
-					type = aluminum
+					type = aluminium
 					amount = 6
 				}
 				add_resource = {
@@ -28398,7 +28423,7 @@ focus_tree = {
 		}
 
 		cancel_if_invalid = no
-		continue_if_invaild = no
+		
 
 		select_effect = {
 			set_country_flag = ITA_graziani_ascension_flag
@@ -28719,7 +28744,7 @@ focus_tree = {
 		}
 
 		cancel_if_invalid = no
-		continue_if_invaild = no
+		
 
 		select_effect = {
 			set_country_flag = ITA_balbo_ascension_flag
@@ -28959,7 +28984,7 @@ focus_tree = {
 		}
 
 		cancel_if_invalid = no
-		continue_if_invaild = no
+		
 
 		select_effect = {
 			set_country_flag = ITA_grandi_ascension_flag
@@ -29200,7 +29225,7 @@ focus_tree = {
 		}
 
 		cancel_if_invalid = no
-		continue_if_invaild = no
+		
 
 		select_effect = {
 			set_country_flag = ITA_ciano_ascension_flag
@@ -29441,39 +29466,22 @@ focus_tree = {
 					limit = {
 						ITA_gian_galeazzo_ciano = { has_character_flag = ITA_ciano_unrepent_flag }
 					}
-					ITA_galeazzo_ciano = {
-						remove_trait = ITA_leader_trait_steel_company
-						add_trait = ITA_leader_real_trait_steel_company_1
+					swap_ideas = {
+						remove_idea = ITA_leader_trait_steel_company
+						add_idea = ITA_leader_real_trait_steel_company_1
 					}
 				}
 				else_if = {
 					limit = {
 						ITA_gian_galeazzo_ciano = { has_character_flag = ITA_ciano_repent_flag }
 					}
-					ITA_galeazzo_ciano = {
-						remove_trait = ITA_leader_trait_steel_company
-						add_trait = ITA_leader_real_trait_steel_company_2
+					swap_ideas = {
+						remove_idea = ITA_leader_trait_steel_company
+						add_idea = ITA_leader_real_trait_steel_company_2
 					}
 				}
 				else = {
 					custom_effect_tooltip = ITA_inner_circle_ciano_the_real_steel_company_tt
-				}
-			}
-
-			hidden_effect = {
-				if = {
-					limit = {
-						ITA_gian_galeazzo_ciano = { set_character_flag = ITA_ciano_unrepent_flag }
-					}
-					remove_ideas = ITA_leader_trait_steel_company
-					add_ideas = ITA_leader_real_trait_steel_company_1
-				}
-				else_if = {
-					limit = {
-						ITA_gian_galeazzo_ciano = { set_character_flag = ITA_ciano_repent_flag }
-					}
-					remove_ideas = ITA_leader_trait_steel_company
-					add_ideas = ITA_leader_real_trait_steel_company_2
 				}
 			}
 		}
@@ -29619,7 +29627,7 @@ focus_tree = {
 		}
 
 		cancel_if_invalid = no
-		continue_if_invaild = no
+		
 
 		select_effect = {
 			set_country_flag = ITA_ricci_ascension_flag
@@ -29907,7 +29915,7 @@ focus_tree = {
 		}
 
 		cancel_if_invalid = no
-		continue_if_invaild = no
+		
 
 		select_effect = {
 			set_country_flag = ITA_bottai_ascension_flag
@@ -30191,7 +30199,7 @@ focus_tree = {
 		}
 
 		cancel_if_invalid = no
-		continue_if_invaild = no
+		
 
 		select_effect = {
 			set_country_flag = ITA_acerbo_ascension_flag
@@ -30387,7 +30395,7 @@ focus_tree = {
 					}
 				}
 				country_event = {
-					id = IPUnion_router_event.10	
+					id = IPUnion_router_event.11
 					days = 30
 				}
 			}

@@ -225,7 +225,7 @@ ITA_propaganda_campaigns = {
 			training_time_army_factor = -0.15
 			modifier_army_sub_unit_militia_max_org_factor = 0.25
 			modifier_army_sub_unit_militia_defence_factor = 0.10
-			modifier_army_sub_unit_militia_defence_factor = 0.10
+			modifier_army_sub_unit_militia_attack_factor = 0.10
 		}
 
 		complete_effect = {
@@ -583,15 +583,13 @@ ITA_propaganda_campaigns = {
 			if = {
 				limit = {
 					NOT = { has_global_flag = second_italo_ethiopian_war_flag }
-					every_country = {
-						limit = {
-							OR = {
-								original_tag = ITA
-								is_subject_of = ITA
-								is_in_faction_with = ITA
-							}
-							controls_state = 271
+					any_country = {
+						OR = {
+							original_tag = ITA
+							is_subject_of = ITA
+							is_in_faction_with = ITA
 						}
+						controls_state = 271
 					}
 					#NOT = { has_country_flag = ITA_defeat_in_ethiopia_flag }
 				}
@@ -658,21 +656,22 @@ ITA_propaganda_campaigns = {
 		complete_effect = {
 			set_variable = { SOV_new_propaganda_campaign = 12 }  ##set_variable与ITA_pick_propaganda_campaign_slot_effect顺序不能反
 			ITA_pick_propaganda_campaign_slot_effect = yes
+			custom_effect_tooltip = ITA_propaganda_cheer_for_plane_insdustry_tt
+			hidden_effect = {
+				add_ideas = idea_ITA_propaganda_cheer_for_plane_insdustry
+			}
 		}
 
-		
-
 		modifier = {
-			research_bonus = {
-				light_air = 0.15
-				medium_air = 0.15
-				heavy_air = 0.15
-			}
 		}
 
 		remove_effect = {
 			set_variable = { SOV_propaganda_campaign_to_remove = 12 }
 			SOV_reset_propaganda_campaign_slot_effect = yes
+
+			hidden_effect = {
+				remove_ideas = idea_ITA_propaganda_cheer_for_plane_insdustry
+			}
 
 			custom_effect_tooltip = ITA_propaganda_campaign_cooldown_tt
 		}
