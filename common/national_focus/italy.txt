@@ -28840,7 +28840,7 @@ focus_tree = {
 					tooltip = {
 						localization_key = GER_inner_circle_focus_in_progress_tt
 						CHARACTER = ITA_italo_balbo
-						FLAG_DAYs = [?ITA_inner_circle_balbo_national_flight_movent_in_progress_flag:days]
+						FLAG_DAYS = [?ITA_inner_circle_balbo_national_flight_movent_in_progress_flag:days]
 					}
 					always = no
 				}
@@ -28885,7 +28885,7 @@ focus_tree = {
 					tooltip = {
 						localization_key = GER_inner_circle_focus_in_progress_tt
 						CHARACTER = ITA_italo_balbo
-						FLAG_DAYs = [?ITA_inner_circle_balbo_modern_air_force_in_progress_flag:days]
+						FLAG_DAYS = [?ITA_inner_circle_balbo_modern_air_force_in_progress_flag:days]
 					}
 					always = no
 				}
@@ -29080,7 +29080,7 @@ focus_tree = {
 					tooltip = {
 						localization_key = GER_inner_circle_focus_in_progress_tt
 						CHARACTER = ITA_dino_grandi
-						FLAG_DAYs = [?ITA_inner_circle_grandi_civil_code_in_progress_flag:days]
+						FLAG_DAYS = [?ITA_inner_circle_grandi_civil_code_in_progress_flag:days]
 					}
 					always = no
 				}
@@ -29128,7 +29128,7 @@ focus_tree = {
 					tooltip = {
 						localization_key = GER_inner_circle_focus_in_progress_tt
 						CHARACTER = ITA_dino_grandi
-						FLAG_DAYs = [?ITA_inner_circle_grandi_advancing_law-based_governance_in_progress_flag:days]
+						FLAG_DAYS = [?ITA_inner_circle_grandi_advancing_law-based_governance_in_progress_flag:days]
 					}
 					always = no
 				}
@@ -29325,7 +29325,7 @@ focus_tree = {
 					tooltip = {
 						localization_key = GER_inner_circle_focus_in_progress_tt
 						CHARACTER = ITA_galeazzo_ciano
-						FLAG_DAYs = [?ITA_inner_circle_ciano_rectify_in_progress_flag:days]
+						FLAG_DAYS = [?ITA_inner_circle_ciano_rectify_in_progress_flag:days]
 					}
 					always = no
 				}
@@ -29372,7 +29372,7 @@ focus_tree = {
 					tooltip = {
 						localization_key = GER_inner_circle_focus_in_progress_tt
 						CHARACTER = ITA_galeazzo_ciano
-						FLAG_DAYs = [?ITA_inner_circle_ciano_the_three_guidelines_in_progress_flag:days]
+						FLAG_DAYS = [?ITA_inner_circle_ciano_the_three_guidelines_in_progress_flag:days]
 					}
 					always = no
 				}
@@ -29416,7 +29416,7 @@ focus_tree = {
 					tooltip = {
 						localization_key = GER_inner_circle_focus_in_progress_tt
 						CHARACTER = ITA_galeazzo_ciano
-						FLAG_DAYs = [?ITA_inner_circle_ciano_the_real_steel_company_in_progress_flag:days]
+						FLAG_DAYS = [?ITA_inner_circle_ciano_the_real_steel_company_in_progress_flag:days]
 					}
 					always = no
 				}
@@ -29505,7 +29505,7 @@ focus_tree = {
 					tooltip = {
 						localization_key = GER_inner_circle_focus_in_progress_tt
 						CHARACTER = ITA_galeazzo_ciano
-						FLAG_DAYs = [?ITA_inner_circle_ciano_never_overturn_a_verdict_in_progress_flag:days]
+						FLAG_DAYS = [?ITA_inner_circle_ciano_never_overturn_a_verdict_in_progress_flag:days]
 					}
 					always = no
 				}
@@ -29549,7 +29549,7 @@ focus_tree = {
 					tooltip = {
 						localization_key = GER_inner_circle_focus_in_progress_tt
 						CHARACTER = ITA_galeazzo_ciano
-						FLAG_DAYs = [?ITA_inner_circle_ciano_the_first_half_of_my_life_in_progress_flag:days]
+						FLAG_DAYS = [?ITA_inner_circle_ciano_the_first_half_of_my_life_in_progress_flag:days]
 					}
 					always = no
 				}
@@ -29743,7 +29743,7 @@ focus_tree = {
 					tooltip = {
 						localization_key = GER_inner_circle_focus_in_progress_tt
 						CHARACTER = ITA_renato_ricci
-						FLAG_DAYs = [?ITA_inner_circle_ricci_OND_in_progress_flag:days]
+						FLAG_DAYS = [?ITA_inner_circle_ricci_OND_in_progress_flag:days]
 					}
 					always = no
 				}
@@ -29791,7 +29791,7 @@ focus_tree = {
 					tooltip = {
 						localization_key = GER_inner_circle_focus_in_progress_tt
 						CHARACTER = ITA_italo_ricci
-						FLAG_DAYs = [?ITA_inner_circle_ricci_nationale_mediate_in_progress_flag:days]
+						FLAG_DAYS = [?ITA_inner_circle_ricci_nationale_mediate_in_progress_flag:days]
 					}
 					always = no
 				}
@@ -29837,7 +29837,7 @@ focus_tree = {
 					tooltip = {
 						localization_key = GER_inner_circle_focus_in_progress_tt
 						CHARACTER = ITA_italo_ricci
-						FLAG_DAYs = [?ITA_inner_circle_ricci_grapple_with_key_issues_to_goverence_in_progress_flag:days]
+						FLAG_DAYS = [?ITA_inner_circle_ricci_grapple_with_key_issues_to_goverence_in_progress_flag:days]
 					}
 					always = no
 				}
@@ -30028,7 +30028,7 @@ focus_tree = {
 					tooltip = {
 						localization_key = GER_inner_circle_focus_in_progress_tt
 						CHARACTER = ITA_giuseppe_bottai
-						FLAG_DAYs = [?ITA_inner_circle_bottai_elementary_education_law_in_progress_flag:days]
+						FLAG_DAYS = [?ITA_inner_circle_bottai_elementary_education_law_in_progress_flag:days]
 					}
 					always = no
 				}
@@ -30072,7 +30072,7 @@ focus_tree = {
 					tooltip = {
 						localization_key = GER_inner_circle_focus_in_progress_tt
 						CHARACTER = ITA_giuseppe_bottai
-						FLAG_DAYs = [?ITA_inner_circle_bottai_tracking_in_secondary_education_in_progress_flag:days]
+						FLAG_DAYS = [?ITA_inner_circle_bottai_tracking_in_secondary_education_in_progress_flag:days]
 					}
 					always = no
 				}
@@ -30117,7 +30117,7 @@ focus_tree = {
 					tooltip = {
 						localization_key = GER_inner_circle_focus_in_progress_tt
 						CHARACTER = ITA_giuseppe_bottai
-						FLAG_DAYs = [?ITA_inner_circle_bottai_education_sector_a_black_line_in_progress_flag:days]
+						FLAG_DAYS = [?ITA_inner_circle_bottai_education_sector_a_black_line_in_progress_flag:days]
 					}
 					always = no
 				}
@@ -30312,7 +30312,7 @@ focus_tree = {
 					tooltip = {
 						localization_key = GER_inner_circle_focus_in_progress_tt
 						CHARACTER = ITA_giacomo_acerbo
-						FLAG_DAYs = [?ITA_inner_circle_acerbo_land_redistribution_in_progress_flag:days]
+						FLAG_DAYS = [?ITA_inner_circle_acerbo_land_redistribution_in_progress_flag:days]
 					}
 					always = no
 				}
@@ -30356,7 +30356,7 @@ focus_tree = {
 					tooltip = {
 						localization_key = GER_inner_circle_focus_in_progress_tt
 						CHARACTER = ITA_giacomo_acerbo
-						FLAG_DAYs = [?ITA_inner_circle_acerbo_agricultural_collectivization_in_progress_flag:days]
+						FLAG_DAYS = [?ITA_inner_circle_acerbo_agricultural_collectivization_in_progress_flag:days]
 					}
 					always = no
 				}
@@ -30418,7 +30418,7 @@ focus_tree = {
 					tooltip = {
 						localization_key = GER_inner_circle_focus_in_progress_tt
 						CHARACTER = ITA_giacomo_acerbo
-						FLAG_DAYs = [?ITA_inner_circle_acerbo_corporatist_agricultural_modernization_in_progress_flag:days]
+						FLAG_DAYS = [?ITA_inner_circle_acerbo_corporatist_agricultural_modernization_in_progress_flag:days]
 					}
 					always = no
 				}
