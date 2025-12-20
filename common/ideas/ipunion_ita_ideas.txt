@@ -750,10 +750,11 @@ ideas = {
 			removal_cost = -1
 			picture = generic_women_in_the_army
 			modifier = {
-				dig_in_speed = 1
+				#dig_in_speed = 1
+				dig_in_speed_factor = 0.10
 				max_dig_in_factor = 0.10
 				max_planning = 0.15
-				combat_width_factor = -0.15
+				#combat_width_factor = -0.15
 			}
 		}
 		idea_ITA_grandi_civil_code = {

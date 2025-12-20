@@ -27,3 +27,5 @@
   ITA_liberty_eth_modifier: "Liberate the Ethiopian People"
   ITA_land_redistribution_modifier: "Land Reform"
   ITA_agricultural_collectivization: "Collectivization"
+  ITA_wonderweapon_modifier: "$GER_wunderwaffen_modifier$"
+  ITA_wonderweapon_modifier_desc: "$GER_wunderwaffen_modifier_desc$"

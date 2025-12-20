@@ -26,4 +26,6 @@
  CHI_china_yangtze_insdustry_blet_desc: "国民政府将此地当作长江重工业带的一部分进行重点开发"
  ITA_liberty_eth_modifier: "解放埃塞俄比亚人民"
  ITA_land_redistribution_modifier: "土地改革"
- ITA_agricultural_collectivization: "集体化"
+ ITA_agricultural_collectivization: "集体化" 
+ ITA_wonderweapon_modifier: "$GER_wunderwaffen_modifier$"
+ ITA_wonderweapon_modifier_desc: "$GER_wunderwaffen_modifier_desc$"

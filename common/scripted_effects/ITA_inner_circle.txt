@@ -467,7 +467,38 @@ ITA_remove_grandi_effects = {
 }
 
 ITA_add_ciano_effects = {
-	add_ideas = ITA_leader_trait_steel_company
+	log = "ADDING CIANO"
+
+	if = {
+		limit = {
+			has_completed_focus = ITA_inner_circle_ciano_the_real_steel_company
+		}
+		add_ideas = ITA_leader_real_trait_steel_company_1
+	}
+	else_if = {
+		limit = {
+			has_completed_focus = ITA_inner_circle_ciano_the_three_guidelines
+		}
+		add_ideas = idea_ITA_ciano_three_guidelines
+	}
+	else_if = {
+		limit = {
+			has_completed_focus = ITA_inner_circle_ciano_the_first_half_of_my_life
+		}
+		add_ideas = idea_ITA_book_of_letter_of_apology
+	}
+	else_if = {
+		limit = {
+			has_completed_focus = ITA_ascension_of_ciano
+		}
+		add_ideas = ITA_leader_trait_steel_company
+	}
+
+	#add_ideas = ITA_leader_trait_steel_company
+
+	custom_effect_tooltip = generic_skip_one_line_tt
+
+	country_event = ITA_inner_circle.ciano.00
 }
 ITA_remove_ciano_effects = {
 
@@ -711,6 +742,62 @@ ITA_inner_circle_set_ascension_cd = {
 		flag = ITA_inner_circle_cd_flag
 		days = 90
 		value = 1
+	}
+}
+
+ITA_wonder_weapon_scientis_effects = {
+	random_scientist = {
+		limit = {
+			has_scientist_level = {
+				specialization = specialization_air
+				level > 0
+			}
+		}
+		add_scientist_level = {
+			specialization = specialization_air
+			level = 1
+		}
+	}
+
+	random_scientist = {
+		limit = {
+			has_scientist_level = {
+				specialization = specialization_nuclear
+				level > 0
+			}
+		}
+		add_scientist_level = {
+			specialization = specialization_nuclear
+			level = 1
+		}
+	}
+	
+	random_scientist = {
+		limit = {
+			has_scientist_level = {
+				specialization = specialization_land
+				level > 0
+			}
+		}
+		add_scientist_level = {
+			specialization = specialization_land
+			level = 1
+		}
+	}
+}
+
+ITA_add_or_modify_wonderweapon = {
+	if = {
+		limit = {
+			NOT = { has_dynamic_modifier = { modifier = ITA_wonderweapon_modifier }}
+		}
+		custom_effect_tooltip = GER_add_wunderwaffen_modifier_tt
+		hidden_effect = {
+			add_dynamic_modifier = { modifier = ITA_wonderweapon_modifier } 
+		}
+	}
+	else = {
+		custom_effect_tooltip = GER_modify_wunderwaffen_modifier_tt
 	}
 }
 

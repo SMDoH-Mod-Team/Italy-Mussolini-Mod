@@ -29430,6 +29430,7 @@ focus_tree = {
 			focus = ITA_inner_circle_ciano_the_three_guidelines
 			focus = ITA_inner_circle_ciano_the_first_half_of_my_life
 		}
+		cost = @inner_circle_time_tier_1
 		available = {
 			if = {
 				limit = {
@@ -29461,28 +29462,62 @@ focus_tree = {
 		completion_reward = {
 			#add_political_power = 50
 			
-			effect_tooltip = {
-				if = {
-					limit = {
-						ITA_gian_galeazzo_ciano = { has_character_flag = ITA_ciano_unrepent_flag }
-					}
-					swap_ideas = {
-						remove_idea = ITA_leader_trait_steel_company
-						add_idea = ITA_leader_real_trait_steel_company_1
-					}
+			if = {
+				limit = {
+					ITA_gian_galeazzo_ciano = { has_character_flag = ITA_ciano_unrepent_flag }
 				}
-				else_if = {
-					limit = {
-						ITA_gian_galeazzo_ciano = { has_character_flag = ITA_ciano_repent_flag }
-					}
-					swap_ideas = {
-						remove_idea = ITA_leader_trait_steel_company
-						add_idea = ITA_leader_real_trait_steel_company_2
-					}
+				swap_ideas = {
+					remove_idea = ITA_leader_trait_steel_company
+					add_idea = ITA_leader_real_trait_steel_company_1
 				}
-				else = {
-					custom_effect_tooltip = ITA_inner_circle_ciano_the_real_steel_company_tt
+
+				#custom_effect_tooltip = generic_skip_one_line_tt
+
+				ITA_wonder_weapon_scientis_effects = yes
+
+				custom_effect_tooltip = generic_skip_one_line_tt
+
+				ITA_add_or_modify_wonderweapon = yes
+
+				add_to_variable = {
+					GER_wunderwaffen_special_project_speed_factor = 0.05
+					tooltip = special_project_speed_factor_tt
 				}
+
+				add_to_variable = { 
+					GER_wunderwaffen_production_speed_facility_factor = 0.1
+					tooltip = production_speed_facility_factor_tt
+				}
+
+			}
+			else_if = {
+				limit = {
+					ITA_gian_galeazzo_ciano = { has_character_flag = ITA_ciano_repent_flag }
+				}
+				swap_ideas = {
+					remove_idea = ITA_leader_trait_steel_company
+					add_idea = ITA_leader_real_trait_steel_company_2
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+
+				ITA_wonder_weapon_scientis_effects = yes
+
+				custom_effect_tooltip = generic_skip_one_line_tt
+
+				ITA_add_or_modify_wonderweapon = yes
+
+				add_to_variable = {
+					GER_wunderwaffen_special_project_speed_factor = 0.05
+					tooltip = special_project_speed_factor_tt
+				}
+
+				add_to_variable = { 
+					GER_wunderwaffen_production_speed_facility_factor = 0.1
+					tooltip = production_speed_facility_factor_tt
+				}
+			}
+			else = {
+				custom_effect_tooltip = ITA_inner_circle_ciano_the_real_steel_company_tt
 			}
 		}
 	}
