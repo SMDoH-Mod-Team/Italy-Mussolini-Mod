@@ -190,3 +190,33 @@ country_event = {
 		name = NO
 	}
 }
+
+country_event = {
+	id = IPUnion_debug_event.6
+	title = "Add Wonder Weapon Variable"
+
+	is_triggered_only = yes
+
+	option = {
+		name = YES
+
+		set_variable = { GER_wunderwaffen_special_project_speed_factor = 0 }
+		set_variable = { GER_wunderwaffen_sp_tag_tank_speed_factor = 0 }
+		set_variable = { GER_wunderwaffen_sp_air_helicopter_speed_factor = 0 }
+		set_variable = { GER_wunderwaffen_sp_tag_jet_speed_factor = 0 }
+		set_variable = { GER_wunderwaffen_sp_tag_rocket_speed_factor = 0 }
+		set_variable = { GER_wunderwaffen_sp_commercial_nuclear_reactor_speed_factor = 0 }
+		set_variable = { GER_wunderwaffen_sp_nuclear_bomb_speed_factor = 0 }
+		set_variable = { GER_wunderwaffen_sp_nuclear_reactor_speed_factor = 0 }
+		set_variable = { GER_wunderwaffen_sp_nuclear_warheads_speed_factor = 0 }
+		set_variable = { GER_wunderwaffen_sp_tag_artillery_speed_factor = 0 }
+		set_variable = { GER_wunderwaffen_sp_naval_modern_battleship_speed_factor = 0 }
+		set_variable = { GER_wunderwaffen_sp_naval_modern_carrier_speed_factor = 0 }
+		set_variable = { GER_wunderwaffen_production_speed_nuclear_reactor_factor = 0 }
+		set_variable = { GER_wunderwaffen_production_speed_nuclear_facility_factor = 0 }
+		set_variable = { GER_wunderwaffen_production_speed_facility_factor = 0 }
+		set_variable = { GER_wunderwaffen_sp_tag_submarine_speed_factor = 0 }
+		set_variable = { GER_wunderwaffen_sp_air_intercontinental_bomber_speed_factor = 0 }
+		set_variable = { GER_wunderwaffen_sp_air_mothership_aircraft_speed_factor = 0 }
+	}
+}
