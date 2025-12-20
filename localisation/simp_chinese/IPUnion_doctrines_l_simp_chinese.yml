@@ -3,3 +3,7 @@
  GRAND_DOCTRINE_PARTY_COMMAND_FORCES_desc: "枪，一定是要被党指挥的"
  SUBDOCTRINE_FASCISM_MILITIA: "法西斯民兵"
  SUBDOCTRINE_FASCISM_MILITIA_desc: "备战、备荒、为人民"
+ fascism_militia_march_base_area: "进军根据地"
+ fascism_militia_destruction_over_land_gains: "$peoples_war_destruction_over_land_gains$"
+ fascism_militia_quick_decision_offensive_warfare: "$peoples_war_quick_decision_offensive_warfare$"
+ fascism_militia_people_not_things: "$peoples_war_people_not_things$"

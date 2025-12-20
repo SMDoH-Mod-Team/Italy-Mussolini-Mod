@@ -839,7 +839,7 @@ fascism_militia = {
     }
 
     rewards = {
-        revolutionary_base_area = {
+        march_base_area = {
         #1
             mastery = 50
             militia = {
