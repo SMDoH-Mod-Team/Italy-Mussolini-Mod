@@ -2,7 +2,7 @@ version="2.1.0"
 tags={
 	"National Focuses"
 }
-name="意大利曾短暂到达过未来"
+name="ITALY Once Reached the Future: 意大利曾短暂到达过未来"
 dependencies={
 	"意大利国策优化"
 }
