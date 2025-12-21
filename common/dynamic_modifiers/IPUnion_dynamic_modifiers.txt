@@ -60,7 +60,8 @@ ITA_miracolo_economico_modifier = { #Wirtschaftswunder NS #Aufrüstung and Recov
 
 milano_military_area = {
 	icon = GFX_idea_ITA_regio_esercito_1
-	attacker_modifier = yes
+	#attacker_modifier = yes
+	enable = { original_tag = ITA }
 
 	air_cas_present_factor = 0.10
 	army_attack_factor = 0.15
@@ -71,7 +72,8 @@ milano_military_area = {
 
 roma_military_area = {
 	icon = GFX_idea_ITA_regio_esercito_1
-	attacker_modifier = yes
+	#attacker_modifier = yes
+	enable = { original_tag = ITA }
 
 	air_cas_present_factor = 0.10
 	army_attack_factor = 0.15
@@ -82,7 +84,8 @@ roma_military_area = {
 
 palermo_military_area = {
 	icon = GFX_idea_ITA_regio_esercito_1
-	attacker_modifier = yes
+	#attacker_modifier = yes
+	enable = { original_tag = ITA }
 
 	air_cas_present_factor = 0.10
 	army_attack_factor = 0.15
@@ -93,7 +96,8 @@ palermo_military_area = {
 
 cagliari_military_area = {
 	icon = GFX_idea_ITA_regio_esercito_1
-	attacker_modifier = yes
+	#attacker_modifier = yes
+	enable = { original_tag = ITA }
 
 	air_cas_present_factor = 0.10
 	army_attack_factor = 0.15
@@ -243,4 +247,9 @@ ITA_wonderweapon_modifier = { #Wunderwaffen NS
 	production_speed_nuclear_facility_factor = GER_wunderwaffen_production_speed_nuclear_facility_factor
 	sp_air_intercontinental_bomber_speed_factor = GER_wunderwaffen_sp_air_intercontinental_bomber_speed_factor
 	sp_air_mothership_aircraft_speed_factor = GER_wunderwaffen_sp_air_mothership_aircraft_speed_factor
+}
+
+ITA_alto_adije_ethnic_issue = {
+	enable = { original_tag = ITA }
+	icon = GFX_modifiers_generic_resistance
 }

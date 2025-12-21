@@ -42,8 +42,8 @@
 		}
 
 		offset = {
-			x = -23
-			y = -8
+			x = -15
+			y = -15
 
 			trigger = {
 				has_focus_tree = AOI_focus_tree

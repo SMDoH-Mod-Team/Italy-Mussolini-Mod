@@ -29,3 +29,5 @@
   ITA_agricultural_collectivization: "Collectivization"
   ITA_wonderweapon_modifier: "$GER_wunderwaffen_modifier$"
   ITA_wonderweapon_modifier_desc: "$GER_wunderwaffen_modifier_desc$"
+  ITA_alto_adije_ethnic_issue: "[39.GetName] Ethnic Issue"
+  ITA_alto_adije_ethnic_issue_desc: "Unpopular Italianization policies"
