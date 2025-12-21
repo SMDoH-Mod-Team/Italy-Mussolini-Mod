@@ -28356,11 +28356,12 @@ focus_tree = {
 
 	focus = {
 		id = ITA_pope_pius_xii
+		icon = GFX_focus_AUS_bring_back_the_habsburg_rule
 		prerequisite = { focus = ITA_patti_lateranensi_focus }
 		relative_position_id = ITA_patti_lateranensi_focus
 		x = 0
 		y = 1
-		cost = 35
+		cost = 5
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = ITA_pope_pius_xii_tt
@@ -28370,7 +28371,7 @@ focus_tree = {
 		completion_reward = {
 			#add_political_power = 15
 			country_event = {
-				id = IPUnion_country_event.84
+				id = IPUnion_country_event.86
 				hours = 12
 				random_hours = 24
 			}
