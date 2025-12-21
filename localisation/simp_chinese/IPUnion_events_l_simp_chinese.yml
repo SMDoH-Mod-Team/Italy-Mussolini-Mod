@@ -295,6 +295,9 @@
  IPUnion_country_event.85.t: "[ITA.GetName]接受邀请"
  IPUnion_country_event.85.d: "[ITA.GetName]已经接受了我们和他们共建经济特区的邀请"
  IPUnion_country_event.85.a: "很好"
+ IPUnion_country_event.86.t: "新教宗"
+ IPUnion_country_event.86.d: "位于梵蒂冈中心的大教堂上空漂浮着一缕白烟，教宗庇护十二世就此上任"
+ IPUnion_country_event.86.a: "Holy Father!"
  
 
 

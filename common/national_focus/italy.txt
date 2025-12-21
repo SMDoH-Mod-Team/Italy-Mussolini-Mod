@@ -28354,6 +28354,29 @@ focus_tree = {
 		}
 	}
 
+	focus = {
+		id = ITA_pope_pius_xii
+		prerequisite = { focus = ITA_patti_lateranensi_focus }
+		relative_position_id = ITA_patti_lateranensi_focus
+		x = 0
+		y = 1
+		cost = 35
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ITA_pope_pius_xii_tt
+				always = no
+			}
+		}
+		completion_reward = {
+			#add_political_power = 15
+			country_event = {
+				id = IPUnion_country_event.84
+				hours = 12
+				random_hours = 24
+			}
+		}
+	}
+
 	### INNER CIRCLE ###
 
 	focus = {
