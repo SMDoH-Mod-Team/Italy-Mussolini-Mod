@@ -86,3 +86,4 @@
  
  ITA_land_redistribution: "土地改革"
  ITA_land_redistribution_decision: "在[FROM.GetName]进行土地改革"
+ form_IPUnion_roman_empire: "$form_roman_empire$"
