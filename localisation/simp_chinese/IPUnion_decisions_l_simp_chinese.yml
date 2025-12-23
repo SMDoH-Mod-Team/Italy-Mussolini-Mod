@@ -9,7 +9,7 @@
  form_Zoze_Canisos_Islands_to_BUL: "寻求海外基地"
  form_sale_the_Zoze_Canisos_Islands_to_BUL_again: "邀请[BUL.GetName]重新洽谈关于[164.GetName]的协议"
  IPUnion_Partition_of_Greece: "瓜分希腊"
- form_ITA_founding_Eprius_Free_State: "挑动伊庇鲁斯自治"
+ form_ITA_founding_Eprius_Free_State: "建立班都斯亲王国"
  form_ITA_EGY_transfer_Crete: "将克里特岛划归[EGY.GetName]"
  form_Ownership_of_the_archipelago: "要求希腊交出群岛"
  form_The_court_of_the_Italian: "「意人的朝廷」"
@@ -86,3 +86,4 @@
  
  ITA_land_redistribution: "土地改革"
  ITA_land_redistribution_decision: "在[FROM.GetName]进行土地改革"
+ form_IPUnion_roman_empire: "$form_roman_empire$"

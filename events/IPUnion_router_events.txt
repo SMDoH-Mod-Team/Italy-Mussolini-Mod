@@ -312,3 +312,22 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = IPUnion_router_event.12
+	title = IPUnion_router_event.12
+	desc = IPUnion_router_event.12
+	hidden = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_global_flag = ITA_pope_pio_xi_dead_flag
+	}
+
+	immediate = {
+		ITA = {
+			complete_national_focus = ITA_pope_pius_xii
+		}
+	}
+}

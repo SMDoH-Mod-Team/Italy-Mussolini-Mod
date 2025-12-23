@@ -1,5 +1,5 @@
 ITA_propaganda_campaigns = {
-	SOV_debug_unlock_slot = {
+	ITA_debug_unlock_slot = {
 		priority = 59
 
 		icon = eng_ally_imperialist_coup
@@ -32,7 +32,7 @@ ITA_propaganda_campaigns = {
 		}
 	}
 
-	SOV_debug_MAKE_CAMPAIGNS_FASTER_HERE = {
+	ITA_debug_MAKE_CAMPAIGNS_FASTER_HERE = {
 		priority = 51
 
 		icon = eng_ally_imperialist_coup
@@ -62,7 +62,7 @@ ITA_propaganda_campaigns = {
 		}
 	}
 
-	SOV_debug_REGULAR_CAMPAIGN_DURATION_HERE = {
+	ITA_debug_REGULAR_CAMPAIGN_DURATION_HERE = {
 		priority = 51
 
 		icon = eng_ally_imperialist_coup
@@ -90,7 +90,7 @@ ITA_propaganda_campaigns = {
 		}
 	}
 
-	SOV_debug_UNLOCK_ALL_CAMPAIGNS = {
+	ITA_debug_UNLOCK_ALL_CAMPAIGNS = {
 		priority = 50
 
 		icon = eng_ally_imperialist_coup

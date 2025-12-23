@@ -1,0 +1,579 @@
+form_roman_empire_category = {
+	form_IPUnion_roman_empire = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			original_tag = ITA
+			OR = {
+				has_dlc = "Waking the Tiger"
+				has_dlc = "By Blood Alone"
+			}
+		}
+
+		available = {
+			is_subject = no
+			custom_trigger_tooltip = {
+				tooltip = form_country_albania_required_states_tt
+				# Albania
+				controls_state = 44
+				controls_state = 934
+				controls_state = 805
+			}
+			# Yugoslavia
+			custom_trigger_tooltip = {
+				tooltip = form_country_mare_nostrum_required_states_tt
+				controls_state = 163
+				controls_state = 853
+				controls_state = 103
+				controls_state = 104 
+				controls_state = 804
+				controls_state = 105
+			}
+			# Greece
+			custom_trigger_tooltip = {
+				tooltip = form_country_mare_nostrum_greece_required_states_tt
+				controls_state = 185
+				controls_state = 731
+				controls_state = 47
+				controls_state = 186
+				controls_state = 184
+				controls_state = 187
+				controls_state = 182
+				controls_state = 164 #DODECANESE initially controlled by Italy
+			}
+			# Turkey
+			custom_trigger_tooltip = {
+				tooltip = form_country_mare_nostrum_turkey_required_states_tt
+				controls_state = 341
+				controls_state = 797
+				controls_state = 340
+				controls_state = 339
+				controls_state = 342
+				controls_state = 345
+				controls_state = 344
+				if = { # HATAY will most likely be handed over from FRA to TUR, this hopefully prevents some confusion
+					limit = {
+						799 = {
+							is_controlled_by = TUR
+						}
+					}
+					controls_state = 799
+				}
+			}
+			# Italy
+			custom_trigger_tooltip = {
+				tooltip = form_spqr_italy_required_states_tt
+				controls_state = 158
+				controls_state = 162
+				controls_state = 114
+				controls_state = 2
+				controls_state = 117
+				controls_state = 156
+				controls_state = 115
+				controls_state = 849
+				controls_state = 157
+				controls_state = 161
+				controls_state = 160
+				controls_state = 736
+				controls_state = 852
+				controls_state = 39
+				controls_state = 850
+				controls_state = 849
+				controls_state = 852
+				controls_state = 159
+			}
+			# Spain
+			custom_trigger_tooltip = {
+				tooltip = form_spqr_coastal_spain_required_states_tt
+				controls_state = 165
+				controls_state = 177
+				controls_state = 167
+				controls_state = 168
+				controls_state = 173
+			}
+			# France
+			custom_trigger_tooltip = {
+				tooltip = form_spqr_coastal_france_required_states_tt
+				controls_state = 1
+				controls_state = 735
+				controls_state = 851
+				controls_state = 21
+				controls_state = 22
+				controls_state = 31
+			}
+			# British Mediterranean
+			custom_trigger_tooltip = {
+				tooltip = form_mare_nostrum_coastal_uk_required_states_tt
+				controls_state = 118
+				controls_state = 116
+				controls_state = 183
+			}
+			# North Africa (Morocco to Libya)
+			custom_trigger_tooltip = {
+				tooltip = form_country_mare_nostrum_north_africa_required_states_tt
+				#Morocco
+				controls_state = 290
+				controls_state = 461
+				#Algeria
+				controls_state = 459
+				controls_state = 460
+				#Tunisia
+				controls_state = 458
+				controls_state = 665
+				#Libya
+				controls_state = 448
+				controls_state = 449
+				controls_state = 450
+				controls_state = 451
+				controls_state = 661
+				controls_state = 662
+				controls_state = 663
+			}
+			# Middle East (Egypt to Syria)
+			custom_trigger_tooltip = {
+				tooltip = form_country_mare_nostrum_middle_east_required_states_tt
+				#Egypt
+				controls_state = 452
+				controls_state = 447
+				controls_state = 907
+				controls_state = 446
+				controls_state = 453
+				#Palestine
+				controls_state = 454
+				#Lebanon
+				controls_state = 553
+				#Syria
+				controls_state = 677
+				if = { # HATAY will most likely be handed over from FRA to TUR, this hopefully prevents some confusion
+					limit = {
+						799 = {
+							NOT = { is_controlled_by = TUR }
+						}
+					}
+					controls_state = 799
+				}
+			}
+		}
+
+		visible = {
+			original_tag = ITA
+			NOT = { has_global_flag = form_roman_empire_flag }
+			ITA = {
+				OR = {
+					has_completed_focus = ITA_mare_nostrum_bba
+					has_completed_focus = ITA_the_catholic_dominion
+					has_completed_focus = ITA_keep_the_course
+				}
+			}
+		}
+
+		complete_effect = {
+			set_cosmetic_tag = SPQR_UNIFIED
+			custom_effect_tooltip = form_spqr_core_mare_nostrum_states_tt
+ 			hidden_effect = {
+
+ 				1 = { add_core_of = ROOT }
+ 				735 = { add_core_of = ROOT }
+ 				851 = { add_core_of = ROOT }
+ 				21 = { add_core_of = ROOT }
+ 				22 = { add_core_of = ROOT }
+ 				31 = { add_core_of = ROOT }
+ 				165 = { add_core_of = ROOT }
+ 				177 = { add_core_of = ROOT }
+ 				167 = { add_core_of = ROOT }
+ 				168 = { add_core_of = ROOT }
+ 				173 = { add_core_of = ROOT }
+ 				118 = { add_core_of = ROOT }
+ 				290 = { add_core_of = ROOT }
+ 				461 = { add_core_of = ROOT }
+ 				459 = { add_core_of = ROOT }
+ 				460 = { add_core_of = ROOT }
+ 				116 = { add_core_of = ROOT }
+ 				458 = { add_core_of = ROOT }
+ 				665 = { add_core_of = ROOT }
+ 				448 = { add_core_of = ROOT }
+ 				661 = { add_core_of = ROOT }
+ 				273 = { add_core_of = ROOT }
+ 				662 = { add_core_of = ROOT }
+ 				449 = { add_core_of = ROOT }
+ 				450 = { add_core_of = ROOT }
+ 				663 = { add_core_of = ROOT }
+ 				451 = { add_core_of = ROOT }
+ 				452 = { add_core_of = ROOT }
+ 				447 = { add_core_of = ROOT }
+ 				907 = { add_core_of = ROOT }
+ 				446 = { add_core_of = ROOT }
+ 				453 = { add_core_of = ROOT }
+ 				454 = { add_core_of = ROOT }
+ 				553 = { add_core_of = ROOT }
+ 				183 = { add_core_of = ROOT }
+ 				677 = { add_core_of = ROOT }
+ 				799 = { add_core_of = ROOT }
+ 				344 = { add_core_of = ROOT }
+ 				345 = { add_core_of = ROOT }
+ 				342 = { add_core_of = ROOT }
+ 				164 = { add_core_of = ROOT }
+ 				182 = { add_core_of = ROOT }
+ 				339 = { add_core_of = ROOT }
+ 				187 = { add_core_of = ROOT }
+ 				340 = { add_core_of = ROOT }
+ 				797 = { add_core_of = ROOT }
+ 				341 = { add_core_of = ROOT }
+ 				184 = { add_core_of = ROOT }
+ 				731 = { add_core_of = ROOT }
+ 				47 = { add_core_of = ROOT }
+ 				186 = { add_core_of = ROOT }
+ 				185 = { add_core_of = ROOT }
+ 				805 = { add_core_of = ROOT }
+ 				44 = { add_core_of = ROOT }
+ 				934 = { add_core_of = ROOT }
+ 				105 = { add_core_of = ROOT }
+ 				103 = { add_core_of = ROOT }
+ 				163 = { add_core_of = ROOT }
+ 				804 = { add_core_of = ROOT }
+ 				104 = { add_core_of = ROOT }
+ 				853 = { add_core_of = ROOT }
+
+ 			}
+			
+			
+			hidden_effect = {
+				news_event = { id = wtt_news.64 hours = 6 }
+				set_global_flag = form_roman_empire_flag
+				if = {
+					limit = {
+						has_country_leader = { ruling_only = yes character = ITA_benito_mussolini }
+					}
+					ITA_benito_mussolini = {
+						set_character_name = {
+							name = ITA_benito_mussolini_roman_emperor
+						}
+						set_portraits = {
+							civilian = { large = GFX_portrait_italy_emperor_mussolini }
+						}
+					}
+				}
+				#else_if = { #Skipping Balbo and Grandi for now since they have no roman emperor portraits
+				#	limit = {
+				#		has_country_leader = { ruling_only = yes character = ITA_italo_balbo }
+				#	}
+				#	ITA_italo_balbo = {
+				#		set_character_name = {
+				#			name = ITA_italo_balbo_roman_emperor
+				#		}
+				#	}
+				#}
+				#else_if = { #Skipping Balbo and Grandi for now since they have no roman emperor portraits
+				#	limit = {
+				#		has_country_leader = { ruling_only = yes character = ITA_dino_grandi }
+				#	}
+				#	ITA_dino_grandi = {
+				#		set_character_name = {
+				#			name = ITA_dino_grandi_roman_emperor
+				#		}
+				#	}
+				#}
+				else_if = { #Skipping Balbo and Grandi for now since they have no roman emperor portraits
+					limit = {
+						has_country_leader = { ruling_only = yes character = ITA_vittorio_emanuele_iii }
+					}
+					ITA_vittorio_emanuele_iii = {
+						set_character_name = {
+							name = ITA_vittorio_emanuele_iii_roman_emperor
+						}
+						set_portraits = {
+							civilian = { large = GFX_portrait_ITA_emperor_vittorio_emanuele_III }
+						}
+					}
+				}
+				else_if = { #Skipping Balbo and Grandi for now since they have no roman emperor portraits
+					limit = {
+						has_country_leader = { ruling_only = yes character = ITA_prince_umberto }
+					}
+					ITA_prince_umberto = {
+						set_character_name = {
+							name = ITA_prince_umberto_roman_emperor
+						}
+
+						set_portraits = {
+							civilian = { large = GFX_portrait_ITA_emperor_umberto }
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_government = fascism
+					}
+					ITA_remove_king_vittorio_emanuele_as_idea = yes
+				}
+			}
+
+			add_stability = 0.1
+
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+
+greater_italy_category = {
+	
+	proclaim_greater_italy = { 
+
+		icon = generic_form_nation
+
+		allowed = {
+			original_tag = ITA # Italy
+		}
+
+		visible = {
+			OR = {
+				original_tag = ITA # Italy
+			}
+			
+			NOT = { has_global_flag = greater_italy_flag }
+			
+		}
+
+		available = {
+			OR = {
+				has_completed_focus = ITA_towards_a_greater_italy
+				has_completed_focus = ITA_keep_the_course
+			}
+			custom_trigger_tooltip = {
+				tooltip = greater_italy_required_states
+				controls_state = 852 # Istria
+				controls_state = 736 # Litorale
+				controls_state = 160 # Veneto
+				controls_state = 39 # Alto Adige
+				controls_state = 850 # Trentino
+				controls_state = 159 # Lombardia
+				controls_state = 158 # Piedmonte
+				controls_state = 161 # Emilia Romagna
+				controls_state = 162 # Toscana 
+				controls_state = 157 # Abruzzo
+				controls_state = 2 # Latium
+				controls_state = 849 # Puglia
+				controls_state = 117 # Campania
+				controls_state = 156 # Calabria
+				controls_state = 115 # Sicilia
+				controls_state = 114 # Sardegna
+			}  
+			custom_trigger_tooltip = {
+				tooltip = greater_italy_required_other_states 
+				AND = {
+					OR = {
+						ITA = { 
+						controls_state = 1 # Corsica 
+						}
+						any_country = {
+							is_subject_of = ITA
+							controls_state = 1 # Corsica
+						}
+					}
+					OR = {
+						ITA = { 
+						controls_state = 846 # Ticino 
+						}
+						any_country = {
+							is_subject_of = ITA
+							controls_state = 846 # Ticino
+						}
+					}
+					OR = {
+						ITA = { 
+						controls_state = 735 # Savoy 
+						}
+						any_country = {
+							is_subject_of = ITA
+							controls_state = 735 # Savoy
+						}
+					}
+					OR = {
+						ITA = { 
+						controls_state = 163 # Zara 
+						}
+						any_country = {
+							is_subject_of = ITA
+							controls_state = 163 # Zara
+						}
+					}
+					OR = {
+						ITA = { 
+						controls_state = 103 # Dalmatia 
+						}
+						any_country = {
+							is_subject_of = ITA
+							controls_state = 103 # Dalmatia
+						}
+					}
+					OR = {
+						ITA = { 
+						controls_state = 853 # Ljubljana 
+						}
+						any_country = {
+							is_subject_of = ITA
+							controls_state = 853 # Ljubljana
+						}
+					}
+					OR = {
+						ITA = { 
+						controls_state = 116 # Malta 
+						}
+						any_country = {
+							is_subject_of = ITA
+							controls_state = 116 # Malta
+						}
+					}
+					OR = {
+						ITA = { 
+						controls_state = 182 # Crete 
+						}
+						any_country = {
+							is_subject_of = ITA
+							controls_state = 182 # Crete
+						}
+					}
+					OR = {
+						ITA = { 
+						controls_state = 164 # Dodecaneso 
+						}
+						any_country = {
+							is_subject_of = ITA
+							controls_state = 164 # Dodecaneso
+						}
+					}
+				}
+			}
+			
+		}
+
+		complete_effect = {
+			set_cosmetic_tag = greater_italy 
+			
+			custom_effect_tooltip = greater_italy_effect_tooltip
+			
+			add_ideas = ITA_italia_irredenta_achieved
+			
+			hidden_effect = { 
+
+				# Corsica
+				ITA = {
+					transfer_state = 1
+				}
+				1 = { 
+					add_core_of = ROOT
+					set_state_name = ITA_italian_corsica_name
+				}
+				set_province_name = {
+				    id = 3838 
+				    name = ITA_italian_ajaccio_name   
+				} 
+				
+				# Ticino
+				ITA = {
+					transfer_state = 846
+				}
+				846 = { add_core_of = ROOT }
+				
+				# Savoy
+				ITA = {
+					transfer_state = 735
+				}
+				735 = { 
+					add_core_of = ROOT
+					set_state_name = ITA_italian_savoy_name
+				}
+				set_province_name = {
+				    id = 9909 
+				    name = ITA_italian_nice_name
+				} 
+				set_province_name = {
+				    id = 778  
+				    name = ITA_italian_annecy_name
+				} 
+				 
+				# Zara
+				ITA = {
+					transfer_state = 163
+				} 
+				163 = { add_core_of = ROOT }
+				
+				# Dalmatia
+				ITA = {
+					transfer_state = 103
+				}
+				103 = { 
+					add_core_of = ROOT 
+					set_state_name = ITA_italian_dalmatia_name
+				}
+				set_province_name = {
+				    id = 3924
+				    name = ITA_italian_split_name
+				} 
+				set_province_name = {
+				    id = 6889  
+				    name = ITA_italian_dubrovnik_name
+				} 
+	 
+				# Ljubljana
+				ITA = {
+					transfer_state = 853
+				}
+				853 = { 
+					add_core_of = ROOT 
+					set_state_name = ITA_italian_ljubljana_state_name
+				}
+				set_province_name = {
+				    id = 9627
+				    name = ITA_italian_ljubljana_name
+				}
+
+				# Malta
+				ITA = {
+					transfer_state = 116
+				}
+				116 = { add_core_of = ROOT }
+
+				# Crete
+				ITA = {
+					transfer_state = 182
+				}
+				182 = { 
+					add_core_of = ROOT 
+					set_state_name = ITA_italian_crete_name
+				}
+				set_province_name = {
+				    id = 12058  
+				    name = ITA_italian_chania_name 
+				} 
+				set_province_name = {
+				    id = 9940  
+				    name = ITA_italian_heraklion_name 
+				} 
+
+				# Dodecaneso
+				ITA = {
+					transfer_state = 164
+				}
+				164 = { add_core_of = ROOT }
+
+				news_event = { id = bba_italian_formables_news.1 hours = 8 }	
+
+				set_global_flag = greater_italy_flag
+
+			}
+		}
+
+		ai_will_do = {
+			base = 500
+		}
+	}
+}

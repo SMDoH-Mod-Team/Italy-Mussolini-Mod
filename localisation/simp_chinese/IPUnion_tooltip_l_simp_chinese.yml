@@ -107,3 +107,5 @@
  ITA_inner_circle_acerbo_agricultural_collectivization_tt: "所有经过土地改革的州都会获得修正：§Y$ITA_agricultural_collectivization$§!"
  ITA_ricostruzione_industriale_cg_penalty_modded_tt: "$ITA_modify_ricostruzione_industriale_dynamic_modifier_ns_intro$\n$MODIFIER_CONSUMER_GOODS_FACTOR$：§Y-2.0%§!\n\n"
  ITA_propaganda_cheer_for_plane_insdustry_tt: "§Y持续180日：§!\n[ITA_propaganda_cheer_for_plane_insdustry_defined_text]"
+ ITA_pope_pius_xii_tt: "§Y$ITA_pope_pius_xii$§!将会在§Y$ITA_papa_pio_xi$§!逝世后自动完成"
+ IPUnion_country_event.86.tt: "§Y$ITA_papa_pio_xii$§!成为教宗"

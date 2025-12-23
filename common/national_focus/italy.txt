@@ -6128,8 +6128,8 @@ focus_tree = {
 					name = ITA_oto_naval_guns
 					bonus = 1.0
 					uses = 2
-					category = medium_airframe
-					#category = cat_ship_heavy_battery
+					category = cat_ship_medium_battery
+					category = cat_ship_heavy_battery
 				}
 			}
 			else = {
@@ -6846,23 +6846,30 @@ focus_tree = {
 				add_ideas = ITA_hidden_light_cruisers_production_ns
 			}
 
-			add_to_variable = { ITA_iri_consumer_goods_factor = -0.02 }
+			add_to_variable = { ITA_iri_consumer_goods_factor = 0.02 }
 			custom_effect_tooltip = ITA_ricostruzione_industriale_cg_penalty_tt
 
 			navy_experience = 25
 
+			add_mastery_bonus = {
+				name = ITA_incrociatori_leggeri
+				bonus = 0.2
+				days = 180
+				track = screens
+			}
+
 			add_doctrine_cost_reduction = {
 				name = ITA_incrociatori_leggeri
-				cost_reduction = 0.75
-				uses = 2
-				category = cat_trade_interdiction
+				cost_reduction = 0.5
+				uses = 1
+				category = naval_doctrine
 			}
 
 			add_tech_bonus = {
 				name = ITA_incrociatori_leggeri
 				bonus = 1
 				uses = 1
-				category = cl_tech
+				category = ca_tech
 			}
 
 			#Update NS icon
@@ -28351,6 +28358,30 @@ focus_tree = {
 				modifier = ITA_lateranensi_patti
 			}
 			give_guarantee = PAP
+		}
+	}
+
+	focus = {
+		id = ITA_pope_pius_xii
+		icon = GFX_focus_AUS_bring_back_the_habsburg_rule
+		prerequisite = { focus = ITA_patti_lateranensi_focus }
+		relative_position_id = ITA_patti_lateranensi_focus
+		x = 0
+		y = 1
+		cost = 5
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ITA_pope_pius_xii_tt
+				always = no
+			}
+		}
+		completion_reward = {
+			#add_political_power = 15
+			country_event = {
+				id = IPUnion_country_event.86
+				hours = 12
+				random_hours = 24
+			}
 		}
 	}
 

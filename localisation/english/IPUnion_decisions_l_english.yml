@@ -86,3 +86,4 @@
 
   ITA_land_redistribution: "Land Redistribution"
   ITA_land_redistribution_decision: "Land Redistribution in [FROM.GetName]"
+  form_IPUnion_roman_empire: "$form_roman_empire$"

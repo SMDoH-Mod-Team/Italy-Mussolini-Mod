@@ -1336,9 +1336,9 @@ ITA_central_advisory_committee = {
 }
 ITA_PNF_central_military_committee = {
 	ITA_founded_PNF_central_military_committee = {
-		days_remove = 30
+		#days_remove = 30
 		fire_only_once = yes
-		cost = 50
+		#cost = 75
 		available = {
 			has_government = fascism
 		}
@@ -1355,7 +1355,7 @@ ITA_PNF_central_military_committee = {
 	ITA_milano_military_area = {
 		days_remove = 30
 		fire_only_once = yes
-		cost = 50
+		cost = 75
 		visible = {
 			has_country_flag = ITA_founded_PNF_central_military_committee_flag
 		}
@@ -1424,7 +1424,7 @@ ITA_PNF_central_military_committee = {
 	ITA_roma_military_area = {
 		days_remove = 30
 		fire_only_once = yes
-		cost = 50
+		cost = 75
 		visible = {
 			has_country_flag = ITA_founded_PNF_central_military_committee_flag
 		}
@@ -1458,7 +1458,7 @@ ITA_PNF_central_military_committee = {
 	ITA_palermo_military_area = {
 		days_remove = 30
 		fire_only_once = yes
-		cost = 50
+		cost = 75
 		visible = {
 			has_country_flag = ITA_founded_PNF_central_military_committee_flag
 		}
@@ -1492,7 +1492,7 @@ ITA_PNF_central_military_committee = {
 	ITA_cagliari_military_area = {
 		days_remove = 30
 		fire_only_once = yes
-		cost = 50
+		cost = 75
 		visible = {
 			has_country_flag = ITA_founded_PNF_central_military_committee_flag
 		}
@@ -2349,6 +2349,7 @@ ITA_land_redistribution = {
 	ITA_land_redistribution_decision = {
 		icon = GFX_decision_generic_nationalism
 		target_array = controlled_states
+		days_remove = 15
 		state_target = yes
 		on_map_mode = map_and_decisions_view
 		cost = 15

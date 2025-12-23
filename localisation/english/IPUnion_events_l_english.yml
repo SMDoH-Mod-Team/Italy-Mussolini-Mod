@@ -294,6 +294,9 @@
   IPUnion_country_event.85.t: "[ITA.GetName] Accepts the Invitation"
   IPUnion_country_event.85.d: "[ITA.GetName] has accepted our invitation to co-establish a special economic zone."
   IPUnion_country_event.85.a: "Good."
+  IPUnion_country_event.86.t: "The New Pope"
+  IPUnion_country_event.86.d: "A wisp of white smoke floated above the cathedral in the heart of the Vatican, signaling the inauguration of Pope Pius XII."
+  IPUnion_country_event.86.a: "Holy Father!"
 
   IPUnion_debug_event.1.t: "Add Political Propaganda Variable for [FROM.GetName]"
   IPUnion_debug_event.1.d: "Add Political Propaganda Variable for [FROM.GetName]"
