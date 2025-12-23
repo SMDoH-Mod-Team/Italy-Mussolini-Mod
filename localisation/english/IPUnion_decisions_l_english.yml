@@ -87,3 +87,7 @@
   ITA_land_redistribution: "Land Redistribution"
   ITA_land_redistribution_decision: "Land Redistribution in [FROM.GetName]"
   form_IPUnion_roman_empire: "$form_roman_empire$"
+
+  ITA_faction_affairs: "Faction Affairs"
+  
+  ITA_force_unilateral_union: "Force [FROM.GetName] into a Unilateral Alliance"

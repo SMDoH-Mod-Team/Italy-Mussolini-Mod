@@ -87,3 +87,8 @@
  ITA_land_redistribution: "土地改革"
  ITA_land_redistribution_decision: "在[FROM.GetName]进行土地改革"
  form_IPUnion_roman_empire: "$form_roman_empire$"
+
+ ITA_faction_affairs: "阵营事务"
+
+ ITA_force_unilateral_union: "强制要求[FROM.GetName]为单方面联盟"
+ 

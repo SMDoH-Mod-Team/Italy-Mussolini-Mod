@@ -1,0 +1,110 @@
+add_namespace = italy_autonomy
+
+country_event = {
+	id = italy_autonomy.1
+	title = italy_autonomy.1.t
+	desc = italy_autonomy.1.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = italy_autonomy.1.a  ## IT'S OK ##
+		ai_chance = {
+			base = 40
+			modifier = {
+				add = 60
+				is_subject_of = FROM
+			}
+		}
+		FROM = {
+			country_event = italy_autonomy.2
+		}
+		hidden_effect = {
+			add_dynamic_modifier = {
+				modifier = ITA_autonomy_unilateral_union_modifier
+			}
+		}
+		effect_tooltip = {
+			FROM = {
+				set_autonomy = {
+					target = ROOT
+					autonomy_state = autonomy_unilateral_union
+				}
+			}
+		}
+	}
+
+	option = {
+		name = italy_autonomy.1.b  ## NO WAY! ##
+		ai_chance = {
+			base = 60
+			modifier = {
+				add = -60
+				is_subject_of = FROM
+			}
+		}
+		FROM = {
+			country_event = italy_autonomy.3
+		}
+		effect_tooltip = {
+			leave_faction = yes
+			FROM = {
+				create_wargoal = {
+					target = ROOT
+					type = puppet_wargoal_focus
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = italy_autonomy.2
+	title = italy_autonomy.2.t
+	desc = italy_autonomy.2.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = italy_autonomy.2.a
+		set_autonomy = {
+			target = FROM
+		 	autonomy_state = autonomy_unilateral_union
+		}
+		FROM = {
+			hidden_effect = {
+				set_politics = {
+					ruling_party = neutrality
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.75
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = italy_autonomy.3
+	title = italy_autonomy.3.t
+	desc = italy_autonomy.3.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = italy_autonomy.3.a
+		FROM = {
+			leave_faction = yes
+		}
+		create_wargoal = {
+			target = FROM
+			type = puppet_wargoal_focus
+		}
+		set_truce = {
+    		target = FROM
+    		days = 30
+		}
+	}
+}

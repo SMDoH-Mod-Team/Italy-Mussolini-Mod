@@ -176,3 +176,11 @@ ITA_land_redistribution = {
 		
 	}
 }
+ITA_faction_affairs = {
+	priority = 100
+	icon = x
+	picture = x
+	allowed = {
+		original_tag = ITA
+	}
+}

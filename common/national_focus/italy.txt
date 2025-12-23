@@ -10454,6 +10454,7 @@ focus_tree = {
 				ITA = {
 					controls_state = 1049
 				}
+				has_country_flag = Toulon_Base_Mod_Loaded_Check
 			}
 		}
 		completion_reward = {
@@ -16385,6 +16386,7 @@ focus_tree = {
 				SOV = {
 					controls_state = 1052 #SOV control of Constanta
 				}
+				has_country_flag = Toulon_Base_Mod_Loaded_Check
 			}
 			SOV = {
 				has_opinion = {
@@ -23554,6 +23556,9 @@ focus_tree = {
 						SPR = {
 							controls_state = 1051
 						}
+						hidden_trigger = {
+							has_country_flag = Toulon_Base_Mod_Loaded_Check
+						}
 					}
 					transfer_state = 1051
 					#1051 = { add_core_of = ITA }
@@ -23647,9 +23652,10 @@ focus_tree = {
 			hidden_effect = { 
 				if = {
 					limit = {
-						SPR = {
+						ITA = {
 							controls_state = 1051
 						}
+						has_country_flag = Toulon_Base_Mod_Loaded_Check
 					}
 					177 = { add_core_of = ITA }
 					178 = { add_core_of = ITA }
@@ -25520,6 +25526,7 @@ focus_tree = {
 				FRA = {
 					controls_state = 1050
 				}
+				has_country_flag = Toulon_Base_Mod_Loaded_Check
 			}
 		}
 		completion_reward = {
@@ -25546,6 +25553,7 @@ focus_tree = {
 				FRA = {
 					controls_state = 1047
 				}
+				has_country_flag = Toulon_Base_Mod_Loaded_Check
 			}
 		}
 		completion_reward = {
@@ -27722,6 +27730,7 @@ focus_tree = {
 				set_rule = { can_create_factions = yes }
 				create_faction_from_template = {
 					template = faction_template_ITA_italian_league
+					name = Triumvirate_faction_name
 					icon = GFX_faction_logo_generic_10
 				}
 			}

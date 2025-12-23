@@ -1,0 +1,10 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_autonomy_unilateral_union_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_unilateral_union.png"
+	}
+	spriteType = {
+		name = "GFX_special_economic_zone_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_dominion_icon.dds"
+	}
+}

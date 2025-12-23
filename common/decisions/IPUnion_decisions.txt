@@ -342,12 +342,6 @@ IPUnion_Partition_of_Greece = {
 		available = {
 			AND = {
 				has_completed_focus = ITA_defend_the_balkan
-				GRE = {
-					has_opinion = {
-						target = ITA
-						value > 50
-					}
-				}
 				custom_trigger_tooltip = {
 					tooltip = IPUnion_GRE_has_control_988_989_tt
 					GRE = {
@@ -356,6 +350,7 @@ IPUnion_Partition_of_Greece = {
 						controls_state = 1055
 						controls_state = 1060
 					}
+					has_country_flag = Toulon_Base_Mod_Loaded_Check
 				}
 				NOT = {
 					country_exists = NEF
@@ -508,15 +503,15 @@ IPUnion_Partition_of_Greece = {
 
 				is_in_faction_with = TUR
 
-				NOT = {
-					is_in_faction_with = GRE
-				}
+				#NOT = {
+				#	is_in_faction_with = GRE
+				#}
 
-				GRE = {
-					NOT = {
-						is_puppet_of = ITA
-					}
-				}
+				#GRE = {
+				#	NOT = {
+				#		is_puppet_of = ITA
+				#	}
+				#}
 
 				custom_trigger_tooltip = {
 					tooltip = ITA_anschluss_army_trigger_tt
@@ -1095,6 +1090,7 @@ ITA_mare_nostrum_category = {
 			116 = {
 				add_claim_by = ITA
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = form_cooperate_with_knights_of_malta_effect_tt
 			hidden_effect = {
 				add_timed_idea = {
@@ -1106,6 +1102,10 @@ ITA_mare_nostrum_category = {
 				set_country_flag = form_cooperate_with_knights_of_malta_flag
 			}
 			show_ideas_tooltip = idea_knights_of_malta
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			country_event = IPUnion_country_event.53
 		}
 	}
 	form_attack_Island_malta = {
@@ -1133,7 +1133,6 @@ ITA_mare_nostrum_category = {
 			}
 		}
 		remove_effect = {
-			country_event = IPUnion_country_event.53
 			country_event = IPUnion_country_event.28
 		}
 	}
@@ -2381,6 +2380,47 @@ ITA_land_redistribution = {
 			FROM = {
 				add_dynamic_modifier = {
 					modifier = ITA_land_redistribution_modifier
+				}
+			}
+		}
+	}
+}
+
+ITA_faction_affairs = {
+	ITA_force_unilateral_union = {
+		icon = GFX_decision_generic_nationalism
+		target_array = faction_members
+		#days_remove = 15
+		cost = 50
+
+		visible = {
+			is_faction_leader = yes
+			FROM = {
+				NOT = {
+					has_dynamic_modifier = {
+						modifier = ITA_autonomy_unilateral_union_modifier
+					}
+				}
+			}
+		}
+	
+		complete_effect = {
+			FROM = {
+				country_event = {
+					id = italy_autonomy.1
+					hours = 12
+					random_hours = 24
+				}
+			}
+
+			custom_effect_tooltip = if_they_accept
+
+			effect_tooltip = {
+				ROOT = {
+					set_autonomy = {
+						target = FROM
+						autonomy_state = autonomy_unilateral_union
+					}
 				}
 			}
 		}

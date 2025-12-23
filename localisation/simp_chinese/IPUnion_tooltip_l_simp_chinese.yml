@@ -55,7 +55,7 @@
  form_awarding_of_honors_effect_tt: "位于§Y[2.GetName]§!的单位会被授予§Y首都卫士§!纪念章"
  unlock_decision_category_ITA_mare_nostrum_category_tt: "解锁§Y我们的海！§!决议组"
  form_ITA_claim_corsica_effect_tt: "如果§Y边境战争§!胜利，我们会成为§Y[1.GetName]§!的拥有者以及控制者"
- form_cooperate_with_knights_of_malta_effect_tt: "§Y我国§!会与总部位于罗马的§Y马耳他骑士团§!展开为期§Y730§!天的合作，合作期内我国会获得修正：§Y马耳他骑士团§!"
+ form_cooperate_with_knights_of_malta_effect_tt: "§Y我国§!会与总部位于罗马的§Y马耳他骑士团§!展开为期§Y730§!天的合作，合作期内我国会获得修正："
  IPUnion_country_event_29_a_tt: "会在§Y[448.GetName]§!、§Y[661.GetName]§!与§Y[665.GetName]§!相接壤的§Y6§!个省份中发起一场宽度为§Y420§!的§Y边境战争§!。"
  ITA_enter_the_high_stage_of_imperialism_tt_1: "§R如此激进的改革可能会引发不可预知的后果...§!"
  ITA_national_economy_fascismful_tt: "§G解锁§!§Y经济法案§!："

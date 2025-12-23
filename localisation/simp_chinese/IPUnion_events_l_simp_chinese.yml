@@ -474,4 +474,13 @@
  ITA_inner_circle.2.b: "不值得领袖信任"
  ITA_inner_circle.2.c: "上一页"
  
- 
+ italy_autonomy.1.t: "[FROM.GetName]要求与我们结成单方面联盟！"
+ italy_autonomy.1.d: "这与吞并别无二致了"
+ italy_autonomy.1.a: "换个名头而已，又如何呢？"
+ italy_autonomy.1.b: "恐怕要让他们失望了"
+ italy_autonomy.2.t: "[FROM.GetName]同意了我们结成单方面联盟的要求"
+ italy_autonomy.2.d: "对他们来说不过就是换个名头而已，而我们考虑的就多了。"
+ italy_autonomy.2.a: "我们就此结为同盟"
+ italy_autonomy.3.t: "[FROM.GetName]拒绝了我们结成单方面联盟的要求"
+ italy_autonomy.3.d: "该死的，他们哪来的胆子？"
+ italy_autonomy.3.a: "开战！开战！"

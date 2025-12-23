@@ -1,2 +1,13 @@
 ﻿l_simp_chinese:
  special_economic_zone: "经济特区"
+ autonomy_unilateral_union: "单方面联盟"
+
+ YUG_autonomy_unilateral_union: "[YUG.GetName]"
+ YUG_autonomy_unilateral_union_DEF: "[YUG.GetDefensiveLineName]"
+ YUG_autonomy_unilateral_union: "[YUG.GetAdjective]"
+ TUR_autonomy_unilateral_union: "[TUR.GetName]"
+ TUR_autonomy_unilateral_union_DEF: "[TUR.GetDefensiveLineName]"
+ TUR_autonomy_unilateral_union: "[TUR.GetAdjective]"
+ BUL_autonomy_unilateral_union: "[BUL.GetName]"
+ BUL_autonomy_unilateral_union_DEF: "[BUL.GetDefensiveLineName]"
+ BUL_autonomy_unilateral_union: "[BUL.GetAdjective]"

@@ -253,3 +253,10 @@ ITA_alto_adije_ethnic_issue = {
 	enable = { original_tag = ITA }
 	icon = GFX_modifiers_generic_resistance
 }
+
+ITA_autonomy_unilateral_union_modifier = {
+	enable = {
+		always = yes
+	}
+	icon = GFX_idea_ITA_regio_esercito_1
+}
