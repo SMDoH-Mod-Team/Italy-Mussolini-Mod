@@ -1,0 +1,70 @@
+add_namespace = BBA_italy_air_accident
+
+country_event = {
+	id = BBA_italy_air_accident.10
+
+	hidden = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = ITA
+		#date > 1940.01.01
+		NOT = {
+			has_completed_focus = ITA_italo_balbo_focus
+			focus_progress = {
+				focus = ITA_italo_balbo_focus
+				progress > 0
+			}
+		}
+		any_enemy_country = {
+			is_major = yes
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 180
+		modifier = {
+			factor = 0.5
+			date > 1940.06.01
+			any_controlled_state = {
+				is_core_of = LBA
+				any_neighbor_state = {
+					controller = { has_war_with = ROOT }
+				}
+			}
+		}
+	}
+
+	immediate = {
+		random_list = {
+			10 = { # Tellera dies
+				modifier = {
+					factor = 10
+					is_historical_focus_on = yes
+				}
+				modifier = {
+					factor = 0.5
+					has_completed_focus = ITA_expand_rome_flying_school
+				}
+				modifier = {
+					factor = 0.2
+					has_completed_focus = ITA_officers_of_the_service_role
+				}
+				modifier = {
+					factor = 0
+					is_historical_focus_on = no
+					has_completed_focus = ITA_officers_of_the_service_role
+				}
+				country_event = { id = BBA_italy_air_accident.02 hours = 16 random_hours = 8}
+			}
+			10 = { # No one dies
+				modifier = {
+					factor = 5
+					has_completed_focus = ITA_expand_rome_flying_school
+				}
+				country_event = { id = BBA_italy_air_accident.03 hours = 16 random_hours = 8}
+			}
+		}
+	}
+}

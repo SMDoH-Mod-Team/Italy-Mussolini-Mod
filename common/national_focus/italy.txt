@@ -14020,7 +14020,7 @@ focus_tree = {
 				limit = {
 					is_in_faction = no
 				}
-				create_faction = "italy_empire_faction"
+				create_faction_from_template = faction_template_italy_empire_faction
 			}
 
 			unlock_decision_tooltip = form_roman_empire
@@ -14555,14 +14555,21 @@ focus_tree = {
 					has_completed_focus = ITA_deus_vult
 					is_faction_leader = no
 				}
-				create_faction = ITA_papal_faction 
+				create_faction_from_template = {
+					template = faction_template_ITA_italian_league
+					name = ITA_papal_faction
+					icon = GFX_faction_logo_generic_7
+				}
 			}
 			IF = {
 				limit = {
 					has_completed_focus = ITA_mare_nostrum_bba
 					is_faction_leader = no
 				}
-				create_faction = ITA_roman_faction
+				create_faction_from_template = {
+					template = faction_template_italy_empire_faction
+					name = ITA_roman_faction
+				}
 			}
 		}
 	}
@@ -16186,7 +16193,7 @@ focus_tree = {
 				}
 				set_rule = { can_create_factions = yes }
 			}
-			create_faction = ITA_italian_league
+			create_faction_from_template = faction_template_ITA_italian_league
 
 			if = {
 				limit = {
@@ -20642,7 +20649,11 @@ focus_tree = {
 		search_filters = {}
 
 		completion_reward = {
-			create_faction = ITA_united_socialist_front
+			create_faction_from_template = {
+				template = faction_template_POR_popular_front_bloc
+				name = ITA_united_socialist_front
+				icon = GFX_faction_icon_generic_communist
+			}
 
 			custom_effect_tooltip = ITA_defend_the_land_invite_tt
 			if = {
@@ -21408,7 +21419,11 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_POLITICAL}
 
 		completion_reward = {
-			create_faction = ITA_free_states_of_europe
+			create_faction_from_template = {
+				template = faction_template_european_unity
+				name = ITA_free_states_of_europe
+				icon = GFX_faction_logo_generic_12
+			}
 			add_political_power = 50
 			custom_effect_tooltip = ITA_italia_libera_invite_tt
 			if = {
@@ -22357,7 +22372,17 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
-			create_faction = ITA_italian_confederation
+			IF = {
+				limit = {
+					is_in_faction = no
+				}
+				create_faction_from_template = {
+					template = faction_template_european_unity
+					name = ITA_italian_confederation
+					icon = GFX_faction_logo_generic_12
+				}
+			}
+
 			add_ideas = ITA_italian_confederation_leader
 
 			if = {
@@ -23814,7 +23839,11 @@ focus_tree = {
 			}
 			EGY = {
 				set_rule = { can_create_factions = yes }
-				create_faction = faction_middle_east_command
+				create_faction_from_template = {
+					template = faction_template_defensive_democratic
+					name = faction_middle_east_command
+					icon = GFX_faction_logo_generic_12
+				}
 			}
 
 			EGY = {
@@ -27691,7 +27720,10 @@ focus_tree = {
 			}
 			else = {
 				set_rule = { can_create_factions = yes }
-				create_faction = faction_ITA_triumvirate
+				create_faction_from_template = {
+					template = faction_template_ITA_italian_league
+					icon = GFX_faction_logo_generic_10
+				}
 			}
 			unlock_decision_category_tooltip = IPUnion_Tirumvirate
 
