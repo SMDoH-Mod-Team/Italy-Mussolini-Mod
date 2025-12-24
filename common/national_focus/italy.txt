@@ -23698,6 +23698,13 @@ focus_tree = {
 				is_ai = yes
 			}
 		}
+		offset = {
+			x = 30
+			trigger = {
+				is_ai = yes
+				has_dlc = "By Blood Alone"
+			}
+		}
 		completion_reward = {
 			add_political_power = 75
 			add_state_claim = 458
@@ -25637,44 +25644,47 @@ focus_tree = {
 					}
 				}
 			}
-			ENG = {
-				has_opinion = {
-					target = ITA
-					value > 50
-				}
+			country_exists = EGY
+			EGY = {
+				is_subject_of = ITA
 			}
 		}
 		completion_reward = {
-			EGY = {
-				transfer_state = 767
-				transfer_state = 551
-				transfer_state = 883
-				transfer_state = 887
-				transfer_state = 549
-				transfer_state = 886
-				transfer_state = 885
-				transfer_state = 884
+			hidden_effect = {
+				ITA = {
+					transfer_state = 767
+					transfer_state = 551
+					transfer_state = 883
+					transfer_state = 887
+					transfer_state = 549
+					transfer_state = 886
+					transfer_state = 885
+					transfer_state = 884
+				}
 			}
-			#release_autonomy = {
-			#	target = SUD
-			#	autonomy_state = autonomy_puppet
-			#	freedom_level = 0.5
-			#}
-			#hidden_effect = {
-			#	SUD = {
-			#		add_ideas = idea_ITA_neutrality_puppet
-			#		add_popularity = {
-			#			ideology = neutrality
-			#			popularity = 0.60
-			#		}
-			#	}
-			#}
-			#SUD = {
-			#	set_politics = {
-			#		ruling_party = neutrality
-			#	}
-			#	set_cosmetic_tag = SUD_ITA_EGY
-			#}
+			release_autonomy = {
+				target = SUD
+				autonomy_state = autonomy_condominium
+			}
+			hidden_effect = {
+				SUD = {
+					set_politics = {
+						ruling_party = neutrality
+					}
+					set_cosmetic_tag = SUD_ITA_EGY
+				}
+				SUD = {
+					#add_ideas = idea_ITA_neutrality_puppet
+					add_popularity = {
+						ideology = neutrality
+						popularity = 0.60
+					}
+					load_focus_tree = {
+						tree = IPUnion_empty_focus_tree
+					}
+					add_ideas = idea_ITE_condominium
+				}
+			}
 		}
 	}
 

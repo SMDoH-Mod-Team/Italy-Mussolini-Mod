@@ -1804,6 +1804,10 @@ EGY_KOI = {
 	color = rgb { 230 230 70 }
 	color_ui = rgb { 230 230 70 }
 }
+SUD_ITA_EGY = {
+	color = rgb { 230 230 70 }
+	color_ui = rgb { 230 230 70 }
+}
 
 DJI_French = {
 	color = rgb { 57  113  228 }
