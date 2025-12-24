@@ -1,0 +1,33 @@
+add_namespace = IPUnion_china
+
+country_event = {
+	id = IPUnion_china.1
+	title = IPUnion_china.1.t
+	desc = IPUnion_china.1.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = IPUnion_china.1.a
+		build_railway = {
+			path = { 7097 13143 12350 9982 9970 }
+			level = 1
+		}
+		if = {
+			limit = {
+				NOT = {
+					GDC = {
+						OR = {
+							is_subject_of = ROOT
+							is_in_faction_with = ROOT
+						}
+					}
+				}
+			}
+			GDC = {
+				give_military_access = ROOT
+			}
+		}
+	}
+}

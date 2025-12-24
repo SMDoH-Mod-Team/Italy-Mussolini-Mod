@@ -8,6 +8,8 @@ china_italy_cooperation = {
 			has_country_flag = ITA_accept_urge_delivery
 		}
 
+		fire_only_once = yes
+
 		is_good = yes
 
 		complete_effect = {
@@ -30,6 +32,36 @@ china_italy_cooperation = {
 			hidden_effect = {
 				set_country_flag = CHI_delivered_flag
 				clr_country_flag = IPUnion_country_event.76.flag
+			}
+		}
+	}
+}
+
+economy_decisions = {
+	CHI_building_guangzhou_wuchang_railway = {
+		activation = {
+			original_tag = CHI
+		}
+		visible = {
+			NOT = {
+				has_country_flag = CHI_has_built_guangzhou_wuchang_railway
+			}
+		}
+		fire_only_once = yes
+		days_mission_timeout = 270
+		available = {
+			always = no
+		}
+		is_good = no
+
+		timeout_effect = {
+			country_event = {
+				id = IPUnion_china.1
+				hours = 12
+				random_hours = 24
+			}
+			hidden_effect = {
+				set_country_flag = CHI_has_built_guangzhou_wuchang_railway
 			}
 		}
 	}

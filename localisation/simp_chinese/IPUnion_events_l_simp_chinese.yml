@@ -484,3 +484,8 @@
  italy_autonomy.3.t: "[FROM.GetName]拒绝了我们结成单方面联盟的要求"
  italy_autonomy.3.d: "该死的，他们哪来的胆子？"
  italy_autonomy.3.a: "开战！开战！"
+
+
+ IPUnion_china.1.t: "粤汉铁路通车"
+ IPUnion_china.1.d: "经过约40年的建造，自武昌至广州长约1056公里的粤汉铁路终于全线贯通了"
+ IPUnion_china.1.a: "太好了！"

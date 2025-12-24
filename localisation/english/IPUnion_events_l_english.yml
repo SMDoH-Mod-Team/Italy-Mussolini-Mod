@@ -468,3 +468,7 @@
   italy_autonomy.3.t: "[FROM.GetName] rejects our demand for a unilateral alliance."
   italy_autonomy.3.d: "Damnation, where do they get the nerve?"
   italy_autonomy.3.a: "War! War!"
+
+  IPUnion_china.1.t: "Yuehan Railway Opens to Traffic"
+  IPUnion_china.1.d: "After approximately 40 years of construction, the Yuehan Railway, stretching about 1,056 kilometers from Wuchang to Guangzhou, has finally been fully completed and opened."
+  IPUnion_china.1.a: "Excellent!"
