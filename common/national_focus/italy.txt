@@ -24313,6 +24313,7 @@ focus_tree = {
 				NOT = {
 					has_country_flag = ITA_leap_forward_flag
 				}
+				has_country_flag = ITA_leap_forward_end_flag
 			}
 		}
 		completion_reward = {
