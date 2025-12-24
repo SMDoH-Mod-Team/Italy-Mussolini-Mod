@@ -11,22 +11,12 @@ characters = {
 			slot = political_advisor
 			idea_token = AUS_friedrich_hayek
 			allowed = {
-				#original_tag = ITA
-				#has_dlc = "By Blood Alone"
-				#OR = {
-				#	original_tag = ITA
-				#	original_tag = AUS
-				#}
 				ITA_is_italian_tag = yes
 			}
 			available = {
-				#OR = {
-				#	has_completed_focus = ITA_christian_democracy
-				#	AND = {
-				#		has_completed_focus = ITA_common_ground
-				#		has_government = democratic
-				#	}
-				#}
+				
+			}
+			visible = {
 				has_completed_focus = ITA_abolish_price_controls
 			}
 			traits = {
