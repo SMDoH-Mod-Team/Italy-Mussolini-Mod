@@ -43,6 +43,7 @@
  form_attack_middle_east: "走好我们这一代人的东征路"
  ITA_attack_middle_east_part1: "在中东的特别军事行动-第一阶段"
  form_IRQ_oil_resource: "伊拉克石油"
+ from_ITA_goverence_of_levante: "建立黎凡特总督府"
  form_ITA_use_sentox_in_eth: "在埃塞俄比亚使用毒气"
  ITA_central_advisory_committee: "[PNF_dynmic_name]-中央顾问委员会"
  ITA_central_advisory_committee_desc: "当前的中顾委主任为：§Y$ITA_gian_galeazzo_ciano$§!"
@@ -93,5 +94,10 @@
  ITA_force_unilateral_union: "强制要求[FROM.GetName]为单方面联盟"
  
  CHI_building_guangzhou_wuchang_railway: "建造粤汉铁路"
- 
- 
+
+ ITA_fasist_international: "束棒国际"
+ form_fasces_subjet_decision: "在[FROM.GetName]输出革命"
+ form_USA_fasces_subjet_decision: "在[USA.GetName]输出革命"
+ form_USA_fasces_subjet_decision: "在[CUB.GetName]输出革命"
+ form_USA_fasces_subjet_decision: "在[COL.GetName]输出革命"
+ form_USA_fasces_subjet_decision: "在[ECU.GetName]输出革命"

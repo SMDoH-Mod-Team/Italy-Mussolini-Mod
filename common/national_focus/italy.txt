@@ -23768,7 +23768,7 @@ focus_tree = {
 		completion_reward = {
 			country_event = IPUnion_country_event.2
 			hidden_effect = {
-				play_song = "AllarmiSiamFascisti"
+				play_song = "LacanzonedelCarnaro"
 			}
 			custom_effect_tooltip = unlock_propaganda_campaign_tt
 			unlock_decision_tooltip = ITA_propaganda_rebuild_to_glory
@@ -24189,7 +24189,7 @@ focus_tree = {
 			any_country = {
 				OR = {
 					original_tag = ITA
-					is_puppet_of = ITA
+					is_subject_of = ITA
 				}
 				controls_state = 656
 			}
@@ -24210,7 +24210,7 @@ focus_tree = {
 			else_if = {
 				limit = {
 					any_country = {
-						is_puppet_of = ITA
+						is_subject_of = ITA
 						controls_state = 656
 					}
 				}
@@ -25242,7 +25242,7 @@ focus_tree = {
 					}
 				}
 				random = {
-					chance = 100
+					chance = 40
 					country_event = IPUnion_country_event.54
 				}
 			}
@@ -25641,7 +25641,7 @@ focus_tree = {
 				AND = {
 					country_exists = AOI
 					AOI = {
-						is_puppet_of = ITA
+						is_subject_of = ITA
 					}
 				}
 			}
@@ -27798,7 +27798,7 @@ focus_tree = {
 			AND = {
 				country_exists = AOI
 				AOI = {
-					is_puppet_of = ITA
+					is_subject_of = ITA
 				}
 			}
 			AOI = {

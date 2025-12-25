@@ -184,3 +184,11 @@ ITA_faction_affairs = {
 		original_tag = ITA
 	}
 }
+ITA_fasist_international = {
+	priority = 90
+	icon = x
+	picture = x
+	allowed = {
+		original_tag = ITA
+	}
+}

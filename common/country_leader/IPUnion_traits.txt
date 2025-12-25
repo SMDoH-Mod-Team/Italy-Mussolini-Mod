@@ -86,4 +86,8 @@ leader_traits = {
 	international_trust = {
 		
 	}
+	the_indulgent_aesthete = {
+		political_power_gain = 0.01
+		research_speed_factor = 0.05
+	}
 }

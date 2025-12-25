@@ -63,3 +63,23 @@
  PAP_vaticanus: "梵蒂冈城国"
  PAP_vaticanus_ADJ: "圣座"
  PAP_vaticanus_DEF: "梵蒂冈"
+
+ LEV_neutrality: "黎凡特总督府"
+ LEV_neutrality_ADJ: "黎凡特"
+ LEV_neutrality_DEF: "黎凡特总督府"
+
+ USAPF: "$USA_CSA_fascism$"
+ USAPF_ADJ: "$USA_CSA_fascism_ADJ$"
+ USAPF_DEF: "$USA_CSA_fascism_DEF$"
+
+ COL_fasces: "$COL_fascism$"
+ COL_fasces_ADJ: "$COL_fascism_ADJ$"
+ COL_fasces_DEF: "$COL_fascism_DEF$"
+
+ CUB_fasces: "$CUB_fascism$"
+ CUB_fasces_ADJ: "$CUB_fascism_ADJ$"
+ CUB_fasces_DEF: "$CUB_fascism_DEF$"
+
+ ECU_fasces: "$ECU_fascism$"
+ ECU_fasces_ADJ: "$ECU_fascism_ADJ$"
+ ECU_fasces_DEF: "$ECU_fascism_DEF$"

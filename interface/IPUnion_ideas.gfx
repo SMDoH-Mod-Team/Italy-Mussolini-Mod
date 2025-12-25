@@ -39,4 +39,8 @@ spriteTypes = {
 		name = GFX_portrait_AOI_abuna_abraham_small
 		textureFile = "gfx/interface/ideas/portrait_AOI_abuna_abraham_small.png"
 	}
+	spriteType = {
+		name = GFX_portrait_ITA_gabriele_d_annunzio_small
+		textureFile = "gfx/interface/ideas/portrait_ITA_gabriele_d_annunzio_small.png"
+	}
 }

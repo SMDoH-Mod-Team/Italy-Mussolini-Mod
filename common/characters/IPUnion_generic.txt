@@ -99,6 +99,20 @@ characters = {
 		}
 	}
 
+	LEV_government = {
+		name = LEV_government
+		portraits={
+			civilian={
+				large=GFX_portrait_SWI_federal_council
+			}
+		}
+		country_leader={
+			ideology=despotism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
 
 	PAP_papa_pio_xi = {
 		name = ITA_papa_pio_xi

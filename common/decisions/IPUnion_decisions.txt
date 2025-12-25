@@ -209,60 +209,60 @@ form_denfender_of_balkan_category = {
 	#	cost = 30
 
 	#}
-	form_founded_palestine = {
-		days_remove = 30
-		cost = 50
-		allowed = {
-			original_tag = ITA
-		}
-		available = {
+	#form_founded_palestine = {
+	#	days_remove = 30
+	#	cost = 50
+	#	allowed = {
+	#		original_tag = ITA
+	#	}
+	#	available = {
 			#has_completed_focus = ITA_sword_aimed_middle_east
-			ENG = {
-				has_opinion = {
-					target = ITA
-					value > 49.999
-				}
-			}
-			country_exists = EGY
-		}
+	#		ENG = {
+	#			has_opinion = {
+	#				target = ITA
+	#				value > 49.999
+	#			}
+	#		}
+	#		country_exists = EGY
+	#	}
 		#visible = {
 		#	has_completed_focus = ITA_sword_aimed_middle_east
 		#	NOT = {
 		#		country_exists = PAL
 		#	}
 		#}
-		remove_effect = {
-			hidden_effect = {
-				PAL = {
-					transfer_state = 454
-					transfer_state = 455
-				}
-				#453 = { add_core_of = PAL }
-				#455 = { add_core_of = PAL }
-				release_autonomy = {
-					target = PAL
-					autonomy_state = autonomy_puppet
-					freedom_level = 0.5
-				}
-				PAL = {
-					set_politics = {
-						ruling_party = neutrality
-					}
-					add_popularity = {
-						ideology = neutrality
-						popularity = 0.60
-					}
-				}
-			}
-			hidden_effect = {
-				PAL = {
-					add_ideas = idea_ITA_neutrality_puppet
-					set_cosmetic_tag = PAL_NEU
-				}
-			}
-			custom_effect_tooltip = form_founded_palestine_tt
-		}
-	}
+	#	remove_effect = {
+	#		hidden_effect = {
+	#			PAL = {
+	#				transfer_state = 454
+	#				transfer_state = 455
+	#			}
+	#			#453 = { add_core_of = PAL }
+	#			#455 = { add_core_of = PAL }
+	#			release_autonomy = {
+	#				target = PAL
+	#				autonomy_state = autonomy_puppet
+	#				freedom_level = 0.5
+	#			}
+	#			PAL = {
+	#				set_politics = {
+	#					ruling_party = neutrality
+	#				}
+	#				add_popularity = {
+	#					ideology = neutrality
+	#					popularity = 0.60
+	#				}
+	#			}
+	#		}
+	#		hidden_effect = {
+	#			PAL = {
+	#				add_ideas = idea_ITA_neutrality_puppet
+	#				set_cosmetic_tag = PAL_NEU
+	#			}
+	#		}
+	#		custom_effect_tooltip = form_founded_palestine_tt
+	#	}
+	#}
 	
 }
 BUL_ITA_be_friend = {
@@ -469,7 +469,7 @@ IPUnion_Partition_of_Greece = {
 		available = {
 			country_exists = EGY
 			EGY = {
-				is_puppet_of = ITA
+				is_subject_of = ITA
 			}
 		}
 		visible = {
@@ -509,7 +509,7 @@ IPUnion_Partition_of_Greece = {
 
 				#GRE = {
 				#	NOT = {
-				#		is_puppet_of = ITA
+				#		is_subject_of = ITA
 				#	}
 				#}
 
@@ -565,7 +565,7 @@ IPUnion_Partition_of_Greece = {
 		visible = {
 			NOT = {
 				GRE = {
-					is_puppet_of = ITA
+					is_subject_of = ITA
 				}
 			}
 			BUL = {
@@ -617,7 +617,7 @@ IPUnion_Partition_of_Greece = {
 		available = {
 			controls_state = 183
 			GRE = {
-				is_puppet_of = ITA
+				is_subject_of = ITA
 			}
 		}
 		visible = {
@@ -751,14 +751,14 @@ IPUnion_Political_Turmoil = {
 		allowed = {
 			original_tag = ITA
 		}
+		visible = {
+			has_country_flag = IPUnion_country_event_17_flag
+		}
 		available = {
 			divisions_in_state = {
 				type = armor
 				size > 2
 				state = 2
-			}
-			hidden_trigger = {
-				has_country_flag = IPUnion_country_event_17_flag
 			}
 		}
 		remove_effect = {
@@ -1254,7 +1254,7 @@ ITA_sword_aimed_middle_east_category = {
 			any_country = {
 				OR = {
 					original_tag = ITA
-					is_puppet_of = ITA
+					is_subject_of = ITA
 				}
 				controls_state = 291
 				controls_state = 1010
@@ -1286,6 +1286,45 @@ ITA_sword_aimed_middle_east_category = {
 				remove_resource_rights = 291
 				remove_resource_rights = 1010
 				remove_resource_rights = 676
+			}
+		}
+	}
+
+	from_ITA_goverence_of_levante = {
+		cost = 30
+		available = {
+			any_country = {
+				OR = {
+					original_tag = ITA
+					is_subject_of = ITA
+				}
+				controls_state = 454
+				controls_state = 455
+				controls_state = 553
+				controls_state = 554
+			}
+		}
+
+		complete_effect = {
+			LEV = {
+				transfer_state = 454
+				transfer_state = 455
+				transfer_state = 553
+				transfer_state = 554
+			}
+
+			set_autonomy = {
+				target = LEV
+				autonomy_state = autonomy_puppet
+			}
+
+			hidden_effect = {
+				LEV = {
+					set_politics = {
+						ruling_party = neutrality
+					}
+					promote_character = LEV_government
+				}
 			}
 		}
 	}
@@ -1570,7 +1609,7 @@ IPUnion_puppet_action = {
 				}
 				OR = {
 					original_tag = ITA
-					is_puppet_of = ITA
+					is_subject_of = ITA
 				}
 				controls_state = 1058
 				controls_state = 1059
@@ -1583,7 +1622,7 @@ IPUnion_puppet_action = {
 				}
 				OR = {
 					original_tag = ITA
-					is_puppet_of = ITA
+					is_subject_of = ITA
 				}
 				controls_state = 1058
 				controls_state = 1059
@@ -2421,6 +2460,84 @@ ITA_faction_affairs = {
 						target = FROM
 						autonomy_state = autonomy_unilateral_union
 					}
+				}
+			}
+		}
+	}
+}
+
+ITA_fasist_international = {
+
+	form_fasces_subjet_decision = {
+		target_array = IPUnion_subject_fasces_countries
+
+		cost = 35
+
+		available = {
+			FROM = {
+				is_subject_of = ROOT
+			}
+		}
+
+		target_trigger = {
+			FROM = {
+				NOT = {
+					has_country_flag = ITA_has_fascer_flag
+				}
+			}
+		}
+		
+		allowed = {
+			original_tag = ITA
+		}
+
+		complete_effect = {
+			set_autonomy = {
+				target = FROM
+				autonomy_state = autonomy_satellite
+			}
+			if = {
+				limit = {
+					FROM = {
+						has_country_flag = IPUnion_USA_flag
+					}
+				}
+				FROM = {
+					set_cosmetic_tag = USAPF
+					set_country_flag = ITA_has_fascer_flag
+				}
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_country_flag = IPUnion_CUB_flag
+					}
+				}
+				FROM = {
+					set_cosmetic_tag = CUB_fasces
+					set_country_flag = ITA_has_fascer_flag
+				}
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_country_flag = IPUnion_COL_flag
+					}
+				}
+				FROM = {
+					set_cosmetic_tag = COL_fasces
+					set_country_flag = ITA_has_fascer_flag
+				}
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_country_flag = IPUnion_ECU_flag
+					}
+				}
+				FROM = {
+					set_cosmetic_tag = ECU_fasces
+					set_country_flag = ITA_has_fascer_flag
 				}
 			}
 		}
