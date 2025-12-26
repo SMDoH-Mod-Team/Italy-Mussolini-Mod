@@ -2531,6 +2531,12 @@ ITA_faction_affairs = {
 		#days_remove = 15
 		cost = 50
 
+		target_trigger = {
+			FROM = {
+				is_in_faction_with = ROOT
+			}
+		}
+
 		visible = {
 			is_faction_leader = yes
 			FROM = {
