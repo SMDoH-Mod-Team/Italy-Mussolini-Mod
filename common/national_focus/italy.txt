@@ -4204,7 +4204,7 @@ focus_tree = {
 						type = bunker
 						level = 2
 						province = {
-							id = 11564
+							id = 11735
 						}
 						instant_build = yes
 					}
@@ -23691,7 +23691,7 @@ focus_tree = {
 ###THE Mediterranean hegemony
 	focus = {
 		id = ITA_keep_the_course
-		icon = GFX_focus_ITA_keep_the_course_shine
+		icon = GFX_focus_ITA_keep_the_course
 		prerequisite = { focus = ITA_strengthen_the_regime }
 		relative_position_id = ITA_strengthen_the_regime
 		x = -2
@@ -30849,7 +30849,7 @@ focus_tree = {
 		
 		completion_reward = {
 			add_political_power = 100
-			add_stability = 15
+			add_stability = 0.15
 		}
 	}
 

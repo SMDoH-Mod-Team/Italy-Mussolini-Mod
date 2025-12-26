@@ -1637,6 +1637,61 @@ country_event = {
 			}
 		}
 		183 = { set_demilitarized_zone = no }
+
+		if = {
+			limit = {
+				any_state = {
+					OR = {
+						is_core_of = EGY
+						is_core_of = PAL
+						is_core_of = JOR
+						is_core_of = IRQ
+						is_core_of = KUW
+					}
+					has_dynamic_modifier = {
+						modifier = unplanned_offensive
+					}
+				}
+			}
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = EGY
+						is_core_of = PAL
+						is_core_of = JOR
+						is_core_of = IRQ
+						is_core_of = KUW
+					}
+				}
+				remove_dynamic_modifier = {
+					modifier = unplanned_offensive
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				any_state = {
+					OR = {
+						is_core_of = LEB
+						is_core_of = SYR
+					}
+					has_dynamic_modifier = {
+						modifier = unplanned_offensive
+					}
+				}
+			}
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = LEB
+						is_core_of = SYR
+					}
+				}
+				remove_dynamic_modifier = {
+					modifier = unplanned_offensive
+				}
+			}
+		}
 	}
 }
 

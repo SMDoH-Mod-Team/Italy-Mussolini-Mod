@@ -85,7 +85,7 @@ on_actions = {
 					set_country_flag = hide_defy_the_duce_focus_flag
 					set_country_flag = hide_defy_the_duce_focus_flag_2
 					#mark_focus_tree_layout_dirty = yes
-					set_country_flag = ITA_national_militia_peace_flag
+					#set_country_flag = ITA_national_militia_peace_flag
 					set_variable = { CHI_industrial_commission_consumer_goods_factor = -0.05 }
 					set_variable = { CHI_industrial_commission_production_speed_industrial_complex_factor = 0.05 }
 				}

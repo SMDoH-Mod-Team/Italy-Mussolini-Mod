@@ -194,5 +194,110 @@ ideas = {
 				custom_modifier_tooltip = remove_1_research_slot
 			}
 		}
+
+		idea_SYR_condominium = {
+			allowed = {
+				always = no
+			}
+
+			available = {
+				OR = {
+					is_subject_of = ITA
+					is_subject_of = EGY
+				}
+				OR = {
+					ITA = { has_subject = TUR }
+					TUR = { has_subject = ITA }
+				}
+				has_autonomy_state = autonomy_condominium					
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_war_with = ITA
+				}
+			}
+			on_add = {	
+				set_research_slots = 1
+			}
+			on_remove = {
+				set_research_slots = 2
+			}
+
+			removal_cost = -1
+
+			picture = generic_king_handled
+
+			targeted_modifier = {
+				tag = ITA
+				cic_to_target_factor = 0.5
+			}
+			targeted_modifier = {
+				tag = ITA
+				mic_to_target_factor = 0.5
+			}
+			targeted_modifier = {
+				tag = ITA
+				trade_cost_for_target_factor = -1
+			}
+			targeted_modifier = {
+				tag = ITA
+				extra_trade_to_target_factor = 0.5
+			}
+			targeted_modifier = {
+				tag = TUR
+				cic_to_target_factor = 0.5
+			}
+			targeted_modifier = {
+				tag = TUR
+				mic_to_target_factor = 0.5
+			}
+			targeted_modifier = {
+				tag = TUR
+				trade_cost_for_target_factor = -1
+			}
+			targeted_modifier = {
+				tag = TUR
+				extra_trade_to_target_factor = 0.5
+			}
+			modifier = {
+				#custom_modifier_tooltip = cant_change_economic_trade_laws_tt
+				research_sharing_per_country_bonus = 0.4 #doesn't do anything
+				hidden_modifier = {
+					research_sharing_per_country_bonus_factor = 4 #+500% doesn't look quite right
+				}
+				custom_modifier_tooltip = remove_1_research_slot
+			}
+		}
+
+		IPUnion_neutrality_idea = {
+			name = neutrality_idea
+			picture = neutrality_idea
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			cancel = {
+				has_war = yes
+			}
+			
+			removal_cost = -1
+	
+			modifier = {
+				#generate_wargoal_tension = 1.00
+				join_faction_tension = 1.00
+				#lend_lease_tension = 0.50
+				send_volunteers_tension = 0.20
+				guarantee_tension = 1.0
+				embargo_threshold_factor = 2.5
+				ai_badass_factor = 0.01    # Will receive 1% of the threat from others
+				ai_get_ally_desire_factor = -100
+				ai_join_ally_desire_factor = -1000
+			}
+		}
 	}
 }
