@@ -3992,9 +3992,9 @@ focus_tree = {
 
 			add_doctrine_cost_reduction = {
 				name = ITA_preserve_army_traditions
-				cost_reduction = 0.75
+				cost_reduction = 0.5
 				uses = 1
-				category = cat_grand_battle_plan
+				category = land_doctrine
 			}
 		}
 	}
@@ -4237,12 +4237,12 @@ focus_tree = {
 			custom_effect_tooltip = available_chief_of_army
 			show_ideas_tooltip = ITA_alberto_pariani
 
-			add_doctrine_cost_reduction = {
-				name = ITA_a_bandits_war
-				cost_reduction = 0.75
-				uses = 1
-				category = cat_mobile_warfare
-			}
+			#add_doctrine_cost_reduction = {
+			#	name = ITA_a_bandits_war
+			#	cost_reduction = 0.75
+			#	uses = 1
+			#	category = cat_mobile_warfare
+			#}
 
 			add_doctrine_cost_reduction = {
 				name = ITA_a_bandits_war
@@ -4288,9 +4288,12 @@ focus_tree = {
 					limit = {
 						is_ai = yes
 					}
-					set_technology = {
-						trench_warfare = 0
-						mobile_warfare = 1
+					if = {
+						limit = {
+							has_doctrine = grand_battleplan
+						}
+
+						set_grand_doctrine = new_mobile_warfare
 					}
 				}
 			}
@@ -6897,16 +6900,24 @@ focus_tree = {
 				add_ideas = ITA_hidden_heavy_cruisers_production_ns
 			}			
 
-			add_to_variable = { ITA_iri_consumer_goods_factor = -0.02 }
+			add_to_variable = { ITA_iri_consumer_goods_factor = 0.02 }
 			custom_effect_tooltip = ITA_ricostruzione_industriale_cg_penalty_tt
 
 			navy_experience = 25
 
+
+			add_mastery_bonus = {
+				name = ITA_incrociatori_pesanti
+				bonus = 0.2
+				days = 180
+				track = capital_ships
+			}
+
 			add_doctrine_cost_reduction = {
 				name = ITA_incrociatori_pesanti
-				cost_reduction = 0.75
-				uses = 2
-				category = cat_fleet_in_being
+				cost_reduction = 0.50
+				uses = 1
+				category = naval_doctrine
 			}
 
 			add_tech_bonus = {
@@ -7197,7 +7208,7 @@ focus_tree = {
 			else = {
 				has_tech = improved_destroyer
 			}
-			has_tech = decimetric_radar
+			has_tech = cavity_magnatron
 		}
 
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY_XP FOCUS_FILTER_RESEARCH}
@@ -9929,7 +9940,7 @@ focus_tree = {
 	focus = {
 		id = ITA_towards_a_greater_italy
 		icon = GFX_focus_ITA_greater_italy
-		prerequisite = { focus = ITA_strengthen_the_regim }
+		prerequisite = { focus = ITA_strengthen_the_regime }
 		mutually_exclusive = { 
 			#focus = ITA_keep_the_course
 			focus = ITA_mare_nostrum_bba

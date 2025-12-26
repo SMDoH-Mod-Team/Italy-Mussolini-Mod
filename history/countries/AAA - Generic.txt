@@ -1,0 +1,18 @@
+capital = 1
+
+add_to_array = {
+	array = subject_fasces_countries
+	value = USA
+}
+add_to_array = {
+	array = subject_fasces_countries
+	value = CUB
+}
+add_to_array = {
+	array = subject_fasces_countries
+	value = COL
+}
+add_to_array = {
+	array = subject_fasces_countries
+	value = ECU
+}

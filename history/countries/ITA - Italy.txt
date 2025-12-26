@@ -972,23 +972,6 @@ recruit_character = ITA_curio_bernardis
 recruit_character = AUS_friedrich_hayek
 recruit_character = ITA_gabriele_d_annunzio
 
-add_to_array = {
-	array = IPUnion_subject_fasces_countries
-	value = USA
-}
-add_to_array = {
-	array = IPUnion_subject_fasces_countries
-	value = CUB
-}
-add_to_array = {
-	array = IPUnion_subject_fasces_countries
-	value = COL
-}
-add_to_array = {
-	array = IPUnion_subject_fasces_countries
-	value = ECU
-}
-
 
 ########################################
 ##### MISSIOLINIS - TRIGGER EVENTS #####

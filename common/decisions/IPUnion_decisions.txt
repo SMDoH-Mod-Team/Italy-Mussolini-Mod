@@ -2469,7 +2469,7 @@ ITA_faction_affairs = {
 ITA_fasist_international = {
 
 	form_fasces_subjet_decision = {
-		target_array = IPUnion_subject_fasces_countries
+		target_array = AAA.subject_fasces_countries
 
 		cost = 35
 

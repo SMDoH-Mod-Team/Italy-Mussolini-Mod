@@ -1,5 +1,5 @@
 IPUnion_propaganda_test = {
-	SOV_propaganda_motherland_calls = { # ID = 3
+	ITA_propaganda_motherland_calls_test = { # ID = 3
 		priority = 2
 
 		icon = eng_propaganda_campaigns
