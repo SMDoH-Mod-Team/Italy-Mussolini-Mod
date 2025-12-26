@@ -343,6 +343,16 @@ defined_text = {
 		}
 		localization_key = ITA_propaganda_give_respect_to_duce
 	}
+	text = {
+		trigger = {
+			tag = ITA
+			NOT = {
+				tag = SOV
+			}
+			check_variable = { SOV_poster_left_icon_frame = 35 }
+		}
+		localization_key = ITA_propaganda_dig_coal
+	}
 }
 defined_text = {
 	name = ITA_GetPropagandaCampaignEffects_Center
@@ -582,6 +592,16 @@ defined_text = {
 		}
 		localization_key = ITA_propaganda_give_respect_to_duce
 	}
+	text = {
+		trigger = {
+			tag = ITA
+			NOT = {
+				tag = SOV
+			}
+			check_variable = { SOV_poster_center_icon_frame = 35 }
+		}
+		localization_key = ITA_propaganda_dig_coal
+	}
 }
 defined_text = {
 	name = ITA_GetPropagandaCampaignEffects_Right
@@ -820,6 +840,16 @@ defined_text = {
 			check_variable = { SOV_poster_right_icon_frame = 34 }
 		}
 		localization_key = ITA_propaganda_give_respect_to_duce
+	}
+	text = {
+		trigger = {
+			tag = ITA
+			NOT = {
+				tag = SOV
+			}
+			check_variable = { SOV_poster_right_icon_frame = 35 }
+		}
+		localization_key = ITA_propaganda_dig_coal
 	}
 }
 

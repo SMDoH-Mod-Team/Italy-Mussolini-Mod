@@ -2808,7 +2808,10 @@ focus_tree = {
 		x = -2
 		y = 0
 
+		cost = 3
+
 		completion_reward = {
+			unlock_decision_tooltip = ITA_propaganda_dig_coal
 			158 = {
 				add_resource = {
 					type = coal
@@ -23688,7 +23691,7 @@ focus_tree = {
 ###THE Mediterranean hegemony
 	focus = {
 		id = ITA_keep_the_course
-		icon = GFX_focus_FIN_finnish_neutrality
+		icon = GFX_focus_ITA_keep_the_course_shine
 		prerequisite = { focus = ITA_strengthen_the_regime }
 		relative_position_id = ITA_strengthen_the_regime
 		x = -2
@@ -23724,6 +23727,7 @@ focus_tree = {
 			add_state_claim = 183
 			add_state_claim = 118
 			add_state_claim = 116
+			add_state_claim = 735
 			#set_power_balance = {
 			#	id = ITA_power_balance
 			#	left_side = ITA_pope_side
@@ -23774,13 +23778,26 @@ focus_tree = {
 				tooltip = ITA_new_industrialization_program_factories_required_tt
 				NOT = { num_of_controlled_factories < 150 }
 			}
-			custom_trigger_tooltip = {
-				tooltip = ITA_motherland_of_our_movement_tt
-				ITA = {
-					controls_state = 1049
+			#custom_trigger_tooltip = {
+			#	tooltip = ITA_motherland_of_our_movement_tt
+			#	ITA = {
+			#		controls_state = 1049
+			#	}
+			#	has_country_flag = Toulon_Base_Mod_Loaded_Check
+			#}
+			controls_province = 11564
+			controls_state = 735
+			any_country = {
+				OR = {
+					original_tag = ITA
+					is_subject_of = ITA
 				}
-				has_country_flag = Toulon_Base_Mod_Loaded_Check
+				controls_state = 446
 			}
+			controls_state = 1
+			controls_state = 458
+			controls_state = 665
+			controls_state = 116
 		}
 		completion_reward = {
 			country_event = IPUnion_country_event.2

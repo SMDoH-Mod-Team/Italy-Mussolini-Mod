@@ -1205,4 +1205,62 @@ ITA_propaganda_campaigns = {
 		}
 	}
 	
+	ITA_propaganda_dig_coal = {
+		priority = 82
+		icon = eng_propaganda_campaigns
+
+		allowed = {
+			original_tag = ITA
+		}
+
+		cost = 15
+
+		available = {
+			SOV_propaganda_poster_slot_available = yes
+			#has_war = yes
+		}
+
+		visible = {
+			has_completed_focus = ITA_propaganda_dig_coal
+		}
+
+		complete_effect = {
+			set_variable = { SOV_new_propaganda_campaign = 35 }
+			ITA_pick_propaganda_campaign_slot_effect = yes
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_dynamic_modifier = {
+								modifier = get_resources_amount
+							}
+						}
+					}
+					add_dynamic_modifier = {
+						modifier = get_resources_amount
+					}
+				}
+			}
+			add_to_variable = { 
+				get_resources_coal = 500
+				tooltip = country_resource_coal_tt
+			}
+		}
+
+		
+		days_remove = 180
+
+		days_re_enable = 90
+
+		remove_effect = {
+			set_variable = { SOV_propaganda_campaign_to_remove = 35 }
+			SOV_reset_propaganda_campaign_slot_effect = yes
+			custom_effect_tooltip = ITA_propaganda_campaign_cooldown_tt
+			add_to_variable = { 
+				get_resources_coal = -500
+				tooltip = country_resource_coal_tt
+			}
+		}
+	}
+	
 }

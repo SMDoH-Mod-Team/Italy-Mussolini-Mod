@@ -60,6 +60,7 @@
   ITA_propaganda_duce_speech: "The Leader is Speaking!"
   ITA_propaganda_march_for_support_duce: "Millions of Capital's Soldiers and Civilians Parade in Support of Commander-in-Chief Mussolini"
   ITA_propaganda_give_respect_to_duce: "Salute to the Leader!"
+  ITA_propaganda_dig_coal: "I'd rather live 20 years less, but fight with all my might to secure the big coalfield."
 
   ITA_propaganda_campaign_cooldown_tt: "This propaganda campaign will become available again after being removed for §Y[?ROOT.SOV_default_propaganda_campaign_cooldown] days§!."
 

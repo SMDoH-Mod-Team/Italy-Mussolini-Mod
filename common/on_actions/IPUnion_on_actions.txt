@@ -9,6 +9,9 @@ on_actions = {
 					target = GER
 					modifier = ITA_1934_german_italy_crisis
 				}
+				add_dynamic_modifier = {
+					modifier = get_resources_amount
+				}
 			}
 			USA = {
 				every_core_state = {

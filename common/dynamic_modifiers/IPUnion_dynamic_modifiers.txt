@@ -260,3 +260,16 @@ ITA_autonomy_unilateral_union_modifier = {
 	}
 	icon = GFX_idea_ITA_regio_esercito_1
 }
+
+get_resources_amount = {
+	enable = {
+		always = yes
+	}
+	country_resource_steel = get_resources_steel	
+	country_resource_tungsten = get_resources_tungsten
+	country_resource_chromium = get_resources_chromium
+	country_resource_aluminium = get_resources_aluminium
+	country_resource_rubber = get_resources_rubber
+	country_resource_oil = get_resources_oil
+	country_resource_coal = get_resources_coal
+}
