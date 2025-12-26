@@ -23762,6 +23762,12 @@ focus_tree = {
 		#prerequisite = {
 		#	focus = ITA_devotion
 		#}
+		allow_branch = {
+			NOT = {
+				has_country_flag = IPUnion_country_event.56_flag
+			}
+			#has_country_flag = IPUnion_country_event.56_flag
+		}
 		available = {
 			has_army_manpower = { size > 2000000 }
 			custom_trigger_tooltip = {
@@ -24249,6 +24255,11 @@ focus_tree = {
 		cost = 4
 		available = {
 
+		}
+		allow_branch = {
+			NOT = {
+				has_country_flag = IPUnion_country_event.56_flag
+			}
 		}
 		offset = {
 		}
@@ -27893,10 +27904,11 @@ focus_tree = {
 	focus = {
 		id = ITA_helmsman_died
 		icon = GFX_focus_ITA_culto_del_duce_bw
-		relative_position_id = ITA_mare_nostrum_bba
-		x = 11
-		y = 0
+		relative_position_id = ITA_strengthen_the_regime
+		x = 0
+		y = 1
 		cost = 5
+		prerequisite = { focus = ITA_strengthen_the_regime }
 		#prerequisite = { focus = ITA_strengthen_the_regime }
 		mutually_exclusive = { 
 			focus = ITA_towards_a_greater_italy
@@ -27975,6 +27987,11 @@ focus_tree = {
 				ideology = fascism
 				name = PNF_conservative
 				long_name = PNF_conservative_long
+			}
+			ITA_grand_council = {
+				promote_character = {
+					ideology = fascism_ideology
+				}
 			}
 		}
 	}
@@ -28065,17 +28082,20 @@ focus_tree = {
 	focus = {
 		id = ITA_ciano_reinstated
 		icon = GFX_focus_GER_strengthen_the_waffen_ss
-		relative_position_id = ITA_mare_nostrum_bba
-		x = 11
-		y = 0
+		relative_position_id = ITA_strengthen_the_regime
+		x = 0
+		y = 1
 		cost = 5
-		#prerequisite = { focus = ITA_strengthen_the_regime }
+		prerequisite = { focus = ITA_strengthen_the_regime }
 		mutually_exclusive = { 
 			focus = ITA_towards_a_greater_italy
 			focus = ITA_mare_nostrum_bba
 		}
 		allow_branch = {
 			has_country_flag = ITA_side_fight_flag
+			NOT = {
+				has_country_flag = IPUnion_country_event.60.flag
+			}
 		}
 		available = {
 			#is_subject = no
@@ -28258,11 +28278,11 @@ focus_tree = {
 	focus = {
 		id = ITA_standard_of_truth
 		icon = GFX_focus_GER_strengthen_the_waffen_ss
-		relative_position_id = ITA_mare_nostrum_bba
-		x = 11
-		y = 0
+		relative_position_id = ITA_strengthen_the_regime
+		x = 0
+		y = 1
 		cost = 2
-		#prerequisite = { focus = ITA_strengthen_the_regime }
+		prerequisite = { focus = ITA_strengthen_the_regime }
 		mutually_exclusive = { 
 			focus = ITA_towards_a_greater_italy
 			focus = ITA_mare_nostrum_bba
@@ -28280,7 +28300,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			
+			custom_effect_tooltip = coming_soooooooooooon_tt
 		}
 	}
 
