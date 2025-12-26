@@ -1221,7 +1221,7 @@ ITA_propaganda_campaigns = {
 		}
 
 		visible = {
-			has_completed_focus = ITA_propaganda_dig_coal
+			has_completed_focus = ITA_coal_improve
 		}
 
 		complete_effect = {

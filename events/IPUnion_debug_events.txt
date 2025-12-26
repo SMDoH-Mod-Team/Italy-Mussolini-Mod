@@ -194,6 +194,7 @@ country_event = {
 country_event = {
 	id = IPUnion_debug_event.6
 	title = "Add Wonder Weapon Variable"
+	desc = ""
 
 	is_triggered_only = yes
 
@@ -224,6 +225,7 @@ country_event = {
 country_event = {
 	id = IPUnion_debug_event.7
 	title = "Add get_resources_amount variable"
+	desc = ""
 
 	is_triggered_only = yes
 
