@@ -194,6 +194,7 @@ country_event = {
 country_event = {
 	id = IPUnion_debug_event.6
 	title = "Add Wonder Weapon Variable"
+	desc = ""
 
 	is_triggered_only = yes
 
@@ -218,5 +219,29 @@ country_event = {
 		set_variable = { GER_wunderwaffen_sp_tag_submarine_speed_factor = 0 }
 		set_variable = { GER_wunderwaffen_sp_air_intercontinental_bomber_speed_factor = 0 }
 		set_variable = { GER_wunderwaffen_sp_air_mothership_aircraft_speed_factor = 0 }
+	}
+}
+
+country_event = {
+	id = IPUnion_debug_event.7
+	title = "Add get_resources_amount variable"
+	desc = ""
+
+	is_triggered_only = yes
+
+	option = {
+		name = YES
+
+		add_dynamic_modifier = {
+			modifier = get_resources_amount
+		}
+
+		set_variable = { get_resources_steel = 0 }
+		set_variable = { get_resources_tungsten = 0 }
+		set_variable = { get_resources_chromium = 0 }
+		set_variable = { get_resources_rubber = 0 }
+		set_variable = { get_resources_aluminium = 0 }
+		set_variable = { get_resources_oil = 0 }
+		set_variable = { get_resources_coal = 0 }
 	}
 }

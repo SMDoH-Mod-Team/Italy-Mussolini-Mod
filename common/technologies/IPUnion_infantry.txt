@@ -18,5 +18,16 @@ technologies = {
 				movement = 0.20
 			}
 		}
+
+		militia = {
+			hills = {
+				attack = 0.15
+				movement = 0.20
+			}
+			mountain = {
+				attack = 0.15
+				movement = 0.20
+			}
+		}
 	}
 }

@@ -111,4 +111,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/focus_ITA_embrace_change_in_leadership.png"
 	}
 
+	spriteType = {
+		name = "GFX_focus_ITA_keep_the_course"
+		texturefile = "gfx/interface/goals/focus_ITA_keep_the_course.png"
+	}
+
 }

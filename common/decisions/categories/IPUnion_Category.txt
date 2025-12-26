@@ -176,3 +176,27 @@ ITA_land_redistribution = {
 		
 	}
 }
+ITA_faction_affairs = {
+	priority = 100
+	icon = x
+	picture = x
+	allowed = {
+		original_tag = ITA
+	}
+}
+ITA_fasist_international = {
+	priority = 90
+	icon = x
+	picture = x
+	allowed = {
+		original_tag = ITA
+	}
+}
+ITA_mussolini_profile_picture_category = {
+	priority = 80
+	icon = x
+	picture = x
+	allowed = {
+		original_tag = ITA
+	}
+}

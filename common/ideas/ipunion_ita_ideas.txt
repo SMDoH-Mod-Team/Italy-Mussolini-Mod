@@ -9,6 +9,16 @@ ideas = {
 				democratic_drift = 0.15
 			}
 		}
+		idea_reaserch_bonus_benito_corporal = {
+			removal_cost = -1
+			modifier = {
+
+			}
+
+			research_bonus = {
+				artillery = 0.10
+			}
+		}
 		idea_ITA_10percent_consumer_goods = {
 			removal_cost = -1
 			available = {

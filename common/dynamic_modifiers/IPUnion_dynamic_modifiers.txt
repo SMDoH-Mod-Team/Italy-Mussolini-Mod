@@ -186,7 +186,7 @@ AOI_national_common_region_modifier = { #STATE MODIFIER
 	}
 	icon = GFX_modifiers_ETH_state_development
 	production_speed_infrastructure_factor = 0.20
-	production_speed_railway_factor = 0.10
+	production_speed_rail_way_factor = 0.10
 }
 
 CHI_china_italy_industrial_commission_modifier = {
@@ -252,4 +252,24 @@ ITA_wonderweapon_modifier = { #Wunderwaffen NS
 ITA_alto_adije_ethnic_issue = {
 	enable = { original_tag = ITA }
 	icon = GFX_modifiers_generic_resistance
+}
+
+ITA_autonomy_unilateral_union_modifier = {
+	enable = {
+		always = yes
+	}
+	icon = GFX_idea_ITA_regio_esercito_1
+}
+
+get_resources_amount = {
+	enable = {
+		always = yes
+	}
+	country_resource_steel = get_resources_steel	
+	country_resource_tungsten = get_resources_tungsten
+	country_resource_chromium = get_resources_chromium
+	country_resource_aluminium = get_resources_aluminium
+	country_resource_rubber = get_resources_rubber
+	country_resource_oil = get_resources_oil
+	country_resource_coal = get_resources_coal
 }

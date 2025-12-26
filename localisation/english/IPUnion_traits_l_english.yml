@@ -12,3 +12,8 @@
   normandy_duke: "Duke of Normandy"
   gojjam_archbishop: "Archbishop of Gojjam"
   international_trust: "International Trust"
+  the_indulgent_aesthete: "The Indulegent Aesthete"
+  benito_corporal: "Benito Corporal"
+  benito_corporal_desc: "§gPromoted to corporal for 'outstanding military merits.' The promotion was based on upright conduct, strong combat capability, calm and composed psychological resilience, fearlessness in the face of hardship, enthusiastic and diligent work ethic, and timely completion of tasks—making him a standout among the soldier ranks.§!"
+  country_leader_benito_corporal: "$benito_corporal$"
+  benito_mussolini: "$ITA_Benito_mussolini$"

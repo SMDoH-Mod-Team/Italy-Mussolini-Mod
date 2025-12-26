@@ -31,3 +31,5 @@
  ITA_wonderweapon_modifier_desc: "$GER_wunderwaffen_modifier_desc$"
  ITA_alto_adije_ethnic_issue: "[39.GetName]民族问题"
  ITA_alto_adije_ethnic_issue_desc: "不受欢迎的意大利化政策"
+ ITA_autonomy_unilateral_union_modifier: "$autonomy_unilateral_union$"
+ ITA_autonomy_unilateral_union_modifier_desc: "这个国家是意大利的单方面联盟——只不过是吞并的美化描述罢了"

@@ -32,7 +32,7 @@
   form_ITA_meeting_of_self_criticism: "Self-Criticism Meeting"
   form_awarding_of_honors: "Awarding of Honors"
   form_colosseum_incident: "Colosseum Incident"
-  ITA_mare_nostrum_category: "Mare Nostrum!"
+  ITA_mare_nostrum_category: "Mediterranean Affairs"
   form_ITA_claim_corsica: "Claim Sovereignty over Corsica"
   form_cooperate_with_knights_of_malta: "Cooperate with the Knights of Malta"
   form_attack_Island_malta: "We Must Liberate Malta!"
@@ -43,6 +43,8 @@
   form_attack_middle_east: "Walk Our Generation's Path of Eastern Campaign"
   ITA_attack_middle_east_part1: "Special Military Operation in the Middle East - Phase 1"
   form_IRQ_oil_resource: "Iraqi Oil"
+  from_ITA_goverence_of_levante: "Establish the Levant Governorship"
+  from_establish_syr_condominium: "Establish Italo-Turkish Condominium of Syria"
   form_ITA_use_sentox_in_eth: "Use Poison Gas in Ethiopia"
   ITA_central_advisory_committee: "[PNF_dynamic_name] Central Advisory Committee"
   ITA_central_advisory_committee_desc: "The current director of the Central Advisory Committee is: §Y$ITA_gian_galeazzo_ciano$§!"
@@ -87,3 +89,20 @@
   ITA_land_redistribution: "Land Redistribution"
   ITA_land_redistribution_decision: "Land Redistribution in [FROM.GetName]"
   form_IPUnion_roman_empire: "$form_roman_empire$"
+
+  ITA_faction_affairs: "Faction Affairs"
+  
+  ITA_force_unilateral_union: "Force [FROM.GetName] into a Unilateral Alliance"
+  
+  CHI_building_guangzhou_wuchang_railway: "Building Guangzhou-Wuchang Railways"、
+  
+  ITA_fasist_international: "Fascist International"
+  form_fasces_subjet_decision: "Export Revolution to [FROM.GetName]"
+  form_USA_fasces_subjet_decision: "Export Revolution to [USA.GetName]"
+  form_USA_fasces_subjet_decision: "Export Revolution to [CUB.GetName]"
+  form_USA_fasces_subjet_decision: "Export Revolution to [COL.GetName]"
+  form_USA_fasces_subjet_decision: "Export Revolution to [ECU.GetName]"
+
+  ITA_mussolini_profile_picture_category: "Mussolini's Many Looks"
+  form_ITA_mussolini_profile_picture: "What will Mussolini wear today"
+

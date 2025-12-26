@@ -13,7 +13,18 @@ ideas = {
 
 			visible = {
 				original_tag = ITA
-				has_country_flag = ITA_national_militia_peace_flag
+				#has_country_flag = ITA_national_militia_peace_flag
+				NOT = {
+					has_country_flag = ITA_national_militia_war_flag
+				}
+			}
+
+			on_add = {
+				set_country_flag = ITA_national_militia_peace_flag
+			}
+
+			on_remove = {
+				clr_country_flag = ITA_national_militia_peace_flag
 			}
 
 			available = {

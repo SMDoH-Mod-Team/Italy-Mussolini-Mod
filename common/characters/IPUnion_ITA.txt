@@ -8,6 +8,7 @@ characters = {
 		}
 
 		country_leader = {
+			desc = "ITA_benito_mussolini_desc"
 			ideology = fascism_ideology
 			traits = { il_duce }
 			expire = "1965.1.1.1"
@@ -15,7 +16,7 @@ characters = {
 		}
 
 		corps_commander = {
-			traits={}
+			traits={ benito_mussolini }
 			skill=1
 			attack_skill=1
 			defense_skill=1
@@ -144,6 +145,37 @@ characters = {
 			legacy_id = 0
 			visible = {
 				ITA_is_advisor_available = yes
+			}
+		}
+	}
+
+	ITA_gabriele_d_annunzio = {
+		name = ITA_gabriele_d_annunzio
+		portraits = {
+			army = {
+				small = GFX_portrait_ITA_gabriele_d_annunzio_small
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = ITA_gabriele_d_annunzio
+			allowed = {
+				ITA_is_italian_tag = yes
+			}
+			available = {
+				
+			}
+			visible = {
+				
+			}
+			traits = {
+				#minister_of_posts_and_telegraphs # Christian Democracy guy
+				the_indulgent_aesthete
+			}
+
+			ai_will_do = {
+				base = 0.300
 			}
 		}
 	}

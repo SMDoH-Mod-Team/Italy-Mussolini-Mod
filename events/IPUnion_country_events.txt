@@ -49,7 +49,7 @@ country_event = {
 	option = {
 		name = IPUnion_country_event.2.a
 		add_ideas = idea_ITA_second_marching_to_Fiume
-		add_political_power = 0.15
+		add_political_power = 15
 		every_country = {
 			if = {
 				limit = {
@@ -1637,6 +1637,61 @@ country_event = {
 			}
 		}
 		183 = { set_demilitarized_zone = no }
+
+		if = {
+			limit = {
+				any_state = {
+					OR = {
+						is_core_of = EGY
+						is_core_of = PAL
+						is_core_of = JOR
+						is_core_of = IRQ
+						is_core_of = KUW
+					}
+					has_dynamic_modifier = {
+						modifier = unplanned_offensive
+					}
+				}
+			}
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = EGY
+						is_core_of = PAL
+						is_core_of = JOR
+						is_core_of = IRQ
+						is_core_of = KUW
+					}
+				}
+				remove_dynamic_modifier = {
+					modifier = unplanned_offensive
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				any_state = {
+					OR = {
+						is_core_of = LEB
+						is_core_of = SYR
+					}
+					has_dynamic_modifier = {
+						modifier = unplanned_offensive
+					}
+				}
+			}
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = LEB
+						is_core_of = SYR
+					}
+				}
+				remove_dynamic_modifier = {
+					modifier = unplanned_offensive
+				}
+			}
+		}
 	}
 }
 
@@ -2102,6 +2157,7 @@ country_event = {
 		name = IPUnion_country_event.59.a
 		add_political_power = 30
 		add_ideas = idea_ITA_party_command_guns
+		set_grand_doctrine = party_command_forces
 	}
 }
 
@@ -2764,6 +2820,60 @@ country_event = {
 	option = {
 		name = IPUnion_country_event.86.a
 		custom_effect_tooltip = IPUnion_country_event.86.tt
+	}
+}
+
+country_event = {
+	id = IPUnion_country_event.87
+	
+	title = IPUnion_country_event.87.t
+	desc = IPUnion_country_event.87.desc
+	is_triggered_only = yes
+	#fire_only_once = yes
+	picture = GFX_report_event_gre_george_ii_victorious
+	option = {
+		name = IPUnion_country_event.87.a
+		hidden_effect = {
+			if = {
+				limit = { has_country_leader = { character = ITA_benito_mussolini ruling_only = yes } }
+				set_country_leader_portrait = {
+					portrait = "gfx/leaders/ITA/Portrait_Italy_Benito_Mussolini.dds"
+				}
+			}
+		}
+	}
+	option = {
+		name = IPUnion_country_event.87.b
+		hidden_effect = {
+			if = {
+				limit = { has_country_leader = { character = ITA_benito_mussolini ruling_only = yes } }
+				set_country_leader_portrait = {
+					portrait = "gfx/leaders/ITA/Portrait_Italy_Benito_Mussolini1.dds"
+				}
+			}
+		}
+	}
+	option = {
+		name = IPUnion_country_event.87.c
+		hidden_effect = {
+			if = {
+				limit = { has_country_leader = { character = ITA_benito_mussolini ruling_only = yes } }
+				set_country_leader_portrait = {
+					portrait = "gfx/leaders/ITA/emperor_mussolini1.dds"
+				}
+			}
+		}
+	}
+	option = {
+		name = IPUnion_country_event.87.d
+		hidden_effect = {
+			if = {
+				limit = { has_country_leader = { character = ITA_benito_mussolini ruling_only = yes } }
+				set_country_leader_portrait = {
+					portrait = "gfx/leaders/ITA/Portrait_Italy_Benito_Mussolini_Xmas_Hat.png"
+				}
+			}
+		}
 	}
 }
 

@@ -19,24 +19,6 @@ spriteTypes = {
 		name = "GFX_ITA_propaganda_strip"
 		texturefile = "gfx/interface/propaganda/ITA_propaganda_strip.png"
 		legacy_lazy_load = no
-		noOfFrames = 34
-	}
-	spriteType = {
-		name = "GFX_SOV_propaganda_strip_aged_1"
-		texturefile = "gfx/interface/propaganda/SOV_propaganda_strip_aged_texture1.dds"
-		legacy_lazy_load = no
-		noOfFrames = 26
-	}
-	spriteType = {
-		name = "GFX_SOV_propaganda_strip_aged_2"
-		texturefile = "gfx/interface/propaganda/SOV_propaganda_strip_aged_texture2.dds"
-		legacy_lazy_load = no
-		noOfFrames = 26
-	}
-	spriteType = {
-		name = "GFX_SOV_propaganda_strip_aged_3"
-		texturefile = "gfx/interface/propaganda/SOV_propaganda_strip_aged_texture3.dds"
-		legacy_lazy_load = no
-		noOfFrames = 26
+		noOfFrames = 35
 	}
 }

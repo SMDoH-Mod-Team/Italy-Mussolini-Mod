@@ -32,7 +32,7 @@
  form_ITA_meeting_of_self_criticism: "自我批评会"
  form_awarding_of_honors: "授勋"
  form_colosseum_incident: "斗兽场事变"
- ITA_mare_nostrum_category: "我们的海！"
+ ITA_mare_nostrum_category: "地中海事务"
  form_ITA_claim_corsica: "宣称科西嘉主权"
  form_cooperate_with_knights_of_malta: "与马耳他骑士团合作"
  form_attack_Island_malta: "我们一定要解放马耳他！"
@@ -43,6 +43,8 @@
  form_attack_middle_east: "走好我们这一代人的东征路"
  ITA_attack_middle_east_part1: "在中东的特别军事行动-第一阶段"
  form_IRQ_oil_resource: "伊拉克石油"
+ from_ITA_goverence_of_levante: "建立黎凡特总督府"
+ from_establish_syr_condominium: "建立意土共管叙利亚"
  form_ITA_use_sentox_in_eth: "在埃塞俄比亚使用毒气"
  ITA_central_advisory_committee: "[PNF_dynmic_name]-中央顾问委员会"
  ITA_central_advisory_committee_desc: "当前的中顾委主任为：§Y$ITA_gian_galeazzo_ciano$§!"
@@ -87,3 +89,19 @@
  ITA_land_redistribution: "土地改革"
  ITA_land_redistribution_decision: "在[FROM.GetName]进行土地改革"
  form_IPUnion_roman_empire: "$form_roman_empire$"
+
+ ITA_faction_affairs: "阵营事务"
+
+ ITA_force_unilateral_union: "强制要求[FROM.GetName]为单方面联盟"
+ 
+ CHI_building_guangzhou_wuchang_railway: "建造粤汉铁路"
+
+ ITA_fasist_international: "束棒国际"
+ form_fasces_subjet_decision: "在[FROM.GetName]输出革命"
+ form_USA_fasces_subjet_decision: "在[USA.GetName]输出革命"
+ form_USA_fasces_subjet_decision: "在[CUB.GetName]输出革命"
+ form_USA_fasces_subjet_decision: "在[COL.GetName]输出革命"
+ form_USA_fasces_subjet_decision: "在[ECU.GetName]输出革命"
+
+ ITA_mussolini_profile_picture_category: "百变老墨"
+ form_ITA_mussolini_profile_picture: "老墨今天穿什么"

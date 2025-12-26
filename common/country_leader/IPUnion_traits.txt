@@ -86,4 +86,11 @@ leader_traits = {
 	international_trust = {
 		
 	}
+	the_indulgent_aesthete = {
+		political_power_gain = 0.01
+		research_speed_factor = 0.05
+	}
+	country_leader_benito_corporal = {
+		custom_modifier_tooltip = country_leader_benito_corporal_modifier_tt
+	}
 }

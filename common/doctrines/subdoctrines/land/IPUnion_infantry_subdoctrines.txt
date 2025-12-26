@@ -79,5 +79,16 @@ fascism_militia = {
                 max_strength = 0.15
             }
         }
+        protracted_war = {
+        #5
+            mastery = 150
+            militia = {
+                defense = 0.1
+                default_morale = 0.3
+                max_organisation = 2
+            }
+           war_support_factor = 0.05
+           weekly_casualties_war_support = 0.001
+        }
     }
 }

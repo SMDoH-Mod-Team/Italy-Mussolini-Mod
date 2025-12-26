@@ -187,24 +187,6 @@ country_event = {
 @inner_circle_time_tier_3_flag = 211
 
 country_event = {
-	id = ITA_inner_circle.namespace.test
-
-	title = ITA_inner_circle.namespace.test.t
-
-	is_triggered_only = yes
-	
-	fire_only_once = yes
-
-	option = {
-		name = YES
-	}
-
-	option = {
-		name = NO
-	}
-}
-
-country_event = {
 	id = ITA_inner_circle.graziani.start
 
 	hidden = yes

@@ -63,3 +63,12 @@
   PAP_vaticanus: "Vatican City State"
   PAP_vaticanus_ADJ: "Holy See"
   PAP_vaticanus_DEF: "Vatican"
+
+  LEV_neutrality: "Levante Governatorato"
+  LEV_neutrality_ADJ: "Levante"
+  LEV_neutrality_DEF: "Levante Governatorato"
+
+  USAPF: "$USA_CSA_fascism$"
+  USAPF_ADJ: "$USA_CSA_fascism_ADJ$"
+  USAPF_DEF: "$USA_CSA_fascism_DEF$"
+  

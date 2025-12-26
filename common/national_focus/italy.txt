@@ -22,7 +22,6 @@
 
 focus_tree = {
 	id = italian_focus
-	
 
 	country = {
 		factor = 0
@@ -36,6 +35,7 @@ focus_tree = {
 			}
 		}
 	}
+
 
 	shared_focus = AOI_italian_aoi
 
@@ -2808,7 +2808,10 @@ focus_tree = {
 		x = -2
 		y = 0
 
+		cost = 3
+
 		completion_reward = {
+			unlock_decision_tooltip = ITA_propaganda_dig_coal
 			158 = {
 				add_resource = {
 					type = coal
@@ -3992,9 +3995,9 @@ focus_tree = {
 
 			add_doctrine_cost_reduction = {
 				name = ITA_preserve_army_traditions
-				cost_reduction = 0.75
+				cost_reduction = 0.5
 				uses = 1
-				category = cat_grand_battle_plan
+				category = land_doctrine
 			}
 		}
 	}
@@ -4201,7 +4204,7 @@ focus_tree = {
 						type = bunker
 						level = 2
 						province = {
-							id = 11564
+							id = 11735
 						}
 						instant_build = yes
 					}
@@ -4237,12 +4240,12 @@ focus_tree = {
 			custom_effect_tooltip = available_chief_of_army
 			show_ideas_tooltip = ITA_alberto_pariani
 
-			add_doctrine_cost_reduction = {
-				name = ITA_a_bandits_war
-				cost_reduction = 0.75
-				uses = 1
-				category = cat_mobile_warfare
-			}
+			#add_doctrine_cost_reduction = {
+			#	name = ITA_a_bandits_war
+			#	cost_reduction = 0.75
+			#	uses = 1
+			#	category = cat_mobile_warfare
+			#}
 
 			add_doctrine_cost_reduction = {
 				name = ITA_a_bandits_war
@@ -4288,9 +4291,12 @@ focus_tree = {
 					limit = {
 						is_ai = yes
 					}
-					set_technology = {
-						trench_warfare = 0
-						mobile_warfare = 1
+					if = {
+						limit = {
+							has_doctrine = grand_battleplan
+						}
+
+						set_grand_doctrine = new_mobile_warfare
 					}
 				}
 			}
@@ -4323,6 +4329,10 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = unlock_propaganda_campaign_tt
 			unlock_decision_tooltip = ITA_propaganda_be_loyalty_musketeer_for_duce
+			ITA_benito_mussolini = {
+				add_unit_leader_trait = benito_corporal
+				add_country_leader_trait = country_leader_benito_corporal
+			}
 		}
 	}
 
@@ -6897,16 +6907,24 @@ focus_tree = {
 				add_ideas = ITA_hidden_heavy_cruisers_production_ns
 			}			
 
-			add_to_variable = { ITA_iri_consumer_goods_factor = -0.02 }
+			add_to_variable = { ITA_iri_consumer_goods_factor = 0.02 }
 			custom_effect_tooltip = ITA_ricostruzione_industriale_cg_penalty_tt
 
 			navy_experience = 25
 
+
+			add_mastery_bonus = {
+				name = ITA_incrociatori_pesanti
+				bonus = 0.2
+				days = 180
+				track = capital_ships
+			}
+
 			add_doctrine_cost_reduction = {
 				name = ITA_incrociatori_pesanti
-				cost_reduction = 0.75
-				uses = 2
-				category = cat_fleet_in_being
+				cost_reduction = 0.50
+				uses = 1
+				category = naval_doctrine
 			}
 
 			add_tech_bonus = {
@@ -7197,7 +7215,7 @@ focus_tree = {
 			else = {
 				has_tech = improved_destroyer
 			}
-			has_tech = decimetric_radar
+			has_tech = cavity_magnatron
 		}
 
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY_XP FOCUS_FILTER_RESEARCH}
@@ -9458,7 +9476,7 @@ focus_tree = {
 		prerequisite = { focus = ITA_la_battaglia_per_le_nascite }
 
 		x = 0
-		y = 5
+		y = 2
 		relative_position_id = ITA_la_battaglia_per_le_nascite
 		cost = 4
 		available = {
@@ -9466,6 +9484,13 @@ focus_tree = {
 			#	character = ITA_benito_mussolini
 			#	ruling_only = yes
 			#}
+		}
+		
+		offset = {
+			y = 2
+			trigger = {
+				is_ai = yes
+			}
 		}
 
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER}
@@ -9497,10 +9522,10 @@ focus_tree = {
 		id = ITA_devotion
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = ITA_to_live_as_a_lion focus = ITA_boost_the_grand_council_of_fascism }
-		prerequisite = { focus = ITA_strengthen_the_regime }
+		#prerequisite = { focus = ITA_strengthen_the_regime }
 
 		x = -3
-		y = 1
+		y = 0
 		relative_position_id = ITA_strengthen_the_regime
 		cost = 5
 		available = {
@@ -9627,7 +9652,7 @@ focus_tree = {
 		prerequisite = { focus = ITA_believe_obey_fight }
 
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = ITA_believe_obey_fight
 		cost = 10
 
@@ -9690,7 +9715,7 @@ focus_tree = {
 		prerequisite = { focus = ITA_banda_carita }
 
 		x = 0
-		y = 2
+		y = 1
 		relative_position_id = ITA_banda_carita
 		cost = 10
 
@@ -9729,7 +9754,7 @@ focus_tree = {
 		icon = GFX_goal_generic_military_sphere
 		prerequisite = { focus = ITA_culto_del_duce focus = ITA_convene_the_grand_council }
 
-		x = 6
+		x = 7
 		y = 2
 		relative_position_id = ITA_culto_del_duce
 
@@ -9922,9 +9947,9 @@ focus_tree = {
 	focus = {
 		id = ITA_towards_a_greater_italy
 		icon = GFX_focus_ITA_greater_italy
-		prerequisite = { focus = ITA_strengthen_the_regime focus = ITA_blackshirt_loyalty focus = ITA_setting_course }
+		prerequisite = { focus = ITA_strengthen_the_regime }
 		mutually_exclusive = { 
-			focus = ITA_keep_the_course
+			#focus = ITA_keep_the_course
 			focus = ITA_mare_nostrum_bba
 			focus = ITA_helmsman_died
 			focus = ITA_ciano_reinstated
@@ -9946,6 +9971,10 @@ focus_tree = {
 				}
 				has_completed_focus = ITA_convene_the_grand_council
 			}
+		}
+
+		allow_branch = {
+			is_ai = yes
 		}
 
 		bypass = {
@@ -10430,39 +10459,6 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			custom_effect_tooltip = ITA_better_choice_tt
-		}
-	}
-
-	focus = {
-		id = ITA_motherland_of_our_movement
-		icon = GFX_focus_rom_royal_dictatorship
-		relative_position_id = ITA_devotion
-		x = 0
-		y = 2
-		cost = 2
-		prerequisite = {
-			focus = ITA_devotion
-		}
-		available = {
-			has_army_manpower = { size > 2000000 }
-			custom_trigger_tooltip = {
-				tooltip = ITA_new_industrialization_program_factories_required_tt
-				NOT = { num_of_controlled_factories < 150 }
-			}
-			custom_trigger_tooltip = {
-				tooltip = ITA_motherland_of_our_movement_tt
-				ITA = {
-					controls_state = 1049
-				}
-			}
-		}
-		completion_reward = {
-			country_event = IPUnion_country_event.2
-			hidden_effect = {
-				play_song = "AllarmiSiamFascisti"
-			}
-			custom_effect_tooltip = unlock_propaganda_campaign_tt
-			unlock_decision_tooltip = ITA_propaganda_rebuild_to_glory
 		}
 	}
 
@@ -13963,7 +13959,7 @@ focus_tree = {
 		prerequisite = { focus = ITA_setting_course focus = ITA_strengthen_the_regime focus = ITA_blackshirt_loyalty }
 		mutually_exclusive = { 
 			focus = ITA_towards_a_greater_italy
-			focus = ITA_keep_the_course
+			#focus = ITA_keep_the_course
 			focus = ITA_helmsman_died
 			focus = ITA_ciano_reinstated
 			focus = ITA_standard_of_truth
@@ -14007,6 +14003,10 @@ focus_tree = {
 			}
 		}
 
+		allow_branch = {
+			is_ai = yes
+		}
+
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
@@ -14020,7 +14020,7 @@ focus_tree = {
 				limit = {
 					is_in_faction = no
 				}
-				create_faction = "italy_empire_faction"
+				create_faction_from_template = faction_template_italy_empire_faction
 			}
 
 			unlock_decision_tooltip = form_roman_empire
@@ -14555,14 +14555,21 @@ focus_tree = {
 					has_completed_focus = ITA_deus_vult
 					is_faction_leader = no
 				}
-				create_faction = ITA_papal_faction 
+				create_faction_from_template = {
+					template = faction_template_ITA_italian_league
+					name = ITA_papal_faction
+					icon = GFX_faction_logo_generic_7
+				}
 			}
 			IF = {
 				limit = {
 					has_completed_focus = ITA_mare_nostrum_bba
 					is_faction_leader = no
 				}
-				create_faction = ITA_roman_faction
+				create_faction_from_template = {
+					template = faction_template_italy_empire_faction
+					name = ITA_roman_faction
+				}
 			}
 		}
 	}
@@ -15083,6 +15090,12 @@ focus_tree = {
 					option = HIDE
 				}
 				has_completed_focus = ITA_convene_the_grand_council
+			}
+		}
+		offset = {
+			x = 10
+			trigger = {
+				is_ai = yes
 			}
 		}
 		relative_position_id = ITA_triumph_in_africa_bba
@@ -16186,7 +16199,7 @@ focus_tree = {
 				}
 				set_rule = { can_create_factions = yes }
 			}
-			create_faction = ITA_italian_league
+			create_faction_from_template = faction_template_ITA_italian_league
 
 			if = {
 				limit = {
@@ -16378,6 +16391,7 @@ focus_tree = {
 				SOV = {
 					controls_state = 1052 #SOV control of Constanta
 				}
+				has_country_flag = Toulon_Base_Mod_Loaded_Check
 			}
 			SOV = {
 				has_opinion = {
@@ -20642,7 +20656,11 @@ focus_tree = {
 		search_filters = {}
 
 		completion_reward = {
-			create_faction = ITA_united_socialist_front
+			create_faction_from_template = {
+				template = faction_template_POR_popular_front_bloc
+				name = ITA_united_socialist_front
+				icon = GFX_faction_icon_generic_communist
+			}
 
 			custom_effect_tooltip = ITA_defend_the_land_invite_tt
 			if = {
@@ -21408,7 +21426,11 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_POLITICAL}
 
 		completion_reward = {
-			create_faction = ITA_free_states_of_europe
+			create_faction_from_template = {
+				template = faction_template_european_unity
+				name = ITA_free_states_of_europe
+				icon = GFX_faction_logo_generic_12
+			}
 			add_political_power = 50
 			custom_effect_tooltip = ITA_italia_libera_invite_tt
 			if = {
@@ -22357,7 +22379,17 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
-			create_faction = ITA_italian_confederation
+			IF = {
+				limit = {
+					is_in_faction = no
+				}
+				create_faction_from_template = {
+					template = faction_template_european_unity
+					name = ITA_italian_confederation
+					icon = GFX_faction_logo_generic_12
+				}
+			}
+
 			add_ideas = ITA_italian_confederation_leader
 
 			if = {
@@ -23529,6 +23561,9 @@ focus_tree = {
 						SPR = {
 							controls_state = 1051
 						}
+						hidden_trigger = {
+							has_country_flag = Toulon_Base_Mod_Loaded_Check
+						}
 					}
 					transfer_state = 1051
 					#1051 = { add_core_of = ITA }
@@ -23622,9 +23657,10 @@ focus_tree = {
 			hidden_effect = { 
 				if = {
 					limit = {
-						SPR = {
+						ITA = {
 							controls_state = 1051
 						}
+						has_country_flag = Toulon_Base_Mod_Loaded_Check
 					}
 					177 = { add_core_of = ITA }
 					178 = { add_core_of = ITA }
@@ -23659,30 +23695,32 @@ focus_tree = {
 ###THE Mediterranean hegemony
 	focus = {
 		id = ITA_keep_the_course
-		icon = GFX_focus_FIN_finnish_neutrality
-		relative_position_id = ITA_mare_nostrum_bba
-		x = 11
-		y = 0
+		icon = GFX_focus_ITA_keep_the_course
+		prerequisite = { focus = ITA_strengthen_the_regime }
+		relative_position_id = ITA_strengthen_the_regime
+		x = -2
+		y = 1
 		cost = 5
-		prerequisite = { focus = ITA_setting_course focus = ITA_strengthen_the_regime focus = ITA_blackshirt_loyalty }
-		mutually_exclusive = { 
-			focus = ITA_towards_a_greater_italy
-			focus = ITA_mare_nostrum_bba
-		}
 		available = {
 			is_subject = no
-			has_completed_focus = ITA_culto_del_duce
+			#has_completed_focus = ITA_culto_del_duce
 		}
 		allow_branch = {
-			OR = {
-				has_country_leader = {
-					character = ITA_benito_mussolini
-					ruling_only = yes
-				}
-				has_country_flag = ITA_benito_mussolini_flag
-			}
 			NOT = {
 				has_country_flag = IPUnion_country_event.56_flag
+			}
+		}
+		offset = {
+			x = 20
+			trigger = {
+				is_ai = yes
+			}
+		}
+		offset = {
+			x = 30
+			trigger = {
+				is_ai = yes
+				has_dlc = "By Blood Alone"
 			}
 		}
 		completion_reward = {
@@ -23693,6 +23731,7 @@ focus_tree = {
 			add_state_claim = 183
 			add_state_claim = 118
 			add_state_claim = 116
+			add_state_claim = 735
 			#set_power_balance = {
 			#	id = ITA_power_balance
 			#	left_side = ITA_pope_side
@@ -23719,14 +23758,69 @@ focus_tree = {
 			custom_effect_tooltip = ITA_better_choice_tt
 		}
 	}
+
+	focus = {
+		id = ITA_motherland_of_our_movement
+		icon = GFX_focus_rom_royal_dictatorship
+		relative_position_id = ITA_keep_the_course
+		x = 3
+		y = 0
+		cost = 5
+		prerequisite = { focus = ITA_strengthen_the_regime }
+		#prerequisite = {
+		#	focus = ITA_devotion
+		#}
+		allow_branch = {
+			NOT = {
+				has_country_flag = IPUnion_country_event.56_flag
+			}
+			#has_country_flag = IPUnion_country_event.56_flag
+		}
+		available = {
+			has_army_manpower = { size > 2000000 }
+			custom_trigger_tooltip = {
+				tooltip = ITA_new_industrialization_program_factories_required_tt
+				NOT = { num_of_controlled_factories < 150 }
+			}
+			#custom_trigger_tooltip = {
+			#	tooltip = ITA_motherland_of_our_movement_tt
+			#	ITA = {
+			#		controls_state = 1049
+			#	}
+			#	has_country_flag = Toulon_Base_Mod_Loaded_Check
+			#}
+			controls_province = 11564
+			controls_state = 735
+			any_country = {
+				OR = {
+					original_tag = ITA
+					is_subject_of = ITA
+				}
+				controls_state = 446
+			}
+			controls_state = 1
+			controls_state = 458
+			controls_state = 665
+			controls_state = 116
+		}
+		completion_reward = {
+			country_event = IPUnion_country_event.2
+			hidden_effect = {
+				play_song = "LacanzonedelCarnaro"
+			}
+			custom_effect_tooltip = unlock_propaganda_campaign_tt
+			unlock_decision_tooltip = ITA_propaganda_rebuild_to_glory
+		}
+	}
+
 	focus = {
 		id = ITA_control_the_mediterranean
 		icon = GFX_focus_generic_mediterranean_sea_focus
 		relative_position_id = ITA_keep_the_course
-		x = -2
-		y = 5
+		x = -1
+		y = 1
 		cost = 4
-		prerequisite = { focus = ITA_national_economy_fascismful }
+		prerequisite = { focus = ITA_keep_the_course }
 		available = {
 			
 		}
@@ -23749,7 +23843,7 @@ focus_tree = {
 			custom_effect_tooltip = unlock_decision_category_ITA_mare_nostrum_category_tt
 		}
 	}
-	
+
 	#focus = {
 	#	id = ITA_reconquest_of_malta
 	#	icon = x
@@ -23772,7 +23866,7 @@ focus_tree = {
 		x = -2
 		y = 0
 		cost = 4
-		prerequisite = { focus = ITA_national_economy_fascismful }
+		prerequisite = { focus = ITA_keep_the_course }
 		available = {
 
 		}
@@ -23814,7 +23908,11 @@ focus_tree = {
 			}
 			EGY = {
 				set_rule = { can_create_factions = yes }
-				create_faction = faction_middle_east_command
+				create_faction_from_template = {
+					template = faction_template_defensive_democratic
+					name = faction_middle_east_command
+					icon = GFX_faction_logo_generic_12
+				}
 			}
 
 			EGY = {
@@ -24121,16 +24219,15 @@ focus_tree = {
 		icon = GFX_goal_generic_oil_refinery
 		cost = 5
 		relative_position_id = ITA_sword_aimed_middle_east
-		prerequisite = {
-			focus = ITA_sword_aimed_middle_east
-		}
-		x = 0
+		prerequisite = { focus = ITA_sword_aimed_middle_east }
+		prerequisite = { focus = ITA_control_the_mediterranean }
+		x = 1
 		y = 1
 		available = {
 			any_country = {
 				OR = {
 					original_tag = ITA
-					is_puppet_of = ITA
+					is_subject_of = ITA
 				}
 				controls_state = 656
 			}
@@ -24151,7 +24248,7 @@ focus_tree = {
 			else_if = {
 				limit = {
 					any_country = {
-						is_puppet_of = ITA
+						is_subject_of = ITA
 						controls_state = 656
 					}
 				}
@@ -24170,156 +24267,29 @@ focus_tree = {
 	}
 
 	focus = {
-		id = ITA_leap_forward
-		prerequisite = { focus = ITA_keep_the_course }
-		available = { has_completed_focus = ITA_believe_obey_fight }
-		icon = GFX_SOV_socialist_emulation_ccp_2d_sov_compatibility
-		relative_position_id = ITA_keep_the_course
-		x = 0
-		y = 1
-		cost = 5
-		completion_reward = {
-			custom_effect_tooltip = ITA_leap_forward_tt
-			add_ideas = idea_ITA_leap_forward_1
-			hidden_effect = {
-				add_ideas = idea_ITA_reality_1
-				country_event = {
-					id = IPUnion_leap_forward_event.1
-					days = 10
-				}
-				set_country_flag = ITA_leap_forward_flag
-			}
-		}
-	}
-
-	focus = {
-		id = ITA_Adjust_Consolidate_Fill_out_and_Improve
-		prerequisite = { focus = ITA_leap_forward }
-		icon = GFX_focus_generic_industry_3
-		relative_position_id = ITA_leap_forward
-		x = 0
-		y = 1
-		cost = 5
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = ITA_Adjust_Consolidate_Fill_out_and_Improve_tt
-				NOT = {
-					has_country_flag = ITA_leap_forward_flag
-				}
-			}
-		}
-		completion_reward = {
-			custom_effect_tooltip = ITA_Adjust_Consolidate_Fill_out_and_Improve_1_tt
-			custom_effect_tooltip = ITA_Adjust_Consolidate_Fill_out_and_Improve_2_tt
-			hidden_effect = {
-				country_event = {
-					id = IPUnion_Adjust_Consolidate_Fill_out_and_Improve.1
-					days = 1
-				}
-			}
-		}
-	}
-	
-	focus = {
-		id = ITA_learn_form_camicie_nere
-		prerequisite = { focus = ITA_Adjust_Consolidate_Fill_out_and_Improve }
-		icon = GFX_focus_ARG_march_to_la_casa_rosada
-		relative_position_id = ITA_keep_the_course
-		x = 0
-		y = 3
-		cost = 5
-		completion_reward = {
-			add_ideas = idea_ITA_learn_form_camicie_nere
-		}
-	}
-
-	focus = {
-		id = ITA_learn_form_foggia
-		prerequisite = { focus = ITA_Adjust_Consolidate_Fill_out_and_Improve }
-		icon = GFX_focus_generic_farmland
-		relative_position_id = ITA_keep_the_course
-		x = 2
-		y = 3
-		cost = 5
-		completion_reward = {
-			add_ideas = idea_ITA_learn_form_foggia
-
-			if = {
-				limit = {
-					has_completed_focus = ITA_learn_form_torina
-				}
-				custom_effect_tooltip = unlock_propaganda_campaign_tt
-				unlock_decision_tooltip = ITA_propaganda_learn_form_foggia_milano
-			}
-		}
-	}
-
-	focus = {
-		id = ITA_learn_form_torina
-		prerequisite = { focus = ITA_Adjust_Consolidate_Fill_out_and_Improve }
-		icon = GFX_focus_generic_modernize_industry
-		relative_position_id = ITA_keep_the_course
-		x = -2
-		y = 3
-		cost = 5
-		completion_reward = {
-			add_ideas = idea_ITA_learn_form_torina
-			if = {
-				limit = {
-					has_completed_focus = ITA_learn_form_foggia
-				}
-				custom_effect_tooltip = unlock_propaganda_campaign_tt
-				unlock_decision_tooltip = ITA_propaganda_learn_form_foggia_milano
-			}
-		}
-	}
-
-	focus = {
 		id = ITA_national_economy_fascismful ##继续推行国民经济法西斯化
 		icon = GFX_focus_GER_monarchy_compromise
+		prerequisite = { focus = ITA_strengthen_the_regime }
 		relative_position_id = ITA_keep_the_course
-		x = 0
-		y = 4
-		prerequisite = { focus = ITA_learn_form_foggia }
-		prerequisite = { focus = ITA_learn_form_camicie_nere }
-		prerequisite = { focus = ITA_learn_form_torina }
+		x = 7
+		y = 0
 		cost = 4
 		available = {
 
 		}
+		allow_branch = {
+			NOT = {
+				has_country_flag = IPUnion_country_event.56_flag
+			}
+		}
+		offset = {
+		}
 		completion_reward = {
-			custom_effect_tooltip = ITA_enter_the_high_stage_of_imperialism_tt_1
+			#custom_effect_tooltip = ITA_enter_the_high_stage_of_imperialism_tt_1
 			add_timed_idea = {
 				idea = idea_ITA_forced_nationalization
 				days = 60
 			}
-			hidden_effect = {
-				country_event = {
-					id = IPUNion_country_event.11
-					days = 15
-				}
-			}
-		}
-		#country_event = {
-		#	id = IPUnion_country_event.11
-		#}
-	}
-
-	focus = {
-		id = ITA_enter_the_high_stage_of_imperialism
-		icon = GFX_focus_generic_motor_cycle
-		relative_position_id = ITA_national_economy_fascismful
-		x = 0
-		y = 1
-		prerequisite = {
-			focus = ITA_national_economy_fascismful
-		}
-		available = {
-			always = no
-		}
-		cost = 8.6
-		completion_reward = {
-			#custom_effect_tooltip = ITA_enter_the_high_stage_of_imperialism_tt_1
 			every_core_state = {
 				limit = {
 					is_fully_controlled_by = ROOT
@@ -24345,16 +24315,138 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = ITA_national_economy_fascismful_tt
 			show_ideas_tooltip = ITA_autarkic_economy
+			#hidden_effect = {
+			#	country_event = {
+			#		id = IPUNion_country_event.11
+			#		days = 15
+			#	}
+			#}
+		}
+		#country_event = {
+		#	id = IPUnion_country_event.11
+		#}
+	}
+
+	focus = {
+		id = ITA_leap_forward
+		prerequisite = { focus = ITA_national_economy_fascismful }
+		relative_position_id = ITA_national_economy_fascismful
+		x = 2
+		y = 1
+		icon = GFX_SOV_socialist_emulation_ccp_2d_sov_compatibility
+		cost = 5
+		completion_reward = {
+			custom_effect_tooltip = ITA_leap_forward_tt
+			add_ideas = idea_ITA_leap_forward_1
+			hidden_effect = {
+				add_ideas = idea_ITA_reality_1
+				country_event = {
+					id = IPUnion_leap_forward_event.1
+					days = 10
+				}
+				set_country_flag = ITA_leap_forward_flag
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_Adjust_Consolidate_Fill_out_and_Improve
+		prerequisite = { focus = ITA_leap_forward }
+		icon = GFX_focus_generic_industry_3
+		relative_position_id = ITA_leap_forward
+		x = 1
+		y = 1
+		cost = 5
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = ITA_Adjust_Consolidate_Fill_out_and_Improve_tt
+				NOT = {
+					has_country_flag = ITA_leap_forward_flag
+				}
+				has_country_flag = ITA_leap_forward_end_flag
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = ITA_Adjust_Consolidate_Fill_out_and_Improve_1_tt
+			custom_effect_tooltip = ITA_Adjust_Consolidate_Fill_out_and_Improve_2_tt
+			hidden_effect = {
+				country_event = {
+					id = IPUnion_Adjust_Consolidate_Fill_out_and_Improve.1
+					days = 1
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = ITA_learn_form_camicie_nere
+		#prerequisite = { focus = ITA_Adjust_Consolidate_Fill_out_and_Improve }
+		prerequisite = { focus = ITA_keep_the_course }
+		#prerequisite = { focus = ITA_learn_form_foggia }
+		icon = GFX_focus_ARG_march_to_la_casa_rosada
+		relative_position_id = ITA_keep_the_course
+		x = 2
+		y = 2
+		cost = 5
+		completion_reward = {
+			add_ideas = idea_ITA_learn_form_camicie_nere
+		}
+	}
+
+	focus = {
+		id = ITA_learn_form_foggia
+		#prerequisite = { focus = ITA_Adjust_Consolidate_Fill_out_and_Improve }
+		prerequisite = { focus = ITA_national_economy_fascismful }
+		prerequisite = { focus = ITA_keep_the_course }
+		icon = GFX_focus_generic_farmland
+		relative_position_id = ITA_keep_the_course
+		x = 5
+		y = 1
+		cost = 5
+		completion_reward = {
+			add_ideas = idea_ITA_learn_form_foggia
+
+			if = {
+				limit = {
+					has_completed_focus = ITA_learn_form_torina
+				}
+				custom_effect_tooltip = unlock_propaganda_campaign_tt
+				unlock_decision_tooltip = ITA_propaganda_learn_form_foggia_milano
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_learn_form_torina
+		#prerequisite = { focus = ITA_Adjust_Consolidate_Fill_out_and_Improve }
+		prerequisite = { focus = ITA_leap_forward }
+		#prerequisite = { focus = ITA_national_economy_fascismful }
+		#prerequisite = { focus = ITA_keep_the_course }
+		prerequisite = { focus = ITA_learn_form_foggia }
+		icon = GFX_focus_generic_modernize_industry
+		relative_position_id = ITA_keep_the_course
+		x = 8
+		y = 2
+		cost = 5
+		completion_reward = {
+			add_ideas = idea_ITA_learn_form_torina
+			if = {
+				limit = {
+					has_completed_focus = ITA_learn_form_foggia
+				}
+				custom_effect_tooltip = unlock_propaganda_campaign_tt
+				unlock_decision_tooltip = ITA_propaganda_learn_form_foggia_milano
+			}
 		}
 	}
 
 	focus = {
 		id = ITA_Issuance_new_version_lira
 		icon = GFX_focus_generic_currency_reforms
-		relative_position_id = ITA_enter_the_high_stage_of_imperialism
-		x = -2
-		y = 1
-		prerequisite = { focus = ITA_enter_the_high_stage_of_imperialism }
+		relative_position_id = ITA_national_economy_fascismful
+		x = -1
+		y = 2
+		prerequisite = { focus = ITA_learn_form_foggia }
 		cost = 2
 		completion_reward = {
 			if = {
@@ -24443,7 +24535,7 @@ focus_tree = {
 		id = ITA_mussolini_house
 		icon = GFX_focus_generic_low_cost_housing
 		relative_position_id = ITA_Issuance_new_version_lira
-		x = 1
+		x = 3
 		y = 1
 		prerequisite = { focus = ITA_Issuance_new_version_lira }
 		cost = 3
@@ -24710,7 +24802,7 @@ focus_tree = {
 		icon = GFX_focus_generic_workers
 		prerequisite = { focus = ITA_mussolini_house }
 
-		x = 1
+		x = -1
 		y = 1
 		relative_position_id = ITA_mussolini_house
 		cost = 5
@@ -24766,10 +24858,10 @@ focus_tree = {
 		id = ITA_planned_parenthood
 		icon = GFX_focus_generic_population_growth
 		relative_position_id = ITA_workers_rights
-		x = 1
-		y = 1
+		x = 2
+		y = 0
 		prerequisite = {
-			focus = ITA_workers_rights
+			focus = ITA_mussolini_house
 		}
 		cost = 5
 		available = {
@@ -24941,8 +25033,9 @@ focus_tree = {
 		icon = GFX_focus_generic_farmland
 		prerequisite = { focus = ITA_industrial_expansion }
 		prerequisite = { focus = ITA_workers_rights }
+		prerequisite = { focus = ITA_planned_parenthood }
 
-		x = 1
+		x = 3
 		y = 1
 		relative_position_id = ITA_industrial_expansion
 		cost = 5
@@ -25025,6 +25118,8 @@ focus_tree = {
 		icon = GFX_focus_GER_wirtschaftswunder
 		prerequisite = { focus = ITA_invest_in_vereinigte_stahlwerke }
 		prerequisite = { focus = ITA_agricultural_reforms }
+		prerequisite = { focus = ITA_increased_trade }
+		prerequisite = { focus = ITA_urbanization }
 
 		x = 1
 		y = 1
@@ -25160,12 +25255,13 @@ focus_tree = {
 	focus = {
 		id = ITA_urbanization
 		icon = GFX_focus_generic_full_employment
-		prerequisite = { focus = ITA_agricultural_reforms }
+		prerequisite = { focus = ITA_industrial_expansion }
+		prerequisite = { focus = ITA_workers_rights }
 		prerequisite = { focus = ITA_planned_parenthood }
 
 		x = 1
 		y = 1
-		relative_position_id = ITA_agricultural_reforms
+		relative_position_id = ITA_industrial_expansion
 		cost = 5
 		available = {
 			OR ={
@@ -25189,7 +25285,7 @@ focus_tree = {
 					}
 				}
 				random = {
-					chance = 100
+					chance = 40
 					country_event = IPUnion_country_event.54
 				}
 			}
@@ -25229,10 +25325,14 @@ focus_tree = {
 	focus = {
 		id = ITA_build_center_railway
 		icon = GFX_goal_generic_construct_infrastructure
-		prerequisite  = { focus = ITA_enter_the_high_stage_of_imperialism }
-		relative_position_id = ITA_enter_the_high_stage_of_imperialism
-		x = 3
-		y = 1
+		#prerequisite  = { focus = ITA_enter_the_high_stage_of_imperialism }
+		#prerequisite = { focus = ITA_keep_the_course }
+		#prerequisite = { focus = ITA_national_economy_fascismful }
+		prerequisite = { focus = ITA_keep_the_course }
+		prerequisite = { focus = ITA_national_economy_fascismful }
+		relative_position_id = ITA_national_economy_fascismful
+		x = -7
+		y = 2
 		cost = 3
 		available = {
 			controls_state = 115
@@ -25261,7 +25361,7 @@ focus_tree = {
 		icon = GFX_focus_generic_hydroelectric_energy
 		prerequisite = { focus = ITA_Issuance_new_version_lira focus = ITA_build_center_railway }
 
-		x = -2
+		x = 3
 		y = 1
 		relative_position_id = ITA_build_center_railway
 		cost = 4
@@ -25318,7 +25418,7 @@ focus_tree = {
 		icon = GFX_focus_GER_kdf_wagen
 		prerequisite = { focus = ITA_build_center_railway }
 
-		x = 2
+		x = 1
 		y = 1
 		relative_position_id = ITA_build_center_railway
 		cost = 3
@@ -25336,6 +25436,7 @@ focus_tree = {
 				}
 				add_extra_state_shared_building_slots = 5
 			}
+			custom_effect_tooltip = ITA_generic_state_capital_sup_tt
 			add_to_variable = { 
 				GER_industrial_production_speed_buildings_factor = 0.05
 				tooltip = production_speed_buildings_factor_tt
@@ -25352,7 +25453,7 @@ focus_tree = {
 
 		prerequisite = { focus = ITA_build_center_railway }
 
-		x = 0
+		x = -2
 		y = 1
 		relative_position_id = ITA_build_center_railway
 		cost = 4
@@ -25394,7 +25495,7 @@ focus_tree = {
 		icon = GFX_focus_chi_flying_tigers
 		prerequisite = { focus = ITA_innovative_warfare }
 		relative_position_id = ITA_innovative_warfare
-		x = -1
+		x = -2
 		y = 1
 		cost = 4
 		available = {
@@ -25412,7 +25513,7 @@ focus_tree = {
 		icon = GFX_focus_SWE_Vasa_II
 		prerequisite = { focus = ITA_innovative_warfare }
 		relative_position_id = ITA_innovative_warfare
-		x = 1
+		x = 2
 		y = 1
 		cost = 4
 		available = {
@@ -25431,11 +25532,11 @@ focus_tree = {
 	focus = {
 		id = ITA_land_cruiser_focus
 		icon = GFX_focus_FIN_foreign_anti_air
-		prerequisite = { focus = ITA_brain_update }
-		prerequisite = { focus = ITA_Return_to_naval_glory }
+		#prerequisite = { focus = ITA_brain_update }
+		prerequisite = { focus = ITA_innovative_warfare }
 		relative_position_id = ITA_innovative_warfare
 		x = 0
-		y = 2
+		y = 1
 		cost = 4
 		completion_reward = {
 			set_technology = {
@@ -25447,14 +25548,13 @@ focus_tree = {
 	focus = {
 		id = ITA_FRA_treaty_focus
 		icon = GFX_focus_chi_reach_out_to_france
-		prerequisite = {
-			focus = ITA_national_economy_fascismful
-		}
+		prerequisite = { focus = ITA_keep_the_course }
+
 
 		mutually_exclusive = { focus = ITA_FRA_base_in_far_east }
 		relative_position_id = ITA_keep_the_course
-		x = 2
-		y = 5
+		x = 1
+		y = 1
 		cost = 3
 		available = {
 			FRA = {
@@ -25483,7 +25583,7 @@ focus_tree = {
 		x = 2
 		y = 0
 		cost = 5
-		prerequisite = { focus = ITA_national_economy_fascismful }
+		prerequisite = { focus = ITA_keep_the_course }
 		mutually_exclusive = { focus = ITA_FRA_treaty_focus }
 		available = {
 			custom_trigger_tooltip = {
@@ -25491,6 +25591,7 @@ focus_tree = {
 				FRA = {
 					controls_state = 1050
 				}
+				has_country_flag = Toulon_Base_Mod_Loaded_Check
 			}
 		}
 		completion_reward = {
@@ -25508,7 +25609,7 @@ focus_tree = {
 		}
 		cost = 4
 		relative_position_id = ITA_Return_to_naval_glory
-		x = 1
+		x = -1
 		y = 1
 		available = {
 			has_completed_focus = ITA_FRA_treaty_focus
@@ -25517,6 +25618,7 @@ focus_tree = {
 				FRA = {
 					controls_state = 1047
 				}
+				has_country_flag = Toulon_Base_Mod_Loaded_Check
 			}
 		}
 		completion_reward = {
@@ -25548,16 +25650,19 @@ focus_tree = {
 		id = ITA_be_careful_eth_puppet_sud
 		icon = GFX_focus_generic_camel_corps
 		cost = 4
-		relative_position_id = ITA_miracolo_economico
-		x = 5
-		y = 0
+		relative_position_id = ITA_land_cruiser_focus
+		x = -1
+		y = 1
+		prerequisite = { focus = ITA_land_cruiser_focus }
+		prerequisite = { focus = ITA_brain_update }
+		prerequisite = { focus = ITA_Return_to_naval_glory }
 		#prerequisite = {
 		#	focus = ITA_miracolo_economico
 			#focus = ITA_land_cruiser_focus
 		#}
-		prerequisite = {
-			focus = ITA_land_cruiser_focus
-		}
+		#prerequisite = {
+		#	focus = ITA_land_cruiser_focus
+		#}
 		available = {
 			OR = {
 				ITA = {
@@ -25579,48 +25684,51 @@ focus_tree = {
 				AND = {
 					country_exists = AOI
 					AOI = {
-						is_puppet_of = ITA
+						is_subject_of = ITA
 					}
 				}
 			}
-			ENG = {
-				has_opinion = {
-					target = ITA
-					value > 50
-				}
+			country_exists = EGY
+			EGY = {
+				is_subject_of = ITA
 			}
 		}
 		completion_reward = {
-			EGY = {
-				transfer_state = 767
-				transfer_state = 551
-				transfer_state = 883
-				transfer_state = 887
-				transfer_state = 549
-				transfer_state = 886
-				transfer_state = 885
-				transfer_state = 884
+			hidden_effect = {
+				ITA = {
+					transfer_state = 767
+					transfer_state = 551
+					transfer_state = 883
+					transfer_state = 887
+					transfer_state = 549
+					transfer_state = 886
+					transfer_state = 885
+					transfer_state = 884
+				}
 			}
-			#release_autonomy = {
-			#	target = SUD
-			#	autonomy_state = autonomy_puppet
-			#	freedom_level = 0.5
-			#}
-			#hidden_effect = {
-			#	SUD = {
-			#		add_ideas = idea_ITA_neutrality_puppet
-			#		add_popularity = {
-			#			ideology = neutrality
-			#			popularity = 0.60
-			#		}
-			#	}
-			#}
-			#SUD = {
-			#	set_politics = {
-			#		ruling_party = neutrality
-			#	}
-			#	set_cosmetic_tag = SUD_ITA_EGY
-			#}
+			release_autonomy = {
+				target = SUD
+				autonomy_state = autonomy_condominium
+			}
+			hidden_effect = {
+				SUD = {
+					set_politics = {
+						ruling_party = neutrality
+					}
+					set_cosmetic_tag = SUD_ITA_EGY
+				}
+				SUD = {
+					#add_ideas = idea_ITA_neutrality_puppet
+					add_popularity = {
+						ideology = neutrality
+						popularity = 0.60
+					}
+					load_focus_tree = {
+						tree = IPUnion_empty_focus_tree
+					}
+					add_ideas = idea_ITE_condominium
+				}
+			}
 		}
 	}
 
@@ -27664,10 +27772,10 @@ focus_tree = {
 		id = ITA_triumvirate
 		icon = GFX_focus_ITA_the_social_republic_prevails
 		cost = 5
-		relative_position_id = ITA_enter_the_high_stage_of_imperialism
-		x = 0
-		y = 1
-		prerequisite = { focus = ITA_enter_the_high_stage_of_imperialism }
+		relative_position_id = ITA_national_economy_fascismful
+		x = -3
+		y = 2
+		prerequisite = { focus = ITA_keep_the_course }
 		available = {
 			AND = {
 				NOT = {
@@ -27691,7 +27799,11 @@ focus_tree = {
 			}
 			else = {
 				set_rule = { can_create_factions = yes }
-				create_faction = faction_ITA_triumvirate
+				create_faction_from_template = {
+					template = faction_template_ITA_italian_league
+					name = Triumvirate_faction_name
+					icon = GFX_faction_logo_generic_10
+				}
 			}
 			unlock_decision_category_tooltip = IPUnion_Tirumvirate
 
@@ -27729,7 +27841,7 @@ focus_tree = {
 			AND = {
 				country_exists = AOI
 				AOI = {
-					is_puppet_of = ITA
+					is_subject_of = ITA
 				}
 			}
 			AOI = {
@@ -27813,11 +27925,12 @@ focus_tree = {
 	focus = {
 		id = ITA_helmsman_died
 		icon = GFX_focus_ITA_culto_del_duce_bw
-		relative_position_id = ITA_mare_nostrum_bba
-		x = 11
-		y = 0
+		relative_position_id = ITA_strengthen_the_regime
+		x = 0
+		y = 1
 		cost = 5
-		prerequisite = { focus = ITA_setting_course focus = ITA_strengthen_the_regime focus = ITA_blackshirt_loyalty }
+		prerequisite = { focus = ITA_strengthen_the_regime }
+		#prerequisite = { focus = ITA_strengthen_the_regime }
 		mutually_exclusive = { 
 			focus = ITA_towards_a_greater_italy
 			focus = ITA_mare_nostrum_bba
@@ -27895,6 +28008,11 @@ focus_tree = {
 				ideology = fascism
 				name = PNF_conservative
 				long_name = PNF_conservative_long
+			}
+			ITA_grand_council = {
+				promote_character = {
+					ideology = fascism_ideology
+				}
 			}
 		}
 	}
@@ -27985,17 +28103,20 @@ focus_tree = {
 	focus = {
 		id = ITA_ciano_reinstated
 		icon = GFX_focus_GER_strengthen_the_waffen_ss
-		relative_position_id = ITA_mare_nostrum_bba
-		x = 11
-		y = 0
+		relative_position_id = ITA_strengthen_the_regime
+		x = 0
+		y = 1
 		cost = 5
-		prerequisite = { focus = ITA_setting_course focus = ITA_strengthen_the_regime focus = ITA_blackshirt_loyalty }
+		prerequisite = { focus = ITA_strengthen_the_regime }
 		mutually_exclusive = { 
 			focus = ITA_towards_a_greater_italy
 			focus = ITA_mare_nostrum_bba
 		}
 		allow_branch = {
 			has_country_flag = ITA_side_fight_flag
+			NOT = {
+				has_country_flag = IPUnion_country_event.60.flag
+			}
 		}
 		available = {
 			#is_subject = no
@@ -28178,11 +28299,11 @@ focus_tree = {
 	focus = {
 		id = ITA_standard_of_truth
 		icon = GFX_focus_GER_strengthen_the_waffen_ss
-		relative_position_id = ITA_mare_nostrum_bba
-		x = 11
-		y = 0
+		relative_position_id = ITA_strengthen_the_regime
+		x = 0
+		y = 1
 		cost = 2
-		prerequisite = { focus = ITA_setting_course focus = ITA_strengthen_the_regime focus = ITA_blackshirt_loyalty }
+		prerequisite = { focus = ITA_strengthen_the_regime }
 		mutually_exclusive = { 
 			focus = ITA_towards_a_greater_italy
 			focus = ITA_mare_nostrum_bba
@@ -28200,7 +28321,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			
+			custom_effect_tooltip = coming_soooooooooooon_tt
 		}
 	}
 
@@ -28347,7 +28468,6 @@ focus_tree = {
 					target = ITA
 					modifier = ITA_lateranensi_patti
 				}
-				break_embargo = ITA
 			}
 			remove_opinion_modifier = {
 				target = PAP
@@ -30733,7 +30853,7 @@ focus_tree = {
 		
 		completion_reward = {
 			add_political_power = 100
-			add_stability = 15
+			add_stability = 0.15
 		}
 	}
 

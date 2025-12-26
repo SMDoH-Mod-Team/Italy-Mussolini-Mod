@@ -298,7 +298,12 @@
  IPUnion_country_event.86.t: "新教宗"
  IPUnion_country_event.86.d: "位于梵蒂冈中心的大教堂上空漂浮着一缕白烟，教宗庇护十二世就此上任"
  IPUnion_country_event.86.a: "Holy Father!"
- 
+ IPUnion_country_event.87.t: "百变老墨"
+ IPUnion_country_event.87.desc: "老墨今天穿什么？"
+ IPUnion_country_event.87.a: "经典套装"
+ IPUnion_country_event.87.b: "娘化经典套装"
+ IPUnion_country_event.87.c: "娘化奥古斯都"
+ IPUnion_country_event.87.d: "圣诞帽"
 
 
  IPUnion_debug_event.1.t: "为[FROM.GetName]添加政治宣传变量"
@@ -474,4 +479,18 @@
  ITA_inner_circle.2.b: "不值得领袖信任"
  ITA_inner_circle.2.c: "上一页"
  
- 
+ italy_autonomy.1.t: "[FROM.GetName]要求与我们结成单方面联盟！"
+ italy_autonomy.1.d: "这与吞并别无二致了"
+ italy_autonomy.1.a: "换个名头而已，又如何呢？"
+ italy_autonomy.1.b: "恐怕要让他们失望了"
+ italy_autonomy.2.t: "[FROM.GetName]同意了我们结成单方面联盟的要求"
+ italy_autonomy.2.d: "对他们来说不过就是换个名头而已，而我们考虑的就多了。"
+ italy_autonomy.2.a: "我们就此结为同盟"
+ italy_autonomy.3.t: "[FROM.GetName]拒绝了我们结成单方面联盟的要求"
+ italy_autonomy.3.d: "该死的，他们哪来的胆子？"
+ italy_autonomy.3.a: "开战！开战！"
+
+
+ IPUnion_china.1.t: "粤汉铁路通车"
+ IPUnion_china.1.d: "经过约40年的建造，自武昌至广州长约1056公里的粤汉铁路终于全线贯通了"
+ IPUnion_china.1.a: "太好了！"

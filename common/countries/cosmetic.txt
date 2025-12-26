@@ -241,6 +241,11 @@ CHI_warlord_PRC = {
 	color_ui = rgb { 178 34 60 }
 }
 
+PRC_proclaimed = {
+	color = rgb { 245 12 55 }
+	color_ui = rgb { 178 34 60 }
+}
+
 CHI_power_struggle_defeated = {
 	color = rgb { 152 130 191 }
 	color_ui = rgb { 198 169 248 }
@@ -1796,11 +1801,18 @@ JAP_pacific_union = {
 	color = rgb { 230 184 0 } 
 	color_ui = rgb { 230 184 0 }
 }
+
 ITA_POR_UNION = {
 	color = rgb { 0 100 0 }
 	color_ui = rgb { 0 100 0 }
 }
+
 EGY_KOI = {
+	color = rgb { 230 230 70 }
+	color_ui = rgb { 230 230 70 }
+}
+
+SUD_ITA_EGY = {
 	color = rgb { 230 230 70 }
 	color_ui = rgb { 230 230 70 }
 }
@@ -1809,6 +1821,7 @@ DJI_French = {
 	color = rgb { 57  113  228 }
 	color_ui = rgb { 57  113  228 }
 }
+
 SOM_British = {
 	color = rgb { 201 56 93 }
 	color_ui = rgb { 255 73 121 }
@@ -1817,4 +1830,24 @@ SOM_British = {
 PAP_vaticanus = {
 	color = rgb { 255 255 183 }
 	color_ui = rgb { 255 255 183 }
+}
+
+USAPF = {
+	color = rgb { 145 163 176  }
+	color_ui = rgb { 186 205 219 }
+}
+
+CUB_fasces = {
+	color = rgb { 152  130  191 }
+	color_ui = rgb { 152  130  191 }
+}
+
+COL_fasces = {
+	color = rgb { 222  187  91 }
+	color_ui = rgb { 222  187  91 }
+}
+
+ECU_fasces = {
+	color = rgb { 249  146  98 }
+	color_ui = rgb { 249  146  98 }
 }

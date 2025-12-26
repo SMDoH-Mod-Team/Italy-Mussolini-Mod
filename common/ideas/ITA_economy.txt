@@ -10,7 +10,7 @@ ideas = {
 			}
 
 			available = {
-				has_completed_focus = ITA_enter_the_high_stage_of_imperialism
+				has_completed_focus = ITA_national_economy_fascismful
 			}
 
 			cost = 150
