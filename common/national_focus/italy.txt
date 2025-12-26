@@ -4329,6 +4329,10 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = unlock_propaganda_campaign_tt
 			unlock_decision_tooltip = ITA_propaganda_be_loyalty_musketeer_for_duce
+			ITA_benito_mussolini = {
+				add_unit_leader_trait = benito_corporal
+				add_country_leader_trait = country_leader_benito_corporal
+			}
 		}
 	}
 

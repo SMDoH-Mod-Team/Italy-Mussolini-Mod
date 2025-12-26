@@ -1,0 +1,11 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_trait_benito_corporal"
+		texturefile = "gfx/interface/traits/personal/trait_militias_officer.dds"
+	}
+
+	spriteType = {
+		name = "GFX_trait_benito_mussolini"
+		texturefile = "gfx/interface/traits/personal/trait_militias_officer.dds"
+	}
+}

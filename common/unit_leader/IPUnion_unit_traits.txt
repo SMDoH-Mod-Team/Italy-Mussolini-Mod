@@ -1,0 +1,51 @@
+leader_traits = {
+	benito_corporal = {
+		type = all
+		trait_type = personality_trait
+		gain_xp = {
+			always = no # not gainable
+		}
+		allowed = {
+			#always = no # not gainable
+		}
+		modifier = {
+			army_artillery_attack_factor = 0.1
+			breakthrough_factor = 0.1
+		}
+		non_shared_modifier = {
+			
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		new_commander_weight = {
+			factor = 0
+		}
+	}
+
+	benito_mussolini = {
+		type = all
+		trait_type = personality_trait
+		gain_xp = {
+			always = no # not gainable
+		}
+		allowed = {
+			always = no # not gainable
+		}
+		modifier = {
+			
+		}
+		
+		non_shared_modifier = {
+			
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		new_commander_weight = {
+			factor = 0
+		}
+	}
+}

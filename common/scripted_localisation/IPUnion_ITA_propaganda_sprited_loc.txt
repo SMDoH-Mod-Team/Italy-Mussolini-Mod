@@ -859,3 +859,10 @@ defined_text = {
 		localization_key = idea_desc|idea_ITA_propaganda_cheer_for_plane_insdustry
 	}
 }
+
+defined_text = {
+	name = ITA_country_leader_benito_corporal_modifier_defined_text
+	text = {
+		localization_key = idea_desc|idea_reaserch_bonus_benito_corporal
+	}
+}

@@ -2157,6 +2157,7 @@ country_event = {
 		name = IPUnion_country_event.59.a
 		add_political_power = 30
 		add_ideas = idea_ITA_party_command_guns
+		set_grand_doctrine = party_command_forces
 	}
 }
 
