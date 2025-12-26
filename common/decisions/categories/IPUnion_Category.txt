@@ -192,3 +192,11 @@ ITA_fasist_international = {
 		original_tag = ITA
 	}
 }
+ITA_mussolini_profile_picture_category = {
+	priority = 80
+	icon = x
+	picture = x
+	allowed = {
+		original_tag = ITA
+	}
+}

@@ -1315,7 +1315,7 @@ ITA_sword_aimed_middle_east_category = {
 
 			set_autonomy = {
 				target = LEV
-				autonomy_state = autonomy_puppet
+				autonomy_state = autonomy_fascer_satellite
 			}
 
 			hidden_effect = {
@@ -2494,7 +2494,7 @@ ITA_fasist_international = {
 		complete_effect = {
 			set_autonomy = {
 				target = FROM
-				autonomy_state = autonomy_satellite
+				autonomy_state = autonomy_fascer_satellite
 			}
 			if = {
 				limit = {
@@ -2540,6 +2540,31 @@ ITA_fasist_international = {
 					set_country_flag = ITA_has_fascer_flag
 				}
 			}
+		}
+	}
+}
+
+ITA_mussolini_profile_picture_category = {
+	form_ITA_mussolini_profile_picture = {
+		allowed = {
+			original_tag = ITA
+		}
+		visible = {
+			has_country_leader = {
+				character = ITA_benito_mussolini
+				ruling_only = yes
+			}
+			is_ai = no
+		}
+
+		days_re_enable = 1
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+			country_event = IPUnion_country_event.87
 		}
 	}
 }

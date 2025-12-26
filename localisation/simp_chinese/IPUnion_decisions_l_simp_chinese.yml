@@ -101,3 +101,6 @@
  form_USA_fasces_subjet_decision: "在[CUB.GetName]输出革命"
  form_USA_fasces_subjet_decision: "在[COL.GetName]输出革命"
  form_USA_fasces_subjet_decision: "在[ECU.GetName]输出革命"
+
+ ITA_mussolini_profile_picture_category: "百变老墨"
+ form_ITA_mussolini_profile_picture: "老墨今天穿什么"

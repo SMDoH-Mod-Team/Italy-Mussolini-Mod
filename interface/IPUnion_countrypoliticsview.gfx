@@ -1,4 +1,5 @@
 spriteTypes = {
+
 	spriteType = {
 		name = "GFX_autonomy_unilateral_union_icon"
 		textureFile = "gfx/interface/autonomy/autonomy_unilateral_union.png"
@@ -10,5 +11,18 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_autonomy_condominium_icon"
 		textureFile = "gfx/interface/autonomy/autonomy_condominium.png"
+	}
+	spriteType = {
+		name = "GFX_autonomy_fascer_satellite_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_satellite.dds"
+	}
+
+	## Benito Mussolini ##
+
+	spriteType = {
+		name = "GFX_ITA_benito_mussolini_strip"
+		textureFile = "gfx/leaders/ITA/Portrait_ITA_Benito_Mussolini_Strip.png"
+		legacy_lazy_load = no
+		noOfFrames = 4
 	}
 }

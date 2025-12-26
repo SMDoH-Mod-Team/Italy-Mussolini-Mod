@@ -298,7 +298,12 @@
  IPUnion_country_event.86.t: "新教宗"
  IPUnion_country_event.86.d: "位于梵蒂冈中心的大教堂上空漂浮着一缕白烟，教宗庇护十二世就此上任"
  IPUnion_country_event.86.a: "Holy Father!"
- 
+ IPUnion_country_event.87.t: "百变老墨"
+ IPUnion_country_event.87.desc: "老墨今天穿什么？"
+ IPUnion_country_event.87.a: "经典套装"
+ IPUnion_country_event.87.b: "娘化经典套装"
+ IPUnion_country_event.87.c: "娘化奥古斯都"
+ IPUnion_country_event.87.d: "圣诞帽"
 
 
  IPUnion_debug_event.1.t: "为[FROM.GetName]添加政治宣传变量"
