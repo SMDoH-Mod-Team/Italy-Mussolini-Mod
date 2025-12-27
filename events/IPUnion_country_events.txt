@@ -2251,6 +2251,7 @@ country_event = {
 	picture = GFX_report_event_gre_george_ii_victorious
 	option = {
 		name = IPUnion_country_event.64.a
+		activate_mission = ITA_ger_anschluss_timeout
 		hidden_effect = {
 			set_country_flag = IPUnion_country_event.64.flag
 		}
@@ -2258,7 +2259,6 @@ country_event = {
 	}
 	option = {
 		name = IPUnion_country_event.64.b
-		
 	}
 }
 

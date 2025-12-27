@@ -473,9 +473,19 @@ country_event = {
 	is_triggered_only = yes
 
 	fire_only_once = yes
+
+	immediate = {
+		every_country = {
+			limit = {
+				is_major = yes
+			}
+			news_event = { hours = 6 id = IPUnion_news.6 }
+		}
+	}
 	
 	option = { 
 		name = africa_of_italian_event.14.a
+		trigger = { is_ai = no }
 		hidden_effect = {
 			set_country_flag = SE_africa_national_liberty_war
 			play_song = SE_mex_revolution
@@ -484,6 +494,7 @@ country_event = {
 
 	option = { 
 		name = africa_of_italian_event.14.b
+		trigger = { is_ai = no }
 		hidden_effect = {
 			set_country_flag = SE_africa_national_liberty_war
 			play_song = SE_mex_revolution
@@ -492,9 +503,16 @@ country_event = {
 
 	option = { 
 		name = africa_of_italian_event.14.c
+		trigger = { is_ai = no }
 		hidden_effect = {
 			set_country_flag = SE_africa_national_liberty_war
 			play_song = SE_mex_revolution
 		}
+	}
+
+	option = {
+		trigger = { is_ai = yes }
+		name = africa_of_italian_event.14.delta
+		add_war_support = 0.05
 	}
 }

@@ -1217,6 +1217,8 @@ ITA_sword_aimed_middle_east_category = {
 			}
 			hidden_effect = {
 				set_country_flag = form_attack_middle_east_flag
+				set_country_flag = form_attack_middle_east_flag_1
+				news_event = { id = IPUnion_news.7 }
 			}
 			activate_mission = ITA_attack_middle_east_part1
 		}

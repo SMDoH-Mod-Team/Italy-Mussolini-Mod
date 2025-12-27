@@ -24437,6 +24437,12 @@ focus_tree = {
 				custom_effect_tooltip = unlock_propaganda_campaign_tt
 				unlock_decision_tooltip = ITA_propaganda_learn_form_foggia_milano
 			}
+			159 = {
+				add_resource = {
+					type = steel
+					amount = 15
+				}
+			}
 		}
 	}
 
