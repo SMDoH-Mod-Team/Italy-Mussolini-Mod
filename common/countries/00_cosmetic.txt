@@ -29,3 +29,22 @@ USAPF = {
 	color = rgb { 145 163 176  }
 	color_ui = rgb { 186 205 219 }
 }
+
+CUB_fasces = {
+	color = rgb { 152  130  191 }
+	color_ui = rgb { 152  130  191 }
+}
+
+COL_fasces = {
+	color = rgb { 222  187  91 }
+	color_ui = rgb { 222  187  91 }
+}
+
+ECU_fasces = {
+	color = rgb { 249  146  98 }
+	color_ui = rgb { 249  146  98 }
+}
+
+SWI_fasces = {
+	
+}

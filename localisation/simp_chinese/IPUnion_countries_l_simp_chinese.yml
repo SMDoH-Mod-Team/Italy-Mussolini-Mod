@@ -83,3 +83,7 @@
  ECU_fasces: "$ECU_fascism$"
  ECU_fasces_ADJ: "$ECU_fascism_ADJ$"
  ECU_fasces_DEF: "$ECU_fascism_DEF$"
+
+ SWI_fasces: "$SWI_fascism$"
+ SWI_fasces_ADJ: "$SWI_fascism_ADJ$"
+ SWI_fasces_DEF: "$SWI_fascism_DEF$"

@@ -2647,6 +2647,17 @@ ITA_fasist_international = {
 					set_country_flag = ITA_has_fascer_flag
 				}
 			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_country_flag = IPUnion_SWI_flag
+					}
+				}
+				FROM = {
+					set_cosmetic_tag = SWI_fasces
+					set_country_flag = ITA_has_fascer_flag
+				}
+			}
 		}
 	}
 }

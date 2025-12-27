@@ -71,4 +71,8 @@
   USAPF: "$USA_CSA_fascism$"
   USAPF_ADJ: "$USA_CSA_fascism_ADJ$"
   USAPF_DEF: "$USA_CSA_fascism_DEF$"
+
+  SWI_fasces: "$SWI_fascism$"
+  SWI_fasces_ADJ: "$SWI_fascism_ADJ$"
+  SWI_fasces_DEF: "$SWI_fascism_DEF$"
   

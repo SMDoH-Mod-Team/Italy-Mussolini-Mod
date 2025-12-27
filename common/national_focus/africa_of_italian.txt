@@ -15,7 +15,7 @@ focus_tree = {
 
 	shared_focus = AOI_italian_aoi
 
-	shared_focus = AOI_italian_investment
+	#shared_focus = AOI_italian_investment
 
 	default = no
 
@@ -311,6 +311,7 @@ focus_tree = {
 
 		allow_branch = {
 			original_tag = AOI
+			#always = no
 		}
 
 		prerequisite = {
@@ -318,7 +319,7 @@ focus_tree = {
 			focus = AOI_prince_amedeo_focus
 		}
 
-		cancel_if_invalid = yes
+		#cancel_if_invalid = yes
 		#cancel = {
 		#	has_country_flag = literacy_campaign_is_underway_flag
 		#}
