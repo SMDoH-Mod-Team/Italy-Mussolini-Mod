@@ -283,7 +283,7 @@ focus_tree = {
 					copy_completed_from = ITB
 				}
 			}
-			complete_national_focus = ITA_enter_the_high_stage_of_imperialism
+			#complete_national_focus = ITA_enter_the_high_stage_of_imperialism
 			#complete_national_focus = ITA_Clear_the_Square_flag
 		}	
 	}

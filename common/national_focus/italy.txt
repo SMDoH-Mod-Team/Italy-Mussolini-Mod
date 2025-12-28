@@ -24587,6 +24587,8 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
+			custom_effect_tooltip = ITA_generic_state_capital_sup_tt
+
 			add_to_variable = { 
 				GER_industrial_production_speed_buildings_factor = 0.05
 				tooltip = production_speed_buildings_factor_tt
@@ -28484,6 +28486,20 @@ focus_tree = {
 				modifier = ITA_lateranensi_patti
 			}
 			give_guarantee = PAP
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			2 = {
+				remove_core_of = PAP
+			}
+
+			157 = {
+				remove_core_of = PAP
+			}
+
+			161 = {
+				remove_core_of = PAP
+			}
 		}
 	}
 

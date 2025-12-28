@@ -2623,6 +2623,7 @@ ITA_fasist_international = {
 				FROM = {
 					set_cosmetic_tag = CUB_fasces
 					set_country_flag = ITA_has_fascer_flag
+					load_focus_tree = IPUnion_empty_focus_tree
 				}
 			}
 			else_if = {
@@ -2634,6 +2635,7 @@ ITA_fasist_international = {
 				FROM = {
 					set_cosmetic_tag = COL_fasces
 					set_country_flag = ITA_has_fascer_flag
+					load_focus_tree = IPUnion_empty_focus_tree
 				}
 			}
 			else_if = {
@@ -2645,6 +2647,7 @@ ITA_fasist_international = {
 				FROM = {
 					set_cosmetic_tag = ECU_fasces
 					set_country_flag = ITA_has_fascer_flag
+					load_focus_tree = IPUnion_empty_focus_tree
 				}
 			}
 			else_if = {
@@ -2656,6 +2659,12 @@ ITA_fasist_international = {
 				FROM = {
 					set_cosmetic_tag = SWI_fasces
 					set_country_flag = ITA_has_fascer_flag
+					unlock_national_focus = SWI_become_german_puppet
+					unlock_national_focus = SWI_request_italian_alps_occupation
+					swap_ideas = {
+						remove_idea = SWI_swiss_neutrality
+						add_idea = SWI_swiss_neutrality_1
+					}
 				}
 			}
 		}
