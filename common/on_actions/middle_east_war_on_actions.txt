@@ -1,11 +1,24 @@
 on_actions = {
 	on_before_peace_conference_start = {
 		effect = {
-			limit = {
-				FROM = {
-					tag = ITA
-					has_war_with = EGY
-					has_country_flag = form_attack_middle_east_flag_1
+			if = {
+				limit = {
+					FROM = {	
+						OR = {
+							tag = EGY
+							tag = CYP
+							tag = LEB
+							tag = SYR
+							tag = PAL
+							tag = JOR
+							tag = IRQ
+							tag = KUW
+						}
+						has_war_with = ITA
+						ITA = {
+							has_country_flag = form_attack_middle_east_flag_1
+						}
+					}
 				}
 				ITA = {
 					country_event = IPUnion_router_event.4

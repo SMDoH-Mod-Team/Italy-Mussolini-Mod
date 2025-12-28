@@ -24122,6 +24122,7 @@ focus_tree = {
 					count = 1
 				}
 			}
+
 			677 = {
 				create_unit = {
 					division = "division_template =\"Infantry Division\" start_experience_factor = 0.4 start_equipment_factor = 1.0"
@@ -24129,6 +24130,7 @@ focus_tree = {
 					count = 1
 				}
 			}
+			
 			553 = {
 				create_unit = {
 					division = "division_template =\"Infantry Division\" start_experience_factor = 0.4 start_equipment_factor = 1.0"
