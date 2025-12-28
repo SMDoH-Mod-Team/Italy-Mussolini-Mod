@@ -23877,6 +23877,10 @@ focus_tree = {
 				release = EGY
 				release = CYP
 			}
+			FRA = {
+				release = SYR
+				release = LEB
+			}
 				#EGY = {
 				#	set_cosmetic_tag = EGY_KOI
 				#	#give_military_access = ENG
