@@ -273,3 +273,11 @@ get_resources_amount = {
 	country_resource_oil = get_resources_oil
 	country_resource_coal = get_resources_coal
 }
+
+dont_attack_cyprus = {
+	icon = GFX_modifiers_BEL_eben_emael_raided
+	enable = { always = yes }
+	naval_invasion_penalty = 1.0
+	modifier_army_sub_unit_paratrooper_attack_factor = -0.90
+	modifier_army_sub_unit_paratrooper_defence_factor = -0.90
+}

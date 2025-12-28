@@ -1190,10 +1190,10 @@ ITA_sword_aimed_middle_east_category = {
     			target = KUW
     			type = puppet_wargoal_focus
 			}
-			#declare_war_on = {
-    		#	target = CYP
-    		#	type = puppet_wargoal_focus
-			#}
+			declare_war_on = {
+    			target = CYP
+    			type = puppet_wargoal_focus
+			}
 			if = {
 				limit = {
 					SYR = {
@@ -1212,13 +1212,11 @@ ITA_sword_aimed_middle_east_category = {
     				type = puppet_wargoal_focus
 				}	
 			}
-			183 = {
-				set_demilitarized_zone = yes
-			}
 			hidden_effect = {
 				set_country_flag = form_attack_middle_east_flag
 				set_country_flag = form_attack_middle_east_flag_1
 				news_event = { id = IPUnion_news.7 }
+				183 = { add_dynamic_modifier = { modifier = dont_attack_cyprus } }
 			}
 			activate_mission = ITA_attack_middle_east_part1
 		}
@@ -1331,6 +1329,12 @@ ITA_sword_aimed_middle_east_category = {
 					set_politics = {
 						ruling_party = neutrality
 					}
+					set_popularities = {
+						democratic = 20
+						neutrality = 70
+						communism = 5
+						fascism = 5	
+					}
 					promote_character = LEV_government
 				}
 				SYR = {
@@ -1364,6 +1368,14 @@ ITA_sword_aimed_middle_east_category = {
 				limit = {
 					country_exists = SYR
 				}
+				hidden_effect = {
+					annex_country = SYR
+					SYR = {
+						transfer_state = 677
+						transfer_state = 680
+					}
+					SYR = { set_capital = 677 }
+				}
 				set_autonomy = {
 					target = SYR
 					autonomy_state = autonomy_condominium
@@ -1373,6 +1385,7 @@ ITA_sword_aimed_middle_east_category = {
 						set_politics = {
 							ruling_party = neutrality
 						}
+						set_cosmetic_tag = SYR_condominium
 						set_popularities = {
 							neutrality = 70
 							democratic = 20
@@ -1394,6 +1407,9 @@ ITA_sword_aimed_middle_east_category = {
 					transfer_state = 677
 					transfer_state = 680
 				}
+				hidden_effect = {
+					SYR = { set_capital = 677 }
+				}
 				set_autonomy = {
 					target = SYR
 					autonomy_state = autonomy_condominium
@@ -1403,6 +1419,7 @@ ITA_sword_aimed_middle_east_category = {
 						set_politics = {
 							ruling_party = neutrality
 						}
+						set_cosmetic_tag = SYR_condominium
 						set_popularities = {
 							neutrality = 70
 							democratic = 20

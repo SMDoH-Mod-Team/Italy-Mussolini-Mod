@@ -95,54 +95,44 @@ country_event = {
 	trigger = {
 		ITA = {
 			has_country_flag = form_attack_middle_east_flag_1
-		}
-		if = {
-			limit = {
-				ITA = {
-					has_war_with = EGY
-					has_war_with = PAL
-					has_war_with = JOR
-					has_war_with = IRQ
-					#has_war_with = CYP
-					has_war_with = SYR
-					has_war_with = LEB
-					has_war_with = KUW
-				}
-			}
-			ITA = {
-				controls_province = 4076
-				controls_province = 7011
-				controls_province = 1086
-				controls_province = 7151
-				controls_province = 792
-				controls_province = 4111
-				controls_province = 2097
-				controls_province = 8085
-			}
-		}
-		else = {
-			ITA = {
-				controls_province = 4076
-				controls_province = 7011
-				controls_province = 1086
-				controls_province = 7151
-				controls_province = 2097
-				controls_province = 8085
-			}	
+			has_war = yes
+			controls_province = 4076
+			controls_province = 7011
+			controls_province = 1086
+			controls_province = 7151
+			controls_province = 2097
+			controls_province = 8085
 		}
 	}
 
 	immediate = {
 		ITA = {
-			white_peace = EGY
-			white_peace = PAL
-			white_peace = JOR
-			white_peace = IRQ
-			white_peace = CYP
-			white_peace = SYR
-			white_peace = LEB
-			white_peace = KUW
+			if = {
+				limit = {
+					has_war_with = SYR
+					has_war_with = LEB
+				}
+				white_peace = EGY
+				white_peace = PAL
+				white_peace = JOR
+				white_peace = IRQ
+				white_peace = CYP
+				white_peace = SYR
+				white_peace = LEB
+				white_peace = KUW
+			}
+			else = {
+				white_peace = EGY
+				white_peace = PAL
+				white_peace = JOR
+				white_peace = IRQ
+				white_peace = CYP
+				#white_peace = SYR
+				#white_peace = LEB
+				white_peace = KUW	
+			}
 			country_event = IPUnion_country_event.44
+			clr_country_flag = form_attack_middle_east_flag_1
 		}
 	}
 }

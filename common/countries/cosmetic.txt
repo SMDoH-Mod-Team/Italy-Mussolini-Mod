@@ -1851,3 +1851,8 @@ ECU_fasces = {
 	color = rgb { 249  146  98 }
 	color_ui = rgb { 249  146  98 }
 }
+
+SYR_condominium = {
+	color = rgb { 171  190  152 }
+	color_ui = rgb { 171  190  152 }
+}

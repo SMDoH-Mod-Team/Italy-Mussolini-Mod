@@ -1692,6 +1692,17 @@ country_event = {
 				}
 			}
 		}
+
+		if = {
+			limit = {
+				183 = { has_dynamic_modifier = { modifier = dont_attack_cyprus } }
+			}
+			183 = {
+				remove_dynamic_modifier = {
+					modifier = dont_attack_cyprus
+				}
+			}
+		}
 	}
 }
 

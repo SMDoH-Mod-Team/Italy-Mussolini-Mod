@@ -16446,14 +16446,14 @@ focus_tree = {
 				add_opinion_modifier = { target = ITA modifier = ita_diplomacy_focus_1 }
 			}
 
-			if = {
-				limit = {
-					ROOT = {
-						is_ai = no
-					}
-				}
-				country_event = IPUnion_country_event.67
-			}
+			#if = {
+			#	limit = {
+			#		ROOT = {
+			#			is_ai = no
+			#		}
+			#	}
+				#country_event = IPUnion_country_event.67
+			#}
 		}
 	}
 
@@ -29979,9 +29979,27 @@ focus_tree = {
 		completion_reward = {
 			#custom_effect_tooltip = generic_skip_one_line_tt
 			#add_political_power = 15
-			swap_ideas = {
-				remove_idea = ITA_OND
-				add_idea = ITA_OND_improve
+			if = {
+				limit = {
+					has_idea = ITA_OND
+				}
+				swap_ideas = {
+					remove_idea = ITA_OND
+					add_idea = ITA_OND_improve
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_idea = ITA_OND
+					}
+				}
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = ITA_OND
+						add_idea = ITA_OND_improve
+					}
+				}
 			}
 		}
 	}
