@@ -91,46 +91,22 @@ country_event = {
 	hidden = yes
 
 	fire_only_once = yes
+	is_triggered_only = yes
 
 	trigger = {
-		ITA = {
-			has_country_flag = form_attack_middle_east_flag_1
-			has_war = yes
-			controls_province = 4076
-			controls_province = 7011
-			controls_province = 1086
-			controls_province = 7151
-			controls_province = 2097
-			controls_province = 8085
-		}
+
 	}
 
 	immediate = {
 		ITA = {
-			if = {
-				limit = {
-					has_war_with = SYR
-					has_war_with = LEB
-				}
-				white_peace = EGY
-				white_peace = PAL
-				white_peace = JOR
-				white_peace = IRQ
-				white_peace = CYP
-				white_peace = SYR
-				white_peace = LEB
-				white_peace = KUW
-			}
-			else = {
-				white_peace = EGY
-				white_peace = PAL
-				white_peace = JOR
-				white_peace = IRQ
-				white_peace = CYP
-				#white_peace = SYR
-				#white_peace = LEB
-				white_peace = KUW	
-			}
+			white_peace = EGY
+			white_peace = PAL
+			white_peace = JOR
+			white_peace = IRQ
+			white_peace = CYP
+			white_peace = SYR
+			white_peace = LEB
+			white_peace = KUW
 			country_event = IPUnion_country_event.44
 			clr_country_flag = form_attack_middle_east_flag_1
 		}

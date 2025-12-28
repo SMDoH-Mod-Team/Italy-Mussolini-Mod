@@ -1216,7 +1216,7 @@ ITA_sword_aimed_middle_east_category = {
 				set_country_flag = form_attack_middle_east_flag
 				set_country_flag = form_attack_middle_east_flag_1
 				news_event = { id = IPUnion_news.7 }
-				183 = { add_dynamic_modifier = { modifier = dont_attack_cyprus } }
+				#183 = { add_dynamic_modifier = { modifier = dont_attack_cyprus } }
 			}
 			activate_mission = ITA_attack_middle_east_part1
 		}
@@ -1369,12 +1369,12 @@ ITA_sword_aimed_middle_east_category = {
 					country_exists = SYR
 				}
 				hidden_effect = {
-					annex_country = SYR
+					annex_country = { target = SYR }
 					SYR = {
 						transfer_state = 677
 						transfer_state = 680
 					}
-					SYR = { set_capital = 677 }
+					SYR = { set_capital = { state = 677 } }
 				}
 				set_autonomy = {
 					target = SYR
@@ -1408,7 +1408,7 @@ ITA_sword_aimed_middle_east_category = {
 					transfer_state = 680
 				}
 				hidden_effect = {
-					SYR = { set_capital = 677 }
+					SYR = { set_capital = { state = 677 } }
 				}
 				set_autonomy = {
 					target = SYR

@@ -1591,52 +1591,27 @@ country_event = {
 				add_ideas = idea_ITA_neutrality_puppet
 			}
 		}
-		if = {
-			limit = {
-				has_country_flag = ITA_sword_aimed_middle_east_FRA_puppet
+		SYR = {
+			set_politics = {
+				ruling_party = neutrality
 			}
-			#every_state = {
-			#	limit = {
-			#		is_core_of = LEB
-			#	}
-			#	add_core_of = SYR
-			#}
-			set_autonomy = {
-				target = SYR
-				autonomous_state = autonomy_reichsprotectorate
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.60
 			}
-			SYR = {
-				set_autonomy = {
-					target = LEB
-					autonomous_state = autonomy_reichsprotectorate
-				}
-			}
-			hidden_effect = {
-				SYR = {
-					set_politics = {
-						ruling_party = neutrality
-					}
-					add_popularity = {
-						ideology = neutrality
-						popularity = 0.60
-					}
-					add_ideas = idea_ITA_neutrality_puppet
-					give_military_access = FRA
-				}
-				LEB = {
-					set_politics = {
-						ruling_party = neutrality
-					}
-					add_popularity = {
-						ideology = neutrality
-						popularity = 0.60
-					}
-					add_ideas = idea_ITA_neutrality_puppet
-				}
-				clr_country_flag = ITA_sword_aimed_middle_east_FRA_puppet
-			}
+			add_ideas = idea_ITA_neutrality_puppet
+			give_military_access = FRA
 		}
-		183 = { set_demilitarized_zone = no }
+		LEB = {
+			set_politics = {
+				ruling_party = neutrality
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.60
+			}
+			add_ideas = idea_ITA_neutrality_puppet
+		}
 
 		if = {
 			limit = {
@@ -1647,31 +1622,6 @@ country_event = {
 						is_core_of = JOR
 						is_core_of = IRQ
 						is_core_of = KUW
-					}
-					has_dynamic_modifier = {
-						modifier = unplanned_offensive
-					}
-				}
-			}
-			every_state = {
-				limit = {
-					OR = {
-						is_core_of = EGY
-						is_core_of = PAL
-						is_core_of = JOR
-						is_core_of = IRQ
-						is_core_of = KUW
-					}
-				}
-				remove_dynamic_modifier = {
-					modifier = unplanned_offensive
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				any_state = {
-					OR = {
 						is_core_of = LEB
 						is_core_of = SYR
 					}
@@ -1683,6 +1633,11 @@ country_event = {
 			every_state = {
 				limit = {
 					OR = {
+						is_core_of = EGY
+						is_core_of = PAL
+						is_core_of = JOR
+						is_core_of = IRQ
+						is_core_of = KUW
 						is_core_of = LEB
 						is_core_of = SYR
 					}

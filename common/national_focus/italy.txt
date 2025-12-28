@@ -23870,6 +23870,7 @@ focus_tree = {
 		available = {
 
 		}
+		
 		completion_reward = {
 			##puppet Egypt
 			ENG = {
@@ -23888,7 +23889,7 @@ focus_tree = {
 				#1048 = { add_core_of = ITA }
 			EGY = {
 				set_politics = {
-				ruling_party = neutrality
+					ruling_party = neutrality
 				}
 				add_popularity = {
 					ideology = neutrality
@@ -23898,7 +23899,7 @@ focus_tree = {
 			}
 			CYP = {
 				set_politics = {
-				ruling_party = neutrality
+					ruling_party = neutrality
 				}
 				add_popularity = {
 					ideology = neutrality
@@ -23906,6 +23907,27 @@ focus_tree = {
 				}
 				#add_ideas = idea_ITA_neutrality_puppet
 			}
+			SYR = {
+				set_politics = {
+					ruling_party = neutrality
+				}
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.60
+				}
+				#add_ideas = idea_ITA_neutrality_puppet
+			}
+			LEB = {
+				set_politics = {
+					ruling_party = neutrality
+				}
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.60
+				}
+				#add_ideas = idea_ITA_neutrality_puppet
+			}
+
 			EGY = {
 				set_rule = { can_create_factions = yes }
 				create_faction_from_template = {
@@ -23913,14 +23935,13 @@ focus_tree = {
 					name = faction_middle_east_command
 					icon = GFX_faction_logo_generic_12
 				}
-			}
-
-			EGY = {
 				add_to_faction = CYP
 				add_to_faction = PAL
 				add_to_faction = JOR
 				add_to_faction = IRQ
 				add_to_faction = KUW
+				add_to_faction = LEB
+				add_to_faction = SYR
 				set_autonomy = { target = PAL autonomy_state = autonomy_dominion }
 				set_autonomy = { target = JOR autonomy_state = autonomy_dominion }
 				set_autonomy = { target = KUW autonomy_state = autonomy_dominion }
@@ -23968,91 +23989,38 @@ focus_tree = {
 						target = KUW
 						modifier = in_faction
 					}
+					
 				}
-			}
 
-			if = {
-				limit = {
-					FRA = {
-						is_in_faction_with = ENG
+				FRA = {
+					remove_opinion_modifier = {
+						target = SYR
+						modifier = faction_traitor
+					}
+
+					remove_opinion_modifier = {
+						target = LEB
+						modifier = faction_traitor
+					}
+
+					add_opinion_modifier = {
+						target = SYR
+						modifier = in_faction
+					}
+					add_opinion_modifier = {
+						target = LEB
+						modifier = in_faction
 					}
 				}
-				set_country_flag = ITA_sword_aimed_middle_east_FRA_puppet
-				SYR = {
-					set_politics = {
-						ruling_party = neutrality
-					}
-					add_popularity = {
-						ideology = neutrality
-						popularity = 0.60
-					}
-					#add_ideas = idea_ITA_neutrality_puppet
-				}
-				LEB = {
-					set_politics = {
-						ruling_party = neutrality
-					}
-					add_popularity = {
-						ideology = neutrality
-						popularity = 0.60
-					}
-					#add_ideas = idea_ITA_neutrality_puppet
-				}
-				EGY = {
-					add_to_faction = LEB
-					add_to_faction = SYR
-				}
+
 				554 = {
-					create_unit = {
-						division = "division_template =\"Infantry Division\" start_experience_factor = 0.4 start_equipment_factor = 1.0"
-						owner = SYR
-						count = 1
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
 					}
-				}
-				677 = {
-					create_unit = {
-						division = "division_template =\"Infantry Division\" start_experience_factor = 0.4 start_equipment_factor = 1.0"
-						owner = SYR
-						count = 1
-					}
-				}
-				553 = {
-					create_unit = {
-						division = "division_template =\"Infantry Division\" start_experience_factor = 0.4 start_equipment_factor = 1.0"
-						owner = LEB
-						count = 1
-					}
-				}
-				hidden_effect = {
-					FRA = {
-						remove_opinion_modifier = {
-							target = SYR
-							modifier = faction_traitor
-						}
-
-						remove_opinion_modifier = {
-							target = LEB
-							modifier = faction_traitor
-						}
-
-						add_opinion_modifier = {
-							target = SYR
-							modifier = in_faction
-						}
-						add_opinion_modifier = {
-							target = LEB
-							modifier = in_faction
-						}
-					}
-					554 = {
-						add_extra_state_shared_building_slots = 1
-						add_building_construction = {
-							type = industrial_complex
-							level = 1
-							instant_build = yes
-						}
-					}
-				}
+				}				
 			}
 			
 			447 = {
@@ -24143,6 +24111,28 @@ focus_tree = {
 				}
 			}
 
+			554 = {
+				create_unit = {
+					division = "division_template =\"Infantry Division\" start_experience_factor = 0.4 start_equipment_factor = 1.0"
+					owner = SYR
+					count = 1
+				}
+			}
+			677 = {
+				create_unit = {
+					division = "division_template =\"Infantry Division\" start_experience_factor = 0.4 start_equipment_factor = 1.0"
+					owner = SYR
+					count = 1
+				}
+			}
+			553 = {
+				create_unit = {
+					division = "division_template =\"Infantry Division\" start_experience_factor = 0.4 start_equipment_factor = 1.0"
+					owner = LEB
+					count = 1
+				}
+			}
+
 			EGY = {
 				give_military_access = ENG
 				give_market_access = ENG
@@ -24171,6 +24161,16 @@ focus_tree = {
 				give_market_access = PAL
 			}
 
+			SYR = {
+				give_military_access = FRA
+				give_market_access = FRA
+			}
+
+			LEB = {
+				give_military_access = FRA
+				give_market_access = FRA
+			}
+
 			unlock_decision_category_tooltip = ITA_sword_aimed_middle_east_category
 
 			hidden_effect = {
@@ -24183,32 +24183,20 @@ focus_tree = {
 				JOR = {
 					set_major = yes
 				}
-				CYP = {
-					set_major = yes
-				}
+				#CYP = {
+				#	set_major = yes
+				#}
 				IRQ = {
 					set_major = yes
 				}
 				KUW = {
 					set_major = yes
 				}
-				if = {
-					limit = {
-						OR = {
-							SYR = {
-								is_in_faction_with = EGY
-							}
-							LEB = {
-								is_in_faction_with = EGY
-							}
-						}
-					}
-					SYR = {
-						set_major = yes
-					}
-					LEB = {
-						set_major = yes
-					}
+				SYR = {
+					set_major = yes
+				}
+				LEB = {
+					set_major = yes
 				}
 			}
 		}
