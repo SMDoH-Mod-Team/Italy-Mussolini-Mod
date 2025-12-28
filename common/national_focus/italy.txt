@@ -16446,14 +16446,14 @@ focus_tree = {
 				add_opinion_modifier = { target = ITA modifier = ita_diplomacy_focus_1 }
 			}
 
-			if = {
-				limit = {
-					ROOT = {
-						is_ai = no
-					}
-				}
-				country_event = IPUnion_country_event.67
-			}
+			#if = {
+			#	limit = {
+			#		ROOT = {
+			#			is_ai = no
+			#		}
+			#	}
+				#country_event = IPUnion_country_event.67
+			#}
 		}
 	}
 
@@ -23870,11 +23870,16 @@ focus_tree = {
 		available = {
 
 		}
+		
 		completion_reward = {
 			##puppet Egypt
 			ENG = {
 				release = EGY
 				release = CYP
+			}
+			FRA = {
+				release = SYR
+				release = LEB
 			}
 				#EGY = {
 				#	set_cosmetic_tag = EGY_KOI
@@ -23888,7 +23893,7 @@ focus_tree = {
 				#1048 = { add_core_of = ITA }
 			EGY = {
 				set_politics = {
-				ruling_party = neutrality
+					ruling_party = neutrality
 				}
 				add_popularity = {
 					ideology = neutrality
@@ -23898,7 +23903,7 @@ focus_tree = {
 			}
 			CYP = {
 				set_politics = {
-				ruling_party = neutrality
+					ruling_party = neutrality
 				}
 				add_popularity = {
 					ideology = neutrality
@@ -23906,6 +23911,27 @@ focus_tree = {
 				}
 				#add_ideas = idea_ITA_neutrality_puppet
 			}
+			SYR = {
+				set_politics = {
+					ruling_party = neutrality
+				}
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.60
+				}
+				#add_ideas = idea_ITA_neutrality_puppet
+			}
+			LEB = {
+				set_politics = {
+					ruling_party = neutrality
+				}
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.60
+				}
+				#add_ideas = idea_ITA_neutrality_puppet
+			}
+
 			EGY = {
 				set_rule = { can_create_factions = yes }
 				create_faction_from_template = {
@@ -23913,14 +23939,13 @@ focus_tree = {
 					name = faction_middle_east_command
 					icon = GFX_faction_logo_generic_12
 				}
-			}
-
-			EGY = {
 				add_to_faction = CYP
 				add_to_faction = PAL
 				add_to_faction = JOR
 				add_to_faction = IRQ
 				add_to_faction = KUW
+				add_to_faction = LEB
+				add_to_faction = SYR
 				set_autonomy = { target = PAL autonomy_state = autonomy_dominion }
 				set_autonomy = { target = JOR autonomy_state = autonomy_dominion }
 				set_autonomy = { target = KUW autonomy_state = autonomy_dominion }
@@ -23968,91 +23993,38 @@ focus_tree = {
 						target = KUW
 						modifier = in_faction
 					}
+					
 				}
-			}
 
-			if = {
-				limit = {
-					FRA = {
-						is_in_faction_with = ENG
+				FRA = {
+					remove_opinion_modifier = {
+						target = SYR
+						modifier = faction_traitor
+					}
+
+					remove_opinion_modifier = {
+						target = LEB
+						modifier = faction_traitor
+					}
+
+					add_opinion_modifier = {
+						target = SYR
+						modifier = in_faction
+					}
+					add_opinion_modifier = {
+						target = LEB
+						modifier = in_faction
 					}
 				}
-				set_country_flag = ITA_sword_aimed_middle_east_FRA_puppet
-				SYR = {
-					set_politics = {
-						ruling_party = neutrality
-					}
-					add_popularity = {
-						ideology = neutrality
-						popularity = 0.60
-					}
-					#add_ideas = idea_ITA_neutrality_puppet
-				}
-				LEB = {
-					set_politics = {
-						ruling_party = neutrality
-					}
-					add_popularity = {
-						ideology = neutrality
-						popularity = 0.60
-					}
-					#add_ideas = idea_ITA_neutrality_puppet
-				}
-				EGY = {
-					add_to_faction = LEB
-					add_to_faction = SYR
-				}
+
 				554 = {
-					create_unit = {
-						division = "division_template =\"Infantry Division\" start_experience_factor = 0.4 start_equipment_factor = 1.0"
-						owner = SYR
-						count = 1
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
 					}
-				}
-				677 = {
-					create_unit = {
-						division = "division_template =\"Infantry Division\" start_experience_factor = 0.4 start_equipment_factor = 1.0"
-						owner = SYR
-						count = 1
-					}
-				}
-				553 = {
-					create_unit = {
-						division = "division_template =\"Infantry Division\" start_experience_factor = 0.4 start_equipment_factor = 1.0"
-						owner = LEB
-						count = 1
-					}
-				}
-				hidden_effect = {
-					FRA = {
-						remove_opinion_modifier = {
-							target = SYR
-							modifier = faction_traitor
-						}
-
-						remove_opinion_modifier = {
-							target = LEB
-							modifier = faction_traitor
-						}
-
-						add_opinion_modifier = {
-							target = SYR
-							modifier = in_faction
-						}
-						add_opinion_modifier = {
-							target = LEB
-							modifier = in_faction
-						}
-					}
-					554 = {
-						add_extra_state_shared_building_slots = 1
-						add_building_construction = {
-							type = industrial_complex
-							level = 1
-							instant_build = yes
-						}
-					}
-				}
+				}				
 			}
 			
 			447 = {
@@ -24143,6 +24115,30 @@ focus_tree = {
 				}
 			}
 
+			554 = {
+				create_unit = {
+					division = "division_template =\"Infantry Division\" start_experience_factor = 0.4 start_equipment_factor = 1.0"
+					owner = SYR
+					count = 1
+				}
+			}
+
+			677 = {
+				create_unit = {
+					division = "division_template =\"Infantry Division\" start_experience_factor = 0.4 start_equipment_factor = 1.0"
+					owner = SYR
+					count = 1
+				}
+			}
+			
+			553 = {
+				create_unit = {
+					division = "division_template =\"Infantry Division\" start_experience_factor = 0.4 start_equipment_factor = 1.0"
+					owner = LEB
+					count = 1
+				}
+			}
+
 			EGY = {
 				give_military_access = ENG
 				give_market_access = ENG
@@ -24171,6 +24167,16 @@ focus_tree = {
 				give_market_access = PAL
 			}
 
+			SYR = {
+				give_military_access = FRA
+				give_market_access = FRA
+			}
+
+			LEB = {
+				give_military_access = FRA
+				give_market_access = FRA
+			}
+
 			unlock_decision_category_tooltip = ITA_sword_aimed_middle_east_category
 
 			hidden_effect = {
@@ -24183,32 +24189,20 @@ focus_tree = {
 				JOR = {
 					set_major = yes
 				}
-				CYP = {
-					set_major = yes
-				}
+				#CYP = {
+				#	set_major = yes
+				#}
 				IRQ = {
 					set_major = yes
 				}
 				KUW = {
 					set_major = yes
 				}
-				if = {
-					limit = {
-						OR = {
-							SYR = {
-								is_in_faction_with = EGY
-							}
-							LEB = {
-								is_in_faction_with = EGY
-							}
-						}
-					}
-					SYR = {
-						set_major = yes
-					}
-					LEB = {
-						set_major = yes
-					}
+				SYR = {
+					set_major = yes
+				}
+				LEB = {
+					set_major = yes
 				}
 			}
 		}
@@ -24437,6 +24431,12 @@ focus_tree = {
 				custom_effect_tooltip = unlock_propaganda_campaign_tt
 				unlock_decision_tooltip = ITA_propaganda_learn_form_foggia_milano
 			}
+			159 = {
+				add_resource = {
+					type = steel
+					amount = 15
+				}
+			}
 		}
 	}
 
@@ -24580,6 +24580,8 @@ focus_tree = {
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = ITA_generic_state_capital_sup_tt
 
 			add_to_variable = { 
 				GER_industrial_production_speed_buildings_factor = 0.05
@@ -28478,6 +28480,20 @@ focus_tree = {
 				modifier = ITA_lateranensi_patti
 			}
 			give_guarantee = PAP
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			2 = {
+				remove_core_of = PAP
+			}
+
+			157 = {
+				remove_core_of = PAP
+			}
+
+			161 = {
+				remove_core_of = PAP
+			}
 		}
 	}
 
@@ -29957,9 +29973,27 @@ focus_tree = {
 		completion_reward = {
 			#custom_effect_tooltip = generic_skip_one_line_tt
 			#add_political_power = 15
-			swap_ideas = {
-				remove_idea = ITA_OND
-				add_idea = ITA_OND_improve
+			if = {
+				limit = {
+					has_idea = ITA_OND
+				}
+				swap_ideas = {
+					remove_idea = ITA_OND
+					add_idea = ITA_OND_improve
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_idea = ITA_OND
+					}
+				}
+				effect_tooltip = {
+					swap_ideas = {
+						remove_idea = ITA_OND
+						add_idea = ITA_OND_improve
+					}
+				}
 			}
 		}
 	}
@@ -30759,6 +30793,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 100
 			add_stability = 0.15
+			add_country_leader_trait = GER_loyal_inner_circle
 		}
 	}
 
@@ -30852,6 +30887,7 @@ focus_tree = {
 		icon = GFX_focus_ITA_embrace_change_in_leadership
 		
 		completion_reward = {
+			add_country_leader_trait = GER_loyal_inner_circle
 			add_political_power = 100
 			add_stability = 0.15
 		}

@@ -7,6 +7,7 @@ scripted_gui = {
 			OR = {
 				has_country_flag = SE_africa_national_liberty_war
 				has_country_flag = SE_italian_great_revolution
+				has_country_flag = SE_middle_east_war
 			}
 		}
 		triggers = {
@@ -16,11 +17,15 @@ scripted_gui = {
 			SE_italian_great_revolution_visible = {
 				has_country_flag = SE_italian_great_revolution
 			}
+			SE_middle_east_war_visible = {
+				has_country_flag = SE_middle_east_war
+			}
 		}
 		effects = {
 			SE_Option_click = {
 				clr_country_flag = SE_africa_national_liberty_war
 				clr_country_flag = SE_italian_great_revolution
+				clr_country_flag = SE_middle_east_war
 			}
 		}		
 	}		

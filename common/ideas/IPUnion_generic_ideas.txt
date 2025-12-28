@@ -299,5 +299,32 @@ ideas = {
 				ai_join_ally_desire_factor = -1000
 			}
 		}
+
+		SWI_swiss_neutrality_1 = {
+			name = SWI_swiss_neutrality
+			allowed = {
+				#tag = SWI 
+			}
+			
+			removal_cost = -1 
+			picture = SWI_swiss_neutrality 
+
+			modifier = { 
+				#generate_wargoal_tension = 1.00
+				
+				join_faction_tension = 1.00
+				#lend_lease_tension = 0.50
+				send_volunteers_tension = 0.20
+				guarantee_tension = 1.0
+				embargo_threshold_factor = 2.5
+				ai_badass_factor = 0.01    # Will receive 1% of the threat from others
+				ai_get_ally_desire_factor = -150
+				ai_focus_defense_factor = 1000
+				army_chief_cost_factor = 2 
+				democratic_drift = 0.01
+				opinion_gain_monthly_factor = -0.2
+				enemy_justify_war_goal_time = 2.5
+			}
+		}
 	}
 }

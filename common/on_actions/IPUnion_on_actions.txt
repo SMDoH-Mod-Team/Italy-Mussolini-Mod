@@ -14,48 +14,19 @@ on_actions = {
 				}
 			}
 			USA = {
-				every_core_state = {
-					USA = {
-						add_to_array = {
-							array = core_states_at_game_start
-							value = PREV
-						}
-					}
-				}
 				set_country_flag = IPUnion_USA_flag
 			}
 			CUB = {
-				every_core_state = {
-					CUB = {
-						add_to_array = {
-							array = core_states_at_game_start
-							value = PREV
-						}
-					}
-				}
 				set_country_flag = IPUnion_CUB_flag
 			}
 			COL = {
-				every_core_state = {
-					COL = {
-						add_to_array = {
-							array = core_states_at_game_start
-							value = PREV
-						}
-					}
-				}
 				set_country_flag = IPUnion_COL_flag
 			}
 			ECU = {
-				every_core_state = {
-					ECU = {
-						add_to_array = {
-							array = core_states_at_game_start
-							value = PREV
-						}
-					}
-				}
 				set_country_flag = IPUnion_ECU_flag
+			}
+			SWI = {
+				set_country_flag = IPUnion_SWI_flag
 			}
 			GER = {
 				add_opinion_modifier = {

@@ -1591,52 +1591,27 @@ country_event = {
 				add_ideas = idea_ITA_neutrality_puppet
 			}
 		}
-		if = {
-			limit = {
-				has_country_flag = ITA_sword_aimed_middle_east_FRA_puppet
+		SYR = {
+			set_politics = {
+				ruling_party = neutrality
 			}
-			#every_state = {
-			#	limit = {
-			#		is_core_of = LEB
-			#	}
-			#	add_core_of = SYR
-			#}
-			set_autonomy = {
-				target = SYR
-				autonomous_state = autonomy_reichsprotectorate
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.60
 			}
-			SYR = {
-				set_autonomy = {
-					target = LEB
-					autonomous_state = autonomy_reichsprotectorate
-				}
-			}
-			hidden_effect = {
-				SYR = {
-					set_politics = {
-						ruling_party = neutrality
-					}
-					add_popularity = {
-						ideology = neutrality
-						popularity = 0.60
-					}
-					add_ideas = idea_ITA_neutrality_puppet
-					give_military_access = FRA
-				}
-				LEB = {
-					set_politics = {
-						ruling_party = neutrality
-					}
-					add_popularity = {
-						ideology = neutrality
-						popularity = 0.60
-					}
-					add_ideas = idea_ITA_neutrality_puppet
-				}
-				clr_country_flag = ITA_sword_aimed_middle_east_FRA_puppet
-			}
+			add_ideas = idea_ITA_neutrality_puppet
+			give_military_access = FRA
 		}
-		183 = { set_demilitarized_zone = no }
+		LEB = {
+			set_politics = {
+				ruling_party = neutrality
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.60
+			}
+			add_ideas = idea_ITA_neutrality_puppet
+		}
 
 		if = {
 			limit = {
@@ -1647,6 +1622,8 @@ country_event = {
 						is_core_of = JOR
 						is_core_of = IRQ
 						is_core_of = KUW
+						is_core_of = LEB
+						is_core_of = SYR
 					}
 					has_dynamic_modifier = {
 						modifier = unplanned_offensive
@@ -1661,6 +1638,8 @@ country_event = {
 						is_core_of = JOR
 						is_core_of = IRQ
 						is_core_of = KUW
+						is_core_of = LEB
+						is_core_of = SYR
 					}
 				}
 				remove_dynamic_modifier = {
@@ -1668,27 +1647,14 @@ country_event = {
 				}
 			}
 		}
-		else_if = {
+
+		if = {
 			limit = {
-				any_state = {
-					OR = {
-						is_core_of = LEB
-						is_core_of = SYR
-					}
-					has_dynamic_modifier = {
-						modifier = unplanned_offensive
-					}
-				}
+				183 = { has_dynamic_modifier = { modifier = dont_attack_cyprus } }
 			}
-			every_state = {
-				limit = {
-					OR = {
-						is_core_of = LEB
-						is_core_of = SYR
-					}
-				}
+			183 = {
 				remove_dynamic_modifier = {
-					modifier = unplanned_offensive
+					modifier = dont_attack_cyprus
 				}
 			}
 		}
@@ -2251,6 +2217,7 @@ country_event = {
 	picture = GFX_report_event_gre_george_ii_victorious
 	option = {
 		name = IPUnion_country_event.64.a
+		activate_mission = ITA_ger_anschluss_timeout
 		hidden_effect = {
 			set_country_flag = IPUnion_country_event.64.flag
 		}
@@ -2258,7 +2225,6 @@ country_event = {
 	}
 	option = {
 		name = IPUnion_country_event.64.b
-		
 	}
 }
 

@@ -33,3 +33,5 @@
  ITA_alto_adije_ethnic_issue_desc: "不受欢迎的意大利化政策"
  ITA_autonomy_unilateral_union_modifier: "$autonomy_unilateral_union$"
  ITA_autonomy_unilateral_union_modifier_desc: "这个国家是意大利的单方面联盟——只不过是吞并的美化描述罢了"
+ dont_attack_cyprus: "补药打塞浦路斯啊，球球惹！"
+ dont_attack_cyprus_desc: "由于事件杀的存在，就算不打也能赢的"

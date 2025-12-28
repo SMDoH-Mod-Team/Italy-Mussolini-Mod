@@ -12738,9 +12738,7 @@ focus_tree = {
 
 			if = {
 				limit = {
-					ROOT = {
-						is_ai = no
-					}
+					country_exists = ITA
 				}
 				mark_focus_tree_layout_dirty = yes
 				hidden_effect = {

@@ -16,3 +16,7 @@ add_to_array = {
 	array = subject_fasces_countries
 	value = ECU
 }
+add_to_array = {
+	array = subject_fasces_countries
+	value = SWI
+}

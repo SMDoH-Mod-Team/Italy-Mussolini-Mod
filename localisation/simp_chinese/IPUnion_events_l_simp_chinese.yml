@@ -360,6 +360,13 @@
  IPUnion_news.6.t: "东非爆发了民族革命！"
  IPUnion_news.6.d: "随着[AOI.GetName]对[ENG.GetName]和[FRA.GetName]在东非的殖民地的进攻，轰轰烈烈的东非民族革命战争打响了"
  IPUnion_news.6.a: "土地与自由"
+ IPUnion_news.7.t: "中东战争"
+ IPUnion_news.7.d: "除石油、宗教和民族矛盾外，他们好像一无所有。"
+ IPUnion_news.7.a: "让我再救一个吧..."
+ IPUnion_news.7.b: "再造罗马！"
+ IPUnion_news.8.t: "希土战争再起"
+ IPUnion_news.8.d: "正当土耳其把军队悉数调动到南部边境以试图干涉意大利对中东各国的战争时，希腊军队已于今晨跨过东色雷斯边境..."
+ IPUnion_news.8.a: "实现伟大理想"
 
  
 
@@ -464,6 +471,7 @@
  africa_of_italian_event.14.a: "我们的土地"
  africa_of_italian_event.14.b: "我们的人民"
  africa_of_italian_event.14.c: "我们的血"
+ africa_of_italian_event.14.delta: "土地与自由"
 
  ITA_inner_circle.1.t: "[GetItalyAscendingAdvisorName]的崛起"
  ITA_inner_circle.1.desc: "[GetItalyAscendingAdvisorName]展现了强烈的野心，并在党内获得了影响力。然而，他加强控制的努力引发了其他成员的反对，导致了权力斗争。问题是，[ITA.GetLeader]是否对[GetItalyAscendingAdvisorName]留下了足够深刻的印象，以确保后者进入核心集团。"

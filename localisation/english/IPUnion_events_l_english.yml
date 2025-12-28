@@ -451,6 +451,8 @@
   africa_of_italian_event.14.a: "Our land."
   africa_of_italian_event.14.b: "Our people."
   africa_of_italian_event.14.c: "Our blood."
+  africa_of_italian_event.14.delta: "Land and liberate"
+  
 
   ITA_inner_circle.1.t: "The Rise of [GetItalyAscendingAdvisorName]"
   ITA_inner_circle.1.desc: "[GetItalyAscendingAdvisorName] has shown strong ambition and gained influence within the party. However, his efforts to strengthen control have provoked opposition from other members, leading to a power struggle. The question is whether [ITA.GetLeader] has been impressed enough by [GetItalyAscendingAdvisorName] to ensure the latter's entry into the inner circle."

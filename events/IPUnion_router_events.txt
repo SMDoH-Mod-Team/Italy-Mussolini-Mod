@@ -8,6 +8,8 @@ country_event = {
 	desc = IPUnion_router_event.1.d
 	hidden = yes
 
+	fire_only_once = yes
+
 	trigger = {
 		GER = {
 			has_completed_focus = GER_reorganize_the_wehrmacht
@@ -29,6 +31,8 @@ country_event = {
 	title = IPUnion_router_event.2.t
 	desc = IPUnion_router_event.2.d
 	hidden = yes
+
+	fire_only_once = yes
 
 	trigger = {
 		#AUS = {
@@ -62,6 +66,8 @@ country_event = {
 	desc = IPUnion_router_event.3
 	hidden = yes
 
+	fire_only_once = yes
+
 	trigger = {
 		ITA = {
 			focus_progress = {
@@ -84,41 +90,11 @@ country_event = {
 	desc = IPUnion_router_event.4
 	hidden = yes
 
+	fire_only_once = yes
+	is_triggered_only = yes
+
 	trigger = {
-		if = {
-			limit = {
-				ITA = {
-					has_war_with = EGY
-					has_war_with = PAL
-					has_war_with = JOR
-					has_war_with = IRQ
-					#has_war_with = CYP
-					has_war_with = SYR
-					has_war_with = LEB
-					has_war_with = KUW
-				}
-			}
-			ITA = {
-				controls_province = 4076
-				controls_province = 7011
-				controls_province = 1086
-				controls_province = 7151
-				controls_province = 792
-				controls_province = 4111
-				controls_province = 2097
-				controls_province = 8085
-			}
-		}
-		else = {
-			ITA = {
-				controls_province = 4076
-				controls_province = 7011
-				controls_province = 1086
-				controls_province = 7151
-				controls_province = 2097
-				controls_province = 8085
-			}	
-		}
+
 	}
 
 	immediate = {
@@ -132,6 +108,7 @@ country_event = {
 			white_peace = LEB
 			white_peace = KUW
 			country_event = IPUnion_country_event.44
+			clr_country_flag = form_attack_middle_east_flag_1
 		}
 	}
 }
@@ -141,6 +118,8 @@ country_event = {
 	title = IPUnion_router_event.5.t
 	desc = IPUnion_router_event.5.d
 	hidden = yes
+
+	fire_only_once = yes
 
 	trigger = {
 		ITA = {
@@ -162,7 +141,12 @@ country_event = {
 	desc = IPUnion_router_event.6.d
 	hidden = yes
 
+	fire_only_once = yes
+
 	trigger = {
+		ITA = {
+			has_completed_focus = ITA_be_friend_to_SWI_focus
+		}
 		OR = {
 			GER = {
 				focus_progress = {
@@ -181,7 +165,7 @@ country_event = {
 
 	immediate = {
 		ITA = {
-			country_event = IPUnion_country_event.45
+			country_event = IPUnion_country_event.46
 		}
 	}
 }
@@ -237,6 +221,8 @@ country_event = {
 	desc = IPUnion_router_event.9
 	hidden = yes
 
+	fire_only_once = yes
+
 	trigger = {
 		AOI = {
 			focus_progress = {
@@ -262,6 +248,8 @@ country_event = {
 	title = IPUnion_router_event.10
 	desc = IPUnion_router_event.10
 	hidden = yes
+
+	fire_only_once = yes
 
 	trigger = {
 		AOI = {
@@ -319,7 +307,8 @@ country_event = {
 	desc = IPUnion_router_event.12
 	hidden = yes
 
-	is_triggered_only = yes
+	#is_triggered_only = yes
+	fire_only_once = yes
 
 	trigger = {
 		has_global_flag = ITA_pope_pio_xi_dead_flag
