@@ -1576,11 +1576,66 @@ country_event = {
 			}
 		}
 		set_autonomy = {
-			target = KUW
+			target = SYR
 			autonomous_state = autonomy_reichsprotectorate
 		}
+		if = {
+			limit = {
+				NOT = {
+					country_exists = LEV
+				}
+			}
+			set_autonomy = {
+				target = LEB
+				autonomous_state = autonomy_reichsprotectorate
+			}
+			hidden_effect = {
+				LEB = {
+					set_politics = {
+						ruling_party = neutrality
+					}
+					add_popularity = {
+						ideology = neutrality
+						popularity = 0.60
+					}
+					add_ideas = idea_ITA_neutrality_puppet
+				}
+			}
+			set_autonomy = {
+				target = PAL
+				autonomous_state = autonomy_reichsprotectorate
+			}
+			hidden_effect = {
+				PAL = {
+					set_politics = {
+						ruling_party = neutrality
+					}
+					add_popularity = {
+						ideology = neutrality
+						popularity = 0.60
+					}
+					add_ideas = idea_ITA_neutrality_puppet
+				}
+			}
+			set_autonomy = {
+				target = JOR
+				autonomous_state = autonomy_reichsprotectorate
+			}
+			hidden_effect = {
+				JOR = {
+					set_politics = {
+						ruling_party = neutrality
+					}
+					add_popularity = {
+						ideology = neutrality
+						popularity = 0.60
+					}
+					add_ideas = idea_ITA_neutrality_puppet
+				}
+			}
+		}
 		hidden_effect = {
-			KUW = {
+			SYR = {
 				set_politics = {
 					ruling_party = neutrality
 				}
@@ -1590,27 +1645,6 @@ country_event = {
 				}
 				add_ideas = idea_ITA_neutrality_puppet
 			}
-		}
-		SYR = {
-			set_politics = {
-				ruling_party = neutrality
-			}
-			add_popularity = {
-				ideology = neutrality
-				popularity = 0.60
-			}
-			add_ideas = idea_ITA_neutrality_puppet
-			give_military_access = FRA
-		}
-		LEB = {
-			set_politics = {
-				ruling_party = neutrality
-			}
-			add_popularity = {
-				ideology = neutrality
-				popularity = 0.60
-			}
-			add_ideas = idea_ITA_neutrality_puppet
 		}
 
 		if = {

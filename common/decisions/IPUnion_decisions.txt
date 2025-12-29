@@ -1336,6 +1336,7 @@ ITA_sword_aimed_middle_east_category = {
 						fascism = 5	
 					}
 					promote_character = LEV_government
+					load_focus_tree = IPUnion_empty_focus_tree
 				}
 				SYR = {
 					set_capital = { state = 677 }
@@ -1364,71 +1365,32 @@ ITA_sword_aimed_middle_east_category = {
 		}
 
 		complete_effect = {
-			if = {
-				limit = {
-					country_exists = SYR
-				}
-				hidden_effect = {
-					annex_country = { target = SYR }
-					SYR = {
-						transfer_state = 677
-						transfer_state = 680
-					}
-					SYR = { set_capital = { state = 677 } }
-				}
-				set_autonomy = {
-					target = SYR
-					autonomy_state = autonomy_condominium
-				}
-				hidden_effect = {
-					SYR = {
-						set_politics = {
-							ruling_party = neutrality
-						}
-						set_cosmetic_tag = SYR_condominium
-						set_popularities = {
-							neutrality = 70
-							democratic = 20
-							communism = 5
-							fascism = 5
-						}
-						add_ideas = idea_SYR_condominium
-						load_focus_tree = IPUnion_empty_focus_tree
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					NOT = {
-						country_exists = SYR
-					}
-				}
+			hidden_effect = {
+				annex_country = { target = SYR }
 				SYR = {
 					transfer_state = 677
 					transfer_state = 680
 				}
-				hidden_effect = {
-					SYR = { set_capital = { state = 677 } }
-				}
-				set_autonomy = {
-					target = SYR
-					autonomy_state = autonomy_condominium
-				}
-				hidden_effect = {
-					SYR = {
-						set_politics = {
-							ruling_party = neutrality
-						}
-						set_cosmetic_tag = SYR_condominium
-						set_popularities = {
-							neutrality = 70
-							democratic = 20
-							communism = 5
-							fascism = 5
-						}
-						add_ideas = idea_SYR_condominium
-						load_focus_tree = IPUnion_empty_focus_tree
+				SYR = { set_capital = { state = 677 } }
+			}
+			set_autonomy = {
+				target = SYR
+				autonomy_state = autonomy_condominium
+			}
+			hidden_effect = {
+				SYR = {
+					set_politics = {
+						ruling_party = neutrality
 					}
+					set_cosmetic_tag = SYR_condominium
+					set_popularities = {
+						neutrality = 70
+						democratic = 20
+						communism = 5
+						fascism = 5
+					}
+					add_ideas = idea_SYR_condominium
+					load_focus_tree = IPUnion_empty_focus_tree
 				}
 			}
 			if = {
@@ -1465,69 +1427,31 @@ ITA_sword_aimed_middle_east_category = {
 		}
 
 		complete_effect = {
-			if = {
-				limit = {
-					country_exists = KUR
-				}
-				hidden_effect = {
-					annex_country = { target = KUR }
-					KUR = {
-						transfer_state = 676
-					}
-					KUR = { set_capital = { state = 676 } }
-				}
-				set_autonomy = {
-					target = KUR
-					autonomy_state = autonomy_condominium
-				}
-				hidden_effect = {
-					KUR = {
-						set_politics = {
-							ruling_party = neutrality
-						}
-						set_cosmetic_tag = KUR_condominium
-						set_popularities = {
-							neutrality = 70
-							democratic = 20
-							communism = 5
-							fascism = 5
-						}
-						add_ideas = idea_KUR_condominium
-						load_focus_tree = IPUnion_empty_focus_tree
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					NOT = {
-						country_exists = KUR
-					}
-				}
+			hidden_effect = {
+				annex_country = { target = KUR }
 				KUR = {
 					transfer_state = 676
 				}
-				hidden_effect = {
-					KUR = { set_capital = { state = 676 } }
-				}
-				set_autonomy = {
-					target = KUR
-					autonomy_state = autonomy_condominium
-				}
-				hidden_effect = {
-					KUR = {
-						set_politics = {
-							ruling_party = neutrality
-						}
-						set_cosmetic_tag = KUR_condominium
-						set_popularities = {
-							neutrality = 70
-							democratic = 20
-							communism = 5
-							fascism = 5
-						}
-						add_ideas = idea_KUR_condominium
-						load_focus_tree = IPUnion_empty_focus_tree
+				KUR = { set_capital = { state = 676 } }
+			}
+			set_autonomy = {
+				target = KUR
+				autonomy_state = autonomy_condominium
+			}
+			hidden_effect = {
+				KUR = {
+					set_politics = {
+						ruling_party = neutrality
 					}
+					set_cosmetic_tag = KUR_condominium
+					set_popularities = {
+						neutrality = 70
+						democratic = 20
+						communism = 5
+						fascism = 5
+					}
+					add_ideas = idea_KUR_condominium
+					load_focus_tree = IPUnion_empty_focus_tree
 				}
 			}
 		}
