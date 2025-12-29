@@ -1367,18 +1367,14 @@ ITA_sword_aimed_middle_east_category = {
 		complete_effect = {
 			hidden_effect = {
 				annex_country = { target = SYR }
-				SYR = {
-					transfer_state = 677
-					transfer_state = 680
-				}
-				SYR = { set_capital = { state = 677 } }
 			}
-			set_autonomy = {
+			release_autonomy = {
 				target = SYR
 				autonomy_state = autonomy_condominium
 			}
 			hidden_effect = {
 				SYR = {
+					set_capital = { state = 677 }  
 					set_politics = {
 						ruling_party = neutrality
 					}

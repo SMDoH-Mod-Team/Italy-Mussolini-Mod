@@ -95,3 +95,7 @@
  KUR_condominium: "$KUR_democratic$"
  KUR_condominium_ADJ: "$KUR_democratic_ADJ$"
  KUR_condominium_DEF: "$KUR_democratic_DEF$"
+
+ IRQ_italian_subject: "$IRQ_kingdom_of_iraq_tag_neutrality$"
+ IRQ_italian_subject_ADJ: "$IRQ_kingdom_of_iraq_tag_neutrality_ADJ$"
+ IRQ_italian_subject_DEF: "$IRQ_kingdom_of_iraq_tag_neutrality_DEF$"

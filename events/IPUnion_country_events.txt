@@ -1565,6 +1565,7 @@ country_event = {
 		}
 		hidden_effect = {
 			IRQ = {
+				set_cosmetic_tag = IRQ_italian_subject
 				set_politics = {
 					ruling_party = neutrality
 				}
