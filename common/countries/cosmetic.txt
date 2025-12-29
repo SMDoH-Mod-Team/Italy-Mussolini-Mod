@@ -1856,3 +1856,8 @@ SYR_condominium = {
 	color = rgb { 171  190  152 }
 	color_ui = rgb { 171  190  152 }
 }
+
+KUR_condominium = {
+	color = rgb { 171  190  152 }
+	color_ui = rgb { 171  190  152 }
+}

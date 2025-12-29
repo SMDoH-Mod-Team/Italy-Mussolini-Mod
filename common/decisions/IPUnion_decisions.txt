@@ -1393,8 +1393,8 @@ ITA_sword_aimed_middle_east_category = {
 							fascism = 5
 						}
 						add_ideas = idea_SYR_condominium
+						load_focus_tree = IPUnion_empty_focus_tree
 					}
-					
 				}
 			}
 			else_if = {
@@ -1427,6 +1427,7 @@ ITA_sword_aimed_middle_east_category = {
 							fascism = 5
 						}
 						add_ideas = idea_SYR_condominium
+						load_focus_tree = IPUnion_empty_focus_tree
 					}
 				}
 			}
@@ -1440,6 +1441,93 @@ ITA_sword_aimed_middle_east_category = {
 				}
 				TUR = {
 					transfer_state = 799	
+				}
+			}
+		}
+	}
+
+	from_establish_kur_condominium = {
+		cost = 30
+
+		fire_only_once = yes
+
+		available = {
+			any_country = {
+				OR = {
+					original_tag = ITA
+					is_subject_of = ITA
+				}
+				controls_state = 676
+			}
+			ITA = {
+				is_in_faction_with = TUR
+			}
+		}
+
+		complete_effect = {
+			if = {
+				limit = {
+					country_exists = KUR
+				}
+				hidden_effect = {
+					annex_country = { target = KUR }
+					KUR = {
+						transfer_state = 676
+					}
+					KUR = { set_capital = { state = 676 } }
+				}
+				set_autonomy = {
+					target = KUR
+					autonomy_state = autonomy_condominium
+				}
+				hidden_effect = {
+					KUR = {
+						set_politics = {
+							ruling_party = neutrality
+						}
+						set_cosmetic_tag = KUR_condominium
+						set_popularities = {
+							neutrality = 70
+							democratic = 20
+							communism = 5
+							fascism = 5
+						}
+						add_ideas = idea_KUR_condominium
+						load_focus_tree = IPUnion_empty_focus_tree
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						country_exists = KUR
+					}
+				}
+				KUR = {
+					transfer_state = 676
+				}
+				hidden_effect = {
+					KUR = { set_capital = { state = 676 } }
+				}
+				set_autonomy = {
+					target = KUR
+					autonomy_state = autonomy_condominium
+				}
+				hidden_effect = {
+					KUR = {
+						set_politics = {
+							ruling_party = neutrality
+						}
+						set_cosmetic_tag = KUR_condominium
+						set_popularities = {
+							neutrality = 70
+							democratic = 20
+							communism = 5
+							fascism = 5
+						}
+						add_ideas = idea_KUR_condominium
+						load_focus_tree = IPUnion_empty_focus_tree
+					}
 				}
 			}
 		}

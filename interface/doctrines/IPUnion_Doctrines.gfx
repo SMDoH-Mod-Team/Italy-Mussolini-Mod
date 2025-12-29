@@ -1,0 +1,7 @@
+spriteTypes = {
+	SpriteType = {
+		name = "GFX_doctrine_party_command_guns_medium"
+		texturefile = "gfx/interface/doctrines/icons/party_command_guns.png"
+		alwaystransparent = yes
+	}
+}
