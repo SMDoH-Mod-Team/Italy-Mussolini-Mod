@@ -310,6 +310,9 @@
   IPUnion_country_event.89.t: "Vichy Regime Established in Southern France"
   IPUnion_country_event.89.d: "$FRA_philippe_petain$ announced today the establishment of a new government in Vichy, southern France."
   IPUnion_country_event.89.a: "We must seize this opportunity"
+  IPUnion_country_event.90.t: "Failure..."
+  IPUnion_country_event.90.d: "Failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed failed"
+  IPUnion_country_event.90.a: "§RShameful!§!"
 
   IPUnion_debug_event.1.t: "Add Political Propaganda Variable for [FROM.GetName]"
   IPUnion_debug_event.1.d: "Add Political Propaganda Variable for [FROM.GetName]"

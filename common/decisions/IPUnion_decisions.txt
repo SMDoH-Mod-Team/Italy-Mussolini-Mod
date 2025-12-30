@@ -1352,6 +1352,17 @@ ITA_mare_nostrum_category = {
 			}
 			annex_country = { target = TUN }
 		}
+		timeout_effect = {
+			white_peace = TUN
+			VIC = {
+				annex_country = {
+					target = TUN
+				}
+			}
+			hidden_effect = {
+				country_event = IPUnion_country_event.90
+			}
+		}
 	}
 
 	mission_special_militia_actions_on_alg = {
@@ -1397,6 +1408,17 @@ ITA_mare_nostrum_category = {
 				}
 			}
 		}
+		timeout_effect = {
+			white_peace = ALG
+			VIC = {
+				annex_country = {
+					target = ALG
+				}
+			}
+			hidden_effect = {
+				country_event = IPUnion_country_event.90
+			}
+		}
 	}
 
 	mission_special_militia_actions_on_mor = {
@@ -1440,6 +1462,17 @@ ITA_mare_nostrum_category = {
 						neutrality = 100
 					}
 				}
+			}
+		}
+		timeout_effect = {
+			white_peace = MOR
+			VIC = {
+				annex_country = {
+					target = MOR
+				}
+			}
+			hidden_effect = {
+				country_event = IPUnion_country_event.90
 			}
 		}
 	}

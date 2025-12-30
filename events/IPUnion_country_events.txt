@@ -2918,6 +2918,20 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = IPUnion_country_event.90
+	
+	title = IPUnion_country_event.90.t
+	desc = IPUnion_country_event.90.d
+	is_triggered_only = yes
+	#fire_only_once = yes
+	picture = GFX_report_event_gre_george_ii_victorious
+	option = {
+		name = IPUnion_country_event.90.a
+		add_stability = -0.15
+		add_war_support = -0.15
+	}
+}
 
 
 
