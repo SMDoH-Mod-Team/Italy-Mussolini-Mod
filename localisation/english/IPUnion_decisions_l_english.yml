@@ -98,12 +98,20 @@
   CHI_building_guangzhou_wuchang_railway: "Building Guangzhou-Wuchang Railways"、
   
   ITA_fasist_international: "Fascist International"
-  form_fasces_subjet_decision: "Export Revolution to [FROM.GetName]"
+  from_fasces_subjet_decision: "Export Revolution to [FROM.GetName]"
   form_USA_fasces_subjet_decision: "Export Revolution to [USA.GetName]"
   form_USA_fasces_subjet_decision: "Export Revolution to [CUB.GetName]"
   form_USA_fasces_subjet_decision: "Export Revolution to [COL.GetName]"
   form_USA_fasces_subjet_decision: "Export Revolution to [ECU.GetName]"
 
   ITA_mussolini_profile_picture_category: "Mussolini's Many Looks"
-  form_ITA_mussolini_profile_picture: "What will Mussolini wear today"
+  from_ITA_mussolini_profile_picture: "What will Mussolini wear today"
 
+  mission_take_back_savoy: "Take Back Savoy"
+  from_take_back_savoy: "Take Back Savoy"
+  mission_vic_regime_stablility: "Vichy Regime Stabilization Countdown"
+  from_take_advantage_of_fra_desperate_situation: "Take Advantage of the Situation"
+  from_take_advantage_of_fra_desperate_situation_desc: "We should take advantage of the chaos in the Vichy government to send troops and occupy their colonies in North Africa. Once it's a fait accompli, their protests will be meaningless."
+  mission_special_militia_actions_on_tun: "Special Military Operation in Tunisia"
+  mission_special_militia_actions_on_alg: "Special Military Operation in Algeria"
+  mission_special_militia_actions_on_mor: "Special Military Operation in Morocco"

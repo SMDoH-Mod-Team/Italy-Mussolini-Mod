@@ -1,0 +1,91 @@
+on_actions = {
+	on_before_peace_conference_start = {
+		effect = {
+			if = {
+				limit = {
+					FROM = {
+						tag = TUN
+						has_war_with = ITA
+						ITA = {
+							has_country_flag = ITA_take_advantage_to_TUN
+						}
+					}
+				}
+				ITA = {
+					white_peace = TUN
+					annex_country = { target = TUN }
+					every_core_state = {
+						limit = {
+							is_core_of = TUN
+						}
+						add_core_of = ITA
+					}
+				}
+			}
+		}
+	}
+
+	on_before_peace_conference_start = {
+		effect = {
+			if = {
+				limit = {
+					FROM = {
+						tag = ALG
+						has_war_with = ITA
+						ITA = {
+							has_country_flag = ITA_take_advantage_to_ALG
+						}
+					}
+				}
+				ITA = {
+					white_peace = ALG
+					annex_country = { target = ALG }
+					set_autonomy = {
+						target = ALG
+						autonomous_state = autonomy_unilateral_union
+					}
+					hidden_effect = {
+						ALG = {
+							set_politics = neutrality
+							set_popularities = {
+								neutrality = 100
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	on_before_peace_conference_start = {
+		effect = {
+			if = {
+				limit = {
+					FROM = {
+						tag = MOR
+						has_war_with = ITA
+						ITA = {
+							has_country_flag = ITA_take_advantage_to_MOR
+						}
+					}
+				}
+				ITA = {
+					white_peace = MOR
+					annex_country = { target = MOR }
+					set_autonomy = {
+						target = MOR
+						autonomous_state = autonomy_unilateral_union
+					}
+					hidden_effect = {
+						MOR = {
+							set_politics = neutrality
+							set_popularities = {
+								neutrality = 100
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

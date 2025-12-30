@@ -1,0 +1,56 @@
+add_namespace = news
+
+news_event = {
+	id = news.204
+	title = news.204.t
+	desc = news.204.d
+	picture = GFX_news_event_polish_tanks
+
+	major = yes
+
+	is_triggered_only = yes
+
+	fire_for_sender = no
+
+	immediate = {
+		set_global_flag = the_great_world_war_ii
+	}
+
+	#They have ignored every warning!
+	option = {
+		name = news.204.a
+		trigger = {
+			is_in_faction = yes
+			NOT = {
+				is_in_faction_with = GER
+			}
+			NOT = {
+				is_in_faction_with = POL
+			}
+		}
+	}
+
+	#
+	option = {
+		name = news.204.b
+		trigger = {
+			is_in_faction_with = GER
+		}
+	}
+
+	#Together we must stop this aggressor!
+	option = {
+		name = news.204.c
+		trigger = {
+			is_in_faction_with = POL
+		}
+	}
+
+	#This is a grave situation.
+	option = {
+		name = news.204.e
+		trigger = {
+			is_in_faction = no
+		}
+	}
+}
