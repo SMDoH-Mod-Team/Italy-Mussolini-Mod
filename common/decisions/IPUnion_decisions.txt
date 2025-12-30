@@ -1327,6 +1327,7 @@ ITA_mare_nostrum_category = {
 		activation = {
 			has_country_flag = ITA_take_advantage_to_TUN
 		}
+		fire_only_once = yes
 		cancel_trigger = {
 			TUN = {
 				NOT = {
@@ -1367,6 +1368,7 @@ ITA_mare_nostrum_category = {
 
 	mission_special_militia_actions_on_alg = {
 		days_mission_timeout = 5
+		fire_only_once = yes
 		activation = {
 			has_country_flag = ITA_take_advantage_to_ALG
 		}
@@ -1423,6 +1425,7 @@ ITA_mare_nostrum_category = {
 
 	mission_special_militia_actions_on_mor = {
 		days_mission_timeout = 5
+		fire_only_once = yes
 		activation = {
 			has_country_flag = ITA_take_advantage_to_MOR
 		}
@@ -1564,6 +1567,7 @@ ITA_sword_aimed_middle_east_category = {
 
 	ITA_attack_middle_east_part1 = {
 		days_mission_timeout = 3
+		fire_only_once = yes
 		activation = {
 			has_country_flag = form_attack_middle_east_flag
 		}
@@ -2299,6 +2303,7 @@ ITA_ger_anschluss = {
 				has_country_flag = ITA_interfere_ger_anschluss_flag
 			}
 		}
+		fire_only_once = yes
 		is_good = yes
 		timeout_effect = {
 			custom_effect_tooltip = ITA_ger_anschluss_timeout_tt
