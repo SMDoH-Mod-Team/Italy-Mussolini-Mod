@@ -358,6 +358,7 @@ IPUnion_Partition_of_Greece = {
 			}
 		}
 		visible = {
+			has_country_flag = Toulon_Base_Mod_Loaded_Check
 			GRE = {
 				controls_state = 1053
 				controls_state = 1054
@@ -1609,24 +1610,74 @@ ITA_sword_aimed_middle_east_category = {
 			}
 		}
 		complete_effect = {
-			give_resource_rights = {
-   				receiver = ITA
-    			state = 291
-    			resources = { oil }
+			every_country = {
+				limit = {
+					has_resources_rights = {
+						state = 291
+						resources = { oil }
+					}
+				}
+				remove_resource_rights = 291
 			}
-			give_resource_rights = {
-   				receiver = ITA
-    			state = 1010
-    			resources = { oil }
+			every_country = {
+				limit = {
+					has_resources_rights = {
+						state = 1010
+						resources = { oil }
+					}
+				}
+				remove_resource_rights = 1010
 			}
-			give_resource_rights = {
-   				receiver = ITA
-    			state = 676
-    			resources = { oil }
+			every_country = {
+				limit = {
+					has_resources_rights = {
+						state = 676
+						resources = { oil }
+					}
+				}
+				remove_resource_rights = 676
+			}
+			IRQ = {
+				if = {
+					limit = {
+						IRQ = {
+							controls_state = 291
+						}
+					}
+					give_resource_rights = {
+						receiver = ITA
+						state = 291
+						resources = { oil }
+					}
+				}
+				if = {
+					limit = {
+						IRQ = {
+							controls_state = 1010
+						}
+					}
+					give_resource_rights = {
+						receiver = ITA
+						state = 1010
+						resources = { oil }
+					}
+				}
+				if = {
+					limit = {
+						IRQ = {
+							controls_state = 676
+						}
+					}
+					give_resource_rights = {
+						receiver = ITA
+						state = 676
+						resources = { oil }
+					}
+				}
 			}
 		}
 		modifier = {
-			consumer_goods_factor = 0.05
+			consumer_goods_factor = 0.025
 		}
 		remove_effect = {
 			ITA = {
@@ -1661,6 +1712,22 @@ ITA_sword_aimed_middle_east_category = {
 				transfer_state = 455
 				transfer_state = 553
 				transfer_state = 554
+			}
+
+			454 = {
+				add_core_of = LEV
+			}
+
+			455 = {
+				add_core_of = LEV
+			}
+
+			553 = {
+				add_core_of = LEV
+			}
+
+			554 = {
+				add_core_of = LEV
 			}
 
 			set_autonomy = {
