@@ -88,6 +88,14 @@
  SWI_fasces_ADJ: "$SWI_fascism_ADJ$"
  SWI_fasces_DEF: "$SWI_fascism_DEF$"
 
- SYR_condominium: "$SYR_neutrality$"
- SYR_condominium_ADJ: "$SYR_neutrality_ADJ$"
- SYR_condominium_DEF: "$SYR_neutrality_DEF$"
+ SYR_condominium: "$SYR_mandate$"
+ SYR_condominium_ADJ: "$SYR_mandate_ADJ$"
+ SYR_condominium_DEF: "$SYR_mandate_DEF$"
+
+ KUR_condominium: "$KUR_democratic$"
+ KUR_condominium_ADJ: "$KUR_democratic_ADJ$"
+ KUR_condominium_DEF: "$KUR_democratic_DEF$"
+
+ IRQ_italian_subject: "$IRQ_kingdom_of_iraq_tag_neutrality$"
+ IRQ_italian_subject_ADJ: "$IRQ_kingdom_of_iraq_tag_neutrality_ADJ$"
+ IRQ_italian_subject_DEF: "$IRQ_kingdom_of_iraq_tag_neutrality_DEF$"

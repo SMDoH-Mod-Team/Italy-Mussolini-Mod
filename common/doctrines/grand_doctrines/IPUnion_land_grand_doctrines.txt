@@ -3,7 +3,7 @@ party_command_forces = {
 
     name = GRAND_DOCTRINE_PARTY_COMMAND_FORCES
     description = GRAND_DOCTRINE_PARTY_COMMAND_FORCES_DESC
-    icon = GFX_doctrine_grand_battleplan_medium
+    icon = GFX_doctrine_party_command_guns_medium
     available = {
         #always = yes
         original_tag = ITA
@@ -29,6 +29,7 @@ party_command_forces = {
 
     # EFFECTS
     enable_tactic = tactic_planned_attack
+    enable_tactic = tactic_guerrilla_tactics
     
     max_planning = 0.1
     command_power_gain = 0.25

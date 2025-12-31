@@ -25559,12 +25559,7 @@ focus_tree = {
 		y = 1
 		cost = 3
 		available = {
-			FRA = {
-				has_opinion = {
-					target = ITA
-					value > 50
-				}
-			}
+
 		}
 		completion_reward = {
 			FRA = {
@@ -28517,6 +28512,15 @@ focus_tree = {
 				id = IPUnion_country_event.86
 				hours = 12
 				random_hours = 24
+			}
+
+			ITA_create_pontifical_swiss_guard_effects = yes
+			capital_scope = {
+				create_unit = {
+					division = "name = \"Pontifical Swiss Guard\" division_template = \"Pontifical Swiss Guard\" start_experience_factor = 1.0 start_equipment_factor = 1.0 start_manpower_factor = 1.0 force_equipment_variants = { infantry_equipment_2 = { creator = \"SWI\" } support_equipment = { creator = \"SWI\" } motorized_equipment_1 = { creator = \"SWI\" } light_tank_equipment_1 = { creator = \"SWI\" } artillery_equipment_1 = { creator = \"SWI\" } }"
+					owner = ITA
+					count = 5
+				}
 			}
 		}
 	}

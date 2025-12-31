@@ -85,8 +85,8 @@ ITA_organizational_life = {
 	picture = xxx
 }
 ITA_mare_nostrum_category = {
-	visible = {
-		has_completed_focus = ITA_control_the_mediterranean
+	allowed = {
+		
 	}
 	icon = xx
 	picture = xxx

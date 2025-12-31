@@ -320,3 +320,124 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = IPUnion_router_event.13
+	title = IPUnion_router_event.13
+	desc = IPUnion_router_event.13
+	hidden = yes
+
+	#is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		has_global_flag = the_great_world_war_ii
+	}
+
+	immediate = {
+		ITA = {
+			country_event = IPUnion_country_event.88
+		}
+	}
+}
+
+country_event = {
+	id = IPUnion_router_event.14
+	title = IPUnion_router_event.14
+	desc = IPUnion_router_event.14
+	hidden = yes
+
+	#is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		country_exists = VIC
+	}
+
+	immediate = {
+		ITA = {
+			country_event = IPUnion_country_event.89
+		}
+	}
+}
+
+country_event = {
+	id = IPUnion_router_event.15
+	title = IPUnion_router_event.15
+	desc = IPUnion_router_event.15
+	hidden = yes
+
+	#is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		GER = {
+			has_completed_focus = GER_anschluss
+			controls_state = 153
+			controls_state = 848
+		}
+		ITA = {
+			has_country_flag = IPUnion_country_event.66.a.flag
+		}
+	}
+
+	immediate = {
+		ITA = {
+			news_event = { id = IPUnion_news.2 hours = 6 }
+		}
+	}
+}
+
+country_event = {
+	id = IPUnion_router_event.16
+	title = IPUnion_router_event.16
+	desc = IPUnion_router_event.16
+	hidden = yes
+
+	#is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		GER = {
+			has_completed_focus = GER_anschluss
+			controls_state = 153
+			controls_state = 848
+		}
+		ITA = {
+			has_country_flag = IPUnion_country_event.66.b.flag
+		}
+	}
+
+	immediate = {
+		ITA = {
+			news_event = { id = IPUnion_news.3 hours = 6 }
+		}
+	}
+}
+
+country_event = {
+	id = IPUnion_router_event.17
+	title = IPUnion_router_event.17
+	desc = IPUnion_router_event.17
+	hidden = yes
+
+	#is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		GER = {
+			has_completed_focus = GER_anschluss
+			controls_state = 153
+			controls_state = 848
+		}
+		ITA = {
+			has_country_flag = IPUnion_country_event.66.c.flag
+		}
+	}
+
+	immediate = {
+		ITA = {
+			news_event = { id = IPUnion_news.4 hours = 6 }
+		}
+	}
+}

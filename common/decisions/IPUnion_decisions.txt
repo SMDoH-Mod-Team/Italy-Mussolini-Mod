@@ -358,6 +358,7 @@ IPUnion_Partition_of_Greece = {
 			}
 		}
 		visible = {
+			has_country_flag = Toulon_Base_Mod_Loaded_Check
 			GRE = {
 				controls_state = 1053
 				controls_state = 1054
@@ -1019,6 +1020,9 @@ ITA_mare_nostrum_category = {
 		allowed = {
 			original_tag = ITA
 		}
+		visible = {
+			has_completed_focus = ITA_control_the_mediterranean
+		}
 		remove_effect = {
 			start_border_war = {
                 change_state_after_war = no #overrides the transfer of state at the end of war
@@ -1061,7 +1065,11 @@ ITA_mare_nostrum_category = {
 		}
 	}
 	form_accusation_france = {
+		
 		days_remove = 30
+		visible = {
+			has_completed_focus = ITA_control_the_mediterranean
+		}
 		cost = 30
 		fire_only_once = yes
 		allowed = {
@@ -1078,6 +1086,9 @@ ITA_mare_nostrum_category = {
 	form_cooperate_with_knights_of_malta = {
 		days_remove = 30
 		fire_only_once = yes
+		visible = {
+			has_completed_focus = ITA_control_the_mediterranean
+		}
 		cost = 30
 		allowed = {
 			original_tag = ITA
@@ -1111,6 +1122,9 @@ ITA_mare_nostrum_category = {
 	form_attack_Island_malta = {
 		days_remove = 15
 		fire_only_once = yes
+		visible = {
+			has_completed_focus = ITA_control_the_mediterranean
+		}
 		allowed = {
 			original_tag = ITA
 		}
@@ -1134,6 +1148,336 @@ ITA_mare_nostrum_category = {
 		}
 		remove_effect = {
 			country_event = IPUnion_country_event.28
+		}
+	}
+
+	mission_vic_regime_stablility = {
+		activation = {
+			has_global_flag = vic_has_established_flag
+			NOT = {
+				has_global_flag = vic_regime_stablility
+			}
+		}
+		cancel_trigger = {
+			always = no
+		}
+		available = {
+			always = no
+		}
+		days_mission_timeout = 30
+		fire_only_once = yes
+		timeout_effect = {
+			custom_effect_tooltip = mission_vic_regime_stablility_tt
+			set_country_flag = vic_regime_stablility
+		}
+	}
+
+	from_take_advantage_of_fra_desperate_situation = {
+		fire_only_once = yes
+		#target_array = TUS
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = vic_not_regime_stablility_tt
+				NOT = {
+					has_global_flag = vic_regime_stablility
+				}
+				country_exists = VIC
+				OR = {
+					any_state = {
+						is_core_of = TUN
+						is_controlled_by = VIC
+					}
+					any_state = {
+						is_core_of = ALG
+						is_controlled_by = VIC
+					}
+					any_state = {
+						is_core_of = MOR
+						is_controlled_by = VIC
+					}
+				}
+			}
+		}
+		visible = {
+			has_global_flag = vic_has_established_flag
+			NOT = {
+				has_global_flag = vic_regime_stablility
+			}
+		}
+		custom_cost_trigger = {
+	    	command_power > 14.9
+	    }
+	    custom_cost_text = AFG_decision_cost_quami
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -15
+			}
+			if = {
+				limit = {
+					any_state = {
+						is_core_of = TUN
+						NOT = {
+							is_owned_and_controlled_by = ROOT
+						}
+					}
+				}
+				VIC = {
+					release = TUN
+				}
+				TUN = {
+					hidden_effect = {
+						set_cosmetic_tag = TUN_vichy_government
+						set_politics = {
+							ruling_party = neutrality
+						}
+						set_popularities = {
+							neutrality = 100
+						}
+						set_rule = {
+							can_join_factions = no
+						}
+						add_ideas = IPUnion_neutrality_idea
+					}
+				}
+				hidden_effect = {
+					set_country_flag = ITA_take_advantage_to_TUN
+				}
+				declare_war_on = {
+					target = TUN
+					type = annex_everything
+				}
+				activate_mission = mission_special_militia_actions_on_tun
+			}
+			if = {
+				limit = {
+					any_state = {
+						is_core_of = ALG
+						NOT = {
+							is_owned_and_controlled_by = ROOT
+						}
+					}
+				}
+				VIC = {
+					release = ALG
+				}
+				ALG = {
+					hidden_effect = {
+						set_cosmetic_tag = ALG_vichy_government
+						set_politics = {
+							ruling_party = neutrality
+						}
+						set_popularities = {
+							neutrality = 100
+						}
+						set_rule = {
+							can_join_factions = no
+						}
+						add_ideas = IPUnion_neutrality_idea
+					}
+				}
+				hidden_effect = {
+					set_country_flag = ITA_take_advantage_to_ALG
+				}
+				declare_war_on = {
+					target = ALG
+					type = annex_everything
+				}
+				activate_mission = mission_special_militia_actions_on_alg
+			}
+			if = {
+				limit = {
+					any_state = {
+						is_core_of = MOR
+						NOT = {
+							is_owned_and_controlled_by = ROOT
+						}
+					}
+				}
+				VIC = {
+					release = MOR
+				}
+				MOR = {
+					hidden_effect = {
+						set_cosmetic_tag = MOR_vichy_government
+						set_politics = {
+							ruling_party = neutrality
+						}
+						set_popularities = {
+							neutrality = 100
+						}
+						set_rule = {
+							can_join_factions = no
+						}
+						add_ideas = IPUnion_neutrality_idea
+					}
+				}
+				hidden_effect = {
+					set_country_flag = ITA_take_advantage_to_MOR
+				}
+				declare_war_on = {
+					target = MOR
+					type = annex_everything
+				}
+				activate_mission = mission_special_militia_actions_on_mor
+			}
+		}
+	}
+
+	mission_special_militia_actions_on_tun = {
+		days_mission_timeout = 5
+		activation = {
+			has_country_flag = ITA_take_advantage_to_TUN
+		}
+		fire_only_once = yes
+		cancel_trigger = {
+			TUN = {
+				NOT = {
+					has_war_with = ROOT
+				}
+			}
+		}
+		available = {
+			TUN = {
+				OR = {
+					capital_scope = {
+						NOT = {
+							is_fully_controlled_by = TUN
+						}
+					}
+					has_capitulated = yes
+				}
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				white_peace = TUN
+			}
+			annex_country = { target = TUN }
+		}
+		timeout_effect = {
+			white_peace = TUN
+			VIC = {
+				annex_country = {
+					target = TUN
+				}
+			}
+			hidden_effect = {
+				country_event = IPUnion_country_event.90
+			}
+		}
+	}
+
+	mission_special_militia_actions_on_alg = {
+		days_mission_timeout = 5
+		fire_only_once = yes
+		activation = {
+			has_country_flag = ITA_take_advantage_to_ALG
+		}
+		cancel_trigger = {
+			ALG = {
+				NOT = {
+					has_war_with = ROOT
+				}
+			}
+		}
+		available = {
+			ALG = {
+				OR = {
+					capital_scope = {
+						NOT = {
+							is_fully_controlled_by = ALG
+						}
+					}
+					has_capitulated = yes
+				}
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				white_peace = ALG
+			}
+			set_autonomy = {
+				target = ALG
+				autonomous_state = autonomy_unilateral_union
+			}
+			hidden_effect = {
+				ALG = {
+					set_politics = {
+						ruling_party = neutrality
+					}
+					set_popularities = {
+						neutrality = 100
+					}
+				}
+			}
+		}
+		timeout_effect = {
+			white_peace = ALG
+			VIC = {
+				annex_country = {
+					target = ALG
+				}
+			}
+			hidden_effect = {
+				country_event = IPUnion_country_event.90
+			}
+		}
+	}
+
+	mission_special_militia_actions_on_mor = {
+		days_mission_timeout = 5
+		fire_only_once = yes
+		activation = {
+			has_country_flag = ITA_take_advantage_to_MOR
+		}
+		cancel_trigger = {
+			MOR = {
+				NOT = {
+					has_war_with = ROOT
+				}
+			}
+		}
+		available = {
+			MOR = {
+				OR = {
+					capital_scope = {
+						NOT = {
+							is_fully_controlled_by = MOR
+						}
+					}
+					has_capitulated = yes
+				}
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				white_peace = MOR
+			}
+			set_autonomy = {
+				target = MOR
+				autonomous_state = autonomy_unilateral_union
+			}
+			hidden_effect = {
+				MOR = {
+					set_politics = {
+						ruling_party = neutrality
+					}
+					set_popularities = {
+						neutrality = 100
+					}
+				}
+			}
+		}
+		timeout_effect = {
+			white_peace = MOR
+			VIC = {
+				annex_country = {
+					target = MOR
+				}
+			}
+			hidden_effect = {
+				country_event = IPUnion_country_event.90
+			}
 		}
 	}
 }
@@ -1224,6 +1568,7 @@ ITA_sword_aimed_middle_east_category = {
 
 	ITA_attack_middle_east_part1 = {
 		days_mission_timeout = 3
+		fire_only_once = yes
 		activation = {
 			has_country_flag = form_attack_middle_east_flag
 		}
@@ -1265,24 +1610,74 @@ ITA_sword_aimed_middle_east_category = {
 			}
 		}
 		complete_effect = {
-			give_resource_rights = {
-   				receiver = ITA
-    			state = 291
-    			resources = { oil }
+			every_country = {
+				limit = {
+					has_resources_rights = {
+						state = 291
+						resources = { oil }
+					}
+				}
+				remove_resource_rights = 291
 			}
-			give_resource_rights = {
-   				receiver = ITA
-    			state = 1010
-    			resources = { oil }
+			every_country = {
+				limit = {
+					has_resources_rights = {
+						state = 1010
+						resources = { oil }
+					}
+				}
+				remove_resource_rights = 1010
 			}
-			give_resource_rights = {
-   				receiver = ITA
-    			state = 676
-    			resources = { oil }
+			every_country = {
+				limit = {
+					has_resources_rights = {
+						state = 676
+						resources = { oil }
+					}
+				}
+				remove_resource_rights = 676
+			}
+			IRQ = {
+				if = {
+					limit = {
+						IRQ = {
+							controls_state = 291
+						}
+					}
+					give_resource_rights = {
+						receiver = ITA
+						state = 291
+						resources = { oil }
+					}
+				}
+				if = {
+					limit = {
+						IRQ = {
+							controls_state = 1010
+						}
+					}
+					give_resource_rights = {
+						receiver = ITA
+						state = 1010
+						resources = { oil }
+					}
+				}
+				if = {
+					limit = {
+						IRQ = {
+							controls_state = 676
+						}
+					}
+					give_resource_rights = {
+						receiver = ITA
+						state = 676
+						resources = { oil }
+					}
+				}
 			}
 		}
 		modifier = {
-			consumer_goods_factor = 0.05
+			consumer_goods_factor = 0.025
 		}
 		remove_effect = {
 			ITA = {
@@ -1319,6 +1714,22 @@ ITA_sword_aimed_middle_east_category = {
 				transfer_state = 554
 			}
 
+			454 = {
+				add_core_of = LEV
+			}
+
+			455 = {
+				add_core_of = LEV
+			}
+
+			553 = {
+				add_core_of = LEV
+			}
+
+			554 = {
+				add_core_of = LEV
+			}
+
 			set_autonomy = {
 				target = LEV
 				autonomy_state = autonomy_fascer_satellite
@@ -1336,6 +1747,7 @@ ITA_sword_aimed_middle_east_category = {
 						fascism = 5	
 					}
 					promote_character = LEV_government
+					load_focus_tree = IPUnion_empty_focus_tree
 				}
 				SYR = {
 					set_capital = { state = 677 }
@@ -1364,70 +1776,28 @@ ITA_sword_aimed_middle_east_category = {
 		}
 
 		complete_effect = {
-			if = {
-				limit = {
-					country_exists = SYR
-				}
-				hidden_effect = {
-					annex_country = { target = SYR }
-					SYR = {
-						transfer_state = 677
-						transfer_state = 680
-					}
-					SYR = { set_capital = { state = 677 } }
-				}
-				set_autonomy = {
-					target = SYR
-					autonomy_state = autonomy_condominium
-				}
-				hidden_effect = {
-					SYR = {
-						set_politics = {
-							ruling_party = neutrality
-						}
-						set_cosmetic_tag = SYR_condominium
-						set_popularities = {
-							neutrality = 70
-							democratic = 20
-							communism = 5
-							fascism = 5
-						}
-						add_ideas = idea_SYR_condominium
-					}
-					
-				}
+			hidden_effect = {
+				annex_country = { target = SYR }
 			}
-			else_if = {
-				limit = {
-					NOT = {
-						country_exists = SYR
-					}
-				}
+			release_autonomy = {
+				target = SYR
+				autonomy_state = autonomy_condominium
+			}
+			hidden_effect = {
 				SYR = {
-					transfer_state = 677
-					transfer_state = 680
-				}
-				hidden_effect = {
-					SYR = { set_capital = { state = 677 } }
-				}
-				set_autonomy = {
-					target = SYR
-					autonomy_state = autonomy_condominium
-				}
-				hidden_effect = {
-					SYR = {
-						set_politics = {
-							ruling_party = neutrality
-						}
-						set_cosmetic_tag = SYR_condominium
-						set_popularities = {
-							neutrality = 70
-							democratic = 20
-							communism = 5
-							fascism = 5
-						}
-						add_ideas = idea_SYR_condominium
+					set_capital = { state = 677 }  
+					set_politics = {
+						ruling_party = neutrality
 					}
+					set_cosmetic_tag = SYR_condominium
+					set_popularities = {
+						neutrality = 70
+						democratic = 20
+						communism = 5
+						fascism = 5
+					}
+					add_ideas = idea_SYR_condominium
+					load_focus_tree = IPUnion_empty_focus_tree
 				}
 			}
 			if = {
@@ -1440,6 +1810,55 @@ ITA_sword_aimed_middle_east_category = {
 				}
 				TUR = {
 					transfer_state = 799	
+				}
+			}
+		}
+	}
+
+	from_establish_kur_condominium = {
+		cost = 30
+
+		fire_only_once = yes
+
+		available = {
+			any_country = {
+				OR = {
+					original_tag = ITA
+					is_subject_of = ITA
+				}
+				controls_state = 676
+			}
+			ITA = {
+				is_in_faction_with = TUR
+			}
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				annex_country = { target = KUR }
+				KUR = {
+					transfer_state = 676
+				}
+				KUR = { set_capital = { state = 676 } }
+			}
+			set_autonomy = {
+				target = KUR
+				autonomy_state = autonomy_condominium
+			}
+			hidden_effect = {
+				KUR = {
+					set_politics = {
+						ruling_party = neutrality
+					}
+					set_cosmetic_tag = KUR_condominium
+					set_popularities = {
+						neutrality = 70
+						democratic = 20
+						communism = 5
+						fascism = 5
+					}
+					add_ideas = idea_KUR_condominium
+					load_focus_tree = IPUnion_empty_focus_tree
 				}
 			}
 		}
@@ -1951,6 +2370,7 @@ ITA_ger_anschluss = {
 				has_country_flag = ITA_interfere_ger_anschluss_flag
 			}
 		}
+		fire_only_once = yes
 		is_good = yes
 		timeout_effect = {
 			custom_effect_tooltip = ITA_ger_anschluss_timeout_tt
@@ -2592,7 +3012,7 @@ ITA_faction_affairs = {
 
 ITA_fasist_international = {
 
-	form_fasces_subjet_decision = {
+	from_fasces_subjet_decision = {
 		target_array = AAA.subject_fasces_countries
 
 		cost = 35
@@ -2689,7 +3109,7 @@ ITA_fasist_international = {
 }
 
 ITA_mussolini_profile_picture_category = {
-	form_ITA_mussolini_profile_picture = {
+	from_ITA_mussolini_profile_picture = {
 		allowed = {
 			original_tag = ITA
 		}
@@ -2709,6 +3129,124 @@ ITA_mussolini_profile_picture_category = {
 
 		complete_effect = {
 			country_event = IPUnion_country_event.87
+		}
+	}
+}
+
+greater_italy_category = {
+	from_take_back_savoy = {
+		fire_only_once = yes
+		available = {
+			has_global_flag = the_great_world_war_ii
+			NOT = {
+				has_war_with = FRA
+				has_wargoal_against = FRA
+				has_completed_focus = ITA_war_with_france
+			}
+			FRA = {
+				has_war_with = GER
+			}
+			GER = {
+				has_completed_focus = GER_around_maginot
+			}
+			any_state = {
+				is_core_of = FRA
+				NOT = {
+					is_fully_controlled_by = FRA
+				}
+			}
+		}
+
+		visible = { 
+			has_completed_focus = ITA_keep_the_course 
+			NOT = {
+				has_global_flag = french
+			}
+		}
+
+		ai_will_do = { factor = 0 }
+
+		#cost = 30
+
+		custom_cost_trigger = {
+	    	command_power > 14.9
+	    }
+	    custom_cost_text = AFG_decision_cost_quami
+
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -15
+				set_country_flag = from_take_back_savoy_flag
+			}
+			declare_war_on = {
+				target = FRA
+				type = take_state
+				generator = { 735 }
+			}
+			activate_mission = mission_take_back_savoy
+		}
+	}
+
+	mission_take_back_savoy = {
+		activation = {
+			has_country_flag = from_take_back_savoy_flag
+		}
+		fire_only_once = yes
+		days_mission_timeout = 30
+		cancel_trigger = {
+			has_global_flag = france_has_capitulated
+			FRA = {
+				NOT = {
+					controls_state = 735
+				}
+			}
+		}
+		cancel_effect = {
+			white_peace = FRA
+			every_country = {
+				limit = {
+					is_in_faction_with = FRA
+					has_war_with = ITA
+				}
+				white_peace = ITA
+			}
+			hidden_effect = {
+				clr_country_flag = from_take_back_savoy_flag
+			}
+		}
+		is_good = yes
+		available = {
+			735 = {
+				is_fully_controlled_by = ROOT
+			}
+		}
+		complete_effect = {
+			white_peace = FRA
+			every_country = {
+				limit = {
+					is_in_faction_with = FRA
+				}
+				white_peace = ITA
+			}
+			transfer_state = 735
+			735 = {
+				add_core_of = ITA
+			}
+			hidden_effect = {
+				clr_country_flag = from_take_back_savoy_flag
+			}
+		}
+		timeout_effect = {
+			white_peace = FRA
+			every_country = {
+				limit = {
+					is_in_faction_with = FRA
+				}
+				white_peace = ITA
+			}
+			hidden_effect = {
+				clr_country_flag = from_take_back_savoy_flag
+			}
 		}
 	}
 }

@@ -127,3 +127,31 @@ ITA_china_italy_airplane_project_effect_test = {
 	#	icon = "GFX_ITA_early_bomber_medium"
 	#}
 }
+
+ITA_create_pontifical_swiss_guard_effects = {
+	division_template = {
+		name = "Pontifical Swiss Guard"
+		is_locked = yes
+		force_allow_recruiting = yes
+		division_cap = 12
+		regiments = {
+			mountaineers = { x = 0 y = 0 }
+			mountaineers = { x = 0 y = 1 }
+			mountaineers = { x = 0 y = 2 }
+			mountaineers = { x = 1 y = 0 }
+			mountaineers = { x = 1 y = 1 }
+			mountaineers = { x = 1 y = 2 }
+			ranger_battalion = { x = 2 y = 0 }
+			ranger_battalion = { x = 2 y = 1 }
+			ranger_battalion = { x = 2 y = 2 }
+		}
+
+		support = {
+			engineer = { x = 0 y = 0 }
+			field_hospital = { x = 0 y = 1 }
+			logistics_company = { x = 0 y = 2 }
+			light_tank_recon = { x = 0 y = 3 }
+			artillery = { x = 0 y = 4 }
+		}
+	}
+}

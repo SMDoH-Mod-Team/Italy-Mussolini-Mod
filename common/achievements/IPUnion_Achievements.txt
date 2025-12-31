@@ -1,0 +1,19 @@
+unique_id = IPUnion_Achievements
+
+IPUnion_When_the_World_was_Young = {
+	possible = { has_start_date < 1936.01.02 } 
+
+	happened = {
+		any_country = {
+			OR = {
+				original_tag = ENG
+				original_tag = SPR
+				original_tag = YUG
+			}
+			#is_major = yes
+			has_government = fascism
+			is_in_faction_with = ITA
+			is_subject_of = ITA
+		}
+	}
+}

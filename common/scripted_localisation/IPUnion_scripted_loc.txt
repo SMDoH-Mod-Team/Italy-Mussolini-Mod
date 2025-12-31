@@ -31,3 +31,15 @@ defined_text = {
 		localization_key = ITA_benito_mussolini
 	}
 }
+defined_text = {
+	name = ITA_the_great_leader_science_in_por_conoly_scripted_loc
+	text = {
+		trigger = {
+			has_character = ITA_vittorio_emanuele_iii
+		}
+		localization_key = ITA_the_great_leader_science_in_por_conoly_monarchy
+	}
+	text = {
+		localization_key = ITA_the_great_leader_science_in_por_conoly_republic
+	}
+}
