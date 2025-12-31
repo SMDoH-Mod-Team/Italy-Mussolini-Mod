@@ -2811,6 +2811,7 @@ focus_tree = {
 		cost = 3
 
 		completion_reward = {
+			custom_effect_tooltip = unlock_propaganda_campaign_tt
 			unlock_decision_tooltip = ITA_propaganda_dig_coal
 			158 = {
 				add_resource = {
@@ -24851,8 +24852,8 @@ focus_tree = {
 				tooltip = line_change_production_efficiency_factor_tt
 			}
 			
-			custom_effect_tooltip = unlock_propaganda_campaign_tt
-			unlock_decision_tooltip = SOV_propaganda_anti_capitalism
+			#custom_effect_tooltip = unlock_propaganda_campaign_tt
+			#unlock_decision_tooltip = SOV_propaganda_anti_capitalism
 		}
 	}
 
