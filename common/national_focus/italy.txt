@@ -28448,6 +28448,13 @@ focus_tree = {
 
 		cost = 2
 
+		offset = {
+			x = -7
+			trigger = {
+				is_ai = yes
+			}
+		}
+
 		relative_position_id = ITA_flotta_d_evasione
 		x = 1
 		y = 2
@@ -28536,6 +28543,13 @@ focus_tree = {
 		x = -29
 		y = 2
 		cost = 2
+
+		offset = {
+			x = -20
+			trigger = {
+				is_ai = yes
+			}
+		}
 
 		completion_reward = {
 			custom_effect_tooltip = GER_fuhrerprinzip_inner_circle_tt
