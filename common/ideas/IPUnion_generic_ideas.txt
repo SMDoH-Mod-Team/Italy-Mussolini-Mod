@@ -205,10 +205,6 @@ ideas = {
 					is_subject_of = ITA
 					is_subject_of = TUR
 				}
-				OR = {
-					ITA = { has_subject = TUR }
-					TUR = { has_subject = ITA }
-				}
 				has_autonomy_state = autonomy_condominium					
 			}
 
@@ -336,10 +332,6 @@ ideas = {
 				OR = {
 					is_subject_of = ITA
 					is_subject_of = TUR
-				}
-				OR = {
-					ITA = { has_subject = TUR }
-					TUR = { has_subject = ITA }
 				}
 				has_autonomy_state = autonomy_condominium					
 			}

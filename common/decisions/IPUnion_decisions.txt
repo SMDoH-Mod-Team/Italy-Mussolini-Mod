@@ -2384,17 +2384,17 @@ ITA_ger_anschluss = {
 
 		available = {
 			divisions_in_state = {
-    			type = infantry
+    			#type = infantry
     			size > 9
     			state = 39
 			}
 			divisions_in_state = {
-    			type = infantry
+    			#type = infantry
     			size > 9
     			state = 160
 			}
 			divisions_in_state = {
-    			type = infantry
+    			#type = infantry
     			size > 9
     			state = 736
 			}
@@ -3147,9 +3147,17 @@ greater_italy_category = {
 				has_war_with = GER
 			}
 			GER = {
-				has_completed_focus = GER_around_maginot
+				OR = {
+					has_completed_focus = GER_around_maginot
+					has_completed_focus = GER_war_with_france
+				}
 			}
 			any_state = {
+				NOT = {
+					OR = {
+						state = 1
+					}
+				}
 				is_core_of = FRA
 				NOT = {
 					is_fully_controlled_by = FRA
