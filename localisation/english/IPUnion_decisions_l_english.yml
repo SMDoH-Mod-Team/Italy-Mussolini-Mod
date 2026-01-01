@@ -76,7 +76,7 @@
   china_italy_cooperation: "Sino-Italian Cooperation"
   CHI_second_delivery: "Second Batch Delivery"
 
-  ITA_inner_circle_debug_decisions: "The Leader's Inner Circle"
+  ITA_inner_circle_debug_decisions: "(DEBUG)The Leader's Inner Circle"
   debug_ascension_graziani: "Close Comrade Graziani"
   debug_ascension_balbo: "Close Comrade Balbo"
   debug_ascension_grandi: "Close Comrade Grandi"
@@ -115,3 +115,6 @@
   mission_special_militia_actions_on_tun: "Special Military Operation in Tunisia"
   mission_special_militia_actions_on_alg: "Special Military Operation in Algeria"
   mission_special_militia_actions_on_mor: "Special Military Operation in Morocco"
+
+  from_church_and_state: "Church and State"
+  ITA_hand_over_to_swiss_guard_jurisdiction: "Have over to swiss guard jurisdiction"

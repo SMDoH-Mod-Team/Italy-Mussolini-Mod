@@ -857,6 +857,14 @@ ideas = {
 				stability_factor = 0.05
 			}
 		}
+		idea_ITA_fascist_futurism = {
+			name = idea_ITA_fascist_futurism
+			removal_cost = -1
+			picture = generic_industrial_concern_2
+			modifier = {
+				research_speed_factor = 0.10
+			}
+		}
 	}
 	industrial_concern = {
 		ITA_OND = {

@@ -1,0 +1,377 @@
+ITA_oto_melara_organization = {
+	#include = generic_artillery_organization
+
+	icon = GFX_idea_oto_melara
+
+	allowed = {
+		original_tag = ITA
+	}
+
+	available = {
+		ITA = {
+			has_completed_focus = ITA_oto_naval_guns
+		}
+	}
+
+	equipment_type = {
+		artillery_equipment
+		anti_tank_equipment
+		anti_air_equipment
+		rocket_artillery_equipment
+		motorized_rocket_equipment
+	}
+
+	research_categories = {
+		mio_cat_all_artillery_equipment
+	}
+
+	initial_trait = {
+		name = IPUnion_mio_initial_trait_italian_cannon
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.15
+		}
+
+		equipment_bonus = {
+			artillery = -0.10
+		}
+	}
+
+	tree_header_text = {
+		text = mio_experimental_technology_header_text
+		x = 2
+	}
+
+	tree_header_text = {
+		text = mio_optimization_of_industrial_production_processes_header_text
+		x = 7
+	}
+
+	trait = {
+		position = { x = 2 y = 0 }
+		token = IPUnion_mio_oto_melara_trait_autofrettage_barrel_steel_technology
+		name = IPUnion_mio_oto_melara_trait_autofrettage_barrel_steel_technology
+		icon = GFX_generic_mio_department_icon_artillery
+
+		limit_to_equipment_type = {
+			artillery_equipment
+			anti_tank_equipment
+			anti_air_equipment
+		}
+
+		equipment_bonus = {
+			#reliability = 0.10
+			breakthrough = 0.05
+		}	
+	}
+
+	trait = {
+		relative_position_id = IPUnion_mio_oto_melara_trait_autofrettage_barrel_steel_technology
+		position = { x = -1 y = 1 }
+		token = IPUnion_mio_oto_melara_trait_ni_cr_steel_technology
+		name = IPUnion_mio_oto_melara_trait_ni_cr_steel_technology
+		icon = GFX_generic_mio_department_icon_artillery_conversion
+
+		all_parents = { IPUnion_mio_oto_melara_trait_autofrettage_barrel_steel_technology }
+
+		limit_to_equipment_type = {
+			artillery_equipment
+			anti_tank_equipment
+			anti_air_equipment
+		}
+
+		equipment_bonus = {
+			build_cost_ic = 0.025
+			reliability = 0.10
+		}
+
+	}
+
+	trait = {
+		relative_position_id = IPUnion_mio_oto_melara_trait_ni_cr_steel_technology
+		position = { x = 1 y = 0 }
+		token = IPUnion_mio_oto_melara_trait_cr_mo_steel_technology
+		name = IPUnion_mio_oto_melara_trait_cr_mo_steel_technology
+		icon = GFX_generic_mio_department_icon_artillery_conversion
+
+		all_parents = { IPUnion_mio_oto_melara_trait_autofrettage_barrel_steel_technology }
+
+		mutually_exclusive = { IPUnion_mio_oto_melara_trait_cr_steel_technology }
+
+		limit_to_equipment_type = {
+			artillery_equipment
+			anti_tank_equipment
+			anti_air_equipment
+		}
+
+		equipment_bonus = {
+			build_cost_ic = 0.025
+			reliability = 0.10
+		}
+
+	}
+
+	trait = {
+		relative_position_id = IPUnion_mio_oto_melara_trait_cr_mo_steel_technology
+		position = { x = 1 y = 0 }
+		token = IPUnion_mio_oto_melara_trait_ni_cr_mo_steel_technology
+		name = IPUnion_mio_oto_melara_trait_ni_cr_mo_steel_technology
+		icon = GFX_generic_mio_department_icon_artillery_conversion
+
+		all_parents = { IPUnion_mio_oto_melara_trait_autofrettage_barrel_steel_technology }
+
+		limit_to_equipment_type = {
+			artillery_equipment
+			anti_tank_equipment
+			anti_air_equipment
+		}
+
+		equipment_bonus = {
+			build_cost_ic = 0.025
+			reliability = 0.10
+		}
+
+	}
+
+	trait = {
+		relative_position_id = IPUnion_mio_oto_melara_trait_cr_mo_steel_technology
+		position = { x = 0 y = 1 }
+		token = IPUnion_mio_oto_melara_trait_obturator_systems
+		name = IPUnion_mio_oto_melara_trait_obturator_systems
+		icon = GFX_generic_mio_department_icon_artillery_line_efficiency
+
+		any_parent = { IPUnion_mio_oto_melara_trait_autofrettage_barrel_steel_technology IPUnion_mio_oto_melara_trait_ni_cr_steel_technology IPUnion_mio_oto_melara_trait_ni_cr_mo_steel_technology }
+
+		limit_to_equipment_type = {
+			artillery_equipment
+			anti_tank_equipment
+			anti_air_equipment
+		}
+
+		equipment_bonus = {
+			build_cost_ic = 0.025
+			soft_attack = 0.05
+		}
+
+	}
+
+	trait = {
+		relative_position_id = IPUnion_mio_oto_melara_trait_obturator_systems
+		position = { x = 0 y = 1 }
+		token = IPUnion_mio_oto_melara_trait_hydraulic_recoil
+		name = IPUnion_mio_oto_melara_trait_hydraulic_recoil
+		icon = GFX_generic_mio_department_icon_artillery_materials
+
+		all_parents = { IPUnion_mio_oto_melara_trait_obturator_systems }
+
+		limit_to_equipment_type = {
+			artillery_equipment
+			anti_tank_equipment
+			anti_air_equipment
+		}
+
+		equipment_bonus = {
+			build_cost_ic = 0.025
+			soft_attack = 0.05
+			breakthrough = 0.05
+		}
+
+	}
+
+	trait = {
+		relative_position_id = IPUnion_mio_oto_melara_trait_hydraulic_recoil
+		position = { x = 0 y = 1 }
+		token = IPUnion_mio_oto_melara_trait_optical_rangefinder
+		name = IPUnion_mio_oto_melara_trait_optical_rangefinder
+		icon = GFX_generic_mio_department_icon_artillery_technology
+
+		all_parents = { IPUnion_mio_oto_melara_trait_hydraulic_recoil }
+
+		limit_to_equipment_type = {
+			artillery_equipment
+			anti_tank_equipment
+			anti_air_equipment
+		}
+
+		equipment_bonus = {
+			build_cost_ic = 0.025
+			soft_attack = 0.05
+			breakthrough = 0.05
+		}
+
+	}
+
+	trait = {
+		position = { x = 7 y = 0 }
+		token = IPUnion_mio_oto_melara_trait_modular_barrel_production
+		name = IPUnion_mio_oto_melara_trait_modular_barrel_production
+		icon = GFX_generic_mio_department_icon_artillery_technology
+
+		limit_to_equipment_type = {
+			artillery_equipment
+			anti_tank_equipment
+			anti_air_equipment
+		}
+
+		equipment_bonus = {
+			build_cost_ic = -0.05
+			production_efficiency_gain_factor = 0.05
+			production_efficiency_cap_factor = 0.05
+		}
+
+	}
+
+	trait = {
+		relative_position_id = IPUnion_mio_oto_melara_trait_modular_barrel_production
+		position = { x = -1 y = 1 }
+		token = IPUnion_mio_oto_melara_trait_metal_fixed_ammunition
+		name = IPUnion_mio_oto_melara_trait_metal_fixed_ammunition
+		icon = GFX_generic_mio_department_icon_artillery_technology
+
+		all_parents = { IPUnion_mio_oto_melara_trait_modular_barrel_production }
+
+		limit_to_equipment_type = {
+			artillery_equipment
+			anti_tank_equipment
+			anti_air_equipment
+		}
+
+		equipment_bonus = {
+			build_cost_ic = -0.05
+			production_efficiency_gain_factor = 0.05
+			production_efficiency_cap_factor = 0.05
+		}
+
+	}
+
+	trait = {
+		relative_position_id = IPUnion_mio_oto_melara_trait_modular_barrel_production
+		position = { x = 1 y = 1 }
+		token = IPUnion_mio_oto_melara_trait_medicine_capsule_filling
+		name = IPUnion_mio_oto_melara_trait_medicine_capsule_filling
+		icon = GFX_generic_mio_department_icon_artillery_technology
+
+		all_parents = { IPUnion_mio_oto_melara_trait_modular_barrel_production }
+
+		limit_to_equipment_type = {
+			artillery_equipment
+			anti_tank_equipment
+			anti_air_equipment
+		}
+
+		equipment_bonus = {
+			build_cost_ic = -0.05
+			production_efficiency_gain_factor = 0.05
+			production_efficiency_cap_factor = 0.05
+		}
+
+	}
+
+	trait = {
+		relative_position_id = IPUnion_mio_oto_melara_trait_metal_fixed_ammunition
+		position = { x = 1 y = 1 }
+		token = IPUnion_mio_oto_melara_trait_assembly_line_artillery_assembly_process
+		name = IPUnion_mio_oto_melara_trait_assembly_line_artillery_assembly_process
+		icon = GFX_generic_mio_department_icon_artillery_technology
+
+		any_parent = { IPUnion_mio_oto_melara_trait_metal_fixed_ammunition IPUnion_mio_oto_melara_trait_medicine_capsule_filling	 }
+
+		limit_to_equipment_type = {
+			artillery_equipment
+			anti_tank_equipment
+			anti_air_equipment
+		}
+
+		equipment_bonus = {
+			build_cost_ic = -0.05
+			production_efficiency_gain_factor = 0.05
+			production_efficiency_cap_factor = 0.05
+		}
+
+	}
+
+	trait = {
+		relative_position_id = IPUnion_mio_oto_melara_trait_assembly_line_artillery_assembly_process
+		position = { x = -1 y = 1 }
+
+		all_parents = { IPUnion_mio_oto_melara_trait_assembly_line_artillery_assembly_process }
+
+		token = IPUnion_mio_oto_melara_trait_barrel_coaxial_inspection
+		name = IPUnion_mio_oto_melara_trait_barrel_coaxial_inspection
+		icon = GFX_generic_mio_department_icon_artillery_technology
+
+		limit_to_equipment_type = {
+			artillery_equipment
+			anti_tank_equipment
+			anti_air_equipment
+		}
+
+		equipment_bonus = {
+			build_cost_ic = -0.05
+			production_efficiency_gain_factor = 0.05
+			production_efficiency_cap_factor = 0.05
+		}
+	}
+
+	trait = {
+		relative_position_id = IPUnion_mio_oto_melara_trait_assembly_line_artillery_assembly_process
+		position = { x = 0 y = 1 } 
+
+		all_parents = { IPUnion_mio_oto_melara_trait_assembly_line_artillery_assembly_process }
+
+		token = IPUnion_mio_oto_melara_trait_chamber_pressure_test_firing_inspection
+		name = IPUnion_mio_oto_melara_trait_chamber_pressure_test_firing_inspection
+		icon = GFX_generic_mio_department_icon_artillery_technology
+
+		limit_to_equipment_type = {
+			artillery_equipment
+			anti_tank_equipment
+			anti_air_equipment
+		}
+
+		equipment_bonus = {
+			build_cost_ic = -0.05
+			production_efficiency_gain_factor = 0.05
+			production_efficiency_cap_factor = 0.05
+		}
+	}
+
+	trait = {
+		relative_position_id = IPUnion_mio_oto_melara_trait_assembly_line_artillery_assembly_process
+		position = { x = 1 y = 1 }
+
+		all_parents = { IPUnion_mio_oto_melara_trait_assembly_line_artillery_assembly_process }
+
+		token = IPUnion_mio_oto_melara_trait_overpressure_test
+		name = IPUnion_mio_oto_melara_trait_overpressure_test
+		icon = GFX_generic_mio_department_icon_artillery_technology
+
+		limit_to_equipment_type = {
+			artillery_equipment
+			anti_tank_equipment
+			anti_air_equipment
+		}
+
+		equipment_bonus = {
+			build_cost_ic = -0.05
+			production_efficiency_gain_factor = 0.05
+			production_efficiency_cap_factor = 0.05
+		}
+	}
+
+}
+
+ITA_OND_organization = {
+	include = generic_infantry_equipment_organization
+
+	icon = GFX_idea_ITA_OND
+
+	allowed = {
+		original_tag = ITA
+	}
+
+	available = {
+		ITA = {
+			has_completed_focus = ITA_inner_circle_ricci_OND
+		}
+	}
+}

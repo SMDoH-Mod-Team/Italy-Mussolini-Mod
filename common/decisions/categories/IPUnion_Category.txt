@@ -200,3 +200,10 @@ ITA_mussolini_profile_picture_category = {
 		original_tag = ITA
 	}
 }
+from_church_and_state = {
+	icon = x
+	picture = x
+	allowed = {
+		#original_tag = ITA
+	}
+}

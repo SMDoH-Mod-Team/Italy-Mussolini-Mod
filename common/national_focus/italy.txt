@@ -10400,6 +10400,8 @@ focus_tree = {
 
 			set_cosmetic_tag = ITA_rsi
 
+			add_ideas = idea_ITA_fascist_futurism
+
 			ITA_remove_king_vittorio_emanuele_as_idea = yes
 
 			if = {
@@ -28523,6 +28525,8 @@ focus_tree = {
 					count = 5
 				}
 			}
+
+			unlock_decision_tooltip = ITA_hand_over_to_swiss_guard_jurisdiction
 		}
 	}
 

@@ -138,3 +138,13 @@ music = {
 	name = "Parata_d_eroi"
 	file = "Parata d'eroi.ogg"
 }
+
+music = {
+	name = "La_campana_di_San_Giusto"
+	file = "La campana di San Giusto.ogg"
+}
+
+music = {
+	name = "La_bandiera_dei_tre_colori"
+	file = "La bandiera dei tre colori.ogg"
+}
