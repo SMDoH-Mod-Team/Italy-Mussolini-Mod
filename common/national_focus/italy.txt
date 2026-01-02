@@ -10400,8 +10400,6 @@ focus_tree = {
 
 			set_cosmetic_tag = ITA_rsi
 
-			add_ideas = idea_ITA_fascist_futurism
-
 			ITA_remove_king_vittorio_emanuele_as_idea = yes
 
 			if = {
@@ -23748,6 +23746,10 @@ focus_tree = {
 			unlock_decision_tooltip = form_roman_empire
 			custom_effect_tooltip = form_greater_italy_tt
 			unlock_decision_tooltip = form_restore_organizational_life
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			add_ideas = idea_ITA_fascist_futurism
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -28525,6 +28527,8 @@ focus_tree = {
 					count = 5
 				}
 			}
+
+			add_ideas = idea_ITA_swiss_guard
 
 			unlock_decision_tooltip = ITA_hand_over_to_swiss_guard_jurisdiction
 		}

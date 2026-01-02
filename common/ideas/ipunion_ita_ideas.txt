@@ -865,6 +865,14 @@ ideas = {
 				research_speed_factor = 0.10
 			}
 		}
+		idea_ITA_swiss_guard = {
+			name = idea_ITA_swiss_guard
+			removal_cost = -1
+			picture = NOR_royal_guards_battalion_ns
+			modifier = {
+				special_forces_cap_flat = 120
+			}
+		}
 	}
 	industrial_concern = {
 		ITA_OND = {

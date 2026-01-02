@@ -3258,24 +3258,3 @@ greater_italy_category = {
 		}
 	}
 }
-from_church_and_state = {
-	ITA_hand_over_to_swiss_guar_jurisdiction = {
-		cost = 30
-
-		visible = {
-			has_completed_focus = ITA_pope_pius_xii
-		}
-
-		available = {
-			any_country_division = {
-				has_template = "Pontifical Swiss Guard"
-			}
-		}
-
-		complete_effect = {
-			delete_unit = {
-				division_template = "Pontifical Swiss Guard"
-			}
-		}
-	}
-}
