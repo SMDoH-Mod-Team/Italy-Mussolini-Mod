@@ -28530,7 +28530,7 @@ focus_tree = {
 
 			add_ideas = idea_ITA_swiss_guard
 
-			unlock_decision_tooltip = ITA_hand_over_to_swiss_guard_jurisdiction
+			#unlock_decision_tooltip = ITA_hand_over_to_swiss_guard_jurisdiction
 		}
 	}
 
@@ -28539,7 +28539,7 @@ focus_tree = {
 	focus = {
 		id = ITA_duceprincipio
 		prerequisite = { focus = ITA_capo_supremo }
-		icon = GFX_focus_GER_support_the_fuhrer
+		icon = GFX_focus_ITA_capo_supremo
 		relative_position_id = ITA_capo_supremo
 		x = -29
 		y = 2
