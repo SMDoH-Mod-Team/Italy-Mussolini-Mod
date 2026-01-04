@@ -16,7 +16,7 @@ characters = {
 		}
 
 		corps_commander = {
-			traits={ benito_mussolini }
+			traits={ benito_mussolini fortress_buster }
 			skill=1
 			attack_skill=1
 			defense_skill=1

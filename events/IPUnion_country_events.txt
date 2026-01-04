@@ -1969,6 +1969,9 @@ country_event = {
 	option = {
 		name = IPUnion_country_event.54.a
 		add_political_power = 10
+		hidden_effect = {
+			set_country_flag = mussolini_is_health_flag
+		}
 	}
 
 	option = {

@@ -6139,6 +6139,16 @@ focus_tree = {
 			else = {
 				navy_experience = 15
 			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = available_industrial_concern
+			show_ideas_tooltip = ITA_oto_melara
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = available_mio_tt
+			custom_effect_tooltip = ITA_oto_melara_organization
 		}
 	}
 
@@ -24451,6 +24461,7 @@ focus_tree = {
 				limit = {
 					NOT = {
 						has_country_flag = mussolini_is_in_terminally_ill_flag
+						has_country_flag = mussolini_is_health_flag
 					}
 				}
 				random = {
@@ -24497,6 +24508,7 @@ focus_tree = {
 				limit = {
 					NOT = {
 						has_country_flag = mussolini_is_in_terminally_ill_flag
+						has_country_flag = mussolini_is_health_flag
 					}
 				}
 				random = {
@@ -24542,6 +24554,7 @@ focus_tree = {
 				limit = {
 					NOT = {
 						has_country_flag = mussolini_is_in_terminally_ill_flag
+						has_country_flag = mussolini_is_health_flag
 					}
 				}
 				random = {
@@ -24602,6 +24615,7 @@ focus_tree = {
 				limit = {
 					NOT = {
 						has_country_flag = mussolini_is_in_terminally_ill_flag
+						has_country_flag = mussolini_is_health_flag
 					}
 				}
 				random = {
@@ -24656,6 +24670,7 @@ focus_tree = {
 				limit = {
 					NOT = {
 						has_country_flag = mussolini_is_in_terminally_ill_flag
+						has_country_flag = mussolini_is_health_flag
 					}
 				}
 				random = {
@@ -24720,6 +24735,7 @@ focus_tree = {
 				limit = {
 					NOT = {
 						has_country_flag = mussolini_is_in_terminally_ill_flag
+						has_country_flag = mussolini_is_health_flag
 					}
 				}
 				random = {
@@ -24816,6 +24832,7 @@ focus_tree = {
 				limit = {
 					NOT = {
 						has_country_flag = mussolini_is_in_terminally_ill_flag
+						has_country_flag = mussolini_is_health_flag
 					}
 				}
 				random = {
@@ -24874,6 +24891,7 @@ focus_tree = {
 				limit = {
 					NOT = {
 						has_country_flag = mussolini_is_in_terminally_ill_flag
+						has_country_flag = mussolini_is_health_flag
 					}
 				}
 				random = {
@@ -24911,6 +24929,7 @@ focus_tree = {
 				limit = {
 					NOT = {
 						has_country_flag = mussolini_is_in_terminally_ill_flag
+						has_country_flag = mussolini_is_health_flag
 					}
 				}
 				random = {
@@ -24957,6 +24976,7 @@ focus_tree = {
 				limit = {
 					NOT = {
 						has_country_flag = mussolini_is_in_terminally_ill_flag
+						has_country_flag = mussolini_is_health_flag
 					}
 				}
 				random = {
@@ -25052,6 +25072,7 @@ focus_tree = {
 				limit = {
 					NOT = {
 						has_country_flag = mussolini_is_in_terminally_ill_flag
+						has_country_flag = mussolini_is_health_flag
 					}
 				}
 				random = {
@@ -25136,6 +25157,7 @@ focus_tree = {
 				limit = {
 					NOT = {
 						has_country_flag = mussolini_is_in_terminally_ill_flag
+						has_country_flag = mussolini_is_health_flag
 					}
 				}
 				random = {
@@ -25282,6 +25304,7 @@ focus_tree = {
 				limit = {
 					NOT = {
 						has_country_flag = mussolini_is_in_terminally_ill_flag
+						has_country_flag = mussolini_is_health_flag
 					}
 				}
 				random = {
@@ -30015,6 +30038,9 @@ focus_tree = {
 					}
 				}
 			}
+
+			custom_effect_tooltip = available_mio_tt
+			custom_effect_tooltip = ITA_OND_organization
 		}
 	}
 
