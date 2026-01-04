@@ -1511,56 +1511,21 @@ ITA_sword_aimed_middle_east_category = {
 			country_exists = EGY
 		}
 		remove_effect = {
-			CYP = {
-				add_ideas = IPUnion_neutrality_idea
-			}
+
 			declare_war_on = {
     			target = EGY
     			type = puppet_wargoal_focus
 			}
-			declare_war_on = {
-    			target = PAL
-    			type = puppet_wargoal_focus
-			}
-			declare_war_on = {
-    			target = JOR
-    			type = puppet_wargoal_focus
-			}
-			declare_war_on = {
-    			target = IRQ
-    			type = puppet_wargoal_focus
-			}
-			declare_war_on = {
-    			target = KUW
-    			type = puppet_wargoal_focus
-			}
-			declare_war_on = {
-    			target = CYP
-    			type = puppet_wargoal_focus
-			}
-			if = {
-				limit = {
-					SYR = {
-						is_in_faction_with = EGY
-					}
-					LEB = {
-						is_in_faction_with = EGY
-					}
-				}
-				declare_war_on = {
-    				target = SYR
-    				type = puppet_wargoal_focus
-				}
-				declare_war_on = {
-    				target = LEB
-    				type = puppet_wargoal_focus
-				}	
-			}
+			
 			hidden_effect = {
 				set_country_flag = form_attack_middle_east_flag
 				set_country_flag = form_attack_middle_east_flag_1
 				news_event = { id = IPUnion_news.7 }
 				#183 = { add_dynamic_modifier = { modifier = dont_attack_cyprus } }
+				add_named_threat = {
+					threat = -9
+					name = SE_middle_east_war_T
+				}
 			}
 			activate_mission = ITA_attack_middle_east_part1
 		}

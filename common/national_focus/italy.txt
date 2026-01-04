@@ -24190,27 +24190,50 @@ focus_tree = {
 			hidden_effect = {
 				EGY = {
 					set_major = yes
+					add_dynamic_modifier = {
+						modifier = allies_middle_east_command
+					}
 				}
 				PAL = {
 					set_major = yes
+					add_dynamic_modifier = {
+						modifier = allies_middle_east_command
+					}
 				}
 				JOR = {
 					set_major = yes
+					add_dynamic_modifier = {
+						modifier = allies_middle_east_command
+					}
 				}
-				#CYP = {
-				#	set_major = yes
-				#}
+				CYP = {
+					add_dynamic_modifier = {
+						modifier = allies_middle_east_command
+					}
+				}
 				IRQ = {
 					set_major = yes
+					add_dynamic_modifier = {
+						modifier = allies_middle_east_command
+					}
 				}
 				KUW = {
 					set_major = yes
+					add_dynamic_modifier = {
+						modifier = allies_middle_east_command
+					}
 				}
 				SYR = {
 					set_major = yes
+					add_dynamic_modifier = {
+						modifier = allies_middle_east_command
+					}
 				}
 				LEB = {
 					set_major = yes
+					add_dynamic_modifier = {
+						modifier = allies_middle_east_command
+					}
 				}
 			}
 		}

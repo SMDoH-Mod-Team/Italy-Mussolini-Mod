@@ -1693,6 +1693,26 @@ country_event = {
 				}
 			}
 		}
+
+		if = {
+			limit = {
+				any_country = {
+					has_dynamic_modifier = {
+						modifier = allies_middle_east_command
+					}
+				}
+			}
+			every_country = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = allies_middle_east_command
+					}
+				}
+				remove_dynamic_modifier = {
+					modifier = allies_middle_east_command
+				}
+			}
+		}
 	}
 }
 
