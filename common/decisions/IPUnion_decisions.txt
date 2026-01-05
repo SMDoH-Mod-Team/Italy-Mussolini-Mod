@@ -2320,7 +2320,7 @@ political_actions = {
 				add_ideas = AOI_abuna_abraham
 			}
 		}
-	}
+	}	
 }
 
 ITA_ger_anschluss = {
@@ -3219,6 +3219,48 @@ greater_italy_category = {
 			}
 			hidden_effect = {
 				clr_country_flag = from_take_back_savoy_flag
+			}
+		}
+	}
+}
+
+ITA_mussolini_healthy = {
+	from_mission_mussolini_death_range = {
+		activation = {
+			has_country_flag = ITA_mussolini_death_range_flag
+		}
+
+		days_mission_timeout = 30
+
+		available = {
+			has_country_flag = from_spare_no_effort_in_treating_the_patient_flag
+		}
+
+		complete_effect = {
+			country_event = IPUnion_country_event.91
+			hidden_effect = {
+				clr_country_flag = ITA_mussolini_death_range_flag
+			}
+		}
+
+		timeout_effect = {
+			country_event = IPUnion_country_event.55
+			hidden_effect = {
+				clr_country_flag = ITA_mussolini_death_range_flag
+			}
+		}
+	}
+
+	from_spare_no_effort_in_treating_the_patient = {
+		cost = 30
+
+		visible = {
+			has_country_flag = ITA_mussolini_death_range_flag
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = from_spare_no_effort_in_treating_the_patient_flag
 			}
 		}
 	}

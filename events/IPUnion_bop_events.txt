@@ -1,0 +1,134 @@
+add_namespace = italy_bop
+
+country_event = {
+	id = italy_bop.1
+	title = italy_bop.1.t
+	desc = italy_bop.1.d
+
+	picture = GFX_report_event_tur_inonu_diplomacy
+
+	is_triggered_only = yes
+
+	option = {
+		name = italy_bop.1.a
+
+		add_power_balance_value = {
+			id = mussolini_power_balance
+			value = -0.30
+		}
+	}
+}
+
+country_event = {
+	id = italy_bop.2
+	title = italy_bop.2.t
+	desc = italy_bop.2.d
+
+	picture = GFX_report_event_tur_inonu_diplomacy
+
+	is_triggered_only = yes
+
+	option = {
+		name = italy_bop.2.a
+
+		add_power_balance_value = {
+			id = mussolini_power_balance
+			value = -0.15
+		}
+	}
+}
+
+country_event = {
+	id = italy_bop.3
+	title = italy_bop.3.t
+	desc = italy_bop.3.d
+
+	picture = GFX_report_event_tur_inonu_diplomacy
+
+	is_triggered_only = yes
+
+	option = {
+		name = italy_bop.3.a
+
+		add_power_balance_value = {
+			id = mussolini_power_balance
+			value = -0.05
+		}
+	}
+}
+
+country_event = {
+	id = italy_bop.4
+	title = italy_bop.4.t
+	desc = italy_bop.4.d
+
+	picture = GFX_report_event_tur_inonu_diplomacy
+
+	is_triggered_only = yes
+
+	option = {
+		name = italy_bop.4.a
+
+		add_power_balance_value = {
+			id = mussolini_power_balance
+			value = 0
+		}
+	}
+}
+
+country_event = {
+	id = italy_bop.5
+	title = italy_bop.5.t
+	desc = italy_bop.5.d
+
+	picture = GFX_report_event_tur_inonu_diplomacy
+
+	is_triggered_only = yes
+
+	option = {
+		name = italy_bop.5.a
+
+		add_power_balance_value = {
+			id = mussolini_power_balance
+			value = 0.05
+		}
+	}
+}
+
+country_event = {
+	id = italy_bop.6
+	title = italy_bop.6.t
+	desc = italy_bop.6.d
+
+	picture = GFX_report_event_tur_inonu_diplomacy
+
+	is_triggered_only = yes
+
+	option = {
+		name = italy_bop.6.a
+
+		add_power_balance_value = {
+			id = mussolini_power_balance
+			value = 0.15
+		}
+	}
+}
+
+country_event = {
+	id = italy_bop.7
+	title = italy_bop.7.t
+	desc = italy_bop.7.d
+
+	picture = GFX_report_event_tur_inonu_diplomacy
+
+	is_triggered_only = yes
+
+	option = {
+		name = italy_bop.7.a
+
+		add_power_balance_value = {
+			id = mussolini_power_balance
+			value = 0.30
+		}
+	}
+}

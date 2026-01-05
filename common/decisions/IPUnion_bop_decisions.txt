@@ -1,0 +1,140 @@
+ITA_mussolini_bop_category = {
+	from_mussolini_health_changing = {
+		days_mission_timeout = 30
+
+		activate_mission = {
+			has_power_balance = {
+				id = mussolini_power_balance
+			}
+		}
+
+		fire_only_once = no
+
+		timeout_effect = {
+			random_list = {
+				10 = {
+					modifier = {
+						factor = 100
+						OR = {
+							has_completed_focus = ITA_be_careful_eth_puppet_sud
+							has_completed_focus = ITA_lease_toulon_99_years
+							has_completed_focus = ITA_miracolo_economico
+						}
+					}
+					country_event = italy_bop.1
+				}
+
+				80 = {
+					random_list = {
+						20 = { country_event = italy_bop.2 }
+
+						20 = { country_event = italy_bop.3 }
+
+						20 = { country_event = italy_bop.4 }
+
+						20 = { country_event = italy_bop.5 }
+
+						20 = { country_event = italy_bop.6 }
+					}
+				}
+
+				10 = {
+					country_event = italy_bop.7
+				}
+			}
+		}
+	}
+
+	from_suggest_the_leader_get_some_rest = {
+		days_remove = 7
+		cost = 15
+
+		available = {
+
+		}
+
+		modifier = {
+			political_power_gain = -0.03
+		}
+
+		remove_effect = {
+			add_power_balance_value = {
+				id = mussolini_power_balance
+				value = 0.10
+			}
+		}
+	}
+	
+	from_regular_healthy_check_up = {
+		days_remove = 5
+		days_re_enable = 30
+
+		cost = 0
+
+		available = {
+
+		}
+
+		modifier = {
+
+		}
+
+		remove_effect = {
+			add_power_balance_value = {
+				id = mussolini_power_balance
+				value = 0.05
+			}
+		}
+	}
+
+	from_arrange_a_consultation = {
+		days_remove = 15
+
+		cost = 50
+
+		modifier = {
+			political_power_gain = -0.05
+		}
+
+		visible = {
+			power_balance_value = {
+				id = mussolini_power_balance
+				value < -0.6
+			}
+		}
+
+		remove_effect = {
+			add_power_balance_value = {
+				id = mussolini_power_balance
+				value = 0.30
+			}
+		}
+	}
+
+	from_persecute_the_leader = {
+		days_remove = 5
+		cost = 300
+
+		visible = {
+			OR = {
+				AND = {
+					has_completed_focus = ITA_ascension_of_ciano
+					has_completed_focus	= ITA_inner_circle_ciano_rectify
+					has_completed_focus = ITA_inner_circle_ciano_the_real_steel_company
+				}
+
+				AND = {
+					has_completed_focus = ITA_ascension_of_grandi
+					has_completed_focus = ITA_inner_circle_grandi_advancing_law-based_governance
+				}
+			}
+		}
+
+		remove_effect = {
+			add_power_balance_value = {
+				id = mussolini_power_balance
+				value = -0.30
+			}
+		}
+	}
+}

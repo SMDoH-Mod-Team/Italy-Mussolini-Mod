@@ -118,3 +118,13 @@
 
   from_church_and_state: "Church and State"
   ITA_hand_over_to_swiss_guard_jurisdiction: "Have over to swiss guard jurisdiction"
+
+  ITA_mussolini_bop_category: "$ITA_power_balance$"
+  from_mussolini_health_changing: "The Leader's health condition is changing..."
+  from_suggest_the_leader_get_some_rest: "Suggest the Leader to Rest"
+  from_regular_healthy_check_up: "Regular Health Check-up"
+  from_arrange_a_consultation: "Arrange a Medical Consultation"
+  from_persecute_the_leader: "Persecute the Leader"
+
+  ITA_mussolini_healthy: "The Leader's Health Condition"
+  from_mission_mussolini_death_range: "The Leader Has Fallen into a Coma!"

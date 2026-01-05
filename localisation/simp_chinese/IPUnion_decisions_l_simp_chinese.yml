@@ -118,3 +118,13 @@
 
  from_church_and_state: "教会与国家"
  ITA_hand_over_to_swiss_guar_jurisdiction: "移交瑞士卫队管辖权"
+
+ ITA_mussolini_bop_category: "$ITA_power_balance$"
+ from_mussolini_health_changing: "领袖的身体状况正在发生变化..."
+ from_suggest_the_leader_get_some_rest: "建议领袖休息"
+ from_regular_healthy_check_up: "定期体检"
+ from_arrange_a_consultation: "组织会诊"
+ from_persecute_the_leader: "迫害领袖"
+
+ ITA_mussolini_healthy: "领袖的健康状况"
+ from_mission_mussolini_death_range: "领袖陷入昏迷！"

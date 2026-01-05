@@ -207,3 +207,19 @@ from_church_and_state = {
 		#original_tag = ITA
 	}
 }
+
+ITA_mussolini_bop_category = {
+	icon = x
+	allowed = {
+
+	}
+	picture = x
+}
+
+ITA_mussolini_healthy = {
+	icon = x
+	allowed = {
+
+	}
+	picture = x
+}

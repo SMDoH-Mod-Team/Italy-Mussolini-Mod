@@ -2,7 +2,7 @@ mussolini_power_balance = {
 	initial_value = 0.15
 	left_side = ITA_mussolini_death_side	
 	right_side = ITA_mussolini_healthy_side	
-	decision_category = ITA_balance_of_power_category
+	decision_category = ITA_mussolini_bop_category
 
 	range = {
 		id = ITA_mussolini_balance_range
@@ -81,7 +81,10 @@ mussolini_power_balance = {
 				war_support_factor = -0.15
 			}
 			on_activate = {
-				
+				hidden_effect = {
+					set_country_flag = ITA_mussolini_death_range_flag
+				}
+				activate_mission = from_mission_mussolini_death_range
 			}
 			on_deactivate = {
 				

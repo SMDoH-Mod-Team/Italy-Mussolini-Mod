@@ -116,3 +116,5 @@
   vic_regime_stablility: "Order Prevails in Vichy"
   mission_vic_regime_stablility_tt: "$vic_regime_stablility$"
   vic_not_regime_stablility_tt: "Vichy France exists and is politically unstable."
+
+  mussolini_healthy_maybe_have_some_changes_tt: "Mussolini's health condition may change."
