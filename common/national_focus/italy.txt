@@ -23763,6 +23763,15 @@ focus_tree = {
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 
+			set_power_balance = {
+				id = mussolini_power_balance
+				left_side = ITA_mussolini_death_side
+				right_side = ITA_mussolini_healthy_side
+				set_value = 0.15
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
 			custom_effect_tooltip = ITA_better_choice_tt
 		}
 	}

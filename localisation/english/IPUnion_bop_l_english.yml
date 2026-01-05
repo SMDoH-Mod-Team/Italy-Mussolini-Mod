@@ -1,2 +1,17 @@
 ﻿l_english:
- ITA_facism_Moderates: "Intra-Party Moderates"
+  mussolini_power_balance: "$ITA_power_balance$"
+  ITA_facism_Moderates: "Intra-Party Moderates"
+  ITA_mussolini_balance_range: "Barely Healthy"
+
+  ITA_balance_healthy_range: "Barely Healthy"
+  ITA_mussolini_death_range: "Fallen into a Coma"
+  ITA_mussolini_in_critical_condition: "In Critical Condition"
+  ITA_mussolini_condition_worsening_range: "Condition Worsening"
+  ITA_mussolini_working_diffcutly: "Working with Difficulty"
+  ITA_mussolini_long_live_mussolini: "Long Live Mussolini!"
+  ITA_mussolini_always_healthy: "Always Healthy"
+  ITA_mussolini_beaming_with_health: "Beaming with Health"
+  ITA_mussolini_relatively_healthy: "Relatively Healthy"
+  ITA_mussolini_death_side: "Deceased"
+  ITA_mussolini_healthy_side: "Healthy"
+

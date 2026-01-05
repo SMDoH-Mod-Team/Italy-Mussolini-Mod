@@ -1,2 +1,16 @@
 ﻿l_simp_chinese:
+ mussolini_power_balance: "$ITA_power_balance$"
  ITA_facism_Moderates: "党内温和派"
+ ITA_mussolini_balance_range: "勉强健康"
+
+ ITA_balance_healthy_range: "勉强健康"
+ ITA_mussolini_death_range: "陷入昏迷"
+ ITA_mussolini_in_critical_condition: "生命垂危"
+ ITA_mussolini_condition_worsening_range: "病情恶化"
+ ITA_mussolini_working_diffcutly: "工作困难"
+ ITA_mussolini_long_live_mussolini: "万寿无疆"
+ ITA_mussolini_always_healthy: "永远健康"
+ ITA_mussolini_beaming_with_health: "满面红光"
+ ITA_mussolini_relatively_healthy: "比较健康"
+ ITA_mussolini_death_side: "逝世"
+ ITA_mussolini_healthy_side: "健康"

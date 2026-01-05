@@ -2011,7 +2011,7 @@ country_event = {
 	title = IPUnion_country_event.55.t
 	desc = IPUnion_country_event.55.d
 
-	picture = GFX_report_event_gre_george_ii_victorious
+	picture = GFX_report_IPUnion_3
 
 	fire_only_once = yes
 	is_triggered_only = yes

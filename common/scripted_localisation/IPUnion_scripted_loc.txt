@@ -43,3 +43,17 @@ defined_text = {
 		localization_key = ITA_the_great_leader_science_in_por_conoly_republic
 	}
 }
+
+defined_text = {
+	name = GetITABalanceRange
+	text = {
+		trigger = {
+			has_character = ITA_benito_mussolini
+			has_completed_focus = ITA_keep_the_course
+		}
+		localization_key = ITA_balance_healthy_range
+	}
+	text = {
+		localization_key = ETH_balance_range
+	}
+}

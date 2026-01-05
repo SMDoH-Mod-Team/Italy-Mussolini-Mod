@@ -534,7 +534,7 @@ ITA_OND_organization = {
 
 	trait = {
 		relative_position_id = ITA_OND_organization_trait_milano_steel_experience
-		all_parents = { ITA_OND_organization_trait_milano_steel_experience ITA_OND_organization_trait_essen_steel_experience }
+		any_parent = { ITA_OND_organization_trait_milano_steel_experience ITA_OND_organization_trait_essen_steel_experience }
 		token = ITA_OND_organization_trait_sea_eagle_flank_ahead
 		name = ITA_OND_organization_trait_sea_eagle_flank_ahead
 		icon = GFX_generic_mio_department_icon_facilities
