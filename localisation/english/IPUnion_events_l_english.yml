@@ -522,3 +522,7 @@
   italy_bop.7.t: "Encouraging Change in the Leader's Health Condition!"
   italy_bop.7.d: "Recent medical examinations indicate a significant improvement in the Leader's health compared to the last check-up."
   italy_bop.7.a: "Review the nursing records—from now on, follow this standard."
+  italy_bop.8.t: "The Leader Has Fallen into a Coma!"
+  italy_bop.8.d: "Our leader suddenly lost consciousness in his office this afternoon, and his vital signs are deteriorating rapidly!"
+  italy_bop.8.a: "We must save our leader!"
+  italy_bop.8.b: "Hmph, the heavens are on my side!"

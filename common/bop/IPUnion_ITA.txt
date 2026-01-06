@@ -81,10 +81,7 @@ mussolini_power_balance = {
 				war_support_factor = -0.15
 			}
 			on_activate = {
-				hidden_effect = {
-					set_country_flag = ITA_mussolini_death_range_flag
-				}
-				activate_mission = from_mission_mussolini_death_range
+				country_event = italy_bop.8
 			}
 			on_deactivate = {
 				

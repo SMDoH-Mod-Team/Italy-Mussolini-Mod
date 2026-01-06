@@ -2967,6 +2967,10 @@ country_event = {
 	option = {
 		name = IPUnion_country_event.91.a
 		
+		add_power_balance_value = {
+			id = mussolini_power_balance
+			value = 0.30
+		}
 	}
 }
 

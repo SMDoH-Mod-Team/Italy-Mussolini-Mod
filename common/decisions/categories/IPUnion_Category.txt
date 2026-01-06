@@ -218,6 +218,7 @@ ITA_mussolini_bop_category = {
 
 ITA_mussolini_healthy = {
 	icon = x
+	priority = 101
 	allowed = {
 
 	}

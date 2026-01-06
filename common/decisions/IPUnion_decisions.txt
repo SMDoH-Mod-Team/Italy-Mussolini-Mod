@@ -3232,6 +3232,14 @@ ITA_mussolini_healthy = {
 
 		days_mission_timeout = 30
 
+		fire_only_once = no
+
+		cancel_trigger = {
+			hidden_effect = {
+				always = no
+			}
+		}
+
 		available = {
 			has_country_flag = from_spare_no_effort_in_treating_the_patient_flag
 		}
@@ -3240,6 +3248,7 @@ ITA_mussolini_healthy = {
 			country_event = IPUnion_country_event.91
 			hidden_effect = {
 				clr_country_flag = ITA_mussolini_death_range_flag
+				clr_country_flag = from_spare_no_effort_in_treating_the_patient_flag
 			}
 		}
 
@@ -3247,6 +3256,7 @@ ITA_mussolini_healthy = {
 			country_event = IPUnion_country_event.55
 			hidden_effect = {
 				clr_country_flag = ITA_mussolini_death_range_flag
+				clr_country_flag = from_spare_no_effort_in_treating_the_patient_flag
 			}
 		}
 	}
