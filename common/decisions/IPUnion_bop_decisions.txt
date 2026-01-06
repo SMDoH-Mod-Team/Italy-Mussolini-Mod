@@ -2,7 +2,7 @@ ITA_mussolini_bop_category = {
 	from_mussolini_health_changing = {
 		days_mission_timeout = 30
 
-		activate_mission = {
+		activation = {
 			has_power_balance = {
 				id = mussolini_power_balance
 			}
