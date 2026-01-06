@@ -10,6 +10,20 @@ ITA_mussolini_bop_category = {
 
 		fire_only_once = no
 
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+
+		cancel_trigger = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+
+		fire_only_once = no
+
 		timeout_effect = {
 			random_list = {
 				10 = {
@@ -40,6 +54,17 @@ ITA_mussolini_bop_category = {
 
 				10 = {
 					country_event = italy_bop.7
+				}
+			}
+
+			hidden_effect = {
+				if = {
+					limit = {
+						has_power_balance = {
+							id = mussolini_power_balance
+						}
+					}
+					activate_mission = from_mussolini_health_changing
 				}
 			}
 		}
