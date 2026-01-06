@@ -1,0 +1,41 @@
+add_namespace = bftb_turkey
+
+country_event = {
+	id = bftb_turkey.60
+	title = bftb_turkey.60.t
+	desc = bftb_turkey.60.desc
+	picture = GFX_report_event_tur_turkish_soldiers
+
+	is_triggered_only = yes
+	
+	option = {
+		name = bftb_turkey.60.a #we must give in
+		effect_tooltip = {
+			TUR = { transfer_state = 799 }
+		}
+		hidden_effect = {
+			TUR = { 
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = TUR_released_hatay_to_us
+				}
+				country_event = { id = bftb_turkey.61 hours = 12 }
+			}
+		}
+	}
+	option = {
+		name = bftb_turkey.60.b #the Hatay Turks are safe with us!
+		trigger = {
+			is_ai = no
+		}
+		TUR = { 
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = TUR_oppressors_of_turks
+			}
+		}
+		hidden_effect = {
+			TUR = { country_event = { id = bftb_turkey.62 hours = 8 } }
+		}
+	}
+}
