@@ -316,6 +316,12 @@
   IPUnion_country_event.91.t: "The Leader is Out of Danger"
   IPUnion_country_event.91.d: "Through our all-out rescue efforts, the Leader's vital signs have finally returned to normal."
   IPUnion_country_event.91.a: "Excellent"
+  IPUnion_country_event.92.t: "Milan People's Commune Established!"
+  IPUnion_country_event.92.d: "This morning, the Republican Fascist faction in Milan rebelled against the local Royal Government. Hundreds of thousands of soldiers and civilians in Milan held a mass rally, proclaiming the establishment of the Milan People's Commune!"
+  IPUnion_country_event.92.a: "From this day forward,"
+  IPUnion_country_event.92.b: "the Party, government, economic, and cultural authority of Milan"
+  IPUnion_country_event.92.c: "shall all belong to the People's Commune!"
+
 
   IPUnion_debug_event.1.t: "Add Political Propaganda Variable for [FROM.GetName]"
   IPUnion_debug_event.1.d: "Add Political Propaganda Variable for [FROM.GetName]"

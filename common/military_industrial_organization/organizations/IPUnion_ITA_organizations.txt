@@ -418,6 +418,8 @@ ITA_OND_organization = {
 		mio_cat_eq_all_small_plane
 		mio_cat_eq_all_medium_plane
 		mio_cat_eq_all_large_plane
+		transport_plane_equipment
+		train_equipment
 	}
 
 	research_categories = {

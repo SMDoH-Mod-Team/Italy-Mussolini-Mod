@@ -1,6 +1,5 @@
 autonomy_state = {
-	## FROM TGWR ##
-	id = autonomy_unilateral_union
+	id = autonomy_peoples_commune
 
 	is_puppet = no
 	
@@ -44,12 +43,12 @@ autonomy_state = {
 		original_tag = ITA
 		OR = {
 			is_subject = no
-			has_autonomy_state = autonomy_unilateral_union
+			has_autonomy_state = autonomy_peoples_commune
 		}
 	}
 	
 	allowed_levels_filter = {
-		autonomy_unilateral_union
+		autonomy_peoples_commune
 	}
 
 	can_take_level = {
@@ -57,6 +56,6 @@ autonomy_state = {
 	}
 
 	can_lose_level = {
-		always = yes
+		always = no
 	}
 }

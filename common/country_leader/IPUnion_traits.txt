@@ -93,4 +93,8 @@ leader_traits = {
 	country_leader_benito_corporal = {
 		custom_modifier_tooltip = country_leader_benito_corporal_modifier_tt
 	}
+	ITA_PNF_republican = {
+		political_power_gain = 0.01
+		stability_factor = -0.05
+	}
 }

@@ -1324,7 +1324,7 @@ ITA_mare_nostrum_category = {
 	}
 
 	mission_special_militia_actions_on_tun = {
-		days_mission_timeout = 5
+		days_mission_timeout = 14
 		activation = {
 			has_country_flag = ITA_take_advantage_to_TUN
 		}
@@ -1368,7 +1368,7 @@ ITA_mare_nostrum_category = {
 	}
 
 	mission_special_militia_actions_on_alg = {
-		days_mission_timeout = 5
+		days_mission_timeout = 14
 		fire_only_once = yes
 		activation = {
 			has_country_flag = ITA_take_advantage_to_ALG
@@ -1425,7 +1425,7 @@ ITA_mare_nostrum_category = {
 	}
 
 	mission_special_militia_actions_on_mor = {
-		days_mission_timeout = 5
+		days_mission_timeout = 14
 		fire_only_once = yes
 		activation = {
 			has_country_flag = ITA_take_advantage_to_MOR
@@ -3235,7 +3235,7 @@ ITA_mussolini_healthy = {
 		fire_only_once = no
 
 		cancel_trigger = {
-			hidden_effect = {
+			hidden_trigger = {
 				always = no
 			}
 		}

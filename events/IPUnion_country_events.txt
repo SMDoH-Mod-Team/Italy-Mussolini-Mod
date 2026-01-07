@@ -1230,8 +1230,12 @@ country_event = {
 		custom_effect_tooltip = IPUnion_country_event.34.a.tt
 		hidden_effect = {
 			country_event = {
-				id = IPUnion_country_event.35
+				id = IPUnion_country_event.92
 				days = 3
+			}
+			country_event = {
+				id = IPUnion_country_event.35
+				days = 15
 			}
 			news_event = {
 				id = IPUnion_news.5
@@ -1260,7 +1264,13 @@ country_event = {
 			long_name = ITA_republic_fascism_party_long
 			name = ITA_republic_fascism_party
 		}
+
+		annex_country = {
+			target = event_target:Milano_Commune_event_target
+		}
+
 		hidden_effect = {
+			clear_global_event_target = Milano_Commune_event_target
 			country_event = {
 				id = IPUnion_country_event.36
 				days = 7
@@ -2970,6 +2980,166 @@ country_event = {
 		add_power_balance_value = {
 			id = mussolini_power_balance
 			value = 0.30
+		}
+	}
+}
+
+country_event = {
+	id = IPUnion_country_event.92
+	
+	title = IPUnion_country_event.92.t
+	desc = IPUnion_country_event.92.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_IPUnion_4
+	option = {
+		name = IPUnion_country_event.92.a
+
+		custom_effect_tooltip = estblish_milano_commune_tt
+		
+		hidden_effect = {
+			create_dynamic_country = {
+				original_tag = ITA
+				copy_tag = ITA
+				add_political_power = 100
+				transfer_state = 159
+				save_global_event_target_as = Milano_Commune_event_target
+
+				hidden_effect = {
+					every_state = {
+						limit = {
+							is_core_of = event_target:Milano_Commune_event_target
+						}		
+						if = {
+							limit = {
+								NOT = {
+									state = 159
+								}
+							}
+							remove_core_of = event_target:Milano_Commune_event_target
+						}
+					}
+
+					event_target:Milano_Commune_event_target = {
+						set_cosmetic_tag = Milano_Commune
+						set_party_name = {
+							ideology = fascism
+							long_name = ITA_republic_fascism_party_long
+							name = ITA_republic_fascism_party
+						}
+						add_country_leader_trait = ITA_PNF_republican
+						load_focus_tree = IPUnion_empty_focus_tree
+						set_country_flag = milano_peoples_commune_flag
+					}
+				}
+
+				ITA = {
+					set_autonomy = {
+						target = event_target:Milano_Commune_event_target
+						autonomy_state = autonomy_peoples_commune
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = IPUnion_country_event.92.b
+		
+		custom_effect_tooltip = estblish_milano_commune_tt
+		
+		hidden_effect = {
+			create_dynamic_country = {
+				original_tag = ITA
+				copy_tag = ITA
+				add_political_power = 100
+				transfer_state = 159
+				save_global_event_target_as = Milano_Commune_event_target
+
+				hidden_effect = {
+					every_state = {
+						limit = {
+							is_core_of = event_target:Milano_Commune_event_target
+						}		
+						if = {
+							limit = {
+								NOT = {
+									state = 159
+								}
+							}
+							remove_core_of = event_target:Milano_Commune_event_target
+						}
+					}
+
+					event_target:Milano_Commune_event_target = {
+						set_cosmetic_tag = Milano_Commune
+						set_party_name = {
+							ideology = fascism
+							long_name = ITA_republic_fascism_party_long
+							name = ITA_republic_fascism_party
+						}
+						add_country_leader_trait = ITA_PNF_republican
+						load_focus_tree = IPUnion_empty_focus_tree
+					}
+				}
+
+				ITA = {
+					set_autonomy = {
+						target = event_target:Milano_Commune_event_target
+						autonomy_state = autonomy_peoples_commune
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = IPUnion_country_event.92.c
+		
+		custom_effect_tooltip = estblish_milano_commune_tt
+		
+		hidden_effect = {
+			create_dynamic_country = {
+				original_tag = ITA
+				copy_tag = ITA
+				add_political_power = 100
+				transfer_state = 159
+				save_global_event_target_as = Milano_Commune_event_target
+
+				hidden_effect = {
+					every_state = {
+						limit = {
+							is_core_of = event_target:Milano_Commune_event_target
+						}		
+						if = {
+							limit = {
+								NOT = {
+									state = 159
+								}
+							}
+							remove_core_of = event_target:Milano_Commune_event_target
+						}
+					}
+
+					event_target:Milano_Commune_event_target = {
+						set_cosmetic_tag = Milano_Commune
+						set_party_name = {
+							ideology = fascism
+							long_name = ITA_republic_fascism_party_long
+							name = ITA_republic_fascism_party
+						}
+						add_country_leader_trait = ITA_PNF_republican
+						load_focus_tree = IPUnion_empty_focus_tree
+					}
+				}
+
+				ITA = {
+					set_autonomy = {
+						target = event_target:Milano_Commune_event_target
+						autonomy_state = autonomy_peoples_commune
+					}
+				}
+			}
 		}
 	}
 }

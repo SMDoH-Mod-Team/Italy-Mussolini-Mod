@@ -83,4 +83,8 @@
   IRQ_italian_subject: "$IRQ_kingdom_of_iraq_tag_neutrality$"
   IRQ_italian_subject_ADJ: "$IRQ_kingdom_of_iraq_tag_neutrality_ADJ$"
   IRQ_italian_subject_DEF: "$IRQ_kingdom_of_iraq_tag_neutrality_DEF$"
+
+  Milano_Commune: "Milano People's Commune"
+  Milano_Commune_ADJ: "Milano People's Commune"
+  Milano_Commune_DEF: "Milano"
   
