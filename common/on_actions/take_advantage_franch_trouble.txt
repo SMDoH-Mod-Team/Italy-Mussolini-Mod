@@ -46,7 +46,9 @@ on_actions = {
 					}
 					hidden_effect = {
 						ALG = {
-							set_politics = neutrality
+							set_politics = {
+								ruling_party = neutrality
+							}
 							set_popularities = {
 								neutrality = 100
 							}
@@ -78,7 +80,9 @@ on_actions = {
 					}
 					hidden_effect = {
 						MOR = {
-							set_politics = neutrality
+							set_politics = {
+								ruling_party = neutrality
+							}
 							set_popularities = {
 								neutrality = 100
 							}

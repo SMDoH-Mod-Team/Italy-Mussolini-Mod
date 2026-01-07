@@ -58,7 +58,10 @@
   form_cooperate_with_knights_of_malta_effect_tt: "§YOur country§! will engage in a §Y730§!-day cooperation with the §YKnights of Malta§! headquartered in Rome. During this period, our country will gain the modifier:"
   IPUnion_country_event_29_a_tt: "Will initiate a §YBorder War§! with a width of §Y420§! across §Y6§! provinces bordering §Y[448.GetName]§!, §Y[661.GetName]§!, and §Y[665.GetName]§!."
   ITA_enter_the_high_stage_of_imperialism_tt_1: "§RSuch radical reforms may lead to unpredictable consequences...§!"
-  ITA_national_economy_fascismful_tt: "§GUnlock§! §YEconomic Law§!："
+  available_trade_laws: "§YTrade Laws§! §GAvailable§!："
+  available_economy_laws: "§YEconomic Laws§! §GAvailable§!："
+  #ITA_national_economy_fascismful_tt: "§GUnlock§!§YEconomic Laws§!："
+  ITA_national_economy_fascismful_tt: "$available_trade_laws$"
   IPUnion_country_event.34.a.tt: "§RThe world is in great chaos§!, §Gthe situation is excellent§!"
   ITA_leap_forward_tt: "“§YSilver hoes fall from the sky connecting the five ridges, iron arms shake the earth moving the three rivers§!” The production enthusiasm of the masses will be mobilized, §Rbut if left unchecked, it may lead to very serious consequences!§!"
   ITA_Economic_recovery_policy_tt: "Economic Recovery Policy"
@@ -116,3 +119,9 @@
   vic_regime_stablility: "Order Prevails in Vichy"
   mission_vic_regime_stablility_tt: "$vic_regime_stablility$"
   vic_not_regime_stablility_tt: "Vichy France exists and is politically unstable."
+
+  mussolini_healthy_maybe_have_some_changes_tt: "Mussolini's health condition may change."
+  from_spare_no_effort_in_treating_the_patient_flag: "Spare no effort in treating the patient"
+  from_persecute_the_leader_tt: "This option is available because the §YInner Circle§! contains §Y$ITA_gian_galeazzo_ciano$§! or §Y$ITA_dino_grandi$§! and their §YUltimate National Focus§! has been completed."
+
+  estblish_milano_commune_tt: "§OMilan People's Commune Established!§!"

@@ -45,4 +45,34 @@ ideas = {
    			}
 		}
 	}
+
+	economy = {
+		ITA_corporatism = {
+			picture = tot_economic_mobilisation
+
+			visible = {
+				original_tag = ITA
+				has_completed_focus = ITA_national_economy_fascismful
+			}
+
+			modifier = {
+				consumer_goods_expected_value = 0.15
+				conscription = -0.005
+				political_power_cost = 0.1
+				production_speed_industrial_complex_factor = 0.10
+				production_speed_arms_factory_factor = 0.15
+				conversion_cost_civ_to_mil_factor= -0.25
+				conversion_cost_mil_to_civ_factor = -0.25
+				production_factory_efficiency_gain_factor = 0.15
+				industrial_capacity_factory = 0.10
+				research_speed_factor = 0.10
+			}
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
 }

@@ -1,0 +1,184 @@
+add_namespace = italy_bop
+
+country_event = {
+	id = italy_bop.1
+	title = italy_bop.1.t
+	desc = italy_bop.1.d
+
+	picture = GFX_report_event_tur_inonu_diplomacy
+
+	is_triggered_only = yes
+
+	option = {
+		name = italy_bop.1.a
+
+		add_power_balance_value = {
+			id = mussolini_power_balance
+			value = -0.30
+		}
+	}
+}
+
+country_event = {
+	id = italy_bop.2
+	title = italy_bop.2.t
+	desc = italy_bop.2.d
+
+	picture = GFX_report_event_tur_inonu_diplomacy
+
+	is_triggered_only = yes
+
+	option = {
+		name = italy_bop.2.a
+
+		add_power_balance_value = {
+			id = mussolini_power_balance
+			value = -0.15
+		}
+	}
+}
+
+country_event = {
+	id = italy_bop.3
+	title = italy_bop.3.t
+	desc = italy_bop.3.d
+
+	picture = GFX_report_event_tur_inonu_diplomacy
+
+	is_triggered_only = yes
+
+	option = {
+		name = italy_bop.3.a
+
+		add_power_balance_value = {
+			id = mussolini_power_balance
+			value = -0.05
+		}
+	}
+}
+
+country_event = {
+	id = italy_bop.4
+	title = italy_bop.4.t
+	desc = italy_bop.4.d
+
+	picture = GFX_report_event_tur_inonu_diplomacy
+
+	is_triggered_only = yes
+
+	option = {
+		name = italy_bop.4.a
+
+		add_power_balance_value = {
+			id = mussolini_power_balance
+			value = 0
+		}
+	}
+}
+
+country_event = {
+	id = italy_bop.5
+	title = italy_bop.5.t
+	desc = italy_bop.5.d
+
+	picture = GFX_report_event_tur_inonu_diplomacy
+
+	is_triggered_only = yes
+
+	option = {
+		name = italy_bop.5.a
+
+		add_power_balance_value = {
+			id = mussolini_power_balance
+			value = 0.05
+		}
+	}
+}
+
+country_event = {
+	id = italy_bop.6
+	title = italy_bop.6.t
+	desc = italy_bop.6.d
+
+	picture = GFX_report_event_tur_inonu_diplomacy
+
+	is_triggered_only = yes
+
+	option = {
+		name = italy_bop.6.a
+
+		add_power_balance_value = {
+			id = mussolini_power_balance
+			value = 0.15
+		}
+	}
+}
+
+country_event = {
+	id = italy_bop.7
+	title = italy_bop.7.t
+	desc = italy_bop.7.d
+
+	picture = GFX_report_event_tur_inonu_diplomacy
+
+	is_triggered_only = yes
+
+	option = {
+		name = italy_bop.7.a
+
+		add_power_balance_value = {
+			id = mussolini_power_balance
+			value = 0.30
+		}
+	}
+}
+
+country_event = {
+	id = italy_bop.8
+	title = italy_bop.8.t
+	desc = italy_bop.8.d
+	
+	picture = GFX_report_event_tur_inonu_diplomacy
+
+	is_triggered_only = yes
+
+	option = {
+		name = italy_bop.8.a
+		hidden_effect = {
+			set_country_flag = ITA_mussolini_death_range_flag
+		}
+		unlock_decision_tooltip	= from_spare_no_effort_in_treating_the_patient
+		custom_effect_tooltip = generic_skip_one_line_tt
+		activate_mission = from_mission_mussolini_death_range
+	}
+
+	option = {
+		name = italy_bop.8.b
+		trigger = {
+			OR = {
+				AND = {
+					has_completed_focus = ITA_inner_circle_ciano_the_real_steel_company
+					OR = {
+						check_variable = { ITA_ascended_advisor_1 = 4 }
+						check_variable = { ITA_ascended_advisor_2 = 4 }
+						check_variable = { ITA_ascended_advisor_3 = 4 }
+						check_variable = { ITA_ascended_advisor_4 = 4 }
+					}
+				}
+				AND = {
+					has_completed_focus = ITA_inner_circle_grandi_advancing_law-based_governance
+					OR = {
+						check_variable = { ITA_ascended_advisor_1 = 3 }
+						check_variable = { ITA_ascended_advisor_2 = 3 }
+						check_variable = { ITA_ascended_advisor_3 = 3 }
+						check_variable = { ITA_ascended_advisor_4 = 3 }
+					}
+				}
+			}
+		}
+		
+		custom_effect_tooltip = from_persecute_the_leader_tt
+		custom_effect_tooltip = generic_skip_one_line_tt
+		activate_mission = from_mission_mussolini_death_range
+	}
+}

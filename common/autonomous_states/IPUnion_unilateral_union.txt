@@ -57,6 +57,6 @@ autonomy_state = {
 	}
 
 	can_lose_level = {
-		always = no
+		always = yes
 	}
 }

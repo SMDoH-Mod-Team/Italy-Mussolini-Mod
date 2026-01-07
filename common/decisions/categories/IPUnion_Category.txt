@@ -200,3 +200,27 @@ ITA_mussolini_profile_picture_category = {
 		original_tag = ITA
 	}
 }
+from_church_and_state = {
+	icon = x
+	picture = x
+	allowed = {
+		#original_tag = ITA
+	}
+}
+
+ITA_mussolini_bop_category = {
+	icon = x
+	allowed = {
+
+	}
+	picture = x
+}
+
+ITA_mussolini_healthy = {
+	icon = x
+	priority = 101
+	allowed = {
+
+	}
+	picture = x
+}

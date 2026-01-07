@@ -39,7 +39,7 @@ music = {
 music = {
 	song = "LaProclamazioneDellImpero"
 	chance = {
-		factor = 0
+		factor = 1
 	}
 }
 music = {
@@ -159,30 +159,44 @@ music = {
 music = {
 	song = "LacanzonedelCarnaro"
 	chance = {
-		factor = 0
+		factor = 1
 	}
 }
 music = {
 	song = "LacanzonedelCarnaro_Accompaniment"
 	chance = {
-		factor = 0
+		factor = 1
 	}
 }
 music = {
 	song = "Avanti_Popolo"
 	chance = {
-		factor = 0
+		factor = 1
 	}
 }
 music = {
 	song = "Inno_di_Garibaldi"
 	chance = {
-		factor = 0
+		factor = 1
 	}
 }
 music = {
 	song = "Parata_d_eroi"
 	chance = {
-		factor = 0
+		factor = 1
+	}
+}
+
+music = {
+	song = "La_campana_di_San_Giusto"
+	chance = {
+		factor = 1
+	}
+}
+
+music = {
+	song = "La_bandiera_dei_tre_colori"
+	chance = {
+		factor = 1
 	}
 }

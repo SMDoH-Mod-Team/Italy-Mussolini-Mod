@@ -16,6 +16,10 @@ spriteTypes = {
 		name = "GFX_autonomy_fascer_satellite_icon"
 		textureFile = "gfx/interface/autonomy/autonomy_satellite.dds"
 	}
+	spriteType = {
+		name = "GFX_autonomy_peoples_commune_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_satellite.dds"
+	}
 
 	## Benito Mussolini ##
 

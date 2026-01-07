@@ -58,7 +58,10 @@
  form_cooperate_with_knights_of_malta_effect_tt: "§Y我国§!会与总部位于罗马的§Y马耳他骑士团§!展开为期§Y730§!天的合作，合作期内我国会获得修正："
  IPUnion_country_event_29_a_tt: "会在§Y[448.GetName]§!、§Y[661.GetName]§!与§Y[665.GetName]§!相接壤的§Y6§!个省份中发起一场宽度为§Y420§!的§Y边境战争§!。"
  ITA_enter_the_high_stage_of_imperialism_tt_1: "§R如此激进的改革可能会引发不可预知的后果...§!"
- ITA_national_economy_fascismful_tt: "§G解锁§!§Y经济法案§!："
+ available_trade_laws: "§Y贸易法案§!§G可用§!："
+ available_economy_laws: "§Y经济法案§!§G可用§!："
+ #ITA_national_economy_fascismful_tt: "§G解锁§!§Y经济法案§!："
+ ITA_national_economy_fascismful_tt: "$available_trade_laws$"
  IPUnion_country_event.34.a.tt: "§R天下大乱§!，§G形势大好§!"
  ITA_leap_forward_tt: "“§Y天连五岭银锄落，地动三河铁臂摇§!”人民群众的生产积极性会被调动起来，§R但如果放任不管，可能会引发非常严重的后果！§!"
  ITA_Economic_recovery_policy_tt: "恢复经济政策"
@@ -116,3 +119,10 @@
  vic_regime_stablility: "维希秩序井然"
  mission_vic_regime_stablility_tt: "$vic_regime_stablility$"
  vic_not_regime_stablility_tt: "维希法国存在且政治混乱"
+
+
+ mussolini_healthy_maybe_have_some_changes_tt: "墨索里尼的身体状况可能会发生变化"
+ from_spare_no_effort_in_treating_the_patient_flag: "全力救治"
+ from_persecute_the_leader_tt: "由于§Y核心集团§!中存在§Y$ITA_gian_galeazzo_ciano$§!或者§Y$ITA_dino_grandi$§!且已经完成其§Y终极国策§!，该选项可用"
+ 
+ estblish_milano_commune_tt: "§O米兰人民公社成立！§!"

@@ -76,7 +76,7 @@
  china_italy_cooperation: "中意合作"
  CHI_second_delivery: "第二批交付"
 
- ITA_inner_circle_debug_decisions: "领袖的核心集团"
+ ITA_inner_circle_debug_decisions: "(DEBUG)领袖的核心集团"
  debug_ascension_graziani: "亲密战友格拉齐亚尼同志"
  debug_ascension_balbo: "亲密战友巴尔博同志"
  debug_ascension_grandi: "亲密战友格兰迪同志"
@@ -115,3 +115,17 @@
  mission_special_militia_actions_on_tun: "在突尼斯的特别军事行动"
  mission_special_militia_actions_on_alg: "在阿尔及利亚的特别军事行动"
  mission_special_militia_actions_on_mor: "在摩洛哥的特别军事行动"
+
+ from_church_and_state: "教会与国家"
+ ITA_hand_over_to_swiss_guar_jurisdiction: "移交瑞士卫队管辖权"
+
+ ITA_mussolini_bop_category: "$ITA_power_balance$"
+ from_mussolini_health_changing: "领袖的身体状况正在发生变化..."
+ from_suggest_the_leader_get_some_rest: "建议领袖休息"
+ from_regular_healthy_check_up: "定期体检"
+ from_arrange_a_consultation: "组织会诊"
+ from_persecute_the_leader: "迫害领袖"
+
+ ITA_mussolini_healthy: "领袖的健康状况"
+ from_mission_mussolini_death_range: "领袖陷入昏迷！"
+ from_spare_no_effort_in_treating_the_patient: "全力救治！"

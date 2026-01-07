@@ -1861,3 +1861,8 @@ KUR_condominium = {
 	color = rgb { 171  190  152 }
 	color_ui = rgb { 171  190  152 }
 }
+
+Milano_Commune = {
+	color = rgb { 10 80 20 }
+	color_ui = rgb { 10 80 20 }
+}

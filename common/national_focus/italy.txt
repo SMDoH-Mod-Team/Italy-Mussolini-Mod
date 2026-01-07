@@ -2811,6 +2811,7 @@ focus_tree = {
 		cost = 3
 
 		completion_reward = {
+			custom_effect_tooltip = unlock_propaganda_campaign_tt
 			unlock_decision_tooltip = ITA_propaganda_dig_coal
 			158 = {
 				add_resource = {
@@ -4248,17 +4249,10 @@ focus_tree = {
 			#}
 
 			add_doctrine_cost_reduction = {
-				name = ITA_a_bandits_war
-				cost_reduction = 0.75
-				uses = 1
-				category = cat_superior_firepower
-			}
-
-			add_doctrine_cost_reduction = {
-				name = ITA_a_bandits_war
-				cost_reduction = 0.75
-				uses = 1
-				category = cat_mass_assault
+				name = ITA_a_bandits_war #land_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
 			}
 
 			add_tech_bonus = {
@@ -6145,6 +6139,16 @@ focus_tree = {
 			else = {
 				navy_experience = 15
 			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = available_industrial_concern
+			show_ideas_tooltip = ITA_oto_melara
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = available_mio_tt
+			custom_effect_tooltip = ITA_oto_melara_organization
 		}
 	}
 
@@ -23752,7 +23756,20 @@ focus_tree = {
 			unlock_decision_tooltip = form_roman_empire
 			custom_effect_tooltip = form_greater_italy_tt
 			unlock_decision_tooltip = form_restore_organizational_life
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			add_ideas = idea_ITA_fascist_futurism
 			
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			set_power_balance = {
+				id = mussolini_power_balance
+				left_side = ITA_mussolini_death_side
+				right_side = ITA_mussolini_healthy_side
+				set_value = 0.15
+			}
+
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			custom_effect_tooltip = ITA_better_choice_tt
@@ -24182,27 +24199,50 @@ focus_tree = {
 			hidden_effect = {
 				EGY = {
 					set_major = yes
+					add_dynamic_modifier = {
+						modifier = allies_middle_east_command
+					}
 				}
 				PAL = {
 					set_major = yes
+					add_dynamic_modifier = {
+						modifier = allies_middle_east_command
+					}
 				}
 				JOR = {
 					set_major = yes
+					add_dynamic_modifier = {
+						modifier = allies_middle_east_command
+					}
 				}
-				#CYP = {
-				#	set_major = yes
-				#}
+				CYP = {
+					add_dynamic_modifier = {
+						modifier = allies_middle_east_command
+					}
+				}
 				IRQ = {
 					set_major = yes
+					add_dynamic_modifier = {
+						modifier = allies_middle_east_command
+					}
 				}
 				KUW = {
 					set_major = yes
+					add_dynamic_modifier = {
+						modifier = allies_middle_east_command
+					}
 				}
 				SYR = {
 					set_major = yes
+					add_dynamic_modifier = {
+						modifier = allies_middle_east_command
+					}
 				}
 				LEB = {
 					set_major = yes
+					add_dynamic_modifier = {
+						modifier = allies_middle_east_command
+					}
 				}
 			}
 		}
@@ -24307,8 +24347,11 @@ focus_tree = {
 			custom_effect_tooltip = ITA_enter_the_high_stage_of_imperialism_tt
 			ITA_state_monopoly_capitalism_reforming = yes
 			custom_effect_tooltip = generic_skip_one_line_tt
-			custom_effect_tooltip = ITA_national_economy_fascismful_tt
+			custom_effect_tooltip = ITA_national_economy_fascismful_tt  ##这么做仅仅是为了少改动另一个国策mod中的国策文件
 			show_ideas_tooltip = ITA_autarkic_economy
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = available_economy_laws
+			show_ideas_tooltip = ITA_corporatism
 			#hidden_effect = {
 			#	country_event = {
 			#		id = IPUNion_country_event.11
@@ -24449,17 +24492,55 @@ focus_tree = {
 		prerequisite = { focus = ITA_learn_form_foggia }
 		cost = 2
 		completion_reward = {
-			if = {
-				limit = {
-					NOT = {
-						has_country_flag = mussolini_is_in_terminally_ill_flag
+			#if = {
+			#	limit = {
+			#		NOT = {
+			#			has_country_flag = mussolini_is_in_terminally_ill_flag
+			#			has_country_flag = mussolini_is_health_flag
+			#		}
+			#	}
+			#	random = {
+			#		chance = 10
+			#		country_event = IPUnion_country_event.54
+			#	}
+			#}
+
+			custom_effect_tooltip = mussolini_healthy_maybe_have_some_changes_tt
+
+			hidden_effect = {
+				random_list = {
+					10 = {
+						modifier = {
+							factor = 100
+							OR = {
+								has_completed_focus = ITA_be_careful_eth_puppet_sud
+								has_completed_focus = ITA_lease_toulon_99_years
+								has_completed_focus = ITA_miracolo_economico
+							}
+						}
+						country_event = italy_bop.1
+					}
+
+					80 = {
+						random_list = {
+							20 = { country_event = italy_bop.2 }
+
+							20 = { country_event = italy_bop.3 }
+
+							20 = { country_event = italy_bop.4 }
+
+							20 = { country_event = italy_bop.5 }
+
+							20 = { country_event = italy_bop.6 }
+						}
+					}
+
+					10 = {
+						country_event = italy_bop.7
 					}
 				}
-				random = {
-					chance = 10
-					country_event = IPUnion_country_event.54
-				}
 			}
+
 			every_core_state = {
 				limit = {
 					is_fully_controlled_by = ROOT
@@ -24495,17 +24576,55 @@ focus_tree = {
 		prerequisite = { focus = ITA_Issuance_new_version_lira }
 		cost = 4
 		completion_reward = {
-			if = {
-				limit = {
-					NOT = {
-						has_country_flag = mussolini_is_in_terminally_ill_flag
+			#if = {
+			#	limit = {
+			#		NOT = {
+			#			has_country_flag = mussolini_is_in_terminally_ill_flag
+			#			has_country_flag = mussolini_is_health_flag
+			#		}
+			#	}
+			#	random = {
+			#		chance = 20
+			#		country_event = IPUnion_country_event.54
+			#	}
+			#}
+
+			custom_effect_tooltip = mussolini_healthy_maybe_have_some_changes_tt
+
+			hidden_effect = {
+				random_list = {
+					10 = {
+						modifier = {
+							factor = 100
+							OR = {
+								has_completed_focus = ITA_be_careful_eth_puppet_sud
+								has_completed_focus = ITA_lease_toulon_99_years
+								has_completed_focus = ITA_miracolo_economico
+							}
+						}
+						country_event = italy_bop.1
+					}
+
+					80 = {
+						random_list = {
+							20 = { country_event = italy_bop.2 }
+
+							20 = { country_event = italy_bop.3 }
+
+							20 = { country_event = italy_bop.4 }
+
+							20 = { country_event = italy_bop.5 }
+
+							20 = { country_event = italy_bop.6 }
+						}
+					}
+
+					10 = {
+						country_event = italy_bop.7
 					}
 				}
-				random = {
-					chance = 20
-					country_event = IPUnion_country_event.54
-				}
 			}
+
 			random_core_state = {
 				limit = {
 					is_fully_controlled_by = ROOT
@@ -24540,17 +24659,56 @@ focus_tree = {
 		prerequisite = { focus = ITA_Issuance_new_version_lira }
 		cost = 3
 		completion_reward = {
-			if = {
-				limit = {
-					NOT = {
-						has_country_flag = mussolini_is_in_terminally_ill_flag
+			#if = {
+			#	limit = {
+			#		NOT = {
+			#			has_country_flag = mussolini_is_in_terminally_ill_flag
+			#			has_country_flag = mussolini_is_health_flag
+			#		}
+			#	}
+			#	random = {
+			#		chance = 20
+			#		country_event = IPUnion_country_event.54
+			#	}
+			#}
+
+			custom_effect_tooltip = mussolini_healthy_maybe_have_some_changes_tt
+
+			hidden_effect = {
+				random_list = {
+					10 = {
+						modifier = {
+							factor = 100
+							OR = {
+								has_completed_focus = ITA_be_careful_eth_puppet_sud
+								has_completed_focus = ITA_lease_toulon_99_years
+								has_completed_focus = ITA_miracolo_economico
+							}
+						}
+						country_event = italy_bop.1
+					}
+
+					80 = {
+						random_list = {
+							20 = { country_event = italy_bop.2 }
+
+							20 = { country_event = italy_bop.3 }
+
+							20 = { country_event = italy_bop.4 }
+
+							20 = { country_event = italy_bop.5 }
+
+							20 = { country_event = italy_bop.6 }
+						}
+					}
+
+					10 = {
+						country_event = italy_bop.7
 					}
 				}
-				random = {
-					chance = 20
-					country_event = IPUnion_country_event.54
-				}
 			}
+
+
 			if = {
 				limit = {
 					2 = { #Roma
@@ -24600,15 +24758,52 @@ focus_tree = {
 		prerequisite = { focus = ITA_mussolinisim_tax_reform }
 		mutually_exclusive = { focus = ITA_abolish_price_controls }
 		completion_reward = {
-			if = {
-				limit = {
-					NOT = {
-						has_country_flag = mussolini_is_in_terminally_ill_flag
+			#if = {
+			#	limit = {
+			#		NOT = {
+			#			has_country_flag = mussolini_is_in_terminally_ill_flag
+			#			has_country_flag = mussolini_is_health_flag
+			#		}
+			#	}
+			#	random = {
+			#		chance = 30
+			#		country_event = IPUnion_country_event.54
+			#	}
+			#}
+
+			custom_effect_tooltip = mussolini_healthy_maybe_have_some_changes_tt
+
+			hidden_effect = {
+				random_list = {
+					10 = {
+						modifier = {
+							factor = 100
+							OR = {
+								has_completed_focus = ITA_be_careful_eth_puppet_sud
+								has_completed_focus = ITA_lease_toulon_99_years
+								has_completed_focus = ITA_miracolo_economico
+							}
+						}
+						country_event = italy_bop.1
 					}
-				}
-				random = {
-					chance = 30
-					country_event = IPUnion_country_event.54
+
+					80 = {
+						random_list = {
+							20 = { country_event = italy_bop.2 }
+
+							20 = { country_event = italy_bop.3 }
+
+							20 = { country_event = italy_bop.4 }
+
+							20 = { country_event = italy_bop.5 }
+
+							20 = { country_event = italy_bop.6 }
+						}
+					}
+
+					10 = {
+						country_event = italy_bop.7
+					}
 				}
 			}
 			add_stability = 0.10
@@ -24654,15 +24849,52 @@ focus_tree = {
 		prerequisite = { focus = ITA_mussolinisim_tax_reform }
 		mutually_exclusive = { focus = ITA_price_controls_continued }
 		completion_reward = {
-			if = {
-				limit = {
-					NOT = {
-						has_country_flag = mussolini_is_in_terminally_ill_flag
+			#if = {
+			#	limit = {
+			#		NOT = {
+			#			has_country_flag = mussolini_is_in_terminally_ill_flag
+			#			has_country_flag = mussolini_is_health_flag
+			#		}
+			#	}
+			#	random = {
+			#		chance = 30
+			#		country_event = IPUnion_country_event.54
+			#	}
+			#}
+
+			custom_effect_tooltip = mussolini_healthy_maybe_have_some_changes_tt
+
+			hidden_effect = {
+				random_list = {
+					10 = {
+						modifier = {
+							factor = 100
+							OR = {
+								has_completed_focus = ITA_be_careful_eth_puppet_sud
+								has_completed_focus = ITA_lease_toulon_99_years
+								has_completed_focus = ITA_miracolo_economico
+							}
+						}
+						country_event = italy_bop.1
 					}
-				}
-				random = {
-					chance = 30
-					country_event = IPUnion_country_event.54
+
+					80 = {
+						random_list = {
+							20 = { country_event = italy_bop.2 }
+
+							20 = { country_event = italy_bop.3 }
+
+							20 = { country_event = italy_bop.4 }
+
+							20 = { country_event = italy_bop.5 }
+
+							20 = { country_event = italy_bop.6 }
+						}
+					}
+
+					10 = {
+						country_event = italy_bop.7
+					}
 				}
 			}
 			add_stability = -0.15
@@ -24718,15 +24950,52 @@ focus_tree = {
 
 		completion_reward = {
 
-			if = {
-				limit = {
-					NOT = {
-						has_country_flag = mussolini_is_in_terminally_ill_flag
+			#if = {
+			#	limit = {
+			#		NOT = {
+			#			has_country_flag = mussolini_is_in_terminally_ill_flag
+			#			has_country_flag = mussolini_is_health_flag
+			#		}
+			#	}
+			#	random = {
+			#		chance = 30
+			#		country_event = IPUnion_country_event.54
+			#	}
+			#}
+
+			custom_effect_tooltip = mussolini_healthy_maybe_have_some_changes_tt
+
+			hidden_effect = {
+				random_list = {
+					10 = {
+						modifier = {
+							factor = 100
+							OR = {
+								has_completed_focus = ITA_be_careful_eth_puppet_sud
+								has_completed_focus = ITA_lease_toulon_99_years
+								has_completed_focus = ITA_miracolo_economico
+							}
+						}
+						country_event = italy_bop.1
 					}
-				}
-				random = {
-					chance = 30
-					country_event = IPUnion_country_event.54
+
+					80 = {
+						random_list = {
+							20 = { country_event = italy_bop.2 }
+
+							20 = { country_event = italy_bop.3 }
+
+							20 = { country_event = italy_bop.4 }
+
+							20 = { country_event = italy_bop.5 }
+
+							20 = { country_event = italy_bop.6 }
+						}
+					}
+
+					10 = {
+						country_event = italy_bop.7
+					}
 				}
 			}
 
@@ -24814,15 +25083,52 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			if = {
-				limit = {
-					NOT = {
-						has_country_flag = mussolini_is_in_terminally_ill_flag
+			#if = {
+			#	limit = {
+			#		NOT = {
+			#			has_country_flag = mussolini_is_in_terminally_ill_flag
+			#			has_country_flag = mussolini_is_health_flag
+			#		}
+			#	}
+			#	random = {
+			#		chance = 30
+			#		country_event = IPUnion_country_event.54
+			#	}
+			#}
+
+			custom_effect_tooltip = mussolini_healthy_maybe_have_some_changes_tt
+
+			hidden_effect = {
+				random_list = {
+					10 = {
+						modifier = {
+							factor = 100
+							OR = {
+								has_completed_focus = ITA_be_careful_eth_puppet_sud
+								has_completed_focus = ITA_lease_toulon_99_years
+								has_completed_focus = ITA_miracolo_economico
+							}
+						}
+						country_event = italy_bop.1
 					}
-				}
-				random = {
-					chance = 30
-					country_event = IPUnion_country_event.54
+
+					80 = {
+						random_list = {
+							20 = { country_event = italy_bop.2 }
+
+							20 = { country_event = italy_bop.3 }
+
+							20 = { country_event = italy_bop.4 }
+
+							20 = { country_event = italy_bop.5 }
+
+							20 = { country_event = italy_bop.6 }
+						}
+					}
+
+					10 = {
+						country_event = italy_bop.7
+					}
 				}
 			}
 			add_popularity = {
@@ -24851,8 +25157,8 @@ focus_tree = {
 				tooltip = line_change_production_efficiency_factor_tt
 			}
 			
-			custom_effect_tooltip = unlock_propaganda_campaign_tt
-			unlock_decision_tooltip = SOV_propaganda_anti_capitalism
+			#custom_effect_tooltip = unlock_propaganda_campaign_tt
+			#unlock_decision_tooltip = SOV_propaganda_anti_capitalism
 		}
 	}
 
@@ -24872,17 +25178,55 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			if = {
-				limit = {
-					NOT = {
-						has_country_flag = mussolini_is_in_terminally_ill_flag
+			#if = {
+			#	limit = {
+			#		NOT = {
+			#			has_country_flag = mussolini_is_in_terminally_ill_flag
+			#			has_country_flag = mussolini_is_health_flag
+			#		}
+			#	}
+			#	random = {
+			#		chance = 40
+			#		country_event = IPUnion_country_event.54
+			#	}
+			#}
+
+			custom_effect_tooltip = mussolini_healthy_maybe_have_some_changes_tt
+
+			hidden_effect = {
+				random_list = {
+					10 = {
+						modifier = {
+							factor = 100
+							OR = {
+								has_completed_focus = ITA_be_careful_eth_puppet_sud
+								has_completed_focus = ITA_lease_toulon_99_years
+								has_completed_focus = ITA_miracolo_economico
+							}
+						}
+						country_event = italy_bop.1
+					}
+
+					80 = {
+						random_list = {
+							20 = { country_event = italy_bop.2 }
+
+							20 = { country_event = italy_bop.3 }
+
+							20 = { country_event = italy_bop.4 }
+
+							20 = { country_event = italy_bop.5 }
+
+							20 = { country_event = italy_bop.6 }
+						}
+					}
+
+					10 = {
+						country_event = italy_bop.7
 					}
 				}
-				random = {
-					chance = 40
-					country_event = IPUnion_country_event.54
-				}
 			}
+
 			add_ideas = ITA_planned_parenthood_idea
 		}
 	}
@@ -24909,15 +25253,52 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
-			if = {
-				limit = {
-					NOT = {
-						has_country_flag = mussolini_is_in_terminally_ill_flag
+			#if = {
+			#	limit = {
+			#		NOT = {
+			#			has_country_flag = mussolini_is_in_terminally_ill_flag
+			#			has_country_flag = mussolini_is_health_flag
+			#		}
+			#	}
+			#	random = {
+			#		chance = 40
+			#		country_event = IPUnion_country_event.54
+			#	}
+			#}
+
+			custom_effect_tooltip = mussolini_healthy_maybe_have_some_changes_tt
+
+			hidden_effect = {
+				random_list = {
+					10 = {
+						modifier = {
+							factor = 100
+							OR = {
+								has_completed_focus = ITA_be_careful_eth_puppet_sud
+								has_completed_focus = ITA_lease_toulon_99_years
+								has_completed_focus = ITA_miracolo_economico
+							}
+						}
+						country_event = italy_bop.1
 					}
-				}
-				random = {
-					chance = 40
-					country_event = IPUnion_country_event.54
+
+					80 = {
+						random_list = {
+							20 = { country_event = italy_bop.2 }
+
+							20 = { country_event = italy_bop.3 }
+
+							20 = { country_event = italy_bop.4 }
+
+							20 = { country_event = italy_bop.5 }
+
+							20 = { country_event = italy_bop.6 }
+						}
+					}
+
+					10 = {
+						country_event = italy_bop.7
+					}
 				}
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -24955,15 +25336,52 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			if = {
-				limit = {
-					NOT = {
-						has_country_flag = mussolini_is_in_terminally_ill_flag
+			#if = {
+			#	limit = {
+			#		NOT = {
+			#			has_country_flag = mussolini_is_in_terminally_ill_flag
+			#			has_country_flag = mussolini_is_health_flag
+			#		}
+			#	}
+			#	random = {
+			#		chance = 40
+			#		country_event = IPUnion_country_event.54
+			#	}
+			#}
+
+			custom_effect_tooltip = mussolini_healthy_maybe_have_some_changes_tt
+
+			hidden_effect = {
+				random_list = {
+					10 = {
+						modifier = {
+							factor = 100
+							OR = {
+								has_completed_focus = ITA_be_careful_eth_puppet_sud
+								has_completed_focus = ITA_lease_toulon_99_years
+								has_completed_focus = ITA_miracolo_economico
+							}
+						}
+						country_event = italy_bop.1
 					}
-				}
-				random = {
-					chance = 40
-					country_event = IPUnion_country_event.54
+
+					80 = {
+						random_list = {
+							20 = { country_event = italy_bop.2 }
+
+							20 = { country_event = italy_bop.3 }
+
+							20 = { country_event = italy_bop.4 }
+
+							20 = { country_event = italy_bop.5 }
+
+							20 = { country_event = italy_bop.6 }
+						}
+					}
+
+					10 = {
+						country_event = italy_bop.7
+					}
 				}
 			}
 			if = {	
@@ -25050,15 +25468,52 @@ focus_tree = {
 
 		completion_reward = {
 
-			if = {
-				limit = {
-					NOT = {
-						has_country_flag = mussolini_is_in_terminally_ill_flag
+			#if = {
+			#	limit = {
+			#		NOT = {
+			#			has_country_flag = mussolini_is_in_terminally_ill_flag
+			#			has_country_flag = mussolini_is_health_flag
+			#		}
+			#	}
+			#	random = {
+			#		chance = 40
+			#		country_event = IPUnion_country_event.54
+			#	}
+			#}
+
+			custom_effect_tooltip = mussolini_healthy_maybe_have_some_changes_tt
+
+			hidden_effect = {
+				random_list = {
+					10 = {
+						modifier = {
+							factor = 100
+							OR = {
+								has_completed_focus = ITA_be_careful_eth_puppet_sud
+								has_completed_focus = ITA_lease_toulon_99_years
+								has_completed_focus = ITA_miracolo_economico
+							}
+						}
+						country_event = italy_bop.1
 					}
-				}
-				random = {
-					chance = 40
-					country_event = IPUnion_country_event.54
+
+					80 = {
+						random_list = {
+							20 = { country_event = italy_bop.2 }
+
+							20 = { country_event = italy_bop.3 }
+
+							20 = { country_event = italy_bop.4 }
+
+							20 = { country_event = italy_bop.5 }
+
+							20 = { country_event = italy_bop.6 }
+						}
+					}
+
+					10 = {
+						country_event = italy_bop.7
+					}
 				}
 			}
 
@@ -25134,15 +25589,52 @@ focus_tree = {
 
 		completion_reward = {
 
-			if = {
-				limit = {
-					NOT = {
-						has_country_flag = mussolini_is_in_terminally_ill_flag
+			#if = {
+			#	limit = {
+			#		NOT = {
+			#			has_country_flag = mussolini_is_in_terminally_ill_flag
+			#			has_country_flag = mussolini_is_health_flag
+			#		}
+			#	}
+			#	random = {
+			#		chance = 100
+			#		country_event = IPUnion_country_event.54
+			#	}
+			#}
+
+			custom_effect_tooltip = mussolini_healthy_maybe_have_some_changes_tt
+
+			hidden_effect = {
+				random_list = {
+					10 = {
+						modifier = {
+							factor = 100
+							OR = {
+								has_completed_focus = ITA_be_careful_eth_puppet_sud
+								has_completed_focus = ITA_lease_toulon_99_years
+								has_completed_focus = ITA_miracolo_economico
+							}
+						}
+						country_event = italy_bop.1
 					}
-				}
-				random = {
-					chance = 100
-					country_event = IPUnion_country_event.54
+
+					80 = {
+						random_list = {
+							20 = { country_event = italy_bop.2 }
+
+							20 = { country_event = italy_bop.3 }
+
+							20 = { country_event = italy_bop.4 }
+
+							20 = { country_event = italy_bop.5 }
+
+							20 = { country_event = italy_bop.6 }
+						}
+					}
+
+					10 = {
+						country_event = italy_bop.7
+					}
 				}
 			}
 
@@ -25280,15 +25772,52 @@ focus_tree = {
 
 		completion_reward = {
 
-			if = {
-				limit = {
-					NOT = {
-						has_country_flag = mussolini_is_in_terminally_ill_flag
+			#if = {
+			#	limit = {
+			#		NOT = {
+			#			has_country_flag = mussolini_is_in_terminally_ill_flag
+			#			has_country_flag = mussolini_is_health_flag
+			#		}
+			#	}
+			#	random = {
+			#		chance = 40
+			#		country_event = IPUnion_country_event.54
+			#	}
+			#}
+
+			custom_effect_tooltip = mussolini_healthy_maybe_have_some_changes_tt
+
+			hidden_effect = {
+				random_list = {
+					10 = {
+						modifier = {
+							factor = 100
+							OR = {
+								has_completed_focus = ITA_be_careful_eth_puppet_sud
+								has_completed_focus = ITA_lease_toulon_99_years
+								has_completed_focus = ITA_miracolo_economico
+							}
+						}
+						country_event = italy_bop.1
 					}
-				}
-				random = {
-					chance = 40
-					country_event = IPUnion_country_event.54
+
+					80 = {
+						random_list = {
+							20 = { country_event = italy_bop.2 }
+
+							20 = { country_event = italy_bop.3 }
+
+							20 = { country_event = italy_bop.4 }
+
+							20 = { country_event = italy_bop.5 }
+
+							20 = { country_event = italy_bop.6 }
+						}
+					}
+
+					10 = {
+						country_event = italy_bop.7
+					}
 				}
 			}
 			
@@ -28447,6 +28976,13 @@ focus_tree = {
 
 		cost = 2
 
+		offset = {
+			x = -7
+			trigger = {
+				is_ai = yes
+			}
+		}
+
 		relative_position_id = ITA_flotta_d_evasione
 		x = 1
 		y = 2
@@ -28522,6 +29058,10 @@ focus_tree = {
 					count = 5
 				}
 			}
+
+			add_ideas = idea_ITA_swiss_guard
+
+			#unlock_decision_tooltip = ITA_hand_over_to_swiss_guard_jurisdiction
 		}
 	}
 
@@ -28530,11 +29070,18 @@ focus_tree = {
 	focus = {
 		id = ITA_duceprincipio
 		prerequisite = { focus = ITA_capo_supremo }
-		icon = GFX_focus_GER_support_the_fuhrer
+		icon = GFX_focus_ITA_capo_supremo
 		relative_position_id = ITA_capo_supremo
 		x = -29
 		y = 2
 		cost = 2
+
+		offset = {
+			x = -20
+			trigger = {
+				is_ai = yes
+			}
+		}
 
 		completion_reward = {
 			custom_effect_tooltip = GER_fuhrerprinzip_inner_circle_tt
@@ -29999,6 +30546,9 @@ focus_tree = {
 					}
 				}
 			}
+
+			custom_effect_tooltip = available_mio_tt
+			custom_effect_tooltip = ITA_OND_organization
 		}
 	}
 

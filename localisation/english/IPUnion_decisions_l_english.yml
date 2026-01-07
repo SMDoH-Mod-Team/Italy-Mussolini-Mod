@@ -76,7 +76,7 @@
   china_italy_cooperation: "Sino-Italian Cooperation"
   CHI_second_delivery: "Second Batch Delivery"
 
-  ITA_inner_circle_debug_decisions: "The Leader's Inner Circle"
+  ITA_inner_circle_debug_decisions: "(DEBUG)The Leader's Inner Circle"
   debug_ascension_graziani: "Close Comrade Graziani"
   debug_ascension_balbo: "Close Comrade Balbo"
   debug_ascension_grandi: "Close Comrade Grandi"
@@ -115,3 +115,17 @@
   mission_special_militia_actions_on_tun: "Special Military Operation in Tunisia"
   mission_special_militia_actions_on_alg: "Special Military Operation in Algeria"
   mission_special_militia_actions_on_mor: "Special Military Operation in Morocco"
+
+  from_church_and_state: "Church and State"
+  ITA_hand_over_to_swiss_guard_jurisdiction: "Have over to swiss guard jurisdiction"
+
+  ITA_mussolini_bop_category: "$ITA_power_balance$"
+  from_mussolini_health_changing: "The Leader's health condition is changing..."
+  from_suggest_the_leader_get_some_rest: "Suggest the Leader to Rest"
+  from_regular_healthy_check_up: "Regular Health Check-up"
+  from_arrange_a_consultation: "Arrange a Medical Consultation"
+  from_persecute_the_leader: "Persecute the Leader"
+
+  ITA_mussolini_healthy: "The Leader's Health Condition"
+  from_mission_mussolini_death_range: "The Leader Has Fallen into a Coma!"
+  from_spare_no_effort_in_treating_the_patient: "Spare no effort in treating the patient!"

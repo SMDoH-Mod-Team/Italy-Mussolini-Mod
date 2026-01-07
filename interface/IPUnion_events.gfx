@@ -12,4 +12,12 @@ spriteTypes = {
 		name = "GFX_report_IPUnion_2"
 		textureFile = "gfx/event_pictures/report_event_ciano_50years_nochange.png"
 	}
+	spriteType = {
+		name = "GFX_report_IPUnion_3"
+		textureFile = "gfx/event_pictures/report_event_mussolini_terminally_ill.png"
+	}
+	spriteType = {
+		name = "GFX_report_IPUnion_4"
+		textureFile = "gfx/event_pictures/report_event_milano_peoples_commune.png"
+	}
 }
